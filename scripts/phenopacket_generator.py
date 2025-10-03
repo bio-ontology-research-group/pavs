@@ -3,7 +3,7 @@
 
 import pandas as pd
 from pyphetools.creation import Individual, MetaData
-from pyphetools.pp.v202.phenopackets_pb2 import (
+from phenopackets.schema.v2.phenopackets_pb2 import (
     Phenopacket,
     PhenotypicFeature,
     Interpretation,
