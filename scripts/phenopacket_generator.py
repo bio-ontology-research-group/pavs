@@ -2,13 +2,11 @@
 # GA4GH PhenoPacket JSON files using the pyphetools library.
 
 import pandas as pd
-from pyphetools.creation import Individual, MetaData, HpTerm, Disease, Citation
+from pyphetools.creation import Individual, MetaData, HpTerm, Disease, Citation, HgvsVariant
 from phenopackets.schema.v2.phenopackets_pb2 import (
-    GeneDescriptor,
-    VariantInterpretation,
-    VariationDescriptor,
     ExternalReference,
 )
+from phenopackets.schema.v2.core.interpretation_pb2 import VariantInterpretation
 from pyphetools.validation import PhenopacketValidator
 from google.protobuf.json_format import MessageToJson
 import os
@@ -63,28 +61,29 @@ def create_phenopackets(parsed_data_path, output_dir):
         if pd.notna(row['parsed_variants']) and row['parsed_variants']!= 'nan':
             variants = row['parsed_variants'].split(';')
             for var_string in variants:
-                # Create a VariationDescriptor
-                # For standard HGVS, we can parse out gene symbol if present
-                gene_symbol = None
+                # We need to provide assembly and a placeholder vcf_d for HgvsVariant.
+                # We will assume hg38, but this should be confirmed.
+                assembly = 'hg38'
+                vcf_d = {'chr': 'N/A', 'pos': 0, 'ref': 'N/A', 'alt': 'N/A'} # Placeholder
+
+                # HgvsVariant needs a transcript and hgvsc notation.
+                # We will create a simple HgvsVariant object.
+                # A more robust solution might use a library like 'hgvs' to parse the string.
                 if ':' in var_string:
-                    gene_parts = var_string.split(':')
-                    # Simple check if it looks like a gene symbol (not a chromosome or transcript)
-                    if not gene_parts[0].startswith(('chr', 'NC_', 'NM_')):
-                         gene_symbol = gene_parts[0]
+                    parts = var_string.split(':', 2)
+                    if len(parts) == 3:
+                        # Assumes format like GENE:TRANSCRIPT:c.CHANGE
+                        symbol, transcript, hgvsc = parts
+                        variant = HgvsVariant(assembly=assembly, vcf_d=vcf_d, symbol=symbol, transcript=transcript, hgvsc=hgvsc)
+                    else:
+                        # Fallback for other formats
+                        variant = HgvsVariant(assembly=assembly, vcf_d=vcf_d, g_hgvs=var_string)
+                else:
+                    # Handle non-HGVS variants if necessary, or just label them
+                    variant = HgvsVariant(assembly=assembly, vcf_d=vcf_d, g_hgvs=var_string)
 
-                gene_descriptor = None
-                if gene_symbol:
-                    gene_descriptor = GeneDescriptor(value_id=gene_symbol, symbol=gene_symbol)
-
-                variation_descriptor = VariationDescriptor(
-                    id=f"{individual_id}_{var_string}",
-                    label=var_string,
-                    gene_context=gene_descriptor,
-                    expressions=[{'syntax': 'hgvs', 'value': var_string}] if ':' in var_string else []
-                )
-                
-                # Create a VariantInterpretation
-                variant_interpretation = VariantInterpretation(variation_descriptor=variation_descriptor)
+                # Get the GA4GH VariantInterpretation message
+                variant_interpretation = variant.to_ga4gh_variant_interpretation()
                 variant_interpretations.append(variant_interpretation)
 
         # --- 4. Add Provenance (Citation and External Reference) ---
