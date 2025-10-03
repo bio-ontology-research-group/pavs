@@ -103,7 +103,7 @@ def main(input_csv_path, output_csv_path):
     Main function to execute the parsing pipeline.
     """
     print(f"Reading data from {input_csv_path}...")
-    df = pd.read_csv(input_csv_path)
+    df = pd.read_csv(input_csv_path, sep='\t')
     
     # Create new columns for the parsed data
     df['parsed_hpo_ids'] = ''
