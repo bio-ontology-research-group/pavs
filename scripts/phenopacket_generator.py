@@ -3,9 +3,6 @@
 
 import pandas as pd
 from pyphetools.creation import Individual, MetaData, HpTerm, Disease, Citation, HgvsVariant
-from phenopackets.schema.v2.phenopackets_pb2 import (
-    ExternalReference,
-)
 from phenopackets.schema.v2.core.interpretation_pb2 import VariantInterpretation
 from pyphetools.validation import PhenopacketValidator
 from google.protobuf.json_format import MessageToJson
@@ -86,18 +83,14 @@ def create_phenopackets(parsed_data_path, output_dir):
                 variant_interpretation = variant.to_ga4gh_variant_interpretation()
                 variant_interpretations.append(variant_interpretation)
 
-        # --- 4. Add Provenance (Citation and External Reference) ---
+        # --- 4. Add Provenance (Citation) ---
         citation = None
-        external_references = []
         if pd.notna(row['reference']) and row['reference'].startswith('http'):
             pubmed_id_match = re.search(r'(\d+)$', row['reference'].strip('/'))
             if pubmed_id_match:
                 pmid = pubmed_id_match.group(1)
-                # For pyphetools Individual object
-                citation = Citation(pmid=pmid)
-                # For GA4GH Phenopacket object
-                ext_ref = ExternalReference(id=f"PMID:{pmid}", reference=row['reference'])
-                external_references.append(ext_ref)
+                # The Citation object requires a title. We'll use the reference URL as a placeholder.
+                citation = Citation(pmid=pmid, title=row['reference'])
         
         # --- 5. Assemble the Individual ---
         ind = Individual(
@@ -115,9 +108,6 @@ def create_phenopackets(parsed_data_path, output_dir):
             phenopacket_id=f"PAVS_{individual_id}"
         )
 
-        # Add external references to the phenopacket
-        if external_references:
-            phenopacket.external_references.extend(external_references)
 
         # --- 7. Validate and Save ---
         # It's good practice to validate each phenopacket
