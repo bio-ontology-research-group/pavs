@@ -26,9 +26,9 @@ def create_phenopackets(parsed_data_path, output_dir):
     created_by = "PAVS_Curation_Team"
     meta = MetaData(created_by=created_by)
     # Add HPO version used for annotation
-    meta.add_ontology('hp', 'Human Phenotype Ontology', '2024-04-19', 'http://purl.obolibrary.org/obo/hp.owl')
+    meta.hpo('2024-04-19')
     # Add MONDO for diseases (even if using OMIM, MONDO is often the bridge)
-    meta.add_ontology('mondo', 'Monarch Disease Ontology', '2024-04-01', 'http://purl.obolibrary.org/obo/mondo.obo')
+    meta.mondo('2024-04-01')
     
     print(f"Generating {len(df)} PhenoPackets...")
 
