@@ -24,6 +24,10 @@ omim_pattern = re.compile(r'\((OMIM:\d{6})\)')
 hpo_label_pattern = re.compile(r'([\w\s;-]+)\s*\((HP:\d{7})\)')
 omim_label_pattern = re.compile(r'([\w\s;-]+)\s*\((OMIM:\d{6})\)')
 
+# --- HGVS Parser ---
+# Initialize the parser once to be reused, as initialization is expensive.
+hgvs_parser = hgvs.parser.Parser()
+
 def parse_phenotypes(phenotype_string):
     """
     Parses a string from the 'phenotypes' column to extract HPO terms, OMIM IDs,
@@ -77,9 +81,6 @@ def parse_variants(variant_string):
     if not isinstance(variant_string, str):
         return []
 
-    # Initialize the HGVS parser
-    hp = hgvs.parser.Parser()
-    
     # Normalize delimiters and split into individual variant strings
     variant_string = variant_string.replace('|', ';').replace(',', ';')
     variants = [v.strip() for v in variant_string.split(';') if v.strip()]
@@ -88,7 +89,7 @@ def parse_variants(variant_string):
     for var in variants:
         try:
             # Attempt to parse as a standard HGVS string
-            parsed_var = hp.parse_hgvs_variant(var)
+            parsed_var = hgvs_parser.parse_hgvs_variant(var)
             # Successfully parsed, store as a standardized string
             parsed_variants.append(str(parsed_var))
         except hgvs.exceptions.HGVSParseError:
