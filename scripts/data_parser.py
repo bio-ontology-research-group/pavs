@@ -7,6 +7,7 @@ import re
 import hgvs.parser
 import logging
 import argparse
+from tqdm import tqdm
 
 # --- Setup Logging ---
 # Suppress verbose logging from the hgvs library to keep output clean
@@ -104,6 +105,8 @@ def main(input_csv_path, output_csv_path):
     """
     print(f"Reading data from {input_csv_path}...")
     df = pd.read_csv(input_csv_path, sep='\t')
+
+    print(f"Found {len(df)} rows to process.")
     
     # Create new columns for the parsed data
     df['parsed_hpo_ids'] = ''
@@ -112,7 +115,7 @@ def main(input_csv_path, output_csv_path):
     df['parsed_variants'] = ''
 
     print("Parsing phenotypes and variants for each row...")
-    for index, row in df.iterrows():
+    for index, row in tqdm(df.iterrows(), total=df.shape[0], desc="Parsing rows"):
         # Parse phenotypes
         hpo_ids, omim_ids, free_text = parse_phenotypes(row['phenotypes'])
         df.at[index, 'parsed_hpo_ids'] = ';'.join(hpo_ids)
