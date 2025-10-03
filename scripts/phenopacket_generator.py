@@ -2,8 +2,9 @@
 # GA4GH PhenoPacket JSON files using the pyphetools library.
 
 import pandas as pd
-from pyphetools.creation import Individual, MetaData, PhenopacketCreator
+from pyphetools.creation import Individual, MetaData
 from pyphetools.pp.v202.phenopackets_pb2 import (
+    Phenopacket,
     PhenotypicFeature,
     Interpretation,
     GeneDescriptor,
@@ -109,14 +110,14 @@ def create_phenopackets(parsed_data_path, output_dir):
                 external_references.append(ext_ref)
         
         # --- 6. Assemble the Phenopacket ---
-        phenopacket = PhenopacketCreator(
-            individ=ind,
-            phenopack_id=f"PAVS_{individual_id}",
+        phenopacket = Phenopacket(
+            id=f"PAVS_{individual_id}",
+            subject=ind,
             phenotypic_features=phenotypic_features,
             interpretations=interpretations,
             diseases=diseases,
-            metadata=meta
-        ).create_phenopacket()
+            meta_data=meta.to_ga4gh()
+        )
 
         # Add external references to the phenopacket, not metadata
         if external_references:
