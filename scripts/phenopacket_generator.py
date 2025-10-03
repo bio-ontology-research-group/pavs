@@ -2,14 +2,21 @@
 # GA4GH PhenoPacket JSON files using the pyphetools library.
 
 import pandas as pd
-from pyphetools.creation import Individual, PhenotypicFeature, MetaData, TimeElement
-from pyphetools.creation import Interpretation, GeneDescriptor, VariantInterpretation, VariationDescriptor
-from pyphetools.creation import Disease, ExternalReference
-from pyphetools.creation import PhenopacketCreator
+from pyphetools.creation import Individual, MetaData, PhenopacketCreator
+from pyphetools.pp.v202.phenopackets_pb2 import (
+    PhenotypicFeature,
+    Interpretation,
+    GeneDescriptor,
+    VariantInterpretation,
+    VariationDescriptor,
+    Disease,
+    ExternalReference,
+)
 from pyphetools.validation import PhenopacketValidator
 from google.protobuf.json_format import MessageToJson
 import os
 import re
+import argparse
 
 def create_phenopackets(parsed_data_path, output_dir):
     """
@@ -133,7 +140,10 @@ def create_phenopackets(parsed_data_path, output_dir):
 
 
 if __name__ == '__main__':
-    PARSED_FILE = 'parsed_saudi_variants.csv'
-    OUTPUT_DIRECTORY = 'phenopackets'
+    parser = argparse.ArgumentParser(description="Generate GA4GH Phenopackets from a parsed data file.")
+    parser.add_argument('parsed_data_path', help="Path to the input CSV file from data_parser.py.")
+    parser.add_argument('--output_dir', default='phenopackets', help="Path to the output directory for PhenoPacket JSON files (default: 'phenopackets').")
     
-    create_phenopackets(PARSED_FILE, OUTPUT_DIRECTORY)
+    args = parser.parse_args()
+    
+    create_phenopackets(args.parsed_data_path, args.output_dir)
