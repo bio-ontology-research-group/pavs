@@ -27,7 +27,7 @@ def parse_phenotypes(phenotype_string):
     and any remaining free-text descriptions.
     """
     if not isinstance(phenotype_string, str):
-        return,,
+        return [], [], []
 
     # Normalize delimiters
     phenotype_string = phenotype_string.replace('|', ';').replace(',', ';')
@@ -64,7 +64,7 @@ def parse_variants(variant_string):
     other variant descriptions.
     """
     if not isinstance(variant_string, str):
-        return
+        return []
 
     # Initialize the HGVS parser
     hp = hgvs.parser.Parser()
@@ -73,7 +73,7 @@ def parse_variants(variant_string):
     variant_string = variant_string.replace('|', ';').replace(',', ';')
     variants = [v.strip() for v in variant_string.split(';') if v.strip()]
     
-    parsed_variants =
+    parsed_variants = []
     for var in variants:
         try:
             # Attempt to parse as a standard HGVS string
@@ -114,7 +114,7 @@ def main(input_csv_path, output_csv_path):
         df.at[index, 'parsed_variants'] = ';'.join(variants)
 
     # Select and reorder columns for the output file
-    output_df = df]
+    output_df = df
     
     print(f"Saving structured data to {output_csv_path}...")
     output_df.to_csv(output_csv_path, index=False)
