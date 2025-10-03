@@ -6,6 +6,7 @@ import pandas as pd
 import re
 import hgvs.parser
 import logging
+import argparse
 
 # --- Setup Logging ---
 # Suppress verbose logging from the hgvs library to keep output clean
@@ -19,7 +20,8 @@ hpo_pattern = re.compile(r'\((HP:\d{7})\)')
 omim_pattern = re.compile(r'\((OMIM:\d{6})\)')
 # Regex to find free-text terms that are followed by an HPO ID
 # This captures the label associated with an ID.
-hpo_label_pattern = re.compile(r'([\w\s-]+)\s*\((HP:\d{7})\)')
+hpo_label_pattern = re.compile(r'([\w\s;-]+)\s*\((HP:\d{7})\)')
+omim_label_pattern = re.compile(r'([\w\s;-]+)\s*\((OMIM:\d{6})\)')
 
 def parse_phenotypes(phenotype_string):
     """
@@ -29,31 +31,39 @@ def parse_phenotypes(phenotype_string):
     if not isinstance(phenotype_string, str):
         return [], [], []
 
-    # Normalize delimiters
-    phenotype_string = phenotype_string.replace('|', ';').replace(',', ';')
-    terms = [term.strip() for term in phenotype_string.split(';') if term.strip()]
+    # Normalize delimiters, treating '|' and ',' as separators.
+    phenotype_string = phenotype_string.replace(',', '|')
+    terms = [term.strip() for term in phenotype_string.split('|') if term.strip()]
 
     hpo_ids = set()
     omim_ids = set()
     free_text = set()
 
     for term in terms:
-        # Find all HPO IDs in the term
-        hpo_matches = hpo_pattern.findall(term)
-        if hpo_matches:
+        hpo_label_match = hpo_label_pattern.search(term)
+        omim_label_match = omim_label_pattern.search(term)
+
+        if hpo_label_match:
+            label, hpo_id = hpo_label_match.groups()
+            hpo_ids.add(hpo_id)
+            free_text.add(label.strip())
+        elif omim_label_match:
+            label, omim_id = omim_label_match.groups()
+            omim_ids.add(omim_id)
+            free_text.add(label.strip())
+        else:
+            # Fallback for terms without labels or free text
+            hpo_matches = hpo_pattern.findall(term)
+            omim_matches = omim_pattern.findall(term)
+            
             hpo_ids.update(hpo_matches)
-
-        # Find all OMIM IDs in the term
-        omim_matches = omim_pattern.findall(term)
-        if omim_matches:
             omim_ids.update(omim_matches)
-
-        # If no standard identifiers are found, treat it as free text
-        if not hpo_matches and not omim_matches:
-            # Clean up the term by removing any parenthetical content without IDs
-            cleaned_term = re.sub(r'\([^)]*\)', '', term).strip()
-            if cleaned_term:
-                free_text.add(cleaned_term)
+            
+            # If it's free text, clean and add it
+            if not hpo_matches and not omim_matches:
+                cleaned_term = re.sub(r'\([^)]*\)', '', term).strip()
+                if cleaned_term:
+                    free_text.add(cleaned_term)
                 
     return sorted(list(hpo_ids)), sorted(list(omim_ids)), sorted(list(free_text))
 
@@ -121,9 +131,19 @@ def main(input_csv_path, output_csv_path):
     print("Parsing complete.")
 
 if __name__ == '__main__':
-    # Define file paths
-    INPUT_FILE = 'a.csv'
-    OUTPUT_FILE = 'parsed_saudi_variants.csv'
-    
+    parser = argparse.ArgumentParser(
+        description="Reads a CSV file, parses 'phenotypes' and 'variants' columns, and outputs a structured CSV."
+    )
+    parser.add_argument(
+        "input_csv_path",
+        help="Path to the input CSV file."
+    )
+    parser.add_argument(
+        "--output_csv_path",
+        default="parsed_data.csv",
+        help="Path for the output structured CSV file (default: parsed_data.csv)."
+    )
+    args = parser.parse_args()
+
     # Run the pipeline
-    main(INPUT_FILE, OUTPUT_FILE)
+    main(args.input_csv_path, args.output_csv_path)
