@@ -15,6 +15,7 @@ def create_phenopackets(parsed_data_path, output_dir):
     Generates PhenoPacket JSON files from a structured DataFrame.
     """
     df = pd.read_csv(parsed_data_path).astype(str)
+    df.columns = df.columns.str.strip()
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
