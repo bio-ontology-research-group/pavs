@@ -36,22 +36,21 @@ def create_phenopackets(parsed_data_path, output_dir):
 
     for _, row in df.iterrows():
         # --- 1. Create Individual ---
-        individual_id = str(row)
+        individual_id = row['ID']
         # Assuming unknown sex and age unless specified in a different column
         ind = Individual(individual_id=individual_id, sex="UNKNOWN_SEX")
 
         # --- 2. Add Phenotypic Features ---
-        phenotypic_features =
+        phenotypic_features = []
         if pd.notna(row['parsed_hpo_ids']) and row['parsed_hpo_ids']!= 'nan':
             hpo_ids = row['parsed_hpo_ids'].split(';')
             for hpo_id in hpo_ids:
-                # pyphetools requires a label, but we can look it up later if needed.
-                # For now, we create the feature with just the ID.
-                feature = PhenotypicFeature(hpo_id)
+                # pyphetools requires a label. We will use the ID as the label for now.
+                feature = PhenotypicFeature(term_id=hpo_id, label=hpo_id)
                 phenotypic_features.append(feature)
 
         # --- 3. Add Disease Diagnosis ---
-        diseases =
+        diseases = []
         if pd.notna(row['parsed_omim_ids']) and row['parsed_omim_ids']!= 'nan':
             omim_ids = row['parsed_omim_ids'].split(';')
             for omim_id in omim_ids:
@@ -59,7 +58,7 @@ def create_phenopackets(parsed_data_path, output_dir):
                 diseases.append(disease)
 
         # --- 4. Add Genetic Interpretations ---
-        interpretations =
+        interpretations = []
         if pd.notna(row['parsed_variants']) and row['parsed_variants']!= 'nan':
             variants = row['parsed_variants'].split(';')
             for var_string in variants:
@@ -67,10 +66,10 @@ def create_phenopackets(parsed_data_path, output_dir):
                 # For standard HGVS, we can parse out gene symbol if present
                 gene_symbol = None
                 if ':' in var_string:
-                    gene_part = var_string.split(':')
-                    # Simple check if it looks like a gene symbol (not a chromosome)
-                    if not gene_part.startswith(('chr', 'NC_', 'NM_')):
-                         gene_symbol = gene_part
+                    gene_parts = var_string.split(':')
+                    # Simple check if it looks like a gene symbol (not a chromosome or transcript)
+                    if not gene_parts[0].startswith(('chr', 'NC_', 'NM_')):
+                         gene_symbol = gene_parts[0]
 
                 gene_descriptor = None
                 if gene_symbol:
@@ -80,7 +79,7 @@ def create_phenopackets(parsed_data_path, output_dir):
                     id=f"{individual_id}_{var_string}",
                     label=var_string,
                     gene_context=gene_descriptor,
-                    expressions=[{'syntax': 'hgvs', 'value': var_string}] if ':' in var_string else
+                    expressions=[{'syntax': 'hgvs', 'value': var_string}] if ':' in var_string else []
                 )
                 
                 # Wrap it in a VariantInterpretation and then an Interpretation
@@ -94,7 +93,7 @@ def create_phenopackets(parsed_data_path, output_dir):
                 interpretations.append(interpretation)
 
         # --- 5. Add Provenance (External Reference) ---
-        external_references =
+        external_references = []
         if pd.notna(row['reference']) and row['reference'].startswith('http'):
             pubmed_id_match = re.search(r'(\d+)$', row['reference'].strip('/'))
             if pubmed_id_match:
@@ -102,10 +101,6 @@ def create_phenopackets(parsed_data_path, output_dir):
                 ext_ref = ExternalReference(id=f"PMID:{pmid}", reference=row['reference'])
                 external_references.append(ext_ref)
         
-        # Add external references to metadata
-        if external_references:
-            meta.set_external_references(external_references)
-
         # --- 6. Assemble the Phenopacket ---
         phenopacket = PhenopacketCreator(
             individ=ind,
@@ -115,6 +110,10 @@ def create_phenopackets(parsed_data_path, output_dir):
             diseases=diseases,
             metadata=meta
         ).create_phenopacket()
+
+        # Add external references to the phenopacket, not metadata
+        if external_references:
+            phenopacket.external_references.extend(external_references)
 
         # --- 7. Validate and Save ---
         # It's good practice to validate each phenopacket
