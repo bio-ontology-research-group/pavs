@@ -82,7 +82,7 @@ def parse_variants(variant_string):
         return []
 
     # Normalize delimiters and split into individual variant strings
-    variant_string = variant_string.replace('|', ';').replace(',', ';')
+    variant_string = variant_string.replace('|', ';')
     variants = [v.strip() for v in variant_string.split(';') if v.strip()]
     
     parsed_variants = []
