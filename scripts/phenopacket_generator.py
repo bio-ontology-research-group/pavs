@@ -2,15 +2,11 @@
 # GA4GH PhenoPacket JSON files using the pyphetools library.
 
 import pandas as pd
-from pyphetools.creation import Individual, MetaData
+from pyphetools.creation import Individual, MetaData, HpTerm, Disease, Citation
 from phenopackets.schema.v2.phenopackets_pb2 import (
-    Phenopacket,
-    PhenotypicFeature,
-    Interpretation,
     GeneDescriptor,
     VariantInterpretation,
     VariationDescriptor,
-    Disease,
     ExternalReference,
 )
 from pyphetools.validation import PhenopacketValidator
@@ -43,30 +39,27 @@ def create_phenopackets(parsed_data_path, output_dir):
     print(f"Generating {len(df)} PhenoPackets...")
 
     for _, row in df.iterrows():
-        # --- 1. Create Individual ---
         individual_id = row['ID']
-        # Assuming unknown sex and age unless specified in a different column
-        ind = Individual(individual_id=individual_id, sex="UNKNOWN_SEX")
 
-        # --- 2. Add Phenotypic Features ---
-        phenotypic_features = []
+        # --- 1. Create HPO Terms ---
+        hpo_terms = []
         if pd.notna(row['parsed_hpo_ids']) and row['parsed_hpo_ids']!= 'nan':
             hpo_ids = row['parsed_hpo_ids'].split(';')
             for hpo_id in hpo_ids:
                 # pyphetools requires a label. We will use the ID as the label for now.
-                feature = PhenotypicFeature(term_id=hpo_id, label=hpo_id)
-                phenotypic_features.append(feature)
+                term = HpTerm(hpo_id=hpo_id, label=hpo_id)
+                hpo_terms.append(term)
 
-        # --- 3. Add Disease Diagnosis ---
-        diseases = []
+        # --- 2. Add Disease Diagnosis ---
+        disease_obj = None
         if pd.notna(row['parsed_omim_ids']) and row['parsed_omim_ids']!= 'nan':
             omim_ids = row['parsed_omim_ids'].split(';')
-            for omim_id in omim_ids:
-                disease = Disease(disease_id=omim_id, disease_label=omim_id) # Label can be refined
-                diseases.append(disease)
+            if omim_ids:
+                # pyphetools Individual takes a single disease, so we use the first one.
+                disease_obj = Disease(disease_id=omim_ids[0], disease_label=omim_ids[0])
 
-        # --- 4. Add Genetic Interpretations ---
-        interpretations = []
+        # --- 3. Add Genetic Interpretations ---
+        variant_interpretations = []
         if pd.notna(row['parsed_variants']) and row['parsed_variants']!= 'nan':
             variants = row['parsed_variants'].split(';')
             for var_string in variants:
@@ -90,36 +83,40 @@ def create_phenopackets(parsed_data_path, output_dir):
                     expressions=[{'syntax': 'hgvs', 'value': var_string}] if ':' in var_string else []
                 )
                 
-                # Wrap it in a VariantInterpretation and then an Interpretation
+                # Create a VariantInterpretation
                 variant_interpretation = VariantInterpretation(variation_descriptor=variation_descriptor)
-                interpretation = Interpretation(
-                    id=f"interp_{individual_id}_{var_string}",
-                    progress_status="SOLVED",
-                    diagnosis=None, # Diagnosis can be linked here if needed
-                    variant_interpretation=variant_interpretation
-                )
-                interpretations.append(interpretation)
+                variant_interpretations.append(variant_interpretation)
 
-        # --- 5. Add Provenance (External Reference) ---
+        # --- 4. Add Provenance (Citation and External Reference) ---
+        citation = None
         external_references = []
         if pd.notna(row['reference']) and row['reference'].startswith('http'):
             pubmed_id_match = re.search(r'(\d+)$', row['reference'].strip('/'))
             if pubmed_id_match:
                 pmid = pubmed_id_match.group(1)
+                # For pyphetools Individual object
+                citation = Citation(pmid=pmid)
+                # For GA4GH Phenopacket object
                 ext_ref = ExternalReference(id=f"PMID:{pmid}", reference=row['reference'])
                 external_references.append(ext_ref)
         
-        # --- 6. Assemble the Phenopacket ---
-        phenopacket = Phenopacket(
-            id=f"PAVS_{individual_id}",
-            subject=ind,
-            phenotypic_features=phenotypic_features,
-            interpretations=interpretations,
-            diseases=diseases,
-            meta_data=meta.to_ga4gh()
+        # --- 5. Assemble the Individual ---
+        ind = Individual(
+            individual_id=individual_id,
+            sex="UNKNOWN",
+            hpo_terms=hpo_terms,
+            disease=disease_obj,
+            interpretation_list=variant_interpretations,
+            citation=citation
         )
 
-        # Add external references to the phenopacket, not metadata
+        # --- 6. Create the Phenopacket from the Individual ---
+        phenopacket = ind.to_ga4gh_phenopacket(
+            metadata=meta,
+            phenopacket_id=f"PAVS_{individual_id}"
+        )
+
+        # Add external references to the phenopacket
         if external_references:
             phenopacket.external_references.extend(external_references)
 
