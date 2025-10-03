@@ -25,7 +25,6 @@ def create_phenopackets(parsed_data_path, output_dir):
     # Replace with the actual versions you are using.
     created_by = "PAVS_Curation_Team"
     meta = MetaData(created_by=created_by)
-    meta.add_default_metadata() # Adds basic creation timestamp
     # Add HPO version used for annotation
     meta.add_ontology('hp', 'Human Phenotype Ontology', '2024-04-19', 'http://purl.obolibrary.org/obo/hp.owl')
     # Add MONDO for diseases (even if using OMIM, MONDO is often the bridge)
