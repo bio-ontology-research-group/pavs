@@ -140,9 +140,11 @@ def run_validation(phenopacket_dir, gene_profiles, similarity_method, hgvs_mappe
                                     variant = hgvs_parser.parse(hgvs_string)
                                     transcript_id = variant.ac
                                     try:
-                                        gene_info = hgvs_mapper.transcript_to_gene(transcript_id)
-                                        if gene_info:
-                                            ground_truth_gene = gene_info.get('hgnc')
+                                        # Use the data provider (hdp) associated with the mapper to get transcript identity info
+                                        tx_identity_info = hgvs_mapper.hdp.get_tx_identity_info(transcript_id)
+                                        if tx_identity_info and len(tx_identity_info) > 1 and tx_identity_info[1]:
+                                            ground_truth_gene = tx_identity_info[1].get('hgnc')
+                                        
                                         if ground_truth_gene:
                                             logging.debug(f"Mapped transcript '{transcript_id}' to gene '{ground_truth_gene}' for {data['id']}.")
                                     except hgvs.exceptions.HGVSDataNotAvailableError as e:
