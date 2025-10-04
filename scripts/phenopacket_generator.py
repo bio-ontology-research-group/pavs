@@ -113,7 +113,7 @@ def create_phenopackets(parsed_data_path, output_dir):
 
         # If no disease was found in the input, remove the default one added by pyphetools
         if disease_obj is None:
-            phenopacket.diseases.clear()
+            del phenopacket.diseases[:]
 
         # --- 7. Validate and Save ---
         # It's good practice to validate each phenopacket.
