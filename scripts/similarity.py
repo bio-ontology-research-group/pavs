@@ -5,10 +5,9 @@ import argparse
 import logging
 import pandas as pd
 from tqdm import tqdm
+from tqdm.contrib.logging import logging_redirect_tqdm
 from pyhpo import Ontology, HPOSet
 
-# --- Basic logging setup ---
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def initialize_hpo_ontology():
     """
@@ -70,43 +69,44 @@ def run_validation(phenopacket_dir, omim_profiles, similarity_method):
     
     results = []
     
-    for filename in tqdm(phenopacket_files, desc="Validating PhenoPackets"):
-        filepath = os.path.join(phenopacket_dir, filename)
-        with open(filepath, 'r') as f:
-            data = json.load(f)
+    with logging_redirect_tqdm():
+        for filename in tqdm(phenopacket_files, desc="Validating PhenoPackets"):
+            filepath = os.path.join(phenopacket_dir, filename)
+            with open(filepath, 'r') as f:
+                data = json.load(f)
+                
+            patient_hpo_ids = [pf['type']['id'] for pf in data.get('phenotypicFeatures', [])]
+            if not patient_hpo_ids:
+                logging.warning(f"Skipping {data['id']}: No phenotypic features found.")
+                continue
+                
+            patient_hpo_set = HPOSet.from_queries(patient_hpo_ids)
             
-        patient_hpo_ids = [pf['type']['id'] for pf in data.get('phenotypicFeatures', [])]
-        if not patient_hpo_ids:
-            logging.warning(f"Skipping {data['id']}: No phenotypic features found.")
-            continue
+            ground_truth_diseases = [d['term']['id'] for d in data.get('diseases', [])]
+            if not ground_truth_diseases:
+                logging.warning(f"Skipping {data['id']}: No diagnosis found.")
+                continue
+                
+            ground_truth_omim_id = ground_truth_diseases[0]
             
-        patient_hpo_set = HPOSet.from_queries(patient_hpo_ids)
-        
-        ground_truth_diseases = [d['term']['id'] for d in data.get('diseases', [])]
-        if not ground_truth_diseases:
-            logging.warning(f"Skipping {data['id']}: No diagnosis found.")
-            continue
+            ranked_diseases = calculate_similarity_ranking(patient_hpo_set, omim_profiles, similarity_method=similarity_method)
             
-        ground_truth_omim_id = ground_truth_diseases[0]
-        
-        ranked_diseases = calculate_similarity_ranking(patient_hpo_set, omim_profiles, similarity_method=similarity_method)
-        
-        rank_info = ranked_diseases[ranked_diseases['omim_id'] == ground_truth_omim_id]
-        
-        if not rank_info.empty:
-            rank = rank_info.index[0] + 1
-            score = rank_info['similarity_score'].iloc[0]
-        else:
-            rank = float('inf')
-            score = 0.0
+            rank_info = ranked_diseases[ranked_diseases['omim_id'] == ground_truth_omim_id]
             
-        results.append({
-            'phenopacket_id': data['id'],
-            'ground_truth_omim': ground_truth_omim_id,
-            'rank': rank,
-            'score': score,
-            'num_hpo_terms': len(patient_hpo_ids)
-        })
+            if not rank_info.empty:
+                rank = rank_info.index[0] + 1
+                score = rank_info['similarity_score'].iloc[0]
+            else:
+                rank = float('inf')
+                score = 0.0
+                
+            results.append({
+                'phenopacket_id': data['id'],
+                'ground_truth_omim': ground_truth_omim_id,
+                'rank': rank,
+                'score': score,
+                'num_hpo_terms': len(patient_hpo_ids)
+            })
         
     return pd.DataFrame(results)
 
@@ -185,8 +185,38 @@ if __name__ == "__main__":
         choices=['resnik', 'lin', 'jc', 'rel'],
         help="The similarity algorithm to use. Defaults to 'resnik'."
     )
+    parser.add_argument(
+        "-v", "--verbose",
+        action="store_true",
+        help="Enable verbose logging (DEBUG level)."
+    )
+    parser.add_argument(
+        "-q", "--quiet",
+        action="store_true",
+        help="Suppress info-level logging, showing only warnings and errors."
+    )
+    parser.add_argument(
+        "--log-file",
+        type=str,
+        default=None,
+        help="Path to a file to write logs to. By default, logs are written to stderr."
+    )
     
     args = parser.parse_args()
+
+    # --- Configure Logging ---
+    log_level = logging.INFO
+    if args.verbose:
+        log_level = logging.DEBUG
+    elif args.quiet:
+        log_level = logging.WARNING
+
+    log_format = '%(asctime)s - %(levelname)s - %(message)s'
+    
+    if args.log_file:
+        logging.basicConfig(filename=args.log_file, level=log_level, format=log_format, filemode='w')
+    else:
+        logging.basicConfig(level=log_level, format=log_format)
     
     main(
         phenopacket_dir=args.phenopacket_dir,
