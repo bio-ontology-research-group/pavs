@@ -27,7 +27,7 @@ def initialize_hpo_ontology():
     # For faster lookup, create a dictionary mapping OMIM ID to the HPOSet
     # In older versions of pyhpo, `disease.hpo_set` was a method,
     # but is a property in newer versions. This check ensures compatibility.
-    first_disease = omim_diseases[0]
+    first_disease = next(iter(omim_diseases))
     if callable(first_disease.hpo_set):
         logging.debug("`disease.hpo_set` is a method (older pyhpo); using function call.")
         omim_profiles = {disease.id: disease.hpo_set() for disease in omim_diseases}
