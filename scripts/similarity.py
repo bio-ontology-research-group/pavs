@@ -44,7 +44,7 @@ def calculate_similarity_ranking(patient_hpo_set, omim_disease_profiles, similar
         
     results = []
     for omim_id, disease_hpo_set in omim_disease_profiles.items():
-        score = patient_hpo_set.similarity(disease_hpo_set, kind=similarity_method)
+        score = patient_hpo_set.similarity(disease_hpo_set, method=similarity_method)
         results.append({'omim_id': omim_id, 'similarity_score': score})
         
     ranked_df = pd.DataFrame(results)
