@@ -169,8 +169,8 @@ def create_phenopackets(parsed_data_path, output_dir):
                 symbol = components['symbol']
                 transcript = components['transcript']
                 
-                # Build the HGVS expression
-                # Prefer cDNA if we have transcript, otherwise use genomic
+                # Build the primary HGVS expression
+                # Prefer cDNA if we have transcript, otherwise use genomic or protein
                 hgvs_expr = None
                 if transcript and components['cdna']:
                     hgvs_expr = f"{transcript}:{components['cdna']}"
@@ -191,14 +191,13 @@ def create_phenopackets(parsed_data_path, output_dir):
                 vcf_d = {'chr': 'N/A', 'pos': 0, 'ref': 'N/A', 'alt': 'N/A'} # Placeholder
                 
                 # Create the variant with gene symbol
+                # HgvsVariant expects 'hgvs' parameter, not separate c_hgvs, g_hgvs, p_hgvs
                 variant = HgvsVariant(
                     assembly=assembly,
                     vcf_d=vcf_d,
                     symbol=symbol,  # This should add the gene symbol to the variant
                     transcript=transcript,
-                    g_hgvs=hgvs_expr if components['genomic'] else None,
-                    c_hgvs=components['cdna'] if components['cdna'] else None,
-                    p_hgvs=components['protein'] if components['protein'] else None
+                    hgvs=hgvs_expr  # Use the single hgvs parameter
                 )
                 
                 # Get the GA4GH VariantInterpretation message
