@@ -1,28 +1,30 @@
 # Import necessary libraries
 import os
 import json
+import argparse
+import logging
 import pandas as pd
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 from pyhpo import Ontology, HPOSet
 
-# --- Download necessary HPO files ---
-# pyhpo automatically downloads the required files on first instantiation
-# if they are not found in its data directory.
-print("Initializing HPO Ontology... (This may download files on first run)")
-_ = Ontology()
-print("Ontology initialized successfully.")
+# --- Basic logging setup ---
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# --- Configuration ---
-PHENOPACKET_DIR = 'phenopackets'
-
-# The Ontology object, once initialized, contains all disease annotations.
-# We can access them directly.
-omim_diseases = Ontology.omim_diseases
-
-print(f"Loaded {len(omim_diseases)} OMIM disease profiles from the HPO annotations.")
-
-# For faster lookup, create a dictionary mapping OMIM ID to the HPOSet
-omim_profiles = {disease.id: disease.hpo_set for disease in omim_diseases}
+def initialize_hpo_ontology():
+    """
+    Initializes the HPO Ontology and loads OMIM disease profiles.
+    pyhpo automatically downloads required files if they are not found.
+    """
+    logging.info("Initializing HPO Ontology... (This may download files on first run)")
+    _ = Ontology()
+    logging.info("Ontology initialized successfully.")
+    
+    omim_diseases = Ontology.omim_diseases
+    logging.info(f"Loaded {len(omim_diseases)} OMIM disease profiles from HPO annotations.")
+    
+    # For faster lookup, create a dictionary mapping OMIM ID to the HPOSet
+    omim_profiles = {disease.id: disease.hpo_set for disease in omim_diseases}
+    return omim_profiles
 
 def calculate_similarity_ranking(patient_hpo_set, omim_disease_profiles):
     """
@@ -40,58 +42,60 @@ def calculate_similarity_ranking(patient_hpo_set, omim_disease_profiles):
     if not patient_hpo_set:
         return pd.DataFrame(columns=['omim_id', 'similarity_score'])
         
-    results =
+    results = []
     for omim_id, disease_hpo_set in omim_disease_profiles.items():
-        # The core similarity calculation using pyhpo's default method
         score = patient_hpo_set.similarity(disease_hpo_set)
         results.append({'omim_id': omim_id, 'similarity_score': score})
         
-    # Create a DataFrame and sort by score
     ranked_df = pd.DataFrame(results)
     ranked_df = ranked_df.sort_values(by='similarity_score', ascending=False).reset_index(drop=True)
     
     return ranked_df
 
-
 def run_validation(phenopacket_dir, omim_profiles):
     """
     Iterates through all PhenoPackets, performs similarity analysis,
     and evaluates the ranking of the true diagnosis.
+    
+    Args:
+        phenopacket_dir (str): Path to the directory containing PhenoPacket JSON files.
+        omim_profiles (dict): A dictionary of OMIM IDs to HPOSets.
+        
+    Returns:
+        pandas.DataFrame: A DataFrame with detailed validation results for each phenopacket.
     """
     phenopacket_files = [f for f in os.listdir(phenopacket_dir) if f.endswith('.json')]
     
-    results =
+    results = []
     
     for filename in tqdm(phenopacket_files, desc="Validating PhenoPackets"):
         filepath = os.path.join(phenopacket_dir, filename)
         with open(filepath, 'r') as f:
             data = json.load(f)
             
-        # Extract patient HPO terms
-        patient_hpo_ids = [pf['type']['id'] for pf in data.get('phenotypicFeatures',)]
+        patient_hpo_ids = [pf['type']['id'] for pf in data.get('phenotypicFeatures', [])]
         if not patient_hpo_ids:
-            continue # Skip if no phenotypes are recorded
+            logging.warning(f"Skipping {data['id']}: No phenotypic features found.")
+            continue
             
         patient_hpo_set = HPOSet.from_queries(patient_hpo_ids)
         
-        # Extract ground truth diagnosis (taking the first one if multiple)
-        ground_truth_diseases = [d['term']['id'] for d in data.get('diseases',)]
+        ground_truth_diseases = [d['term']['id'] for d in data.get('diseases', [])]
         if not ground_truth_diseases:
-            continue # Skip if no diagnosis is recorded
+            logging.warning(f"Skipping {data['id']}: No diagnosis found.")
+            continue
             
-        ground_truth_omim_id = ground_truth_diseases
+        ground_truth_omim_id = ground_truth_diseases[0]
         
-        # Get the ranked list of candidate diseases
         ranked_diseases = calculate_similarity_ranking(patient_hpo_set, omim_profiles)
         
-        # Find the rank of the true diagnosis
         rank_info = ranked_diseases[ranked_diseases['omim_id'] == ground_truth_omim_id]
         
         if not rank_info.empty:
-            rank = rank_info.index + 1 # index is 0-based, rank is 1-based
-            score = rank_info['similarity_score'].iloc
+            rank = rank_info.index[0] + 1
+            score = rank_info['similarity_score'].iloc[0]
         else:
-            rank = float('inf') # Not found
+            rank = float('inf')
             score = 0.0
             
         results.append({
@@ -104,29 +108,75 @@ def run_validation(phenopacket_dir, omim_profiles):
         
     return pd.DataFrame(results)
 
-# --- Execute the validation ---
-validation_results_df = run_validation(PHENOPACKET_DIR, omim_profiles)
+def calculate_performance_metrics(results_df):
+    """
+    Calculates overall performance metrics from the validation results.
+    
+    Args:
+        results_df (pandas.DataFrame): The detailed validation results.
+        
+    Returns:
+        dict: A dictionary containing performance metrics.
+    """
+    total_cases = len(results_df)
+    if total_cases == 0:
+        return {
+            "total_cases_evaluated": 0,
+            "message": "No valid cases with both phenotypes and diagnoses were found."
+        }
 
-print("\nValidation Results Summary:")
-print(validation_results_df.head())
+    top1_accuracy = (results_df['rank'] == 1).sum() / total_cases * 100
+    top5_accuracy = (results_df['rank'] <= 5).sum() / total_cases * 100
+    top10_accuracy = (results_df['rank'] <= 10).sum() / total_cases * 100
+    median_rank = results_df['rank'].median()
 
+    metrics = {
+        "total_cases_evaluated": total_cases,
+        "top1_accuracy_percent": round(top1_accuracy, 2),
+        "top5_accuracy_percent": round(top5_accuracy, 2),
+        "top10_accuracy_percent": round(top10_accuracy, 2),
+        "median_rank": median_rank
+    }
+    return metrics
 
-# --- Calculate Top-N Accuracies ---
-total_cases = len(validation_results_df)
-if total_cases > 0:
-    top1_accuracy = (validation_results_df['rank'] == 1).sum() / total_cases * 100
-    top5_accuracy = (validation_results_df['rank'] <= 5).sum() / total_cases * 100
-    top10_accuracy = (validation_results_df['rank'] <= 10).sum() / total_cases * 100
-    median_rank = validation_results_df['rank'].median()
+def main(phenopacket_dir, output_json_path):
+    """
+    Main function to run the phenotypic similarity validation pipeline.
+    """
+    omim_profiles = initialize_hpo_ontology()
+    
+    validation_results_df = run_validation(phenopacket_dir, omim_profiles)
+    
+    if validation_results_df.empty:
+        logging.warning("Validation produced no results. Exiting.")
+        return
 
+    # Save detailed results to JSON
+    logging.info(f"Saving detailed validation results to {output_json_path}")
+    validation_results_df.to_json(output_json_path, orient='records', indent=4)
+    
+    # Calculate and display performance metrics
+    performance_metrics = calculate_performance_metrics(validation_results_df)
+    
+    # Print metrics to stdout
     print("\n--- Overall Performance Metrics ---")
-    print(f"Total cases evaluated: {total_cases}")
-    print(f"Top-1 Accuracy: {top1_accuracy:.2f}%")
-    print(f"Top-5 Accuracy: {top5_accuracy:.2f}%")
-    print(f"Top-10 Accuracy: {top10_accuracy:.2f}%")
-    print(f"Median Rank of Correct Diagnosis: {median_rank}")
-else:
-    print("No valid cases with both phenotypes and diagnoses were found to evaluate.")
-
-# Save detailed results for further analysis or inclusion in supplementary materials
-validation_results_df.to_csv('phenotypic_validation_results.csv', index=False)
+    print(json.dumps(performance_metrics, indent=4))
+    
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Phenotypic Similarity Validation Script")
+    parser.add_argument(
+        "--phenopacket_dir",
+        type=str,
+        default="phenopackets",
+        help="Directory containing the PhenoPacket JSON files."
+    )
+    parser.add_argument(
+        "--output_json",
+        type=str,
+        default="phenotypic_validation_results.json",
+        help="Path to save the detailed validation results JSON file."
+    )
+    
+    args = parser.parse_args()
+    
+    main(phenopacket_dir=args.phenopacket_dir, output_json_path=args.output_json)
