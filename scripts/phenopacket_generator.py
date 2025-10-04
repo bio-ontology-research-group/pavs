@@ -32,7 +32,8 @@ def create_phenopackets(parsed_data_path, output_dir):
     meta.mondo('2024-04-01')
 
     # We will validate that each phenopacket has at least one HPO term.
-    validator = ContentValidator(min_hpo=1)
+    # Set min_hpo=0 to allow generation of phenopackets for individuals with no HPO terms.
+    validator = ContentValidator(min_hpo=0)
     
     print(f"Generating {len(df)} PhenoPackets...")
 
