@@ -7,70 +7,68 @@ import pandas as pd
 from tqdm import tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
 from pyhpo import Ontology, HPOSet
+from sklearn.metrics import roc_auc_score
 
 
-def initialize_hpo_ontology():
+def load_gene_hpo_profiles():
     """
-    Initializes the HPO Ontology and loads OMIM disease profiles.
-    pyhpo automatically downloads required files if they are not found.
+    Initializes the HPO Ontology and creates a mapping from gene symbols to their
+    associated HPO term sets.
     """
     logging.info("Initializing HPO Ontology... (This may download files on first run)")
     _ = Ontology()
     logging.info("Ontology initialized successfully.")
     
-    omim_diseases = Ontology.omim_diseases
-    logging.info(f"Loaded {len(omim_diseases)} OMIM disease profiles from HPO annotations.")
-    
-    if not omim_diseases:
-        return {}
+    gene_profiles = {}
+    logging.info("Building gene-to-phenotype profiles...")
+    for gene in tqdm(Ontology.genes, desc="Processing Genes"):
+        if not gene.hpo:
+            continue
+        
+        # Convert integer HPO IDs from the gene object to HP:XXXXXXX string format
+        hpo_ids_as_str = [Ontology[hpo_id].id for hpo_id in gene.hpo]
+        
+        # Create an HPOSet for similarity calculations
+        gene_profiles[gene.name] = HPOSet.from_queries(hpo_ids_as_str)
+        
+    logging.info(f"Built profiles for {len(gene_profiles)} genes with phenotype associations.")
+    return gene_profiles
 
-    # For faster lookup, create a dictionary mapping OMIM ID to the HPOSet
-    # In older versions of pyhpo, `disease.hpo_set` was a method,
-    # but is a property in newer versions. This check ensures compatibility.
-    first_disease = next(iter(omim_diseases))
-    if callable(first_disease.hpo_set):
-        logging.debug("`disease.hpo_set` is a method (older pyhpo); using function call.")
-        omim_profiles = {disease.id: disease.hpo_set() for disease in omim_diseases}
-    else:
-        logging.debug("`disease.hpo_set` is a property (newer pyhpo); using property access.")
-        omim_profiles = {disease.id: disease.hpo_set for disease in omim_diseases}
-    return omim_profiles
-
-def calculate_similarity_ranking(patient_hpo_set, omim_disease_profiles, similarity_method='resnik'):
+def calculate_similarity_ranking(patient_hpo_set, entity_profiles, similarity_method='resnik'):
     """
-    Calculates the similarity between a patient's HPOSet and all OMIM diseases,
-    returning a ranked list of diseases.
+    Calculates the similarity between a patient's HPOSet and all entity profiles (e.g., genes),
+    returning a ranked list of entities.
     
     Args:
         patient_hpo_set (HPOSet): The set of HPO terms for the patient.
-        omim_disease_profiles (dict): A dictionary of OMIM IDs to HPOSets.
+        entity_profiles (dict): A dictionary of entity IDs (e.g., gene symbols) to HPOSets.
         similarity_method (str): The similarity algorithm to use ('resnik', 'lin', 'jc', 'rel').
         
     Returns:
-        pandas.DataFrame: A DataFrame with OMIM IDs and their similarity scores,
+        pandas.DataFrame: A DataFrame with entity IDs and their similarity scores,
                           sorted in descending order.
     """
     if not patient_hpo_set:
-        return pd.DataFrame(columns=['omim_id', 'similarity_score'])
+        return pd.DataFrame(columns=['entity_id', 'similarity_score'])
         
     results = []
-    for omim_id, disease_hpo_set in omim_disease_profiles.items():
-        score = patient_hpo_set.similarity(disease_hpo_set, method=similarity_method)
-        results.append({'omim_id': omim_id, 'similarity_score': score})
+    for entity_id, entity_hpo_set in entity_profiles.items():
+        score = patient_hpo_set.similarity(entity_hpo_set, method=similarity_method)
+        results.append({'entity_id': entity_id, 'similarity_score': score})
         
     ranked_df = pd.DataFrame(results)
     ranked_df = ranked_df.sort_values(by='similarity_score', ascending=False).reset_index(drop=True)
     
     return ranked_df
 
-def run_validation(phenopacket_dir, omim_profiles, similarity_method):
+def run_validation(phenopacket_dir, gene_profiles, similarity_method):
     """
-    Iterates through all PhenoPackets, performs similarity analysis,
-    and evaluates the ranking of the true diagnosis.
+    Iterates through all PhenoPackets, performs similarity analysis against gene profiles,
+    and evaluates the ranking of the true causal gene.
     
     Args:
         phenopacket_dir (str): Path to the directory containing PhenoPacket JSON files.
-        omim_profiles (dict): A dictionary of OMIM IDs to HPOSets.
+        gene_profiles (dict): A dictionary of gene symbols to HPOSets.
         similarity_method (str): The similarity algorithm to use.
         
     Returns:
@@ -86,44 +84,64 @@ def run_validation(phenopacket_dir, omim_profiles, similarity_method):
             with open(filepath, 'r') as f:
                 data = json.load(f)
                 
+            # --- Extract Patient Phenotypes ---
             patient_hpo_ids = [pf['type']['id'] for pf in data.get('phenotypicFeatures', [])]
             if not patient_hpo_ids:
                 logging.warning(f"Skipping {data['id']}: No phenotypic features found.")
                 continue
-                
             patient_hpo_set = HPOSet.from_queries(patient_hpo_ids)
             
-            ground_truth_diseases = [d['term']['id'] for d in data.get('diseases', [])]
-            if not ground_truth_diseases:
-                logging.warning(f"Skipping {data['id']}: No diagnosis found.")
+            # --- Extract Ground Truth Gene ---
+            ground_truth_gene = None
+            interpretations = data.get('interpretations', [])
+            if interpretations:
+                # Path: Interpretation -> diagnosis -> genomicInterpretations -> variantInterpretation -> variationDescriptor -> geneContext
+                try:
+                    gene_context = interpretations[0]['diagnosis']['genomicInterpretations'][0]['variantInterpretation']['variationDescriptor']['geneContext']
+                    ground_truth_gene = gene_context.get('symbol')
+                except (KeyError, IndexError):
+                    pass  # Will be caught by the check below
+
+            if not ground_truth_gene:
+                logging.warning(f"Skipping {data['id']}: No ground truth gene symbol found.")
                 continue
-                
-            ground_truth_omim_id = ground_truth_diseases[0]
+
+            if ground_truth_gene not in gene_profiles:
+                logging.warning(f"Skipping {data['id']}: Ground truth gene '{ground_truth_gene}' not in HPO gene profiles.")
+                continue
+
+            # --- Rank all genes by phenotype similarity ---
+            ranked_genes_df = calculate_similarity_ranking(patient_hpo_set, gene_profiles, similarity_method)
             
-            ranked_diseases = calculate_similarity_ranking(patient_hpo_set, omim_profiles, similarity_method=similarity_method)
+            # --- Find Rank of the correct gene ---
+            rank_info = ranked_genes_df[ranked_genes_df['entity_id'] == ground_truth_gene]
+            rank = rank_info.index[0] + 1 if not rank_info.empty else float('inf')
+            score = rank_info['similarity_score'].iloc[0] if not rank_info.empty else 0.0
+
+            # --- Calculate ROC AUC for this ranking ---
+            y_true = (ranked_genes_df['entity_id'] == ground_truth_gene).astype(int).tolist()
+            y_score = ranked_genes_df['similarity_score'].tolist()
             
-            rank_info = ranked_diseases[ranked_diseases['omim_id'] == ground_truth_omim_id]
-            
-            if not rank_info.empty:
-                rank = rank_info.index[0] + 1
-                score = rank_info['similarity_score'].iloc[0]
+            roc_auc = float('nan')
+            if len(set(y_true)) > 1: # Requires both positive and negative samples
+                roc_auc = roc_auc_score(y_true, y_score)
             else:
-                rank = float('inf')
-                score = 0.0
-                
+                logging.warning(f"Cannot calculate ROC AUC for {data['id']}: only one class present.")
+
             results.append({
                 'phenopacket_id': data['id'],
-                'ground_truth_omim': ground_truth_omim_id,
+                'ground_truth_gene': ground_truth_gene,
                 'rank': rank,
                 'score': score,
-                'num_hpo_terms': len(patient_hpo_ids)
+                'num_hpo_terms': len(patient_hpo_ids),
+                'roc_auc': roc_auc
             })
         
     return pd.DataFrame(results)
 
 def calculate_performance_metrics(results_df):
     """
-    Calculates overall performance metrics from the validation results.
+    Calculates overall performance metrics (Hits@k, ROC AUC) from the validation results.
     
     Args:
         results_df (pandas.DataFrame): The detailed validation results.
@@ -135,19 +153,24 @@ def calculate_performance_metrics(results_df):
     if total_cases == 0:
         return {
             "total_cases_evaluated": 0,
-            "message": "No valid cases with both phenotypes and diagnoses were found."
+            "message": "No valid cases were found to evaluate."
         }
 
-    top1_accuracy = (results_df['rank'] == 1).sum() / total_cases * 100
-    top5_accuracy = (results_df['rank'] <= 5).sum() / total_cases * 100
-    top10_accuracy = (results_df['rank'] <= 10).sum() / total_cases * 100
+    # Calculate Hits@k
+    hits_at_1 = (results_df['rank'] == 1).sum() / total_cases
+    hits_at_10 = (results_df['rank'] <= 10).sum() / total_cases
+    hits_at_100 = (results_df['rank'] <= 100).sum() / total_cases
+    
+    # Calculate Mean ROC AUC, ignoring NaNs
+    mean_roc_auc = results_df['roc_auc'].mean()
     median_rank = results_df['rank'].median()
 
     metrics = {
         "total_cases_evaluated": total_cases,
-        "top1_accuracy_percent": round(top1_accuracy, 2),
-        "top5_accuracy_percent": round(top5_accuracy, 2),
-        "top10_accuracy_percent": round(top10_accuracy, 2),
+        "hits_at_1": round(hits_at_1, 4),
+        "hits_at_10": round(hits_at_10, 4),
+        "hits_at_100": round(hits_at_100, 4),
+        "mean_roc_auc": round(mean_roc_auc, 4),
         "median_rank": median_rank
     }
     return metrics
@@ -156,9 +179,13 @@ def main(phenopacket_dir, output_json_path, similarity_method):
     """
     Main function to run the phenotypic similarity validation pipeline.
     """
-    omim_profiles = initialize_hpo_ontology()
+    gene_profiles = load_gene_hpo_profiles()
     
-    validation_results_df = run_validation(phenopacket_dir, omim_profiles, similarity_method)
+    if not gene_profiles:
+        logging.error("Gene profiles could not be loaded. Exiting.")
+        return
+
+    validation_results_df = run_validation(phenopacket_dir, gene_profiles, similarity_method)
     
     if validation_results_df.empty:
         logging.warning("Validation produced no results. Exiting.")
