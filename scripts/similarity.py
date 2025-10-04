@@ -102,8 +102,8 @@ def run_validation(phenopacket_dir, gene_profiles, similarity_method):
                 except (KeyError, IndexError):
                     pass  # Will be caught by the check below
 
-            if not ground_truth_gene:
-                logging.warning(f"Skipping phenopacket '{data['id']}': No ground truth gene symbol found.")
+            if ground_truth_gene is None:
+                logging.warning(f"Skipping phenopacket '{data['id']}': Could not extract ground truth gene symbol from interpretations.")
                 continue
 
             if ground_truth_gene not in gene_profiles:
