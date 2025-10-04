@@ -9,6 +9,7 @@ from google.protobuf.json_format import MessageToJson
 import os
 import re
 import argparse
+from collections import Counter
 
 def extract_gene_symbol(variant_string):
     """
@@ -121,6 +122,16 @@ def create_phenopackets(parsed_data_path, output_dir):
     
     print(f"Generating {len(df)} PhenoPackets...")
 
+    # --- Statistics Collection ---
+    stats = {
+        "total_patients": len(df),
+        "generated_phenopackets": 0,
+        "patients_with_phenotypes": 0,
+        "patients_with_variants": 0,
+        "total_phenotypes": 0,
+        "phenotype_counts": Counter(),
+    }
+
     for _, row in df.iterrows():
         individual_id = row['ID']
 
@@ -142,6 +153,11 @@ def create_phenopackets(parsed_data_path, output_dir):
                     # Fallback for mismatched labels and IDs from the parser
                     term = HpTerm(hpo_id=hpo_id, label=hpo_id)
                     hpo_terms.append(term)
+
+        if hpo_terms:
+            stats["patients_with_phenotypes"] += 1
+            stats["total_phenotypes"] += len(hpo_terms)
+            stats["phenotype_counts"].update([term.id for term in hpo_terms])
 
         # --- 2. Add Disease Diagnosis ---
         disease_obj = None
@@ -204,6 +220,9 @@ def create_phenopackets(parsed_data_path, output_dir):
                 variant_interpretation = variant.to_ga4gh_variant_interpretation()
                 variant_interpretations.append(variant_interpretation)
 
+        if variant_interpretations:
+            stats["patients_with_variants"] += 1
+
         # --- 4. Add Provenance (Citation) ---
         citation = None
         if pd.notna(row['reference']) and row['reference'].startswith('http'):
@@ -252,8 +271,28 @@ def create_phenopackets(parsed_data_path, output_dir):
         output_path = os.path.join(output_dir, f"PAVS_{individual_id}.json")
         with open(output_path, 'w') as f:
             f.write(json_string)
+        
+        stats["generated_phenopackets"] += 1
 
-    print(f"Successfully generated {len(os.listdir(output_dir))} phenopackets in '{output_dir}'.")
+    # --- Print Summary Statistics ---
+    print("\n--- Generation Summary ---")
+    print(f"Total individuals processed: {stats['total_patients']}")
+    print(f"Successfully generated phenopackets: {stats['generated_phenopackets']}")
+    print(f"Patients with at least one phenotype: {stats['patients_with_phenotypes']}")
+    print(f"Patients with at least one variant: {stats['patients_with_variants']}")
+
+    if stats["patients_with_phenotypes"] > 0:
+        avg_phenotypes = stats["total_phenotypes"] / stats["patients_with_phenotypes"]
+        print(f"Average phenotypes per patient (with phenotypes): {avg_phenotypes:.2f}")
+    else:
+        print("Average phenotypes per patient (with phenotypes): N/A (no patients with phenotypes)")
+
+    if stats["phenotype_counts"]:
+        print("\nTop 10 most frequent phenotypes:")
+        for hpo_id, count in stats["phenotype_counts"].most_common(10):
+            print(f"  - {hpo_id}: {count} times")
+    else:
+        print("\nNo phenotypes were recorded to generate frequency statistics.")
 
 
 if __name__ == '__main__':
