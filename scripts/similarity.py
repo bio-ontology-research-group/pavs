@@ -26,7 +26,7 @@ def initialize_hpo_ontology():
     omim_profiles = {disease.id: disease.hpo_set for disease in omim_diseases}
     return omim_profiles
 
-def calculate_similarity_ranking(patient_hpo_set, omim_disease_profiles):
+def calculate_similarity_ranking(patient_hpo_set, omim_disease_profiles, similarity_method='resnik'):
     """
     Calculates the similarity between a patient's HPOSet and all OMIM diseases,
     returning a ranked list of diseases.
@@ -34,6 +34,7 @@ def calculate_similarity_ranking(patient_hpo_set, omim_disease_profiles):
     Args:
         patient_hpo_set (HPOSet): The set of HPO terms for the patient.
         omim_disease_profiles (dict): A dictionary of OMIM IDs to HPOSets.
+        similarity_method (str): The similarity algorithm to use ('resnik', 'lin', 'jc', 'rel').
         
     Returns:
         pandas.DataFrame: A DataFrame with OMIM IDs and their similarity scores,
@@ -44,7 +45,7 @@ def calculate_similarity_ranking(patient_hpo_set, omim_disease_profiles):
         
     results = []
     for omim_id, disease_hpo_set in omim_disease_profiles.items():
-        score = patient_hpo_set.similarity(disease_hpo_set)
+        score = patient_hpo_set.similarity(disease_hpo_set, kind=similarity_method)
         results.append({'omim_id': omim_id, 'similarity_score': score})
         
     ranked_df = pd.DataFrame(results)
@@ -52,7 +53,7 @@ def calculate_similarity_ranking(patient_hpo_set, omim_disease_profiles):
     
     return ranked_df
 
-def run_validation(phenopacket_dir, omim_profiles):
+def run_validation(phenopacket_dir, omim_profiles, similarity_method):
     """
     Iterates through all PhenoPackets, performs similarity analysis,
     and evaluates the ranking of the true diagnosis.
@@ -60,6 +61,7 @@ def run_validation(phenopacket_dir, omim_profiles):
     Args:
         phenopacket_dir (str): Path to the directory containing PhenoPacket JSON files.
         omim_profiles (dict): A dictionary of OMIM IDs to HPOSets.
+        similarity_method (str): The similarity algorithm to use.
         
     Returns:
         pandas.DataFrame: A DataFrame with detailed validation results for each phenopacket.
@@ -87,7 +89,7 @@ def run_validation(phenopacket_dir, omim_profiles):
             
         ground_truth_omim_id = ground_truth_diseases[0]
         
-        ranked_diseases = calculate_similarity_ranking(patient_hpo_set, omim_profiles)
+        ranked_diseases = calculate_similarity_ranking(patient_hpo_set, omim_profiles, similarity_method=similarity_method)
         
         rank_info = ranked_diseases[ranked_diseases['omim_id'] == ground_truth_omim_id]
         
@@ -139,13 +141,13 @@ def calculate_performance_metrics(results_df):
     }
     return metrics
 
-def main(phenopacket_dir, output_json_path):
+def main(phenopacket_dir, output_json_path, similarity_method):
     """
     Main function to run the phenotypic similarity validation pipeline.
     """
     omim_profiles = initialize_hpo_ontology()
     
-    validation_results_df = run_validation(phenopacket_dir, omim_profiles)
+    validation_results_df = run_validation(phenopacket_dir, omim_profiles, similarity_method)
     
     if validation_results_df.empty:
         logging.warning("Validation produced no results. Exiting.")
@@ -176,7 +178,18 @@ if __name__ == "__main__":
         default="phenotypic_validation_results.json",
         help="Path to save the detailed validation results JSON file."
     )
+    parser.add_argument(
+        "--similarity_method",
+        type=str,
+        default="resnik",
+        choices=['resnik', 'lin', 'jc', 'rel'],
+        help="The similarity algorithm to use. Defaults to 'resnik'."
+    )
     
     args = parser.parse_args()
     
-    main(phenopacket_dir=args.phenopacket_dir, output_json_path=args.output_json)
+    main(
+        phenopacket_dir=args.phenopacket_dir,
+        output_json_path=args.output_json,
+        similarity_method=args.similarity_method,
+    )
