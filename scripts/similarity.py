@@ -21,8 +21,19 @@ def initialize_hpo_ontology():
     omim_diseases = Ontology.omim_diseases
     logging.info(f"Loaded {len(omim_diseases)} OMIM disease profiles from HPO annotations.")
     
+    if not omim_diseases:
+        return {}
+
     # For faster lookup, create a dictionary mapping OMIM ID to the HPOSet
-    omim_profiles = {disease.id: disease.hpo_set for disease in omim_diseases}
+    # In older versions of pyhpo, `disease.hpo_set` was a method,
+    # but is a property in newer versions. This check ensures compatibility.
+    first_disease = omim_diseases[0]
+    if callable(first_disease.hpo_set):
+        logging.debug("`disease.hpo_set` is a method (older pyhpo); using function call.")
+        omim_profiles = {disease.id: disease.hpo_set() for disease in omim_diseases}
+    else:
+        logging.debug("`disease.hpo_set` is a property (newer pyhpo); using property access.")
+        omim_profiles = {disease.id: disease.hpo_set for disease in omim_diseases}
     return omim_profiles
 
 def calculate_similarity_ranking(patient_hpo_set, omim_disease_profiles, similarity_method='resnik'):
