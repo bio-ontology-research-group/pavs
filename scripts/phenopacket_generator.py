@@ -74,7 +74,7 @@ def create_phenopackets(parsed_data_path, output_dir):
                     if len(parts) == 3:
                         # Assumes format like GENE:TRANSCRIPT:c.CHANGE
                         symbol, transcript, hgvsc = parts
-                        variant = HgvsVariant(assembly=assembly, vcf_d=vcf_d, symbol=symbol, transcript=transcript, hgvsc=hgvsc)
+                        variant = HgvsVariant(assembly=assembly, vcf_d=vcf_d, symbol=symbol, transcript=transcript, g_hgvs=hgvsc)
                     else:
                         # Fallback for other formats
                         variant = HgvsVariant(assembly=assembly, vcf_d=vcf_d, g_hgvs=var_string)
