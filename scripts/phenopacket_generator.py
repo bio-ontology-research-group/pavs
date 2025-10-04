@@ -24,7 +24,7 @@ def create_phenopackets(parsed_data_path, output_dir):
     # --- Create Metadata ---
     # This is a critical step for FAIR compliance. It documents the resources used.
     # Replace with the actual versions you are using.
-    created_by = "PAVS_Curation_Team"
+    created_by = "Marwa Abdelhakim"
     meta = MetaData(created_by=created_by)
     # Add HPO version used for annotation
     meta.hpo('2024-04-19')
