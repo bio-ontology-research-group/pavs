@@ -4,7 +4,7 @@
 import pandas as pd
 from pyphetools.creation import Individual, MetaData, HpTerm, Disease, Citation, HgvsVariant
 from phenopackets.schema.v2.core.interpretation_pb2 import VariantInterpretation
-from pyphetools.validation import PhenopacketValidator
+from pyphetools.validation import ContentValidator
 from google.protobuf.json_format import MessageToJson
 import os
 import re
@@ -30,6 +30,9 @@ def create_phenopackets(parsed_data_path, output_dir):
     meta.hpo('2024-04-19')
     # Add MONDO for diseases (even if using OMIM, MONDO is often the bridge)
     meta.mondo('2024-04-01')
+
+    # We will validate that each phenopacket has at least one HPO term.
+    validator = ContentValidator(min_hpo=1)
     
     print(f"Generating {len(df)} PhenoPackets...")
 
@@ -110,9 +113,9 @@ def create_phenopackets(parsed_data_path, output_dir):
 
 
         # --- 7. Validate and Save ---
-        # It's good practice to validate each phenopacket
-        validator = PhenopacketValidator(phenopacket_string=MessageToJson(phenopacket))
-        errors = validator.validate()
+        # It's good practice to validate each phenopacket.
+        # The validator is created once outside the loop.
+        errors = validator.validate_phenopacket(phenopacket)
         if errors:
             print(f"Validation errors for {individual_id}: {errors}")
             continue
