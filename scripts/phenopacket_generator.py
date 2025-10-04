@@ -33,7 +33,8 @@ def create_phenopackets(parsed_data_path, output_dir):
 
     # We will validate that each phenopacket has at least one HPO term.
     # Set min_hpo=0 to allow generation of phenopackets for individuals with no HPO terms.
-    validator = ContentValidator(min_hpo=0)
+    # Set min_disease=0 to allow generation for individuals with no disease annotation.
+    validator = ContentValidator(min_hpo=0, min_disease=0)
     
     print(f"Generating {len(df)} PhenoPackets...")
 
