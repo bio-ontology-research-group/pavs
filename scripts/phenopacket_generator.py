@@ -60,32 +60,31 @@ def create_phenopackets(parsed_data_path, output_dir):
         # --- 3. Add Genetic Interpretations ---
         variant_interpretations = []
         if pd.notna(row['parsed_variants']) and row['parsed_variants']!= 'nan':
-            variants = row['parsed_variants'].split(';')
-            for var_string in variants:
-                # We need to provide assembly and a placeholder vcf_d for HgvsVariant.
-                # We will assume hg38, but this should be confirmed.
-                assembly = 'hg38'
-                vcf_d = {'chr': 'N/A', 'pos': 0, 'ref': 'N/A', 'alt': 'N/A'} # Placeholder
+            var_string = row['parsed_variants']
+            # We need to provide assembly and a placeholder vcf_d for HgvsVariant.
+            # We will assume hg38, but this should be confirmed.
+            assembly = 'hg38'
+            vcf_d = {'chr': 'N/A', 'pos': 0, 'ref': 'N/A', 'alt': 'N/A'} # Placeholder
 
-                # HgvsVariant needs a transcript and hgvsc notation.
-                # We will create a simple HgvsVariant object.
-                # A more robust solution might use a library like 'hgvs' to parse the string.
-                if ':' in var_string:
-                    parts = var_string.split(':', 2)
-                    if len(parts) == 3:
-                        # Assumes format like GENE:TRANSCRIPT:c.CHANGE
-                        symbol, transcript, hgvsc = parts
-                        variant = HgvsVariant(assembly=assembly, vcf_d=vcf_d, symbol=symbol, transcript=transcript, g_hgvs=hgvsc)
-                    else:
-                        # Fallback for other formats
-                        variant = HgvsVariant(assembly=assembly, vcf_d=vcf_d, g_hgvs=var_string)
+            # HgvsVariant needs a transcript and hgvsc notation.
+            # We will create a simple HgvsVariant object.
+            # A more robust solution might use a library like 'hgvs' to parse the string.
+            if ':' in var_string:
+                parts = var_string.split(':', 2)
+                if len(parts) == 3:
+                    # Assumes format like GENE:TRANSCRIPT:c.CHANGE
+                    symbol, transcript, hgvsc = parts
+                    variant = HgvsVariant(assembly=assembly, vcf_d=vcf_d, symbol=symbol, transcript=transcript, g_hgvs=hgvsc)
                 else:
-                    # Handle non-HGVS variants if necessary, or just label them
+                    # Fallback for other formats
                     variant = HgvsVariant(assembly=assembly, vcf_d=vcf_d, g_hgvs=var_string)
+            else:
+                # Handle non-HGVS variants if necessary, or just label them
+                variant = HgvsVariant(assembly=assembly, vcf_d=vcf_d, g_hgvs=var_string)
 
-                # Get the GA4GH VariantInterpretation message
-                variant_interpretation = variant.to_ga4gh_variant_interpretation()
-                variant_interpretations.append(variant_interpretation)
+            # Get the GA4GH VariantInterpretation message
+            variant_interpretation = variant.to_ga4gh_variant_interpretation()
+            variant_interpretations.append(variant_interpretation)
 
         # --- 4. Add Provenance (Citation) ---
         citation = None
@@ -112,6 +111,9 @@ def create_phenopackets(parsed_data_path, output_dir):
             phenopacket_id=f"PAVS_{individual_id}"
         )
 
+        # If no disease was found in the input, remove the default one added by pyphetools
+        if disease_obj is None:
+            phenopacket.diseases.clear()
 
         # --- 7. Validate and Save ---
         # It's good practice to validate each phenopacket.
