@@ -88,7 +88,7 @@ def create_phenopackets(parsed_data_path, output_dir):
         if pd.notna(row['reference']) and row['reference'].startswith('http'):
             pubmed_id_match = re.search(r'(\d+)$', row['reference'].strip('/'))
             if pubmed_id_match:
-                pmid = pubmed_id_match.group(1)
+                pmid = f"PMID:{pubmed_id_match.group(1)}"
                 # The Citation object requires a title. We'll use the reference URL as a placeholder.
                 citation = Citation(pmid=pmid, title=row['reference'])
         
