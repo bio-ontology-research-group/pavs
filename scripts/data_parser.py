@@ -7,6 +7,7 @@ import re
 import hgvs.parser
 import logging
 import argparse
+import os
 from tqdm import tqdm
 
 # --- Setup Logging ---
@@ -28,10 +29,45 @@ omim_label_pattern = re.compile(r'([\w\s;-]+)\s*\((OMIM:\d{6})\)')
 # Initialize the parser once to be reused, as initialization is expensive.
 hgvs_parser = hgvs.parser.Parser()
 
-def parse_phenotypes(phenotype_string):
+
+def build_hpo_mapper(obo_path):
+    """
+    Parses the hp.obo file to build a mapping from term labels and synonyms
+    to HPO IDs. Matching is case-insensitive.
+    """
+    if not os.path.exists(obo_path):
+        logging.error(f"HPO OBO file not found at: {obo_path}")
+        raise FileNotFoundError(f"HPO OBO file not found at: {obo_path}")
+
+    mapper = {}
+    with open(obo_path, 'r', encoding='utf-8') as f:
+        current_id = None
+        for line in f:
+            line = line.strip()
+            if line == "[Term]":
+                current_id = None
+            elif line.startswith('id:'):
+                current_id = line.split('id: ')[1]
+            elif line.startswith('name:'):
+                if current_id:
+                    name = line.split('name: ')[1]
+                    mapper[name.lower()] = current_id
+            elif line.startswith('synonym:'):
+                if current_id:
+                    match = re.search(r'"([^"]+)"', line)
+                    if match:
+                        synonym = match.group(1)
+                        mapper[synonym.lower()] = current_id
+    
+    logging.info(f"Built HPO mapper with {len(mapper)} labels/synonyms from {obo_path}.")
+    return mapper
+
+
+def parse_phenotypes(phenotype_string, hpo_mapper=None):
     """
     Parses a string from the 'phenotypes' column to extract HPO terms, OMIM IDs,
-    and any remaining free-text descriptions.
+    and any remaining free-text descriptions. If an hpo_mapper is provided,
+    it attempts to map free text to HPO IDs.
     """
     if not isinstance(phenotype_string, str):
         return [], [], []
@@ -42,35 +78,44 @@ def parse_phenotypes(phenotype_string):
 
     hpo_ids = set()
     omim_ids = set()
-    free_text = set()
+    unmapped_text = set()
 
     for term in terms:
         hpo_label_match = hpo_label_pattern.search(term)
         omim_label_match = omim_label_pattern.search(term)
 
+        # Case 1: Term has an explicit HPO or OMIM ID, e.g., "Seizures (HP:0001250)"
         if hpo_label_match:
-            label, hpo_id = hpo_label_match.groups()
+            _, hpo_id = hpo_label_match.groups()
             hpo_ids.add(hpo_id)
-            free_text.add(label.strip())
         elif omim_label_match:
-            label, omim_id = omim_label_match.groups()
+            _, omim_id = omim_label_match.groups()
             omim_ids.add(omim_id)
-            free_text.add(label.strip())
         else:
-            # Fallback for terms without labels or free text
+            # Case 2: Term might be just an ID, e.g., "(HP:0001250)"
             hpo_matches = hpo_pattern.findall(term)
             omim_matches = omim_pattern.findall(term)
             
             hpo_ids.update(hpo_matches)
             omim_ids.update(omim_matches)
             
-            # If it's free text, clean and add it
-            if not hpo_matches and not omim_matches:
-                cleaned_term = re.sub(r'\([^)]*\)', '', term).strip()
-                if cleaned_term:
-                    free_text.add(cleaned_term)
+            # Case 3: Term is free text, e.g., "Seizures"
+            # Clean out any parenthesized content that might have been missed
+            cleaned_term = re.sub(r'\([^)]*\)', '', term).strip()
+            if cleaned_term and not hpo_matches and not omim_matches:
+                # Attempt to map the free text to an HPO ID
+                if hpo_mapper:
+                    mapped_id = hpo_mapper.get(cleaned_term.lower())
+                    if mapped_id:
+                        hpo_ids.add(mapped_id)
+                    else:
+                        # If mapping fails, add to unmapped text
+                        unmapped_text.add(cleaned_term)
+                else:
+                    # If no mapper, it's just unmapped text
+                    unmapped_text.add(cleaned_term)
                 
-    return sorted(list(hpo_ids)), sorted(list(omim_ids)), sorted(list(free_text))
+    return sorted(list(hpo_ids)), sorted(list(omim_ids)), sorted(list(unmapped_text))
 
 
 def split_variant_expressions(variant_string):
@@ -163,10 +208,15 @@ def parse_variants(variant_string):
     return all_parsed_variants
 
 
-def main(input_csv_path, output_csv_path):
+def main(input_csv_path, output_csv_path, hpo_obo_path=None):
     """
     Main function to execute the parsing pipeline.
     """
+    hpo_mapper = None
+    if hpo_obo_path:
+        print(f"Building HPO mapper from {hpo_obo_path}...")
+        hpo_mapper = build_hpo_mapper(hpo_obo_path)
+
     print(f"Reading data from {input_csv_path}...")
     df = pd.read_csv(input_csv_path, sep='\t')
 
@@ -181,10 +231,10 @@ def main(input_csv_path, output_csv_path):
     print("Parsing phenotypes and variants for each row...")
     for index, row in tqdm(df.iterrows(), total=df.shape[0], desc="Parsing rows"):
         # Parse phenotypes
-        hpo_ids, omim_ids, free_text = parse_phenotypes(row['phenotypes'])
+        hpo_ids, omim_ids, unmapped_text = parse_phenotypes(row['phenotypes'], hpo_mapper=hpo_mapper)
         df.at[index, 'parsed_hpo_ids'] = ';'.join(hpo_ids)
         df.at[index, 'parsed_omim_ids'] = ';'.join(omim_ids)
-        df.at[index, 'parsed_pheno_text'] = ';'.join(free_text)
+        df.at[index, 'parsed_pheno_text'] = ';'.join(unmapped_text)
         
         # Parse variants
         variants = parse_variants(row['variants'])
@@ -210,7 +260,12 @@ if __name__ == '__main__':
         default="parsed_data.csv",
         help="Path for the output structured CSV file (default: parsed_data.csv)."
     )
+    parser.add_argument(
+        "--hpo_obo_path",
+        default=None,
+        help="Path to the hp.obo file to enable mapping of free-text phenotypes to HPO IDs."
+    )
     args = parser.parse_args()
 
     # Run the pipeline
-    main(args.input_csv_path, args.output_csv_path)
+    main(args.input_csv_path, args.output_csv_path, args.hpo_obo_path)
