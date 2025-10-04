@@ -2,7 +2,8 @@
 # GA4GH PhenoPacket JSON files using the pyphetools library.
 
 import pandas as pd
-from pyphetools.creation import Individual, MetaData, HpTerm, Disease, Citation, HgvsVariant
+from pyphetools.creation import Individual, MetaData, HpTerm, Disease, Citation
+from phenopackets.schema.v2.core.base_pb2 import GeneDescriptor, VariationDescriptor, Expression, VcfRecord
 from phenopackets.schema.v2.core.interpretation_pb2 import VariantInterpretation
 from pyphetools.validation import ContentValidator
 from google.protobuf.json_format import MessageToJson
@@ -45,10 +46,20 @@ def create_phenopackets(parsed_data_path, output_dir):
         hpo_terms = []
         if pd.notna(row['parsed_hpo_ids']) and row['parsed_hpo_ids']!= 'nan':
             hpo_ids = row['parsed_hpo_ids'].split(';')
-            for hpo_id in hpo_ids:
-                # pyphetools requires a label. We will use the ID as the label for now.
-                term = HpTerm(hpo_id=hpo_id, label=hpo_id)
-                hpo_terms.append(term)
+            hpo_labels = []
+            if pd.notna(row['parsed_pheno_text']) and row['parsed_pheno_text'] != 'nan':
+                hpo_labels = row['parsed_pheno_text'].split(';')
+            
+            # If lengths match, we can pair them. Otherwise, we fall back to using IDs as labels.
+            if len(hpo_ids) == len(hpo_labels):
+                for hpo_id, label in zip(hpo_ids, hpo_labels):
+                    term = HpTerm(hpo_id=hpo_id, label=label)
+                    hpo_terms.append(term)
+            else:
+                for hpo_id in hpo_ids:
+                    # Fallback for mismatched labels and IDs from the parser
+                    term = HpTerm(hpo_id=hpo_id, label=hpo_id)
+                    hpo_terms.append(term)
 
         # --- 2. Add Disease Diagnosis ---
         disease_obj = None
@@ -62,29 +73,46 @@ def create_phenopackets(parsed_data_path, output_dir):
         variant_interpretations = []
         if pd.notna(row['parsed_variants']) and row['parsed_variants']!= 'nan':
             var_string = row['parsed_variants']
-            # We need to provide assembly and a placeholder vcf_d for HgvsVariant.
-            # We will assume hg38, but this should be confirmed.
-            assembly = 'hg38'
-            vcf_d = {'chr': 'N/A', 'pos': 0, 'ref': 'N/A', 'alt': 'N/A'} # Placeholder
-
-            # HgvsVariant needs a transcript and hgvsc notation.
-            # We will create a simple HgvsVariant object.
-            # A more robust solution might use a library like 'hgvs' to parse the string.
+            
+            symbol, transcript, hgvsc_expressions_str = None, None, None
             if ':' in var_string:
                 parts = var_string.split(':', 2)
                 if len(parts) == 3:
-                    # Assumes format like GENE:TRANSCRIPT:c.CHANGE
-                    symbol, transcript, hgvsc = parts
-                    variant = HgvsVariant(assembly=assembly, vcf_d=vcf_d, symbol=symbol, transcript=transcript, g_hgvs=hgvsc)
+                    symbol, transcript, hgvsc_expressions_str = parts
                 else:
-                    # Fallback for other formats
-                    variant = HgvsVariant(assembly=assembly, vcf_d=vcf_d, g_hgvs=var_string)
+                    hgvsc_expressions_str = var_string # fallback
             else:
-                # Handle non-HGVS variants if necessary, or just label them
-                variant = HgvsVariant(assembly=assembly, vcf_d=vcf_d, g_hgvs=var_string)
+                hgvsc_expressions_str = var_string
 
-            # Get the GA4GH VariantInterpretation message
-            variant_interpretation = variant.to_ga4gh_variant_interpretation()
+            gene_descriptor = None
+            if symbol:
+                gene_descriptor = GeneDescriptor(value_id=symbol, symbol=symbol)
+
+            expressions = []
+            if hgvsc_expressions_str:
+                # The string can contain multiple expressions separated by ';'
+                for expr_str in hgvsc_expressions_str.split(';'):
+                    expr_str = expr_str.strip()
+                    if not expr_str: continue
+                    # A simple way to guess syntax. p. is protein, c. is coding.
+                    syntax = 'hgvs'
+                    if expr_str.startswith('p.'):
+                        syntax = 'hgvs.p'
+                    elif expr_str.startswith('c.'):
+                        syntax = 'hgvs.c'
+                    expressions.append(Expression(syntax=syntax, value=expr_str))
+
+            vcf_record = VcfRecord(genome_assembly='hg38', chrom='N/A', pos=0, ref='N/A', alt='N/A')
+
+            variation_descriptor = VariationDescriptor(
+                id=f"var_{individual_id}", # simplified ID
+                label=var_string,
+                gene_context=gene_descriptor,
+                expressions=expressions,
+                vcf_record=vcf_record
+            )
+            
+            variant_interpretation = VariantInterpretation(variation_descriptor=variation_descriptor)
             variant_interpretations.append(variant_interpretation)
 
         # --- 4. Add Provenance (Citation) ---
