@@ -8,6 +8,10 @@ from tqdm import tqdm
 from tqdm.contrib.logging import logging_redirect_tqdm
 from pyhpo import Ontology, HPOSet
 from sklearn.metrics import roc_auc_score
+import hgvs.parser
+import hgvs.dataproviders.uta
+import hgvs.assemblymapper
+import hgvs.exceptions
 
 
 def load_gene_hpo_profiles():
@@ -33,6 +37,25 @@ def load_gene_hpo_profiles():
         
     logging.info(f"Built profiles for {len(gene_profiles)} genes with phenotype associations.")
     return gene_profiles
+
+def initialize_hgvs_mapper():
+    """
+    Initializes an HGVS AssemblyMapper to map transcript accessions to gene symbols.
+    Requires a network connection to the UTA database.
+    """
+    logging.info("Connecting to UTA database for HGVS mapping... (this may take a moment)")
+    try:
+        hdp = hgvs.dataproviders.uta.connect()
+        # Assuming GRCh38, which is common. This might need to be configurable
+        # if other assemblies are used in the phenopackets.
+        am = hgvs.assemblymapper.AssemblyMapper(hdp, assembly_name='GRCh38')
+        logging.info("UTA database connection successful.")
+        return am
+    except Exception as e:
+        logging.error(f"Failed to connect to UTA database: {e}")
+        logging.warning("Gene symbol extraction from HGVS strings will be disabled.")
+        return None
+
 
 def calculate_similarity_ranking(patient_hpo_set, entity_profiles, similarity_method='resnik'):
     """
@@ -61,7 +84,7 @@ def calculate_similarity_ranking(patient_hpo_set, entity_profiles, similarity_me
     
     return ranked_df
 
-def run_validation(phenopacket_dir, gene_profiles, similarity_method):
+def run_validation(phenopacket_dir, gene_profiles, similarity_method, hgvs_mapper, hgvs_parser):
     """
     Iterates through all PhenoPackets, performs similarity analysis against gene profiles,
     and evaluates the ranking of the true causal gene.
@@ -70,6 +93,8 @@ def run_validation(phenopacket_dir, gene_profiles, similarity_method):
         phenopacket_dir (str): Path to the directory containing PhenoPacket JSON files.
         gene_profiles (dict): A dictionary of gene symbols to HPOSets.
         similarity_method (str): The similarity algorithm to use.
+        hgvs_mapper (hgvs.assemblymapper.AssemblyMapper): Mapper for transcript to gene symbol.
+        hgvs_parser (hgvs.parser.Parser): Parser for HGVS strings.
         
     Returns:
         pandas.DataFrame: A DataFrame with detailed validation results for each phenopacket.
@@ -100,7 +125,27 @@ def run_validation(phenopacket_dir, gene_profiles, similarity_method):
                     gene_context = interpretations[0]['diagnosis']['genomicInterpretations'][0]['variantInterpretation']['variationDescriptor']['geneContext']
                     ground_truth_gene = gene_context.get('symbol')
                 except (KeyError, IndexError):
-                    pass  # Will be caught by the check below
+                    pass  # No geneContext found, will try HGVS parsing next.
+
+                # Fallback: If no geneContext, try parsing HGVS expression from transcript ID
+                if ground_truth_gene is None and hgvs_mapper:
+                    try:
+                        var_descriptor = interpretations[0]['diagnosis']['genomicInterpretations'][0]['variantInterpretation']['variationDescriptor']
+                        expressions = var_descriptor.get('expressions', [])
+                        if expressions:
+                            # Use the first available HGVS string
+                            hgvs_string = expressions[0].get('value')
+                            if hgvs_string:
+                                try:
+                                    variant = hgvs_parser.parse(hgvs_string)
+                                    transcript_id = variant.ac
+                                    ground_truth_gene = hgvs_mapper.ac_to_gene_symbol(transcript_id)
+                                    if ground_truth_gene:
+                                        logging.debug(f"Mapped transcript '{transcript_id}' to gene '{ground_truth_gene}' for {data['id']}.")
+                                except hgvs.exceptions.HGVSParseError as e:
+                                    logging.warning(f"Could not parse HGVS string '{hgvs_string}' in {data['id']}: {e}")
+                    except (KeyError, IndexError):
+                        pass # Path to expressions not found
 
             if ground_truth_gene is None:
                 logging.warning(f"Skipping phenopacket '{data['id']}': Could not extract ground truth gene symbol from interpretations.")
@@ -189,7 +234,13 @@ def main(phenopacket_dir, output_json_path, similarity_method):
         logging.error("Gene profiles could not be loaded. Exiting.")
         return
 
-    validation_results_df = run_validation(phenopacket_dir, gene_profiles, similarity_method)
+    # Initialize mappers for HGVS parsing and gene symbol mapping
+    hgvs_mapper = initialize_hgvs_mapper()
+    hgvs_parser = hgvs.parser.Parser()
+
+    validation_results_df = run_validation(
+        phenopacket_dir, gene_profiles, similarity_method, hgvs_mapper, hgvs_parser
+    )
     
     if validation_results_df.empty:
         logging.warning("Validation produced no results. Exiting.")
