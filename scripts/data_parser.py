@@ -73,10 +73,63 @@ def parse_phenotypes(phenotype_string):
     return sorted(list(hpo_ids)), sorted(list(omim_ids)), sorted(list(free_text))
 
 
+def split_variant_expressions(variant_string):
+    """
+    Splits a variant string that may contain multiple HGVS expressions.
+    Common patterns include:
+    - Gene:transcript:genomic_change:protein_change
+    - Multiple expressions separated by commas or semicolons
+    - Mixed genomic (g.) and protein (p.) coordinates
+    """
+    expressions = []
+    
+    # First, check if it's a compound expression with colons
+    if ':' in variant_string:
+        parts = variant_string.split(':')
+        
+        # Try to identify gene symbol (usually first part if it doesn't start with NM_ or c. or g. or p.)
+        gene_symbol = None
+        transcript = None
+        
+        for i, part in enumerate(parts):
+            part = part.strip()
+            
+            # Gene symbol is typically uppercase letters/numbers, not starting with known prefixes
+            if i == 0 and not any(part.startswith(prefix) for prefix in ['NM_', 'NR_', 'c.', 'g.', 'p.', 'chr']):
+                gene_symbol = part
+            # Transcript usually starts with NM_ or NR_
+            elif part.startswith(('NM_', 'NR_')):
+                transcript = part
+            # HGVS expressions start with c., g., p., etc.
+            elif any(part.startswith(prefix) for prefix in ['c.', 'g.', 'p.', 'n.', 'r.']):
+                # Construct full HGVS expression
+                if transcript and part.startswith(('c.', 'n.', 'r.')):
+                    expressions.append(f"{transcript}:{part}")
+                elif gene_symbol and part.startswith('p.'):
+                    expressions.append(f"{gene_symbol}:{part}")
+                else:
+                    expressions.append(part)
+    
+    # Also check for expressions separated by commas or semicolons
+    if not expressions:
+        # Split by common delimiters
+        potential_variants = re.split(r'[,;]\s*', variant_string)
+        for var in potential_variants:
+            var = var.strip()
+            if var:
+                expressions.append(var)
+    
+    # If still no expressions, return the original
+    if not expressions:
+        expressions = [variant_string]
+    
+    return expressions
+
+
 def parse_variants(variant_string):
     """
     Parses a string from the 'variants' column to extract HGVS strings and
-    other variant descriptions.
+    other variant descriptions. Handles multiple HGVS expressions for the same variant.
     """
     if not isinstance(variant_string, str):
         return []
@@ -85,19 +138,29 @@ def parse_variants(variant_string):
     variant_string = variant_string.replace('|', ';')
     variants = [v.strip() for v in variant_string.split(';') if v.strip()]
     
-    parsed_variants = []
+    all_parsed_variants = []
+    
     for var in variants:
-        try:
-            # Attempt to parse as a standard HGVS string
-            parsed_var = hgvs_parser.parse_hgvs_variant(var)
-            # Successfully parsed, store as a standardized string
-            parsed_variants.append(str(parsed_var))
-        except hgvs.exceptions.HGVSParseError:
-            # If parsing fails, store the original string as a description
-            # This handles non-standard formats like chromosomal coordinates
-            parsed_variants.append(var)
+        # Split potential multiple expressions
+        expressions = split_variant_expressions(var)
+        
+        parsed_expressions = []
+        for expr in expressions:
+            try:
+                # Attempt to parse as a standard HGVS string
+                parsed_var = hgvs_parser.parse_hgvs_variant(expr)
+                # Successfully parsed, store as a standardized string
+                parsed_expressions.append(str(parsed_var))
+            except hgvs.exceptions.HGVSParseError:
+                # If parsing fails, store the original string as a description
+                # This handles non-standard formats like chromosomal coordinates
+                parsed_expressions.append(expr)
+        
+        # Join related expressions with comma (they represent the same variant)
+        if parsed_expressions:
+            all_parsed_variants.append(','.join(parsed_expressions))
             
-    return parsed_variants
+    return all_parsed_variants
 
 
 def main(input_csv_path, output_csv_path):

@@ -10,6 +10,89 @@ import os
 import re
 import argparse
 
+def extract_gene_symbol(variant_string):
+    """
+    Extracts the gene symbol from a variant string.
+    Common patterns:
+    - GENE:NM_xxx:c.xxx
+    - GENE:p.xxx
+    - Just returns None if no clear gene symbol
+    """
+    if ':' in variant_string:
+        parts = variant_string.split(':')
+        # First part is often the gene symbol if it doesn't start with known prefixes
+        first_part = parts[0].strip()
+        if not any(first_part.startswith(prefix) for prefix in ['NM_', 'NR_', 'c.', 'g.', 'p.', 'chr', 'NC_']):
+            # Likely a gene symbol
+            return first_part
+    return None
+
+def parse_variant_components(variant_string):
+    """
+    Parses a variant string to extract gene symbol, transcript, and HGVS expressions.
+    Returns a dict with 'symbol', 'transcript', 'genomic', 'protein', and 'other' components.
+    """
+    components = {
+        'symbol': None,
+        'transcript': None,
+        'genomic': None,
+        'protein': None,
+        'cdna': None,
+        'other': []
+    }
+    
+    # Handle comma-separated expressions (same variant, different representations)
+    expressions = [e.strip() for e in variant_string.split(',')]
+    
+    for expr in expressions:
+        if ':' in expr:
+            parts = expr.split(':', 2)
+            
+            # Check first part
+            if len(parts) >= 1:
+                first = parts[0].strip()
+                # Gene symbol check
+                if not any(first.startswith(prefix) for prefix in ['NM_', 'NR_', 'c.', 'g.', 'p.', 'chr', 'NC_']):
+                    components['symbol'] = first
+                elif first.startswith(('NM_', 'NR_')):
+                    components['transcript'] = first
+                    
+            # Check second part if exists
+            if len(parts) >= 2:
+                second = parts[1].strip()
+                if second.startswith(('NM_', 'NR_')):
+                    components['transcript'] = second
+                elif second.startswith('c.'):
+                    components['cdna'] = second
+                elif second.startswith('g.'):
+                    components['genomic'] = second
+                elif second.startswith('p.'):
+                    components['protein'] = second
+                    
+            # Check third part if exists
+            if len(parts) >= 3:
+                third = parts[2].strip()
+                if third.startswith('c.'):
+                    components['cdna'] = third
+                elif third.startswith('g.'):
+                    components['genomic'] = third
+                elif third.startswith('p.'):
+                    components['protein'] = third
+        else:
+            # Single expression without colons
+            if expr.startswith('p.'):
+                components['protein'] = expr
+            elif expr.startswith('g.'):
+                components['genomic'] = expr
+            elif expr.startswith('c.'):
+                components['cdna'] = expr
+            elif expr.startswith(('NM_', 'NR_')):
+                components['transcript'] = expr
+            else:
+                components['other'].append(expr)
+    
+    return components
+
 def create_phenopackets(parsed_data_path, output_dir):
     """
     Generates PhenoPacket JSON files from a structured DataFrame.
@@ -71,34 +154,56 @@ def create_phenopackets(parsed_data_path, output_dir):
         # --- 3. Add Genetic Interpretations ---
         variant_interpretations = []
         if pd.notna(row['parsed_variants']) and row['parsed_variants']!= 'nan':
-            var_string = row['parsed_variants']
+            # Split by semicolon to get individual variants
+            variant_strings = row['parsed_variants'].split(';')
             
-            symbol, transcript, g_hgvs = None, None, None
-            if ':' in var_string:
-                parts = var_string.split(':', 2)
-                if len(parts) == 3:
-                    symbol, transcript, g_hgvs = parts
+            for var_string in variant_strings:
+                var_string = var_string.strip()
+                if not var_string:
+                    continue
+                    
+                # Parse the variant components
+                components = parse_variant_components(var_string)
+                
+                # Extract or infer the gene symbol
+                symbol = components['symbol']
+                transcript = components['transcript']
+                
+                # Build the HGVS expression
+                # Prefer cDNA if we have transcript, otherwise use genomic
+                hgvs_expr = None
+                if transcript and components['cdna']:
+                    hgvs_expr = f"{transcript}:{components['cdna']}"
+                elif components['genomic']:
+                    hgvs_expr = components['genomic']
+                elif components['cdna']:
+                    hgvs_expr = components['cdna']
+                elif components['protein']:
+                    # Protein-only variant
+                    hgvs_expr = components['protein']
                 else:
-                    g_hgvs = var_string # fallback
-            else:
-                g_hgvs = var_string
-
-            # We need to provide assembly and a placeholder vcf_d for HgvsVariant.
-            # We will assume hg38, but this should be confirmed.
-            assembly = 'hg38'
-            vcf_d = {'chr': 'N/A', 'pos': 0, 'ref': 'N/A', 'alt': 'N/A'} # Placeholder
-
-            variant = HgvsVariant(
-                assembly=assembly,
-                vcf_d=vcf_d,
-                symbol=symbol,
-                transcript=transcript,
-                g_hgvs=g_hgvs
-            )
-
-            # Get the GA4GH VariantInterpretation message
-            variant_interpretation = variant.to_ga4gh_variant_interpretation()
-            variant_interpretations.append(variant_interpretation)
+                    # Use the original string as fallback
+                    hgvs_expr = var_string
+                
+                # We need to provide assembly and a placeholder vcf_d for HgvsVariant.
+                # We will assume hg38, but this should be confirmed.
+                assembly = 'hg38'
+                vcf_d = {'chr': 'N/A', 'pos': 0, 'ref': 'N/A', 'alt': 'N/A'} # Placeholder
+                
+                # Create the variant with gene symbol
+                variant = HgvsVariant(
+                    assembly=assembly,
+                    vcf_d=vcf_d,
+                    symbol=symbol,  # This should add the gene symbol to the variant
+                    transcript=transcript,
+                    g_hgvs=hgvs_expr if components['genomic'] else None,
+                    c_hgvs=components['cdna'] if components['cdna'] else None,
+                    p_hgvs=components['protein'] if components['protein'] else None
+                )
+                
+                # Get the GA4GH VariantInterpretation message
+                variant_interpretation = variant.to_ga4gh_variant_interpretation()
+                variant_interpretations.append(variant_interpretation)
 
         # --- 4. Add Provenance (Citation) ---
         citation = None
