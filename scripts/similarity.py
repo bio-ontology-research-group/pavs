@@ -139,9 +139,14 @@ def run_validation(phenopacket_dir, gene_profiles, similarity_method, hgvs_mappe
                                 try:
                                     variant = hgvs_parser.parse(hgvs_string)
                                     transcript_id = variant.ac
-                                    ground_truth_gene = hgvs_mapper.ac_to_gene_symbol(transcript_id)
-                                    if ground_truth_gene:
-                                        logging.debug(f"Mapped transcript '{transcript_id}' to gene '{ground_truth_gene}' for {data['id']}.")
+                                    try:
+                                        gene_info = hgvs_mapper.transcript_to_gene(transcript_id)
+                                        if gene_info:
+                                            ground_truth_gene = gene_info.get('hgnc')
+                                        if ground_truth_gene:
+                                            logging.debug(f"Mapped transcript '{transcript_id}' to gene '{ground_truth_gene}' for {data['id']}.")
+                                    except hgvs.exceptions.HGVSDataNotAvailableError as e:
+                                        logging.warning(f"Could not map transcript '{transcript_id}' in {data['id']}: {e}")
                                 except hgvs.exceptions.HGVSParseError as e:
                                     logging.warning(f"Could not parse HGVS string '{hgvs_string}' in {data['id']}: {e}")
                     except (KeyError, IndexError):
