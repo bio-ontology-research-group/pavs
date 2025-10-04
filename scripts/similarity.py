@@ -106,6 +106,10 @@ def run_validation(phenopacket_dir, gene_profiles, similarity_method):
                 logging.warning(f"Skipping phenopacket '{data['id']}': Could not extract ground truth gene symbol from interpretations.")
                 continue
 
+            if not ground_truth_gene:
+                logging.warning(f"Skipping phenopacket '{data['id']}': Ground truth gene symbol is present but empty.")
+                continue
+
             if ground_truth_gene not in gene_profiles:
                 logging.warning(f"Skipping {data['id']}: Ground truth gene '{ground_truth_gene}' not in HPO gene profiles.")
                 continue
