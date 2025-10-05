@@ -142,8 +142,9 @@ def run_validation(phenopacket_dir, gene_profiles, similarity_method, hgvs_mappe
                                     try:
                                         # Use the data provider (hdp) associated with the mapper to get transcript identity info
                                         tx_identity_info = hgvs_mapper.hdp.get_tx_identity_info(transcript_id)
-                                        if tx_identity_info and len(tx_identity_info) > 1 and tx_identity_info[1]:
-                                            ground_truth_gene = tx_identity_info[1].get('hgnc')
+                                        # The hgnc gene symbol is at index 2 of the returned tuple.
+                                        if tx_identity_info and len(tx_identity_info) > 2 and tx_identity_info[2]:
+                                            ground_truth_gene = tx_identity_info[2]
                                         
                                         if ground_truth_gene:
                                             logging.debug(f"Mapped transcript '{transcript_id}' to gene '{ground_truth_gene}' for {data['id']}.")
