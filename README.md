@@ -117,7 +117,7 @@ python scripts/convert_to_phenopackets.py \
 python scripts/convert_to_phenopackets.py -o PAVS_phenopackets.json
 
 # JSON Lines (one phenopacket per line)
-python scripts/convert_to_phenopackets.py -f json-lines -o PAVS_phenopackets.jsonl
+python scripts/convert_to_phenopackets.py -f json-lines -o PAVS_phenopackets.json
 
 # Individual files (one per patient)
 python scripts/convert_to_phenopackets.py -f individual -o PAVS_phenopackets/
