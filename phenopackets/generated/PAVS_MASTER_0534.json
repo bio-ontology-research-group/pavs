@@ -64,14 +64,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0534_NDRG1",
+                "id": "var_PAVS_MASTER_0534_NDRG1_0",
                 "geneContext": {
                   "symbol": "NDRG1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "NDRG1:NM_001258432:exon10:c.563delC:p.P188fs"
+                    "value": "NM_001258432:c.563delC"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -87,7 +87,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.710507Z",
+    "created": "2026-02-10T10:09:16.477817Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

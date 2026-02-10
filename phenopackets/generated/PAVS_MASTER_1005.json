@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1005_CWC22",
+                "id": "var_PAVS_MASTER_1005_CWC22_0",
                 "geneContext": {
                   "symbol": "CWC22"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CWC22:NM_020943:exon20:c.2305_2306del:p.D769fs"
+                    "value": "NM_020943:c.2305_2306del"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.797353Z",
+    "created": "2026-02-10T10:09:16.610775Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

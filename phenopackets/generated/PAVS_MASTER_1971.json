@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1971_PDPR",
+                "id": "var_PAVS_MASTER_1971_PDPR_0",
                 "geneContext": {
                   "symbol": "PDPR"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "PDPR:NM_017990:c.1360G>T:p.G454C"
+                    "value": "NM_017990:c.1360G>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.983369Z",
+    "created": "2026-02-10T10:09:16.888194Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

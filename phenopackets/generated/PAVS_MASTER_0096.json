@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0096_COL5A1",
+                "id": "var_PAVS_MASTER_0096_COL5A1_0",
                 "geneContext": {
                   "symbol": "COL5A1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "COL5A1:NM_000093:exon49:c.3883C>T:p.L1295F"
+                    "value": "NM_000093:c.3883C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.633960Z",
+    "created": "2026-02-10T10:09:16.361589Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

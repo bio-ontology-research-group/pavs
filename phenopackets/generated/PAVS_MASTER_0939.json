@@ -70,14 +70,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0939_CEP290",
+                "id": "var_PAVS_MASTER_0939_CEP290_0",
                 "geneContext": {
                   "symbol": "CEP290"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CEP290:NM_025114:exon32:c.4150C>T:p.R1384C"
+                    "value": "NM_025114:c.4150C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -93,7 +93,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.785051Z",
+    "created": "2026-02-10T10:09:16.590925Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

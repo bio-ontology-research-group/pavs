@@ -82,14 +82,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0821_C10orf2",
+                "id": "var_PAVS_MASTER_0821_C10orf2_0",
                 "geneContext": {
                   "symbol": "C10orf2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "C10orf2:NM_001163812:exon4:c.1721T>C:p.F574S"
+                    "value": "NM_001163812:c.1721T>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -105,7 +105,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.762026Z",
+    "created": "2026-02-10T10:09:16.554801Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

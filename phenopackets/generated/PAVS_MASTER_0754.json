@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0754_PRCD",
+                "id": "var_PAVS_MASTER_0754_PRCD_0",
                 "geneContext": {
                   "symbol": "PRCD"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "PRCD:NM_001077620:exon1:c.64C>T:p.R22X"
+                    "value": "NM_001077620:c.64C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.749962Z",
+    "created": "2026-02-10T10:09:16.536150Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

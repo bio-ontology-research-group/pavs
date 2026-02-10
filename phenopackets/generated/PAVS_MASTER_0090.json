@@ -76,14 +76,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0090_COG6",
+                "id": "var_PAVS_MASTER_0090_COG6_0",
                 "geneContext": {
                   "symbol": "COG6"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "COG6:NM_020751:exon19:c.1961C>T:p.T654M"
+                    "value": "NM_020751:c.1961C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -99,7 +99,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.632760Z",
+    "created": "2026-02-10T10:09:16.359783Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

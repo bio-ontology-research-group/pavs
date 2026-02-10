@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1325_PDHA1",
+                "id": "var_PAVS_MASTER_1325_PDHA1_0",
                 "geneContext": {
                   "symbol": "PDHA1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "PDHA1:NM_001173454:c.1256_1259dup"
+                    "value": "NM_001173454:c.1256_1259dup"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.857306Z",
+    "created": "2026-02-10T10:09:16.703807Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

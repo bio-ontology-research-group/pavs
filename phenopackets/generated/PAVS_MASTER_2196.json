@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2196_Chr2q35 deletion(220,032,133 -220,440,941)",
+                "id": "var_PAVS_MASTER_2196_Chr2q35 deletion(220,032,133 -220,440,941)_0",
                 "geneContext": {
                   "symbol": "Chr2q35 deletion(220,032,133 -220,440,941)"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "Chr2q35 deletion(220,032,133 -220,440,941)"
+                    "value": "Chr2q35"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.028275Z",
+    "created": "2026-02-10T10:09:16.955272Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

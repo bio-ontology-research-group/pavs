@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2287_Chr15q11.1 \u2013 15q11.2 duplication(20,175,623\u201322,504,198)",
+                "id": "var_PAVS_MASTER_2287_Chr15q11.1 \u2013 15q11.2 duplication(20,175,623\u201322,504,198)_0",
                 "geneContext": {
                   "symbol": "Chr15q11.1 \u2013 15q11.2 duplication(20,175,623\u201322,504,198)"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "Chr15q11.1 \u2013 15q11.2 duplication(20,175,623\u201322,504,198)"
+                    "value": "Chr15q11.1"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.045736Z",
+    "created": "2026-02-10T10:09:16.980373Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

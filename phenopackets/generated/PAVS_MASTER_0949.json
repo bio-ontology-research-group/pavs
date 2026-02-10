@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0949_PSAT1",
+                "id": "var_PAVS_MASTER_0949_PSAT1_0",
                 "geneContext": {
                   "symbol": "PSAT1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "PSAT1:NM_021154:exon4:c.233G>C:p.G78A"
+                    "value": "NM_021154:c.233G>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.786909Z",
+    "created": "2026-02-10T10:09:16.593798Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

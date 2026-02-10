@@ -70,14 +70,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0081_ABHD6",
+                "id": "var_PAVS_MASTER_0081_ABHD6_0",
                 "geneContext": {
                   "symbol": "ABHD6"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ABHD6:NM_020676:exon3:c.185A>C:p.Y62S"
+                    "value": "NM_020676:c.185A>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -93,7 +93,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.631021Z",
+    "created": "2026-02-10T10:09:16.357144Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

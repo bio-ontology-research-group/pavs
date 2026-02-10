@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2242_22q11.21(17269039_19794119)x1{46,XY,del(22)(q11.2q11.2)}",
+                "id": "var_PAVS_MASTER_2242_22q11.21(17269039_19794119)x1{46,XY,del(22)(q11.2q11.2)}_0",
                 "geneContext": {
                   "symbol": "22q11.21(17269039_19794119)x1{46,XY,del(22)(q11.2q11.2)}"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "22q11.21(17269039_19794119)x1{46,XY,del(22)(q11.2q11.2)}"
+                    "value": "22q11.21"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.036974Z",
+    "created": "2026-02-10T10:09:16.967970Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

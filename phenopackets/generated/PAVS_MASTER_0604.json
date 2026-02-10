@@ -76,14 +76,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0604_HSPD1",
+                "id": "var_PAVS_MASTER_0604_HSPD1_0",
                 "geneContext": {
                   "symbol": "HSPD1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "HSPD1:NM_002156:exon2:c.130G>A:p.V44I"
+                    "value": "NM_002156:c.130G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -99,7 +99,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.722572Z",
+    "created": "2026-02-10T10:09:16.495350Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

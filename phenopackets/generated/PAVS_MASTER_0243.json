@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0243_MRE11A",
+                "id": "var_PAVS_MASTER_0243_MRE11A_0",
                 "geneContext": {
                   "symbol": "MRE11A"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "MRE11A:NM_005590:exon7:c.630G>C:p.W210C"
+                    "value": "NM_005590:c.630G>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.660535Z",
+    "created": "2026-02-10T10:09:16.399832Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

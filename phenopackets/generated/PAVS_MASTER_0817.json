@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0817_VAMP1",
+                "id": "var_PAVS_MASTER_0817_VAMP1_0",
                 "geneContext": {
                   "symbol": "VAMP1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "VAMP1:NM_014231:exon2:c.129+1G>A"
+                    "value": "NM_014231:c.129+1G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.761240Z",
+    "created": "2026-02-10T10:09:16.553683Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

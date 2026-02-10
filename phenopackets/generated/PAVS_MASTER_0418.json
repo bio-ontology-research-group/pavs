@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0418_RGS7",
+                "id": "var_PAVS_MASTER_0418_RGS7_0",
                 "geneContext": {
                   "symbol": "RGS7"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "RGS7:NM_001282773:exon12:c.817A>G:p.R273G"
+                    "value": "NM_001282773:c.817A>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.689811Z",
+    "created": "2026-02-10T10:09:16.443985Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

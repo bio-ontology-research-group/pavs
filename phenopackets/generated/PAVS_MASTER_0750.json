@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0750_COL6A3",
+                "id": "var_PAVS_MASTER_0750_COL6A3_0",
                 "geneContext": {
                   "symbol": "COL6A3"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "COL6A3:NM_004369:exon34:c.7162+1G>A,"
+                    "value": "NM_004369:c.7162+1G>A,"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.749221Z",
+    "created": "2026-02-10T10:09:16.535025Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1535_CLHC1",
+                "id": "var_PAVS_MASTER_1535_CLHC1_0",
                 "geneContext": {
                   "symbol": "CLHC1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CLHC1:NM_001135598:c.779G>A"
+                    "value": "NM_001135598:c.779G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.897337Z",
+    "created": "2026-02-10T10:09:16.763574Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

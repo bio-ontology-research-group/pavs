@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1518_PNKP",
+                "id": "var_PAVS_MASTER_1518_PNKP_0",
                 "geneContext": {
                   "symbol": "PNKP"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "PNKP:NM_007254:c.1250_1251insAACGGGTCGCCATCGAC"
+                    "value": "NM_007254:c.1250_1251insAACGGGTCGCCATCGAC"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.894180Z",
+    "created": "2026-02-10T10:09:16.758903Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

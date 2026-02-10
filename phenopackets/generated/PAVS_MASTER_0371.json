@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0371_GRIK2",
+                "id": "var_PAVS_MASTER_0371_GRIK2_0",
                 "geneContext": {
                   "symbol": "GRIK2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "GRIK2:NM_001166247:exon14:c.2179C>T:p.R727X"
+                    "value": "NM_001166247:c.2179C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.681313Z",
+    "created": "2026-02-10T10:09:16.430102Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

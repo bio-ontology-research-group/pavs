@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0951_SBF2",
+                "id": "var_PAVS_MASTER_0951_SBF2_0",
                 "geneContext": {
                   "symbol": "SBF2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "SBF2:NM_030962:exon7:c.659C>G:p.T220R"
+                    "value": "NM_030962:c.659C>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.787276Z",
+    "created": "2026-02-10T10:09:16.594389Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

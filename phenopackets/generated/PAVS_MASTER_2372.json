@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2372_PTPN11",
+                "id": "var_PAVS_MASTER_2372_PTPN11_0",
                 "geneContext": {
                   "symbol": "PTPN11"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "PTPN11:NM_002834:exon13:c.1530G>T:p.Q510H"
+                    "value": "NM_002834:c.1530G>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.061917Z",
+    "created": "2026-02-10T10:09:17.004460Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

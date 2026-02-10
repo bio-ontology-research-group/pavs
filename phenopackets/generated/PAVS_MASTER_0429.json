@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0429_NRXN2",
+                "id": "var_PAVS_MASTER_0429_NRXN2_0",
                 "geneContext": {
                   "symbol": "NRXN2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "NRXN2:NM_138732:exon8:c.1625G>A:p.G542D"
+                    "value": "NM_138732:c.1625G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.691803Z",
+    "created": "2026-02-10T10:09:16.447177Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0747_MTTP",
+                "id": "var_PAVS_MASTER_0747_MTTP_0",
                 "geneContext": {
                   "symbol": "MTTP"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "MTTP:NM_001300785:exon13:c.1915G>C:p.G639R"
+                    "value": "NM_001300785:c.1915G>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.748676Z",
+    "created": "2026-02-10T10:09:16.534226Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

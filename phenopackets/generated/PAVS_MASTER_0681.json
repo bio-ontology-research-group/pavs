@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0681_GJB3",
+                "id": "var_PAVS_MASTER_0681_GJB3_0",
                 "geneContext": {
                   "symbol": "GJB3"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "GJB3:NM_001005752:exon2:c.185A>G:p.N62S"
+                    "value": "NM_001005752:c.185A>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.736686Z",
+    "created": "2026-02-10T10:09:16.515720Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

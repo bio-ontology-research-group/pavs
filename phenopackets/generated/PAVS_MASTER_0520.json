@@ -58,14 +58,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0520_SPTAN1",
+                "id": "var_PAVS_MASTER_0520_SPTAN1_0",
                 "geneContext": {
                   "symbol": "SPTAN1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "SPTAN1:NM_001130438:exon12:c.1511C>T:p.A504V"
+                    "value": "NM_001130438:c.1511C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -81,7 +81,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.707977Z",
+    "created": "2026-02-10T10:09:16.473658Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0749_MBD5",
+                "id": "var_PAVS_MASTER_0749_MBD5_0",
                 "geneContext": {
                   "symbol": "MBD5"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "MBD5:NM_018328:exon7:c.118A>G:p.S40G;"
+                    "value": "NM_018328:c.118A>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.749033Z",
+    "created": "2026-02-10T10:09:16.534742Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

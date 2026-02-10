@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2197_Chr15q11.2q13.1 deletion(23,636,820-28,527,171)",
+                "id": "var_PAVS_MASTER_2197_Chr15q11.2q13.1 deletion(23,636,820-28,527,171)_0",
                 "geneContext": {
                   "symbol": "Chr15q11.2q13.1 deletion(23,636,820-28,527,171)"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "Chr15q11.2q13.1 deletion(23,636,820-28,527,171)"
+                    "value": "Chr15q11.2q13.1"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.028461Z",
+    "created": "2026-02-10T10:09:16.955534Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

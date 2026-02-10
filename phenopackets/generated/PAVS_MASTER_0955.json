@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0955_CPT2",
+                "id": "var_PAVS_MASTER_0955_CPT2_0",
                 "geneContext": {
                   "symbol": "CPT2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CPT2:NM_000098:exon4:c.887G>A:p.R296Q"
+                    "value": "NM_000098:c.887G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.787976Z",
+    "created": "2026-02-10T10:09:16.595665Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0358_GLDC",
+                "id": "var_PAVS_MASTER_0358_GLDC_0",
                 "geneContext": {
                   "symbol": "GLDC"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "GLDC:NM_000170:exon3:c.411_412insAATA:p.Y138fs"
+                    "value": "NM_000170:c.411_412insAATA"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.679162Z",
+    "created": "2026-02-10T10:09:16.426832Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

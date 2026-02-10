@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2404_TRAF3IP2",
+                "id": "var_PAVS_MASTER_2404_TRAF3IP2_0",
                 "geneContext": {
                   "symbol": "TRAF3IP2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "TRAF3IP2:NM_001164283:exon4:c.200G>C:p.W67S"
+                    "value": "NM_001164283:c.200G>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.068016Z",
+    "created": "2026-02-10T10:09:17.013523Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

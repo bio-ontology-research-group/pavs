@@ -58,14 +58,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0905_CLCNKB",
+                "id": "var_PAVS_MASTER_0905_CLCNKB_0",
                 "geneContext": {
                   "symbol": "CLCNKB"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CLCNKB:NM_001165945:exon7:c.817G>A:p.E273K,CLCNKB:NM_000085:exon14:c.1324G>A:p.E442K"
+                    "value": "NM_001165945:c.817G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -81,7 +81,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.778390Z",
+    "created": "2026-02-10T10:09:16.580416Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

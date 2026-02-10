@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0208_C12orf57",
+                "id": "var_PAVS_MASTER_0208_C12orf57_0",
                 "geneContext": {
                   "symbol": "C12orf57"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "C12orf57:NM_001301837:exon1:c.1A>G:p.M1V,"
+                    "value": "NM_001301837:c.1A>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0208_NC_000012.12",
+                "id": "var_PAVS_MASTER_0208_NC_000012.12_1",
                 "geneContext": {
                   "symbol": "NC_000012.12"
                 },
@@ -98,7 +98,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.654443Z",
+    "created": "2026-02-10T10:09:16.391204Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

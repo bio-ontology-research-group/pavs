@@ -76,14 +76,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0982_MRPS35",
+                "id": "var_PAVS_MASTER_0982_MRPS35_0",
                 "geneContext": {
                   "symbol": "MRPS35"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "MRPS35:NM_021821:exon1:c.112+1->T"
+                    "value": "NM_021821:c.112+1->T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -99,7 +99,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.793021Z",
+    "created": "2026-02-10T10:09:16.603665Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

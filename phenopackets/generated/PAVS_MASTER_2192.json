@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2192_Chr8q24.3 duplication(144,869,301-145,833,715)",
+                "id": "var_PAVS_MASTER_2192_Chr8q24.3 duplication(144,869,301-145,833,715)_0",
                 "geneContext": {
                   "symbol": "Chr8q24.3 duplication(144,869,301-145,833,715)"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "Chr8q24.3 duplication(144,869,301-145,833,715)"
+                    "value": "Chr8q24.3"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.027538Z",
+    "created": "2026-02-10T10:09:16.954222Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

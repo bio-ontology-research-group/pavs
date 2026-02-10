@@ -58,14 +58,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0390_CACNA1B",
+                "id": "var_PAVS_MASTER_0390_CACNA1B_0",
                 "geneContext": {
                   "symbol": "CACNA1B"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CACNA1B:NM_000718:exon45:c.6377G>A:p.R2126H; CACNA1B:NM_000718:exon46:c.6935A>G:p.N2312S"
+                    "value": "NM_000718:c.6377G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -81,7 +81,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.684523Z",
+    "created": "2026-02-10T10:09:16.435274Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

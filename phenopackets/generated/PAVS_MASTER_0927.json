@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0927_LAMA2",
+                "id": "var_PAVS_MASTER_0927_LAMA2_0",
                 "geneContext": {
                   "symbol": "LAMA2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "LAMA2:NM_000426:exon12:c.1761delG:p.P587fs"
+                    "value": "NM_000426:c.1761delG"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.782732Z",
+    "created": "2026-02-10T10:09:16.587163Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

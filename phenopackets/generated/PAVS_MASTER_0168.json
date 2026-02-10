@@ -58,14 +58,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0168_MGAT2",
+                "id": "var_PAVS_MASTER_0168_MGAT2_0",
                 "geneContext": {
                   "symbol": "MGAT2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "MGAT2:NM_002408:exon1:c.711G>C:p.K237N"
+                    "value": "NM_002408:c.711G>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -81,7 +81,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.647026Z",
+    "created": "2026-02-10T10:09:16.380800Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

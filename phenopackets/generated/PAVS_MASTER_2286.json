@@ -58,14 +58,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2286_Chr8p23.1\u20138p23.3 deletion(158,048\u20136,999,114)",
+                "id": "var_PAVS_MASTER_2286_Chr8p23.1\u20138p23.3 deletion(158,048\u20136,999,114)_0",
                 "geneContext": {
                   "symbol": "Chr8p23.1\u20138p23.3 deletion(158,048\u20136,999,114)"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "Chr8p23.1\u20138p23.3 deletion(158,048\u20136,999,114)"
+                    "value": "Chr8p23.1\u20138p23.3"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -81,7 +81,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.045542Z",
+    "created": "2026-02-10T10:09:16.980116Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

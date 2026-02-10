@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1925_MTSS1L",
+                "id": "var_PAVS_MASTER_1925_MTSS1L_0",
                 "geneContext": {
                   "symbol": "MTSS1L"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "MTSS1L:NM_138383:c.1790C > T:p.T597M"
+                    "value": "NM_138383:c.1790C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.974473Z",
+    "created": "2026-02-10T10:09:16.875567Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

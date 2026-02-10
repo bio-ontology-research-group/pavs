@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0127_EPHA6",
+                "id": "var_PAVS_MASTER_0127_EPHA6_0",
                 "geneContext": {
                   "symbol": "EPHA6"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "EPHA6:NM_001080448:exon3:c.793A>G:p.T265A"
+                    "value": "NM_001080448:c.793A>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.639576Z",
+    "created": "2026-02-10T10:09:16.370196Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

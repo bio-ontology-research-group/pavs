@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2083_DONSON",
+                "id": "var_PAVS_MASTER_2083_DONSON_0",
                 "geneContext": {
                   "symbol": "DONSON"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "DONSON:NM_ 017613.3 :c.786-22A>G ,NC_000021.8:g.34955994T>C"
+                    "value": "DONSON:c.786-22A>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.005347Z",
+    "created": "2026-02-10T10:09:16.919256Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

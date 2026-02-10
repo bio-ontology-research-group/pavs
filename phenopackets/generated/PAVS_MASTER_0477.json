@@ -64,14 +64,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0477_ASPM",
+                "id": "var_PAVS_MASTER_0477_ASPM_0",
                 "geneContext": {
                   "symbol": "ASPM"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ASPM:NM_001206846:exon17:c.4039C>T:p.Q1347X"
+                    "value": "NM_001206846:c.4039C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -87,7 +87,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.700504Z",
+    "created": "2026-02-10T10:09:16.461892Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

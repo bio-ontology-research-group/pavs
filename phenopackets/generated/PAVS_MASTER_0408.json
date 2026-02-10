@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0408_DENND4B",
+                "id": "var_PAVS_MASTER_0408_DENND4B_0",
                 "geneContext": {
                   "symbol": "DENND4B"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "DENND4B:NM_014856:exon18:c.2702_2703insGCAGC:p.Q901fs"
+                    "value": "NM_014856:c.2702_2703insGCAGC"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.688020Z",
+    "created": "2026-02-10T10:09:16.441046Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

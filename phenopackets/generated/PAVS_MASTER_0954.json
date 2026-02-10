@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0954_MRPS22",
+                "id": "var_PAVS_MASTER_0954_MRPS22_0",
                 "geneContext": {
                   "symbol": "MRPS22"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "MRPS22:NM_020191:exon5:c.716C>A:p.S239Y, shared by parents"
+                    "value": "NM_020191:c.716C>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.787797Z",
+    "created": "2026-02-10T10:09:16.595312Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

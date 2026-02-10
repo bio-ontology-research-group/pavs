@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0406_ADGRG7",
+                "id": "var_PAVS_MASTER_0406_ADGRG7_0",
                 "geneContext": {
                   "symbol": "ADGRG7"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ADGRG7:NM_032787:exon2:c.170C>A:p.T57N"
+                    "value": "NM_032787:c.170C>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.687620Z",
+    "created": "2026-02-10T10:09:16.440232Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

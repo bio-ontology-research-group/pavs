@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0713_IL17RA",
+                "id": "var_PAVS_MASTER_0713_IL17RA_0",
                 "geneContext": {
                   "symbol": "IL17RA"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "IL17RA:NM_001289905:exon12:c.1472T>C:p.L491P"
+                    "value": "NM_001289905:c.1472T>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.742670Z",
+    "created": "2026-02-10T10:09:16.524983Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

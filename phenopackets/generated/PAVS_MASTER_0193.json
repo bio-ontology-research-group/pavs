@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0193_ALS2",
+                "id": "var_PAVS_MASTER_0193_ALS2_0",
                 "geneContext": {
                   "symbol": "ALS2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ALS2:NM_020919:exon6:c.1501C>T:p.R501W"
+                    "value": "NM_020919:c.1501C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0193_NC_000002.11",
+                "id": "var_PAVS_MASTER_0193_NC_000002.11_1",
                 "geneContext": {
                   "symbol": "NC_000002.11"
                 },
@@ -86,7 +86,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.651422Z",
+    "created": "2026-02-10T10:09:16.387177Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0751_STAT1",
+                "id": "var_PAVS_MASTER_0751_STAT1_0",
                 "geneContext": {
                   "symbol": "STAT1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "STAT1:NM_007315:exon4:c.185C>A:p.S62X,"
+                    "value": "NM_007315:c.185C>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.749418Z",
+    "created": "2026-02-10T10:09:16.535306Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -130,14 +130,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2349_ABCB4",
+                "id": "var_PAVS_MASTER_2349_ABCB4_0",
                 "geneContext": {
                   "symbol": "ABCB4"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ABCB4:NM_018849:exon13:c.1560+3A>G"
+                    "value": "NM_018849:c.1560+3A>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -153,7 +153,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.057269Z",
+    "created": "2026-02-10T10:09:16.997676Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

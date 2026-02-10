@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2211_chr4q32.1q34.3 duplication (159241112-182016894)/chr4q34.3q35.2 deletion (182021889-190957473)/chr15q26.1q26.3 duplication (93454301-102270758)",
+                "id": "var_PAVS_MASTER_2211_chr4q32.1q34.3 duplication (159241112-182016894)/chr4q34.3q35.2 deletion (182021889-190957473)/chr15q26.1q26.3 duplication (93454301-102270758)_0",
                 "geneContext": {
                   "symbol": "chr4q32.1q34.3 duplication (159241112-182016894)/chr4q34.3q35.2 deletion (182021889-190957473)/chr15q26.1q26.3 duplication (93454301-102270758)"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "chr4q32.1q34.3 duplication (159241112-182016894)/chr4q34.3q35.2 deletion (182021889-190957473)/chr15q26.1q26.3 duplication (93454301-102270758)"
+                    "value": "chr4q32.1q34.3"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.031028Z",
+    "created": "2026-02-10T10:09:16.959236Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

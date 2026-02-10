@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2407_PHKA2",
+                "id": "var_PAVS_MASTER_2407_PHKA2_0",
                 "geneContext": {
                   "symbol": "PHKA2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "PHKA2:NM_000292:exon9:c.884G>A:p.R295H"
+                    "value": "NM_000292:c.884G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.068550Z",
+    "created": "2026-02-10T10:09:17.014311Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -64,14 +64,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0393_WNT10B",
+                "id": "var_PAVS_MASTER_0393_WNT10B_0",
                 "geneContext": {
                   "symbol": "WNT10B"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "WNT10B:NM_003394:exon4:c.338-1G>C"
+                    "value": "NM_003394:c.338-1G>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -87,7 +87,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.685073Z",
+    "created": "2026-02-10T10:09:16.436115Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

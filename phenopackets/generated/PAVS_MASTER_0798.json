@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0798_CRLF1",
+                "id": "var_PAVS_MASTER_0798_CRLF1_0",
                 "geneContext": {
                   "symbol": "CRLF1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CRLF1:NM_004750:exon4:c.605delC:p.A202fs"
+                    "value": "NM_004750:c.605delC"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.757450Z",
+    "created": "2026-02-10T10:09:16.547738Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

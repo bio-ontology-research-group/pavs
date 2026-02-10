@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2403_ABCB11",
+                "id": "var_PAVS_MASTER_2403_ABCB11_0",
                 "geneContext": {
                   "symbol": "ABCB11"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ABCB11:NM_003742:exon8:c.677C>T:p.S226L"
+                    "value": "NM_003742:c.677C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.067825Z",
+    "created": "2026-02-10T10:09:17.013221Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

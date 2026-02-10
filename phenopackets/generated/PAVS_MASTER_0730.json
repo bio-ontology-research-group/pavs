@@ -58,14 +58,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0730_KIF7",
+                "id": "var_PAVS_MASTER_0730_KIF7_0",
                 "geneContext": {
                   "symbol": "KIF7"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "KIF7:NM_198525:exon10:c.2176G>C:p.E726Q"
+                    "value": "NM_198525:c.2176G>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -81,7 +81,7 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0730_NC_000015.9",
+                "id": "var_PAVS_MASTER_0730_NC_000015.9_1",
                 "geneContext": {
                   "symbol": "NC_000015.9"
                 },
@@ -104,7 +104,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.745717Z",
+    "created": "2026-02-10T10:09:16.529475Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

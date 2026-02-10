@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0649_CHRNE",
+                "id": "var_PAVS_MASTER_0649_CHRNE_0",
                 "geneContext": {
                   "symbol": "CHRNE"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CHRNE:NM_000080:exon10:c.1198_1199insGC:p.H400fs"
+                    "value": "NM_000080:c.1198_1199insGC"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0649_NC_000017.10",
+                "id": "var_PAVS_MASTER_0649_NC_000017.10_1",
                 "geneContext": {
                   "symbol": "NC_000017.10"
                 },
@@ -86,7 +86,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.730974Z",
+    "created": "2026-02-10T10:09:16.507099Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -64,14 +64,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0894_DVL2 NM_004422",
+                "id": "var_PAVS_MASTER_0894_DVL2 NM_004422_0",
                 "geneContext": {
                   "symbol": "DVL2 NM_004422"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "DVL2 NM_004422:exon14:c.1690C>T:p.Q564X"
+                    "value": "NM_004422:c.1690C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -87,7 +87,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.776239Z",
+    "created": "2026-02-10T10:09:16.577160Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

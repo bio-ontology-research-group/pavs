@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0897_DNM1",
+                "id": "var_PAVS_MASTER_0897_DNM1_0",
                 "geneContext": {
                   "symbol": "DNM1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "DNM1:uc022bnx.1:exon1:c.127G>A:p.G43S"
+                    "value": "DNM1:c.127G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.776847Z",
+    "created": "2026-02-10T10:09:16.578184Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

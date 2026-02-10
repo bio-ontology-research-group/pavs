@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0443_COL1A1",
+                "id": "var_PAVS_MASTER_0443_COL1A1_0",
                 "geneContext": {
                   "symbol": "COL1A1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "COL1A1:NM_000088:exon35:c.2399G>A:p.G800E"
+                    "value": "NM_000088:c.2399G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.694163Z",
+    "created": "2026-02-10T10:09:16.451077Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -58,14 +58,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0436_CDK5RAP2",
+                "id": "var_PAVS_MASTER_0436_CDK5RAP2_0",
                 "geneContext": {
                   "symbol": "CDK5RAP2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CDK5RAP2:NM_001272039:exon28:c.3982C>T:p.R1328X"
+                    "value": "NM_001272039:c.3982C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -81,7 +81,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.692974Z",
+    "created": "2026-02-10T10:09:16.449182Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

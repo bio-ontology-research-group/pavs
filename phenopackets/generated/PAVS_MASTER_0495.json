@@ -94,14 +94,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0495_CHRNB2",
+                "id": "var_PAVS_MASTER_0495_CHRNB2_0",
                 "geneContext": {
                   "symbol": "CHRNB2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CHRNB2: NM_000748:exon4:c.256-1G>A"
+                    "value": "NM_000748:c.256-1G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -117,7 +117,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.703644Z",
+    "created": "2026-02-10T10:09:16.466825Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

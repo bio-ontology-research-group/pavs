@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0695_TRIP11",
+                "id": "var_PAVS_MASTER_0695_TRIP11_0",
                 "geneContext": {
                   "symbol": "TRIP11"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "TRIP11:NM_004239:exon11:c.4459_4460del:p.M1487fs"
+                    "value": "NM_004239:c.4459_4460del"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.739296Z",
+    "created": "2026-02-10T10:09:16.519889Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

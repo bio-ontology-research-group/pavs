@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2244_15q25.1q26.3(78427008_100298411)x3",
+                "id": "var_PAVS_MASTER_2244_15q25.1q26.3(78427008_100298411)x3_0",
                 "geneContext": {
                   "symbol": "15q25.1q26.3(78427008_100298411)x3"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "15q25.1q26.3(78427008_100298411)x3"
+                    "value": "15q25.1q26.3"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.037332Z",
+    "created": "2026-02-10T10:09:16.968520Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

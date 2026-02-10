@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2363_GABRD",
+                "id": "var_PAVS_MASTER_2363_GABRD_0",
                 "geneContext": {
                   "symbol": "GABRD"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "GABRD:NM_000815:exon8:c.875C>T:p.T292M"
+                    "value": "NM_000815:c.875C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.060114Z",
+    "created": "2026-02-10T10:09:17.001671Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

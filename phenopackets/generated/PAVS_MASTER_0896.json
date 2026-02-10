@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0896_OPA3",
+                "id": "var_PAVS_MASTER_0896_OPA3_0",
                 "geneContext": {
                   "symbol": "OPA3"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "OPA3:NM_025136:exon2:c.194delG:p.G65fs"
+                    "value": "NM_025136:c.194delG"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.776661Z",
+    "created": "2026-02-10T10:09:16.577831Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

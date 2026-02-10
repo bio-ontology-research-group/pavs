@@ -58,14 +58,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0934_RFT1",
+                "id": "var_PAVS_MASTER_0934_RFT1_0",
                 "geneContext": {
                   "symbol": "RFT1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "RFT1: NM_052859:exon7:c.775+1G>C"
+                    "value": "NM_052859:c.775+1G>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -81,7 +81,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.784075Z",
+    "created": "2026-02-10T10:09:16.589377Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

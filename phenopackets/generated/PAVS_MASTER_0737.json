@@ -82,14 +82,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0737_PANK2",
+                "id": "var_PAVS_MASTER_0737_PANK2_0",
                 "geneContext": {
                   "symbol": "PANK2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "PANK2:NM_153638:exon2:c.824_825del:p.L275fs"
+                    "value": "NM_153638:c.824_825del"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -105,7 +105,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.747055Z",
+    "created": "2026-02-10T10:09:16.531571Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

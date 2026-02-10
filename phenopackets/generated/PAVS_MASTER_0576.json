@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0576_IL12B",
+                "id": "var_PAVS_MASTER_0576_IL12B_0",
                 "geneContext": {
                   "symbol": "IL12B"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "IL12B:NM_002187:exon3:c.320dupA:p.K107fs"
+                    "value": "NM_002187:c.320dupA"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.717849Z",
+    "created": "2026-02-10T10:09:16.488575Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

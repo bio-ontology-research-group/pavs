@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0452_NDST1",
+                "id": "var_PAVS_MASTER_0452_NDST1_0",
                 "geneContext": {
                   "symbol": "NDST1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "NDST1:NM_001301063:exon3:c.985C>T:p.R329C"
+                    "value": "NM_001301063:c.985C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.695815Z",
+    "created": "2026-02-10T10:09:16.453841Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

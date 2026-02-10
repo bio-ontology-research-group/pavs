@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0279_CYP27A1",
+                "id": "var_PAVS_MASTER_0279_CYP27A1_0",
                 "geneContext": {
                   "symbol": "CYP27A1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CYP27A1:NM_000784:exon3:c.472C>T:p.R158C"
+                    "value": "NM_000784:c.472C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.666533Z",
+    "created": "2026-02-10T10:09:16.408346Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0054_DFNB31",
+                "id": "var_PAVS_MASTER_0054_DFNB31_0",
                 "geneContext": {
                   "symbol": "DFNB31"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "DFNB31:NM_001083885:exon9:c.991C>T:p.Q331X"
+                    "value": "NM_001083885:c.991C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.626145Z",
+    "created": "2026-02-10T10:09:16.349284Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

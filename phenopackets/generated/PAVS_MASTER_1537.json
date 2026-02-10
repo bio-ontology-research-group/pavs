@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1537_WDR93",
+                "id": "var_PAVS_MASTER_1537_WDR93_0",
                 "geneContext": {
                   "symbol": "WDR93"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "WDR93:NM_020212:c.280T>C"
+                    "value": "NM_020212:c.280T>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.897730Z",
+    "created": "2026-02-10T10:09:16.764147Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

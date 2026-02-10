@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0748_FLNC",
+                "id": "var_PAVS_MASTER_0748_FLNC_0",
                 "geneContext": {
                   "symbol": "FLNC"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "FLNC:NM_001127487:exon21:c.3503G>A:p.G1168D,"
+                    "value": "NM_001127487:c.3503G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.748854Z",
+    "created": "2026-02-10T10:09:16.534486Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1531_INO80",
+                "id": "var_PAVS_MASTER_1531_INO80_0",
                 "geneContext": {
                   "symbol": "INO80"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "INO80:NM_017553:c.1501T>C"
+                    "value": "NM_017553:c.1501T>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,14 +69,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1531_INO80",
+                "id": "var_PAVS_MASTER_1531_INO80_1",
                 "geneContext": {
                   "symbol": "INO80"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "INO80:NM_017553:c.3737G>A"
+                    "value": "NM_017553:c.3737G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -92,7 +92,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.896443Z",
+    "created": "2026-02-10T10:09:16.762222Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

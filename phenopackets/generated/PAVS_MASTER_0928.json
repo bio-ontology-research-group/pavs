@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0928_KMT2D",
+                "id": "var_PAVS_MASTER_0928_KMT2D_0",
                 "geneContext": {
                   "symbol": "KMT2D"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "KMT2D:NM_003482:exon48:c.15535C>T:p.R5179C"
+                    "value": "NM_003482:c.15535C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.782911Z",
+    "created": "2026-02-10T10:09:16.587430Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

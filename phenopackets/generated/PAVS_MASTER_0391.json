@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0391_HSPG2",
+                "id": "var_PAVS_MASTER_0391_HSPG2_0",
                 "geneContext": {
                   "symbol": "HSPG2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "HSPG2: NM_005529:exon82:c.11208-7G>A"
+                    "value": "NM_005529:c.11208-7G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.684721Z",
+    "created": "2026-02-10T10:09:16.435577Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

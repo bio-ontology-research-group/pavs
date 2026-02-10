@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1012_EOGT",
+                "id": "var_PAVS_MASTER_1012_EOGT_0",
                 "geneContext": {
                   "symbol": "EOGT"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "EOGT:NM_001278689:exon8:c.562A>T:p.K188X; EOGT:NM_001278689:exon4:c.122G>T:p.R41L"
+                    "value": "NM_001278689:c.562A>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.798779Z",
+    "created": "2026-02-10T10:09:16.612962Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

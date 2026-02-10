@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1015_TBP",
+                "id": "var_PAVS_MASTER_1015_TBP_0",
                 "geneContext": {
                   "symbol": "TBP"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "TBP:NM_001172085:exon2:c.171delG:p.Q57fs"
+                    "value": "NM_001172085:c.171delG"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.799349Z",
+    "created": "2026-02-10T10:09:16.613872Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

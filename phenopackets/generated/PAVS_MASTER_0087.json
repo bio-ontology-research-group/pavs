@@ -58,14 +58,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0087_ALDH7A1",
+                "id": "var_PAVS_MASTER_0087_ALDH7A1_0",
                 "geneContext": {
                   "symbol": "ALDH7A1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ALDH7A1:NM_001202404:exon12:c.1168G>C:p.E390Q"
+                    "value": "NM_001202404:c.1168G>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -81,7 +81,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.632073Z",
+    "created": "2026-02-10T10:09:16.358774Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

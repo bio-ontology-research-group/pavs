@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0435_SPG11",
+                "id": "var_PAVS_MASTER_0435_SPG11_0",
                 "geneContext": {
                   "symbol": "SPG11"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "SPG11:NM_001160227:exon6:c.1270C>A:p.P424T"
+                    "value": "NM_001160227:c.1270C>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.692786Z",
+    "created": "2026-02-10T10:09:16.448888Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

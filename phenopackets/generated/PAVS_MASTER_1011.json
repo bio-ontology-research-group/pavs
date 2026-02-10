@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1011_AGRN",
+                "id": "var_PAVS_MASTER_1011_AGRN_0",
                 "geneContext": {
                   "symbol": "AGRN"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "AGRN:NM_198576:exon24:c.4178C>T:p.T1393M"
+                    "value": "NM_198576:c.4178C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.798603Z",
+    "created": "2026-02-10T10:09:16.612692Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

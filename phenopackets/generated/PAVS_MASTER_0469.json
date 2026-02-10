@@ -88,14 +88,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0469_TGDS",
+                "id": "var_PAVS_MASTER_0469_TGDS_0",
                 "geneContext": {
                   "symbol": "TGDS"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "TGDS:NM_001304430:exon3:c.107A>C:p.Q36P: Despite the benign prediction, I really think we should report:"
+                    "value": "NM_001304430:c.107A>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -111,7 +111,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.698936Z",
+    "created": "2026-02-10T10:09:16.459042Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

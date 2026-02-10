@@ -82,14 +82,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0472_CHRNG",
+                "id": "var_PAVS_MASTER_0472_CHRNG_0",
                 "geneContext": {
                   "symbol": "CHRNG"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CHRNG:NM_005199:exon7:c.753_754del:p.P251fs  KSM"
+                    "value": "NM_005199:c.753_754del"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -105,7 +105,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.699532Z",
+    "created": "2026-02-10T10:09:16.460052Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

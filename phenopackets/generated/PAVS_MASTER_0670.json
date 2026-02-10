@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0670_JAG1",
+                "id": "var_PAVS_MASTER_0670_JAG1_0",
                 "geneContext": {
                   "symbol": "JAG1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "JAG1:NM_000214:exon18:c.2236_2237del:p.S746fs"
+                    "value": "NM_000214:c.2236_2237del"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.734911Z",
+    "created": "2026-02-10T10:09:16.512979Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

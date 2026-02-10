@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2331_RNASEH2A",
+                "id": "var_PAVS_MASTER_2331_RNASEH2A_0",
                 "geneContext": {
                   "symbol": "RNASEH2A"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "RNASEH2A:NM_006397:exon6:c.557G>A:p.R186Q"
+                    "value": "NM_006397:c.557G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.053869Z",
+    "created": "2026-02-10T10:09:16.992365Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

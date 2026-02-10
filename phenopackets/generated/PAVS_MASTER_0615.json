@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0615_DCC",
+                "id": "var_PAVS_MASTER_0615_DCC_0",
                 "geneContext": {
                   "symbol": "DCC"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "DCC:NM_005215:exon9:c.1423C>T:p.R475X"
+                    "value": "NM_005215:c.1423C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.724606Z",
+    "created": "2026-02-10T10:09:16.498348Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

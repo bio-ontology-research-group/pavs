@@ -58,14 +58,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0862_CCDC82",
+                "id": "var_PAVS_MASTER_0862_CCDC82_0",
                 "geneContext": {
                   "symbol": "CCDC82"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CCDC82:NM_024725:exon5:c.904G>T:p.D302Y"
+                    "value": "NM_024725:c.904G>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -81,7 +81,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.769895Z",
+    "created": "2026-02-10T10:09:16.567184Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

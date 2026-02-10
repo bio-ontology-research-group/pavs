@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2233_Chr1p13.3p21.3 deletion (96,530,000 \u2013 107,720,000).",
+                "id": "var_PAVS_MASTER_2233_Chr1p13.3p21.3 deletion (96,530,000 \u2013 107,720,000)._0",
                 "geneContext": {
                   "symbol": "Chr1p13.3p21.3 deletion (96,530,000 \u2013 107,720,000)."
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "Chr1p13.3p21.3 deletion (96,530,000 \u2013 107,720,000)."
+                    "value": "Chr1p13.3p21.3"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.035275Z",
+    "created": "2026-02-10T10:09:16.965332Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

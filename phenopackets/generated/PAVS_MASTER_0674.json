@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0674_LMNA",
+                "id": "var_PAVS_MASTER_0674_LMNA_0",
                 "geneContext": {
                   "symbol": "LMNA"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "LMNA:NM_001282626:exon1:c.139G>A:p.D47N"
+                    "value": "NM_001282626:c.139G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.735574Z",
+    "created": "2026-02-10T10:09:16.513990Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

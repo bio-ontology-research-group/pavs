@@ -70,14 +70,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0471_SIL1",
+                "id": "var_PAVS_MASTER_0471_SIL1_0",
                 "geneContext": {
                   "symbol": "SIL1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "SIL1:NM_001037633:exon11:c.1030-9G>A"
+                    "value": "NM_001037633:c.1030-9G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -93,7 +93,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.699335Z",
+    "created": "2026-02-10T10:09:16.459701Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

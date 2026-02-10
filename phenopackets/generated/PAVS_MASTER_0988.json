@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0988_WHSC1",
+                "id": "var_PAVS_MASTER_0988_WHSC1_0",
                 "geneContext": {
                   "symbol": "WHSC1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "WHSC1:NM_001042424:exon13:c.2518+1G>A"
+                    "value": "NM_001042424:c.2518+1G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.794267Z",
+    "created": "2026-02-10T10:09:16.605708Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

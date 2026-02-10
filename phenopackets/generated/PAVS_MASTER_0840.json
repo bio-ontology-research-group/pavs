@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0840_VRK1",
+                "id": "var_PAVS_MASTER_0840_VRK1_0",
                 "geneContext": {
                   "symbol": "VRK1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "VRK1:NM_003384:exon8:c.709+3A>C"
+                    "value": "NM_003384:c.709+3A>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.765565Z",
+    "created": "2026-02-10T10:09:16.560318Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0527_MRPL3",
+                "id": "var_PAVS_MASTER_0527_MRPL3_0",
                 "geneContext": {
                   "symbol": "MRPL3"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "MRPL3:NM_007208:exon3:c.314G>A:p.G105D"
+                    "value": "NM_007208:c.314G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.709210Z",
+    "created": "2026-02-10T10:09:16.475750Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

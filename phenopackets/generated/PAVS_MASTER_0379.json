@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0379_KCNT1",
+                "id": "var_PAVS_MASTER_0379_KCNT1_0",
                 "geneContext": {
                   "symbol": "KCNT1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "KCNT1:NM_001272003:exon18:c.2043C>A:p.D681E"
+                    "value": "NM_001272003:c.2043C>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.682620Z",
+    "created": "2026-02-10T10:09:16.432079Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

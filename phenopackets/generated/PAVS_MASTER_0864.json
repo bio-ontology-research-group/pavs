@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0864_SETX",
+                "id": "var_PAVS_MASTER_0864_SETX_0",
                 "geneContext": {
                   "symbol": "SETX"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "SETX:NM_015046:exon11:c.5308_5311del:p.E1770fs"
+                    "value": "NM_015046:c.5308_5311del"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.770329Z",
+    "created": "2026-02-10T10:09:16.567919Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

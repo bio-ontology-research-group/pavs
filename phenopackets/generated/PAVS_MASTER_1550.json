@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1550_GUSB",
+                "id": "var_PAVS_MASTER_1550_GUSB_0",
                 "geneContext": {
                   "symbol": "GUSB"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "GUSB:NM_000181:c.1144C>T"
+                    "value": "NM_000181:c.1144C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.900089Z",
+    "created": "2026-02-10T10:09:16.767489Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

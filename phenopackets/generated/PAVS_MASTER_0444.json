@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0444_RAB33B",
+                "id": "var_PAVS_MASTER_0444_RAB33B_0",
                 "geneContext": {
                   "symbol": "RAB33B"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "RAB33B:NM_031296:exon1:c.136A>C:p.K46Q"
+                    "value": "NM_031296:c.136A>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.694338Z",
+    "created": "2026-02-10T10:09:16.451359Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

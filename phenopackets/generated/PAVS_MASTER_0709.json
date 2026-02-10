@@ -58,14 +58,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0709_PTEN",
+                "id": "var_PAVS_MASTER_0709_PTEN_0",
                 "geneContext": {
                   "symbol": "PTEN"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "PTEN:NM_000314:exon1:c.1A>T:p.?"
+                    "value": "NM_000314:c.1A>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -81,7 +81,7 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0709_NC_000010.10",
+                "id": "var_PAVS_MASTER_0709_NC_000010.10_1",
                 "geneContext": {
                   "symbol": "NC_000010.10"
                 },
@@ -104,7 +104,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.741861Z",
+    "created": "2026-02-10T10:09:16.523604Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

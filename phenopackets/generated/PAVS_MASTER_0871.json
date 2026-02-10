@@ -64,14 +64,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0871_C5orf42",
+                "id": "var_PAVS_MASTER_0871_C5orf42_0",
                 "geneContext": {
                   "symbol": "C5orf42"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "C5orf42:NM_023073:exon20:c.3610T>C:p.S1204P"
+                    "value": "NM_023073:c.3610T>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -87,7 +87,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.771828Z",
+    "created": "2026-02-10T10:09:16.570214Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

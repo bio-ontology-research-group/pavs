@@ -82,14 +82,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0552_KCTD7",
+                "id": "var_PAVS_MASTER_0552_KCTD7_0",
                 "geneContext": {
                   "symbol": "KCTD7"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "KCTD7:NM_001167961:exon2:c.172G>A:p.G58R,"
+                    "value": "NM_001167961:c.172G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -105,7 +105,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.713828Z",
+    "created": "2026-02-10T10:09:16.482874Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

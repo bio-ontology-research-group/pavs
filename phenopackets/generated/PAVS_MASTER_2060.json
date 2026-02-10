@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2060_PLK4 ",
+                "id": "var_PAVS_MASTER_2060_PLK4_0",
                 "geneContext": {
-                  "symbol": "PLK4 "
+                  "symbol": "PLK4"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "PLK4 :NM_ 014264.4:c.1299-1303delTAAAG,p.(Phe433Leufs*6) ,NC_000004.11:g.128806521delTAAAG"
+                    "value": "PLK4:c.1299-1303delTAAAG,p."
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.000739Z",
+    "created": "2026-02-10T10:09:16.912742Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

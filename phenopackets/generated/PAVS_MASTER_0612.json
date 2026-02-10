@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0612_CLN6",
+                "id": "var_PAVS_MASTER_0612_CLN6_0",
                 "geneContext": {
                   "symbol": "CLN6"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CLN6:NM_017882:exon2:c.198+1G>A"
+                    "value": "NM_017882:c.198+1G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.723993Z",
+    "created": "2026-02-10T10:09:16.497504Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

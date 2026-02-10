@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0063_RDH12",
+                "id": "var_PAVS_MASTER_0063_RDH12_0",
                 "geneContext": {
                   "symbol": "RDH12"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "RDH12:NM_152443:exon4:c.139G>A:p.A47T"
+                    "value": "NM_152443:c.139G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.627771Z",
+    "created": "2026-02-10T10:09:16.351856Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

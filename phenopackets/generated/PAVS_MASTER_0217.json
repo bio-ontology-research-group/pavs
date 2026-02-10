@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0217_DMD",
+                "id": "var_PAVS_MASTER_0217_DMD_0",
                 "geneContext": {
                   "symbol": "DMD"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "DMD:NM_000109:exon25:c.3365A>G:p.E1122G"
+                    "value": "NM_000109:c.3365A>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.656008Z",
+    "created": "2026-02-10T10:09:16.393456Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

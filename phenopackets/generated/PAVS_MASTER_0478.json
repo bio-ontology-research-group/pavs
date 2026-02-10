@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0478_TCOF1",
+                "id": "var_PAVS_MASTER_0478_TCOF1_0",
                 "geneContext": {
                   "symbol": "TCOF1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "TCOF1:NM_000356:exon7:c.785C>G:p.S262X"
+                    "value": "NM_000356:c.785C>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.700695Z",
+    "created": "2026-02-10T10:09:16.462214Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

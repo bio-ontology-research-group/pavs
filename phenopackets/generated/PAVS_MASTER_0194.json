@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0194_ATP2B3",
+                "id": "var_PAVS_MASTER_0194_ATP2B3_0",
                 "geneContext": {
                   "symbol": "ATP2B3"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ATP2B3:NM_001001344:exon20:c.3626C>A:p.P1209H"
+                    "value": "NM_001001344:c.3626C>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0194_NC_000023.10",
+                "id": "var_PAVS_MASTER_0194_NC_000023.10_1",
                 "geneContext": {
                   "symbol": "NC_000023.10"
                 },
@@ -80,7 +80,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.651637Z",
+    "created": "2026-02-10T10:09:16.387461Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

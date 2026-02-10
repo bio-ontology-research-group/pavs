@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1928_CHAF1B",
+                "id": "var_PAVS_MASTER_1928_CHAF1B_0",
                 "geneContext": {
                   "symbol": "CHAF1B"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CHAF1B:NM_005441:c.496A > G:p.I166V"
+                    "value": "NM_005441:c.496A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.975028Z",
+    "created": "2026-02-10T10:09:16.876515Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

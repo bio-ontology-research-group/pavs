@@ -76,14 +76,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0620_GATAD2B",
+                "id": "var_PAVS_MASTER_0620_GATAD2B_0",
                 "geneContext": {
                   "symbol": "GATAD2B"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "GATAD2B: NM_020699:exon10:c.1531-8C>T"
+                    "value": "NM_020699:c.1531-8C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -99,7 +99,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.725622Z",
+    "created": "2026-02-10T10:09:16.499724Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

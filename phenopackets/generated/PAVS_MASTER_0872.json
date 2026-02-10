@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0872_RIMKLA",
+                "id": "var_PAVS_MASTER_0872_RIMKLA_0",
                 "geneContext": {
                   "symbol": "RIMKLA"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "RIMKLA:NM_173642:exon1:c.18G>A:p.W6X"
+                    "value": "NM_173642:c.18G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.772024Z",
+    "created": "2026-02-10T10:09:16.570525Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1968_NUP107",
+                "id": "var_PAVS_MASTER_1968_NUP107_0",
                 "geneContext": {
                   "symbol": "NUP107"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "NUP107:NM_020401:c.303G>A:p.M101I (splice site mutation)"
+                    "value": "NM_020401:c.303G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.982825Z",
+    "created": "2026-02-10T10:09:16.887444Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

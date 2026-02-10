@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0032_SSTR1",
+                "id": "var_PAVS_MASTER_0032_SSTR1_0",
                 "geneContext": {
                   "symbol": "SSTR1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "SSTR1:NM_001049:exon3:c.1169_1170insGCTCTGAGCCCGGGCCACGCAGGG:p.T390delinsTLX"
+                    "value": "NM_001049:c.1169_1170insGCTCTGAGCCCGGGCCACGCAGGG"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.621959Z",
+    "created": "2026-02-10T10:09:16.342776Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -82,14 +82,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0010_ARSA",
+                "id": "var_PAVS_MASTER_0010_ARSA_0",
                 "geneContext": {
                   "symbol": "ARSA"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ARSA:NM_000487:exon5:c.877C>T:p.R293X"
+                    "value": "NM_000487:c.877C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -105,7 +105,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.618086Z",
+    "created": "2026-02-10T10:09:16.336740Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

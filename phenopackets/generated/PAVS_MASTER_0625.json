@@ -118,14 +118,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0625_IGHMBP2",
+                "id": "var_PAVS_MASTER_0625_IGHMBP2_0",
                 "geneContext": {
                   "symbol": "IGHMBP2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "IGHMBP2:NM_002180:exon4:c.541G>T:p.E181X"
+                    "value": "NM_002180:c.541G>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -141,7 +141,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.726622Z",
+    "created": "2026-02-10T10:09:16.501068Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

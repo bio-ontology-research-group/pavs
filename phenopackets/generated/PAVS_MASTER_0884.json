@@ -112,14 +112,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0884_PCGF2",
+                "id": "var_PAVS_MASTER_0884_PCGF2_0",
                 "geneContext": {
                   "symbol": "PCGF2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "PCGF2:NM_007144:exon11:c.1026delC:p.P342fs"
+                    "value": "NM_007144:c.1026delC"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -135,7 +135,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.774284Z",
+    "created": "2026-02-10T10:09:16.573956Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

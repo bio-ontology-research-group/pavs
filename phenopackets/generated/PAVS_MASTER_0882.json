@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0882_CSF1R",
+                "id": "var_PAVS_MASTER_0882_CSF1R_0",
                 "geneContext": {
                   "symbol": "CSF1R"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CSF1R:NM_005211:exon14:c.1905G>T:p.K635N"
+                    "value": "NM_005211:c.1905G>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.773944Z",
+    "created": "2026-02-10T10:09:16.573339Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

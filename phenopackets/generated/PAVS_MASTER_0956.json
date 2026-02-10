@@ -100,14 +100,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0956_ARNT2",
+                "id": "var_PAVS_MASTER_0956_ARNT2_0",
                 "geneContext": {
                   "symbol": "ARNT2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ARNT2:NM_014862:exon3:c.147-1G>A"
+                    "value": "NM_014862:c.147-1G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -123,7 +123,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.788167Z",
+    "created": "2026-02-10T10:09:16.596003Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

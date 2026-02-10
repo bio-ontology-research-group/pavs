@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1554_CTSA",
+                "id": "var_PAVS_MASTER_1554_CTSA_0",
                 "geneContext": {
                   "symbol": "CTSA"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CTSA:NM_000308:c.649delC"
+                    "value": "NM_000308:c.649delC"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.900797Z",
+    "created": "2026-02-10T10:09:16.768505Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

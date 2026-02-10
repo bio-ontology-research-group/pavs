@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0874_MAP7D3",
+                "id": "var_PAVS_MASTER_0874_MAP7D3_0",
                 "geneContext": {
                   "symbol": "MAP7D3"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "MAP7D3:NM_001173517:exon7:c.804_805insTA:p.D269_A270delinsX"
+                    "value": "NM_001173517:c.804_805insTA"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.772398Z",
+    "created": "2026-02-10T10:09:16.571097Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

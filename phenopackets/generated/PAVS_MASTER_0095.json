@@ -58,14 +58,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0095_ANKRD11",
+                "id": "var_PAVS_MASTER_0095_ANKRD11_0",
                 "geneContext": {
                   "symbol": "ANKRD11"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ANKRD11:NM_001256183:exon9:c.4970C>A:p.S1657X"
+                    "value": "NM_001256183:c.4970C>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -81,7 +81,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.633767Z",
+    "created": "2026-02-10T10:09:16.361280Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0226_CUL7",
+                "id": "var_PAVS_MASTER_0226_CUL7_0",
                 "geneContext": {
                   "symbol": "CUL7"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CUL7:NM_001168370:exon9:c.2398C>T:p.R800W"
+                    "value": "NM_001168370:c.2398C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.657731Z",
+    "created": "2026-02-10T10:09:16.395717Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

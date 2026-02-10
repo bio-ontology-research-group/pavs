@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0261_DRD5",
+                "id": "var_PAVS_MASTER_0261_DRD5_0",
                 "geneContext": {
                   "symbol": "DRD5"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "DRD5:NM_000798:exon1:c.656C>T:p.S219F"
+                    "value": "NM_000798:c.656C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.663543Z",
+    "created": "2026-02-10T10:09:16.403986Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

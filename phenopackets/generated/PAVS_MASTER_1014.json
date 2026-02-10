@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1014_DEAF1 (chr11",
+                "id": "var_PAVS_MASTER_1014_DEAF1 (chr11_0",
                 "geneContext": {
                   "symbol": "DEAF1 (chr11"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "DEAF1 (chr11:680960_680961del)"
+                    "value": "DEAF1"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.799158Z",
+    "created": "2026-02-10T10:09:16.613574Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

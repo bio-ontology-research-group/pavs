@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0699_RAG2",
+                "id": "var_PAVS_MASTER_0699_RAG2_0",
                 "geneContext": {
                   "symbol": "RAG2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "RAG2:NM_000536:exon2:c.442C>T:p.R148X"
+                    "value": "NM_000536:c.442C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0699_NC_000011.9",
+                "id": "var_PAVS_MASTER_0699_NC_000011.9_1",
                 "geneContext": {
                   "symbol": "NC_000011.9"
                 },
@@ -80,7 +80,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.740030Z",
+    "created": "2026-02-10T10:09:16.521040Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

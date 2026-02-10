@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1524_WDR81",
+                "id": "var_PAVS_MASTER_1524_WDR81_0",
                 "geneContext": {
                   "symbol": "WDR81"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "WDR81:NM_001163809:c.845G>A"
+                    "value": "NM_001163809:c.845G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.895213Z",
+    "created": "2026-02-10T10:09:16.760417Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

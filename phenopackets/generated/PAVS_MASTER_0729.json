@@ -70,14 +70,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0729_RUNX2",
+                "id": "var_PAVS_MASTER_0729_RUNX2_0",
                 "geneContext": {
                   "symbol": "RUNX2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "RUNX2:NM_001278478:exon2:c.487A>C:p.N163H"
+                    "value": "NM_001278478:c.487A>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -93,7 +93,7 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0729_NC_000006.11",
+                "id": "var_PAVS_MASTER_0729_NC_000006.11_1",
                 "geneContext": {
                   "symbol": "NC_000006.11"
                 },
@@ -116,7 +116,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.745460Z",
+    "created": "2026-02-10T10:09:16.529104Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

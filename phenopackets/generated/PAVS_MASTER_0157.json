@@ -94,14 +94,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0157_RPS6KA3",
+                "id": "var_PAVS_MASTER_0157_RPS6KA3_0",
                 "geneContext": {
                   "symbol": "RPS6KA3"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "RPS6KA3:NM_004586:exon8:c.631+13T>C"
+                    "value": "NM_004586:c.631+13T>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -117,7 +117,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.644847Z",
+    "created": "2026-02-10T10:09:16.378069Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

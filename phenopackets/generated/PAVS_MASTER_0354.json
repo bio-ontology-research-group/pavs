@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0354_SCO2",
+                "id": "var_PAVS_MASTER_0354_SCO2_0",
                 "geneContext": {
                   "symbol": "SCO2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "SCO2:NM_001169109:exon2:c.667G>A:p.D223N"
+                    "value": "NM_001169109:c.667G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.678535Z",
+    "created": "2026-02-10T10:09:16.425685Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

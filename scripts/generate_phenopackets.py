@@ -72,17 +72,39 @@ def create_phenopacket(row, hpo_labels):
         zygosity_label = {"GENO:0000135": "heterozygous", "GENO:0000136": "homozygous", "GENO:0000606": "hemizygous"}.get(zygosity_id, "unknown zygosity")
 
         for v_str in v_strings:
-            gene_match = re.search(r'^([^:]+)', v_str)
-            hgvs_match = re.search(r'(NM_\d+\.\d+:c\.[^:]+)', v_str)
-            gene_symbol = gene_match.group(1) if gene_match else "Unknown"
-            hgvs_value = hgvs_match.group(1) if hgvs_match else v_str
+            v_str = v_str.strip()
+            # Try to extract Gene, Transcript, and HGVS.c
+            # Format 1: Gene:Transcript:exon:c.xxx:p.xxx
+            # Format 2: Gene:c.xxx
+            # Format 3: Transcript:c.xxx
             
+            gene_symbol = "Unknown"
+            hgvs_value = v_str
+            
+            # Extract Gene Symbol (usually first part before colon)
+            gene_match = re.search(r'^([^:]+)', v_str)
+            if gene_match:
+                gene_symbol = gene_match.group(1).strip()
+
+            # Try to find a transcript (NM_...) and the c. change
+            transcript_match = re.search(r'(NM_\d+(\.\d+)?)', v_str)
+            c_change_match = re.search(r'(c\.[^: ]+)', v_str)
+            
+            if transcript_match and c_change_match:
+                hgvs_value = f"{transcript_match.group(1)}:{c_change_match.group(1)}"
+            elif c_change_match:
+                # If no transcript, use Gene:c.xxx
+                hgvs_value = f"{gene_symbol}:{c_change_match.group(1)}"
+            
+            # Clean up hgvs_value (remove trailing protein or notes)
+            hgvs_value = hgvs_value.split(' ')[0].split('(')[0].rstrip(':')
+
             genomic_interpretations.append({
                 "subjectOrBiosampleId": subject_id,
                 "interpretationStatus": "CAUSATIVE",
                 "variantInterpretation": {
                     "variationDescriptor": {
-                        "id": f"var_{pp_id}_{gene_symbol}",
+                        "id": f"var_{pp_id}_{gene_symbol}_{len(genomic_interpretations)}",
                         "geneContext": {"symbol": gene_symbol},
                         "expressions": [{"syntax": "hgvs.c", "value": hgvs_value}],
                         "moleculeContext": "genomic",

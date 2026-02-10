@@ -70,14 +70,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0999_GEMIN7",
+                "id": "var_PAVS_MASTER_0999_GEMIN7_0",
                 "geneContext": {
                   "symbol": "GEMIN7"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "GEMIN7:NM_001007269:exon2:c.154G>A:p.E52K"
+                    "value": "NM_001007269:c.154G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -93,7 +93,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.796304Z",
+    "created": "2026-02-10T10:09:16.608867Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

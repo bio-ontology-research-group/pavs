@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0403_POLR1D",
+                "id": "var_PAVS_MASTER_0403_POLR1D_0",
                 "geneContext": {
                   "symbol": "POLR1D"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "POLR1D:NM_015972:exon2:c.388G>T:p.E130X"
+                    "value": "NM_015972:c.388G>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.687055Z",
+    "created": "2026-02-10T10:09:16.439238Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

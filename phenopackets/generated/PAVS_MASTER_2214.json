@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2214_chr16q22.2q23.1 deletion of (72130555-75038957)",
+                "id": "var_PAVS_MASTER_2214_chr16q22.2q23.1 deletion of (72130555-75038957)_0",
                 "geneContext": {
                   "symbol": "chr16q22.2q23.1 deletion of (72130555-75038957)"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "chr16q22.2q23.1 deletion of (72130555-75038957)"
+                    "value": "chr16q22.2q23.1"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.031669Z",
+    "created": "2026-02-10T10:09:16.960043Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

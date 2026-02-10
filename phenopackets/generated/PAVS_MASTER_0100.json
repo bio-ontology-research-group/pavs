@@ -76,14 +76,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0100_MFSD8",
+                "id": "var_PAVS_MASTER_0100_MFSD8_0",
                 "geneContext": {
                   "symbol": "MFSD8"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "MFSD8:NM_152778:exon9:c.863+1G>A"
+                    "value": "NM_152778:c.863+1G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -99,7 +99,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.634747Z",
+    "created": "2026-02-10T10:09:16.362869Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

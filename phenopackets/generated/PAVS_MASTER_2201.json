@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2201_chr6q14q21 deletion (64885283-99369048)",
+                "id": "var_PAVS_MASTER_2201_chr6q14q21 deletion (64885283-99369048)_0",
                 "geneContext": {
                   "symbol": "chr6q14q21 deletion (64885283-99369048)"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "chr6q14q21 deletion (64885283-99369048)"
+                    "value": "chr6q14q21"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.029167Z",
+    "created": "2026-02-10T10:09:16.956535Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

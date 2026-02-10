@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0690_PTS",
+                "id": "var_PAVS_MASTER_0690_PTS_0",
                 "geneContext": {
                   "symbol": "PTS"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "PTS:NM_000317:exon3:c.166_168del:p.56_56del"
+                    "value": "NM_000317:c.166_168del"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.738404Z",
+    "created": "2026-02-10T10:09:16.518531Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

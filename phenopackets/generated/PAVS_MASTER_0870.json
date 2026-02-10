@@ -64,14 +64,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0870_ROBO1",
+                "id": "var_PAVS_MASTER_0870_ROBO1_0",
                 "geneContext": {
                   "symbol": "ROBO1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ROBO1:NM_133631:exon21:c.2990A>T:p.D997V"
+                    "value": "NM_133631:c.2990A>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -87,7 +87,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.771621Z",
+    "created": "2026-02-10T10:09:16.569905Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

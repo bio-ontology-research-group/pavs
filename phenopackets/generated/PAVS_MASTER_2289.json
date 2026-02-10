@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2289_Chr3q22.1 deletion(129,682,298 \u2013129,991,510)",
+                "id": "var_PAVS_MASTER_2289_Chr3q22.1 deletion(129,682,298 \u2013129,991,510)_0",
                 "geneContext": {
                   "symbol": "Chr3q22.1 deletion(129,682,298 \u2013129,991,510)"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "Chr3q22.1 deletion(129,682,298 \u2013129,991,510)"
+                    "value": "Chr3q22.1"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,14 +63,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2289_ChrXp22.33 duplication(819,924 \u20131,860,130)",
+                "id": "var_PAVS_MASTER_2289_ChrXp22.33 duplication(819,924 \u20131,860,130)_1",
                 "geneContext": {
                   "symbol": "ChrXp22.33 duplication(819,924 \u20131,860,130)"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ChrXp22.33 duplication(819,924 \u20131,860,130)"
+                    "value": "ChrXp22.33"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -86,7 +86,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.046117Z",
+    "created": "2026-02-10T10:09:16.980901Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

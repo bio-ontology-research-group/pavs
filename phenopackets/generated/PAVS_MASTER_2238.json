@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2238_16q21q23.1(65021970_74573408)x1{47,XX,+del(9)(q22)}",
+                "id": "var_PAVS_MASTER_2238_16q21q23.1(65021970_74573408)x1{47,XX,+del(9)(q22)}_0",
                 "geneContext": {
                   "symbol": "16q21q23.1(65021970_74573408)x1{47,XX,+del(9)(q22)}"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "16q21q23.1(65021970_74573408)x1{47,XX,+del(9)(q22)}"
+                    "value": "16q21q23.1"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.036237Z",
+    "created": "2026-02-10T10:09:16.966729Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

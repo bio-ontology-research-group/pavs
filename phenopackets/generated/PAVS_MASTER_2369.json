@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2369_BTBD9",
+                "id": "var_PAVS_MASTER_2369_BTBD9_0",
                 "geneContext": {
                   "symbol": "BTBD9"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "BTBD9:NM_001172418:exon6:c.1015C>T:p.R339X"
+                    "value": "NM_001172418:c.1015C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.061237Z",
+    "created": "2026-02-10T10:09:17.003506Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

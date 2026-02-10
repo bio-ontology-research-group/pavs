@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0394_SLC26A2",
+                "id": "var_PAVS_MASTER_0394_SLC26A2_0",
                 "geneContext": {
                   "symbol": "SLC26A2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "SLC26A2:NM_000112:exon3:c.1010_1012del:p.337_338del"
+                    "value": "NM_000112:c.1010_1012del"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.685266Z",
+    "created": "2026-02-10T10:09:16.436422Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

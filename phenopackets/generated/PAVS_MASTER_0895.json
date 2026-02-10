@@ -100,14 +100,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0895_CNTN5",
+                "id": "var_PAVS_MASTER_0895_CNTN5_0",
                 "geneContext": {
                   "symbol": "CNTN5"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "CNTN5:NM_175566:exon15:c.1955T>G:p.I652R"
+                    "value": "NM_175566:c.1955T>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -123,7 +123,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.776440Z",
+    "created": "2026-02-10T10:09:16.577483Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

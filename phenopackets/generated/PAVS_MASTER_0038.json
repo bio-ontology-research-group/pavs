@@ -88,14 +88,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0038_ELOVL4",
+                "id": "var_PAVS_MASTER_0038_ELOVL4_0",
                 "geneContext": {
                   "symbol": "ELOVL4"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ELOVL4:NM_022726:exon5:c.575A>G:p.H192R"
+                    "value": "NM_022726:c.575A>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -111,7 +111,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.623138Z",
+    "created": "2026-02-10T10:09:16.344570Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

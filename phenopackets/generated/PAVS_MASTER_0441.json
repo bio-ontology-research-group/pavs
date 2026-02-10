@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0441_SURF1",
+                "id": "var_PAVS_MASTER_0441_SURF1_0",
                 "geneContext": {
                   "symbol": "SURF1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "SURF1:NM_001280787:exon8:c.518_519del:p.S173fs"
+                    "value": "NM_001280787:c.518_519del"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.693808Z",
+    "created": "2026-02-10T10:09:16.450527Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

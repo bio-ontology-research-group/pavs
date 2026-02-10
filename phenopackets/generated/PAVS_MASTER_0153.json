@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0153_AKR1D1",
+                "id": "var_PAVS_MASTER_0153_AKR1D1_0",
                 "geneContext": {
                   "symbol": "AKR1D1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "AKR1D1:NM_001190907:exon5:c.509A>G:p.N170S"
+                    "value": "NM_001190907:c.509A>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.644105Z",
+    "created": "2026-02-10T10:09:16.376886Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

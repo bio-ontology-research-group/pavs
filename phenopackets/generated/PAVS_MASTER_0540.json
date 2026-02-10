@@ -70,14 +70,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0540_SPG7",
+                "id": "var_PAVS_MASTER_0540_SPG7_0",
                 "geneContext": {
                   "symbol": "SPG7"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "SPG7:NM_003119:exon17:c.2201delA:p.E734fs"
+                    "value": "NM_003119:c.2201delA"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -93,7 +93,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.711672Z",
+    "created": "2026-02-10T10:09:16.479499Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

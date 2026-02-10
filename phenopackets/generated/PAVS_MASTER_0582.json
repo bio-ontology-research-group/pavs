@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0582_SLC2A1",
+                "id": "var_PAVS_MASTER_0582_SLC2A1_0",
                 "geneContext": {
                   "symbol": "SLC2A1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "SLC2A1: NM_006516:exon7:c.972+1G>"
+                    "value": "NM_006516:c.972+1G>"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.718887Z",
+    "created": "2026-02-10T10:09:16.490205Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

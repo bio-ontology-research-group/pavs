@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0376_FLVCR2",
+                "id": "var_PAVS_MASTER_0376_FLVCR2_0",
                 "geneContext": {
                   "symbol": "FLVCR2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "FLVCR2:NM_001195283:exon7:c.661G>A:p.A221T"
+                    "value": "NM_001195283:c.661G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.682134Z",
+    "created": "2026-02-10T10:09:16.431325Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

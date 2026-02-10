@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0068_ATXN1L",
+                "id": "var_PAVS_MASTER_0068_ATXN1L_0",
                 "geneContext": {
                   "symbol": "ATXN1L"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ATXN1L:NM_001137675:exon3:c.982C>T:p.R328W"
+                    "value": "NM_001137675:c.982C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.628792Z",
+    "created": "2026-02-10T10:09:16.353449Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

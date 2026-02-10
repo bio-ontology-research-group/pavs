@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0250_PRG4",
+                "id": "var_PAVS_MASTER_0250_PRG4_0",
                 "geneContext": {
                   "symbol": "PRG4"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "PRG4:NM_001127710:exon8:c.3502_3506del:p.R1168fs"
+                    "value": "NM_001127710:c.3502_3506del"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.661765Z",
+    "created": "2026-02-10T10:09:16.401467Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

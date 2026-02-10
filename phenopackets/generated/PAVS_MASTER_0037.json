@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0037_GALC",
+                "id": "var_PAVS_MASTER_0037_GALC_0",
                 "geneContext": {
                   "symbol": "GALC"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "GALC:NM_000153:exon1:c.157C>T:p.R53W"
+                    "value": "NM_000153:c.157C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.622952Z",
+    "created": "2026-02-10T10:09:16.344290Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

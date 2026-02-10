@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0736_IVD",
+                "id": "var_PAVS_MASTER_0736_IVD_0",
                 "geneContext": {
                   "symbol": "IVD"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "IVD:NM_001159508:exon7:c.791C>T:p.P264L,IVD:NM_002225:exon8:c.881C>T:p.P294L"
+                    "value": "NM_001159508:c.791C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.746865Z",
+    "created": "2026-02-10T10:09:16.531247Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

@@ -100,14 +100,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0463_KRAS",
+                "id": "var_PAVS_MASTER_0463_KRAS_0",
                 "geneContext": {
                   "symbol": "KRAS"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "KRAS:NM_004985:exon5:c.458A>T:p.D153V"
+                    "value": "NM_004985:c.458A>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -123,7 +123,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.697795Z",
+    "created": "2026-02-10T10:09:16.457195Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

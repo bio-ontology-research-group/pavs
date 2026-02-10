@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1920_PTPN23",
+                "id": "var_PAVS_MASTER_1920_PTPN23_0",
                 "geneContext": {
                   "symbol": "PTPN23"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "PTPN23:NM_015466:c.3995G > T:p.R1332L"
+                    "value": "NM_015466:c.3995G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.973444Z",
+    "created": "2026-02-10T10:09:16.874188Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

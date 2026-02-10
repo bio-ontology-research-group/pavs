@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2213_47,XXX (full trisomy X)",
+                "id": "var_PAVS_MASTER_2213_47,XXX (full trisomy X)_0",
                 "geneContext": {
                   "symbol": "47,XXX (full trisomy X)"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "47,XXX (full trisomy X)"
+                    "value": "47,XXX"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.031476Z",
+    "created": "2026-02-10T10:09:16.959774Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

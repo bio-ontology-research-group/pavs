@@ -65,14 +65,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1468_ACADVL",
+                "id": "var_PAVS_MASTER_1468_ACADVL_0",
                 "geneContext": {
                   "symbol": "ACADVL"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ACADVL:NM_001270447:c.494T>C"
+                    "value": "NM_001270447:c.494T>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -88,7 +88,7 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1468_NM_015069.5",
+                "id": "var_PAVS_MASTER_1468_NM_015069.5_1",
                 "geneContext": {
                   "symbol": "NM_015069.5"
                 },
@@ -111,7 +111,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.884039Z",
+    "created": "2026-02-10T10:09:16.744142Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

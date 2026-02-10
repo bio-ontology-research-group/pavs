@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2410_HAMP",
+                "id": "var_PAVS_MASTER_2410_HAMP_0",
                 "geneContext": {
                   "symbol": "HAMP"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "HAMP:NM_021175:exon3:c.232T>C:p.C78R"
+                    "value": "NM_021175:c.232T>C"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.069093Z",
+    "created": "2026-02-10T10:09:17.015118Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

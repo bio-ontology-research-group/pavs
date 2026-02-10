@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1905_ADCK3",
+                "id": "var_PAVS_MASTER_1905_ADCK3_0",
                 "geneContext": {
                   "symbol": "ADCK3"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ADCK3:NM_020247:c.1744dup"
+                    "value": "NM_020247:c.1744dup"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.970562Z",
+    "created": "2026-02-10T10:09:16.870304Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

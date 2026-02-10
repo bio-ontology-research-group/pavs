@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0804_BMPER",
+                "id": "var_PAVS_MASTER_0804_BMPER_0",
                 "geneContext": {
                   "symbol": "BMPER"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "BMPER:NM_133468:exon9:c.712T>G:p.C238G"
+                    "value": "NM_133468:c.712T>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.758636Z",
+    "created": "2026-02-10T10:09:16.549531Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

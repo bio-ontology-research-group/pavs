@@ -100,14 +100,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1641_ALG9",
+                "id": "var_PAVS_MASTER_1641_ALG9_0",
                 "geneContext": {
                   "symbol": "ALG9"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ALG9:NM_001077691:c.1075G>A"
+                    "value": "NM_001077691:c.1075G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -123,7 +123,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.917883Z",
+    "created": "2026-02-10T10:09:16.793245Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

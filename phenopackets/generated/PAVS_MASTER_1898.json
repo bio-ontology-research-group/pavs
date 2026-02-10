@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1898_ARFGEF2",
+                "id": "var_PAVS_MASTER_1898_ARFGEF2_0",
                 "geneContext": {
                   "symbol": "ARFGEF2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ARFGEF2:NM_006420:c.656_657insC:p.P219fs"
+                    "value": "NM_006420:c.656_657insC"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.969281Z",
+    "created": "2026-02-10T10:09:16.868348Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

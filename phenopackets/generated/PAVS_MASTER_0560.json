@@ -100,14 +100,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0560_RAD21",
+                "id": "var_PAVS_MASTER_0560_RAD21_0",
                 "geneContext": {
                   "symbol": "RAD21"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "RAD21:NM_006265:exon2:c.68G>A:p.W23X"
+                    "value": "NM_006265:c.68G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -123,7 +123,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.715137Z",
+    "created": "2026-02-10T10:09:16.484793Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

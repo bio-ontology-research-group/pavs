@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0577_BCKDHA",
+                "id": "var_PAVS_MASTER_0577_BCKDHA_0",
                 "geneContext": {
                   "symbol": "BCKDHA"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "BCKDHA:NM_000709:exon3:c.347A>G:p.D116G"
+                    "value": "NM_000709:c.347A>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.718044Z",
+    "created": "2026-02-10T10:09:16.488841Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

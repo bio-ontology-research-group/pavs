@@ -52,14 +52,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2347_RLBP1",
+                "id": "var_PAVS_MASTER_2347_RLBP1_0",
                 "geneContext": {
                   "symbol": "RLBP1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "RLBP1:NM_000326:exon8:c.773T>G:p.L258W/SYT9:NM_175733:exon7:c.1471C>T:p.R491X"
+                    "value": "NM_000326:c.773T>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -75,7 +75,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.056864Z",
+    "created": "2026-02-10T10:09:16.997059Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

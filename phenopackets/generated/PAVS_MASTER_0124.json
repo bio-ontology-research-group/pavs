@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0124_ATP7B",
+                "id": "var_PAVS_MASTER_0124_ATP7B_0",
                 "geneContext": {
                   "symbol": "ATP7B"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ATP7B:NM_001005918:exon15:c.3400G>A:p.G1134S"
+                    "value": "NM_001005918:c.3400G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.639017Z",
+    "created": "2026-02-10T10:09:16.369241Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

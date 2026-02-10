@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0245_ITPR1",
+                "id": "var_PAVS_MASTER_0245_ITPR1_0",
                 "geneContext": {
                   "symbol": "ITPR1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ITPR1:NM_002222:exon50:c.6862C>T:p.R2288X"
+                    "value": "NM_002222:c.6862C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.660887Z",
+    "created": "2026-02-10T10:09:16.400333Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

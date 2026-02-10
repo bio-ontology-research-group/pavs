@@ -82,14 +82,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0924_SURF1",
+                "id": "var_PAVS_MASTER_0924_SURF1_0",
                 "geneContext": {
                   "symbol": "SURF1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "SURF1:NM_001280787:exon6:c.330_331del:p.E110fs"
+                    "value": "NM_001280787:c.330_331del"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -105,7 +105,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.782120Z",
+    "created": "2026-02-10T10:09:16.586282Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

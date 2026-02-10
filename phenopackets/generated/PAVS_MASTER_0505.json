@@ -118,14 +118,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0505_FARS2",
+                "id": "var_PAVS_MASTER_0505_FARS2_0",
                 "geneContext": {
                   "symbol": "FARS2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "FARS2:NM_006567:exon6:c.1138G>T:p.D380Y"
+                    "value": "NM_006567:c.1138G>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -141,7 +141,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.705443Z",
+    "created": "2026-02-10T10:09:16.469761Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

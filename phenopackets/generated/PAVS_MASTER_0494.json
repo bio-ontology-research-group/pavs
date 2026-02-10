@@ -118,14 +118,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0494_ABCD1",
+                "id": "var_PAVS_MASTER_0494_ABCD1_0",
                 "geneContext": {
                   "symbol": "ABCD1"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ABCD1:NM_000033:exon8:c.1825G>A:p.E609K"
+                    "value": "NM_000033:c.1825G>A"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -141,7 +141,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.703396Z",
+    "created": "2026-02-10T10:09:16.466444Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

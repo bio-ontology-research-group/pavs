@@ -58,14 +58,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0611_SYNGAP1\u00a0 NM_006772",
+                "id": "var_PAVS_MASTER_0611_SYNGAP1\u00a0 NM_006772_0",
                 "geneContext": {
                   "symbol": "SYNGAP1\u00a0 NM_006772"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "SYNGAP1\u00a0 NM_006772:exon11:c.1677-2A>G"
+                    "value": "NM_006772:c.1677-2A>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -81,7 +81,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.723796Z",
+    "created": "2026-02-10T10:09:16.497220Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

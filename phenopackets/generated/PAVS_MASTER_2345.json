@@ -76,14 +76,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2345_MECP2",
+                "id": "var_PAVS_MASTER_2345_MECP2_0",
                 "geneContext": {
                   "symbol": "MECP2"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "MECP2:NM_001110792:exon3:c.509C>T:p.T170M (het)"
+                    "value": "NM_001110792:c.509C>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -99,7 +99,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.056444Z",
+    "created": "2026-02-10T10:09:16.996363Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

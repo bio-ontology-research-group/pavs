@@ -46,14 +46,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1538_ST7",
+                "id": "var_PAVS_MASTER_1538_ST7_0",
                 "geneContext": {
                   "symbol": "ST7"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "ST7:NM_021908:c.489T>G"
+                    "value": "NM_021908:c.489T>G"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -69,7 +69,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.897926Z",
+    "created": "2026-02-10T10:09:16.764400Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

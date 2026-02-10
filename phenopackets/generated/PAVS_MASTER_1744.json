@@ -76,14 +76,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_1744_DLD",
+                "id": "var_PAVS_MASTER_1744_DLD_0",
                 "geneContext": {
                   "symbol": "DLD"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "DLD:NM_000108:3:c.1436A>T"
+                    "value": "NM_000108:c.1436A>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -99,7 +99,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.938451Z",
+    "created": "2026-02-10T10:09:16.823658Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

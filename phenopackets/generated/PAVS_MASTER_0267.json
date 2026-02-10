@@ -40,14 +40,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_0267_UBE3B",
+                "id": "var_PAVS_MASTER_0267_UBE3B_0",
                 "geneContext": {
                   "symbol": "UBE3B"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "UBE3B: NM_183415:exon8:c.630+1G>T"
+                    "value": "NM_183415:c.630+1G>T"
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -63,7 +63,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:01.664456Z",
+    "created": "2026-02-10T10:09:16.405373Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {

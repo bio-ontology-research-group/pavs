@@ -34,14 +34,14 @@
             "interpretationStatus": "CAUSATIVE",
             "variantInterpretation": {
               "variationDescriptor": {
-                "id": "var_PAVS_MASTER_2067_ASNS",
+                "id": "var_PAVS_MASTER_2067_ASNS_0",
                 "geneContext": {
                   "symbol": "ASNS"
                 },
                 "expressions": [
                   {
                     "syntax": "hgvs.c",
-                    "value": "NM_133436.3:c. 224A>T ,p.(Asn75Ile),NC_000007.13"
+                    "value": "ASNS:NM_133436.3:c."
                   }
                 ],
                 "moleculeContext": "genomic",
@@ -57,7 +57,7 @@
     }
   ],
   "metaData": {
-    "created": "2026-02-10T09:45:02.002208Z",
+    "created": "2026-02-10T10:09:16.914640Z",
     "createdBy": "Robert Hoehndorf",
     "resources": [
       {
