@@ -1,0 +1,272 @@
+{
+  "id": "PMID_10942416_Patient",
+  "subject": {
+    "id": "Patient",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P3Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001791",
+        "label": "Fetal ascites"
+      },
+      "onset": {
+        "gestationalAge": {
+          "weeks": 36,
+          "days": 0
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0025671",
+        "label": "Fetal pericardial effusion"
+      },
+      "onset": {
+        "gestationalAge": {
+          "weeks": 34,
+          "days": 0
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001558",
+        "label": "Decreased fetal movement"
+      },
+      "onset": {
+        "gestationalAge": {
+          "weeks": 36,
+          "days": 0
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001433",
+        "label": "Hepatosplenomegaly"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003577",
+          "label": "Congenital onset"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0025763",
+        "label": "Positive urine anion gap"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0032944",
+        "label": "Alkaline urine"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002150",
+        "label": "Hypercalciuria"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0031033",
+        "label": "Impaired urinary acidification"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0008341",
+        "label": "Distal renal tubular acidosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000121",
+        "label": "Nephrocalcinosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002900",
+        "label": "Hypokalemia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004918",
+        "label": "Hyperchloremic metabolic acidosis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0007430",
+        "label": "Generalized edema"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003577",
+          "label": "Congenital onset"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001923",
+        "label": "Reticulocytosis"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003577",
+          "label": "Congenital onset"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001878",
+        "label": "Hemolytic anemia"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "ahgngPcyBugljQPt9aAkkiIk",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:611590",
+          "label": "Distal renal tubular acidosis 4 with hemolytic anemia"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Patient",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c1462GtoA_SLC4A1_NM_000342v4",
+                "geneContext": {
+                  "valueId": "HGNC:11027",
+                  "symbol": "SLC4A1"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_000342.4:c.1462G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000017.11:g.44257514C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_000333.1:p.(Val488Met)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr17",
+                  "pos": 44257514,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:611590",
+        "label": "Distal renal tubular acidosis 4 with hemolytic anemia"
+      },
+      "onset": {
+        "gestationalAge": {
+          "weeks": 34,
+          "days": 0
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-04T17:43:50.889258Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:10942416",
+        "description": "Severe hereditary spherocytosis and distal renal tubular acidosis associated with the total absence of band 3."
+      }
+    ]
+  }
+}

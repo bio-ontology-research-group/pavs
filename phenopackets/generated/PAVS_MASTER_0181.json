@@ -1,0 +1,192 @@
+{
+  "id": "PAVS_MASTER_0181",
+  "subject": {
+    "id": "16-2988",
+    "sex": "MALE",
+    "taxonomy": {
+      "id": "NCBITaxon:9606",
+      "label": "Homo sapiens"
+    }
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000280",
+        "label": "Coarse facial features"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Hypertelorism"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000733",
+        "label": "Motor stereotypy"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Motor delay"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001511",
+        "label": "Intrauterine growth retardation"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001562",
+        "label": "Oligohydramnios"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001636",
+        "label": "Tetralogy of Fallot"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      }
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0014",
+        "label": "Middle Eastern, North African or Persian"
+      }
+    },
+    {
+      "type": {
+        "id": "GAZ:00000570",
+        "label": "Saudi Arabia"
+      }
+    }
+  ],
+  "diseases": [],
+  "interpretations": [
+    {
+      "id": "int_PAVS_MASTER_0181",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "16-2988",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "variationDescriptor": {
+                "id": "var_PAVS_MASTER_0181_ANKRD11",
+                "geneContext": {
+                  "symbol": "ANKRD11"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ANKRD11:NM_001256183:exon9:c.4892G>A:p.R1631Q"
+                  }
+                ],
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-10T09:45:01.649356Z",
+    "createdBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "namespacePrefix": "HP"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "http://purl.obolibrary.org/obo/hancestro.owl",
+        "namespacePrefix": "HANCESTRO"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.owl",
+        "namespacePrefix": "GAZ"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "namespacePrefix": "GENO"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "namespacePrefix": "HGNC"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "ORCID:0000-0001-8149-5890",
+        "description": "Robert Hoehndorf"
+      }
+    ]
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "id": "PAVS_MASTER_2160",
+  "subject": {
+    "id": "PAVS1141",
+    "sex": "UNKNOWN_SEX",
+    "taxonomy": {
+      "id": "NCBITaxon:9606",
+      "label": "Homo sapiens"
+    }
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000010",
+        "label": "Recurrent urinary tract infections"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000069",
+        "label": "Abnormality of the ureter"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000076",
+        "label": "Vesicoureteral reflux"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001319",
+        "label": "Neonatal hypotonia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001382",
+        "label": "Joint hypermobility"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012385",
+        "label": "Camptodactyly"
+      }
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0014",
+        "label": "Middle Eastern, North African or Persian"
+      }
+    },
+    {
+      "type": {
+        "id": "GAZ:00000570",
+        "label": "Saudi Arabia"
+      }
+    }
+  ],
+  "diseases": [],
+  "interpretations": [
+    {
+      "id": "int_PAVS_MASTER_2160",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS1141",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "variationDescriptor": {
+                "id": "var_PAVS_MASTER_2160_NM_017934.5",
+                "geneContext": {
+                  "symbol": "NM_017934.5"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_017934.5:c.577C>T"
+                  }
+                ],
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000133",
+                  "label": "unknown zygosity"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-10T09:45:02.020759Z",
+    "createdBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "namespacePrefix": "HP"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "http://purl.obolibrary.org/obo/hancestro.owl",
+        "namespacePrefix": "HANCESTRO"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.owl",
+        "namespacePrefix": "GAZ"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "namespacePrefix": "GENO"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "namespacePrefix": "HGNC"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "ORCID:0000-0001-8149-5890",
+        "description": "Robert Hoehndorf"
+      }
+    ]
+  }
+}

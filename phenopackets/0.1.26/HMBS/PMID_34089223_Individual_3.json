@@ -1,0 +1,218 @@
+{
+  "id": "PMID_34089223_Individual_3",
+  "subject": {
+    "id": "Individual 3",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P45Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002317",
+        "label": "Unsteady gait"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P13Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002313",
+        "label": "Spastic paraparesis"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003581",
+          "label": "Adult onset"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0007141",
+        "label": "Sensorimotor neuropathy"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003581",
+          "label": "Adult onset"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100543",
+        "label": "Cognitive impairment"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "bY8nsGaIxG0xwckZxQsPKByP",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:620711",
+          "label": "Leukoencephalopathy, porphyria-related"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Individual 3",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c500GtoA_HMBS_NM_000190v4",
+                "geneContext": {
+                  "valueId": "HGNC:4982",
+                  "symbol": "HMBS"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_000190.4:c.500G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000011.10:g.119091414G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_000181.2:p.(Arg167Gln)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr11",
+                  "pos": 119091414,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "Individual 3",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c674GtoA_HMBS_NM_000190v4",
+                "geneContext": {
+                  "valueId": "HGNC:4982",
+                  "symbol": "HMBS"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_000190.4:c.674G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000011.10:g.119092426G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_000181.2:p.(Arg225Gln)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr11",
+                  "pos": 119092426,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:620711",
+        "label": "Leukoencephalopathy, porphyria-related"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P13Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-01T09:42:32.244088Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:34089223",
+        "description": "Expanding the clinical and radiological phenotypes of leukoencephalopathy due to biallelic HMBS mutations"
+      }
+    ]
+  }
+}

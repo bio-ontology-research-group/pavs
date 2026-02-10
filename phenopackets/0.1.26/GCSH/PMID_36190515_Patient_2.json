@@ -1,0 +1,251 @@
+{
+  "id": "PMID_36190515_Patient_2",
+  "subject": {
+    "id": "Patient 2",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P7D"
+      }
+    },
+    "vitalStatus": {
+      "status": "DECEASED"
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002154",
+        "label": "Hyperglycinemia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001943",
+        "label": "Hypoglycemia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0500230",
+        "label": "Increased CSF glycine concentration"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004887",
+        "label": "Respiratory failure requiring assisted ventilation"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001284",
+        "label": "Areflexia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001336",
+        "label": "Myoclonus"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001254",
+        "label": "Lethargy"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001259",
+        "label": "Coma"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0010851",
+        "label": "EEG with burst suppression"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0033725",
+        "label": "Thin corpus callosum"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100247",
+        "label": "Recurrent singultus"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "umM2zBO0pQlg8UWqhA3TcKfd",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:620423",
+          "label": "Multiple mitochondrial dysfunctions syndrome 7"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Patient 2",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c293_2_293_1insT_GCSH_NM_004483v5",
+                "geneContext": {
+                  "valueId": "HGNC:4208",
+                  "symbol": "GCSH"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_004483.5:c.293-2_293-1insT"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000016.10:g.81084595_81084596insA"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_004474.2:p.?"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr16",
+                  "pos": 81084595,
+                  "ref": "C",
+                  "alt": "CA"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "Patient 2",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c1AtoG_GCSH_NM_004483v5",
+                "geneContext": {
+                  "valueId": "HGNC:4208",
+                  "symbol": "GCSH"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_004483.5:c.1A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000016.10:g.81096278T>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_004474.2:p.(Met1?)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr16",
+                  "pos": 81096278,
+                  "ref": "T",
+                  "alt": "C"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:620423",
+        "label": "Multiple mitochondrial dysfunctions syndrome 7"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3D"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-02T20:20:39.858098Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:36190515",
+        "description": "Pathogenic variants in GCSH encoding the moonlighting H-protein cause combined nonketotic hyperglycinemia and lipoate deficiency."
+      }
+    ]
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "id": "PMID_9854053_Male_proband_II_2",
+  "subject": {
+    "id": "Male proband II:2",
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001433",
+        "label": "Hepatosplenomegaly"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0008897",
+        "label": "Postnatal growth retardation"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y6M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000980",
+        "label": "Pallor"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001541",
+        "label": "Ascites"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002039",
+        "label": "Anorexia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y6M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0032944",
+        "label": "Alkaline urine"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003158",
+        "label": "Hyposthenuria"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y6M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0031033",
+        "label": "Impaired urinary acidification"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0008341",
+        "label": "Distal renal tubular acidosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000121",
+        "label": "Nephrocalcinosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001254",
+        "label": "Lethargy"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y6M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002900",
+        "label": "Hypokalemia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003265",
+        "label": "Neonatal hyperbilirubinemia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0012100",
+        "label": "Abnormal circulating creatinine concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0004918",
+        "label": "Hyperchloremic metabolic acidosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0007430",
+        "label": "Generalized edema"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0034609",
+        "label": "Polychromasia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001923",
+        "label": "Reticulocytosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004446",
+        "label": "Stomatocytosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0025066",
+        "label": "Decreased mean corpuscular volume"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001878",
+        "label": "Hemolytic anemia"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "DZpWkNilrzXEcqzbkEiAkkqP",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:611590",
+          "label": "Distal renal tubular acidosis 4 with hemolytic anemia"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Male proband II:2",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c2102GtoA_SLC4A1_NM_000342v4",
+                "geneContext": {
+                  "valueId": "HGNC:11027",
+                  "symbol": "SLC4A1"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_000342.4:c.2102G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000017.11:g.44253327C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_000333.1:p.(Gly701Asp)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr17",
+                  "pos": 44253327,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:611590",
+        "label": "Distal renal tubular acidosis 4 with hemolytic anemia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y6M"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-04T17:43:50.889462Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:9854053",
+        "description": "Novel AE1 mutations in recessive distal renal tubular acidosis. Loss-of-function is rescued by glycophorin A."
+      }
+    ]
+  }
+}

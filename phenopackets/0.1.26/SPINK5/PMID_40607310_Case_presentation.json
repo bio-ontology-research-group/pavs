@@ -1,0 +1,279 @@
+{
+  "id": "PMID_40607310_Case_presentation",
+  "subject": {
+    "id": "Case presentation",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P6Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0045075",
+        "label": "Sparse eyebrow"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P7M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000653",
+        "label": "Sparse eyelashes"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P7M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002209",
+        "label": "Sparse scalp hair"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P7M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000403",
+        "label": "Recurrent otitis media"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0006532",
+        "label": "Recurrent pneumonia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0003212",
+        "label": "Increased circulating IgE concentration"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P7M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0007381",
+        "label": "Congenital exfoliative erythroderma"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003577",
+          "label": "Congenital onset"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001581",
+        "label": "Recurrent skin infections"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0410328",
+        "label": "Egg allergy"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P7M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0040189",
+        "label": "Scaling skin"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P7M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0010783",
+        "label": "Erythema"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000989",
+        "label": "Pruritus"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P7M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0025811",
+        "label": "Trichorrhexis invaginata"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P7M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004779",
+        "label": "Brittle scalp hair"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P7M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100658",
+        "label": "Cellulitis"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "pAsAJ95Z9G7huNQrn2pyXgOo",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:256500",
+          "label": "Netherton syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Case presentation",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c1302_5GtoC_SPINK5_NM_006846v4",
+                "geneContext": {
+                  "valueId": "HGNC:15464",
+                  "symbol": "SPINK5"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_006846.4:c.1302+5G>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000005.10:g.148101441G>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_006837.2:p.?"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr5",
+                  "pos": 148101441,
+                  "ref": "G",
+                  "alt": "C"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:256500",
+        "label": "Netherton syndrome"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003577",
+          "label": "Congenital onset"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-12-31T15:52:33.506934Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:40607310",
+        "description": "Successful management of Netherton syndrome using IVIG and dupilumab: A case report."
+      }
+    ]
+  }
+}

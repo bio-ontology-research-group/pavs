@@ -1,0 +1,388 @@
+{
+  "id": "PMID_31251474_proband",
+  "subject": {
+    "id": "proband",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P8Y"
+      }
+    },
+    "vitalStatus": {
+      "status": "DECEASED"
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0003128",
+        "label": "Lactic acidosis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P8M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001943",
+        "label": "Hypoglycemia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P8M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Hearing impairment"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0025336",
+        "label": "Delayed ability to sit"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P5M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001332",
+        "label": "Dystonia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0008936",
+        "label": "Axial hypotonia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012157",
+        "label": "Subcortical cerebral atrophy"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002120",
+        "label": "Cerebral cortical atrophy"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002283",
+        "label": "Global brain atrophy"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P8Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012753",
+        "label": "T2 hypointense basal ganglia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P8M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012708",
+        "label": "Reduced brain N-acetyl aspartate level by MRS"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012707",
+        "label": "Elevated brain lactate level by MRS"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002307",
+        "label": "Drooling"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P7Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000648",
+        "label": "Optic atrophy"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P5M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003535",
+        "label": "3-Methylglutaconic aciduria"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003344",
+        "label": "3-Methylglutaric aciduria"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4Y"
+        }
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "fVdhiIsabkx7zRjNelgApDjI",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:614739",
+          "label": "3-methylglutaconic aciduria with deafness, encephalopathy, and Leigh-like syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "proband",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c129_1GtoC_SERAC1_NM_032861v4",
+                "geneContext": {
+                  "valueId": "HGNC:21061",
+                  "symbol": "SERAC1"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_032861.4:c.129-1G>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000006.12:g.158150590C>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_116250.3:p.?"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr6",
+                  "pos": 158150590,
+                  "ref": "C",
+                  "alt": "G"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "proband",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c202CtoT_SERAC1_NM_032861v4",
+                "geneContext": {
+                  "valueId": "HGNC:21061",
+                  "symbol": "SERAC1"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_032861.4:c.202C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000006.12:g.158150516G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_116250.3:p.(Arg68Ter)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr6",
+                  "pos": 158150516,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:614739",
+        "label": "3-methylglutaconic aciduria with deafness, encephalopathy, and Leigh-like syndrome"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P5M"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-12-31T18:58:22.603747Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:31251474",
+        "description": "Identification of a novel splice site mutation in the SERAC1 gene responsible for the MEGDHEL syndrome"
+      }
+    ]
+  }
+}

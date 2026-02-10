@@ -1,0 +1,208 @@
+{
+  "id": "PMID_17886299_patient_BM2",
+  "subject": {
+    "id": "patient BM2",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P20Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0003701",
+        "label": "Proximal muscle weakness"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002460",
+        "label": "Distal muscle weakness"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0030319",
+        "label": "Weakness of facial musculature"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0034677",
+        "label": "Ankle contracture"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003115",
+        "label": "Abnormal EKG"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0008180",
+        "label": "Mildly elevated creatine kinase"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002804",
+        "label": "Arthrogryposis multiplex congenita"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0034391",
+        "label": "Elbow contracture"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0034671",
+        "label": "Knee contracture"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0034681",
+        "label": "Finger joint contracture"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002808",
+        "label": "Kyphosis"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "GW0XwybxUxJUsqnjFxCSVFPz",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:620726",
+          "label": "Bethlem myopathy 1C"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "patient BM2",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c5177TtoG_COL6A3_NM_004369v4",
+                "geneContext": {
+                  "valueId": "HGNC:2213",
+                  "symbol": "COL6A3"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_004369.4:c.5177T>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.237367010A>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_004360.2:p.(Leu1726Arg)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 237367010,
+                  "ref": "A",
+                  "alt": "C"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:620726",
+        "label": "Bethlem myopathy 1C"
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-10-24T19:04:32.728002Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-10-22",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:17886299",
+        "description": "Molecular consequences of dominant Bethlem myopathy collagen VI mutations"
+      }
+    ]
+  }
+}

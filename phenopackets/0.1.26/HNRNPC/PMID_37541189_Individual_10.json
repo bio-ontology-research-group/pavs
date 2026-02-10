@@ -1,0 +1,306 @@
+{
+  "id": "PMID_37541189_Individual_10",
+  "subject": {
+    "id": "Individual 10",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P15Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000248",
+        "label": "Brachycephaly"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000448",
+        "label": "Prominent nose"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000219",
+        "label": "Thin upper lip vermilion"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000319",
+        "label": "Smooth philtrum"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000311",
+        "label": "Round face"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000490",
+        "label": "Deeply set eye"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000601",
+        "label": "Hypotelorism"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Hypertelorism"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000494",
+        "label": "Downslanted palpebral fissures"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0011147",
+        "label": "Typical absence seizure"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002069",
+        "label": "Bilateral tonic-clonic seizure"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0031936",
+        "label": "Delayed ability to walk"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001344",
+        "label": "Absent speech"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0040082",
+        "label": "Happy demeanor"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002360",
+        "label": "Sleep abnormality"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002870",
+        "label": "Obstructive sleep apnea"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0031987",
+        "label": "Diminished ability to concentrate"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100034",
+        "label": "Motor tics"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001256",
+        "label": "Intellectual disability, mild"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0010862",
+        "label": "Delayed fine motor development"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001276",
+        "label": "Hypertonia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0011968",
+        "label": "Feeding difficulties"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001511",
+        "label": "Intrauterine growth retardation"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002188",
+        "label": "Delayed CNS myelination"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "zEY64QE9xMF7EDw59wOUNzn2",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:620688",
+          "label": "Intellectual developmental disorder, autosomal dominant 74"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Individual 10",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "HNRNPC_SV_NC_000014_9_g_21220392_21352183del_NM_004500_4_c__82945_366_7272del_",
+                "label": "NC_000014_9_g_21220392_21352183del_NM_004500_4_c__82945_366_7272del_",
+                "geneContext": {
+                  "valueId": "HGNC:5035",
+                  "symbol": "HNRNPC"
+                },
+                "moleculeContext": "genomic",
+                "structuralType": {
+                  "id": "SO:1000183",
+                  "label": "chromosome_structure_variation"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:620688",
+        "label": "Intellectual developmental disorder, autosomal dominant 74"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003593",
+          "label": "Infantile onset"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-09-26T17:12:14.698760Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-08-11",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:37541189",
+        "description": "HNRNPC haploinsufficiency affects alternative splicing of intellectual disability-associated genes and causes a neurodevelopmental disorder"
+      }
+    ]
+  }
+}

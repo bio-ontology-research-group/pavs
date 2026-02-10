@@ -1,0 +1,287 @@
+{
+  "id": "PMID_28289593_Case_Report",
+  "subject": {
+    "id": "Case Report",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P8M"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0045074",
+        "label": "Thin eyebrow"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0045075",
+        "label": "Sparse eyebrow"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000653",
+        "label": "Sparse eyelashes"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Hearing impairment"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001287",
+        "label": "Meningitis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0005421",
+        "label": "Decreased circulating complement C3 concentration"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004315",
+        "label": "Decreased circulating IgG concentration"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001019",
+        "label": "Erythroderma"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003577",
+          "label": "Congenital onset"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100806",
+        "label": "Sepsis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004906",
+        "label": "Hypernatremic dehydration"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0008064",
+        "label": "Ichthyosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001596",
+        "label": "Alopecia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002242",
+        "label": "Abnormal intestine morphology"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002028",
+        "label": "Chronic diarrhea"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100658",
+        "label": "Cellulitis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003577",
+          "label": "Congenital onset"
+        }
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "oXcGplcrIq9MBZtGPRn5gB1W",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:256500",
+          "label": "Netherton syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Case Report",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c1431_12GtoA_SPINK5_NM_006846v4",
+                "geneContext": {
+                  "valueId": "HGNC:15464",
+                  "symbol": "SPINK5"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_006846.4:c.1431-12G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000005.10:g.148104940G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_006837.2:p.?"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr5",
+                  "pos": 148104940,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "Case Report",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c1816_1820_21delinsCT_SPINK5_NM_006846v4",
+                "geneContext": {
+                  "valueId": "HGNC:15464",
+                  "symbol": "SPINK5"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_006846.4:c.1816_1820+21delinsCT"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000005.10:g.148111891_148111916delinsCT"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr5",
+                  "pos": 148111891,
+                  "ref": "TTCTTGTGAGTGGGCGGCAGCCACTG",
+                  "alt": "CT"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:256500",
+        "label": "Netherton syndrome"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003577",
+          "label": "Congenital onset"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-12-31T15:52:33.506069Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:28289593",
+        "description": "Is c.1431-12G>A A common European mutation of SPINK5? report of a patient with Netherton Syndrome."
+      }
+    ]
+  }
+}

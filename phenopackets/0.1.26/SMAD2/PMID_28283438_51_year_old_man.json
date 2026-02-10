@@ -1,0 +1,171 @@
+{
+  "id": "PMID_28283438_51_year_old_man",
+  "subject": {
+    "id": "51-year-old man",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P51Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000268",
+        "label": "Dolichocephaly"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000766",
+        "label": "Abnormal sternum morphology"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0008419",
+        "label": "Intervertebral disk degeneration"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012727",
+        "label": "Thoracic aortic aneurysm"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P46Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0005112",
+        "label": "Abdominal aortic aneurysm"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P51Y"
+        }
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "bzvBrZtg3i7VhwUz8OAMdAGL",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:619656",
+          "label": "Loeys-Dietz syndrome 6"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "51-year-old man",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c833CtoT_SMAD2_NM_005901v6",
+                "geneContext": {
+                  "valueId": "HGNC:6768",
+                  "symbol": "SMAD2"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_005901.6:c.833C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000018.10:g.47848639G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_005892.1:p.(Ala278Val)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr18",
+                  "pos": 47848639,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:619656",
+        "label": "Loeys-Dietz syndrome 6"
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-11-28T17:38:11.004426Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:28283438",
+        "description": "Exome sequencing identified a novel SMAD2 mutation in a Chinese family with early onset aortic aneurysms"
+      }
+    ]
+  }
+}

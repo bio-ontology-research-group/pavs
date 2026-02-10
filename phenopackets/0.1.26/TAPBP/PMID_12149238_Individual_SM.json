@@ -1,0 +1,149 @@
+{
+  "id": "PMID_12149238_Individual_SM",
+  "subject": {
+    "id": "Individual SM",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P54Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002205",
+        "label": "Recurrent respiratory infections"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000099",
+        "label": "Glomerulonephritis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P44Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0032275",
+        "label": "Recurrent shingles"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0025794",
+        "label": "Reduced MHC I cell surface expression"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "4QqHTkqDZagHjSml8QIuLQ5s",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:620814",
+          "label": "MHC class I deficiency 3"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Individual SM",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "TAPBP_DEL_Alu-mediated-7.4-kb-deletion-encompassing-exons-4-through-7-of-the-TAPBP-gene",
+                "label": "Alu-mediated 7.4-kb deletion encompassing exons 4 through 7 of the TAPBP gene",
+                "geneContext": {
+                  "valueId": "HGNC:11566",
+                  "symbol": "TAPBP"
+                },
+                "moleculeContext": "genomic",
+                "structuralType": {
+                  "id": "SO:1000029",
+                  "label": "chromosomal_deletion"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:620814",
+        "label": "MHC class I deficiency 3"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P44Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-10T07:20:04.313690Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:12149238",
+        "description": "A subject with a novel type I bare lymphocyte syndrome has tapasin deficiency due to deletion of 4 exons by Alu-mediated recombination"
+      }
+    ]
+  }
+}

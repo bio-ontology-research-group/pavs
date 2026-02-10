@@ -1,0 +1,198 @@
+{
+  "id": "PAVS_MASTER_2108",
+  "subject": {
+    "id": "PAVS1089",
+    "sex": "UNKNOWN_SEX",
+    "taxonomy": {
+      "id": "NCBITaxon:9606",
+      "label": "Homo sapiens"
+    }
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000054",
+        "label": "Micropenis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000218",
+        "label": "High palate"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000237",
+        "label": "Small anterior fontanelle"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000278",
+        "label": "Retrognathia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000448",
+        "label": "Prominent nose"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000470",
+        "label": "Short neck"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000520",
+        "label": "Proptosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001051",
+        "label": "Seborrheic dermatitis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001339",
+        "label": "Lissencephaly"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002209",
+        "label": "Sparse scalp hair"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0006989",
+        "label": "Dysplastic corpus callosum"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0009826",
+        "label": "Limb undergrowth"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012448",
+        "label": "Delayed myelination"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012741",
+        "label": "Unilateral cryptorchidism"
+      }
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0014",
+        "label": "Middle Eastern, North African or Persian"
+      }
+    },
+    {
+      "type": {
+        "id": "GAZ:00000570",
+        "label": "Saudi Arabia"
+      }
+    }
+  ],
+  "diseases": [],
+  "interpretations": [
+    {
+      "id": "int_PAVS_MASTER_2108",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS1089",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "variationDescriptor": {
+                "id": "var_PAVS_MASTER_2108_NM_018027.4",
+                "geneContext": {
+                  "symbol": "NM_018027.4"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_018027.4:c.3077_3078insCATTCT"
+                  }
+                ],
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000133",
+                  "label": "unknown zygosity"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-10T09:45:02.009956Z",
+    "createdBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "namespacePrefix": "HP"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "http://purl.obolibrary.org/obo/hancestro.owl",
+        "namespacePrefix": "HANCESTRO"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.owl",
+        "namespacePrefix": "GAZ"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "namespacePrefix": "GENO"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "namespacePrefix": "HGNC"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "ORCID:0000-0001-8149-5890",
+        "description": "Robert Hoehndorf"
+      }
+    ]
+  }
+}

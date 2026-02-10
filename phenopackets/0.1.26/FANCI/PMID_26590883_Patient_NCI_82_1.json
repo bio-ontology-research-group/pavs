@@ -1,0 +1,380 @@
+{
+  "id": "PMID_26590883_Patient_NCI_82_1",
+  "subject": {
+    "id": "Patient NCI‐82‐1",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P9Y5M"
+      }
+    },
+    "vitalStatus": {
+      "status": "DECEASED"
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0003221",
+        "label": "Chromosomal breakage induced by crosslinking agents"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0034323",
+        "label": "Reduced circulating growth hormone concentration"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000821",
+        "label": "Hypothyroidism"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004325",
+        "label": "Decreased body weight"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001511",
+        "label": "Intrauterine growth retardation"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000325",
+        "label": "Triangular face"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001655",
+        "label": "Patent foramen ovale"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001629",
+        "label": "Ventricular septal defect"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001631",
+        "label": "Atrial septal defect"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001643",
+        "label": "Patent ductus arteriosus"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Hearing impairment"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000413",
+        "label": "Atresia of the external auditory canal"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001274",
+        "label": "Agenesis of corpus callosum"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0030048",
+        "label": "Colpocephaly"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001331",
+        "label": "Absent septum pellucidum"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000568",
+        "label": "Microphthalmia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000609",
+        "label": "Optic nerve hypoplasia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0009778",
+        "label": "Short thumb"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0009777",
+        "label": "Absent thumb"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002949",
+        "label": "Fused cervical vertebrae"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000543",
+        "label": "Optic disc pallor"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000957",
+        "label": "Cafe-au-lait spot"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002247",
+        "label": "Duodenal atresia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000085",
+        "label": "Horseshoe kidney"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000089",
+        "label": "Renal hypoplasia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000076",
+        "label": "Vesicoureteral reflux"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001875",
+        "label": "Decreased total neutrophil count"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001873",
+        "label": "Thrombocytopenia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P5Y9M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0005528",
+        "label": "Bone marrow hypocellularity"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "GU7sHVMFSgFkc7sKXv5NAO5G",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:609053",
+          "label": "Fanconi anemia, complementation group I"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Patient NCI‐82‐1",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c3801_3804del_FANCI_NM_001113378v2",
+                "geneContext": {
+                  "valueId": "HGNC:25568",
+                  "symbol": "FANCI"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_001113378.2:c.3801_3804del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000015.10:g.89314692_89314695del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_001106849.1:p.(Ser1268ArgfsTer5)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr15",
+                  "pos": 89314689,
+                  "ref": "CCTTT",
+                  "alt": "C"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "Patient NCI‐82‐1",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c3901dup_FANCI_NM_001113378v2",
+                "geneContext": {
+                  "valueId": "HGNC:25568",
+                  "symbol": "FANCI"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_001113378.2:c.3901dup"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000015.10:g.89315366dup"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_001106849.1:p.(Asp1301GlyfsTer3)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr15",
+                  "pos": 89315364,
+                  "ref": "A",
+                  "alt": "AG"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:609053",
+        "label": "Fanconi anemia, complementation group I"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003577",
+          "label": "Congenital onset"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-12-31T16:29:26.330370Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:26590883",
+        "description": "Novel FANCI mutations in Fanconi anemia with VACTERL association"
+      }
+    ]
+  }
+}

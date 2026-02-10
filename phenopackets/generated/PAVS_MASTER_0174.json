@@ -1,0 +1,154 @@
+{
+  "id": "PAVS_MASTER_0174",
+  "subject": {
+    "id": "16-2967-A",
+    "sex": "FEMALE",
+    "taxonomy": {
+      "id": "NCBITaxon:9606",
+      "label": "Homo sapiens"
+    }
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000821",
+        "label": "Hypothyroidism"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Motor delay"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001298",
+        "label": "Encephalopathy"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002019",
+        "label": "Constipation"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002028",
+        "label": "Chronic diarrhea"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0006829",
+        "label": "Severe muscular hypotonia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012444",
+        "label": "Brain atrophy"
+      }
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0014",
+        "label": "Middle Eastern, North African or Persian"
+      }
+    },
+    {
+      "type": {
+        "id": "GAZ:00000570",
+        "label": "Saudi Arabia"
+      }
+    }
+  ],
+  "diseases": [],
+  "interpretations": [],
+  "metaData": {
+    "created": "2026-02-10T09:45:01.647999Z",
+    "createdBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "namespacePrefix": "HP"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "http://purl.obolibrary.org/obo/hancestro.owl",
+        "namespacePrefix": "HANCESTRO"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.owl",
+        "namespacePrefix": "GAZ"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "namespacePrefix": "GENO"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "namespacePrefix": "HGNC"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "ORCID:0000-0001-8149-5890",
+        "description": "Robert Hoehndorf"
+      }
+    ]
+  }
+}

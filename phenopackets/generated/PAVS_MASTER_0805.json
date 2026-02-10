@@ -1,0 +1,144 @@
+{
+  "id": "PAVS_MASTER_0805",
+  "subject": {
+    "id": "16W-0079",
+    "sex": "MALE",
+    "taxonomy": {
+      "id": "NCBITaxon:9606",
+      "label": "Homo sapiens"
+    }
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000202",
+        "label": "Orofacial cleft"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000973",
+        "label": "Cutis laxa"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001328",
+        "label": "Specific learning disability"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001382",
+        "label": "Joint hypermobility"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001629",
+        "label": "Ventricular septal defect"
+      }
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0014",
+        "label": "Middle Eastern, North African or Persian"
+      }
+    },
+    {
+      "type": {
+        "id": "GAZ:00000570",
+        "label": "Saudi Arabia"
+      }
+    }
+  ],
+  "diseases": [],
+  "interpretations": [
+    {
+      "id": "int_PAVS_MASTER_0805",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "16W-0079",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "variationDescriptor": {
+                "id": "var_PAVS_MASTER_0805_DMKN",
+                "geneContext": {
+                  "symbol": "DMKN"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "DMKN:NM_001126057:exon5:c.850_851insCA:p.G284fs"
+                  }
+                ],
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-10T09:45:01.758814Z",
+    "createdBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "namespacePrefix": "HP"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "http://purl.obolibrary.org/obo/hancestro.owl",
+        "namespacePrefix": "HANCESTRO"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.owl",
+        "namespacePrefix": "GAZ"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "namespacePrefix": "GENO"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "namespacePrefix": "HGNC"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "ORCID:0000-0001-8149-5890",
+        "description": "Robert Hoehndorf"
+      }
+    ]
+  }
+}

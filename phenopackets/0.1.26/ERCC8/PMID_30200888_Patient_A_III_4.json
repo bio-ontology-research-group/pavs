@@ -1,0 +1,197 @@
+{
+  "id": "PMID_30200888_Patient_A_III_4",
+  "subject": {
+    "id": "Patient A III.4",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P17Y"
+      }
+    },
+    "vitalStatus": {
+      "status": "DECEASED"
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000490",
+        "label": "Deeply set eye"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000448",
+        "label": "Prominent nose"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000670",
+        "label": "Carious teeth"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003510",
+        "label": "Severe short stature"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0008897",
+        "label": "Postnatal growth retardation"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000992",
+        "label": "Cutaneous photosensitivity"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000407",
+        "label": "Sensorineural hearing impairment"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "XbbzcNy5q9tH4FQQOSEeA037",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:216400",
+          "label": "Cockayne syndrome, type A"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Patient A III.4",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c966CtoA_ERCC8_NM_000082v4",
+                "geneContext": {
+                  "valueId": "HGNC:3439",
+                  "symbol": "ERCC8"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_000082.4:c.966C>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000005.10:g.60890964G>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_000073.1:p.(Tyr322Ter)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr5",
+                  "pos": 60890964,
+                  "ref": "G",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:216400",
+        "label": "Cockayne syndrome, type A"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3M"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-12-31T16:08:41.824775Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:30200888",
+        "description": "First molecular study in Lebanese patients with Cockayne syndrome and report of a novel mutation in ERCC8 gene"
+      }
+    ]
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "id": "PMID_25142838_P10",
+  "subject": {
+    "id": "P10",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P1Y1M"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Cleft palate"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002705",
+        "label": "High, narrow palate"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000437",
+        "label": "Depressed nasal tip"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0009748",
+        "label": "Large earlobe"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000403",
+        "label": "Recurrent otitis media"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Hearing impairment"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0032132",
+        "label": "Decreased circulating total IgG concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0008348",
+        "label": "Decreased circulating IgG2 concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002720",
+        "label": "Decreased circulating IgA concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001212",
+        "label": "Prominent fingertip pads"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001647",
+        "label": "Bicuspid aortic valve"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001633",
+        "label": "Abnormal mitral valve morphology"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001629",
+        "label": "Ventricular septal defect"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001631",
+        "label": "Atrial septal defect"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001667",
+        "label": "Right ventricular hypertrophy"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0004383",
+        "label": "Hypoplastic left heart"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001636",
+        "label": "Tetralogy of Fallot"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001680",
+        "label": "Coarctation of aorta"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0011611",
+        "label": "Interrupted aortic arch"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001643",
+        "label": "Patent ductus arteriosus"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0011626",
+        "label": "Scimitar anomaly"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001650",
+        "label": "Aortic valve stenosis"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0009237",
+        "label": "Short 5th finger"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0410386",
+        "label": "Decreased CD4+ memory T cell proportion"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0030374",
+        "label": "Decreased proportion of memory B cells"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "m1AmmTiKp2SmkDa2r0SonlVt",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:147920",
+          "label": "Kabuki Syndrome 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "P10",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c16135CtoT_KMT2D_NM_003482v3",
+                "geneContext": {
+                  "valueId": "HGNC:7133",
+                  "symbol": "KMT2D"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_003482.3:c.16135C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000012.12:g.49022793G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_003473.3:p.(Gln5379Ter)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr12",
+                  "pos": 49022793,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:147920",
+        "label": "Kabuki Syndrome 1"
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-01T11:32:41.933403Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:25142838",
+        "description": "Immunologic assessment and KMT2D mutation detection in Kabuki syndrome"
+      }
+    ]
+  }
+}

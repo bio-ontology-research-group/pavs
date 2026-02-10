@@ -1,0 +1,160 @@
+{
+  "id": "PMID_9600239_propositus_VII_7",
+  "subject": {
+    "id": "propositus VII-7",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P2D"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P2D"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0010851",
+        "label": "EEG with burst suppression"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0500230",
+        "label": "Increased CSF glycine concentration"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002154",
+        "label": "Hyperglycinemia"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "b8wbamrEj1uNtTCrXHNSbuZl",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:620398",
+          "label": "Glycine encephalopathy 2"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "propositus VII-7",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c125AtoG_AMT_NM_000481v4",
+                "geneContext": {
+                  "valueId": "HGNC:473",
+                  "symbol": "AMT"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_000481.4:c.125A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000003.12:g.49422237T>C"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr3",
+                  "pos": 49422237,
+                  "ref": "T",
+                  "alt": "C"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:620398",
+        "label": "Glycine encephalopathy 2"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P2D"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-09-30T14:58:46.774149Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-08-11",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:9600239",
+        "description": "A missense mutation (His42Arg) in the T-protein gene from a large Israeli-Arab kindred with nonketotic hyperglycinemia"
+      }
+    ]
+  }
+}

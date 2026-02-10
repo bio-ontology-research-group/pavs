@@ -1,0 +1,161 @@
+{
+  "id": "PMID_27220909_proband",
+  "subject": {
+    "id": "proband",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P6Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000705",
+        "label": "Amelogenesis imperfecta"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0006285",
+        "label": "Enamel hypomineralization"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0006297",
+        "label": "Enamel hypoplasia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0009722",
+        "label": "Dental enamel pits"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "donT56WHrGrWMtcj3JIJksSo",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:104530",
+          "label": "Amelogenesis imperfecta, type IA"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "proband",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c3452_3458del_LAMB3_NM_000228v3",
+                "geneContext": {
+                  "valueId": "HGNC:6490",
+                  "symbol": "LAMB3"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_000228.3:c.3452_3458del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000001.11:g.209615333_209615339del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_000219.2:p.(Glu1151ValfsTer57)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr1",
+                  "pos": 209615331,
+                  "ref": "ACGCTTCT",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:104530",
+        "label": "Amelogenesis imperfecta, type IA"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0011463",
+          "label": "Childhood onset"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-11-11T05:41:36.327267Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-10-22",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:27220909",
+        "description": "A novel de novo mutation in LAMB3 causes localized hypoplastic enamel in the molar region"
+      }
+    ]
+  }
+}

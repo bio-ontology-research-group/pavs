@@ -1,0 +1,287 @@
+{
+  "id": "PMID_28425089_subject_10A",
+  "subject": {
+    "id": "subject 10A",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P7Y7M"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0006554",
+        "label": "Acute hepatic failure"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001518",
+        "label": "Small for gestational age"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004315",
+        "label": "Decreased circulating IgG concentration"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0011447",
+        "label": "Hyposegmentation of neutrophil nuclei"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000973",
+        "label": "Cutis laxa"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000325",
+        "label": "Triangular face"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000520",
+        "label": "Proptosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002750",
+        "label": "Delayed skeletal maturation"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002645",
+        "label": "Wormian bones"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002680",
+        "label": "J-shaped sella turcica"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000684",
+        "label": "Delayed eruption of teeth"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0011927",
+        "label": "Short digit"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003302",
+        "label": "Spondylolisthesis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000648",
+        "label": "Optic atrophy"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Motor delay"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003593",
+          "label": "Infantile onset"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "e3umF9L2lCvSLgdHZGz8eVLt",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:614800",
+          "label": "Short stature, optic nerve atrophy, and Pelger-Huet anomaly"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "subject 10A",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c5741GtoA_NBAS_NM_015909v4",
+                "geneContext": {
+                  "valueId": "HGNC:15625",
+                  "symbol": "NBAS"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_015909.4:c.5741G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.15238670C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_056993.2:p.(Arg1914His)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 15238670,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "subject 10A",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c6572_1del_NBAS_NM_015909v4",
+                "geneContext": {
+                  "valueId": "HGNC:15625",
+                  "symbol": "NBAS"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_015909.4:c.6572+1del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.15190263del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_056993.2:p.?"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 15190262,
+                  "ref": "AC",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:614800",
+        "label": "Short stature, optic nerve atrophy, and Pelger-Huet anomaly"
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-01T09:35:57.407478Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:28425089",
+        "description": "High diagnostic yield of clinically unidentifiable syndromic growth disorders by targeted exome sequencing"
+      }
+    ]
+  }
+}

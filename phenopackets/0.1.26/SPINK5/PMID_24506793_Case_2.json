@@ -1,0 +1,274 @@
+{
+  "id": "PMID_24506793_Case_2",
+  "subject": {
+    "id": "Case 2",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P5Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002209",
+        "label": "Sparse scalp hair"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002099",
+        "label": "Asthma"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0007381",
+        "label": "Congenital exfoliative erythroderma"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P12D"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001581",
+        "label": "Recurrent skin infections"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001051",
+        "label": "Seborrheic dermatitis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P12D"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100806",
+        "label": "Sepsis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003228",
+        "label": "Hypernatremia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1M13D"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001036",
+        "label": "Parakeratosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0025092",
+        "label": "Epidermal acanthosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0034768",
+        "label": "Rete ridge elongation"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P5Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0040189",
+        "label": "Scaling skin"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0009886",
+        "label": "Trichorrhexis nodosa"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "tgC5MVuiDJftSC07gnLLqLIm",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:256500",
+          "label": "Netherton syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Case 2",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c2368CtoT_SPINK5_NM_006846v4",
+                "geneContext": {
+                  "valueId": "HGNC:15464",
+                  "symbol": "SPINK5"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_006846.4:c.2368C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000005.10:g.148120063C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_006837.2:p.(Arg790Ter)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr5",
+                  "pos": 148120063,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "Case 2",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c1099dup_SPINK5_NM_006846v4",
+                "geneContext": {
+                  "valueId": "HGNC:15464",
+                  "symbol": "SPINK5"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_006846.4:c.1099dup"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000005.10:g.148100460dup"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_006837.2:p.(Cys367LeufsTer3)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr5",
+                  "pos": 148100457,
+                  "ref": "C",
+                  "alt": "CT"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:256500",
+        "label": "Netherton syndrome"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003577",
+          "label": "Congenital onset"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-12-31T15:52:33.515166Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:24506793",
+        "description": "Upregulation of interleukin-33 in the epidermis of two Japanese patients with Netherton syndrome."
+      }
+    ]
+  }
+}

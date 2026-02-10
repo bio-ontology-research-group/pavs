@@ -1,0 +1,347 @@
+{
+  "id": "PMID_30701076_patient",
+  "subject": {
+    "id": "patient",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P31Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000577",
+        "label": "Exotropia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P27Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0011003",
+        "label": "High myopia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P27Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001363",
+        "label": "Craniosynostosis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P27Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000268",
+        "label": "Dolichocephaly"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P27Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000278",
+        "label": "Retrognathia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P27Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000286",
+        "label": "Epicanthus"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P27Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002870",
+        "label": "Obstructive sleep apnea"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P27Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100775",
+        "label": "Dural ectasia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P27Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004938",
+        "label": "Tortuous cerebral arteries"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P27Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001065",
+        "label": "Striae distensae"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P27Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002616",
+        "label": "Aortic root aneurysm"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P15Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001634",
+        "label": "Mitral valve prolapse"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P27Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002857",
+        "label": "Genu valgum"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P15Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003179",
+        "label": "Protrusio acetabuli"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P27Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100259",
+        "label": "Postaxial polydactyly"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0010646",
+        "label": "Cervical spine instability"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P27Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P27Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000767",
+        "label": "Pectus excavatum"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000768",
+        "label": "Pectus carinatum"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P27Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0005815",
+        "label": "Supernumerary ribs"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P15Y"
+        }
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "OpObleSm2Bu8TQ5S4wAaRhl8",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:609192",
+          "label": "Loeys-Dietz syndrome 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "patient",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c1126AtoG_TGFBR1_NM_004612v4",
+                "geneContext": {
+                  "valueId": "HGNC:11772",
+                  "symbol": "TGFBR1"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_004612.4:c.1126A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000009.12:g.99144884A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_004603.1:p.(Lys376Glu)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr9",
+                  "pos": 99144884,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:609192",
+        "label": "Loeys-Dietz syndrome 1"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P15Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-01T12:52:40.782872Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:30701076",
+        "description": "Activation of TGF-β signaling in an aortic aneurysm in a patient with Loeys-Dietz syndrome caused by a novel loss-of-function variant of TGFBR1"
+      }
+    ]
+  }
+}

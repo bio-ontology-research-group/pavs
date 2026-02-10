@@ -1,0 +1,300 @@
+{
+  "id": "PMID_26541327_Pat_3_FIII",
+  "subject": {
+    "id": "Pat 3 (FIII)",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P18Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0031964",
+        "label": "Elevated circulating alanine aminotransferase concentration"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0031956",
+        "label": "Elevated circulating aspartate aminotransferase concentration"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0030948",
+        "label": "Elevated gamma-glutamyltransferase level"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001987",
+        "label": "Hyperammonemia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001943",
+        "label": "Hypoglycemia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0003573",
+        "label": "Increased total bilirubin"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002151",
+        "label": "Increased circulating lactate concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0006554",
+        "label": "Acute hepatic failure"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0008151",
+        "label": "Prolonged prothrombin time"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0011447",
+        "label": "Hyposegmentation of neutrophil nuclei"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000601",
+        "label": "Hypotelorism"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Hypertelorism"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0008462",
+        "label": "Cervical instability"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000938",
+        "label": "Osteopenia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000648",
+        "label": "Optic atrophy"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0012444",
+        "label": "Brain atrophy"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "LuuJtdQxoP7YqniCeRXKXgwK",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:614800",
+          "label": "Short stature, optic nerve atrophy, and Pelger-Huet anomaly"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Pat 3 (FIII)",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c603_605del_NBAS_NM_015909v4",
+                "geneContext": {
+                  "valueId": "HGNC:15625",
+                  "symbol": "NBAS"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_015909.4:c.603_605del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.15536462_15536464del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_056993.2:p.(Leu202del)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 15536459,
+                  "ref": "CAGG",
+                  "alt": "C"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "Pat 3 (FIII)",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c3164TtoC_NBAS_NM_015909v4",
+                "geneContext": {
+                  "valueId": "HGNC:15625",
+                  "symbol": "NBAS"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_015909.4:c.3164T>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.15394320A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_056993.2:p.(Leu1055Pro)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 15394320,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:614800",
+        "label": "Short stature, optic nerve atrophy, and Pelger-Huet anomaly"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P10M"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-01T09:35:57.404898Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:26541327",
+        "description": "Recurrent acute liver failure due to NBAS deficiency: phenotypic spectrum, disease mechanisms, and therapeutic concepts"
+      }
+    ]
+  }
+}

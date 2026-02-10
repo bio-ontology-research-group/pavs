@@ -1,0 +1,390 @@
+{
+  "id": "PMID_37962958_Individual_40",
+  "subject": {
+    "id": "Individual 40",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P31Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002194",
+        "label": "Delayed gross motor development"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000729",
+        "label": "Autistic behavior"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0007018",
+        "label": "Attention deficit hyperactivity disorder"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0007359",
+        "label": "Focal-onset seizure"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0010819",
+        "label": "Atonic seizure"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0025401",
+        "label": "Staring gaze"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002133",
+        "label": "Status epilepticus"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002069",
+        "label": "Bilateral tonic-clonic seizure"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002373",
+        "label": "Febrile seizure (within the age range of 3 months to 6 years)"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0100702",
+        "label": "Arachnoid cyst"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002280",
+        "label": "Enlarged cisterna magna"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002188",
+        "label": "Delayed CNS myelination"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0033725",
+        "label": "Thin corpus callosum"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002389",
+        "label": "Cavum septum pellucidum"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000405",
+        "label": "Conductive hearing impairment"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000407",
+        "label": "Sensorineural hearing impairment"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001561",
+        "label": "Polyhydramnios"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001558",
+        "label": "Decreased fetal movement"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0010943",
+        "label": "Echogenic fetal bowel"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0010880",
+        "label": "Increased nuchal translucency"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0012803",
+        "label": "Anisometropia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000592",
+        "label": "Blue sclerae"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000545",
+        "label": "Myopia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000540",
+        "label": "Hypermetropia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Strabismus"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000510",
+        "label": "Rod-cone dystrophy"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000646",
+        "label": "Amblyopia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000483",
+        "label": "Astigmatism"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000689",
+        "label": "Dental malocclusion"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001510",
+        "label": "Growth delay"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000670",
+        "label": "Carious teeth"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000678",
+        "label": "Dental crowding"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0010807",
+        "label": "Open bite"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000691",
+        "label": "Microdontia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000668",
+        "label": "Hypodontia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000687",
+        "label": "Widely spaced teeth"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "TzgkbaR5TacchR1UKTTH3O50",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:620535",
+          "label": "Developmental delay, dysmorphic facies, and brain anomalies"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Individual 40",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c332AtoG_U2AF2_NM_007279v3",
+                "geneContext": {
+                  "valueId": "HGNC:23156",
+                  "symbol": "U2AF2"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_007279.3:c.332A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.55660617A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_009210.1:p.(Gln111Arg)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 55660617,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:620535",
+        "label": "Developmental delay, dysmorphic facies, and brain anomalies"
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-12-02T16:41:30.788918Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:37962958",
+        "description": "Spliceosome malfunction causes neurodevelopmental disorders with overlapping features"
+      }
+    ]
+  }
+}

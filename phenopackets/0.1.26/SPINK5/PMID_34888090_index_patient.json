@@ -1,0 +1,234 @@
+{
+  "id": "PMID_34888090_index_patient",
+  "subject": {
+    "id": "index patient",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P2Y3M"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003212",
+        "label": "Increased circulating IgE concentration"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0410240",
+        "label": "Abnormal circulating IgA concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0410242",
+        "label": "Abnormal circulating IgG concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0410243",
+        "label": "Abnormal circulating IgM concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000988",
+        "label": "Skin rash"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0007381",
+        "label": "Congenital exfoliative erythroderma"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003577",
+          "label": "Congenital onset"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012115",
+        "label": "Hepatitis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002719",
+        "label": "Recurrent infections"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100327",
+        "label": "Cow milk allergy"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001903",
+        "label": "Anemia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0025092",
+        "label": "Epidermal acanthosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:6001166",
+        "label": "Spongiosis"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "RelQDb966y3W5Y8TbKL8F3ZT",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:256500",
+          "label": "Netherton syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "index patient",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c1887_1GtoA_SPINK5_NM_006846v4",
+                "geneContext": {
+                  "valueId": "HGNC:15464",
+                  "symbol": "SPINK5"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_006846.4:c.1887+1G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000005.10:g.148112935G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_006837.2:p.?"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr5",
+                  "pos": 148112935,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:256500",
+        "label": "Netherton syndrome"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003577",
+          "label": "Congenital onset"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-12-31T15:52:33.519554Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:34888090",
+        "description": "A Novel SPINK5 Gene Mutation Associated with Netherton Syndrome in an Omani Patient."
+      }
+    ]
+  }
+}

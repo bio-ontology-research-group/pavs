@@ -1,0 +1,268 @@
+{
+  "id": "PMID_27862915_patient",
+  "subject": {
+    "id": "patient",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P6Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002070",
+        "label": "Limb ataxia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1Y4M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0025336",
+        "label": "Delayed ability to sit"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1Y4M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001348",
+        "label": "Brisk reflexes"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1Y4M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000474",
+        "label": "Thickened nuchal skin fold"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0034199",
+          "label": "Late first trimester onset"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0030147",
+        "label": "Truncal titubation"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1Y4M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002421",
+        "label": "Poor head control"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P6M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0007885",
+        "label": "Slowed horizontal saccades"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0007676",
+        "label": "Hypoplasia of the iris"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000526",
+        "label": "Aniridia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Strabismus"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001321",
+        "label": "Cerebellar hypoplasia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1Y4M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012110",
+        "label": "Hypoplasia of the pons"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1Y4M"
+        }
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "erQT2XEo3PhqGoBUogsgqUgJ",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:117360",
+          "label": "Spinocerebellar ataxia 29, congenital nonprogressive"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "patient",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c7793TtoA_ITPR1_NM_001378452v1",
+                "geneContext": {
+                  "valueId": "HGNC:6180",
+                  "symbol": "ITPR1"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_001378452.1:c.7793T>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000003.12:g.4815144T>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_001365381.1:p.(Ile2598Asn)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr3",
+                  "pos": 4815144,
+                  "ref": "T",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:117360",
+        "label": "Spinocerebellar ataxia 29, congenital nonprogressive"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P6M"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-11-08T05:18:38.072762Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-10-22",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:27862915",
+        "description": "A de novo missense mutation in the inositol 1,4,5-triphosphate receptor type 1 gene causing severe pontine and cerebellar hypoplasia: Expanding the phenotype of ITPR1-related spinocerebellar ataxia's"
+      }
+    ]
+  }
+}

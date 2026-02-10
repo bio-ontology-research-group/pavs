@@ -1,0 +1,360 @@
+{
+  "id": "PMID_32869508_11_month_old_boy",
+  "subject": {
+    "id": "11 month old boy",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P9Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000121",
+        "label": "Nephrocalcinosis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P11M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000083",
+        "label": "Renal insufficiency"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003774",
+        "label": "Stage 5 chronic kidney disease"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002150",
+        "label": "Hypercalciuria"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P11M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012608",
+        "label": "Hypermagnesiuria"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P11M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0005567",
+        "label": "Renal magnesium wasting"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P11M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000103",
+        "label": "Polyuria"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P11M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003259",
+        "label": "Elevated circulating creatinine concentration"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P11M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000483",
+        "label": "Astigmatism"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Strabismus"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000540",
+        "label": "Hypermetropia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000545",
+        "label": "Myopia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002149",
+        "label": "Hyperuricemia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P11M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002917",
+        "label": "Hypomagnesemia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P11M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002905",
+        "label": "Hyperphosphatemia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002901",
+        "label": "Hypocalcemia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0003165",
+        "label": "Elevated circulating parathyroid hormone level"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P11M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001941",
+        "label": "Acidosis"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000705",
+        "label": "Amelogenesis imperfecta"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0006297",
+        "label": "Enamel hypoplasia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0033786",
+        "label": "Hypomature enamel"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0003158",
+        "label": "Hyposthenuria"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P11M"
+        }
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "YlKX5u6KAiwlYsKCMCIetty1",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:248250",
+          "label": "Hypomagnesemia 3, renal"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "11 month old boy",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c67GtoA_CLDN16_NM_006580v4",
+                "geneContext": {
+                  "valueId": "HGNC:2037",
+                  "symbol": "CLDN16"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_006580.4:c.67G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000003.12:g.190388396G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_006571.2:p.(Ala23Thr)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr3",
+                  "pos": 190388396,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "11 month old boy",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "CLDN16_SV_E4_E5del",
+                "label": "E4_E5del",
+                "geneContext": {
+                  "valueId": "HGNC:2037",
+                  "symbol": "CLDN16"
+                },
+                "moleculeContext": "genomic",
+                "structuralType": {
+                  "id": "SO:1000183",
+                  "label": "chromosome_structure_variation"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:248250",
+        "label": "Hypomagnesemia 3, renal"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P11M"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-02T16:08:18.289911Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:32869508",
+        "description": "Novel compound heterozygous mutations of CLDN16 in a patient with familial hypomagnesemia with hypercalciuria and nephrocalcinosis"
+      }
+    ]
+  }
+}

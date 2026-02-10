@@ -1,0 +1,269 @@
+{
+  "id": "PMID_31001818_individual_6_DDD_GSH279161",
+  "subject": {
+    "id": "individual 6-DDD-GSH279161",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P4Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000256",
+        "label": "Macrocephaly"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000729",
+        "label": "Autistic behavior"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0012760",
+        "label": "Reduced social responsiveness"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0031354",
+        "label": "Sleep onset insomnia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0007018",
+        "label": "Attention deficit hyperactivity disorder"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0100716",
+        "label": "Self-injurious behavior"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0006889",
+        "label": "Intellectual disability, borderline"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001256",
+        "label": "Intellectual disability, mild"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Motor delay"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000739",
+        "label": "Anxiety"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000716",
+        "label": "Depression"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002019",
+        "label": "Constipation"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000336",
+        "label": "Prominent supraorbital ridges"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000098",
+        "label": "Tall stature"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0032012",
+        "label": "Heterotropia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000821",
+        "label": "Hypothyroidism"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002904",
+        "label": "Hyperbilirubinemia"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003623",
+          "label": "Neonatal onset"
+        }
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "zAx3PWJmhxLrP3u4ocxYjwvc",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:615032",
+          "label": "Intellectual developmental disorder with autism and macrocephaly"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "individual 6-DDD-GSH279161",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c3011_3012del_CHD8_NM_001170629v2",
+                "geneContext": {
+                  "valueId": "HGNC:20153",
+                  "symbol": "CHD8"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_001170629.2:c.3011_3012del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000014.9:g.21405762_21405763del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_001164100.1:p.(Glu1004ValfsTer22)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr14",
+                  "pos": 21405759,
+                  "ref": "ACT",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:615032",
+        "label": "Intellectual developmental disorder with autism and macrocephaly"
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-10-23T10:06:59.233972Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-09-01",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:31001818",
+        "description": "The clinical presentation caused by truncating CHD8 variants"
+      }
+    ]
+  }
+}

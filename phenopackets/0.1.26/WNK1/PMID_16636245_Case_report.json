@@ -1,0 +1,216 @@
+{
+  "id": "PMID_16636245_Case_report",
+  "subject": {
+    "id": "Case report",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P39Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000970",
+        "label": "Anhidrosis"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000975",
+        "label": "Hyperhidrosis"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001265",
+        "label": "Hyporeflexia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0011096",
+        "label": "Peripheral demyelination"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003380",
+        "label": "Decreased number of peripheral myelinated nerve fibers"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0006121",
+        "label": "Acral ulceration"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0007460",
+        "label": "Autoamputation of digits"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0032509",
+        "label": "Onychotillomania"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P20Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002936",
+        "label": "Distal sensory impairment"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0007021",
+        "label": "Pain insensitivity"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0007078",
+        "label": "Decreased amplitude of sensory action potentials"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003400",
+        "label": "Basal lamina onion bulb formation"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "VnoK82lkm604VEdAcAV0jWVz",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:201300",
+          "label": "Neuropathy, hereditary sensory and autonomic, type II"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Case report",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c1137dup_WNK1_NM_213655v5",
+                "geneContext": {
+                  "valueId": "HGNC:14540",
+                  "symbol": "WNK1"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_213655.5:c.1137dup"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000012.12:g.827246dup"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_998820.3:p.(Ala380CysfsTer14)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr12",
+                  "pos": 827242,
+                  "ref": "C",
+                  "alt": "CT"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:201300",
+        "label": "Neuropathy, hereditary sensory and autonomic, type II"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003621",
+          "label": "Juvenile onset"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-12-03T07:40:54.263954Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:16636245",
+        "description": "New HSN2 mutation in Japanese patient with hereditary sensory and autonomic neuropathy type 2"
+      }
+    ]
+  }
+}

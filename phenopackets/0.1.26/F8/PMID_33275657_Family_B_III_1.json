@@ -1,0 +1,153 @@
+{
+  "id": "PMID_33275657_Family_B_III_1",
+  "subject": {
+    "id": "Family B III-1",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P19Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0012146",
+        "label": "Abnormality of von Willebrand factor"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0008151",
+        "label": "Prolonged prothrombin time"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0030977",
+        "label": "Increased factor VIII activity"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002625",
+        "label": "Deep venous thrombosis"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002204",
+        "label": "Pulmonary embolism"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "xIYDZQFlv13MsY2Lg9IcnseD",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:301071",
+          "label": "Thrombophilia 13, X-linked, due to factor VIII defect"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Family B III-1",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "F8_SV_F8_duplication_GRCh37_154229849_154253268___promoter_exon_1_intron_8",
+                "label": "F8 duplication-GRCh37:154229849-154253268)- promoter-exon 1-intron 8",
+                "geneContext": {
+                  "valueId": "HGNC:3546",
+                  "symbol": "F8"
+                },
+                "moleculeContext": "genomic",
+                "structuralType": {
+                  "id": "SO:1000183",
+                  "label": "chromosome_structure_variation"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:301071",
+        "label": "Thrombophilia 13, X-linked, due to factor VIII defect"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P19Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-13T11:25:37.113676Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2026-01-08",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:33275657",
+        "description": "Partial F8 gene duplication (factor VIII Padua) associated with high factor VIII levels and familial thrombophilia."
+      }
+    ]
+  }
+}

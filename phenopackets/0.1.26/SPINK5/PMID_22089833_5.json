@@ -1,0 +1,284 @@
+{
+  "id": "PMID_22089833_5",
+  "subject": {
+    "id": "5",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P2Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002099",
+        "label": "Asthma"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0003212",
+        "label": "Increased circulating IgE concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0007381",
+        "label": "Congenital exfoliative erythroderma"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000964",
+        "label": "Eczematoid dermatitis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002719",
+        "label": "Recurrent infections"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0500093",
+        "label": "Food allergy"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001880",
+        "label": "Increased total eosinophil count"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0004906",
+        "label": "Hypernatremic dehydration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0100665",
+        "label": "Angioedema"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001510",
+        "label": "Growth delay"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0025810",
+        "label": "Ichthyosis linearis circumflexa"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001025",
+        "label": "Urticaria"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0025474",
+        "label": "Erythematous plaque"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000989",
+        "label": "Pruritus"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0009886",
+        "label": "Trichorrhexis nodosa"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0025811",
+        "label": "Trichorrhexis invaginata"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001596",
+        "label": "Alopecia"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "f6bzLXUAxjCi7oFrFy3Gn78Z",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:256500",
+          "label": "Netherton syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "5",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c891CtoT_SPINK5_NM_006846v4",
+                "geneContext": {
+                  "valueId": "HGNC:15464",
+                  "symbol": "SPINK5"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_006846.4:c.891C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000005.10:g.148097875C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_006837.2:p.(Cys297=)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr5",
+                  "pos": 148097875,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "5",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c410_1GtoA_SPINK5_NM_006846v4",
+                "geneContext": {
+                  "valueId": "HGNC:15464",
+                  "symbol": "SPINK5"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_006846.4:c.410+1G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000005.10:g.148086533G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_006837.2:p.?"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr5",
+                  "pos": 148086533,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:256500",
+        "label": "Netherton syndrome"
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-12-31T15:52:33.513878Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:22089833",
+        "description": "Clinical expression and new SPINK5 splicing defects in Netherton syndrome: unmasking a frequent founder synonymous mutation and unconventional intronic mutations."
+      }
+    ]
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "id": "PMID_29749493_proband",
+  "subject": {
+    "id": "proband",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P39Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002066",
+        "label": "Gait ataxia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002075",
+        "label": "Dysdiadochokinesis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001272",
+        "label": "Cerebellar atrophy"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0010627",
+        "label": "Anterior pituitary hypoplasia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001265",
+        "label": "Hyporeflexia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000044",
+        "label": "Hypogonadotropic hypogonadism"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P14Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0040171",
+        "label": "Decreased serum testosterone concentration"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0030341",
+        "label": "Decreased circulating follicle stimulating hormone concentration"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0030344",
+        "label": "Decreased circulating luteinizing hormone level"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0007722",
+        "label": "Retinal pigment epithelial atrophy"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "sHrI0ePfZglmyTUHgSXX0JaB",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:215470",
+          "label": "Boucher-Neuhauser syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "proband",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c3504GtoC_PNPLA6_NM_001166114v2",
+                "geneContext": {
+                  "valueId": "HGNC:16268",
+                  "symbol": "PNPLA6"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_001166114.2:c.3504G>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.7558956G>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_001159586.1:p.(Trp1168Cys)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 7558956,
+                  "ref": "G",
+                  "alt": "C"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "proband",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c3356GtoT_PNPLA6_NM_001166114v2",
+                "geneContext": {
+                  "valueId": "HGNC:16268",
+                  "symbol": "PNPLA6"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_001166114.2:c.3356G>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.7557243G>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_001159586.1:p.(Gly1119Val)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 7557243,
+                  "ref": "G",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:215470",
+        "label": "Boucher-Neuhauser syndrome"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P14Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-12-31T19:38:35.429783Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:29749493",
+        "description": "A novel PNPLA6 compound heterozygous mutation identified in a Chinese patient with Boucher‑Neuhäuser syndrome"
+      }
+    ]
+  }
+}

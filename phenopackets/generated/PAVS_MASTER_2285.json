@@ -1,0 +1,149 @@
+{
+  "id": "PAVS_MASTER_2285",
+  "subject": {
+    "id": "PAVS1266",
+    "sex": "UNKNOWN_SEX",
+    "taxonomy": {
+      "id": "NCBITaxon:9606",
+      "label": "Homo sapiens"
+    }
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001159",
+        "label": "Syndactyly"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001382",
+        "label": "Joint hypermobility"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      }
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0014",
+        "label": "Middle Eastern, North African or Persian"
+      }
+    },
+    {
+      "type": {
+        "id": "GAZ:00000570",
+        "label": "Saudi Arabia"
+      }
+    }
+  ],
+  "diseases": [],
+  "interpretations": [
+    {
+      "id": "int_PAVS_MASTER_2285",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS1266",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "variationDescriptor": {
+                "id": "var_PAVS_MASTER_2285_Chr5q11.2 \u2013 q13.2 deletion(52,033,284 \u201368,817,550)",
+                "geneContext": {
+                  "symbol": "Chr5q11.2 \u2013 q13.2 deletion(52,033,284 \u201368,817,550)"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "Chr5q11.2 \u2013 q13.2 deletion(52,033,284 \u201368,817,550)"
+                  }
+                ],
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000133",
+                  "label": "unknown zygosity"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "PAVS1266",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "variationDescriptor": {
+                "id": "var_PAVS_MASTER_2285_Chr9p13.1 \u2013 9q13 duplication(38,916,514 \u201366,035,257)",
+                "geneContext": {
+                  "symbol": "Chr9p13.1 \u2013 9q13 duplication(38,916,514 \u201366,035,257)"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "Chr9p13.1 \u2013 9q13 duplication(38,916,514 \u201366,035,257)"
+                  }
+                ],
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000133",
+                  "label": "unknown zygosity"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-10T09:45:02.045316Z",
+    "createdBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "namespacePrefix": "HP"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "http://purl.obolibrary.org/obo/hancestro.owl",
+        "namespacePrefix": "HANCESTRO"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.owl",
+        "namespacePrefix": "GAZ"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "namespacePrefix": "GENO"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "namespacePrefix": "HGNC"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "ORCID:0000-0001-8149-5890",
+        "description": "Robert Hoehndorf"
+      }
+    ]
+  }
+}

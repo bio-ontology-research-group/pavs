@@ -1,0 +1,228 @@
+{
+  "id": "PMID_11179005_Family_1",
+  "subject": {
+    "id": "Family 1",
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000324",
+        "label": "Facial asymmetry"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001056",
+        "label": "Milia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000218",
+        "label": "High palate"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Cleft palate"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0410030",
+        "label": "Cleft lip"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0010297",
+        "label": "Bifid tongue"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0010296",
+        "label": "Ankyloglossia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001596",
+        "label": "Alopecia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002208",
+        "label": "Coarse hair"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0011359",
+        "label": "Dry hair"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000494",
+        "label": "Downslanted palpebral fissures"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001737",
+        "label": "Pancreatic cysts"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001407",
+        "label": "Hepatic cysts"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0011802",
+        "label": "Hamartoma of tongue"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "0jr7DdCPBs0I3zvk3ntwRKxM",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:311200",
+          "label": "Orofaciodigital syndrome I"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Family 1",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c1303AtoC_OFD1_NM_003611v3",
+                "geneContext": {
+                  "valueId": "HGNC:2567",
+                  "symbol": "OFD1"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_003611.3:c.1303A>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000023.11:g.13756659A>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_003602.1:p.(Ser435Arg)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chrX",
+                  "pos": 13756659,
+                  "ref": "A",
+                  "alt": "C"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000134",
+                  "label": "hemizygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:311200",
+        "label": "Orofaciodigital syndrome I"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003577",
+          "label": "Congenital onset"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-11-18T07:04:15.673236Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-10-22",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:11179005",
+        "description": "Identification of the gene for oral-facial-digital type I syndrome"
+      }
+    ]
+  }
+}

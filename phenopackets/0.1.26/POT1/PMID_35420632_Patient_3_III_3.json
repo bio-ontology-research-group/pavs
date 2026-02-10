@@ -1,0 +1,234 @@
+{
+  "id": "PMID_35420632_Patient_3_III_3",
+  "subject": {
+    "id": "Patient 3 III-3",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P72Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001399",
+        "label": "Hepatic failure"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0031413",
+        "label": "Short telomere length"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P72Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0045051",
+        "label": "Decreased DLCO"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P72Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0031950",
+        "label": "Usual interstitial pneumonia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P72Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002206",
+        "label": "Pulmonary fibrosis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P72Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0031996",
+        "label": "Inspiratory crackles"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001873",
+        "label": "Thrombocytopenia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P72Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001217",
+        "label": "Clubbing"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002875",
+        "label": "Exertional dyspnea"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003584",
+          "label": "Late onset"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0005518",
+        "label": "Increased mean corpuscular volume"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P72Y"
+        }
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "4k3NNABQooa1SaEqHH1s4GIC",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:620367",
+          "label": "Pulmonary fibrosis and/or bone marrow failure syndrome, telomere-related, 8"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Patient 3 III-3",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c776TtoC_POT1_NM_015450v2",
+                "geneContext": {
+                  "valueId": "HGNC:17284",
+                  "symbol": "POT1"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_015450.2:c.776T>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000007.14:g.124853065A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_056265.2:p.(Leu259Ser)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr7",
+                  "pos": 124853065,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:620367",
+        "label": "Pulmonary fibrosis and/or bone marrow failure syndrome, telomere-related, 8"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P72Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-11-18T19:09:28.007302Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-10-22",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:35420632",
+        "description": "Telomere dysfunction implicates POT1 in patients with idiopathic pulmonary fibrosis"
+      }
+    ]
+  }
+}

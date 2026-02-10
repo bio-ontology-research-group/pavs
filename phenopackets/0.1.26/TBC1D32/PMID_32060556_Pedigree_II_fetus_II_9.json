@@ -1,0 +1,170 @@
+{
+  "id": "PMID_32060556_Pedigree_II_fetus_II_9",
+  "subject": {
+    "id": "Pedigree II fetus II.9",
+    "vitalStatus": {
+      "status": "DECEASED"
+    },
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0011428",
+        "label": "Short fetal femur length"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0011461",
+          "label": "Fetal onset"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002566",
+        "label": "Intestinal malrotation"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100629",
+        "label": "Midline facial cleft"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0011461",
+          "label": "Fetal onset"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0410030",
+        "label": "Cleft lip"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "InWlziMg9Y710yHslVcn0yLW",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:621307",
+          "label": "Alsahan-Harris syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Pedigree II fetus II.9",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c1372_1GtoA_TBC1D32_NM_152730v6",
+                "geneContext": {
+                  "valueId": "HGNC:21485",
+                  "symbol": "TBC1D32"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_152730.6:c.1372+1G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000006.12:g.121292052C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_689943.4:p.?"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr6",
+                  "pos": 121292052,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:621307",
+        "label": "Alsahan-Harris syndrome"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0011461",
+          "label": "Fetal onset"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-10T09:17:03.906441Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:32060556",
+        "description": "Loss-of-Function Variants in TBC1D32 Underlie Syndromic Hypopituitarism."
+      }
+    ]
+  }
+}

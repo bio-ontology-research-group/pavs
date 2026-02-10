@@ -1,0 +1,223 @@
+{
+  "id": "PMID_37584719_P17",
+  "subject": {
+    "id": "P17",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P12Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002840",
+        "label": "Lymphadenitis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001744",
+        "label": "Splenomegaly"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100658",
+        "label": "Cellulitis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0005403",
+        "label": "Decreased total T cell count"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0010976",
+        "label": "Decreased total B cell count"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000403",
+        "label": "Recurrent otitis media"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0006532",
+        "label": "Recurrent pneumonia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004385",
+        "label": "Protracted diarrhea"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0020086",
+        "label": "BCGitis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004315",
+        "label": "Decreased circulating IgG concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002850",
+        "label": "Decreased circulating total IgM"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002720",
+        "label": "Decreased circulating IgA concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0031390",
+        "label": "Reduced MHC II cell surface expression"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "nWcMS5osmieidN1iZZP59Ujw",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:620816",
+          "label": "MHC class II deficiency 3"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "P17",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c433GtoC_RFX5_NM_001025603v2",
+                "geneContext": {
+                  "valueId": "HGNC:9986",
+                  "symbol": "RFX5"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_001025603.2:c.433G>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000001.11:g.151344457C>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_001020774.1:p.(Asp145His)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr1",
+                  "pos": 151344457,
+                  "ref": "C",
+                  "alt": "G"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:620816",
+        "label": "MHC class II deficiency 3"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P2M"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-11-17T17:09:35.863119Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-10-22",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:37584719",
+        "description": "Clinical, Immunological, and Genetic Findings in Iranian Patients with MHC-II Deficiency: Confirmation of c.162delG RFXANK Founder Mutation in the Iranian Population"
+      }
+    ]
+  }
+}

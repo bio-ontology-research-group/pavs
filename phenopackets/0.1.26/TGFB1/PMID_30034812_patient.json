@@ -1,0 +1,278 @@
+{
+  "id": "PMID_30034812_patient",
+  "subject": {
+    "id": "patient",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P35Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0003155",
+        "label": "Elevated circulating alkaline phosphatase concentration"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P35Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002901",
+        "label": "Hypocalcemia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P35Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000520",
+        "label": "Proptosis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P20Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000508",
+        "label": "Ptosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0011220",
+        "label": "Prominent forehead"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0005791",
+        "label": "Cortical thickening of long bone diaphyses"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P35Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0032458",
+        "label": "Narrowing of medullary canal"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P35Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003868",
+        "label": "Humeral cortical thickening"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P35Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100774",
+        "label": "Hyperostosis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P35Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0030834",
+        "label": "Shoulder pain"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P20Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002653",
+        "label": "Bone pain"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P20Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002515",
+        "label": "Waddling gait"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P35Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012100",
+        "label": "Abnormal circulating creatinine concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0100543",
+        "label": "Cognitive impairment"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0003115",
+        "label": "Abnormal EKG"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "IAw88RbhS4770wNTTcGzJ0Hf",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:131300",
+          "label": "Camurati-Engelmann disease"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "patient",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c652CtoT_TGFB1_NM_000660v7",
+                "geneContext": {
+                  "valueId": "HGNC:11766",
+                  "symbol": "TGFB1"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_000660.7:c.652C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.41342230G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_000651.3:p.(Arg218Cys)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 41342230,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:131300",
+        "label": "Camurati-Engelmann disease"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P20Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-11-30T11:31:58.328837Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:30034812",
+        "description": "Camurati-Engelmann disease: a case report from sub-Saharan Africa"
+      }
+    ]
+  }
+}

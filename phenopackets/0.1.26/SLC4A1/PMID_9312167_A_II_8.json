@@ -1,0 +1,197 @@
+{
+  "id": "PMID_9312167_A_II_8",
+  "subject": {
+    "id": "A:II:8",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P47Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0032944",
+        "label": "Alkaline urine"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004727",
+        "label": "Impaired renal concentrating ability"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0008341",
+        "label": "Distal renal tubular acidosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000787",
+        "label": "Nephrolithiasis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000121",
+        "label": "Nephrocalcinosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002900",
+        "label": "Hypokalemia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0003259",
+        "label": "Elevated circulating creatinine concentration"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0032066",
+        "label": "Decreased serum bicarbonate concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001899",
+        "label": "Increased hematocrit"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001900",
+        "label": "Increased circulating hemoglobin concentration"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "xTIXoLGgTaUw723vZkEhZfLj",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:179800",
+          "label": "Distal renal tubular acidosis 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "A:II:8",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c1766GtoA_SLC4A1_NM_000342v4",
+                "geneContext": {
+                  "valueId": "HGNC:11027",
+                  "symbol": "SLC4A1"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_000342.4:c.1766G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000017.11:g.44255707C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_000333.1:p.(Arg589His)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr17",
+                  "pos": 44255707,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:179800",
+        "label": "Distal renal tubular acidosis 1"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P34Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-04T16:38:45.474663Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:9312167",
+        "description": "Familial distal renal tubular acidosis is associated with mutations in the red cell anion exchanger (Band 3, AE1) gene."
+      }
+    ]
+  }
+}

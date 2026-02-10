@@ -1,0 +1,299 @@
+{
+  "id": "PMID_28007989_F2_II_2",
+  "subject": {
+    "id": "F2:II.2",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P5Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0003218",
+        "label": "Oroticaciduria"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P8M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Strabismus"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P8M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001903",
+        "label": "Anemia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004823",
+        "label": "Anisopoikilocytosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003160",
+        "label": "Abnormal isoelectric focusing of serum transferrin"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0025190",
+        "label": "Bilateral tonic-clonic seizure with generalized onset"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P6M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002376",
+        "label": "Developmental regression"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002015",
+        "label": "Dysphagia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004372",
+        "label": "Reduced consciousness"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002283",
+        "label": "Global brain atrophy"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P5Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002059",
+        "label": "Cerebral atrophy"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001272",
+        "label": "Cerebellar atrophy"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0011471",
+        "label": "Gastrostomy tube feeding in infancy"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P8M"
+        }
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "VWY2srY2tUFufD8Ms5PqcuT2",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:616457",
+          "label": "Developmental and epileptic encephalopathy 50"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "F2:II.2",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c5365CtoT_CAD_NM_004341v5",
+                "geneContext": {
+                  "valueId": "HGNC:1424",
+                  "symbol": "CAD"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_004341.5:c.5365C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.27239442C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_004332.2:p.(Arg1789Ter)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 27239442,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "F2:II.2",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c1843_3CtoT_CAD_NM_004341v5",
+                "geneContext": {
+                  "valueId": "HGNC:1424",
+                  "symbol": "CAD"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_004341.5:c.1843-3C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.27226128C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_004332.2:p.?"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 27226128,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:616457",
+        "label": "Developmental and epileptic encephalopathy 50"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4M"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-01T09:42:57.320367Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:28007989",
+        "description": "CAD mutations and uridine-responsive epileptic encephalopathy."
+      }
+    ]
+  }
+}

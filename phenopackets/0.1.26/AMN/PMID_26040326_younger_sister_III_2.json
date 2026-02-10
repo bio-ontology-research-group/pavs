@@ -1,0 +1,196 @@
+{
+  "id": "PMID_26040326_younger_sister_III_2",
+  "subject": {
+    "id": "younger sister III:2",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P23Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001889",
+        "label": "Megaloblastic anemia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000093",
+        "label": "Proteinuria"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P10Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100502",
+        "label": "Decreased circulating vitamin B12 concentration"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "RokslsF4EdwJmBvMyUmvFi3U",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:618882",
+          "label": "Imerslund-Grasbeck syndrome 2"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "younger sister III:2",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c206TtoA_AMN_NM_030943v4",
+                "geneContext": {
+                  "valueId": "HGNC:14604",
+                  "symbol": "AMN"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_030943.4:c.206T>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000014.9:g.102923978T>A"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr14",
+                  "pos": 102923978,
+                  "ref": "T",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "younger sister III:2",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c35del_AMN_NM_030943v4",
+                "geneContext": {
+                  "valueId": "HGNC:14604",
+                  "symbol": "AMN"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_030943.4:c.35del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000014.9:g.102922723del"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr14",
+                  "pos": 102922722,
+                  "ref": "CA",
+                  "alt": "C"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:618882",
+        "label": "Imerslund-Grasbeck syndrome 2"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-10-07T09:08:20.400226Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-08-11",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:26040326",
+        "description": "Novel compound heterozygous mutations in AMN cause Imerslund-Gräsbeck syndrome in two half-sisters: a case report"
+      }
+    ]
+  }
+}

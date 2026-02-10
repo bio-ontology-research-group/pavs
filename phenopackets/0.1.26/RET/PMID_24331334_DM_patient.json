@@ -1,0 +1,186 @@
+{
+  "id": "PMID_24331334_DM_patient",
+  "subject": {
+    "id": "DM patient",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P20Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0025388",
+        "label": "Thyroid nodule"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P20Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003528",
+        "label": "Elevated circulating calcitonin concentration"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P20Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002666",
+        "label": "Pheochromocytoma"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P19Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100735",
+        "label": "Hypertensive crisis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P19Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000843",
+        "label": "Hyperparathyroidism"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "qYNc7OkOCVx3dzVbnOGTrdmz",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:171400",
+          "label": "Multiple endocrine neoplasia IIA"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "DM patient",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c1902CtoG_RET_NM_020975v6",
+                "geneContext": {
+                  "valueId": "HGNC:9967",
+                  "symbol": "RET"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_020975.6:c.1902C>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000010.11:g.43114502C>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_066124.1:p.(Cys634Trp)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr10",
+                  "pos": 43114502,
+                  "ref": "C",
+                  "alt": "G"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:171400",
+        "label": "Multiple endocrine neoplasia IIA"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P19Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-11-23T06:04:42.230875Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-10-22",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:24331334",
+        "description": "Multiple endocrine neoplasia type 2A: case report"
+      }
+    ]
+  }
+}

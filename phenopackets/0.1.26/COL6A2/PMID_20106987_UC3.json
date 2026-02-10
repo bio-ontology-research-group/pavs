@@ -1,0 +1,363 @@
+{
+  "id": "PMID_20106987_UC3",
+  "subject": {
+    "id": "UC3",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P10Y4M"
+      }
+    },
+    "vitalStatus": {
+      "status": "DECEASED"
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001181",
+        "label": "Adducted thumb"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0100807",
+        "label": "Long fingers"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001558",
+        "label": "Decreased fetal movement"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0006094",
+        "label": "Finger joint hypermobility"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y4M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002827",
+        "label": "Hip dislocation"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0003306",
+        "label": "Spinal rigidity"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000218",
+        "label": "High palate"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002808",
+        "label": "Kyphosis"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000473",
+        "label": "Torticollis"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0034671",
+        "label": "Knee contracture"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y4M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0034391",
+        "label": "Elbow contracture"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y4M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0034677",
+        "label": "Ankle contracture"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y4M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0008081",
+        "label": "Pes valgus"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000470",
+        "label": "Short neck"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P6M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0031936",
+        "label": "Delayed ability to walk"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003236",
+        "label": "Elevated circulating creatine kinase concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0003557",
+        "label": "Increased variability in muscle fiber diameter"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y6M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100297",
+        "label": "Increased endomysial connective tissue"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y6M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003687",
+        "label": "Centrally nucleated skeletal muscle fibers"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y6M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003713",
+        "label": "Muscle fiber necrosis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y6M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003202",
+        "label": "Skeletal muscle atrophy"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y4M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003701",
+        "label": "Proximal muscle weakness"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P3Y4M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003324",
+        "label": "Generalized muscle weakness"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002783",
+        "label": "Recurrent lower respiratory tract infections"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "OvmhrRWRuKHNgVKDj0RdKexk",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:620727",
+          "label": "Ullrich congenital muscular dystrophy 1B"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "UC3",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c1870GtoA_COL6A2_NM_001849v4",
+                "geneContext": {
+                  "valueId": "HGNC:2212",
+                  "symbol": "COL6A2"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_001849.4:c.1870G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000021.9:g.46125518G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_001840.3:p.(Glu624Lys)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr21",
+                  "pos": 46125518,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:620727",
+        "label": "Ullrich congenital muscular dystrophy 1B"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P6M"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-01T16:50:08.946533Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:20106987",
+        "description": "Recessive COL6A2 C-globular Missense Mutations in Ullrich Congenital Muscular Dystrophy"
+      }
+    ]
+  }
+}

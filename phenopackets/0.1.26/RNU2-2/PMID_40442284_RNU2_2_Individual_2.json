@@ -1,0 +1,426 @@
+{
+  "id": "PMID_40442284_RNU2_2_Individual_2",
+  "subject": {
+    "id": "RNU2-2-Individual 2",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P17Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000490",
+        "label": "Deeply set eye"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Strabismus"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0004879",
+        "label": "Intermittent hyperventilation"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000687",
+        "label": "Widely spaced teeth"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Cleft palate"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000154",
+        "label": "Wide mouth"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000574",
+        "label": "Thick eyebrow"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0010747",
+        "label": "Medial flaring of the eyebrow"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Hearing impairment"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0011412",
+        "label": "Ventouse delivery"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0025116",
+        "label": "Fetal distress"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0410018",
+        "label": "Recurrent ear infections"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003593",
+          "label": "Infantile onset"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Motor delay"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0031936",
+        "label": "Delayed ability to walk"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001344",
+        "label": "Absent speech"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002342",
+        "label": "Moderate intellectual disability"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0010864",
+        "label": "Severe intellectual disability"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002069",
+        "label": "Bilateral tonic-clonic seizure"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002266",
+        "label": "Focal clonic seizure"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0010819",
+        "label": "Atonic seizure"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0010818",
+        "label": "Generalized tonic seizure"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0032794",
+        "label": "Myoclonic seizure"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0007359",
+        "label": "Focal-onset seizure"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001257",
+        "label": "Spasticity"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000729",
+        "label": "Autistic behavior"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000752",
+        "label": "Hyperactivity"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0100023",
+        "label": "Recurrent hand flapping"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0100716",
+        "label": "Self-injurious behavior"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0040082",
+        "label": "Happy demeanor"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002360",
+        "label": "Sleep disturbance"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000709",
+        "label": "Psychosis"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0034295",
+        "label": "Reduced cerebral white matter volume"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002020",
+        "label": "Gastroesophageal reflux"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002019",
+        "label": "Constipation"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0011968",
+        "label": "Feeding difficulties"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001518",
+        "label": "Small for gestational age"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001629",
+        "label": "Ventricular septal defect"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0008081",
+        "label": "Pes valgus"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000767",
+        "label": "Pectus excavatum"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001382",
+        "label": "Joint hypermobility"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "dlUYljVYYbZRWFxfSty2z8Et",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:621304",
+          "label": "Developmental and epileptic encephalopathy 119"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "RNU2-2-Individual 2",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "n_4GtoA_RNU2-2_NR_199791v1",
+                "geneContext": {
+                  "valueId": "HGNC:10152",
+                  "symbol": "RNU2-2"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NR_199791.1:n.4G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000011.12:g.62841806C>T"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "11",
+                  "pos": 62841806,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:621304",
+        "label": "Developmental and epileptic encephalopathy 119"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-11-28T15:42:10.244972Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:40442284",
+        "description": "Analysis of R-loop forming regions identifies RNU2-2 and RNU5B-1 as neurodevelopmental disorder genes."
+      }
+    ]
+  }
+}

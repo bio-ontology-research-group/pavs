@@ -1,0 +1,218 @@
+{
+  "id": "PMID_20015879_Patient",
+  "subject": {
+    "id": "Patient",
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0100827",
+        "label": "Increased total lymphocyte count"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001744",
+        "label": "Splenomegaly"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P29Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001971",
+        "label": "Hypersplenism"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012378",
+        "label": "Fatigue"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P29Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0010532",
+        "label": "Paroxysmal vertigo"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P29Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0005502",
+        "label": "Increased red cell osmotic fragility"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001923",
+        "label": "Reticulocytosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004444",
+        "label": "Spherocytosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0025066",
+        "label": "Decreased mean corpuscular volume"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0011273",
+        "label": "Anisocytosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001878",
+        "label": "Hemolytic anemia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004844",
+        "label": "Coombs-positive hemolytic anemia"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "LrBjYMMDRoiCSM1kyAhLhdYj",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:185020",
+          "label": "Cryohydrocytosis"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Patient",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c2201AtoG_SLC4A1_NM_000342v4",
+                "geneContext": {
+                  "valueId": "HGNC:11027",
+                  "symbol": "SLC4A1"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_000342.4:c.2201A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000017.11:g.44253228T>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_000333.1:p.(His734Arg)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr17",
+                  "pos": 44253228,
+                  "ref": "T",
+                  "alt": "C"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:185020",
+        "label": "Cryohydrocytosis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P29Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-04T18:19:52.476115Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:20015879",
+        "description": "Cryohydrocytosis: increased activity of cation carriers in red cells from a patient with a band 3 mutation."
+      }
+    ]
+  }
+}

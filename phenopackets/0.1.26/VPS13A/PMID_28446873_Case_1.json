@@ -1,0 +1,311 @@
+{
+  "id": "PMID_28446873_Case_1",
+  "subject": {
+    "id": "Case 1",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P37Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002069",
+        "label": "Bilateral tonic-clonic seizure"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P30Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001284",
+        "label": "Areflexia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P37Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000716",
+        "label": "Depression"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P37Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000741",
+        "label": "Apathy"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P37Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000739",
+        "label": "Anxiety"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002340",
+        "label": "Caudate atrophy"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P37Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0006956",
+        "label": "Lateral ventricle dilatation"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P37Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001265",
+        "label": "Hyporeflexia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002310",
+        "label": "Orofacial dyskinesia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P37Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002072",
+        "label": "Chorea"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P37Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003477",
+        "label": "Peripheral axonal neuropathy"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P37Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0025435",
+        "label": "Increased circulating lactate dehydrogenase concentration"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P37Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003236",
+        "label": "Elevated circulating creatine kinase concentration"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P37Y"
+        }
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "Mps2BvIWmTCitvpxfpHfD0gz",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:200150",
+          "label": "Choreoacanthocytosis"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Case 1",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c8282CtoG_VPS13A_NM_033305v3",
+                "geneContext": {
+                  "valueId": "HGNC:1908",
+                  "symbol": "VPS13A"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_033305.3:c.8282C>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000009.12:g.77365530C>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_150648.2:p.(Ser2761Ter)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr9",
+                  "pos": 77365530,
+                  "ref": "C",
+                  "alt": "G"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "Case 1",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c9276_1GtoA_VPS13A_NM_033305v3",
+                "geneContext": {
+                  "valueId": "HGNC:1908",
+                  "symbol": "VPS13A"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_033305.3:c.9276-1G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000009.12:g.77405863G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_150648.2:p.?"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr9",
+                  "pos": 77405863,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:200150",
+        "label": "Choreoacanthocytosis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P37Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-02T20:43:20.950225Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:28446873",
+        "description": "Novel VPS13A Gene Mutations Identified in Patients Diagnosed with Chorea-acanthocytosis (ChAc): Case Presentation and Literature Review"
+      }
+    ]
+  }
+}

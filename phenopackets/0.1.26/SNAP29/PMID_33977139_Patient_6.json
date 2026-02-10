@@ -1,0 +1,308 @@
+{
+  "id": "PMID_33977139_Patient_6",
+  "subject": {
+    "id": "Patient 6",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P2Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Micrognathia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0008936",
+        "label": "Axial hypotonia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000322",
+        "label": "Short philtrum"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000193",
+        "label": "Bifid uvula"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000341",
+        "label": "Narrow forehead"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000286",
+        "label": "Epicanthus"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000574",
+        "label": "Thick eyebrow"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000664",
+        "label": "Synophrys"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000431",
+        "label": "Wide nasal bridge"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0005280",
+        "label": "Depressed nasal bridge"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000463",
+        "label": "Anteverted nares"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000414",
+        "label": "Bulbous nose"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000311",
+        "label": "Round face"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000609",
+        "label": "Optic nerve hypoplasia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000982",
+        "label": "Palmoplantar keratoderma"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0008064",
+        "label": "Ichthyosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Hearing impairment"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0025336",
+        "label": "Delayed ability to sit"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002360",
+        "label": "Sleep disturbance"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002126",
+        "label": "Polymicrogyria"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0006989",
+        "label": "Dysplastic corpus callosum"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012450",
+        "label": "Chronic constipation"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "YpIhUOrr6bDQo7XoN8WaLe3f",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:609528",
+          "label": "Cerebral dysgenesis, neuropathy, ichthyosis, and palmoplantar keratoderma syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Patient 6",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c354dup_SNAP29_NM_004782v4",
+                "geneContext": {
+                  "valueId": "HGNC:11133",
+                  "symbol": "SNAP29"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_004782.4:c.354dup"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000022.11:g.20870453dup"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_004773.1:p.(Leu119AlafsTer15)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr22",
+                  "pos": 20870447,
+                  "ref": "T",
+                  "alt": "TG"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "Patient 6",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "SNAP29_SV_370_kb_deletion_in_22q11_2_encompassing_4_OMIM_genes__SNAP29__PI4KA__SERPIND1__and_LZTR1_",
+                "label": "370 kb deletion in 22q11.2 encompassing 4 OMIM genes (SNAP29, PI4KA, SERPIND1, and LZTR1)",
+                "geneContext": {
+                  "valueId": "HGNC:11133",
+                  "symbol": "SNAP29"
+                },
+                "moleculeContext": "genomic",
+                "structuralType": {
+                  "id": "SO:1000183",
+                  "label": "chromosome_structure_variation"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:609528",
+        "label": "Cerebral dysgenesis, neuropathy, ichthyosis, and palmoplantar keratoderma syndrome"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003623",
+          "label": "Neonatal onset"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-01T12:27:35.166593Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:33977139",
+        "description": "New Cohort of Patients With CEDNIK Syndrome Expands the Phenotypic and Genotypic Spectra."
+      }
+    ]
+  }
+}

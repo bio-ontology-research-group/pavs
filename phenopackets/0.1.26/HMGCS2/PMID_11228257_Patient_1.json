@@ -1,0 +1,224 @@
+{
+  "id": "PMID_11228257_Patient_1",
+  "subject": {
+    "id": "Patient 1",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P16Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001259",
+        "label": "Coma"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P6Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001943",
+        "label": "Hypoglycemia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P6Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002910",
+        "label": "Elevated circulating hepatic transaminase concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002151",
+        "label": "Increased circulating lactate concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001987",
+        "label": "Hyperammonemia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0030781",
+        "label": "Increased circulating free fatty acid level"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002919",
+        "label": "Ketonuria"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0040155",
+        "label": "Elevated urinary 3-hydroxybutyric acid"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0003215",
+        "label": "Dicarboxylic aciduria"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:6000236",
+        "label": "Inappropriately low concentration of beta-hydroxybutyrate"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "ukp1iKzGc6GlK76kjn3JtlHM",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:605911",
+          "label": "HMG-CoA synthase-2 deficiency"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Patient 1",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c520TtoC_HMGCS2_NM_005518v4",
+                "geneContext": {
+                  "valueId": "HGNC:5008",
+                  "symbol": "HMGCS2"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_005518.4:c.520T>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000001.11:g.119764211A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_005509.1:p.(Phe174Leu)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr1",
+                  "pos": 119764211,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:605911",
+        "label": "HMG-CoA synthase-2 deficiency"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P6Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-12-31T20:00:11.719077Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:11228257",
+        "description": "Mitochondrial 3-hydroxy-3-methylglutaryl-CoA synthase deficiency: clinical course and description of causal mutations in two patients"
+      }
+    ]
+  }
+}

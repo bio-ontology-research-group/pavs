@@ -1,0 +1,198 @@
+{
+  "id": "PMID_30642278_individual_II_5",
+  "subject": {
+    "id": "individual II:5",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P21Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0100018",
+        "label": "Nuclear cataract"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003577",
+          "label": "Congenital onset"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002342",
+        "label": "Moderate intellectual disability"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000689",
+        "label": "Dental malocclusion"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0006346",
+        "label": "Screwdriver-shaped incisors"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0011092",
+        "label": "Mulberry molar"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000717",
+        "label": "Autism"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000275",
+        "label": "Narrow face"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0040080",
+        "label": "Anteverted ears"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "Rc3s572TSl8UkIgN6bUcFUZ5",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:302350",
+          "label": "Nance-Horan syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "individual II:5",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c4512CtoG_NHS_NM_001291867v2",
+                "geneContext": {
+                  "valueId": "HGNC:7820",
+                  "symbol": "NHS"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_001291867.2:c.4512C>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000023.11:g.17732020C>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_001278796.1:p.(Tyr1504Ter)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chrX",
+                  "pos": 17732020,
+                  "ref": "C",
+                  "alt": "G"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000134",
+                  "label": "hemizygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:302350",
+        "label": "Nance-Horan syndrome"
+      },
+      "onset": {
+        "ontologyClass": {
+          "id": "HP:0003577",
+          "label": "Congenital onset"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-11-17T06:01:42.653143Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-10-22",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:30642278",
+        "description": "Whole exome sequencing identified a novel truncation mutation in the NHS gene associated with Nance-Horan syndrome"
+      }
+    ]
+  }
+}

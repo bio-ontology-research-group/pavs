@@ -1,0 +1,272 @@
+{
+  "id": "PMID_20074988_Patient_8",
+  "subject": {
+    "id": "Patient 8",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P9M"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0034295",
+        "label": "Reduced cerebral white matter volume"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0006970",
+        "label": "Periventricular leukomalacia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0009830",
+        "label": "Peripheral neuropathy"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001394",
+        "label": "Cirrhosis"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0003128",
+        "label": "Lactic acidosis"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002151",
+        "label": "Increased circulating lactate concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001943",
+        "label": "Hypoglycemia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002240",
+        "label": "Hepatomegaly"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001324",
+        "label": "Muscle weakness"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002014",
+        "label": "Diarrhea"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000114",
+        "label": "Proximal tubulopathy"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002020",
+        "label": "Gastroesophageal reflux"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001733",
+        "label": "Pancreatitis"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001399",
+        "label": "Hepatic failure"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000829",
+        "label": "Hypoparathyroidism"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002572",
+        "label": "Episodic vomiting"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0030059",
+        "label": "Mitochondrial depletion"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "OZ1hTT8KWrQITdaJFIk2c5rK",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:256810",
+          "label": "Mitochondrial DNA depletion syndrome 6 (hepatocerebral type)"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Patient 8",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c149GtoA_MPV17_NM_002437v5",
+                "geneContext": {
+                  "valueId": "HGNC:7224",
+                  "symbol": "MPV17"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_002437.5:c.149G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.27313031C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_002428.1:p.(Arg50Gln)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 27313031,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:256810",
+        "label": "Mitochondrial DNA depletion syndrome 6 (hepatocerebral type)"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P5M"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-12-31T19:21:47.562690Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:20074988",
+        "description": "MPV17-associated hepatocerebral mitochondrial DNA depletion syndrome: new patients and novel mutations"
+      }
+    ]
+  }
+}

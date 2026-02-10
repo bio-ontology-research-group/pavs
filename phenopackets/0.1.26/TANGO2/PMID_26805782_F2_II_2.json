@@ -1,0 +1,212 @@
+{
+  "id": "PMID_26805782_F2_II_2",
+  "subject": {
+    "id": "F2:II.2",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P12Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P5M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001259",
+        "label": "Coma"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1Y3M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002061",
+        "label": "Lower limb spasticity"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001943",
+        "label": "Hypoglycemia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1Y3M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003128",
+        "label": "Lactic acidosis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1Y3M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003201",
+        "label": "Rhabdomyolysis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P6Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:6000476",
+        "label": "Elevated circulating tetradecenoylcarnitine concentration"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P5Y6M"
+        }
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "xGsrhnGOAwE5EhZfysEHcJL1",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:616878",
+          "label": "Metabolic encephalomyopathic crises, recurrent, with rhabdomyolysis, cardiac arrhythmias, and neurodegeneration"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "F2:II.2",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c418CtoT_TANGO2_NM_152906v7",
+                "geneContext": {
+                  "valueId": "HGNC:25439",
+                  "symbol": "TANGO2"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_152906.7:c.418C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000022.11:g.20055980C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_690870.3:p.(Arg140Ter)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr22",
+                  "pos": 20055980,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:616878",
+        "label": "Metabolic encephalomyopathic crises, recurrent, with rhabdomyolysis, cardiac arrhythmias, and neurodegeneration"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P5M"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-01T12:23:23.743182Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:26805782",
+        "description": "Bi-allelic Truncating Mutations in TANGO2 Cause Infancy-Onset Recurrent Metabolic Crises with Encephalocardiomyopathy"
+      }
+    ]
+  }
+}

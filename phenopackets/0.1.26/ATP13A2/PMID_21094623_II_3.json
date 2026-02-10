@@ -1,0 +1,215 @@
+{
+  "id": "PMID_21094623_II_3",
+  "subject": {
+    "id": "II.3",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P10Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001300",
+        "label": "Parkinsonism"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000298",
+        "label": "Mask-like facies"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002063",
+        "label": "Rigidity"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002067",
+        "label": "Bradykinesia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000514",
+        "label": "Slow saccadic eye movements"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000605",
+        "label": "Supranuclear gaze palsy"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001332",
+        "label": "Dystonia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000726",
+        "label": "Dementia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P11Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001337",
+        "label": "Tremor"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001347",
+        "label": "Hyperreflexia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003487",
+        "label": "Babinski sign"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0000716",
+        "label": "Depression"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "kwRvr1sZcL6eSTr5rtGQ2Sw1",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:606693",
+          "label": "Kufor-Rakeb syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "II.3",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c2552_2553del_ATP13A2_NM_022089v4",
+                "geneContext": {
+                  "valueId": "HGNC:30213",
+                  "symbol": "ATP13A2"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_022089.4:c.2552_2553del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000001.11:g.16989748_16989749del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_071372.1:p.(Phe851CysfsTer6)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr1",
+                  "pos": 16989746,
+                  "ref": "CAA",
+                  "alt": "C"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:606693",
+        "label": "Kufor-Rakeb syndrome"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P10Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-01T09:41:23.344079Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:21094623",
+        "description": "Juvenile dystonia-parkinsonism and dementia caused by a novel ATP13A2 frameshift mutation"
+      }
+    ]
+  }
+}

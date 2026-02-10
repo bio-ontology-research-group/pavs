@@ -1,0 +1,200 @@
+{
+  "id": "PMID_26136118_patient",
+  "subject": {
+    "id": "patient",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P26Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000121",
+        "label": "Nephrocalcinosis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003774",
+        "label": "Stage 5 chronic kidney disease"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P26Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000787",
+        "label": "Nephrolithiasis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P20Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002150",
+        "label": "Hypercalciuria"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0005567",
+        "label": "Renal magnesium wasting"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012637",
+        "label": "Renal calcium wasting"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002027",
+        "label": "Abdominal pain"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P20Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002149",
+        "label": "Hyperuricemia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002917",
+        "label": "Hypomagnesemia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002901",
+        "label": "Hypocalcemia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003165",
+        "label": "Elevated circulating parathyroid hormone level"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "pmNTzAsC5Lbxhot4p0XXBg1u",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:248250",
+          "label": "Hypomagnesemia 3, renal"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "patient",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "CLDN16_SV_E2_E5del",
+                "label": "E2_E5del",
+                "geneContext": {
+                  "valueId": "HGNC:2037",
+                  "symbol": "CLDN16"
+                },
+                "moleculeContext": "genomic",
+                "structuralType": {
+                  "id": "SO:1000183",
+                  "label": "chromosome_structure_variation"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:248250",
+        "label": "Hypomagnesemia 3, renal"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P20Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-02T16:08:18.290016Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:26136118",
+        "description": "Identification of the first large deletion in the CLDN16 gene in a patient with FHHNC and late-onset of chronic kidney disease: case report"
+      }
+    ]
+  }
+}

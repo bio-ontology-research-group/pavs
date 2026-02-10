@@ -1,0 +1,274 @@
+{
+  "id": "PMID_16909392_Patient_6_II_1_in_family_5",
+  "subject": {
+    "id": "Patient 6 II-1 in family 5",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P11Y"
+      }
+    },
+    "sex": "FEMALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0006937",
+        "label": "Impaired distal tactile sensation"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0009830",
+        "label": "Peripheral neuropathy"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P11Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001397",
+        "label": "Hepatic steatosis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1Y8M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Motor delay"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001394",
+        "label": "Cirrhosis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1Y8M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001943",
+        "label": "Hypoglycemia"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002240",
+        "label": "Hepatomegaly"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001396",
+        "label": "Cholestasis"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P1Y8M"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0007340",
+        "label": "Lower limb muscle weakness"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001402",
+        "label": "Hepatocellular carcinoma"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P11Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001284",
+        "label": "Areflexia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0001265",
+        "label": "Hyporeflexia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0006581",
+        "label": "Depletion of mitochondrial DNA in liver"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "a6nuoWGWum3xOs9kV3vfMBeE",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:256810",
+          "label": "Mitochondrial DNA depletion syndrome 6 (hepatocerebral type)"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Patient 6 II-1 in family 5",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c149GtoA_MPV17_NM_002437v5",
+                "geneContext": {
+                  "valueId": "HGNC:7224",
+                  "symbol": "MPV17"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_002437.5:c.149G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.27313031C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_002428.1:p.(Arg50Gln)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 27313031,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:256810",
+        "label": "Mitochondrial DNA depletion syndrome 6 (hepatocerebral type)"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P4M"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-12-31T19:21:47.563807Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:16909392",
+        "description": "Navajo neurohepatopathy is caused by a mutation in the MPV17 gene"
+      }
+    ]
+  }
+}

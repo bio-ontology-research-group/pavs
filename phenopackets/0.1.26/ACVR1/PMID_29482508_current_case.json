@@ -1,0 +1,207 @@
+{
+  "id": "PMID_29482508_current_case",
+  "subject": {
+    "id": "current case",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P16Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001822",
+        "label": "Hallux valgus"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P16Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0011987",
+        "label": "Ectopic ossification in muscle tissue"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P16Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0001847",
+        "label": "Long hallux"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P16Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0012531",
+        "label": "Pain"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P16Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003155",
+        "label": "Elevated circulating alkaline phosphatase concentration"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P16Y"
+        }
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0003072",
+        "label": "Hypercalcemia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002905",
+        "label": "Hyperphosphatemia"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0011227",
+        "label": "Elevated circulating C-reactive protein concentration"
+      },
+      "excluded": true
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "fDYvoNxHEFUT6RdFOQ1b3hbn",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:135100",
+          "label": "Fibrodysplasia ossificans progressiva"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "current case",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c617GtoA_ACVR1_NM_001111067v4",
+                "geneContext": {
+                  "valueId": "HGNC:171",
+                  "symbol": "ACVR1"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_001111067.4:c.617G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.157774114C>T"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 157774114,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:135100",
+        "label": "Fibrodysplasia ossificans progressiva"
+      },
+      "onset": {
+        "age": {
+          "iso8601duration": "P9Y"
+        }
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2025-10-05T05:14:29.869077Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-08-11",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:29482508",
+        "description": "Difficult diagnosis and genetic analysis of fibrodysplasia ossificans progressiva: a case report"
+      }
+    ]
+  }
+}

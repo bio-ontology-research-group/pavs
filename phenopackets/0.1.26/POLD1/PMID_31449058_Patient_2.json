@@ -1,0 +1,286 @@
+{
+  "id": "PMID_31449058_Patient_2",
+  "subject": {
+    "id": "Patient 2",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P24Y"
+      }
+    },
+    "sex": "MALE"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Hearing impairment"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0200043",
+        "label": "Verrucae"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0010976",
+        "label": "Decreased total B cell count"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0032218",
+        "label": "Decreased CD4+ T cell proportion"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0040218",
+        "label": "Reduced total natural killer cell count"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0004469",
+        "label": "Chronic bronchitis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002110",
+        "label": "Bronchiectasis"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0410028",
+        "label": "Recurrent oral herpes"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0032275",
+        "label": "Recurrent shingles"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002788",
+        "label": "Recurrent upper respiratory tract infections"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0002783",
+        "label": "Recurrent lower respiratory tract infections"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0006889",
+        "label": "Borderline intellectual disability"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0410242",
+        "label": "Abnormal circulating IgG concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0410240",
+        "label": "Abnormal circulating IgA concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0410243",
+        "label": "Abnormal circulating IgM concentration"
+      },
+      "excluded": true
+    },
+    {
+      "type": {
+        "id": "HP:0410378",
+        "label": "Decreased naive CD4+ T cell proportion"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "op1Qp85p3QGQi6hSd38X7iYU",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:620836",
+          "label": "Immunodeficiency 120"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Patient 2",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c3220CtoT_POLD1_NM_002691v4",
+                "geneContext": {
+                  "valueId": "HGNC:9175",
+                  "symbol": "POLD1"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_002691.4:c.3220C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.50417843C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_002682.2:p.(Arg1074Trp)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 50417843,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "Patient 2",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "PATHOGENIC",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "c2052GtoC_POLD1_NM_002691v4",
+                "geneContext": {
+                  "valueId": "HGNC:9175",
+                  "symbol": "POLD1"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_002691.4:c.2052G>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.50409564G>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "NP_002682.2:p.(Gln684His)"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 50409564,
+                  "ref": "G",
+                  "alt": "C"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:620836",
+        "label": "Immunodeficiency 120"
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2026-01-02T20:43:47.647977Z",
+    "createdBy": "0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2025-11-24",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2025-07-25",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.owl",
+        "version": "2024-11-18",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "06/01/25",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/25",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0.2",
+    "externalReferences": [
+      {
+        "id": "PMID:31449058",
+        "description": "Polymerase δ deficiency causes syndromic immunodeficiency with replicative stress"
+      }
+    ]
+  }
+}
