@@ -355,11 +355,15 @@ class PhenotypeMatcher:
         # STEP 2 & 3: For each extracted term, do RAG + validation
         for term_data in extracted_terms:
             term = term_data.get("term", "")
-            modifiers = term_data.get("modifiers", [])
+            modifiers = term_data.get("modifiers", []) or []  # Ensure it's a list
             excluded_by_ner = term_data.get("excluded", False)
 
             if not term:
                 continue
+
+            self.logger.debug(
+                f"Processing term: '{term}', modifiers: {modifiers}, excluded: {excluded_by_ner}"
+            )
 
             # Process the term
             result = self._normalize_term(
@@ -380,10 +384,10 @@ class PhenotypeMatcher:
             )  # Use NER exclusion if LLM didn't provide
 
             # Use NER modifiers if LLM didn't extract severity
-            if not severity_label and ner_modifiers:
+            if not severity_label and modifiers:
                 # Check if any NER modifier is a severity term
                 severity_keywords = ["mild", "moderate", "severe", "profound"]
-                for mod in ner_modifiers:
+                for mod in modifiers:
                     if mod.lower() in severity_keywords:
                         severity_label = mod.capitalize()
                         break
