@@ -48,87 +48,90 @@ def extract_phenotype_terms_llm(
             ...
         ]
     """
-    prompt = f"""You are a medical NER (Named Entity Recognition) system. Extract individual phenotype terms from this clinical description.
+    prompt = f"""You are a medical span detection system. Your ONLY job is to identify phenotype spans in clinical text.
 
-Clinical text: "{text}"
+TASK: Detect phenotype spans (exact text boundaries) and their properties.
 
-Your task (BE VERY CAREFUL with splitting):
-1. Identify EACH distinct phenotype mentioned
-2. For EACH phenotype, extract:
-   - The core phenotype term (without modifiers)
-   - Any severity modifiers (mild, moderate, severe, profound)
-   - Negation status (is it excluded/absent/normal?)
-   - The original span of text
+===== FEW-SHOT EXAMPLES =====
 
-3. Handle complex anatomy correctly:
-   - "short femur and humerus" → TWO phenotypes: "short femur", "short humerus"
-   - "absent radius and tibia" → TWO phenotypes: "absent radius", "absent tibia"
-   - "feeding difficulties with developmental delay" → TWO phenotypes: "feeding difficulties", "developmental delay"
-   - "hypotonia and intellectual disability" → TWO phenotypes: "hypotonia", "intellectual disability"
-
-4. Handle conjunctions correctly:
-   - Split on: "and", "with", "or", ","
-   - "A, B, and C with D" → FOUR phenotypes: "A", "B", "C", "D"
-
-5. Detect negation keywords: "no", "not", "without", "normal" (but NOT "absent" in anatomical context like "absent radius")
-
-6. Keep acronyms as-is (e.g., "ASD" stays "ASD", not expanded)
-
-7. Ignore non-phenotypes: locations (PICU, ICU), measurements (IQ), procedures
-
-Output JSON array:
-[
-  {{
-    "term": "core phenotype without modifiers",
-    "modifiers": ["severity", "temporal", etc.],
-    "excluded": true/false,
-    "original_span": "exact text from input"
-  }},
-  ...
-]
-
-CRITICAL RULES:
-- Extract ALL individual phenotypes separately
-- "A and B" → TWO phenotypes, not one
-- "feeding difficulties with developmental delay" → TWO phenotypes
-- Keep acronyms as-is (ASD, DD, etc.) - DO NOT expand them
-- For anatomy, expand patterns: "short femur and humerus" → "short femur" + "short humerus"
-
-EXAMPLES:
-
-Example 1:
+Example 1: Basic conjunction splitting
 Input: "seizures, hypotonia, and feeding difficulties with developmental delay"
-Output: [
-  {{"term": "seizures", "modifiers": [], "excluded": false}},
-  {{"term": "hypotonia", "modifiers": [], "excluded": false}},
-  {{"term": "feeding difficulties", "modifiers": [], "excluded": false}},
-  {{"term": "developmental delay", "modifiers": [], "excluded": false}}
+Output:
+[
+  {{"span": "seizures", "term": "seizures", "modifiers": [], "excluded": false}},
+  {{"span": "hypotonia", "term": "hypotonia", "modifiers": [], "excluded": false}},
+  {{"span": "feeding difficulties", "term": "feeding difficulties", "modifiers": [], "excluded": false}},
+  {{"span": "developmental delay", "term": "developmental delay", "modifiers": [], "excluded": false}}
 ]
 
-Example 2:
+Example 2: Anatomical expansion ("and" creates multiple instances)
 Input: "short femur and numerus with absent radius and tibia"
-Output: [
-  {{"term": "short femur", "modifiers": [], "excluded": false}},
-  {{"term": "short numerus", "modifiers": [], "excluded": false}},
-  {{"term": "absent radius", "modifiers": [], "excluded": false}},
-  {{"term": "absent tibia", "modifiers": [], "excluded": false}}
+Output:
+[
+  {{"span": "short femur", "term": "short femur", "modifiers": [], "excluded": false}},
+  {{"span": "numerus", "term": "short numerus", "modifiers": [], "excluded": false}},
+  {{"span": "absent radius", "term": "absent radius", "modifiers": [], "excluded": false}},
+  {{"span": "tibia", "term": "absent tibia", "modifiers": [], "excluded": false}}
 ]
 
-Example 3:
-Input: "no seizures, normal vision, but hypotonia"
-Output: [
-  {{"term": "seizures", "modifiers": [], "excluded": true}},
-  {{"term": "vision abnormality", "modifiers": ["normal"], "excluded": true}},
-  {{"term": "hypotonia", "modifiers": [], "excluded": false}}
+Example 3: Negation detection
+Input: "no seizures, normal vision, but hypotonia and intellectual disability present"
+Output:
+[
+  {{"span": "no seizures", "term": "seizures", "modifiers": [], "excluded": true}},
+  {{"span": "normal vision", "term": "vision", "modifiers": [], "excluded": true}},
+  {{"span": "hypotonia", "term": "hypotonia", "modifiers": [], "excluded": false}},
+  {{"span": "intellectual disability", "term": "intellectual disability", "modifiers": [], "excluded": false}}
 ]
 
-Example 4:
-Input: "ASD, heart murmur"
-Output: [
-  {{"term": "ASD", "modifiers": [], "excluded": false}},
-  {{"term": "heart murmur", "modifiers": [], "excluded": false}}
+Example 4: Severity modifiers
+Input: "severe intellectual disability, mild hypotonia, profound hearing loss"
+Output:
+[
+  {{"span": "severe intellectual disability", "term": "intellectual disability", "modifiers": ["severe"], "excluded": false}},
+  {{"span": "mild hypotonia", "term": "hypotonia", "modifiers": ["mild"], "excluded": false}},
+  {{"span": "profound hearing loss", "term": "hearing loss", "modifiers": ["profound"], "excluded": false}}
 ]
-(Note: ASD kept as-is, NOT expanded to "Atrial septal defect")
+
+Example 5: Acronyms (keep as-is)
+Input: "ASD, heart murmur, cyanosis"
+Output:
+[
+  {{"span": "ASD", "term": "ASD", "modifiers": [], "excluded": false}},
+  {{"span": "heart murmur", "term": "heart murmur", "modifiers": [], "excluded": false}},
+  {{"span": "cyanosis", "term": "cyanosis", "modifiers": [], "excluded": false}}
+]
+
+Example 6: Complex case with modifiers and negation
+Input: "Caught, feeding difficulties, noisy breathing, PICU addition due to ventricular arrhythmia and post cardiac arrest"
+Output:
+[
+  {{"span": "Caught", "term": "Caught", "modifiers": [], "excluded": false}},
+  {{"span": "feeding difficulties", "term": "feeding difficulties", "modifiers": [], "excluded": false}},
+  {{"span": "noisy breathing", "term": "noisy breathing", "modifiers": [], "excluded": false}},
+  {{"span": "ventricular arrhythmia", "term": "ventricular arrhythmia", "modifiers": [], "excluded": false}},
+  {{"span": "post cardiac arrest", "term": "cardiac arrest", "modifiers": ["post"], "excluded": false}}
+]
+(Note: "PICU addition" is ignored as it's a location/procedure, not a phenotype)
+
+===== YOUR TASK =====
+
+Input: "{text}"
+
+RULES:
+1. Detect ALL phenotype spans (exact text boundaries from input)
+2. For each span, extract:
+   - span: exact text from input
+   - term: core phenotype (without negation/severity words)
+   - modifiers: list of modifiers (severe, mild, profound, post, etc.)
+   - excluded: true if negated (no, not, without, normal)
+3. Split on conjunctions: "and", "with", "or", ","
+4. For anatomy patterns like "short A and B", expand to "short A" + "short B"
+5. Keep acronyms unchanged (ASD, DD, VSD, etc.)
+6. Ignore locations (PICU, ICU, ER), measurements (IQ), procedures
+
+Output as JSON array (use "result" key):
+{{"result": [...]}}
 """
 
     try:
