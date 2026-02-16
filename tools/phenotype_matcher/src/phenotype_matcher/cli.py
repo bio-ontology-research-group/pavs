@@ -96,7 +96,13 @@ Examples:
         "-c",
         "--context",
         type=str,
-        help="Additional context for disambiguation (e.g., gene name, patient info)",
+        help="Additional context for disambiguation (e.g., patient info)",
+    )
+    parser.add_argument(
+        "-g",
+        "--gene-hint",
+        type=str,
+        help="Gene symbol for disambiguation (SOFT cue only, e.g., SCN1A, NKX2-5)",
     )
     parser.add_argument(
         "--split-by",
@@ -206,6 +212,7 @@ Examples:
             inputs_to_process,
             config,
             args.context,
+            args.gene_hint,
             args.split_by,
             args.jobs,
             args.output,
@@ -218,6 +225,7 @@ Examples:
             inputs_to_process,
             config,
             args.context,
+            args.gene_hint,
             args.split_by,
             args.output,
             args.output_format,
@@ -273,6 +281,7 @@ def process_single_input(
     text: str,
     matcher: PhenotypeMatcher,
     context: Optional[str],
+    gene_hint: Optional[str],
     split_by: str,
 ) -> tuple:
     """Process a single input and return (index, result, error)."""
@@ -280,6 +289,7 @@ def process_single_input(
         input_data = PhenotypeInput(
             text=text,
             context=context,
+            gene_hint=gene_hint,
             split_by=split_by if split_by != "none" else None,
         )
         result = matcher.match(input_data)
@@ -292,6 +302,7 @@ def process_batch_sequential(
     inputs: List[str],
     config: MatcherConfig,
     context: Optional[str],
+    gene_hint: Optional[str],
     split_by: str,
     output_file: Optional[str],
     output_format: str,
@@ -329,7 +340,9 @@ def process_batch_sequential(
         iterator = inputs
 
     for text in iterator:
-        _, result, error = process_single_input(text, matcher, context, split_by)
+        _, result, error = process_single_input(
+            text, matcher, context, gene_hint, split_by
+        )
 
         if error:
             print(f"Error processing '{text}': {error}", file=sys.stderr)
@@ -348,6 +361,7 @@ def process_batch_parallel(
     inputs: List[str],
     config: MatcherConfig,
     context: Optional[str],
+    gene_hint: Optional[str],
     split_by: str,
     num_jobs: int,
     output_file: Optional[str],
@@ -380,7 +394,7 @@ def process_batch_parallel(
         # Submit all tasks
         future_to_input = {
             executor.submit(
-                process_single_input, text, matcher, context, split_by
+                process_single_input, text, matcher, context, gene_hint, split_by
             ): text
             for text in inputs
         }
@@ -559,7 +573,11 @@ def run_test_cases(specific_case_id: Optional[str], config: MatcherConfig):
         print(f"Description: {case['description']}")
 
         # Run the matcher
-        input_data = PhenotypeInput(text=case["input"])
+        input_data = PhenotypeInput(
+            text=case["input"],
+            context=case.get("context"),
+            gene_hint=case.get("gene_hint"),
+        )
         try:
             output = matcher.match(input_data)
         except Exception as e:

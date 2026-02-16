@@ -312,15 +312,26 @@ class PhenotypeMatcher:
         all_diseases = []
         llm_calls = 0
 
+        # Collect all extracted phenotype labels for context-based disambiguation
+        all_extracted_labels = []
+
         # Process each term
         for term in terms:
-            result = self._normalize_term(term, input_data.context or "")
+            result = self._normalize_term(
+                term,
+                input_data.context or "",
+                gene_hint=input_data.gene_hint,
+                other_terms=terms,  # Pass other terms for context
+            )
             llm_calls += 1
 
             # Convert LLM response to PhenotypeMatch objects
             phenotype_labels = result.get("phenotype_labels", [])
             severity_label = result.get("severity_label")
             excluded = result.get("excluded", False)
+
+            # Track extracted labels for disambiguation
+            all_extracted_labels.extend(phenotype_labels)
 
             for pheno_label in phenotype_labels:
                 # Look up HPO ID from label
@@ -378,9 +389,21 @@ class PhenotypeMatcher:
 
         return output
 
-    def _normalize_term(self, term: str, context: str = "") -> Dict[str, Any]:
+    def _normalize_term(
+        self,
+        term: str,
+        context: str = "",
+        gene_hint: Optional[str] = None,
+        other_terms: Optional[List[str]] = None,
+    ) -> Dict[str, Any]:
         """
         Normalize a single term using Graph RAG.
+
+        Args:
+            term: The phenotype term to normalize
+            context: Additional context
+            gene_hint: Optional gene symbol for disambiguation (SOFT cue only)
+            other_terms: Other phenotype terms in the description (for context)
 
         Returns dict with phenotype_labels, severity_label, excluded, disease_labels.
         """
@@ -406,6 +429,30 @@ class PhenotypeMatcher:
             else "No severity modifiers found."
         )
 
+        # Build context information for disambiguation
+        context_info = []
+        if context:
+            context_info.append(f"Patient Context: {context}")
+
+        if other_terms and len(other_terms) > 1:
+            # Show other phenotypes in the description for disambiguation
+            other_phenos = [t for t in other_terms if t != term]
+            if other_phenos:
+                context_info.append(
+                    f"Other phenotypes in description: {', '.join(other_phenos[:5])}"
+                )
+
+        if gene_hint:
+            context_info.append(
+                f"Gene hint: {gene_hint} (use ONLY as SOFT cue for disambiguation, NEVER override good matches)"
+            )
+
+        context_block = (
+            "\n".join(context_info)
+            if context_info
+            else "No additional context provided."
+        )
+
         # Query LLM
         has_multiple = any(
             word in term.lower() for word in [" and ", " with ", " or ", ","]
@@ -413,13 +460,14 @@ class PhenotypeMatcher:
 
         prompt = f"""You are an expert clinical geneticist. Map the clinical term "{term}" to standard ontology labels.
 
-Patient Context: {context}
+{context_block}
 
 CRITICAL RULES:
 1. You MUST select ONLY from the provided candidate NAMES/LABELS below
 2. DO NOT output any IDs (HP:, MONDO:, OMIM:) - ONLY output the exact label/name from candidates
 3. This term {"MAY CONTAIN MULTIPLE PHENOTYPES" if has_multiple else "likely describes a single phenotype"}
 4. Extract ALL phenotypes mentioned - a single term can map to 0, 1, or MULTIPLE phenotype labels
+5. If gene hint provided, use it ONLY for disambiguation between similar candidates, NEVER to override clear semantic matches
 
 **Phenotype Candidates** (select from these names only):
 {pheno_context}
@@ -432,8 +480,9 @@ CRITICAL RULES:
 Instructions:
 1. Carefully read the term and identify EACH distinct phenotype mentioned
 2. For EACH phenotype, select the best matching label from Phenotype Candidates
-3. If severity detected (mild, moderate, severe, profound), select from Severity Candidates
-4. Mark excluded: {str(excluded).lower()}
+3. If ambiguous (e.g., "ASD"), use the other phenotypes and gene hint to disambiguate
+4. If severity detected (mild, moderate, severe, profound), select from Severity Candidates
+5. Mark excluded: {str(excluded).lower()}
 
 Output ONLY labels, NEVER IDs:
 {{
