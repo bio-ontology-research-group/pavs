@@ -1,0 +1,17 @@
+numpy>=1.20.0
+pyhpo>=3.2.0
+pronto>=2.5.0
+sentence-transformers>=2.2.0
+scikit-learn>=1.0.0
+requests>=2.28.0
+torch>=1.13.0
+
+[dev]
+pytest>=7.0.0
+pytest-cov>=4.0.0
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.0.0
+
+[progress]
+tqdm>=4.65.0
