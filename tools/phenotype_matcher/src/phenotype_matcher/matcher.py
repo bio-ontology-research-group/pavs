@@ -34,6 +34,7 @@ EMBEDDING_MODELS = {
     "accurate": "BAAI/bge-large-en-v1.5",  # 1024 dim, 1.3GB
     "medical": "pritamdeka/S-PubMedBert-MS-MARCO",  # Medical domain
     "biobert": "dmis-lab/biobert-base-cased-v1.2",  # Biomedical
+    "sapbert": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",  # Biomedical entity linking (RECOMMENDED for medical)
 }
 
 # LLM model presets

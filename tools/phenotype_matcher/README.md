@@ -377,10 +377,17 @@ All test cases are verified against `hp.obo` for ground truth accuracy.
 | Model | Size | Speed | Best For |
 |-------|------|-------|----------|
 | `fast` | 80MB | Fastest | Testing, large datasets |
-| `balanced` | 420MB | Medium | **General use (recommended)** |
+| `balanced` | 420MB | Medium | General use |
 | `accurate` | 1.3GB | Slower | Research, complex cases |
 | `medical` | 768 dim | Medium | Medical text, PubMed-trained |
 | `biobert` | 768 dim | Medium | Biomedical literature |
+| `sapbert` | 768 dim | Medium | **Biomedical entity linking (RECOMMENDED for medical ontology matching)** |
+
+**SapBERT** (Self-Alignment Pre-training for BERT) is specifically trained for biomedical entity linking and ontology matching. It excels at:
+- Mapping clinical terms to HPO/MONDO/OMIM
+- Handling synonyms and lexical variations
+- Medical domain understanding
+- **Recommended for production use with medical ontologies**
 
 #### LLM Models
 
@@ -397,7 +404,7 @@ All test cases are verified against `hp.obo` for ground truth accuracy.
 from phenotype_matcher import PhenotypeMatcher, MatcherConfig
 
 config = MatcherConfig(
-    embedding_model="medical",  # or "fast", "balanced", "accurate", "biobert"
+    embedding_model="sapbert",   # or "fast", "balanced", "accurate", "medical", "biobert"
     llm_model="accurate",        # or "fast", "balanced", "cheap"
     top_k_phenotype=10,          # Number of phenotype candidates
     top_k_severity=5,            # Number of severity candidates

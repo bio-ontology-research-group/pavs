@@ -23,6 +23,7 @@ EMBEDDING_MODELS = {
     "accurate": "BAAI/bge-large-en-v1.5",
     "medical": "pritamdeka/S-PubMedBert-MS-MARCO",
     "biobert": "dmis-lab/biobert-base-cased-v1.2",
+    "sapbert": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",  # Biomedical entity linking (RECOMMENDED)
 }
 
 

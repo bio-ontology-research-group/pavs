@@ -18,6 +18,7 @@ class MatcherConfig:
             - "accurate": BAAI/bge-large-en-v1.5 (1024 dim, 1.3GB)
             - "medical": pritamdeka/S-PubMedBert-MS-MARCO
             - "biobert": dmis-lab/biobert-base-cased-v1.2
+            - "sapbert": cambridgeltl/SapBERT-from-PubMedBERT-fulltext (RECOMMENDED for medical ontology matching)
             - Custom model name from sentence-transformers
 
         llm_model: LLM model for semantic selection

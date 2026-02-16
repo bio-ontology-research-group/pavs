@@ -114,7 +114,7 @@ Examples:
     # Model configuration
     parser.add_argument(
         "--embedding-model",
-        choices=["fast", "balanced", "accurate", "medical", "biobert"],
+        choices=["fast", "balanced", "accurate", "medical", "biobert", "sapbert"],
         default="balanced",
         help="Embedding model preset (default: balanced)",
     )
