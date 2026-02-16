@@ -64,15 +64,16 @@ Output:
   {{"span": "developmental delay", "term": "developmental delay", "modifiers": [], "excluded": false}}
 ]
 
-Example 2: Anatomical expansion ("and" creates multiple instances)
+Example 2: Anatomical expansion ("and" splits, carry forward adjectives)
 Input: "short femur and numerus with absent radius and tibia"
 Output:
 [
   {{"span": "short femur", "term": "short femur", "modifiers": [], "excluded": false}},
-  {{"span": "numerus", "term": "short numerus", "modifiers": [], "excluded": false}},
+  {{"span": "short numerus", "term": "short numerus", "modifiers": [], "excluded": false}},
   {{"span": "absent radius", "term": "absent radius", "modifiers": [], "excluded": false}},
-  {{"span": "tibia", "term": "absent tibia", "modifiers": [], "excluded": false}}
+  {{"span": "absent tibia", "term": "absent tibia", "modifiers": [], "excluded": false}}
 ]
+CRITICAL: "short" applies to BOTH "femur" and "numerus". "absent" applies to BOTH "radius" and "tibia".
 
 Example 3: Negation detection
 Input: "no seizures, normal vision, but hypotonia and intellectual disability present"
@@ -118,20 +119,42 @@ Output:
 
 Input: "{text}"
 
-RULES:
-1. Detect ALL phenotype spans (exact text boundaries from input)
-2. For each span, extract:
-   - span: exact text from input
-   - term: core phenotype (without negation/severity words)
-   - modifiers: list of modifiers (severe, mild, profound, post, etc.)
-   - excluded: true if negated (no, not, without, normal)
-3. Split on conjunctions: "and", "with", "or", ","
-4. For anatomy patterns like "short A and B", expand to "short A" + "short B"
-5. Keep acronyms unchanged (ASD, DD, VSD, etc.)
-6. Ignore locations (PICU, ICU, ER), measurements (IQ), procedures
+SPAN DETECTION RULES (FOLLOW EXACTLY LIKE THE EXAMPLES ABOVE):
 
-Output as JSON array (use "result" key):
+1. SPLIT on every occurrence of: ",", " and ", " with ", " or "
+   - "A, B, and C" → 3 spans: "A", "B", "C"
+   - "A with B" → 2 spans: "A", "B"
+
+2. EXPAND anatomical patterns (adjective carries forward):
+   - "short femur and numerus" → "short femur" + "short numerus"
+   - "absent radius and tibia" → "absent radius" + "absent tibia"
+   - Pattern: "ADJ NOUN1 and NOUN2" → "ADJ NOUN1" + "ADJ NOUN2"
+
+3. DETECT negation (creates excluded=true):
+   - Negation words: "no", "not", "without", "normal"
+   - "no seizures" → excluded=true
+   - "normal vision" → excluded=true
+   - Note: "absent" in anatomy (e.g., "absent radius") is NOT negation
+
+4. EXTRACT modifiers (severity, temporal):
+   - Severity: "severe", "mild", "moderate", "profound"
+   - Temporal: "post", "pre", "episodic", "chronic"
+   - "severe intellectual disability" → modifiers=["severe"]
+   - Remove modifiers from term, keep in modifiers list
+
+5. KEEP acronyms as-is (do NOT expand):
+   - "ASD" stays "ASD"
+   - "DD" stays "DD"
+
+6. IGNORE non-phenotypes:
+   - Locations: PICU, ICU, ER, OR
+   - Measurements: IQ, BMI
+   - Procedures: intubation, admission
+
+Output as JSON with "result" key:
 {{"result": [...]}}
+
+BE PRECISE: Follow the pattern from the examples above EXACTLY.
 """
 
     try:

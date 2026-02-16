@@ -378,19 +378,31 @@ class PhenotypeMatcher:
 
             # Convert LLM response to PhenotypeMatch objects
             phenotype_labels = result.get("phenotype_labels", [])
-            severity_label = result.get("severity_label")
-            excluded = result.get(
-                "excluded", excluded_by_ner
-            )  # Use NER exclusion if LLM didn't provide
 
-            # Use NER modifiers if LLM didn't extract severity
-            if not severity_label and modifiers:
+            # ALWAYS use NER exclusion if it detected negation (NER is more reliable)
+            if excluded_by_ner:
+                excluded = True
+                self.logger.debug(f"Using NER exclusion status: excluded=True")
+            else:
+                excluded = result.get("excluded", False)
+
+            # ALWAYS use NER modifiers for severity if available (takes precedence)
+            # NER is more reliable for modifier extraction than LLM
+            severity_label = None
+            if modifiers:
                 # Check if any NER modifier is a severity term
                 severity_keywords = ["mild", "moderate", "severe", "profound"]
                 for mod in modifiers:
                     if mod.lower() in severity_keywords:
                         severity_label = mod.capitalize()
+                        self.logger.debug(
+                            f"Using NER severity modifier: {severity_label}"
+                        )
                         break
+
+            # Fallback to LLM severity if NER didn't find one
+            if not severity_label:
+                severity_label = result.get("severity_label")
 
             for pheno_label in phenotype_labels:
                 # Look up HPO ID from label
@@ -565,13 +577,22 @@ CRITICAL RULES:
 4. Extract ALL phenotypes mentioned - a single term can map to 0, 1, or MULTIPLE phenotype labels
 5. If gene hint provided, use it ONLY for disambiguation between similar candidates, NEVER to override clear semantic matches
 
-SPECIFICITY RULES (CRITICAL):
-- DO NOT select terms that are MORE SPECIFIC than what is described
-  Example: "hypotonia" should NOT match "Episodic generalized hypotonia" (too specific)
-  Example: "seizures" should NOT match "Absence seizures" unless "absence" is mentioned
-- It is ACCEPTABLE to select terms that are MORE GENERAL (less precise)
-  Example: "absence seizures" CAN match "Seizure" (more general, still correct)
-- Only select specific terms if the specificity is explicitly mentioned in the clinical text
+SPECIFICITY RULES (CRITICAL - FOLLOW EXACTLY):
+- DO NOT ADD DETAILS not in the input term
+  WRONG: "hypotonia" → "Episodic generalized hypotonia" (added "episodic" and "generalized")
+  WRONG: "seizures" → "Symptomatic seizures" (added "symptomatic")
+  WRONG: "noisy breathing" → "Laryngotracheomalacia" (this is a CAUSE, not the phenotype)
+  RIGHT: "hypotonia" → "Hypotonia" (exact match)
+  RIGHT: "seizures" → "Seizure" (exact match, just singular)
+
+- Match EXACTLY what is described, or be MORE GENERAL (never more specific)
+  RIGHT: "absence seizures" → "Seizure" (more general, acceptable)
+  RIGHT: "mild hypotonia" → "Hypotonia" (general term, severity separate)
+  WRONG: "hypotonia" → "Muscular hypotonia" (added specificity about muscle)
+  WRONG: "breathing problems" → "Laryngotracheomalacia" (too specific, this is a diagnosis)
+
+- If you see a specific subtype in candidates but the input is general, choose the GENERAL term
+- Only select specific subtypes if those exact details are in the input text
 
 **Phenotype Candidates** (select from these names only):
 {pheno_context}
