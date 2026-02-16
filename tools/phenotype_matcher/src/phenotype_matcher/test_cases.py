@@ -422,12 +422,24 @@ def validate_results(case_id: str, output) -> Dict[str, Any]:
     return results
 
 
-def print_validation_results(results: Dict[str, Any]):
+def print_validation_results(results: Dict[str, Any], output=None):
     """Pretty print validation results."""
     print(f"\n{'=' * 80}")
     print(f"Test Case: {results['case_name']} ({results['case_id']})")
     print(f"{'=' * 80}")
     print(f"Input: {results['input']}")
+
+    # Show NER extracted terms if available
+    if output and hasattr(output, "ner_extracted_terms") and output.ner_extracted_terms:
+        print(f"\nNER Extracted Terms ({len(output.ner_extracted_terms)}):")
+        for i, ner_term in enumerate(output.ner_extracted_terms, 1):
+            term_str = ner_term.get("term", "")
+            modifiers = ner_term.get("modifiers", [])
+            excluded = ner_term.get("excluded", False)
+            mod_str = f" [{', '.join(modifiers)}]" if modifiers else ""
+            excl_str = " (EXCLUDED)" if excluded else ""
+            print(f"  {i}. '{term_str}'{mod_str}{excl_str}")
+
     print(
         f"\nExpected: {results['total_expected']} phenotypes (minimum: {results['minimum_expected']})"
     )

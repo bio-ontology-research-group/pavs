@@ -151,6 +151,7 @@ class PhenotypeOutput:
 
     raw_input: str = ""
     processing_metadata: Dict[str, Any] = field(default_factory=dict)
+    ner_extracted_terms: List[Dict[str, Any]] = field(default_factory=list)
 
     def to_dict(self) -> Dict[str, Any]:
         """Convert output to dictionary format."""

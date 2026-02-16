@@ -423,6 +423,7 @@ class PhenotypeMatcher:
             phenotypes=all_phenotypes,
             diseases=all_diseases,
             raw_input=input_data.text,
+            ner_extracted_terms=extracted_terms,  # Store NER output for debugging
             processing_metadata={
                 "terms_processed": len(extracted_terms),
                 "llm_calls": llm_calls,

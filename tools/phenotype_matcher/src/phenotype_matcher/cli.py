@@ -517,6 +517,20 @@ def format_output(results: list, format_type: str) -> str:
             if len(results) > 1:
                 lines.append(f"\n=== Result {i} ===")
             lines.append(f"Input: {result.raw_input}")
+
+            # Show NER extracted terms if available
+            if hasattr(result, "ner_extracted_terms") and result.ner_extracted_terms:
+                lines.append(
+                    f"\nNER Extracted ({len(result.ner_extracted_terms)} terms):"
+                )
+                for ner_term in result.ner_extracted_terms:
+                    term_str = ner_term.get("term", "")
+                    modifiers = ner_term.get("modifiers", [])
+                    excluded = ner_term.get("excluded", False)
+                    mod_str = f" [{', '.join(modifiers)}]" if modifiers else ""
+                    excl_str = " (excluded)" if excluded else ""
+                    lines.append(f"  • '{term_str}'{mod_str}{excl_str}")
+
             lines.append(
                 f"\nPresent Phenotypes ({len(result.get_present_phenotypes())}):"
             )
@@ -601,7 +615,7 @@ def run_test_cases(specific_case_id: Optional[str], config: MatcherConfig):
 
         # Validate results
         results = test_cases.validate_results(case["id"], output)
-        test_cases.print_validation_results(results)
+        test_cases.print_validation_results(results, output)
 
         if results["pass"]:
             passed += 1
