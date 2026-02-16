@@ -155,15 +155,20 @@ Output: [
         content = re.sub(r"```json\n?|\n?```", "", content).strip()
         data = json.loads(content)
 
-        # Handle both array and object with "phenotypes" key
+        # Handle both array and object with various keys
         if isinstance(data, list):
             return data
-        elif isinstance(data, dict) and "phenotypes" in data:
-            return data["phenotypes"]
-        elif isinstance(data, dict) and "terms" in data:
-            return data["terms"]
-        else:
+        elif isinstance(data, dict):
+            # Try common key names
+            for key in ["result", "phenotypes", "terms", "extractions", "entities"]:
+                if key in data and isinstance(data[key], list):
+                    logger.info(f"NER returned data in '{key}' field")
+                    return data[key]
+
             logger.warning(f"Unexpected NER response format: {data}")
+            return []
+        else:
+            logger.warning(f"Unexpected NER response type: {type(data)}")
             return []
 
     except Exception as e:
