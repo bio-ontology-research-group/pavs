@@ -48,113 +48,129 @@ def extract_phenotype_terms_llm(
             ...
         ]
     """
-    prompt = f"""You are a medical span detection system. Your ONLY job is to identify phenotype spans in clinical text.
+    prompt = f"""MEDICAL PHENOTYPE SPAN DETECTOR
 
-TASK: Detect phenotype spans (exact text boundaries) and their properties.
+Your task: Split the input text into individual phenotype mentions. Follow the examples EXACTLY.
+
+===== STEP-BY-STEP PROCESS =====
+1. Find ALL delimiters: commas (,) and conjunctions (and, with, or)
+2. Split text at each delimiter
+3. For anatomy patterns "ADJ NOUN1 and NOUN2", create "ADJ NOUN1" + "ADJ NOUN2"
+4. Extract modifiers (severe, mild, profound, post, pre)
+5. Detect negation (no, not, without, normal)
 
 ===== FEW-SHOT EXAMPLES =====
 
-Example 1: Basic conjunction splitting
+Example 1: Basic splitting (split on , and "and" and "with")
 Input: "seizures, hypotonia, and feeding difficulties with developmental delay"
+Step 1: Find delimiters: [,] [and] [with]
+Step 2: Split: ["seizures", "hypotonia", "feeding difficulties", "developmental delay"]
 Output:
 [
-  {{"span": "seizures", "term": "seizures", "modifiers": [], "excluded": false}},
-  {{"span": "hypotonia", "term": "hypotonia", "modifiers": [], "excluded": false}},
-  {{"span": "feeding difficulties", "term": "feeding difficulties", "modifiers": [], "excluded": false}},
-  {{"span": "developmental delay", "term": "developmental delay", "modifiers": [], "excluded": false}}
+  {{"term": "seizures", "modifiers": [], "excluded": false}},
+  {{"term": "hypotonia", "modifiers": [], "excluded": false}},
+  {{"term": "feeding difficulties", "modifiers": [], "excluded": false}},
+  {{"term": "developmental delay", "modifiers": [], "excluded": false}}
 ]
 
-Example 2: Anatomical expansion ("and" splits, carry forward adjectives)
+Example 2: Anatomical pattern (CARRY FORWARD adjectives)
 Input: "short femur and numerus with absent radius and tibia"
+Step 1: Split on "and" and "with": ["short femur", "numerus", "absent radius", "tibia"]
+Step 2: Carry forward "short" to "numerus" (pattern: "short NOUN1 and NOUN2")
+Step 3: Carry forward "absent" to "tibia" (pattern: "absent NOUN1 and NOUN2")
 Output:
 [
-  {{"span": "short femur", "term": "short femur", "modifiers": [], "excluded": false}},
-  {{"span": "short numerus", "term": "short numerus", "modifiers": [], "excluded": false}},
-  {{"span": "absent radius", "term": "absent radius", "modifiers": [], "excluded": false}},
-  {{"span": "absent tibia", "term": "absent tibia", "modifiers": [], "excluded": false}}
+  {{"term": "short femur", "modifiers": [], "excluded": false}},
+  {{"term": "short numerus", "modifiers": [], "excluded": false}},
+  {{"term": "absent radius", "modifiers": [], "excluded": false}},
+  {{"term": "absent tibia", "modifiers": [], "excluded": false}}
 ]
-CRITICAL: "short" applies to BOTH "femur" and "numerus". "absent" applies to BOTH "radius" and "tibia".
 
-Example 3: Negation detection
+Example 3: Negation detection (remove negation words, set excluded=true)
 Input: "no seizures, normal vision, but hypotonia and intellectual disability present"
+Step 1: Split on [,] [and]: ["no seizures", "normal vision", "but hypotonia", "intellectual disability present"]
+Step 2: Detect negation: "no" in "no seizures", "normal" in "normal vision"
+Step 3: Remove negation words and "but", "present"
 Output:
 [
-  {{"span": "no seizures", "term": "seizures", "modifiers": [], "excluded": true}},
-  {{"span": "normal vision", "term": "vision", "modifiers": [], "excluded": true}},
-  {{"span": "hypotonia", "term": "hypotonia", "modifiers": [], "excluded": false}},
-  {{"span": "intellectual disability", "term": "intellectual disability", "modifiers": [], "excluded": false}}
+  {{"term": "seizures", "modifiers": [], "excluded": true}},
+  {{"term": "vision", "modifiers": [], "excluded": true}},
+  {{"term": "hypotonia", "modifiers": [], "excluded": false}},
+  {{"term": "intellectual disability", "modifiers": [], "excluded": false}}
 ]
 
-Example 4: Severity modifiers
+Example 4: Severity modifiers (extract and remove from term)
 Input: "severe intellectual disability, mild hypotonia, profound hearing loss"
+Step 1: Split on [,]: ["severe intellectual disability", "mild hypotonia", "profound hearing loss"]
+Step 2: Extract modifiers: "severe", "mild", "profound"
+Step 3: Remove modifiers from terms
 Output:
 [
-  {{"span": "severe intellectual disability", "term": "intellectual disability", "modifiers": ["severe"], "excluded": false}},
-  {{"span": "mild hypotonia", "term": "hypotonia", "modifiers": ["mild"], "excluded": false}},
-  {{"span": "profound hearing loss", "term": "hearing loss", "modifiers": ["profound"], "excluded": false}}
+  {{"term": "intellectual disability", "modifiers": ["severe"], "excluded": false}},
+  {{"term": "hypotonia", "modifiers": ["mild"], "excluded": false}},
+  {{"term": "hearing loss", "modifiers": ["profound"], "excluded": false}}
 ]
 
-Example 5: Acronyms (keep as-is)
+Example 5: Acronyms (keep unchanged)
 Input: "ASD, heart murmur, cyanosis"
+Step 1: Split on [,]: ["ASD", "heart murmur", "cyanosis"]
+Step 2: Keep acronyms as-is (do NOT expand ASD to "Atrial septal defect")
 Output:
 [
-  {{"span": "ASD", "term": "ASD", "modifiers": [], "excluded": false}},
-  {{"span": "heart murmur", "term": "heart murmur", "modifiers": [], "excluded": false}},
-  {{"span": "cyanosis", "term": "cyanosis", "modifiers": [], "excluded": false}}
+  {{"term": "ASD", "modifiers": [], "excluded": false}},
+  {{"term": "heart murmur", "modifiers": [], "excluded": false}},
+  {{"term": "cyanosis", "modifiers": [], "excluded": false}}
 ]
 
-Example 6: Complex case with modifiers and negation
+Example 6: Complex case (ignore non-phenotypes, extract modifiers)
 Input: "Caught, feeding difficulties, noisy breathing, PICU addition due to ventricular arrhythmia and post cardiac arrest"
+Step 1: Split on [,] [and]: ["Caught", "feeding difficulties", "noisy breathing", "PICU addition due to ventricular arrhythmia", "post cardiac arrest"]
+Step 2: Remove "PICU addition due to" (location phrase)
+Step 3: Extract "post" as modifier
 Output:
 [
-  {{"span": "Caught", "term": "Caught", "modifiers": [], "excluded": false}},
-  {{"span": "feeding difficulties", "term": "feeding difficulties", "modifiers": [], "excluded": false}},
-  {{"span": "noisy breathing", "term": "noisy breathing", "modifiers": [], "excluded": false}},
-  {{"span": "ventricular arrhythmia", "term": "ventricular arrhythmia", "modifiers": [], "excluded": false}},
-  {{"span": "post cardiac arrest", "term": "cardiac arrest", "modifiers": ["post"], "excluded": false}}
+  {{"term": "Caught", "modifiers": [], "excluded": false}},
+  {{"term": "feeding difficulties", "modifiers": [], "excluded": false}},
+  {{"term": "noisy breathing", "modifiers": [], "excluded": false}},
+  {{"term": "ventricular arrhythmia", "modifiers": [], "excluded": false}},
+  {{"term": "cardiac arrest", "modifiers": ["post"], "excluded": false}}
 ]
-(Note: "PICU addition" is ignored as it's a location/procedure, not a phenotype)
 
-===== YOUR TASK =====
+===== NOW YOUR TURN =====
 
-Input: "{text}"
+Input text to process: "{text}"
 
-SPAN DETECTION RULES (FOLLOW EXACTLY LIKE THE EXAMPLES ABOVE):
+ALGORITHM (apply these steps in order):
 
-1. SPLIT on every occurrence of: ",", " and ", " with ", " or "
-   - "A, B, and C" → 3 spans: "A", "B", "C"
-   - "A with B" → 2 spans: "A", "B"
+STEP 1: SPLIT text at delimiters
+- Delimiters: "," (comma), " and ", " with ", " or ", " but "
+- Example: "A, B and C with D" → ["A", "B", "C", "D"]
+- **DO THIS MECHANICALLY - split at EVERY delimiter**
 
-2. EXPAND anatomical patterns (adjective carries forward):
-   - "short femur and numerus" → "short femur" + "short numerus"
-   - "absent radius and tibia" → "absent radius" + "absent tibia"
-   - Pattern: "ADJ NOUN1 and NOUN2" → "ADJ NOUN1" + "ADJ NOUN2"
+STEP 2: EXPAND anatomical patterns (if ADJ precedes "NOUN1 and NOUN2")
+- If you see pattern "ADJ NOUN1 and NOUN2" in step 1, the split gave you ["ADJ NOUN1", "NOUN2"]
+- Carry forward the ADJ: "NOUN2" becomes "ADJ NOUN2"
+- Example: after step 1 you have ["short femur", "numerus"] → change to ["short femur", "short numerus"]
+- Example: after step 1 you have ["absent radius", "tibia"] → change to ["absent radius", "absent tibia"]
 
-3. DETECT negation (creates excluded=true):
-   - Negation words: "no", "not", "without", "normal"
-   - "no seizures" → excluded=true
-   - "normal vision" → excluded=true
-   - Note: "absent" in anatomy (e.g., "absent radius") is NOT negation
+STEP 3: CLEAN each term
+- Remove filler words: "but", "present", "noted", "due to", "addition"
+- Remove location phrases: "PICU", "ICU", etc.
 
-4. EXTRACT modifiers (severity, temporal):
-   - Severity: "severe", "mild", "moderate", "profound"
-   - Temporal: "post", "pre", "episodic", "chronic"
-   - "severe intellectual disability" → modifiers=["severe"]
-   - Remove modifiers from term, keep in modifiers list
+STEP 4: EXTRACT modifiers from each term
+- Severity modifiers: "severe", "mild", "moderate", "profound" → put in modifiers list, remove from term
+- Temporal modifiers: "post", "pre", "chronic", "episodic" → put in modifiers list, remove from term
+- Example: "severe intellectual disability" → term="intellectual disability", modifiers=["severe"]
 
-5. KEEP acronyms as-is (do NOT expand):
-   - "ASD" stays "ASD"
-   - "DD" stays "DD"
+STEP 5: DETECT negation for each term  
+- Negation words: "no", "not", "without", "normal" → set excluded=true, remove word from term
+- Example: "no seizures" → term="seizures", excluded=true
+- Exception: "absent" in anatomy is part of the phenotype, NOT negation
 
-6. IGNORE non-phenotypes:
-   - Locations: PICU, ICU, ER, OR
-   - Measurements: IQ, BMI
-   - Procedures: intubation, admission
-
-Output as JSON with "result" key:
+Output JSON with "result" key containing the array:
 {{"result": [...]}}
 
-BE PRECISE: Follow the pattern from the examples above EXACTLY.
+CRITICAL: You MUST split at EVERY "and", "with", "or", and "," in step 1. Do not group them!
 """
 
     try:
