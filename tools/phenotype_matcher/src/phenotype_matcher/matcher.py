@@ -379,6 +379,15 @@ class PhenotypeMatcher:
                 "excluded", excluded_by_ner
             )  # Use NER exclusion if LLM didn't provide
 
+            # Use NER modifiers if LLM didn't extract severity
+            if not severity_label and ner_modifiers:
+                # Check if any NER modifier is a severity term
+                severity_keywords = ["mild", "moderate", "severe", "profound"]
+                for mod in ner_modifiers:
+                    if mod.lower() in severity_keywords:
+                        severity_label = mod.capitalize()
+                        break
+
             for pheno_label in phenotype_labels:
                 # Look up HPO ID from label
                 hpo_id = self._lookup_hpo_id(pheno_label)

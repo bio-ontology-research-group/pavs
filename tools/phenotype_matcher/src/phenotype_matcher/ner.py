@@ -48,11 +48,11 @@ def extract_phenotype_terms_llm(
             ...
         ]
     """
-    prompt = f"""Extract individual phenotype terms from this clinical description.
+    prompt = f"""You are a medical NER (Named Entity Recognition) system. Extract individual phenotype terms from this clinical description.
 
 Clinical text: "{text}"
 
-Your task:
+Your task (BE VERY CAREFUL with splitting):
 1. Identify EACH distinct phenotype mentioned
 2. For EACH phenotype, extract:
    - The core phenotype term (without modifiers)
@@ -63,10 +63,18 @@ Your task:
 3. Handle complex anatomy correctly:
    - "short femur and humerus" → TWO phenotypes: "short femur", "short humerus"
    - "absent radius and tibia" → TWO phenotypes: "absent radius", "absent tibia"
+   - "feeding difficulties with developmental delay" → TWO phenotypes: "feeding difficulties", "developmental delay"
+   - "hypotonia and intellectual disability" → TWO phenotypes: "hypotonia", "intellectual disability"
 
-4. Detect negation keywords: "no", "not", "without", "absent", "normal"
+4. Handle conjunctions correctly:
+   - Split on: "and", "with", "or", ","
+   - "A, B, and C with D" → FOUR phenotypes: "A", "B", "C", "D"
 
-5. Ignore non-phenotypes: locations (PICU, ICU), measurements (IQ), procedures
+5. Detect negation keywords: "no", "not", "without", "normal" (but NOT "absent" in anatomical context like "absent radius")
+
+6. Keep acronyms as-is (e.g., "ASD" stays "ASD", not expanded)
+
+7. Ignore non-phenotypes: locations (PICU, ICU), measurements (IQ), procedures
 
 Output JSON array:
 [
@@ -79,7 +87,48 @@ Output JSON array:
   ...
 ]
 
-CRITICAL: Extract ALL phenotypes. A description like "short femur and numerus" should give TWO separate phenotypes.
+CRITICAL RULES:
+- Extract ALL individual phenotypes separately
+- "A and B" → TWO phenotypes, not one
+- "feeding difficulties with developmental delay" → TWO phenotypes
+- Keep acronyms as-is (ASD, DD, etc.) - DO NOT expand them
+- For anatomy, expand patterns: "short femur and humerus" → "short femur" + "short humerus"
+
+EXAMPLES:
+
+Example 1:
+Input: "seizures, hypotonia, and feeding difficulties with developmental delay"
+Output: [
+  {{"term": "seizures", "modifiers": [], "excluded": false}},
+  {{"term": "hypotonia", "modifiers": [], "excluded": false}},
+  {{"term": "feeding difficulties", "modifiers": [], "excluded": false}},
+  {{"term": "developmental delay", "modifiers": [], "excluded": false}}
+]
+
+Example 2:
+Input: "short femur and numerus with absent radius and tibia"
+Output: [
+  {{"term": "short femur", "modifiers": [], "excluded": false}},
+  {{"term": "short numerus", "modifiers": [], "excluded": false}},
+  {{"term": "absent radius", "modifiers": [], "excluded": false}},
+  {{"term": "absent tibia", "modifiers": [], "excluded": false}}
+]
+
+Example 3:
+Input: "no seizures, normal vision, but hypotonia"
+Output: [
+  {{"term": "seizures", "modifiers": [], "excluded": true}},
+  {{"term": "vision abnormality", "modifiers": ["normal"], "excluded": true}},
+  {{"term": "hypotonia", "modifiers": [], "excluded": false}}
+]
+
+Example 4:
+Input: "ASD, heart murmur"
+Output: [
+  {{"term": "ASD", "modifiers": [], "excluded": false}},
+  {{"term": "heart murmur", "modifiers": [], "excluded": false}}
+]
+(Note: ASD kept as-is, NOT expanded to "Atrial septal defect")
 """
 
     try:

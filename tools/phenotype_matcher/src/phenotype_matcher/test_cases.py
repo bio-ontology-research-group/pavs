@@ -153,28 +153,31 @@ DIFFICULT_TEST_CASES = [
         "description": "Tests severity extraction for multiple phenotypes with different severities",
         "expected_phenotypes": [
             {
-                "hpo_id": "HP:0010864",
-                "label": "Intellectual disability, severe",
-                "comment": "HPO has pre-coordinated severe ID term",
-                "alternatives": ["HP:0001249"],  # Base term is also acceptable
+                "hpo_id": "HP:0001249",
+                "label": "Intellectual disability",
+                "severity_id": "HP:0012828",
+                "severity_label": "Severe",
+                "comment": "NER extracts severity as modifier",
+                "alternatives": ["HP:0010864"],  # Pre-coordinated term also acceptable
             },
             {
                 "hpo_id": "HP:0001252",
                 "label": "Hypotonia",
                 "severity_id": "HP:0012825",
                 "severity_label": "Mild",
-                "comment": "Mild modifier should be extracted (if not pre-coordinated)",
-                "optional": True,
+                "comment": "NER extracts mild as modifier",
             },
             {
-                "hpo_id": "HP:0012715",
-                "label": "Profound hearing impairment",
-                "comment": "HPO has pre-coordinated profound hearing impairment term",
-                "alternatives": ["HP:0000365"],  # Base term is also acceptable
+                "hpo_id": "HP:0000365",
+                "label": "Hearing impairment",
+                "severity_id": "HP:0012829",
+                "severity_label": "Profound",
+                "comment": "NER extracts profound as modifier, 'hearing loss' → 'Hearing impairment'",
+                "alternatives": ["HP:0012715"],  # Pre-coordinated term also acceptable
             },
         ],
         "minimum_expected": 2,
-        "notes": "HPO has pre-coordinated severity terms (e.g., HP:0010864 for 'severe intellectual disability'). These are preferred over base term + modifier.",
+        "notes": "With NER, severity modifiers are extracted separately. Both base term + modifier and pre-coordinated terms are acceptable.",
     },
     {
         "id": "case_6",
@@ -371,6 +374,8 @@ def validate_results(case_id: str, output) -> Dict[str, Any]:
                 if "excluded" in expected:
                     if matched.excluded == expected["excluded"]:
                         match_info["exclusion_correct"] = True
+                        match_info["expected_excluded"] = expected["excluded"]
+                        match_info["actual_excluded"] = matched.excluded
                     else:
                         match_info["exclusion_correct"] = False
                         match_info["expected_excluded"] = expected["excluded"]
@@ -452,17 +457,26 @@ def print_validation_results(results: Dict[str, Any], output=None):
             status = "✓"
             details = []
 
-            if "exclusion_correct" in match and not match["exclusion_correct"]:
-                status = "⚠"
-                details.append(
-                    f"exclusion: expected={match['expected_excluded']}, got={match['actual_excluded']}"
-                )
+            if "exclusion_correct" in match:
+                if match["exclusion_correct"]:
+                    # Show exclusion status when it matches expectation
+                    if match.get("expected_excluded"):
+                        details.append("excluded=True ✓")
+                else:
+                    status = "⚠"
+                    details.append(
+                        f"exclusion: expected={match['expected_excluded']}, got={match['actual_excluded']}"
+                    )
 
-            if "severity_correct" in match and not match["severity_correct"]:
-                status = "⚠"
-                details.append(
-                    f"severity: expected={match['expected_severity']}, got={match['actual_severity']}"
-                )
+            if "severity_correct" in match:
+                if match["severity_correct"]:
+                    # Show severity when it matches
+                    details.append(f"severity={match.get('expected_severity')} ✓")
+                else:
+                    status = "⚠"
+                    details.append(
+                        f"severity: expected={match['expected_severity']}, got={match['actual_severity']}"
+                    )
 
             detail_str = f" ({'; '.join(details)})" if details else ""
             print(f"  {status} {match['hpo_id']}: {match['matched_label']}{detail_str}")
