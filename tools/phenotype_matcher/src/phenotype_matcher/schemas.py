@@ -34,6 +34,8 @@ class MatcherConfig:
         device: Compute device ("cpu" or "cuda", default: "cpu")
 
         api_key: OpenRouter API key (if not set, uses OPENROUTER_API_KEY env var)
+        use_ner: Use LLM-based NER for term extraction (default: True, recommended)
+        expand_acronyms: Expand medical acronyms during search (default: True)
         debug: Enable debug logging (default: False)
     """
 
@@ -45,6 +47,8 @@ class MatcherConfig:
     cache_dir: str = "data/graph_rag_cache"
     device: str = "cpu"
     api_key: Optional[str] = None
+    use_ner: bool = True
+    expand_acronyms: bool = True
     debug: bool = False
 
 

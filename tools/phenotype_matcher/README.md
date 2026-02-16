@@ -525,41 +525,53 @@ The tool searches two separate HPO branches:
    - Contains severity terms (Mild, Moderate, Severe, Profound)
    - Searched separately to ensure severity candidates are always available
 
-#### Processing Workflow
+#### Processing Workflow (3-Step Architecture)
 
 ```
-Clinical term: "severe intellectual disability"
+Input: "short femur and numerus with absent radius, ASD"
            ↓
-    [1. Dual Semantic Retrieval]
+    [1. NER - Extract Individual Terms]
            ↓
-    ┌──────────────┬─────────────┐
-    ↓              ↓              
-Phenotype      Severity
-Branch         Branch
-(HP:0000118)   (HP:0012824)
-    ↓              ↓
-Top-K          Top-K
-phenotypes     severities
-    └──────────────┬─────────────┘
-                   ↓
-    [2. Graph Context Expansion]
+    LLM extracts: ["short femur", "short numerus", "absent radius", "ASD"]
+    With metadata: negation, modifiers, etc.
            ↓
-    Parent terms, definitions,
-    synonyms, relationships
+    [2. Acronym Expansion + RAG Retrieval]
            ↓
-    [3. LLM Multi-Output Selection]
+    "ASD" → Expand to ["Atrial septal defect", "Autism spectrum disorder"]
+    For each term/expansion:
+      ┌──────────────┬─────────────┐
+      ↓              ↓              
+  Phenotype      Severity
+  Branch         Branch
+  (HP:0000118)   (HP:0012824)
+      ↓              ↓
+  Top-K          Top-K
+  candidates     severities
+      └──────────────┬─────────────┘
+                     ↓
+    [3. LLM Validation + Disambiguation]
            ↓
-    Phenotype: HP:0001249 (Intellectual disability)
-    Severity: HP:0012828 (Severe)
+    Context: other phenotypes, gene hint
+    Specificity rule: prefer general over too-specific
+    Disambiguation: cardiac context → Atrial septal defect
+           ↓
+    Output: HP:0003097 (Short femur), HP:0003974 (Absent radius), 
+            HP:0001631 (Atrial septal defect)
 ```
 
 #### Key Design Decisions
 
-1. **Labels only from LLM, IDs from ontology**: LLM returns labels, which are looked up in the ontology to get IDs. This prevents hallucination of non-existent identifiers.
+1. **NER-first extraction (NEW)**: LLM extracts individual phenotypes before RAG search. Solves complex splitting problems like "short femur and humerus" → 2 phenotypes.
 
-2. **Negation pre-detection + LLM confirmation**: Rule-based detection catches obvious cases, LLM handles context-dependent negation.
+2. **Acronym expansion (NEW)**: Hard-coded dictionary expands ambiguous acronyms (ASD, DD, CHD, etc.) so RAG can find all possible matches, then disambiguation selects the correct one.
 
-3. **Multi-phenotype support**: A single clinical term can map to multiple HPO terms (e.g., "feeding difficulties and seizures" → 2 phenotypes).
+3. **Specificity control (NEW)**: LLM instructed to NOT select overly specific terms (e.g., "hypotonia" should NOT match "Episodic generalized hypotonia"). General terms are acceptable.
+
+4. **Labels only from LLM, IDs from ontology**: LLM returns labels, which are looked up in the ontology to get IDs. This prevents hallucination of non-existent identifiers.
+
+5. **Context-based disambiguation**: Uses co-occurring phenotypes and gene hints to resolve ambiguous terms (e.g., "ASD" + cardiac phenotypes → Atrial septal defect).
+
+6. **Multi-phenotype support**: A single clinical description can map to multiple HPO terms.
 
 4. **File-specific splitting**: Different data sources use different separators (`,`, `|`, `/`, etc.) - configurable via `split_by` parameter.
 

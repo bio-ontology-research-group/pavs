@@ -23,6 +23,8 @@ from .schemas import (
     DiseaseMatch,
     MatcherConfig,
 )
+from . import acronyms
+from . import ner
 
 
 # Embedding model presets
@@ -290,6 +292,11 @@ class PhenotypeMatcher:
         """
         Match phenotype description to ontology identifiers.
 
+        Uses 3-step process:
+        1. NER: Extract individual phenotype terms using LLM
+        2. RAG: Retrieve candidates (with acronym expansion)
+        3. Validation: LLM selects best matches with disambiguation
+
         Args:
             input_data: Input containing phenotype description
 
@@ -298,40 +305,78 @@ class PhenotypeMatcher:
         """
         start_time = time.time()
 
-        # Split input text if needed
-        if input_data.split_by:
-            terms = [
-                t.strip()
-                for t in input_data.text.split(input_data.split_by)
-                if t.strip()
-            ]
+        # STEP 1: NER - Extract individual phenotype terms using LLM (if enabled)
+        if self.config.use_ner and self.api_key:
+            self.logger.info("Step 1: Extracting phenotype terms using NER...")
+            extracted_terms = ner.extract_phenotype_terms_llm(
+                input_data.text,
+                self.api_key,
+                self.llm_model_name,
+            )
+            llm_calls = 1  # NER call
         else:
-            terms = [input_data.text.strip()]
+            extracted_terms = []
+            llm_calls = 0
+
+        # Fallback to simple splitting if NER disabled or fails
+        if not extracted_terms:
+            self.logger.warning("NER failed, falling back to comma splitting")
+            if input_data.split_by:
+                terms = [
+                    {
+                        "term": t.strip(),
+                        "modifiers": [],
+                        "excluded": False,
+                        "original_span": t.strip(),
+                    }
+                    for t in input_data.text.split(input_data.split_by)
+                    if t.strip()
+                ]
+            else:
+                terms = [
+                    {
+                        "term": input_data.text.strip(),
+                        "modifiers": [],
+                        "excluded": False,
+                        "original_span": input_data.text.strip(),
+                    }
+                ]
+            extracted_terms = terms
+
+        self.logger.info(f"Extracted {len(extracted_terms)} phenotype terms")
 
         all_phenotypes = []
         all_diseases = []
-        llm_calls = 0
 
-        # Collect all extracted phenotype labels for context-based disambiguation
-        all_extracted_labels = []
+        # Collect all term strings for context
+        all_term_strings = [t.get("term", "") for t in extracted_terms]
 
-        # Process each term
-        for term in terms:
+        # STEP 2 & 3: For each extracted term, do RAG + validation
+        for term_data in extracted_terms:
+            term = term_data.get("term", "")
+            modifiers = term_data.get("modifiers", [])
+            excluded_by_ner = term_data.get("excluded", False)
+
+            if not term:
+                continue
+
+            # Process the term
             result = self._normalize_term(
                 term,
                 input_data.context or "",
                 gene_hint=input_data.gene_hint,
-                other_terms=terms,  # Pass other terms for context
+                other_terms=all_term_strings,
+                ner_excluded=excluded_by_ner,
+                ner_modifiers=modifiers,
             )
             llm_calls += 1
 
             # Convert LLM response to PhenotypeMatch objects
             phenotype_labels = result.get("phenotype_labels", [])
             severity_label = result.get("severity_label")
-            excluded = result.get("excluded", False)
-
-            # Track extracted labels for disambiguation
-            all_extracted_labels.extend(phenotype_labels)
+            excluded = result.get(
+                "excluded", excluded_by_ner
+            )  # Use NER exclusion if LLM didn't provide
 
             for pheno_label in phenotype_labels:
                 # Look up HPO ID from label
@@ -379,11 +424,13 @@ class PhenotypeMatcher:
             diseases=all_diseases,
             raw_input=input_data.text,
             processing_metadata={
-                "terms_processed": len(terms),
+                "terms_processed": len(extracted_terms),
                 "llm_calls": llm_calls,
                 "processing_time_seconds": time.time() - start_time,
                 "embedding_model": self.embedding_model_name,
                 "llm_model": self.llm_model_name,
+                "ner_used": self.config.use_ner,
+                "acronym_expansion_used": self.config.expand_acronyms,
             },
         )
 
@@ -395,28 +442,61 @@ class PhenotypeMatcher:
         context: str = "",
         gene_hint: Optional[str] = None,
         other_terms: Optional[List[str]] = None,
+        ner_excluded: bool = False,
+        ner_modifiers: Optional[List[str]] = None,
     ) -> Dict[str, Any]:
         """
-        Normalize a single term using Graph RAG.
+        Normalize a single term using Graph RAG with acronym expansion.
 
         Args:
             term: The phenotype term to normalize
             context: Additional context
             gene_hint: Optional gene symbol for disambiguation (SOFT cue only)
             other_terms: Other phenotype terms in the description (for context)
+            ner_excluded: Exclusion status from NER (if available)
+            ner_modifiers: Modifiers extracted by NER (if available)
 
         Returns dict with phenotype_labels, severity_label, excluded, disease_labels.
         """
-        # Detect negation
-        excluded = any(
-            neg in term.lower()
-            for neg in ["no ", "not ", "without ", "absent ", "normal "]
-        )
+        # Use NER exclusion if provided, otherwise detect from text
+        if ner_excluded:
+            excluded = True
+        else:
+            excluded = any(
+                neg in term.lower()
+                for neg in ["no ", "not ", "without ", "absent ", "normal "]
+            )
 
-        # Retrieve phenotype candidates
-        pheno_candidates = self._retrieve_phenotype_candidates(
-            term, k=self.config.top_k_phenotype
-        )
+        # STEP 2A: Check for acronym expansion (if enabled)
+        search_terms = [term]
+        acronym_context = ""
+        if self.config.expand_acronyms and acronyms.should_expand_for_search(term):
+            expansions = acronyms.expand_acronym(term)
+            if expansions:
+                self.logger.info(f"Expanding acronym '{term}' to: {expansions}")
+                search_terms = expansions
+                acronym_context = f"\n**ACRONYM DISAMBIGUATION**: '{term}' could mean: {', '.join(expansions)}. Use context to choose the correct interpretation."
+
+        # STEP 2B: Retrieve phenotype candidates (possibly from multiple expansions)
+        all_pheno_candidates = []
+        seen_ids = set()
+
+        for search_term in search_terms:
+            candidates = self._retrieve_phenotype_candidates(
+                search_term, k=self.config.top_k_phenotype
+            )
+            # Merge candidates, avoiding duplicates
+            for cand in candidates:
+                term_id = cand["term"]["id"]
+                if term_id not in seen_ids:
+                    seen_ids.add(term_id)
+                    all_pheno_candidates.append(cand)
+
+        # Sort by score and take top-k
+        all_pheno_candidates.sort(key=lambda x: x["score"], reverse=True)
+        pheno_candidates = all_pheno_candidates[
+            : self.config.top_k_phenotype * 2
+        ]  # Allow more for disambiguation
         pheno_context = self._build_graph_context(pheno_candidates)
 
         # Retrieve severity candidates
@@ -461,6 +541,7 @@ class PhenotypeMatcher:
         prompt = f"""You are an expert clinical geneticist. Map the clinical term "{term}" to standard ontology labels.
 
 {context_block}
+{acronym_context}
 
 CRITICAL RULES:
 1. You MUST select ONLY from the provided candidate NAMES/LABELS below
@@ -468,6 +549,14 @@ CRITICAL RULES:
 3. This term {"MAY CONTAIN MULTIPLE PHENOTYPES" if has_multiple else "likely describes a single phenotype"}
 4. Extract ALL phenotypes mentioned - a single term can map to 0, 1, or MULTIPLE phenotype labels
 5. If gene hint provided, use it ONLY for disambiguation between similar candidates, NEVER to override clear semantic matches
+
+SPECIFICITY RULES (CRITICAL):
+- DO NOT select terms that are MORE SPECIFIC than what is described
+  Example: "hypotonia" should NOT match "Episodic generalized hypotonia" (too specific)
+  Example: "seizures" should NOT match "Absence seizures" unless "absence" is mentioned
+- It is ACCEPTABLE to select terms that are MORE GENERAL (less precise)
+  Example: "absence seizures" CAN match "Seizure" (more general, still correct)
+- Only select specific terms if the specificity is explicitly mentioned in the clinical text
 
 **Phenotype Candidates** (select from these names only):
 {pheno_context}
@@ -480,9 +569,10 @@ CRITICAL RULES:
 Instructions:
 1. Carefully read the term and identify EACH distinct phenotype mentioned
 2. For EACH phenotype, select the best matching label from Phenotype Candidates
-3. If ambiguous (e.g., "ASD"), use the other phenotypes and gene hint to disambiguate
-4. If severity detected (mild, moderate, severe, profound), select from Severity Candidates
-5. Mark excluded: {str(excluded).lower()}
+3. Prefer general terms over overly specific ones (unless specificity is in the text)
+4. If ambiguous (e.g., "ASD"), use the other phenotypes and gene hint to disambiguate
+5. If severity detected (mild, moderate, severe, profound), select from Severity Candidates
+6. Mark excluded: {str(excluded).lower()}
 
 Output ONLY labels, NEVER IDs:
 {{

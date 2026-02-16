@@ -151,6 +151,18 @@ Examples:
     )
     parser.add_argument("--debug", action="store_true", help="Enable debug logging")
 
+    # Advanced options
+    parser.add_argument(
+        "--no-ner",
+        action="store_true",
+        help="Disable LLM-based NER for term extraction (use simple comma splitting)",
+    )
+    parser.add_argument(
+        "--no-acronym-expansion",
+        action="store_true",
+        help="Disable acronym expansion (e.g., ASD, DD, CHD)",
+    )
+
     # Parallelization options
     parser.add_argument(
         "-j",
@@ -177,6 +189,8 @@ Examples:
         cache_dir=args.cache_dir,
         device=args.device,
         api_key=args.api_key,
+        use_ner=not args.no_ner,
+        expand_acronyms=not args.no_acronym_expansion,
         debug=args.debug,
     )
 
