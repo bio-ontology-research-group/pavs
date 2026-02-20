@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: phenotype-matcher-v2
+Version: 2.0.0
+Summary: Phenotype/disease matcher v2: formal algorithm with HPO, MONDO, OMIM, Orphanet
+Home-page: https://github.com/your-org/pavs
+Author: PAVS Team
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: pronto>=2.5.0
+Requires-Dist: sentence-transformers>=2.2.0
+Requires-Dist: scikit-learn>=1.0.0
+Requires-Dist: requests>=2.28.0
+Requires-Dist: spacy>=3.0.0
+Requires-Dist: torch>=1.13.0
+Requires-Dist: rapidfuzz>=3.0.0
+Requires-Dist: pyahocorasick>=2.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Dynamic: author
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
