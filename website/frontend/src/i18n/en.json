@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "phenotype": "Phenotype Search",
+    "variant": "Variant Lookup",
+    "disease": "Disease Browser",
+    "gene": "Gene Browser",
+    "about": "About"
+  },
+  "search": {
+    "placeholder": "Search HPO terms (e.g. Microcephaly)…",
+    "search": "Search",
+    "clear": "Clear",
+    "noResults": "No results found.",
+    "loading": "Loading…",
+    "method": "Similarity method",
+    "lin": "Lin + BMA (default)",
+    "resnik": "Resnik + BMA",
+    "includeDisease": "Expand with OMIM/ClinVar disease HPO annotations",
+    "includeNonSaudi": "Include non-Saudi cases (DDD / Literature / ClinVar)",
+    "limit": "Max results"
+  },
+  "results": {
+    "score": "Score",
+    "gene": "Gene",
+    "disease": "Disease",
+    "source": "Source",
+    "acmg": "ACMG",
+    "hgvsC": "HGVS c.",
+    "hgvsG": "HGVS g.",
+    "rsId": "rsID",
+    "zygosity": "Zygosity",
+    "saudiAF": "Saudi AF",
+    "gnomadAF": "gnomAD AF",
+    "clinvar": "ClinVar",
+    "togovar": "TogoVar",
+    "novel": "Novel in Saudi cohort",
+    "download": "Download Phenopacket",
+    "downloadAll": "Download All Saudi Phenopackets"
+  },
+  "variant": {
+    "byGene": "By Gene",
+    "byRsId": "By rsID",
+    "byHgvs": "By HGVS",
+    "byAcmg": "By ACMG Class",
+    "genePlaceholder": "Gene symbol, e.g. SUMF1",
+    "rsidPlaceholder": "e.g. rs1064793391",
+    "hgvsPlaceholder": "e.g. NM_182760.3:c.785A>G",
+    "acmgOptions": ["Pathogenic", "Likely pathogenic", "Uncertain significance", "Likely benign", "Benign"]
+  },
+  "case": {
+    "demographics": "Demographics",
+    "phenotypes": "Phenotypes",
+    "excludedPhenotypes": "Excluded Phenotypes",
+    "variants": "Variants",
+    "inheritance": "Inheritance",
+    "consanguinity": "Consanguinity",
+    "sex": "Sex",
+    "progressStatus": "Status",
+    "disease": "Disease",
+    "suggestedDiseaseNote": "⚠ Suggested (not a diagnosis) — based on gene, not confirmed clinically:",
+    "basedOnGene": "via gene",
+    "pmid": "PMID",
+    "ancestry": "Ancestry",
+    "middleEastern": "Middle Eastern",
+    "saudi": "Saudi Arabia"
+  },
+  "badges": {
+    "saudi": "Saudi cohort",
+    "ddd": "DDD",
+    "literature": "Literature",
+    "clinvar": "ClinVar"
+  },
+  "links": {
+    "hpo": "HPO browser",
+    "omim": "OMIM",
+    "clinvar": "ClinVar",
+    "dbsnp": "dbSNP",
+    "hgnc": "HGNC",
+    "togovar": "TogoVar",
+    "uniprot": "UniProt",
+    "decipher": "DECIPHER",
+    "ensembl": "Ensembl"
+  }
+}

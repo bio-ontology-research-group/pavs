@@ -1,0 +1,109 @@
+services:
+
+  # ── 1. Triple store ────────────────────────────────────────────────────────
+  virtuoso:
+    image: openlink/virtuoso-opensource-7:latest
+    environment:
+      DBA_PASSWORD: pavs_dba
+      SPARQL_UPDATE: "yes"
+      NumberOfBuffers: 10000
+      MaxDirtyBuffers: 6000
+      # Allow loading from the mounted rdf_import directory (applied on first init)
+      VIRT_Parameters_DirsAllowed: "., ../vad, /usr/share/proj, /rdf_import"
+    ports:
+      - "8890:8890"
+      - "1111:1111"
+    volumes:
+      - virtuoso_db:/var/lib/virtuoso/db
+      - ./rdf_output:/rdf_import:ro
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8890/sparql 2>/dev/null | head -c1 | grep -q . || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 15
+      start_period: 30s
+
+  # ── 2. Data pipeline: generate phenopackets + RDF (skips if outputs exist) ─
+  #    Use `docker compose -f docker-compose-sparql.yml run --rm init --force`
+  #    to force a full rebuild.
+  init:
+    build:
+      context: .
+      dockerfile: website/backend/Dockerfile
+    command:
+      - python
+      - intake/prepare_all.py
+      - "--endpoint=http://virtuoso:8890"
+      - "--skip-load"          # loader service handles Virtuoso ingestion
+    volumes:
+      - ./data:/app/data
+      - ./phenopackets:/app/phenopackets
+      - ./rdf_output:/app/rdf_output
+      - ./ontology:/app/ontology:ro
+      - ./normalization:/app/normalization:ro
+      - ./intake:/app/intake:ro
+    depends_on:
+      virtuoso:
+        condition: service_healthy
+    restart: "no"
+
+  # ── 3. Bulk loader: uses Virtuoso's own isql to load TTL files ─────────────
+  #    Runs after init (RDF files ready) using ld_dir + rdf_loader_run,
+  #    which handles files of any size without the 10 MB HTTP limit.
+  loader:
+    image: openlink/virtuoso-opensource-7:latest
+    entrypoint:
+      - bash
+      - -c
+      - |
+        set -e
+        echo "=== Waiting for Virtuoso to accept isql connections ==="
+        until isql virtuoso:1111 dba pavs_dba exec="SELECT 1" > /dev/null 2>&1; do
+          echo "  waiting..."; sleep 3
+        done
+        echo "=== Running bulk load via isql ==="
+        isql virtuoso:1111 dba pavs_dba /load/load_ttl.sql
+        echo "=== Load complete ==="
+    volumes:
+      - ./rdf_output:/rdf_import:ro
+      - ./website/virtuoso:/load:ro
+    depends_on:
+      virtuoso:
+        condition: service_healthy
+      init:
+        condition: service_completed_successfully
+    restart: "no"
+
+  # ── 4. API backend ─────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: .
+      dockerfile: website/backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      SPARQL_ENDPOINT: http://virtuoso:8890/sparql
+      DATA_DIR: /app/data
+    volumes:
+      - ./data:/app/data:ro
+      - ./phenopackets:/app/phenopackets:ro
+    depends_on:
+      virtuoso:
+        condition: service_healthy
+      loader:
+        condition: service_completed_successfully
+
+  # ── 5. React frontend ──────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./website/frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: http://localhost:8000
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  virtuoso_db:

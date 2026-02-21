@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "phenotype": "بحث النمط الظاهري",
+    "variant": "البحث عن متغيرات",
+    "disease": "متصفح الأمراض",
+    "gene": "متصفح الجينات",
+    "about": "حول"
+  },
+  "search": {
+    "placeholder": "ابحث عن مصطلحات HPO (مثل صغر الرأس)…",
+    "search": "بحث",
+    "clear": "مسح",
+    "noResults": "لا توجد نتائج.",
+    "loading": "جارٍ التحميل…",
+    "method": "طريقة التشابه",
+    "lin": "Lin + BMA (الافتراضي)",
+    "resnik": "Resnik + BMA",
+    "includeDisease": "التوسع باستخدام مصطلحات HPO للأمراض (OMIM/ClinVar)",
+    "includeNonSaudi": "تضمين الحالات غير السعودية (DDD / الأدبيات / ClinVar)",
+    "limit": "الحد الأقصى للنتائج"
+  },
+  "results": {
+    "score": "الدرجة",
+    "gene": "الجين",
+    "disease": "المرض",
+    "source": "المصدر",
+    "acmg": "ACMG",
+    "hgvsC": "HGVS c.",
+    "hgvsG": "HGVS g.",
+    "rsId": "rsID",
+    "zygosity": "الزيجوسية",
+    "saudiAF": "تكرار الأليل السعودي",
+    "gnomadAF": "تكرار gnomAD",
+    "clinvar": "ClinVar",
+    "togovar": "TogoVar",
+    "novel": "جديد في المجموعة السعودية",
+    "download": "تنزيل Phenopacket",
+    "downloadAll": "تنزيل جميع الـ Phenopackets السعودية"
+  },
+  "variant": {
+    "byGene": "بالجين",
+    "byRsId": "بمعرف rsID",
+    "byHgvs": "بـ HGVS",
+    "byAcmg": "بتصنيف ACMG",
+    "genePlaceholder": "رمز الجين، مثل SUMF1",
+    "rsidPlaceholder": "مثل rs1064793391",
+    "hgvsPlaceholder": "مثل NM_182760.3:c.785A>G",
+    "acmgOptions": ["مُمْرِض", "يُرجَّح أنه مُمْرِض", "أهمية غير محددة", "يُرجَّح أنه حميد", "حميد"]
+  },
+  "case": {
+    "demographics": "البيانات الديموغرافية",
+    "phenotypes": "الأنماط الظاهرية",
+    "excludedPhenotypes": "الأنماط الظاهرية المستبعدة",
+    "variants": "المتغيرات",
+    "inheritance": "نمط التوارث",
+    "consanguinity": "الأقارب",
+    "sex": "الجنس",
+    "progressStatus": "الحالة",
+    "disease": "المرض",
+    "suggestedDiseaseNote": "⚠ مقترح (ليس تشخيصاً) — بناءً على الجين، غير مؤكد سريرياً:",
+    "basedOnGene": "عبر الجين",
+    "pmid": "معرف PMID",
+    "ancestry": "الأصل",
+    "middleEastern": "شرق أوسطي",
+    "saudi": "المملكة العربية السعودية"
+  },
+  "badges": {
+    "saudi": "المجموعة السعودية",
+    "ddd": "DDD",
+    "literature": "الأدبيات",
+    "clinvar": "ClinVar"
+  },
+  "links": {
+    "hpo": "متصفح HPO",
+    "omim": "OMIM",
+    "clinvar": "ClinVar",
+    "dbsnp": "dbSNP",
+    "hgnc": "HGNC",
+    "togovar": "TogoVar",
+    "uniprot": "UniProt",
+    "decipher": "DECIPHER",
+    "ensembl": "Ensembl"
+  }
+}
