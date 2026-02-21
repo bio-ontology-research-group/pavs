@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 import os
@@ -10,7 +9,6 @@ from tqdm import tqdm
 from multiprocessing import Pool, cpu_count
 from functools import lru_cache
 import matplotlib.pyplot as plt
-from sklearn.metrics import precision_recall_curve, auc
 
 # --- HPO Parser ---
 
@@ -62,11 +60,36 @@ def build_descendants(terms):
         full_desc[t_id] = res
         return res
     for t_id in terms: get_desc(t_id)
-    return {t_id: len(res) for t_id, res in full_desc.items()}
+    return {t_id: res for t_id, res in full_desc.items()}
 
-def compute_ic(desc_counts, total):
-    print("Computing IC...")
-    return {t_id: -math.log(count / total) for t_id, count in desc_counts.items()}
+def compute_ic_intrinsic(terms, desc_map):
+    print("Computing Intrinsic IC...")
+    total = len(terms)
+    return {t_id: -math.log(len(desc_set) / total) for t_id, desc_set in desc_map.items()}
+
+def compute_ic_extrinsic(terms, ancestors, gene_to_hpos):
+    print("Computing Extrinsic IC (over genes)...")
+    # Frequency of a term = number of genes associated with it or any descendant
+    # This is equivalent to: for each gene, add all its HPOs and their ancestors to a count
+    term_counts = {t_id: 0 for t_id in terms}
+    total_genes = len(gene_to_hpos)
+    
+    for gene, hpos in gene_to_hpos.items():
+        all_gene_anc = set()
+        for h_id in hpos:
+            if h_id in ancestors:
+                all_gene_anc.update(ancestors[h_id])
+        for anc in all_gene_anc:
+            if anc in term_counts:
+                term_counts[anc] += 1
+                
+    ic = {}
+    for t_id, count in term_counts.items():
+        if count == 0:
+            ic[t_id] = 0.0 # Or very high? SML usually uses min freq of 1
+        else:
+            ic[t_id] = -math.log(count / total_genes)
+    return ic
 
 # Global variables for workers
 _ic = None
@@ -126,48 +149,25 @@ def process_case(args):
             break
     return {'pavs_id': pavs_id, 'gene': correct_gene, 'rank': rank, 'score': score, 'group': group, 'num_candidates': len(similarities)}
 
-def parse_literature_phenopackets(phenopackets_dir, terms):
-    print(f"Parsing literature phenopackets from {phenopackets_dir}...")
-    lit_cases = []
-    for root, dirs, files in os.walk(phenopackets_dir):
-        for file in files:
-            if file.endswith(".json"):
-                path = os.path.join(root, file)
-                try:
-                    with open(path, 'r') as f:
-                        data = json.load(f)
-                        pavs_id = data.get('id', file)
-                        hpos = []
-                        for feature in data.get('phenotypicFeatures', []):
-                            h_id = feature.get('type', {}).get('id')
-                            if h_id and h_id in terms:
-                                hpos.append(h_id)
-                        
-                        # Find gene symbol from interpretations
-                        gene_symbol = None
-                        for interpretation in data.get('interpretations', []):
-                            diagnosis = interpretation.get('diagnosis', {})
-                            for gi in diagnosis.get('genomicInterpretations', []):
-                                gene_symbol = gi.get('variantInterpretation', {}).get('variationDescriptor', {}).get('geneContext', {}).get('symbol')
-                                if gene_symbol: break
-                            if gene_symbol: break
-                        
-                        if hpos and gene_symbol:
-                            lit_cases.append((pavs_id, tuple(sorted(list(set(hpos)))), gene_symbol, 'Literature'))
-                except:
-                    continue
-    return lit_cases
+def run_analysis(tasks, ic, ancestors, gene_to_hpos, all_genes, label):
+    print(f"Starting {label} analysis...")
+    num_procs = cpu_count()
+    results = []
+    # Clear cache for new IC
+    lin_sim.cache_clear()
+    with Pool(processes=num_procs, initializer=init_worker, initargs=(ic, ancestors, gene_to_hpos, all_genes)) as pool:
+        for res in tqdm(pool.imap_unordered(process_case, tasks), total=len(tasks), desc=label):
+            if res: results.append(res)
+    return pd.DataFrame(results)
 
 def main():
-    start_all = time.time()
     terms = parse_hpo_obo("ontology/hp.obo")
     ancestors = build_ancestors(terms)
-    desc_counts = build_descendants(terms)
-    ic = compute_ic(desc_counts, len(terms))
+    desc_map = build_descendants(terms)
     
     print("Loading gene mappings...")
     gene_to_hpos = {}
-    df_gp = pd.read_csv("data/genes_to_phenotype.txt", sep='\t', comment='#')
+    df_gp = pd.read_csv("data/reference/genes_to_phenotype.txt", sep='\t', comment='#')
     for _, row in df_gp.iterrows():
         gene, hpo_id = str(row['gene_symbol']), str(row['hpo_id'])
         if hpo_id in terms:
@@ -176,9 +176,12 @@ def main():
     gene_to_hpos = {k: tuple(sorted(list(set(v)))) for k, v in gene_to_hpos.items()}
     all_genes = sorted(list(gene_to_hpos.keys()))
     
+    # Compute ICs
+    ic_intrinsic = compute_ic_intrinsic(terms, desc_map)
+    ic_extrinsic = compute_ic_extrinsic(terms, ancestors, gene_to_hpos)
+    
+    # Prepare Tasks
     tasks = []
-    # 1. Saudi vs DDD cases
-    print("Loading clinical cases from data/combined_annotated.tsv...")
     df_cases = pd.read_csv('data/combined_annotated.tsv', sep='\t')
     for _, row in df_cases.iterrows():
         gene = str(row['gene_symbol'])
@@ -189,90 +192,56 @@ def main():
                 group = 'DDD' if 'ddd' in str(row['source_file']).lower() else 'Saudi'
                 tasks.append((row['pavs_id'], hpos, gene, group))
                 
-    # 2. Literature Phenopackets
-    lit_cases = parse_literature_phenopackets("phenopackets/0.1.26/", terms)
-    for l_id, l_hpos, l_gene, l_group in lit_cases:
-        if l_gene in gene_to_hpos:
-            tasks.append((l_id, l_hpos, l_gene, l_group))
-            
-    print(f"Total tasks to analyze: {len(tasks)}")
+    # Parse literature (simplified here for brevity, reuse logic from previous)
+    lit_cases = []
+    lit_dir = "phenopackets/0.1.26/"
+    for root, _, files in os.walk(lit_dir):
+        for file in files:
+            if file.endswith(".json"):
+                try:
+                    with open(os.path.join(root, file)) as f:
+                        data = json.load(f)
+                        hpos = [f['type']['id'] for f in data.get('phenotypicFeatures', []) if f.get('type', {}).get('id') in terms]
+                        g_sym = None
+                        for interp in data.get('interpretations', []):
+                            for gi in interp.get('diagnosis', {}).get('genomicInterpretations', []):
+                                g_sym = gi.get('variantInterpretation', {}).get('variationDescriptor', {}).get('geneContext', {}).get('symbol')
+                                if g_sym: break
+                            if g_sym: break
+                        if hpos and g_sym and g_sym in gene_to_hpos:
+                            lit_cases.append((data.get('id', file), tuple(sorted(list(set(hpos)))), g_sym, 'Literature'))
+                except: continue
+    tasks.extend(lit_cases)
     
-    num_procs = cpu_count()
-    print(f"Analyzing with {num_procs} cores...")
-    results = []
-    with Pool(processes=num_procs, initializer=init_worker, initargs=(ic, ancestors, gene_to_hpos, all_genes)) as pool:
-        for res in tqdm(pool.imap_unordered(process_case, tasks), total=len(tasks)):
-            if res:
-                results.append(res)
+    # Run Both
+    res_intrinsic = run_analysis(tasks, ic_intrinsic, ancestors, gene_to_hpos, all_genes, "Intrinsic")
+    res_extrinsic = run_analysis(tasks, ic_extrinsic, ancestors, gene_to_hpos, all_genes, "Extrinsic")
     
-    results_df = pd.DataFrame(results)
     os.makedirs('analysis', exist_ok=True)
-    results_df.to_csv('analysis/phenotype_similarity_full.csv', index=False)
+    res_intrinsic.to_csv('analysis/phenotype_similarity_intrinsic.csv', index=False)
+    res_extrinsic.to_csv('analysis/phenotype_similarity_extrinsic.csv', index=False)
     
-    print(f"Total time: {(time.time() - start_all)/60:.2f} minutes.")
-    generate_summary_and_plots(results_df)
-    create_readme(results_df)
+    # Generate Summary and Plots for both
+    generate_comparison(res_intrinsic, res_extrinsic)
 
-def generate_summary_and_plots(df):
-    groups = df['group'].unique()
-    lines = ["Phenotype Semantic Similarity Analysis Summary\n", "============================================\n\n"]
+def generate_comparison(df_int, df_ext):
+    summary = ["# Comparative Analysis: Intrinsic vs Extrinsic IC\n\n"]
     
-    for label in sorted(groups):
-        g_df = df[df['group'] == label]
-        if g_df.empty: continue
-        ranks = g_df['rank'].values
-        num_cand = g_df['num_candidates'].values
-        aucs = (num_cand - ranks) / (num_cand - 1)
-        mrr = np.mean(1.0 / ranks)
+    for label, df in [("Intrinsic Resnik", df_int), ("Extrinsic (Gene-based)", df_ext)]:
+        summary.append(f"## {label}\n")
+        groups = df['group'].unique()
+        for g in sorted(groups):
+            g_df = df[df['group'] == g]
+            ranks = g_df['rank'].values
+            num_cand = g_df['num_candidates'].values
+            mrr = np.mean(1.0 / ranks)
+            auc_val = np.mean((num_cand - ranks) / (num_cand - 1))
+            summary.append(f"- **{g}**: AUC={auc_val:.4f}, MRR={mrr:.4f}, Hits@10={np.mean(ranks <= 10):.2%}\n")
+        summary.append("\n")
         
-        lines.append(f"--- {label} (n={len(g_df)}) ---\n")
-        lines.append(f"Mean Rank: {np.mean(ranks):.2f}\n")
-        lines.append(f"Median Rank: {np.median(ranks):.2f}\n")
-        lines.append(f"Hits@1: {np.mean(ranks <= 1):.4f}\n")
-        lines.append(f"Hits@10: {np.mean(ranks <= 10):.4f}\n")
-        lines.append(f"Hits@50: {np.mean(ranks <= 50):.4f}\n")
-        lines.append(f"Mean AUC: {np.mean(aucs):.4f}\n")
-        lines.append(f"Mean AUPR proxy (MRR): {mrr:.4f}\n\n")
-        
-        # ROC Plot
-        plt.figure(figsize=(8, 6))
-        sorted_ranks = np.sort(ranks)
-        unique_ranks, counts = np.unique(sorted_ranks, return_counts=True)
-        tpr = np.cumsum(counts) / len(ranks)
-        fpr = (unique_ranks - 1) / (num_cand[0] - 1)
-        fpr = np.insert(fpr, 0, 0); tpr = np.insert(tpr, 0, 0)
-        plt.plot(fpr, tpr, label=f'AUC = {np.mean(aucs):.4f}')
-        plt.plot([0, 1], [0, 1], 'k--')
-        plt.xlabel('False Positive Rate')
-        plt.ylabel('True Positive Rate')
-        plt.title(f'ROC Curve - {label}')
-        plt.legend(); plt.grid(True, linestyle=':', alpha=0.6)
-        plt.savefig(f'analysis/roc_curve_{label.lower()}.png'); plt.close()
-
-    with open('analysis/interpretation_full.txt', 'w') as f: f.writelines(lines)
-
-def create_readme(df):
-    with open('analysis/README.md', 'w') as f:
-        f.write("# Phenotype Semantic Similarity Analysis\n\n")
-        f.write("## Overview\n")
-        f.write("This analysis compares Saudi clinical cases against the Deciphering Developmental Disorders (DDD) ")
-        f.write("cohort and literature-curated Phenopackets (public store 0.1.26). The goal is to evaluate ")
-        f.write("how well clinical phenotypes prioritize the causative gene using semantic similarity.\n\n")
-        f.write("## Methodology\n")
-        f.write("- **Similarity Metric**: Lin's semantic similarity with Best Match Average (BMA) aggregation.\n")
-        f.write("- **Ontology**: Human Phenotype Ontology (HPO).\n")
-        f.write("- **Reference**: HPO associations from `genes_to_phenotype.txt`.\n")
-        f.write("- **Ranking**: Each case is ranked against all genes in the reference dataset (~5,200 genes).\n\n")
-        f.write("## Cohorts\n")
-        f.write("- **Saudi**: Cases from Saudi Arabian clinical studies (Alkuraya, Marwa, Fawzan, etc.).\n")
-        f.write("- **DDD**: Cases from the DDD project as a baseline comparison.\n")
-        f.write("- **Literature**: High-quality manually curated Phenopackets from the public store.\n\n")
-        f.write("## Performance Metrics\n")
-        f.write("- **AUC**: Area Under the ROC Curve, representing the probability that a true gene is ranked higher than a random one.\n")
-        f.write("- **Hits@k**: Proportion of cases where the true gene is in the top k ranks.\n")
-        f.write("- **MRR**: Mean Reciprocal Rank, a proxy for AUPR in ranking tasks.\n\n")
-        f.write("## Results Summary\n")
-        f.write("See `interpretation_full.txt` for detailed metrics and `roc_curve_*.png` for performance curves.\n")
+    with open('analysis/IC_COMPARISON.md', 'w') as f:
+        f.writelines(summary)
+    print("Comparison saved to analysis/IC_COMPARISON.md")
 
 if __name__ == "__main__":
     main()

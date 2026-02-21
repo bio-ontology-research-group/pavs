@@ -16,11 +16,18 @@ This analysis compares Saudi clinical cases against the Deciphering Developmenta
 
 ## Performance Breakdown
 
-| Cohort | n | Mean Rank | Median Rank | Hits@1 | Hits@10 | Hits@50 | Mean AUC | Mean AUPR (MRR) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **DDD** | 1,443 | 39.76 | 1.00 | 55.86% | 80.32% | 90.23% | 0.9925 | 0.6436 |
-| **Literature** | 8,887 | 106.21 | 1.00 | 51.60% | 72.65% | 83.31% | 0.9797 | 0.5920 |
-| **Saudi** | 3,162 | 567.64 | 198.00 | 2.81% | 10.97% | 26.47% | 0.8909 | 0.0574 |
+We compare two Information Content (IC) calculation methods: **Intrinsic Resnik** (based on HPO topology) and **Extrinsic Gene-based** (based on phenotype distribution across the 5,193 reference genes).
+
+| Cohort | IC Method | Mean AUC | Mean AUPR (MRR) | Hits@10 |
+| :--- | :--- | :--- | :--- | :--- |
+| **DDD** | Intrinsic | 0.9925 | 0.6436 | 80.32% |
+| **DDD** | Extrinsic | **0.9941** | **0.6841** | **83.99%** |
+| **Literature** | Intrinsic | 0.9797 | 0.5920 | 72.65% |
+| **Literature** | Extrinsic | **0.9811** | **0.6465** | **77.91%** |
+| **Saudi** | Intrinsic | **0.8909** | 0.0574 | 10.97% |
+| **Saudi** | Extrinsic | 0.8879 | **0.0625** | **11.29%** |
+
+### Detailed Metrics (Intrinsic IC)
 
 ### Saudi Source Sub-analysis
 
