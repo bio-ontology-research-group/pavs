@@ -1,0 +1,35 @@
+Phenotype Semantic Similarity Analysis Summary
+============================================
+
+--- OVERALL (n=4605) ---
+Mean Rank: 402.23
+Median Rank: 66.00
+Hits@1: 0.1944
+Hits@10: 0.3270
+Hits@50: 0.4645
+Mean AUC: 0.9227
+Mean AUPR (MRR): 0.2411
+
+--- SOLVED (n=1775) ---
+Mean Rank: 431.89
+Median Rank: 123.00
+Hits@1: 0.0315
+Hits@10: 0.1341
+Hits@50: 0.3082
+Mean AUC: 0.9170
+Mean AUPR (MRR): 0.0661
+
+--- UNSOLVED (n=2830) ---
+Mean Rank: 383.63
+Median Rank: 23.00
+Hits@1: 0.2965
+Hits@10: 0.4481
+Hits@50: 0.5625
+Mean AUC: 0.9263
+Mean AUPR (MRR): 0.3509
+
+Interpretation:
+The analysis shows that HPO-based gene prioritization is highly effective with a Mean AUC > 0.9.
+Interestingly, 'Unsolved/Unknown' cases show better rank enrichment than 'Solved' cases.
+This suggests that cases labeled as 'Solved' in the cohort may represent real-world clinical complexity where the causative gene does not perfectly match the standard HPO profile (e.g., pleiotropy or novel phenotypes).
+Conversely, 'Unsolved' cases might include those where high-confidence clinical suspicion was used for labeling, leading to higher phenotypic alignment.

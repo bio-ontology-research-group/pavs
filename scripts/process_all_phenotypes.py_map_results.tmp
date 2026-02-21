@@ -1,0 +1,63 @@
+
+def map_results(mapping, rec, explicit_hpos=None):
+    hpo_p = set(explicit_hpos or [])
+    hpo_l, hpo_e, hpo_el = set(), set(), set()
+    omim_p, omim_l, omim_e = set(), set(), set()
+    mondo_p, mondo_l, mondo_e = set(), set(), set()
+    
+    if mapping:
+        items = []
+        if isinstance(mapping, list):
+            for entry in mapping:
+                if isinstance(entry, dict): items.extend(entry.items())
+        elif isinstance(mapping, dict):
+            items = mapping.items()
+            
+        for term, data in items:
+            if not isinstance(data, dict): continue
+            
+            # HPO
+            h = data.get('hpo')
+            if isinstance(h, dict) and h.get('id') and h['id'] != 'None':
+                if h.get('excluded'):
+                    hpo_e.add(h['id'])
+                    hpo_el.add(h.get('label', ''))
+                else:
+                    hpo_p.add(h['id'])
+                    hpo_l.add(h.get('label', ''))
+                    if h.get('severity') and str(h['severity']).startswith('HP:'):
+                        hpo_p.add(h['severity'])
+            
+            # OMIM
+            o = data.get('omim')
+            if isinstance(o, dict) and o.get('id') and o['id'] != 'None':
+                if o.get('excluded'):
+                    omim_e.add(o['id'])
+                else:
+                    omim_p.add(o['id'])
+                    omim_l.add(o.get('label', ''))
+
+            # MONDO
+            m = data.get('mondo')
+            if isinstance(m, dict) and m.get('id') and m['id'] != 'None':
+                if m.get('excluded'):
+                    mondo_e.add(m['id'])
+                else:
+                    mondo_p.add(m['id'])
+                    mondo_l.add(m.get('label', ''))
+
+    # Resolve labels for explicit HPOs
+    final_hpo_labels = list(hpo_l)
+    for hid in hpo_p:
+        if hid not in hpo_l:
+            match = next((t['name'] for t in utils.hpo_terms if t['id'] == hid), None)
+            if match: final_hpo_labels.append(match)
+
+    rec['hpo_ids'] = "|".join(sorted(list(hpo_p)))
+    rec['hpo_labels'] = "|".join(sorted(list(set(filter(None, final_hpo_labels)))))
+    rec['hpo_excluded_ids'] = "|".join(sorted(list(hpo_e)))
+    rec['hpo_excluded_labels'] = "|".join(sorted(list(set(filter(None, hpo_el)))))
+    rec['disease_omim_ids'] = "|".join(sorted(list(omim_p)))
+    rec['disease_omim_labels'] = "|".join(sorted(list(set(filter(None, omim_l)))))
+    rec['disease_mondo_ids'] = "|".join(sorted(list(mondo_p)))
+    rec['disease_mondo_labels'] = "|".join(sorted(list(set(filter(None, mondo_l)))))

@@ -46,10 +46,10 @@ def create_phenopacket(row, hpo_labels):
     
     # Ancestry and Location as phenotypic features
     phenotypes.append({
-        "type": {"id": "HANCESTRO:0014", "label": "Middle Eastern, North African or Persian"}
+        "type": {"id": "HANCESTRO:0852", "label": "Middle Eastern, North African or Persian"}
     })
     phenotypes.append({
-        "type": {"id": "GAZ:00000570", "label": "Saudi Arabia"}
+        "type": {"id": "GAZ:00005279", "label": "Saudi Arabia"}
     })
             
     # Diseases
@@ -68,8 +68,8 @@ def create_phenopacket(row, hpo_labels):
         v_strings = str(row['Variants_HGVS']).split('|')
         genomic_interpretations = []
         
-        zygosity_id = row['Zygosity_GENO'] if pd.notna(row['Zygosity_GENO']) and row['Zygosity_GENO'] else "GENO:0000133"
-        zygosity_label = {"GENO:0000135": "heterozygous", "GENO:0000136": "homozygous", "GENO:0000606": "hemizygous"}.get(zygosity_id, "unknown zygosity")
+        zygosity_id = row['Zygosity_GENO'] if pd.notna(row['Zygosity_GENO']) and row['Zygosity_GENO'] else "GENO:0000137"
+        zygosity_label = {"GENO:0000135": "heterozygous", "GENO:0000136": "homozygous", "GENO:0000134": "hemizygous"}.get(zygosity_id, "unknown zygosity")
 
         for v_str in v_strings:
             v_str = v_str.strip()
@@ -157,9 +157,11 @@ def main():
     output_dir = 'phenopackets/generated'
     os.makedirs(output_dir, exist_ok=True)
     summary_data = []
+    all_phenopackets = []
     
     for _, row in df.iterrows():
         pp, variants = create_phenopacket(row, hpo_labels)
+        all_phenopackets.append(pp)
         file_path = os.path.join(output_dir, f"{row['Master_ID']}.json")
         with open(file_path, 'w') as f:
             json.dump(pp, f, indent=2)
@@ -180,6 +182,12 @@ def main():
             'PMID': "",
             'filename': f"generated/{row['Master_ID']}.json"
         })
+    
+    # Save combined JSON for the backend loader
+    os.makedirs('data', exist_ok=True)
+    with open('data/PAVS_phenopackets.json', 'w') as f:
+        json.dump(all_phenopackets, f, indent=2)
+    print(f"Saved combined phenopackets to data/PAVS_phenopackets.json")
         
     summary_df = pd.DataFrame(summary_data)
     summary_df.to_csv('phenopackets/generated/phenopacket_store.summary.tsv', sep='\t', index=False)

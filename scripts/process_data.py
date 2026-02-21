@@ -27,17 +27,23 @@ def parse_hpo_obo(obo_path):
 def extract_hpo_from_text(text, hpo_map):
     if not isinstance(text, str):
         return [], []
+    
+    # Pre-processing: Expand abbreviations
+    text = re.sub(r'\bDD\b', 'Developmental delay', text)
+    text = re.sub(r'\bGDD\b', 'Global developmental delay', text)
+    
     found_ids = re.findall(r'HP:\d{7}', text)
     terms = re.split(r'[,|;]\s*', text)
     matched_ids = []
     unmatched_terms = []
     for term in terms:
         clean_term = term.strip().lower()
+        # Remove parenthetical HPO IDs
         clean_term = re.sub(r'\(hp:\d{7}\)', '', clean_term).strip()
         if clean_term in hpo_map:
             matched_ids.append(hpo_map[clean_term])
         elif not any(hp_id in term for hp_id in found_ids):
-            if clean_term:
+            if clean_term and len(clean_term) > 2:
                 unmatched_terms.append(term.strip())
     return list(set(found_ids + matched_ids)), list(set(unmatched_terms))
 

@@ -1,0 +1,30 @@
+Phenotype Semantic Similarity Analysis Summary
+============================================
+
+--- DDD (n=1443) ---
+Mean Rank: 39.76
+Median Rank: 1.00
+Hits@1: 0.5586
+Hits@10: 0.8032
+Hits@50: 0.9023
+Mean AUC: 0.9925
+Mean AUPR proxy (MRR): 0.6436
+
+--- Literature (n=8887) ---
+Mean Rank: 106.21
+Median Rank: 1.00
+Hits@1: 0.5160
+Hits@10: 0.7265
+Hits@50: 0.8331
+Mean AUC: 0.9797
+Mean AUPR proxy (MRR): 0.5920
+
+--- Saudi (n=3162) ---
+Mean Rank: 567.64
+Median Rank: 198.00
+Hits@1: 0.0281
+Hits@10: 0.1097
+Hits@50: 0.2647
+Mean AUC: 0.8909
+Mean AUPR proxy (MRR): 0.0574
+
