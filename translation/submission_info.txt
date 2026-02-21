@@ -1,0 +1,28 @@
+# HPO Arabic Translation Submission Information
+
+This translation was generated as part of the PAVS (Phenotypic and Variant Standardization) pipeline.
+
+## Submitter Information
+- **Name**: Robert Hoehndorf
+- **ORCID**: 0000-0001-8149-5890
+- **Organization**: King Abdullah University of Science and Technology (KAUST)
+- **Email**: robert.hoehndorf@kaust.edu.sa
+
+## Translation Description
+- **Language**: Arabic (ar)
+- **Method**: LLM-generated using GPT-4o via OpenRouter.
+- **Scope**: 8,501 HPO terms (labels and definitions).
+- **Date**: 2026-02-21
+- **Status**: CANDIDATE (Machine-translated, pending expert review)
+- **Context**: This translation is part of an effort to standardize phenotypic data for clinical cases in the Middle East, specifically Saudi Arabia.
+
+## Files
+- `hp-ar.babelon.tsv`: The main translation file in Babelon format (Labels & Definitions).
+- `hp-ar-synonyms.robot.tsv`: Arabic layperson synonyms in ROBOT template format.
+- `hp-ar.obo`: (Optional) Updated HPO OBO file with Arabic synonyms.
+
+## Submission Instructions
+1. Fork the `obophenotype/hpo-translations` repository on GitHub.
+2. Copy `hp-ar.babelon.tsv` to the `babelon/` directory.
+3. Create a Pull Request with the above description.
+4. Alternatively, email the files and this description to the HPOIE contacts mentioned at https://obophenotype.github.io/hpo-translations/submit/.

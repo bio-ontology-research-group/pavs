@@ -166,10 +166,21 @@ async def process_ontology(args):
     terms_to_translate = []
     all_terms_map = {}
     
+    # Load target IDs if provided
+    target_ids = None
+    if args.target_ids and os.path.exists(args.target_ids):
+        with open(args.target_ids, 'r') as f:
+            target_ids = {line.strip() for line in f if line.strip().startswith('HP:')}
+        logger.info(f"Filtering for {len(target_ids)} target IDs from {args.target_ids}")
+
     for term in onto.terms():
         if term.obsolete:
             continue
             
+        # If target_ids provided, only process those
+        if target_ids is not None and term.id not in target_ids:
+            continue
+
         all_synonyms = [s.description for s in term.synonyms]
         layperson_synonyms = [s.description for s in term.synonyms if s.type and s.type.id == 'layperson']
         parent_names = [p.name for p in term.superclasses(distance=1) if p.name and p.id != term.id]
@@ -272,6 +283,7 @@ def main():
     parser.add_argument("--limit", type=int, help="Limit terms for this specific run")
     parser.add_argument("--price-prompt", type=float, default=0.15, help="Price per 1M prompt tokens")
     parser.add_argument("--price-completion", type=float, default=0.60, help="Price per 1M completion tokens")
+    parser.add_argument("--target-ids", help="Optional: File containing HPO IDs to focus on (one per line)")
     
     args = parser.parse_args()
     asyncio.run(process_ontology(args))
