@@ -8,7 +8,7 @@ A curated database of genomic variants and phenotypes from Saudi Arabian patient
 
 | Name | ORCID | Role |
 |---|---|---|
-| **Marwa Abdelhakim** | [0000-0001-6816-2119](https://orcid.org/0000-0001-6816-2119) | Manual curation of all source datasets; main contributor |
+| **Marwa Abdelhakim** | [0000-0001-6816-2119](https://orcid.org/0000-0001-6816-2119) | Manual curation of all source datasets |
 | **Azza Althagafi** | [0000-0001-6084-8706](https://orcid.org/0000-0001-6084-8706) | Computational experiments and validation |
 | **Paul N Schofield** | [0000-0002-5111-7263](https://orcid.org/0000-0002-5111-7263) | Curation, supervision, and guidance |
 | **Robert Hoehndorf** | [0000-0001-8149-5890](https://orcid.org/0000-0001-8149-5890) | Supervision, code contributions, validation analysis, website |
