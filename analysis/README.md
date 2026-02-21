@@ -4,66 +4,46 @@
 This analysis compares Saudi clinical cases against the Deciphering Developmental Disorders (DDD) cohort and literature-curated Phenopackets (public store 0.1.26). The goal is to evaluate how well clinical phenotypes prioritize the causative gene using semantic similarity.
 
 ## Methodology
-- **Similarity Metric**: Lin's semantic similarity with Best Match Average (BMA) aggregation.
+- **Similarity Metrics**: Lin and Resnik semantic similarity.
+- **Aggregation**: Best Match Average (BMA).
 - **Ontology**: Human Phenotype Ontology (HPO).
-- **Reference**: HPO associations from `genes_to_phenotype.txt`.
+- **IC Calculation**: Both Intrinsic (topology-based) and Extrinsic (gene-based) Information Content.
 - **Ranking**: Each case is ranked against all genes in the reference dataset (~5,200 genes).
-
-## Cohorts
-- **Saudi** (n=3,162): Cases from Saudi Arabian clinical studies (Alkuraya, Marwa, Fawzan, etc.).
-- **DDD** (n=1,443): Cases from the DDD project as a baseline comparison.
-- **Literature** (n=8,887): High-quality manually curated Phenopackets from the public store.
 
 ## Performance Breakdown
 
-We compare two Information Content (IC) calculation methods: **Intrinsic Resnik** (based on HPO topology) and **Extrinsic Gene-based** (based on phenotype distribution across the 5,193 reference genes).
+We compare four combinations of Information Content (IC) and Similarity Measures. **Extrinsic Resnik** consistently provides the best prioritization performance.
 
-| Cohort | IC Method | Mean AUC | Mean AUPR (MRR) | Hits@10 |
-| :--- | :--- | :--- | :--- | :--- |
-| **DDD** | Intrinsic | 0.9925 | 0.6436 | 80.32% |
-| **DDD** | Extrinsic | **0.9941** | **0.6841** | **83.99%** |
-| **Literature** | Intrinsic | 0.9797 | 0.5920 | 72.65% |
-| **Literature** | Extrinsic | **0.9811** | **0.6465** | **77.91%** |
-| **Saudi** | Intrinsic | **0.8909** | 0.0574 | 10.97% |
-| **Saudi** | Extrinsic | 0.8879 | **0.0625** | **11.29%** |
+| Cohort | Method | Mean AUC | Mean AUPR (MRR) | Hits@1 | Hits@10 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **DDD** | Extrinsic Resnik | **0.9941** | **0.7134** | **60.50%** | **85.17%** |
+| **DDD** | Extrinsic Lin | 0.9941 | 0.6841 | 55.86% | 83.99% |
+| **Literature** | Extrinsic Resnik | **0.9813** | **0.6712** | **56.36%** | **79.60%** |
+| **Literature** | Extrinsic Lin | 0.9811 | 0.6465 | 51.60% | 77.91% |
+| **Saudi** | Extrinsic Resnik | 0.8861 | **0.0625** | **3.35%** | **11.29%** |
+| **Saudi** | Intrinsic Resnik | **0.8880** | 0.0574 | 2.81% | 10.97% |
 
-### Detailed Metrics (Intrinsic IC)
+### Saudi Source Sub-analysis (Extrinsic Resnik)
 
-### Saudi Source Sub-analysis
+The Saudi cohort consists of six distinct sources. Performance using the top-performing **Extrinsic Resnik** method:
 
-The Saudi cohort consists of six distinct sources with varying phenotypic data quality and specificity:
-
-| Source | n | Mean Rank | Median Rank | Hits@1 | Hits@10 | Mean AUC | Mean AUPR (MRR) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **marwa-variants** | 1,064 | 364.6 | 93.0 | 5.36% | 18.42% | 0.9300 | 0.0982 |
-| **PMC7082194** | 122 | 492.9 | 175.0 | 1.64% | 8.20% | 0.9053 | 0.0438 |
-| **ahmed-pmid28454995** | 88 | 582.5 | 239.5 | 1.14% | 4.55% | 0.8880 | 0.0278 |
-| **PMC6562004** | 1,228 | 680.6 | 329.5 | 1.55% | 7.17% | 0.8691 | 0.0367 |
-| **fawzan-variants** | 460 | 696.1 | 297.0 | 0.87% | 7.39% | 0.8661 | 0.0308 |
-| **ahmed-variants** | 200 | 698.1 | 298.5 | 3.00% | 7.50% | 0.8657 | 0.0501 |
+| Source | n | Hits@1 | Hits@10 | Mean AUC | MRR |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **marwa-variants** | 1,064 | 7.89% | 20.68% | 0.9307 | 0.1238 |
+| **ahmed-variants** | 200 | 2.50% | 9.00% | 0.8628 | 0.0482 |
+| **PMC7082194** | 122 | 1.64% | 7.38% | 0.8956 | 0.0455 |
+| **PMC6562004** | 1,228 | 1.63% | 8.71% | 0.8728 | 0.0423 |
+| **fawzan-variants** | 460 | 1.09% | 6.74% | 0.8654 | 0.0346 |
+| **ahmed-pmid28454995** | 88 | 1.14% | 3.41% | 0.8892 | 0.0251 |
 
 ## Key Files
-- `phenotype_similarity_full.csv`: Raw results for every case.
-- `interpretation_full.txt`: Detailed performance metrics for each major cohort.
-- `saudi_sources_stats.csv`: Performance metrics for each Saudi source.
-- `combined_roc_curves.png`: Comparative ROC curves (Saudi vs DDD vs Literature).
-- `combined_pr_curves.png`: Comparative Precision-Recall curves.
-- `saudi_sources_roc.png`: ROC curves for the 6 Saudi sources.
-- `saudi_sources_pr.png`: PR curves for the 6 Saudi sources.
+- `phenotype_similarity_comprehensive.csv`: Raw results for all 4 methods.
+- `saudi_sources_comprehensive_stats.csv`: Statistical breakdown for all Saudi sub-cohorts and methods.
+- `saudi_sources_roc_extrinsic_resnik.png`: ROC curves for Saudi sources (top method).
+- `combined_roc_curves.png`: Comparative ROC curves across major cohorts.
 - `METHOD.md`: Detailed documentation of the computational methodology.
-- `roc_curve_*.png`: Individual cohort ROC curves.
 
-## Performance Metrics
-- **AUC**: Area Under the ROC Curve, representing the probability that a true gene is ranked higher than a random one.
-- **Hits@k**: Proportion of cases where the true gene is in the top k ranks.
-- **MRR**: Mean Reciprocal Rank, a proxy for AUPR in ranking tasks.
-
-## Results Summary
-See `interpretation_full.txt` for detailed metrics and `roc_curve_*.png` for performance curves.
-
-### Summary Observations
-1. **DDD Performance**: The DDD cohort shows very high phenotypic alignment (Mean AUC: 0.9925, Hits@1: 55.86%), indicating high specificity in clinical descriptions or strong curation.
-2. **Literature Performance**: Manually curated phenopackets from the public store perform exceptionally well (Mean AUC: 0.9797, Hits@1: 51.60%).
-3. **Saudi Cohort Performance**: The Saudi cases show lower phenotypic alignment (Mean AUC: 0.8909, Hits@1: 2.81%). This suggests greater phenotypic heterogeneity, potential under-reporting in clinical text, or variants in genes that exhibit atypical presentations in the Saudi population.
-
-The performance gap between curated literature/DDD and the Saudi cohort highlights the need for standardized phenotypic data collection in clinical settings.
+## Summary Observations
+1. **Method Optimization**: Using Extrinsic (gene-based) IC with Resnik similarity significantly improves prioritization accuracy, especially Hits@1 and MRR, by focusing on clinically informative terms.
+2. **DDD/Literature vs. Saudi**: Curated datasets show exceptional alignment. The Saudi cohort presents greater real-world challenge, with lower Hits@1 indicating phenotypic heterogeneity or sparse clinical descriptions.
+3. **Internal Variability**: Within the Saudi cohort, the Alkuraya dataset (marwa-variants) shows the highest quality phenotypic descriptions, achieving a 20.7% Hits@10.

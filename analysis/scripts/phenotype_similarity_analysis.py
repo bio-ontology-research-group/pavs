@@ -1,3 +1,4 @@
+
 import pandas as pd
 import numpy as np
 import os
@@ -69,68 +70,59 @@ def compute_ic_intrinsic(terms, desc_map):
 
 def compute_ic_extrinsic(terms, ancestors, gene_to_hpos):
     print("Computing Extrinsic IC (over genes)...")
-    # Frequency of a term = number of genes associated with it or any descendant
-    # This is equivalent to: for each gene, add all its HPOs and their ancestors to a count
     term_counts = {t_id: 0 for t_id in terms}
     total_genes = len(gene_to_hpos)
-    
     for gene, hpos in gene_to_hpos.items():
         all_gene_anc = set()
         for h_id in hpos:
-            if h_id in ancestors:
-                all_gene_anc.update(ancestors[h_id])
+            if h_id in ancestors: all_gene_anc.update(ancestors[h_id])
         for anc in all_gene_anc:
-            if anc in term_counts:
-                term_counts[anc] += 1
-                
-    ic = {}
-    for t_id, count in term_counts.items():
-        if count == 0:
-            ic[t_id] = 0.0 # Or very high? SML usually uses min freq of 1
-        else:
-            ic[t_id] = -math.log(count / total_genes)
-    return ic
+            if anc in term_counts: term_counts[anc] += 1
+    return {t_id: (-math.log(count / total_genes) if count > 0 else 0.0) for t_id, count in term_counts.items()}
 
 # Global variables for workers
 _ic = None
 _ancestors = None
 _gene_to_hpos = None
 _all_genes = None
+_method = 'lin'
 
-def init_worker(ic, ancestors, gene_to_hpos, all_genes):
-    global _ic, _ancestors, _gene_to_hpos, _all_genes
+def init_worker(ic, ancestors, gene_to_hpos, all_genes, method):
+    global _ic, _ancestors, _gene_to_hpos, _all_genes, _method
     _ic = ic
     _ancestors = ancestors
     _gene_to_hpos = gene_to_hpos
     _all_genes = all_genes
+    _method = method
 
-@lru_cache(maxsize=100000)
-def lin_sim(t1, t2):
-    if t1 == t2: return 1.0
+@lru_cache(maxsize=200000)
+def pair_sim(t1, t2):
     if t1 not in _ancestors or t2 not in _ancestors: return 0.0
     common = _ancestors[t1] & _ancestors[t2]
     if not common: return 0.0
     max_ic = max(_ic.get(c, 0.0) for c in common)
+    if _method == 'resnik':
+        return max_ic
+    # Lin
     denom = _ic.get(t1, 0) + _ic.get(t2, 0)
-    if denom == 0: return 0.0
-    return (2.0 * max_ic) / denom
+    return (2.0 * max_ic) / denom if denom > 0 else 0.0
 
 def bma_sim(set1, set2):
     if not set1 or not set2: return 0.0
     sum1 = 0
     for t1 in set1:
-        max_s = 0
+        ms = 0
         for t2 in set2:
-            s = lin_sim(t1, t2)
-            if s > max_s: max_s = s
-        sum1 += max_s
+            s = pair_sim(t1, t2)
+            if s > ms: ms = s
+        sum1 += ms
     sum2 = 0
     for t2 in set2:
-        max_s = 0
+        ms = 0
         for t1 in set1:
-            s = lin_sim(t1, t2)
-            if s > max_s: max_s = s
-        sum2 += max_s
+            s = pair_sim(t1, t2)
+            if s > ms: ms = s
+        sum2 += ms
     return (sum1 / len(set1) + sum2 / len(set2)) / 2.0
 
 def process_case(args):
@@ -149,18 +141,20 @@ def process_case(args):
             break
     return {'pavs_id': pavs_id, 'gene': correct_gene, 'rank': rank, 'score': score, 'group': group, 'num_candidates': len(similarities)}
 
-def run_analysis(tasks, ic, ancestors, gene_to_hpos, all_genes, label):
-    print(f"Starting {label} analysis...")
-    num_procs = cpu_count()
+def run_analysis(tasks, ic, ancestors, gene_to_hpos, all_genes, method, ic_type, num_cores):
+    print(f"Starting {ic_type} {method} analysis...")
+    pair_sim.cache_clear()
     results = []
-    # Clear cache for new IC
-    lin_sim.cache_clear()
-    with Pool(processes=num_procs, initializer=init_worker, initargs=(ic, ancestors, gene_to_hpos, all_genes)) as pool:
-        for res in tqdm(pool.imap_unordered(process_case, tasks), total=len(tasks), desc=label):
+    with Pool(processes=num_cores, initializer=init_worker, initargs=(ic, ancestors, gene_to_hpos, all_genes, method)) as pool:
+        for res in tqdm(pool.imap_unordered(process_case, tasks), total=len(tasks), desc=f"{ic_type}-{method}"):
             if res: results.append(res)
-    return pd.DataFrame(results)
+    df = pd.DataFrame(results)
+    df['ic_type'] = ic_type
+    df['sim_method'] = method
+    return df
 
 def main():
+    num_cores = cpu_count()
     terms = parse_hpo_obo("ontology/hp.obo")
     ancestors = build_ancestors(terms)
     desc_map = build_descendants(terms)
@@ -176,11 +170,9 @@ def main():
     gene_to_hpos = {k: tuple(sorted(list(set(v)))) for k, v in gene_to_hpos.items()}
     all_genes = sorted(list(gene_to_hpos.keys()))
     
-    # Compute ICs
     ic_intrinsic = compute_ic_intrinsic(terms, desc_map)
     ic_extrinsic = compute_ic_extrinsic(terms, ancestors, gene_to_hpos)
     
-    # Prepare Tasks
     tasks = []
     df_cases = pd.read_csv('data/combined_annotated.tsv', sep='\t')
     for _, row in df_cases.iterrows():
@@ -192,8 +184,6 @@ def main():
                 group = 'DDD' if 'ddd' in str(row['source_file']).lower() else 'Saudi'
                 tasks.append((row['pavs_id'], hpos, gene, group))
                 
-    # Parse literature (simplified here for brevity, reuse logic from previous)
-    lit_cases = []
     lit_dir = "phenopackets/0.1.26/"
     for root, _, files in os.walk(lit_dir):
         for file in files:
@@ -209,39 +199,20 @@ def main():
                                 if g_sym: break
                             if g_sym: break
                         if hpos and g_sym and g_sym in gene_to_hpos:
-                            lit_cases.append((data.get('id', file), tuple(sorted(list(set(hpos)))), g_sym, 'Literature'))
+                            tasks.append((data.get('id', file), tuple(sorted(list(set(hpos)))), g_sym, 'Literature'))
                 except: continue
-    tasks.extend(lit_cases)
-    
-    # Run Both
-    res_intrinsic = run_analysis(tasks, ic_intrinsic, ancestors, gene_to_hpos, all_genes, "Intrinsic")
-    res_extrinsic = run_analysis(tasks, ic_extrinsic, ancestors, gene_to_hpos, all_genes, "Extrinsic")
-    
-    os.makedirs('analysis', exist_ok=True)
-    res_intrinsic.to_csv('analysis/phenotype_similarity_intrinsic.csv', index=False)
-    res_extrinsic.to_csv('analysis/phenotype_similarity_extrinsic.csv', index=False)
-    
-    # Generate Summary and Plots for both
-    generate_comparison(res_intrinsic, res_extrinsic)
 
-def generate_comparison(df_int, df_ext):
-    summary = ["# Comparative Analysis: Intrinsic vs Extrinsic IC\n\n"]
+    all_results = []
+    # 4 combinations
+    for ic_type, ic_vals in [('intrinsic', ic_intrinsic), ('extrinsic', ic_extrinsic)]:
+        for sim_method in ['lin', 'resnik']:
+            res = run_analysis(tasks, ic_vals, ancestors, gene_to_hpos, all_genes, sim_method, ic_type, num_cores)
+            res.to_csv(f'analysis/results_{ic_type}_{sim_method}.csv', index=False)
+            all_results.append(res)
     
-    for label, df in [("Intrinsic Resnik", df_int), ("Extrinsic (Gene-based)", df_ext)]:
-        summary.append(f"## {label}\n")
-        groups = df['group'].unique()
-        for g in sorted(groups):
-            g_df = df[df['group'] == g]
-            ranks = g_df['rank'].values
-            num_cand = g_df['num_candidates'].values
-            mrr = np.mean(1.0 / ranks)
-            auc_val = np.mean((num_cand - ranks) / (num_cand - 1))
-            summary.append(f"- **{g}**: AUC={auc_val:.4f}, MRR={mrr:.4f}, Hits@10={np.mean(ranks <= 10):.2%}\n")
-        summary.append("\n")
-        
-    with open('analysis/IC_COMPARISON.md', 'w') as f:
-        f.writelines(summary)
-    print("Comparison saved to analysis/IC_COMPARISON.md")
+    final_df = pd.concat(all_results)
+    final_df.to_csv('analysis/phenotype_similarity_comprehensive.csv', index=False)
+    print("Comprehensive results saved to analysis/phenotype_similarity_comprehensive.csv")
 
 if __name__ == "__main__":
     main()
