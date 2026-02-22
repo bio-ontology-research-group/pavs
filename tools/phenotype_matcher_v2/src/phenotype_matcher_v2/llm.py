@@ -212,3 +212,89 @@ def llm_val_batch(
     if cache is not None:
         cache[cache_key] = valid_ids
     return valid_ids
+
+
+# ---------------------------------------------------------------------------
+# Fix 6a: LLM-based post-hoc negation and modifier validation
+# ---------------------------------------------------------------------------
+
+def llm_check_negation(
+    term_label: str,
+    context: str,
+    api_key: Optional[str] = None,
+    model: str = "deepseek/deepseek-chat",
+    cache: Optional[dict] = None,
+) -> bool:
+    """
+    Fix 6a — Return True if *term_label* is expressed as absent/excluded in
+    *context*.  Used to validate (and potentially flip) rule-based negation
+    decisions.
+    """
+    cache_key = ("llm_neg", term_label.lower(), context.lower().strip(), model)
+    if cache is not None and cache_key in cache:
+        return cache[cache_key]
+
+    system = (
+        "You are a clinical NLP expert. "
+        "Answer only with the single word: true or false"
+    )
+    user = (
+        f"In the clinical text: '{context}'\n"
+        f"Is the phenotype '{term_label}' expressed as absent, excluded, "
+        f"or not present?\n"
+        "Reply only with: true or false"
+    )
+
+    try:
+        raw = query_llm(system, user, api_key=api_key, model=model)
+        result = str(raw).strip().lower().startswith("true")
+    except Exception:
+        result = True  # conservative: keep negation on error
+
+    if cache is not None:
+        cache[cache_key] = result
+    return result
+
+
+def llm_check_modifier(
+    term_label: str,
+    modifier_label: str,
+    context: str,
+    api_key: Optional[str] = None,
+    model: str = "deepseek/deepseek-chat",
+    cache: Optional[dict] = None,
+) -> bool:
+    """
+    Fix 6a — Return True if *modifier_label* correctly describes the severity
+    or degree of *term_label* in *context*.  Used to validate (and potentially
+    drop) rule-based modifier assignments.
+    """
+    cache_key = (
+        "llm_mod",
+        term_label.lower(),
+        modifier_label.lower(),
+        context.lower().strip(),
+        model,
+    )
+    if cache is not None and cache_key in cache:
+        return cache[cache_key]
+
+    system = (
+        "You are a clinical NLP expert. "
+        "Answer only with the single word: true or false"
+    )
+    user = (
+        f"In the clinical text: '{context}'\n"
+        f"Is '{modifier_label}' the severity or degree of '{term_label}'?\n"
+        "Reply only with: true or false"
+    )
+
+    try:
+        raw = query_llm(system, user, api_key=api_key, model=model)
+        result = str(raw).strip().lower().startswith("true")
+    except Exception:
+        result = True  # conservative: keep modifier on error
+
+    if cache is not None:
+        cache[cache_key] = result
+    return result

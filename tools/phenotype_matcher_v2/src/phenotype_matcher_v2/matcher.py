@@ -8,18 +8,20 @@ Algorithm 6: match(s: str) → PhenotypeOutput
 import os
 import threading
 from collections import OrderedDict
+from dataclasses import replace as dc_replace
 from typing import Any, Dict, List, Optional, Set, Tuple
 
 import numpy as np
 
 from .detection import (
+    _NEG_ENCODED_LABEL_STARTS,
     det_mod,
     det_mod_in_text,
     det_neg,
     det_neg_in_text,
     is_boundary_valid,
 )
-from .llm import llm_dis, llm_val_batch
+from .llm import llm_check_modifier, llm_check_negation, llm_dis, llm_val_batch
 from .normalization_utils import get_stemmed_tokens
 from .ontology_index import OntologyIndex
 from .schemas import (
@@ -44,8 +46,8 @@ EMBEDDING_MODELS: Dict[str, str] = {
 
 LLM_MODELS: Dict[str, str] = {
     "deepseek": "deepseek/deepseek-chat",
-    "gpt4oss":  "openai/gpt-4o-mini",
-    "accurate": "anthropic/claude-sonnet-4-5",
+    "gpt4oss":  "openai/gpt-oss-120b",
+    "accurate": "anthropic/claude-sonnet-3-5",
     "gemini":   "google/gemini-2.0-flash-exp:free",
 }
 
@@ -62,6 +64,13 @@ W_STOP: Set[str] = {
     "diagnosis", "clinical", "finding", "feature", "sign", "symptom",
     "present", "status",
 }
+
+# Fix 1b: Severity words that, when present in a term label, suppress the
+# rule-based severity modifier (to avoid double-encoding e.g. "Severe
+# intellectual disability" + modifier "severe").
+_SEVERITY_WORDS = frozenset([
+    "severe", "mild", "moderate", "profound", "borderline", "marked",
+])
 
 # Tuple fields: (term_id: str, modifier_id: Optional[str], negated: bool)
 _MatchTuple = Tuple[str, Optional[str], bool]
@@ -243,9 +252,12 @@ class PhenotypeMatcher:
                         t_lower, start_idx, end_idx + 1,
                         idx.modifier_map, win=self.cfg.det_mod_win,
                     )
+                    # Fix 3a: pass matched_label so triggers embedded in the
+                    # term name (e.g. "absent" in "Absent speech") are skipped.
                     negated = det_neg(
                         t_lower, start_idx, end_idx + 1,
                         win=self.cfg.det_neg_win,
+                        matched_label=label,
                     )
 
                     p_cand = idx.exact_map[label]
@@ -280,10 +292,25 @@ class PhenotypeMatcher:
                     mod_id = det_mod_in_text(t_lower, idx.modifier_map)
                     negated = det_neg_in_text(t_lower)
                     for lbl in filtered:
+                        # If the ANN-matched label already encodes absence
+                        # (e.g. "Absent speech"), the negation trigger in the
+                        # token (e.g. "no" in "no speech") is what caused the
+                        # semantic match — not an external negation of the term.
+                        # Override negated=False for such labels.
+                        lbl_negated = negated
+                        if negated and any(
+                            lbl.lower().startswith(pfx)
+                            for pfx in _NEG_ENCODED_LABEL_STARTS
+                        ):
+                            lbl_negated = False
                         for pid in idx.exact_map.get(lbl, []):
-                            O.add((pid, mod_id, negated))
+                            O.add((pid, mod_id, lbl_negated))
 
         output = self._build_output(O, s)
+
+        # Fix 6c: LLM-based post-hoc validation of negation and modifier
+        # decisions (only when api_key is configured).
+        output.phenotypes = self._llm_validate(output.phenotypes, s)
 
         # Store in match-level cache with bounded eviction
         if self.cfg.match_cache_size > 0:
@@ -453,6 +480,58 @@ class PhenotypeMatcher:
             return []
 
     # ------------------------------------------------------------------
+    # Fix 6c: LLM post-hoc validation
+    # ------------------------------------------------------------------
+
+    def _llm_validate(
+        self, phenotypes: List[PhenotypeMatch], original_text: str
+    ) -> List[PhenotypeMatch]:
+        """
+        Fix 6c — Post-hoc LLM validation of negation and modifier decisions.
+
+        Only runs when an API key is configured (self._api_key is not None).
+        For each excluded phenotype, confirms it is truly excluded; if the LLM
+        disagrees, flips it to present.  For each modifier, confirms it applies;
+        if the LLM disagrees, removes the modifier.
+        """
+        if not self._api_key:
+            return phenotypes
+
+        validated: List[PhenotypeMatch] = []
+        for pm in phenotypes:
+            if self.cfg.llm_validate_negation and pm.excluded:
+                confirmed = llm_check_negation(
+                    pm.label,
+                    original_text,
+                    api_key=self._api_key,
+                    model=self._llm_model,
+                    cache=self._llm_cache,
+                )
+                if not confirmed:
+                    # LLM says term is NOT excluded — flip to present
+                    pm = dc_replace(pm, excluded=False)
+
+            if (
+                self.cfg.llm_validate_modifiers
+                and not pm.excluded
+                and pm.severity_id
+                and pm.severity_label
+            ):
+                confirmed = llm_check_modifier(
+                    pm.label,
+                    pm.severity_label,
+                    original_text,
+                    api_key=self._api_key,
+                    model=self._llm_model,
+                    cache=self._llm_cache,
+                )
+                if not confirmed:
+                    pm = dc_replace(pm, severity_id=None, severity_label=None)
+
+            validated.append(pm)
+        return validated
+
+    # ------------------------------------------------------------------
     # Build PhenotypeOutput from tuple set
     # ------------------------------------------------------------------
 
@@ -463,12 +542,36 @@ class PhenotypeMatcher:
         seen_pheno: Set[str] = set()
         seen_disease: Set[str] = set()
 
+        # Fix 2b: Compute parent subsumption — suppress a term if a more
+        # specific (descendant) matched term is also present and not negated.
+        all_hp_present = {
+            term_id
+            for (term_id, _, negated) in O
+            if term_id.startswith("HP:") and term_id in idx.phenotype_ids and not negated
+        }
+        suppressed: Set[str] = set()
+        for tid in all_hp_present:
+            for other in all_hp_present:
+                if other != tid and tid in idx.hpo_ancestors.get(other, set()):
+                    # tid is an ancestor of `other` → suppress the parent
+                    suppressed.add(tid)
+                    break
+
         for (term_id, mod_id, negated) in O:
             if term_id.startswith("HP:") and term_id in idx.phenotype_ids:
+                # Fix 2b: Skip terms subsumed by a more specific matched term
+                if not negated and term_id in suppressed:
+                    continue
                 if term_id in seen_pheno:
                     continue
                 seen_pheno.add(term_id)
                 label = idx.primary_label.get(term_id, term_id)
+
+                # Fix 1b: Suppress modifier when severity is already encoded
+                # in the term label (e.g. "Severe intellectual disability").
+                if mod_id and any(w in label.lower() for w in _SEVERITY_WORDS):
+                    mod_id = None
+
                 sev_label = idx.primary_label.get(mod_id) if mod_id else None
                 phenotypes.append(PhenotypeMatch(
                     hpo_id=term_id,

@@ -77,12 +77,16 @@ class NormalizationUtils:
             self.hpo_terms, self.hpo_names = [], []
             self.hpo_gene_map = {}
         self.mondo = {}
+        self.omim_to_mondo: dict = {}
         if os.path.exists(MONDO_OBO_PATH):
             try:
                 ms = pronto.Ontology(MONDO_OBO_PATH)
                 for term in ms.terms():
                     if term.id.startswith("MONDO:"):
                         self.mondo[term.id] = term.name
+                        for xref in term.xrefs:
+                            if xref.id.startswith("OMIM:"):
+                                self.omim_to_mondo[xref.id] = term.id
             except:
                 pass
         self.mondo_list = [{"id": k, "name": v} for k, v in self.mondo.items()]

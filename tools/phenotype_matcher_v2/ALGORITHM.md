@@ -65,6 +65,10 @@ phenotype_ids    : Set[str]
 modifier_ids     : Set[str]
     All descendants of HP:0012824 (Severity).
 
+hpo_ancestors    : Dict[str, Set[str]]
+    term_id → set of all ancestor HP IDs (excludes term itself).
+    Used for parent-term subsumption in _build_output().
+
 ac_automaton     : ahocorasick.Automaton
     Aho-Corasick automaton over all keys of exact_map.
     Enables O(n) multi-pattern substring search.
@@ -99,7 +103,7 @@ For each MONDO term, pronto xrefs are scanned for entries beginning with `Orphan
 
 1. **Hard segmentation**: split `text` on the regex `[,;.]|\s+but\s+` (comma, semicolon, full stop, or ` but `). Each resulting segment is stripped of leading/trailing whitespace.
 
-2. **Coordination expansion**: for each non-empty segment, attempt two patterns in order:
+2. **Coordination expansion**: for each non-empty segment, attempt three patterns in order:
 
    - **Pattern A** — `(\w+) and (\w+) (.+)`:
      "Adj1 and Adj2 Noun" → emit `"Adj1 Noun"` and `"Adj2 Noun"`
@@ -108,6 +112,11 @@ For each MONDO term, pronto xrefs are scanned for entries beginning with `Orphan
    - **Pattern B** — `(.+?) with (\w+) and (.+)`:
      "Noun with A and B" → emit `"Noun with A"` and `"Noun with B"`
      Example: `"seizures with fever and rash"` → `["seizures with fever", "seizures with rash"]`
+
+   - **Pattern C** — `(.+?) and (.+)` where the left side is multi-word:
+     Splits "PhenotypeA and PhenotypeB" when both sides are independent terms.
+     Guard: left side must contain a space (prevents splitting compound terms like `"rod and cone dystrophy"`).
+     Example: `"severe microcephaly and epilepsy"` → `["severe microcephaly", "epilepsy"]`
 
    - **No match**: keep the segment as-is.
 
@@ -138,21 +147,50 @@ resolution of, resolved, disappeared
 
 Multi-word triggers (e.g. `"ruled out"`, `"absence of"`) are tested before their sub-strings to prevent partial matches from shadowing them.
 
+### Absence-encoding label prefixes (`_NEG_ENCODED_LABEL_STARTS`)
+
+HPO labels that already encode a negative/absent finding:
+
+```
+"absent ", "absence of ", "missing ", "loss of ", "lack of "
+```
+
+When the matched term's canonical label starts with one of these prefixes, the term **is** the negative finding — applying an external negation trigger would create a double-negation, which is exceedingly rare in clinical text. Example: `"no speech"` semantically matches `"Absent speech"` (HP:0002371). The external `"no"` caused the ANN match; it must not additionally mark the term as excluded.
+
+**Rule**: if `matched_label.lower().startswith(any prefix in _NEG_ENCODED_LABEL_STARTS)`, `det_neg()` returns `False` immediately without examining context windows.
+
 ### Word-window helpers
 
 `_split_words(text)` splits `text` on whitespace and returns `(start, end, word)` triples.
 
 `_word_windows(text, char_start, char_end, win)`:
-1. Finds which word indices overlap the character span `[char_start, char_end)`.
+1. Strips parenthetical content from the pre- and post-context portions only (not the matched span itself), using `re.sub(r'\([^)]*\)', ' ', ...)`. This prevents qualifiers like `"(not congenital)"` from triggering negation for the surrounding term.
 2. Returns `(pre, post)` where `pre` is the `win` words before the span and `post` is the `win` words after, each joined by spaces.
 
-### Algorithm 2a — `det_neg(text, start, end, win=5)`
+### Algorithm 2a — `det_neg(text, start, end, win=5, matched_label="")`
 
-Returns `True` if any `V_NEG` trigger appears as a substring of the concatenated pre/post word windows (case-insensitive). The `win` parameter is words, defaulting to 5.
+Checks whether the matched span at `[start, end)` is negated:
+
+1. **Absence-encoding early exit**: if `matched_label` starts with any prefix in `_NEG_ENCODED_LABEL_STARTS`, return `False` immediately (prevents double-negation of terms like "Absent speech").
+
+2. Compute `(pre, post)` via `_word_windows`.
+
+3. **Cross-clause truncation**: apply `_truncate_post_at_conjunction(post)` — truncate the post-context at the first occurrence of `and`, `or`, `with`, or `but`. This prevents negation from leaking across independent clauses (e.g., `"short femur and absent radius"` — for `"short femur"`, the post-context is truncated before `"and"`, so `"absent"` in the next clause is not seen).
+
+4. Form `combined_lower = (pre + " " + post).lower()`.
+
+5. For each trigger in `V_NEG` (longest first):
+   - If trigger is found in `combined_lower`:
+     - **Label-bypass**: if `matched_label` is provided and the same trigger appears in `matched_label.lower()`, skip (the trigger is part of the term's own name, not an external negation). Example: `"absent"` in `"Absent speech"` must not trigger negation for `"no speech"`.
+     - Otherwise return `True`.
+
+6. Return `False`.
 
 ### Algorithm 2b — `det_mod(text, start, end, modifier_map, win=4)`
 
-Searches the concatenated pre/post word windows (case-insensitive) for the **longest** key present in `modifier_map`. Returns the corresponding modifier ID, or `None`. Longest-match ensures `"profound"` beats `"mild"` when both appear.
+Searches the **pre-context only** (not combined pre+post) of the `win`-word window for the **longest** key present in `modifier_map`. Returns the corresponding modifier ID, or `None`.
+
+**Pre-context only**: modifiers semantically precede the clinical term (e.g., `"severe microcephaly"`). Searching post-context caused modifiers from an earlier term to leak onto subsequent terms in a list (e.g., `"moderate developmental delay, autistic behavior"` — `"moderate"` is in the post-context window for `"autistic behavior"` when using combined pre+post).
 
 ### `is_boundary_valid(text, start, end)`
 
@@ -163,6 +201,8 @@ Returns `True` iff the character immediately before `start` (if any) and the cha
 Used when the token is passed directly to the ANN (Phase 2e), where there is no specific character span. These functions search the entire token string rather than a word window. `det_mod_in_text` still applies longest-match.
 
 These variants are also used as **guards** before Phase 1b and Phase 2b (stemmed lookup): because spaCy's lemmatiser removes stop words such as `"no"`, `get_stemmed_tokens("no seizures")` returns `frozenset({'seizure'})`, which would incorrectly match HP:0001250 as present. The guard `if not det_neg_in_text(...)` skips the stemmed path when negation is present; Phase 2d (Aho-Corasick with `det_neg`) handles such tokens correctly instead.
+
+**Note**: In Phase 2e, `det_neg_in_text` returns a single `negated` flag for the whole token. However, each surviving ANN label is then individually checked against `_NEG_ENCODED_LABEL_STARTS`: if the label already encodes absence, `lbl_negated` is forced to `False` for that specific match, overriding the token-level flag. This is essential for tokens like `"no speech"` which semantically match `"Absent speech"`.
 
 ---
 
@@ -260,11 +300,12 @@ Find labels at edit distance 1 via `_fuzzy_lookup`. Call `_process_matches`. If 
 **2d — Aho-Corasick substring search**
 Iterate all matches of the AC automaton over `t_lower`. For each match at `[start_idx, end_idx]` (inclusive):
 1. Check `is_boundary_valid(t_lower, start_idx, end_idx + 1)`. Skip if invalid.
-2. Compute `mod_id = det_mod(t_lower, start_idx, end_idx + 1, modifier_map, win=det_mod_win)`.
-3. Compute `negated = det_neg(t_lower, start_idx, end_idx + 1, win=det_neg_win)`.
-4. If `|p_cand| > 1`: call `llm_dis` to disambiguate; fall back to all candidates.
-5. Add `(pid, mod_id, negated)` to `O` for each resolved ID.
-6. Set `found_phrase = True`.
+2. Retrieve the primary label `label` for the matched term.
+3. Compute `mod_id = det_mod(t_lower, start_idx, end_idx + 1, modifier_map, win=det_mod_win)`.
+4. Compute `negated = det_neg(t_lower, start_idx, end_idx + 1, win=det_neg_win, matched_label=label)`. The `matched_label` parameter enables the absence-encoding bypass and label-bypass rules (see Algorithm 2a).
+5. If `|p_cand| > 1`: call `llm_dis` to disambiguate; fall back to all candidates.
+6. Add `(pid, mod_id, negated)` to `O` for each resolved ID.
+7. Set `found_phrase = True`.
 
 If `found_phrase`, `continue` to next token (skip Phase 2e).
 
@@ -275,20 +316,51 @@ Encode `t` with the sentence transformer. Compute cosine similarity against all 
 2. Let `S_max` be the highest remaining score. Keep only candidates within `[S_max − δ, S_max]` where `δ = 0.05`.
 3. Cap at `k = 5` candidates.
 
-For each surviving label, apply `det_neg_in_text(t_lower)` and `det_mod_in_text(t_lower, modifier_map)` to the whole token. Add `(pid, mod_id, negated)` to `O` for each ID in `exact_map[label]`.
+Compute a single token-level `negated = det_neg_in_text(t_lower)` and `mod_id = det_mod_in_text(t_lower, modifier_map)`.
+
+For each surviving label:
+- Compute `lbl_negated = negated`.
+- **Absence-encoding per-label override**: if `negated` is `True` and `label.lower()` starts with any prefix in `_NEG_ENCODED_LABEL_STARTS`, set `lbl_negated = False`. This ensures that tokens like `"no speech"` which semantically match `"Absent speech"` are not doubly-negated.
+- Add `(pid, mod_id, lbl_negated)` to `O` for each ID in `exact_map[label]`.
 
 ### Output construction (`_build_output`)
 
-Route each `(term_id, mod_id, negated)` tuple to the appropriate output structure:
+Converts the `(term_id, mod_id, negated)` accumulator `O` into a `PhenotypeOutput`.
+
+**Step 1 — Severity-in-label suppression**
+
+Before routing, check whether a matched HPO phenotype's primary label already contains a severity word (e.g., `"Severe intellectual disability"` contains `"severe"`). If so, clear `mod_id` to avoid double-encoding severity. Recognised severity words: `severe`, `mild`, `moderate`, `profound`, `borderline`, `marked`.
+
+**Step 2 — Parent-term subsumption**
+
+After collecting all present (non-negated) HPO term IDs, suppress any term that is an ancestor of another matched term. For example, if both `HP:0001249` (Intellectual disability) and `HP:0010864` (Severe intellectual disability) are matched:
+- `HP:0010864` is a descendant of `HP:0001249`.
+- `HP:0001249` is in `hpo_ancestors[HP:0010864]`.
+- Therefore `HP:0001249` is added to the suppressed set and omitted from the output.
+
+This is computed using `idx.hpo_ancestors`: for each present term `tid`, if any other present term `other` has `tid` in its ancestor set, `tid` is suppressed.
+
+**Step 3 — Routing**
+
+Route each surviving tuple to the appropriate output structure:
 
 | Condition | Output |
 |---|---|
-| `term_id.startswith("HP:")` and `term_id ∈ phenotype_ids` | `PhenotypeMatch(hpo_id, label, excluded=negated, severity_id=mod_id, ...)` |
+| `term_id.startswith("HP:")` and `term_id ∈ phenotype_ids` (not suppressed) | `PhenotypeMatch(hpo_id, label, excluded=negated, severity_id=mod_id, ...)` |
 | `term_id.startswith("MONDO:")` | `DiseaseMatch(mondo_id=term_id, orphanet_ids=mondo_to_orphanet.get(term_id, []))` |
 | `term_id.startswith("OMIM:")` | `DiseaseMatch(omim_phenotype_ids=[term_id], omim_labels=[label])` |
 | `term_id.startswith("ORPHA:")` | `DiseaseMatch(orphanet_ids=[term_id])` |
 
 Deduplication is by `term_id` within each output list.
+
+### LLM post-hoc validation (`_llm_validate`)
+
+If `cfg.api_key` is set, an optional post-hoc pass is applied after `_build_output`:
+
+- **Negation validation** (`cfg.llm_validate_negation=True`): for each excluded phenotype, the LLM confirms whether the term is truly absent in context. If the LLM disagrees, the phenotype is flipped to present.
+- **Modifier validation** (`cfg.llm_validate_modifiers=True`): for each phenotype with a severity modifier, the LLM confirms whether the modifier correctly describes that phenotype's severity in context. If not, the modifier is cleared.
+
+Disabled (no-op) when `api_key` is absent so the pipeline stays fully offline by default. Results are cached per `(term_label, context)` pair to minimise API calls.
 
 ---
 
@@ -353,3 +425,39 @@ Available presets:
 | `balanced` | `all-mpnet-base-v2` | Good general purpose |
 | `accurate` | `BAAI/bge-large-en-v1.5` | High accuracy, slower |
 | `medical` | `pritamdeka/S-PubMedBert-MS-MARCO` | Medical domain |
+
+---
+
+## Known Edge Cases and Rules
+
+### Double-negation prevention
+
+Clinical terms whose HPO label starts with an absence-encoding prefix (`"absent "`, `"absence of "`, `"missing "`, `"loss of "`, `"lack of "`) represent the negative finding as the canonical phenotype. Examples:
+
+| Input text | ANN match | Correct behaviour |
+|---|---|---|
+| `"no speech"` | `"Absent speech"` (HP:0002371) | present (not excluded) |
+| `"lack of eye brows"` | `"Absent eyebrows"` (HP:0000561) | present (not excluded) |
+| `"loss of vision"` | `"Loss of vision"` (HP:0000572) | present (not excluded) |
+
+The `_NEG_ENCODED_LABEL_STARTS` guard in `det_neg()` and the per-label override in Phase 2e both implement this rule.
+
+### Parenthetical qualifiers
+
+Expressions like `"microcephaly (not congenital)"` contain a subtype qualifier in parentheses. This qualifier must not trigger negation for the surrounding term. `_word_windows()` strips parenthetical content before computing context windows.
+
+### Cross-clause negation
+
+`"short femur and numerus with absent radius and tibia"` — for the span `"short femur"`, the post-context is truncated before `"and"`, preventing `"absent"` from the next clause from marking the femur term as negated.
+
+### Modifier scope
+
+`"moderate developmental delay, autistic behavior"` — `"moderate"` is in the pre-context of `"autistic behavior"` when the window is 4 words. `det_mod()` uses **pre-context only**, so it does not see `"moderate"` in post-context of earlier terms. Comma segmentation also limits cross-term leakage.
+
+### Severity double-encoding
+
+`"Severe intellectual disability"` matches HP:0010864 directly (the HPO term for severe intellectual disability). Applying `"severe"` as a modifier on top would double-encode severity. `_build_output()` suppresses `mod_id` when the matched label already contains a severity word.
+
+### Parent-term redundancy
+
+When both `"Intellectual disability"` (HP:0001249) and `"Severe intellectual disability"` (HP:0010864) are matched, the parent HP:0001249 is suppressed because HP:0010864 is in its descendant set.

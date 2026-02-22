@@ -18,10 +18,14 @@ Usage:
 
 import argparse
 import csv
+import functools
+import json as _json
 import os
 import re
 import sys
 import traceback
+import unicodedata
+import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Dict, List, Optional, Tuple
 
@@ -769,6 +773,7 @@ def parse_ahmed_variants(path: str, limit: Optional[int] = None) -> List[dict]:
         rec["_raw_variants"] = variants
         rec["_raw_inheritance"] = inheritance_vals
         rec["_raw_omim"] = safe_str(row.get("Omim", ""))
+        rec["_pmid"] = ["28454995"]  # Fix 4: hardcode PMID for ahmed-variants
         rows.append(rec)
 
     return rows
@@ -849,10 +854,77 @@ def parse_ahmed_pmid(path: str, limit: Optional[int] = None) -> List[dict]:
             })
 
         rec["_raw_variants"] = variants
+        # Fix 4: ensure PMID 28454995 is always present for this source
+        if "28454995" not in pmids:
+            pmids.insert(0, "28454995")
         rec["_pmid"] = list(dict.fromkeys(pmids))
+        # Mark as Solved if any variant found (Fix 3)
+        if variants:
+            rec["_raw_result"] = "Solved"
         rows.append(rec)
 
     return rows
+
+
+@functools.lru_cache(maxsize=2000)
+def _ensembl_lookup_cm(cm_id: str) -> dict:
+    """Query Ensembl REST for a HGMD CM ID. Returns {chrom, pos} or {}.
+    NOTE: Ensembl variation API does not index HGMD CM IDs, so this always
+    returns {}. Kept for possible future support."""
+    url = f"https://rest.ensembl.org/variation/human/{cm_id}?content-type=application/json"
+    try:
+        with urllib.request.urlopen(url, timeout=10) as resp:
+            data = _json.loads(resp.read())
+        for m in data.get("mappings", []):
+            if m.get("assembly_name") == "GRCh38":
+                return {"chrom": m["seq_region_name"], "pos": m["start"]}
+    except Exception:
+        pass
+    return {}
+
+
+@functools.lru_cache(maxsize=2000)
+def _ensembl_lookup_rsid(rs_id: str) -> dict:
+    """Query Ensembl REST variation API for a dbSNP rs ID. Returns {chrom, pos, ref, alt} or {}."""
+    if not rs_id or not rs_id.startswith("rs"):
+        return {}
+    url = f"https://rest.ensembl.org/variation/human/{rs_id}?content-type=application/json"
+    try:
+        with urllib.request.urlopen(url, timeout=10) as resp:
+            data = _json.loads(resp.read())
+        for m in data.get("mappings", []):
+            if m.get("assembly_name") == "GRCh38":
+                allele = m.get("allele_string", "")
+                ref, _, alt = allele.partition("/") if "/" in allele else ("", "", "")
+                return {
+                    "chrom": m["seq_region_name"],
+                    "pos": m["start"],
+                    "ref": ref,
+                    "alt": alt,
+                }
+    except Exception:
+        pass
+    return {}
+
+
+def _parse_hgmd_entries(hgmd_raw: str) -> list:
+    """Return list of unique parsed HGMD dicts (deduplicated by CM ID)."""
+    seen_ids: set = set()
+    entries = []
+    for seg in re.split(r"\|\|?", hgmd_raw):
+        seg = seg.strip()
+        if not seg:
+            continue
+        if seg.startswith("Info="):
+            seg = seg[5:]
+        fields = dict(kv.split("=", 1) for kv in seg.split(";") if "=" in kv)
+        cm_id = fields.get("ID", "")
+        if cm_id and cm_id in seen_ids:
+            continue
+        if cm_id:
+            seen_ids.add(cm_id)
+        entries.append(fields)
+    return entries
 
 
 def parse_fawzan(path: str, limit: Optional[int] = None) -> List[dict]:
@@ -874,43 +946,96 @@ def parse_fawzan(path: str, limit: Optional[int] = None) -> List[dict]:
         raw_result = safe_str(row.get("Result", ""))
         rec["_raw_result"] = raw_result
         rec["_raw_phenotype"] = safe_str(row.get("Phenotype", ""))
+        rec["_pmid"] = ["28600779"]  # Fix 7: hardcode PMID for fawzan source
 
-        # Note HGMD accession in notes
         hgmd = safe_str(row.get("HGMD", ""))
-        if hgmd:
-            rec["_notes"] = f"HGMD:{hgmd}"
+
+        # Fix 6: split semicolon-separated variants and zygosity
+        zyg_raw = safe_str(row.get("Zyogsity", ""))  # note typo in header
+        zyg_parts = [z.strip() for z in zyg_raw.split(";")] if zyg_raw else []
 
         variants = []
-        zyg_raw = safe_str(row.get("Zyogsity", ""))  # note typo in header
-
         for var_col in ["Variant(s)", "Variant(s).1"]:
             var_raw = safe_str(row.get(var_col, ""))
             if not var_raw:
                 continue
+            # Split on ; only before an uppercase letter (gene start), not inside c./p. notation
+            var_items = re.split(r";(?=[A-Z])", var_raw)
+            for i, var_item in enumerate(var_items):
+                var_item = var_item.strip()
+                if not var_item:
+                    continue
+                cdna, protein, genomic, notes_frag = parse_variant_string(var_item)
+                gene = ""
+                parts = [p.strip() for p in var_item.split(":")]
+                if parts and not parts[0].startswith(("c.", "p.", "g.", "NC_", "NM_")):
+                    gene = parts[0]
+                zyg = zyg_parts[i] if i < len(zyg_parts) else (zyg_parts[0] if zyg_parts else zyg_raw)
 
-            # Parse GENE:NM_xxxxx:ExonN:c.xxx:p.xxx format
-            cdna, protein, genomic, notes_frag = parse_variant_string(var_raw)
-            gene = ""
-            parts = [p.strip() for p in var_raw.split(":")]
-            if parts and not parts[0].startswith(("c.", "p.", "g.", "NC_", "NM_")):
-                gene = parts[0]
+                if notes_frag and not cdna and not genomic:
+                    if rec["_notes"]:
+                        rec["_notes"] += "; " + notes_frag
+                    else:
+                        rec["_notes"] = notes_frag
 
-            if notes_frag and not cdna and not genomic:
-                if rec["_notes"]:
-                    rec["_notes"] += "; " + notes_frag
-                else:
-                    rec["_notes"] = notes_frag
+                variants.append({
+                    "gene": gene,
+                    "cdna": cdna,
+                    "protein": protein,
+                    "genomic": genomic,
+                    "zygosity": zyg,
+                    "acmg_class": "",
+                    "acmg_evidence": "",
+                    "omim": "",
+                })
 
-            variants.append({
-                "gene": gene,
-                "cdna": cdna,
-                "protein": protein,
-                "genomic": genomic,
-                "zygosity": zyg_raw,
-                "acmg_class": "",
-                "acmg_evidence": "",
-                "omim": "",
-            })
+        # Fix 5: parse HGMD entries for disease name and Ensembl genomic lookup
+        if hgmd:
+            hgmd_entries = _parse_hgmd_entries(hgmd)
+            for fields in hgmd_entries:
+                disease = fields.get("Disease", "").rstrip("|").strip()
+                if disease and not rec.get("_raw_disease"):
+                    rec["_raw_disease"] = disease
+                cm_id = fields.get("ID", "")
+                ref = fields.get("Ref", ".")
+                alt = fields.get("Alt", ".")
+                rs_id = fields.get("dbSNP", "")
+                if cm_id and ref not in (".", "") and alt not in (".", ""):
+                    # Try CM ID first (usually fails — Ensembl doesn't index HGMD IDs),
+                    # then fall back to dbSNP rs ID from the HGMD Info field.
+                    loc = _ensembl_lookup_cm(cm_id)
+                    if not loc and rs_id and rs_id.startswith("rs"):
+                        rs_loc = _ensembl_lookup_rsid(rs_id)
+                        if rs_loc:
+                            # Use ref/alt from HGMD Info (rs entry may be multi-allelic)
+                            loc = {"chrom": rs_loc["chrom"], "pos": rs_loc["pos"]}
+                    if loc:
+                        chrom = loc["chrom"]
+                        pos = loc["pos"]
+                        genomic_str = f"Chr{chrom}(GRCh38):g.{pos}{ref}>{alt}"
+                        if not variants:
+                            # No variant parsed from Variant(s) — add genomic-only entry
+                            variants.append({
+                                "gene": "",
+                                "cdna": "",
+                                "protein": "",
+                                "genomic": genomic_str,
+                                "zygosity": zyg_raw,
+                                "acmg_class": "",
+                                "acmg_evidence": "",
+                                "omim": "",
+                            })
+                        else:
+                            # Update the first existing variant that lacks genomic coords
+                            for v in variants:
+                                if not v.get("genomic"):
+                                    v["genomic"] = genomic_str
+                                    break
+                    elif fields.get("Start", ".") not in (".", ""):
+                        note_frag = f"HGMD:{cm_id};hg19_pos={fields['Start']};Ref={ref};Alt={alt}"
+                        if rs_id:
+                            note_frag += f";dbSNP={rs_id}"
+                        rec["_notes"] = (rec["_notes"] + "; " + note_frag).strip("; ")
 
         rec["_raw_variants"] = variants
         rows.append(rec)
@@ -928,13 +1053,35 @@ def parse_marwa(path: str, limit: Optional[int] = None) -> List[dict]:
     for _, row in df.iterrows():
         rec = _empty_row()
         rec["_source_file"] = "marwa-variants"
-        rec["_source_id"] = safe_str(row.get("id", ""))
+        # Fix 13: sanitize source_id to ASCII (handles em-dash and other Unicode)
+        raw_id = safe_str(row.get("id", ""))
+        raw_id = unicodedata.normalize("NFKD", raw_id)
+        raw_id = raw_id.encode("ascii", "replace").decode("ascii").replace("?", "-")
+        rec["_source_id"] = raw_id
         rec["_raw_sex"] = safe_str(row.get("patient_gender", ""))
         rec["_raw_age"] = safe_str(row.get("patient_age", ""))
         rec["_raw_consanguinity"] = safe_str(row.get("consanguinity", ""))
         rec["_raw_test"] = safe_str(row.get("test", ""))
         rec["_raw_result"] = safe_str(row.get("result", ""))
-        rec["_raw_phenotype"] = safe_str(row.get("phenotypes", ""))
+
+        # Fix 12 Part A: extract inline OMIM IDs and disease names from phenotype text
+        raw_phenotype = safe_str(row.get("phenotypes", ""))
+        omim_inline = re.findall(r"OMIM:(\d+)", raw_phenotype)
+        if omim_inline:
+            rec["_raw_omim"] = "|".join(f"OMIM:{n}" for n in omim_inline)
+            for part in raw_phenotype.split("|"):
+                if "OMIM:" in part and "HP:" not in part:
+                    disease_text = re.sub(r"\(OMIM:\d+\)", "", part).strip("; ")
+                    disease_text = disease_text.split(";")[0].strip()
+                    if disease_text and not rec.get("_raw_disease"):
+                        rec["_raw_disease"] = disease_text
+        # Remove OMIM/disease-only segments from phenotype before HPO matching
+        cleaned_parts = []
+        for part in raw_phenotype.split("|"):
+            if "OMIM:" in part and "HP:" not in part:
+                continue  # disease reference, not a phenotype term
+            cleaned_parts.append(part)
+        rec["_raw_phenotype"] = "|".join(cleaned_parts)
 
         # Extract PMID from reference column (PubMed URLs)
         ref = safe_str(row.get("reference", ""))
@@ -1051,6 +1198,7 @@ def parse_pmc6562004(path: str, limit: Optional[int] = None) -> List[dict]:
 
         rec["_raw_variants"] = variants
         rec["_raw_inheritance"] = [inh_raw] if inh_raw else []
+        rec["_pmid"] = ["31130284"]  # Fix 8: hardcode PMID for PMC6562004
         rows.append(rec)
 
     return rows
@@ -1070,10 +1218,8 @@ def parse_pmc7082194(path: str, limit: Optional[int] = None) -> List[dict]:
         rec["_raw_sex"] = safe_str(row.get("Sex", ""))
         rec["_raw_age"] = safe_str(row.get("Age (years, months)", ""))
         rec["_raw_phenotype"] = safe_str(row.get("Unnamed: 13", ""))  # col 13 = clinical phenotype
-
-        # PMID from Ref column
-        ref = safe_str(row.get("Ref ", row.get("Ref", "")))
-        rec["_pmid"] = extract_pmid(ref)
+        rec["_pmid"] = ["31618753"]  # Fix 9: hardcode PMID for PMC7082194
+        rec["_raw_disease"] = safe_str(row.get("Clinical Snydrome", ""))  # Fix 9: read disease column
 
         # Note that source data is hg19
         rec["_notes"] = "[source: hg19]"
@@ -1140,6 +1286,9 @@ def parse_pmc7082194(path: str, limit: Optional[int] = None) -> List[dict]:
 
         rec["_raw_variants"] = variants
         rec["_raw_inheritance"] = inh_list
+        # Fix 9: mark as Solved if any variant found
+        if variants:
+            rec["_raw_result"] = "Solved"
         rows.append(rec)
 
     return rows
@@ -1181,7 +1330,8 @@ def parse_ddd_diagnoses(path: str, limit: Optional[int] = None) -> List[dict]:
         rec["_raw_inheritance"] = [allelic_mode] if allelic_mode else []
         rec["_raw_omim"] = omim_raw
         rec["_raw_disease"] = syndrome
-        rec["_pmid"] = extract_pmid(pubmed_raw)
+        rec["_pmid"] = ["39353430"]  # Fix 10: hardcode PMID for ddd-diagnoses
+        rec["_raw_result"] = "Solved"  # Fix 10: all DDD rows are solved diagnoses
 
         # No variants for DDD
         # Gene goes in variants list with no variant info for gene_symbol output
@@ -1221,22 +1371,44 @@ def normalize_disease(
 
     # Parse OMIM IDs from raw_omim
     if raw_omim:
-        # May be "300653 & 609340" or "300653" etc.
-        nums = re.findall(r"\d{5,6}", raw_omim)
+        # May be "300653 & 609340", "OMIM:232300", pipe-delimited, etc.
+        # First try full OMIM:XXXXXX patterns, then fall back to bare numbers
+        omim_curie_matches = re.findall(r"OMIM:(\d{5,6})", raw_omim)
+        bare_num_matches = re.findall(r"\b(\d{5,6})\b", raw_omim) if not omim_curie_matches else []
+        nums = omim_curie_matches or bare_num_matches
         for n in nums:
-            omim_ids.append(f"OMIM:{n}")
-            # Get label from disease_map
-            label = nu.disease_map.get(f"OMIM:{n}", nu.disease_map.get(n, ""))
+            omim_id = f"OMIM:{n}"
+            omim_ids.append(omim_id)
+            label = nu.disease_map.get(omim_id, nu.disease_map.get(n, ""))
             omim_labels.append(label)
 
-    # Try MONDO lookup for disease name
-    if raw_disease and nu.mondo_names:
+    # Fix 12 Part C: OMIM→MONDO xref lookup first (more reliable than fuzzy text match)
+    omim_to_mondo = getattr(nu, "omim_to_mondo", {})
+    for omim_id in omim_ids:
+        if omim_id in omim_to_mondo:
+            mid = omim_to_mondo[omim_id]
+            if mid not in mondo_ids:
+                mondo_ids.append(mid)
+                mondo_labels.append(nu.mondo.get(mid, ""))
+
+    # Only fall back to fuzzy text match if no MONDO found via xref
+    if not mondo_ids and raw_disease and nu.mondo_names:
         from rapidfuzz import process as rfprocess, fuzz
         results = rfprocess.extract(raw_disease, nu.mondo_names, limit=1, scorer=fuzz.token_sort_ratio)
         if results and results[0][1] >= 80:
             idx = results[0][2]
             mondo_ids.append(nu.mondo_list[idx]["id"])
             mondo_labels.append(nu.mondo_list[idx]["name"])
+        else:
+            # Fallback: partial_ratio handles HGMD-style names like "Usher syndrome 1b"
+            # that differ in subtype notation (arabic vs Roman numerals) from MONDO names.
+            # Require high threshold (88) and result must be longer than query (not just prefix).
+            results2 = rfprocess.extract(raw_disease, nu.mondo_names, limit=3, scorer=fuzz.partial_ratio)
+            for match_label, score, idx in results2:
+                if score >= 88 and len(match_label) >= len(raw_disease) - 5:
+                    mondo_ids.append(nu.mondo_list[idx]["id"])
+                    mondo_labels.append(nu.mondo_list[idx]["name"])
+                    break
 
     return mondo_ids, mondo_labels, omim_ids, omim_labels, orphanet_ids
 
@@ -1291,31 +1463,28 @@ def normalize_marwa_phenotypes(
     if not phenotype_raw:
         return present_ids, present_labels, excluded_ids, excluded_labels, modifier_ids, modifier_labels
 
-    # Extract HPO IDs from inline text like "macular focal atrophy (HP:0007401)"
-    # Also split on |
+    # Phase 1: collect all (hpo_id, raw_label, mod_id, mod_label) from inline |-separated parts.
+    # Use dict to merge by HP ID, taking union of modifiers and set of raw labels.
     parts = [p.strip() for p in phenotype_raw.split("|")]
-    direct_hpo = set()
+    # inline_items: hpo_id -> {labels: set, mod_ids: set, mod_labels: set}
+    inline_items: dict = {}
     free_text_parts = []
 
     for part in parts:
-        # Find all HPO IDs in the part
         hpo_matches = re.findall(r"HP:\d{7}", part)
         if hpo_matches:
-            direct_hpo.update(hpo_matches)
+            raw_label = re.sub(r"\(HP:\d{7}\)", "", part).strip().rstrip(",;").strip()
+            for hpo_id in hpo_matches:
+                if hpo_id not in inline_items:
+                    inline_items[hpo_id] = {"labels": set(), "mod_ids": set(), "mod_labels": set()}
+                if raw_label:
+                    inline_items[hpo_id]["labels"].add(raw_label)
         else:
-            # Remove HPO ID annotations if any embedded
             clean = re.sub(r"\(HP:\d{7}\)", "", part).strip()
             if clean:
                 free_text_parts.append(clean)
 
-    # Add direct HPO IDs
-    for hpo_id in sorted(direct_hpo):
-        present_ids.append(hpo_id)
-        present_labels.append(hpo_label_map.get(hpo_id, "") if hpo_label_map else "")
-        modifier_ids.append("")
-        modifier_labels.append("")
-
-    # Match free text via phenotype matcher
+    # Phase 2: free-text matching via phenotype matcher — merge results into inline_items or add new
     if free_text_parts and matcher:
         combined_text = ", ".join(free_text_parts)
         try:
@@ -1325,12 +1494,23 @@ def normalize_marwa_phenotypes(
                     excluded_ids.append(pm.hpo_id)
                     excluded_labels.append(pm.label)
                 else:
-                    present_ids.append(pm.hpo_id)
-                    present_labels.append(pm.label)
-                    modifier_ids.append(pm.severity_id or "")
-                    modifier_labels.append(pm.severity_label or "")
+                    if pm.hpo_id not in inline_items:
+                        inline_items[pm.hpo_id] = {"labels": set(), "mod_ids": set(), "mod_labels": set()}
+                    if pm.severity_id:
+                        inline_items[pm.hpo_id]["mod_ids"].add(pm.severity_id)
+                    if pm.severity_label:
+                        inline_items[pm.hpo_id]["mod_labels"].add(pm.severity_label)
         except Exception:
             pass
+
+    # Phase 3: build parallel output lists (one entry per HP ID, union of modifiers)
+    for hpo_id, data in inline_items.items():
+        present_ids.append(hpo_id)
+        raw_labels_sorted = sorted(data["labels"])
+        label = raw_labels_sorted[0] if raw_labels_sorted else (hpo_label_map.get(hpo_id, "") if hpo_label_map else "")
+        present_labels.append(label)
+        modifier_ids.append("|".join(sorted(data["mod_ids"])))
+        modifier_labels.append("|".join(sorted(data["mod_labels"])))
 
     return present_ids, present_labels, excluded_ids, excluded_labels, modifier_ids, modifier_labels
 
@@ -1456,8 +1636,9 @@ def normalize_one_row(
     out["phenotypes_present_labels"] = pipe_join(present_labels)
     out["phenotypes_excluded_ids"] = pipe_join(excluded_ids)
     out["phenotypes_excluded_labels"] = pipe_join(excluded_labels)
-    out["phenotypes_modifier_ids"] = pipe_join(modifier_ids)
-    out["phenotypes_modifier_labels"] = pipe_join(modifier_labels)
+    # Use non-filtering join to preserve positional alignment with present_ids
+    out["phenotypes_modifier_ids"] = "|".join(modifier_ids)
+    out["phenotypes_modifier_labels"] = "|".join(modifier_labels)
 
     # Variants
     raw_variants = rec.get("_raw_variants", [])

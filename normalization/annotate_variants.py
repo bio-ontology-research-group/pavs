@@ -186,16 +186,17 @@ def extract_variant_keys(df: pd.DataFrame):
             coords = None
             hgvs = None
 
-            # Try genomic coord first
+            # Try genomic coord first — use region endpoint key for SNVs with known coords
             if gcoord and gcoord not in ("nan", ""):
                 parsed = parse_genomic_hgvs(gcoord)
-                if parsed and parsed[2]:  # has ref/alt
+                if parsed and parsed[2]:  # has chrom, pos, ref, alt
                     coords = parsed
-                    # Build a VCF-style HGVS for VEP from genomic coord
                     chrom, pos, ref, alt = parsed
-                    hgvs = f"{chrom}:g.{pos}{ref}>{alt}"
+                    # Use region-style key so run_vep_rest picks the region endpoint.
+                    # Format: __region__:11:77174825-77174825:1/T
+                    hgvs = f"{_VEP_REGION_PREFIX}{chrom}:{pos}-{pos}:1/{alt}"
 
-            # Fall back to GENE:c.xxx
+            # Fall back to GENE:c.xxx (HGVS endpoint)
             if hgvs is None and cdna and cdna not in ("nan", "") and g and g not in ("nan", ""):
                 # Take first gene if compound symbol
                 g0 = g.split("/")[0].strip()
@@ -216,6 +217,7 @@ def extract_variant_keys(df: pd.DataFrame):
 # ---------------------------------------------------------------------------
 
 VEP_GET_BASE = "https://rest.ensembl.org/vep/human/hgvs"
+VEP_REGION_BASE = "https://rest.ensembl.org/vep/human/region"
 VEP_GET_PARAMS = {
     "canonical": 1,
     "hgvs": 1,
@@ -225,6 +227,9 @@ VEP_GET_PARAMS = {
     "af": 1,
 }
 VEP_SLEEP = 0.1  # 10 req/second (Ensembl allows up to 15/s)
+
+# Region-style key prefix used in unique_hgvs dict to distinguish from HGVS keys
+_VEP_REGION_PREFIX = "__region__:"
 
 MUTALYZER_BASE = "https://mutalyzer.nl/api/normalize"
 MUTALYZER_SLEEP = 0.4  # ~2.5 req/sec
@@ -256,7 +261,12 @@ def run_vep_rest(unique_hgvs: dict, cache_file: Path) -> dict:
 
     new_since_save = 0
     for i, hgvs in enumerate(to_query, 1):
-        url = f"{VEP_GET_BASE}/{quote(hgvs, safe='')}"
+        # Region-style keys use the VEP region endpoint; all others use HGVS endpoint.
+        if hgvs.startswith(_VEP_REGION_PREFIX):
+            region_path = hgvs[len(_VEP_REGION_PREFIX):]  # e.g. "11:77174825-77174825:1/T"
+            url = f"{VEP_REGION_BASE}/{quote(region_path, safe=':/-')}"
+        else:
+            url = f"{VEP_GET_BASE}/{quote(hgvs, safe='')}"
         for attempt in range(3):
             try:
                 r = session.get(url, params=VEP_GET_PARAMS, timeout=30)

@@ -20,8 +20,8 @@ class MatcherConfig:
 
     LLM model presets:
         "deepseek" → deepseek/deepseek-chat          [default, free tier]
-        "gpt4oss"  → openai/gpt-4o-mini              [cheap]
-        "accurate" → anthropic/claude-sonnet-4-5
+        "gpt4oss"  → openai/gpt-oss-120b              [cheap]
+        "accurate" → anthropic/claude-sonnet-3-5
         "gemini"   → google/gemini-2.0-flash-exp:free
     """
 
@@ -58,6 +58,13 @@ class MatcherConfig:
     # Match-level cache: maximum number of distinct input strings to cache
     # (0 = disabled). Useful when the input TSV contains many identical strings.
     match_cache_size: int = 10_000
+
+    # Fix 6b: LLM-based post-hoc validation flags.
+    # When api_key is set, the LLM is asked to confirm each negation / modifier
+    # decision made by the rule-based detector.  Disabled (no-op) when api_key
+    # is absent so the pipeline stays fully offline by default.
+    llm_validate_negation: bool = True
+    llm_validate_modifiers: bool = True
 
 
 @dataclass

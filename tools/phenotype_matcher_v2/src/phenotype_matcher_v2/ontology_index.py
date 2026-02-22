@@ -76,6 +76,7 @@ class OntologyIndex:
         self.ac_automaton = None
         self.embeddings: Optional[np.ndarray] = None
         self.embedding_labels: List[str] = []
+        self.hpo_ancestors: Dict[str, Set[str]] = {}
 
         os.makedirs(cache_dir, exist_ok=True)
         self._build()
@@ -158,6 +159,15 @@ class OntologyIndex:
                 for syn in term.synonyms:
                     if syn.description:
                         self.modifier_map[syn.description.lower()] = term.id
+
+        # Fix 2a: Build ancestor map for parent subsumption in _build_output()
+        for term in ont.terms():
+            if not term.id.startswith("HP:"):
+                continue
+            # superclasses() returns the term itself + all ancestors; exclude self
+            self.hpo_ancestors[term.id] = {
+                t.id for t in term.superclasses() if t.id != term.id
+            }
 
     # ------------------------------------------------------------------
     # Synthetic synonyms

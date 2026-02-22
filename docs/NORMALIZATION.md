@@ -10,7 +10,7 @@ The pipeline is coordinated by `normalization/combine_normalize_phenotypes.py`, 
 
 ### Core Technologies
 
-- **`phenotype_matcher_v2`**: HPO/MONDO/OMIM/Orphanet mapping via Aho-Corasick exact match, stemmed fuzzy match, and LLM disambiguation. See `tools/phenotype_matcher_v2/ALGORITHM.md`.
+- **`phenotype_matcher_v2`**: HPO/MONDO/OMIM/Orphanet mapping via Aho-Corasick exact match, stemmed fuzzy match, SapBERT ANN semantic search, and LLM disambiguation. Negation and severity-modifier detection are integrated at the span level. See `tools/phenotype_matcher_v2/ALGORITHM.md` for the full algorithm. See `docs/NORMALIZATION_METHODS.md` for source-specific parsing details including HGMD variant handling for fawzan-variants.
 - **Rapidfuzz**: Fuzzy string matching for candidate retrieval.
 - **OpenRouter (Gemini/DeepSeek)**: Resolves complex phenotype splits and performs semantic selection between ontology candidates.
 - **Ontologies**:
@@ -94,6 +94,8 @@ Standardized fields:
 - `normalized_zygosity_geno`: GENO IDs (cleaned of variant debris).
 - `normalized_hgmd_diseases`: Disease IDs mapped from the HGMD info string.
 - `normalized_dbsnp`: Extracted rsIDs.
+
+HGMD `Info=` strings are parsed for `ID=` (CM accession), `Ref=`/`Alt=` alleles, `dbSNP=` rsID, and `Disease=`. GRCh38 coordinates are obtained via the Ensembl variation API using the rsID. Annotation uses the VEP region endpoint (`/vep/human/region/{chrom}:{pos}-{pos}:1/{alt}`). See `docs/NORMALIZATION_METHODS.md` for details.
 
 ### 3. Marwa Normalization (`normalize_marwa.py`)
 
