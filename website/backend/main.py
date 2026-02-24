@@ -30,7 +30,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, RedirectResponse, StreamingResponse
 from pydantic import BaseModel
 
-from .similarity import bma_similarity
+from .similarity import bma_similarity, bma_similarity_fast, expand_hpos
 from . import sparql_queries as Q
 
 logging.basicConfig(level=logging.INFO)
@@ -38,6 +38,14 @@ log = logging.getLogger("pavs")
 
 SPARQL_ENDPOINT = os.environ.get("SPARQL_ENDPOINT", "http://localhost:8890/sparql")
 DATA_DIR = Path(os.environ.get("DATA_DIR", "data"))
+HPO_TRANSLATION_PATH = Path(os.environ.get(
+    "HPO_TRANSLATION_PATH",
+    str(DATA_DIR.parent / "translation" / "hpo_arabic_translations.json"),
+))
+HPO_OBO_PATH = Path(os.environ.get(
+    "HPO_OBO_PATH",
+    str(DATA_DIR.parent / "ontology" / "hp.obo"),
+))
 
 app = FastAPI(title="PAVS SPARQL Search API", version="2.0.0")
 
@@ -50,12 +58,95 @@ app.add_middleware(
 )
 
 # ---------------------------------------------------------------------------
+# Constants & Mappings
+# ---------------------------------------------------------------------------
+
+ZYGOSITY_MAP = {
+    "http://purl.obolibrary.org/obo/GENO_0000135": {
+        "en": "Heterozygous",
+        "ar": "متباين الزيجوت",
+        "desc_en": "Individual has two different alleles at a particular locus.",
+        "desc_ar": "الفرد لديه أليلين مختلفين في موضع معين."
+    },
+    "http://purl.obolibrary.org/obo/GENO_0000136": {
+        "en": "Homozygous",
+        "ar": "متماثل الزيجوت",
+        "desc_en": "Individual has two identical alleles at a particular locus.",
+        "desc_ar": "الفرد لديه أليلين متطابقين في موضع معين."
+    },
+    "http://purl.obolibrary.org/obo/GENO_0000134": {
+        "en": "Hemizygous",
+        "ar": "أحادي الزيجوت",
+        "desc_en": "Individual has only one allele at a particular locus (e.g., X-linked in males).",
+        "desc_ar": "الفرد لديه أليل واحد فقط في موضع معين (على سبيل المثال، المرتبط بـ X في الذكور)."
+    }
+}
+
+CONSEQUENCE_MAP = {
+    "missense_variant": {"en": "Missense Variant", "ar": "تغير في تسلسل البروتين"},
+    "stop_gained": {"en": "Stop Gained", "ar": "زيادة توقف"},
+    "frameshift_variant": {"en": "Frameshift Variant", "ar": "تغيير إطار القراءة"},
+    "splice_acceptor_variant": {"en": "Splice Acceptor Variant", "ar": "متغير مستقبل الوصل"},
+    "splice_donor_variant": {"en": "Splice Donor Variant", "ar": "متغير مانح الوصل"},
+    "synonymous_variant": {"en": "Synonymous Variant", "ar": "تغير صامت"},
+    "inframe_insertion": {"en": "Inframe Insertion", "ar": "إدخال في الإطار"},
+    "inframe_deletion": {"en": "Inframe Deletion", "ar": "حذف في الإطار"},
+    "stop_lost": {"en": "Stop Lost", "ar": "فقدان توقف"},
+    "start_lost": {"en": "Start Lost", "ar": "فقدان بدء"},
+}
+
+SIFT_MAP = {
+    "deleterious": {"en": "Deleterious", "ar": "ضار"},
+    "tolerated": {"en": "Tolerated", "ar": "محتمل"},
+}
+
+POLYPHEN_MAP = {
+    "probably_damaging": {"en": "Probably Damaging", "ar": "من المرجح أن يكون ضاراً"},
+    "possibly_damaging": {"en": "Possibly Damaging", "ar": "من المحتمل أن يكون ضاراً"},
+    "benign": {"en": "Benign", "ar": "حميد"},
+    "unknown": {"en": "Unknown", "ar": "غير معروف"},
+}
+
+CONSANGUINITY_MAP = {
+    "yes": {"en": "Yes", "ar": "نعم"},
+    "no": {"en": "No", "ar": "لا"},
+    "Offspring of consanguineous parents": {"en": "Offspring of consanguineous parents", "ar": "من أبناء الأقارب"},
+    "Consanguineous": {"en": "Consanguineous", "ar": "زواج أقارب"},
+}
+
+FIELD_DESCRIPTIONS = {
+    "zygosity": {
+        "en": "The genomic state of a variant (e.g., whether it is present on one or both copies of a chromosome).",
+        "ar": "الحالة الجينية للمتغير (على سبيل المثال، ما إذا كان موجودًا في نسخة واحدة أو كلتا نسختي الكروموسوم)."
+    },
+    "consequence": {
+        "en": "The predicted effect of the variant on the protein sequence (e.g., missense, stop-gain).",
+        "ar": "التأثير المتوقع للمتغير على تسلسل البروتين (مثل التغير في تسلسل البروتين، زيادة توقف)."
+    },
+    "sift": {
+        "en": "SIFT (Sorting Intolerant From Tolerant) predicts whether an amino acid substitution affects protein function.",
+        "ar": "يتنبأ SIFT (فرز غير المتسامح من المتسامح) ما إذا كان استبدال الحمض الأميني يؤثر على وظيفة البروتين."
+    },
+    "polyphen": {
+        "en": "PolyPhen-2 (Polymorphism Phenotyping v2) predicts the possible impact of an amino acid substitution on the structure and function of a protein.",
+        "ar": "يتنبأ PolyPhen-2 (تنميط تعدد الأشكال الإصدار الثاني) بالتأثير المحتمل لاستبدال الحمض الأميني على بنية ووظيفة البروتين."
+    }
+}
+
+# ---------------------------------------------------------------------------
 # In-memory caches (loaded at startup)
 # ---------------------------------------------------------------------------
 ic_cache: Dict[str, float] = {}
 ancestor_cache: Dict[str, Set[str]] = {}
+descendant_cache: Dict[str, Set[str]] = {}    # HP:ID → set of all descendant HP IDs (incl. self)
 case_hpo_cache: List[Dict[str, Any]] = []
 disease_label_cache: Dict[str, str] = {}   # "OMIM:272200" → "Multiple sulfatase deficiency"
+gene_disease_cache: Dict[str, List[str]] = {}  # "SUMF1" → ["Multiple sulfatase deficiency"]
+hpo_ar_cache: Dict[str, Dict[str, str]] = {}  # "HP:0001263" → {arabic_label, arabic_layperson, arabic_definition}
+hpo_obo_cache: Dict[str, Dict] = {}           # "HP:0001263" → {definition, layperson_synonyms, synonyms}
+children_cache: Dict[str, Set[str]] = {}       # HP:ID → set of direct child HP IDs
+term_case_count: Dict[str, int] = {}           # HP:ID → propagated case count (all cohorts)
+term_saudi_count: Dict[str, int] = {}          # HP:ID → propagated case count (Saudi only)
 
 
 # ---------------------------------------------------------------------------
@@ -139,9 +230,102 @@ def _load_disease_labels(hpoa_path: Path) -> Dict[str, str]:
     return labels
 
 
+def _load_gene_disease(tsv_path: Path, disease_labels: Dict[str, str]) -> Dict[str, List[str]]:
+    """Parse genes_to_disease.txt → {gene_symbol → [disease_label, ...]}."""
+    result: Dict[str, List[str]] = defaultdict(list)
+    try:
+        with open(tsv_path, encoding="utf-8") as fh:
+            for line in fh:
+                if line.startswith("ncbi_gene_id") or line.startswith("#"):
+                    continue
+                parts = line.rstrip("\n").split("\t")
+                if len(parts) < 4:
+                    continue
+                gene = parts[1].strip()
+                disease_id = parts[3].strip()   # e.g. OMIM:272200
+                if gene and disease_id:
+                    label = disease_labels.get(disease_id, disease_id)
+                    if label not in result[gene]:
+                        result[gene].append(label)
+        log.info(f"  Loaded gene→disease for {len(result)} genes")
+    except Exception as e:
+        log.warning(f"Could not load gene→disease from {tsv_path}: {e}")
+    return dict(result)
+
+
+def _load_hpo_arabic(json_path: Path) -> Dict[str, Dict[str, str]]:
+    """Load hpo_arabic_translations.json → {HP:ID → {arabic_label, arabic_layperson, arabic_definition}}."""
+    result: Dict[str, Dict[str, str]] = {}
+    try:
+        with open(json_path, encoding="utf-8") as fh:
+            terms = json.load(fh)
+        for term in terms:
+            hp_id = term.get("id", "")
+            if hp_id:
+                result[hp_id] = {
+                    "arabic_label": term.get("arabic_technical_name", ""),
+                    "arabic_layperson": term.get("arabic_layperson_synonym", ""),
+                    "arabic_definition": term.get("arabic_definition", ""),
+                }
+        log.info(f"  Loaded {len(result)} Arabic HPO translations")
+    except Exception as e:
+        log.warning(f"Could not load Arabic HPO translations from {json_path}: {e}")
+    return result
+
+
+def _parse_hpo_obo(obo_path: Path) -> Dict[str, Dict]:
+    """Parse hp.obo and return {HP:ID → {definition, layperson_synonyms, synonyms}}."""
+    data: Dict[str, Dict] = {}
+    current: Dict[str, Any] = {}
+    in_term = False
+    try:
+        with open(obo_path, encoding="utf-8") as fh:
+            for line in fh:
+                line = line.rstrip()
+                if line == "[Term]":
+                    if current.get("id", "").startswith("HP:"):
+                        data[current["id"]] = current
+                    current = {}
+                    in_term = True
+                elif line == "" and in_term:
+                    pass  # blank line within stanza — keep going
+                elif not in_term:
+                    continue
+                elif line.startswith("id: "):
+                    current["id"] = line[4:].strip()
+                elif line.startswith("name: "):
+                    current["name"] = line[6:].strip()
+                elif line.startswith("def: "):
+                    raw = line[5:].strip()
+                    if raw.startswith('"'):
+                        end_q = raw.rfind('"', 1)
+                        if end_q > 0:
+                            current["definition"] = raw[1:end_q]
+                elif line.startswith("synonym: "):
+                    raw = line[9:].strip()
+                    if raw.startswith('"'):
+                        end_q = raw.rfind('"', 1)
+                        if end_q > 0:
+                            syn_val = raw[1:end_q]
+                            scope_rest = raw[end_q + 1:].strip()
+                            if "layperson" in scope_rest:
+                                current.setdefault("layperson_synonyms", []).append(syn_val)
+                            else:
+                                # Only keep EXACT synonyms that differ from name
+                                if "EXACT" in scope_rest:
+                                    current.setdefault("synonyms", []).append(syn_val)
+        # Flush last term
+        if current.get("id", "").startswith("HP:"):
+            data[current["id"]] = current
+        log.info(f"  Parsed {len(data)} terms from hp.obo")
+    except Exception as e:
+        log.warning(f"Could not parse hp.obo from {obo_path}: {e}")
+    return data
+
+
 @app.on_event("startup")
 async def startup():
-    global ic_cache, ancestor_cache, case_hpo_cache, disease_label_cache
+    global ic_cache, ancestor_cache, descendant_cache, case_hpo_cache, disease_label_cache, gene_disease_cache, children_cache, term_case_count, term_saudi_count
 
     log.info("Loading HPO IC values from Virtuoso …")
     try:
@@ -170,8 +354,27 @@ async def startup():
                 direct_parents[child].add(parent)
         ancestor_cache = _build_ancestor_sets(direct_parents)
         log.info(f"  Loaded ancestor sets for {len(ancestor_cache)} terms")
+
+        # Build children_cache (parent → direct children) by inverting direct_parents
+        ch: Dict[str, Set[str]] = defaultdict(set)
+        for child, parents in direct_parents.items():
+            for p in parents:
+                ch[p].add(child)
+        children_cache.update(ch)
+        log.info(f"  Built children cache for {len(children_cache)} parent terms")
     except Exception as e:
         log.warning(f"Ancestor load failed: {e}")
+
+    log.info("Building descendant cache from ancestor sets …")
+    try:
+        dd: Dict[str, Set[str]] = defaultdict(set)
+        for child, ancs in ancestor_cache.items():
+            for anc in ancs:
+                dd[anc].add(child)
+        descendant_cache.update(dd)
+        log.info(f"  Built descendant cache for {len(descendant_cache)} terms")
+    except Exception as e:
+        log.warning(f"Descendant cache build failed: {e}")
 
     log.info("Loading case HPO sets …")
     try:
@@ -180,6 +383,7 @@ async def startup():
         for row in rows:
             hpos_raw = row.get("hpos", "")
             hpo_ids = [_hp_id(h) for h in hpos_raw.split("|") if h] if hpos_raw else []
+            hpo_expanded = expand_hpos(hpo_ids, ancestor_cache)
             case_hpo_cache.append({
                 "id": row.get("id", ""),
                 "case_uri": row.get("case", ""),
@@ -188,15 +392,39 @@ async def startup():
                 "source": row.get("source", "unknown"),
                 "is_saudi": row.get("isSaudi", "0") in ("true", "True", "1"),
                 "hpo_ids": hpo_ids,
+                "hpo_expanded": hpo_expanded,
             })
-        log.info(f"  Loaded {len(case_hpo_cache)} cases into similarity cache")
+        log.info(f"  Loaded {len(case_hpo_cache)} cases into similarity cache (with pre-expanded HPO sets)")
+
+        # Build term_case_count (all cohorts) and term_saudi_count (Saudi only)
+        from collections import Counter
+        cnt: Counter = Counter()
+        saudi_cnt: Counter = Counter()
+        for case in case_hpo_cache:
+            for term in case["hpo_expanded"]:
+                cnt[term] += 1
+                if case.get("is_saudi"):
+                    saudi_cnt[term] += 1
+        term_case_count.update(cnt)
+        term_saudi_count.update(saudi_cnt)
+        log.info(f"  Built case counts for {len(term_case_count)} terms ({len(term_saudi_count)} Saudi)")
     except Exception as e:
         log.warning(f"Case HPO load failed: {e}")
 
     log.info("Loading disease labels from phenotype.hpoa …")
-    hpoa_path = DATA_DIR / "phenotype.hpoa"
+    hpoa_path = DATA_DIR / "reference" / "phenotype.hpoa"
     disease_label_cache.update(_load_disease_labels(hpoa_path))
     log.info(f"  Loaded {len(disease_label_cache)} disease labels")
+
+    log.info("Loading gene→disease map …")
+    gene_disease_tsv = DATA_DIR / "reference" / "genes_to_disease.txt"
+    gene_disease_cache.update(_load_gene_disease(gene_disease_tsv, disease_label_cache))
+
+    log.info("Loading Arabic HPO translations …")
+    hpo_ar_cache.update(_load_hpo_arabic(HPO_TRANSLATION_PATH))
+
+    log.info("Parsing hp.obo for definitions and synonyms …")
+    hpo_obo_cache.update(_parse_hpo_obo(HPO_OBO_PATH))
 
     log.info("PAVS backend ready.")
 
@@ -254,6 +482,63 @@ def hpo_autocomplete(q: str = Query(..., min_length=2)):
         return []
 
 
+@app.get("/api/hpo/{hp_id:path}")
+def get_hpo_term(hp_id: str):
+    """Return enriched HPO term info: English definition, layperson synonyms, Arabic translations."""
+    # Normalise HP:0001263 / HP_0001263 / 0001263
+    hp_id = hp_id.strip()
+    if hp_id.startswith("HP_"):
+        hp_id = "HP:" + hp_id[3:]
+    elif not hp_id.startswith("HP:"):
+        hp_id = "HP:" + hp_id
+
+    obo = hpo_obo_cache.get(hp_id, {})
+    ar = hpo_ar_cache.get(hp_id, {})
+
+    # Deduplicate synonyms: exclude the term name itself
+    term_name = obo.get("name", "")
+    synonyms = [s for s in obo.get("synonyms", []) if s != term_name]
+    layperson_synonyms = obo.get("layperson_synonyms", [])
+
+    return {
+        "id": hp_id,
+        "definition": obo.get("definition", ""),
+        "layperson_synonyms": layperson_synonyms,
+        "synonyms": synonyms,
+        "arabic_label": ar.get("arabic_label", ""),
+        "arabic_layperson": ar.get("arabic_layperson", ""),
+        "arabic_definition": ar.get("arabic_definition", ""),
+    }
+
+
+@app.get("/api/hpo-children/{hp_id}")
+def get_hpo_children(hp_id: str):
+    """Return direct children of an HPO term with propagated case counts.
+    Used by the HPO tree browser for lazy-loading."""
+    hp_id = hp_id.strip()
+    if hp_id.startswith("HP_"):
+        hp_id = "HP:" + hp_id[3:]
+    elif not hp_id.startswith("HP:"):
+        hp_id = "HP:" + hp_id
+
+    child_ids = children_cache.get(hp_id, set())
+    result = []
+    for cid in child_ids:
+        obo = hpo_obo_cache.get(cid, {})
+        ar = hpo_ar_cache.get(cid, {})
+        result.append({
+            "id": cid,
+            "label": obo.get("name", cid),
+            "definition": obo.get("definition", ""),
+            "arabic_label": ar.get("arabic_label", ""),
+            "case_count": term_case_count.get(cid, 0),
+            "saudi_case_count": term_saudi_count.get(cid, 0),
+            "child_count": len(children_cache.get(cid, set())),
+        })
+    result.sort(key=lambda x: x["saudi_case_count"], reverse=True)
+    return result
+
+
 @app.post("/api/search/phenotype")
 def search_by_phenotype(req: PhenotypeSearchRequest):
     """Rank all cases by HPO similarity (Lin+BMA by default)."""
@@ -262,28 +547,42 @@ def search_by_phenotype(req: PhenotypeSearchRequest):
 
     method = req.method if req.method in ("lin", "resnik") else "lin"
 
+    # Pre-expand query terms once
+    q_exp = expand_hpos(req.hpo_ids, ancestor_cache)
+
     results = []
     for case in case_hpo_cache:
         if not req.include_non_saudi and not case["is_saudi"]:
             continue
 
-        target_hpos = case["hpo_ids"]
-        if not target_hpos:
-            continue
-
-        # Optionally expand with disease HPO terms
+        # Optionally expand with disease HPO terms (modifies target only)
         if req.include_disease_phenotypes and case.get("disease"):
+            target_hpos = case["hpo_ids"]
             try:
                 disease_uri = f"https://omim.org/entry/{case['disease'].replace('OMIM:', '')}"
                 hpoa_rows = sparql_select(Q.hpoa_for_disease(disease_uri))
                 disease_hpos = [_hp_id(r.get("hpo", "")) for r in hpoa_rows if r.get("hpo")]
-                target_hpos = list(set(target_hpos) | set(disease_hpos))
+                extra = list(set(target_hpos) | set(disease_hpos))
+                t_exp = expand_hpos(extra, ancestor_cache)
             except Exception:
-                pass
+                t_exp = case.get("hpo_expanded") or expand_hpos(case["hpo_ids"], ancestor_cache)
+        else:
+            t_exp = case.get("hpo_expanded") or expand_hpos(case["hpo_ids"], ancestor_cache)
 
-        score = bma_similarity(req.hpo_ids, target_hpos, ic_cache, ancestor_cache, method)
+        if not t_exp:
+            continue
+
+        score = bma_similarity_fast(q_exp, t_exp, ic_cache, ancestor_cache, method)
         if score > 0:
-            results.append({**case, "score": round(score, 6)})
+            results.append({
+                "id": case["id"],
+                "gene": case["gene"],
+                "disease": case["disease"],
+                "source": case["source"],
+                "is_saudi": case["is_saudi"],
+                "hpo_ids": case["hpo_ids"],
+                "score": round(score, 6),
+            })
 
     results.sort(key=lambda x: x["score"], reverse=True)
     return results[: req.limit]
@@ -376,6 +675,7 @@ def get_case(case_id: str):
         case_data: Dict[str, Any] = {"id": case_id, "properties": {}}
         phenotype_uris: List[str] = []
         excluded_phenotype_uris: List[str] = []
+        disease_uris: List[str] = []
 
         for row in props_rows:
             prop = row.get("prop", "")
@@ -387,6 +687,8 @@ def get_case(case_id: str):
                 phenotype_uris.append(val)
             elif prop_short == "hasExcludedPhenotype":
                 excluded_phenotype_uris.append(val)
+            elif prop_short == "hasDisease":
+                disease_uris.append(val)
             else:
                 case_data["properties"][prop_short] = val
 
@@ -395,10 +697,17 @@ def get_case(case_id: str):
         if is_saudi in ("1", "true", "True"):
             case_data["properties"]["isSaudi"] = "true"
 
-        # Map progressStatus to human-readable string
+        # Map progressStatus to human-readable string (keep raw key for frontend to translate)
+        # but normalize for consistency if needed.
         raw_status = case_data["properties"].get("progressStatus", "")
-        if raw_status:
-            case_data["properties"]["progressStatus"] = _STATUS_MAP.get(raw_status, raw_status)
+        # We keep it as is, or we could map to a standard set of keys.
+        # But for now, let's just make sure Solved/Unsolved are available.
+
+        # Localize consanguinity
+        raw_consang = case_data["properties"].get("consanguinity", "")
+        if raw_consang in CONSANGUINITY_MAP:
+            case_data["properties"]["consanguinity_label"] = CONSANGUINITY_MAP[raw_consang]["en"]
+            case_data["properties"]["consanguinity_ar"] = CONSANGUINITY_MAP[raw_consang]["ar"]
 
         # Look up HPO labels for phenotypes
         all_uris = phenotype_uris + excluded_phenotype_uris
@@ -421,25 +730,103 @@ def get_case(case_id: str):
         case_data["phenotypes"] = [uri_to_hpo(u) for u in phenotype_uris]
         case_data["excluded_phenotypes"] = [uri_to_hpo(u) for u in excluded_phenotype_uris]
 
-        # Variants
+        def uri_to_disease(uri: str) -> Dict[str, str]:
+            # omim: https://omim.org/entry/123456 -> OMIM:123456
+            if "omim.org/entry/" in uri:
+                did = "OMIM:" + uri.split("/")[-1]
+            # mondo: http://purl.obolibrary.org/obo/MONDO_0001234 -> MONDO:0001234
+            elif "MONDO_" in uri:
+                did = "MONDO:" + uri.split("MONDO_")[-1]
+            # orphanet: http://www.orpha.net/ORDO/Orphanet_123 -> Orphanet:123
+            elif "ORDO/Orphanet_" in uri:
+                did = "Orphanet:" + uri.split("Orphanet_")[-1]
+            else:
+                did = uri.split("/")[-1]
+            
+            return {"id": did, "label": disease_label_cache.get(did, ""), "url": uri}
+
+        case_data["diseases"] = [uri_to_disease(u) for u in disease_uris]
+
+        # Variants — merge multiple SPARQL rows for the same variant URI
         var_rows = sparql_select(Q.get_case_variants(case_id))
-        variants = []
+        variants_dict: Dict[str, Dict[str, Any]] = {}
         for row in var_rows:
-            v = {k: val for k, val in row.items() if val}
-            tv = _togovar_url(row)
-            if tv:
-                v["togovar_url"] = tv
-            variants.append(v)
-        case_data["variants"] = variants
+            v_uri = row.get("v", "")
+            if not v_uri:
+                continue
+            if v_uri not in variants_dict:
+                variants_dict[v_uri] = {"v": v_uri}
+            
+            # Merge all available fields into the existing dict
+            for k, val in row.items():
+                if val and k not in variants_dict[v_uri]:
+                    variants_dict[v_uri][k] = val
+            
+            # Derive TogoVar link if possible
+            if "togovar_url" not in variants_dict[v_uri]:
+                tv = _togovar_url(row)
+                if tv:
+                    variants_dict[v_uri]["togovar_url"] = tv
+        
+        case_data["variants"] = list(variants_dict.values())
+
+        # Enrich variant labels and translations
+        for var in case_data["variants"]:
+            # Zygosity
+            z_uri = var.get("zygosity")
+            if z_uri and z_uri in ZYGOSITY_MAP:
+                var["zygosity_label"] = ZYGOSITY_MAP[z_uri]["en"]
+                var["zygosity_ar"] = ZYGOSITY_MAP[z_uri]["ar"]
+            
+            # Consequence (raw: "missense_variant")
+            cons_raw = var.get("consequence")
+            if cons_raw:
+                c_map = CONSEQUENCE_MAP.get(cons_raw)
+                if c_map:
+                    var["consequence_label"] = c_map["en"]
+                    var["consequence_ar"] = c_map["ar"]
+                else:
+                    # Fallback: simple title case and same for AR if no mapping
+                    var["consequence_label"] = cons_raw.replace("_", " ").title()
+                    var["consequence_ar"] = cons_raw
+
+            # SIFT (raw: "deleterious(0)")
+            sift_raw = var.get("sift")
+            if sift_raw:
+                import re
+                m = re.match(r"^([a-z_]+)\(([\d\.]+)\)$", sift_raw.lower())
+                if m:
+                    label, score = m.groups()
+                    s_map = SIFT_MAP.get(label)
+                    if s_map:
+                        var["sift_label"] = s_map["en"]
+                        var["sift_ar"] = s_map["ar"]
+                    var["sift_score"] = score
+
+            # PolyPhen (raw: "probably_damaging(0.99)")
+            pp_raw = var.get("polyphen")
+            if pp_raw:
+                import re
+                m = re.match(r"^([a-z_]+)\(([\d\.]+)\)$", pp_raw.lower())
+                if m:
+                    label, score = m.groups()
+                    p_map = POLYPHEN_MAP.get(label)
+                    if p_map:
+                        var["polyphen_label"] = p_map["en"]
+                        var["polyphen_ar"] = p_map["ar"]
+                    var["polyphen_score"] = score
+
+        # Field descriptions for the "i" buttons
+        case_data["field_metadata"] = FIELD_DESCRIPTIONS
 
         # Suggested OMIM diseases (when case has no diagnosed disease)
         # Only shown for Saudi cases with 1-3 diseases for the causative gene.
         case_data["suggested_diseases"] = []
         has_disease = bool(case_data["properties"].get("diseaseLabel"))
         is_saudi = case_data["properties"].get("isSaudi") == "true"
-        if is_saudi and not has_disease and variants:
+        if is_saudi and not has_disease and case_data["variants"]:
             seen_genes: set = set()
-            for var in variants:
+            for var in case_data["variants"]:
                 gene = var.get("gene", "")
                 if not gene or gene in seen_genes:
                     continue
@@ -485,6 +872,163 @@ def get_gene(symbol: str):
         return props
     except Exception as e:
         log.error(f"Gene detail error: {e}")
+        raise HTTPException(500, str(e))
+
+
+@app.get("/api/gene/{symbol}/diseases")
+def gene_diseases(symbol: str):
+    """Return diseases associated with a gene and their HPO phenotypes from HPOA."""
+    try:
+        rows = sparql_select(Q.get_gene_diseases_hpo(symbol))
+        # Group by disease URI
+        disease_map: Dict[str, Dict] = {}
+        for row in rows:
+            uri = row.get("diseaseUri", "")
+            if not uri:
+                continue
+            if uri not in disease_map:
+                omim_num = uri.split("/")[-1]
+                omim_id = f"OMIM:{omim_num}"
+                disease_map[uri] = {
+                    "disease_id": omim_id,
+                    "label": disease_label_cache.get(omim_id, omim_id),
+                    "omim_url": uri,
+                    "clinvar_url": f"https://www.ncbi.nlm.nih.gov/clinvar/?term={symbol}[gene]",
+                    "hpo_terms": [],
+                }
+            hp_id = row.get("hpo", "")
+            label = row.get("hpoLabel", "")
+            if hp_id:
+                disease_map[uri]["hpo_terms"].append({"id": hp_id, "label": label or hp_id})
+        return list(disease_map.values())
+    except Exception as e:
+        log.error(f"Gene diseases error for {symbol}: {e}")
+        raise HTTPException(500, str(e))
+
+
+@app.get("/api/genes")
+def list_genes():
+    """List all genes from Saudi cases with case counts."""
+    try:
+        rows = sparql_select(Q.list_all_genes())
+        result = []
+        for r in rows:
+            sym = r.get("gene", "")
+            cnt = r.get("saudiCount", "0")
+            if sym:
+                try:
+                    result.append({"symbol": sym, "saudi_count": int(cnt)})
+                except (ValueError, TypeError):
+                    result.append({"symbol": sym, "saudi_count": 0})
+        return result
+    except Exception as e:
+        log.error(f"Gene list error: {e}")
+        raise HTTPException(500, str(e))
+
+
+@app.get("/api/gene/{symbol}/cases")
+def gene_cases(
+    symbol: str,
+    include_ddd: bool = False,
+    include_literature: bool = False,
+):
+    """Return cases with variants in a specific gene, with optional DDD/Literature sources."""
+    try:
+        graphs_list = [f"<{Q.GRAPH_CASES}>"]
+        if include_ddd:
+            graphs_list.append(f"<{Q.GRAPH_DDD}>")
+        if include_literature:
+            graphs_list.append(f"<{Q.GRAPH_LIT}>")
+        graphs_str = " ".join(graphs_list)
+        rows = sparql_select(Q.get_gene_cases(symbol, graphs_str))
+        # Fallback disease labels from genes_to_disease.txt
+        fallback_diseases = gene_disease_cache.get(symbol, [])
+        fallback_label = "; ".join(fallback_diseases) if fallback_diseases else ""
+        results = []
+        for row in rows:
+            r = {k: v for k, v in row.items() if v is not None}
+            r["gene"] = symbol
+            if not r.get("disease") and fallback_label:
+                r["disease"] = fallback_label
+            tv = _togovar_url(row)
+            if tv:
+                r["togovar_url"] = tv
+            results.append(r)
+        return results
+    except Exception as e:
+        log.error(f"Gene cases error for {symbol}: {e}")
+        raise HTTPException(500, str(e))
+
+
+@app.get("/api/phenotype/{hp_id:path}/cases")
+def phenotype_cases(
+    hp_id: str,
+    include_children: bool = True,
+    include_ddd: bool = False,
+    include_literature: bool = False,
+    limit: int = 500,
+):
+    """Return cases that have (or whose descendants have) the given HPO term.
+    Uses the in-memory case_hpo_cache + descendant_cache — no SPARQL at query time.
+    """
+    # Normalise the HP ID
+    hp_id = hp_id.strip()
+    if hp_id.startswith("HP_"):
+        hp_id = "HP:" + hp_id[3:]
+    elif not hp_id.startswith("HP:"):
+        hp_id = "HP:" + hp_id
+
+    # Build the set of HP IDs to match (term itself + optionally its descendants)
+    match_ids: Set[str] = {hp_id}
+    if include_children:
+        match_ids |= descendant_cache.get(hp_id, set())
+
+    results = []
+    for case in case_hpo_cache:
+        source = case.get("source", "")
+        is_saudi = case.get("is_saudi", False)
+        is_ddd = "ddd" in source.lower()
+        is_lit = not is_saudi and not is_ddd
+
+        if not is_saudi and not (include_ddd and is_ddd) and not (include_literature and is_lit):
+            continue
+
+        case_hpos = set(case["hpo_ids"])
+        if case_hpos & match_ids:
+            results.append({
+                "id": case["id"],
+                "gene": case["gene"],
+                "disease": case["disease"],
+                "source": source,
+                "is_saudi": is_saudi,
+                "hpo_ids": case["hpo_ids"],
+            })
+        if len(results) >= limit:
+            break
+
+    return results
+
+
+@app.post("/api/sparql")
+def sparql_proxy(body: dict):
+    """Execute a user-supplied SPARQL SELECT query against Virtuoso and return rows.
+    Restricted to SELECT queries; max 2000 rows returned."""
+    query = (body.get("query") or "").strip()
+    if not query:
+        raise HTTPException(400, "query required")
+    # Only allow SELECT for safety
+    upper = query.lstrip().upper()
+    if not upper.startswith("SELECT") and not upper.startswith("PREFIX"):
+        raise HTTPException(400, "Only SELECT queries are supported")
+    # If prefixed with PREFIX ... SELECT ..., still fine
+    if "SELECT" not in upper:
+        raise HTTPException(400, "Only SELECT queries are supported")
+    try:
+        rows = sparql_select(query)
+        rows = rows[:2000]
+        vars_list = list(rows[0].keys()) if rows else []
+        return {"vars": vars_list, "rows": rows, "count": len(rows)}
+    except Exception as e:
         raise HTTPException(500, str(e))
 
 

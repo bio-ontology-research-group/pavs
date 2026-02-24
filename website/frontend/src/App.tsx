@@ -6,10 +6,12 @@ import PhenotypeSearch from './components/PhenotypeSearch';
 import VariantLookup from './components/VariantLookup';
 import DiseaseBrowser from './components/DiseaseBrowser';
 import GeneBrowser from './components/GeneBrowser';
+import PhenotypeBrowser from './components/PhenotypeBrowser';
+import SparqlExplorer from './components/SparqlExplorer';
 import AboutPage from './components/AboutPage';
 import CaseDetail from './components/CaseDetail';
 
-type TabId = 'phenotype' | 'variant' | 'disease' | 'gene' | 'about';
+type TabId = 'phenotype' | 'variant' | 'disease' | 'gene' | 'phenotype-browser' | 'sparql' | 'about';
 
 const API = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
@@ -17,14 +19,22 @@ const App: React.FC = () => {
   const { t, i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState<TabId>('phenotype');
   const [caseId, setCaseId] = useState<string | null>(null);
+  const [initialGene, setInitialGene] = useState<string>('');
 
-  // Simple client-side routing for /case/:id and /gene/:symbol
+  // Simple client-side routing for /case/:id; gene navigation via ?gene= param
   useEffect(() => {
     const path = window.location.pathname;
     const caseMatch = path.match(/^\/case\/(.+)/);
     if (caseMatch) {
       setCaseId(decodeURIComponent(caseMatch[1]));
       return;
+    }
+    // Check for ?gene= URL search param (used by gene links in all views)
+    const params = new URLSearchParams(window.location.search);
+    const gene = params.get('gene');
+    if (gene) {
+      setActiveTab('gene');
+      setInitialGene(decodeURIComponent(gene));
     }
   }, []);
 
@@ -43,46 +53,42 @@ const App: React.FC = () => {
     document.documentElement.lang = lang;
   }, [i18n.language]);
 
-  if (caseId) {
-    return (
-      <div className="app">
-        <nav className="navbar">
-          <a href="/" className="nav-brand">
-            <img src="/logo.svg" alt="PAVS" height="36" />
-          </a>
-          <button className="lang-switcher" onClick={switchLang} title="Switch language">
-            {i18n.language === 'ar' ? 'EN' : 'ع'}
-          </button>
-        </nav>
-        <main className="main-content">
-          <button className="back-btn" onClick={() => window.history.back()}>← Back</button>
-          <CaseDetail caseId={caseId} />
-        </main>
-      </div>
-    );
-  }
+  // Tab click: always navigate away from case view and update URL
+  const handleTabClick = (tabId: TabId) => {
+    setActiveTab(tabId);
+    if (caseId) {
+      setCaseId(null);
+      window.history.pushState({}, '', '/');
+    }
+  };
 
   const tabs: { id: TabId; label: string }[] = [
-    { id: 'phenotype', label: t('nav.phenotype') },
-    { id: 'variant',   label: t('nav.variant') },
-    { id: 'disease',   label: t('nav.disease') },
-    { id: 'gene',      label: t('nav.gene') },
-    { id: 'about',     label: t('nav.about') },
+    { id: 'phenotype',         label: t('nav.phenotype') },
+    { id: 'variant',           label: t('nav.variant') },
+    { id: 'disease',           label: t('nav.disease') },
+    { id: 'gene',              label: t('nav.gene') },
+    { id: 'phenotype-browser', label: t('nav.phenotypeBrowser') },
+    { id: 'sparql',            label: t('nav.sparql') },
+    { id: 'about',             label: t('nav.about') },
   ];
 
   return (
     <div className="app">
       <nav className="navbar">
-        <div className="nav-brand">
-          <img src="/logo.svg" alt="PAVS" height="36" />
-          <span className="nav-title">PAVS</span>
-        </div>
+        <a href="/" className="nav-brand" onClick={(e) => {
+          e.preventDefault();
+          setActiveTab('phenotype');
+          setCaseId(null);
+          window.history.pushState({}, '', '/');
+        }}>
+          <img src="/logo.svg" alt="PAVS Logo" height="36" />
+        </a>
         <div className="nav-tabs">
           {tabs.map(tab => (
             <button
               key={tab.id}
-              className={`nav-tab ${activeTab === tab.id ? 'active' : ''}`}
-              onClick={() => setActiveTab(tab.id)}
+              className={`nav-tab ${!caseId && activeTab === tab.id ? 'active' : ''}`}
+              onClick={() => handleTabClick(tab.id)}
             >
               {tab.label}
             </button>
@@ -100,16 +106,27 @@ const App: React.FC = () => {
       </nav>
 
       <main className="main-content">
-        {activeTab === 'phenotype' && <PhenotypeSearch />}
-        {activeTab === 'variant'   && <VariantLookup />}
-        {activeTab === 'disease'   && <DiseaseBrowser />}
-        {activeTab === 'gene'      && <GeneBrowser />}
-        {activeTab === 'about'     && <AboutPage />}
+        {caseId ? (
+          <>
+            <button className="back-btn" onClick={() => { setCaseId(null); window.history.back(); }}>← Back</button>
+            <CaseDetail caseId={caseId} />
+          </>
+        ) : (
+          <>
+            {activeTab === 'phenotype'         && <PhenotypeSearch />}
+            {activeTab === 'variant'           && <VariantLookup />}
+            {activeTab === 'disease'           && <DiseaseBrowser />}
+            {activeTab === 'gene'              && <GeneBrowser initialGene={initialGene} />}
+            {activeTab === 'phenotype-browser' && <PhenotypeBrowser />}
+            {activeTab === 'sparql'            && <SparqlExplorer />}
+            {activeTab === 'about'             && <AboutPage />}
+          </>
+        )}
       </main>
 
       <footer className="footer">
         <p>
-          PAVS — Phenotypic and Variant Standardization ·{' '}
+          PAVS — Phenotype-Associated Variants in Saudi Arabia ·{' '}
           <a href="https://www.kaust.edu.sa" target="_blank" rel="noopener noreferrer">KAUST</a>
         </p>
       </footer>

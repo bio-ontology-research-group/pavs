@@ -4,6 +4,8 @@
     "variant": "البحث عن متغيرات",
     "disease": "متصفح الأمراض",
     "gene": "متصفح الجينات",
+    "phenotypeBrowser": "متصفح HPO",
+    "sparql": "SPARQL",
     "about": "حول"
   },
   "search": {
@@ -20,15 +22,21 @@
     "limit": "الحد الأقصى للنتائج"
   },
   "results": {
+    "caseId": "معرف الحالة",
     "score": "الدرجة",
     "gene": "الجين",
     "disease": "المرض",
     "source": "المصدر",
+    "links": "الروابط",
     "acmg": "ACMG",
     "hgvsC": "HGVS c.",
     "hgvsG": "HGVS g.",
     "rsId": "rsID",
     "zygosity": "الزيجوسية",
+    "consequence": "عواقب VEP",
+    "vepImpact": "التأثير",
+    "sift": "SIFT",
+    "polyphen": "PolyPhen-2",
     "saudiAF": "تكرار الأليل السعودي",
     "gnomadAF": "تكرار gnomAD",
     "clinvar": "ClinVar",
@@ -55,20 +63,63 @@
     "inheritance": "نمط التوارث",
     "consanguinity": "الأقارب",
     "sex": "الجنس",
+    "male": "ذكر",
+    "female": "أنثى",
+    "age": "العمر",
+    "years": "سنوات",
+    "months": "أشهر",
+    "days": "أيام",
     "progressStatus": "الحالة",
+    "solved": "مُحلَّل",
+    "unsolved": "غير مُحلَّل",
+    "unknown": "غير معروف",
     "disease": "المرض",
+    "diseases": "الأمراض",
     "suggestedDiseaseNote": "⚠ مقترح (ليس تشخيصاً) — بناءً على الجين، غير مؤكد سريرياً:",
     "basedOnGene": "عبر الجين",
     "pmid": "معرف PMID",
     "ancestry": "الأصل",
+    "familyHistory": "تاريخ العائلة",
     "middleEastern": "شرق أوسطي",
     "saudi": "المملكة العربية السعودية"
+  },
+  "acmg": {
+    "pathogenic": "ممرض",
+    "likely_pathogenic": "يرجح أنه ممرض",
+    "uncertain_significance": "أهمية غير محددة",
+    "likely_benign": "يرجح أنه حميد",
+    "benign": "حميد"
   },
   "badges": {
     "saudi": "المجموعة السعودية",
     "ddd": "DDD",
     "literature": "الأدبيات",
     "clinvar": "ClinVar"
+  },
+  "hpo": {
+    "expand": "عرض تفاصيل المصطلح",
+    "collapse": "إخفاء تفاصيل المصطلح",
+    "layTerm": "المصطلح الشائع",
+    "definition": "التعريف",
+    "alsoKnownAs": "يُعرف أيضاً بـ"
+  },
+  "gene": {
+    "filterPlaceholder": "تصفية الجينات…",
+    "genesLabel": "جينات",
+    "casesLabel": "حالات بمتغيرات في هذا الجين",
+    "selectPrompt": "اختر جيناً من القائمة لعرض التفاصيل والحالات",
+    "showCasesFrom": "إظهار الحالات من"
+  },
+  "phenotypeBrowser": {
+    "searchPlaceholder": "ابحث عن مصطلحات HPO (مثل صغر الرأس)…",
+    "selectPrompt": "انقر على مصطلح في الشجرة لعرض الحالات المطابقة",
+    "includeChildren": "تضمين المصطلحات الفرعية",
+    "casesFound": "حالات موجودة",
+    "noCases": "لا توجد حالات لهذا المصطلح.",
+    "treeTitle": "تسلسل HPO",
+    "treeHint": "انقر ▶ للتوسيع، انقر على المصطلح لعرض الحالات",
+    "casesCount": "الحالات",
+    "subcategories": "فئات فرعية"
   },
   "links": {
     "hpo": "متصفح HPO",
