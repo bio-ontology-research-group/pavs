@@ -54,4 +54,4 @@ def plot_combined_pr(results_path, output_path):
     print(f"PR curves saved to {output_path}")
 
 if __name__ == "__main__":
-    plot_combined_pr('analysis/phenotype_similarity_full.csv', 'analysis/combined_pr_curves.png')
+    plot_combined_pr('analysis/phenotype_similarity_comprehensive.csv', 'analysis/combined_pr_curves.png')

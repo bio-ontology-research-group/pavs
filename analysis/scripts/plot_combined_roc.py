@@ -46,4 +46,4 @@ def plot_combined_roc(results_path, output_path):
     print(f"Combined ROC curve saved to {output_path}")
 
 if __name__ == "__main__":
-    plot_combined_roc('analysis/phenotype_similarity_full.csv', 'analysis/combined_roc_curves.png')
+    plot_combined_roc('analysis/phenotype_similarity_comprehensive.csv', 'analysis/combined_roc_curves.png')

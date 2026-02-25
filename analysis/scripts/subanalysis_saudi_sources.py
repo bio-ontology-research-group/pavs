@@ -103,4 +103,4 @@ def subanalysis_comprehensive(results_path, annotated_path, output_dir):
         print(f"| {s['IC Type']} | {s['Similarity']} | {s['Hits@1']:.2%} | {s['Hits@10']:.2%} | {s['Mean AUC']:.4f} | {s['MRR']:.4f} |")
 
 if __name__ == "__main__":
-    subanalysis_comprehensive('analysis/phenotype_similarity_comprehensive.csv', 'data/combined_annotated.tsv', 'analysis/')
+    subanalysis_comprehensive('analysis/phenotype_similarity_comprehensive.csv', 'data/combined_annotated-gpt4oss.tsv', 'analysis/')

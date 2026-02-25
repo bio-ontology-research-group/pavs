@@ -174,7 +174,7 @@ def main():
     ic_extrinsic = compute_ic_extrinsic(terms, ancestors, gene_to_hpos)
     
     tasks = []
-    df_cases = pd.read_csv('data/combined_annotated.tsv', sep='\t')
+    df_cases = pd.read_csv('data/combined_annotated-gpt4oss.tsv', sep='\t')
     for _, row in df_cases.iterrows():
         gene = str(row['gene_symbol'])
         if gene in gene_to_hpos:
