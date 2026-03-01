@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import SourceBadge from './SourceBadge';
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API = import.meta.env.VITE_API_URL ?? '';
 
 type SearchTab = 'gene' | 'rsid' | 'hgvs' | 'acmg';
 
@@ -22,10 +22,53 @@ interface VariantResult {
   togovar_url?: string;
   // Pathogenicity predictions
   consequence?: string;
+  vepImpact?: string;
   sift?: string;
   polyphen?: string;
   gnomadAF?: string;
   zygosity?: string;
+}
+
+// Small inline info tooltip
+function InfoTip({ text }: { text: string }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+  return (
+    <span
+      ref={ref}
+      style={{ position: 'relative', display: 'inline-block', marginLeft: '0.25rem', verticalAlign: 'middle' }}
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+      onFocus={() => setOpen(true)}
+      onBlur={() => setOpen(false)}
+    >
+      <span
+        tabIndex={0}
+        role="button"
+        aria-label="More information"
+        style={{
+          display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+          width: '1.1em', height: '1.1em', borderRadius: '50%',
+          border: '1.5px solid #7aa', color: '#4a9', background: '#f0faf8',
+          fontSize: '0.68em', fontWeight: 700, fontStyle: 'normal',
+          cursor: 'help', userSelect: 'none', lineHeight: 1,
+        }}
+      >i</span>
+      {open && (
+        <span style={{
+          position: 'absolute', bottom: 'calc(100% + 6px)', left: '50%',
+          transform: 'translateX(-50%)',
+          background: '#1a2a2a', color: '#e8f4f0', borderRadius: '5px',
+          padding: '0.45rem 0.65rem', fontSize: '0.75rem', lineHeight: 1.45,
+          width: '240px', whiteSpace: 'normal', zIndex: 200,
+          boxShadow: '0 3px 10px rgba(0,0,0,0.3)',
+          pointerEvents: 'none',
+        }}>
+          {text}
+        </span>
+      )}
+    </span>
+  );
 }
 
 // Colour-coded consequence label
@@ -103,7 +146,7 @@ const VariantLookup: React.FC = () => {
   };
 
   const hasPathogenicity = (r: VariantResult) =>
-    !!(r.consequence || r.sift || r.polyphen || r.gnomadAF || r.zygosity);
+    !!(r.consequence || r.vepImpact || r.sift || r.polyphen || r.gnomadAF || r.zygosity);
 
   return (
     <div className="search-panel">
@@ -229,6 +272,19 @@ const VariantLookup: React.FC = () => {
                               <ConsequenceBadge val={r.consequence} />
                             </div>
                           )}
+                          {r.vepImpact && (
+                            <div className="variant-detail-item">
+                              <strong>Impact:
+                                <InfoTip text="VEP impact rating predicts the severity of a variant's effect. HIGH = likely loss-of-function (e.g. stop-gain, frameshift). MODERATE = protein-altering (e.g. missense). LOW = likely tolerated (e.g. synonymous). MODIFIER = non-coding or uncertain effect." />
+                              </strong>{' '}
+                              <span className={`consequence-badge ${
+                                r.vepImpact === 'HIGH' ? 'badge-high'
+                                : r.vepImpact === 'MODERATE' ? 'badge-moderate'
+                                : r.vepImpact === 'LOW' ? 'badge-low'
+                                : ''
+                              }`}>{r.vepImpact}</span>
+                            </div>
+                          )}
                           {r.sift && (
                             <div className="variant-detail-item">
                               <PredBadge label="SIFT" val={r.sift} />
@@ -241,7 +297,9 @@ const VariantLookup: React.FC = () => {
                           )}
                           {r.gnomadAF && (
                             <div className="variant-detail-item">
-                              <strong>gnomAD AF:</strong> {r.gnomadAF}
+                              <strong>gnomAD AF:
+                                <InfoTip text="Allele frequency in gnomAD (Genome Aggregation Database) — a large reference population of ~800 000 exomes and genomes. Very low or absent values indicate a rare or novel variant. Displayed as a decimal (e.g. 0.0001 = 0.01%)." />
+                              </strong>{' '}{r.gnomadAF}
                             </div>
                           )}
                           {r.zygosity && (

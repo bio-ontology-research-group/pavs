@@ -4,7 +4,7 @@ import axios from 'axios';
 import SourceBadge from './SourceBadge';
 import HpoTag from './HpoTag';
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API = import.meta.env.VITE_API_URL ?? '';
 
 interface Variant {
   gene?: string;

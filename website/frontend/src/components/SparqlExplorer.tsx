@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API = import.meta.env.VITE_API_URL ?? '';
 
 const PREFIXES = `PREFIX pavs:  <http://pavs.kaust.edu.sa/ontology/>
 PREFIX pav:   <http://pavs.kaust.edu.sa/data/>
@@ -155,7 +155,10 @@ const SparqlExplorer: React.FC = () => {
     }
   };
 
-  const endpointUrl = `${API}/api/sparql?format=tsv&query=`;
+  // Resolve the public base URL at runtime so it reflects the actual host
+  // (works for both localhost dev and production deployments).
+  const publicBase = API || (typeof window !== 'undefined' ? window.location.origin : '');
+  const apiEndpoint = `${publicBase}/api/sparql`;
 
   return (
     <div className="sparql-explorer">
@@ -165,9 +168,9 @@ const SparqlExplorer: React.FC = () => {
       {/* Endpoint info box */}
       <div className="sparql-endpoint-box">
         <span className="sparql-endpoint-label">{t('sparql.endpoint')}:</span>
-        <code className="sparql-endpoint-url">{API}/api/sparql</code>
+        <code className="sparql-endpoint-url">{apiEndpoint}</code>
         <span className="sparql-endpoint-hint">{t('sparql.endpointHint')}</span>
-        <code className="sparql-curl-example">{`curl '${endpointUrl}SELECT+...' > results.tsv`}</code>
+        <code className="sparql-curl-example">{`curl '${apiEndpoint}?format=tsv&query=SELECT+...' > results.tsv`}</code>
       </div>
 
       <div className="sparql-examples">

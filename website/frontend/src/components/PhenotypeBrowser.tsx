@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import SourceBadge from './SourceBadge';
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API = import.meta.env.VITE_API_URL ?? '';
 
 // HP:0000118 = Phenotypic abnormality (root for browsable tree)
 const ROOT_ID = 'HP:0000118';

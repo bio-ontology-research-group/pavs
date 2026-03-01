@@ -1,6 +1,8 @@
 FROM node:20-alpine AS builder
 
-ARG VITE_API_URL=http://localhost:8000
+# Leave blank to use relative paths (nginx proxies /api/ to backend).
+# Set to the full public URL when the API is on a different origin.
+ARG VITE_API_URL=
 ENV VITE_API_URL=${VITE_API_URL}
 
 WORKDIR /app

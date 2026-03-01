@@ -1,0 +1,41 @@
+.git
+.venv
+node_modules
+website/frontend/node_modules
+website/frontend/build
+__pycache__
+*.pyc
+.aider*
+phenopackets.db
+
+# Exclude large data files not needed in the backend/init image
+data/excel_files/
+data/processed/
+data/processed_graphrag/
+data/processed-no-rag/
+data/graph_rag_cache/
+data/annotation_cache/
+data/phenotype_matcher_v2_cache/
+data/combined_normalized*.tsv
+data/combined_annotated.tsv
+data/PAVS_final_data.tsv
+data/1-experiment-files.zip
+
+# Exclude old generated phenopackets (generated_v2 is baked in instead)
+phenopackets/generated/
+
+# Exclude generated RDF (loaded into Virtuoso volume at runtime)
+rdf_output/
+
+# Exclude analysis, scripts, obsolete, tests (not needed in production image)
+analysis/
+scripts/
+obsolete/
+tests/
+
+# Exclude translation files not needed in backend (only hpo_arabic_translations.json)
+translation/*.tsv
+translation/*.obo
+translation/*.py
+translation/*.md
+translation/submission_info.txt

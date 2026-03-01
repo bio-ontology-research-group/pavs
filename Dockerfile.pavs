@@ -1,0 +1,49 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Dockerfile.pavs
+# Unified image for both the API backend and the data-preparation (init) service.
+# Source data and pre-generated outputs are baked in so the stack can start
+# anywhere without needing the original repo on the host.
+#
+# Services that use this image:
+#   init    – runs intake/prepare_all.py to (re)generate RDF
+#   backend – serves the FastAPI SPARQL search API
+# ─────────────────────────────────────────────────────────────────────────────
+FROM python:3.12-slim
+
+WORKDIR /app
+
+# ── Python dependencies ───────────────────────────────────────────────────────
+# Minimal set needed for the backend + intake pipeline.
+# The heavy ML stack (torch, sentence-transformers) is NOT needed here.
+RUN pip install --no-cache-dir \
+    "fastapi>=0.111" \
+    "uvicorn>=0.30" \
+    "pydantic>=2" \
+    "pandas>=2" \
+    numpy \
+    tqdm
+
+# ── Source data (baked in, read-only pipeline inputs) ────────────────────────
+COPY data/combined_annotated-gpt4oss.tsv  ./data/
+COPY data/reference/phenotype.hpoa        ./data/reference/
+COPY ontology/hp.obo                      ./ontology/
+COPY translation/hpo_arabic_translations.json ./translation/
+
+# Literature phenopackets used by generate_rdf.py (~88 MB)
+COPY phenopackets/0.1.26/                 ./phenopackets/0.1.26/
+
+# ── Pre-generated outputs (baked in so first run is instant) ─────────────────
+# Regenerate at any time with:
+#   docker compose -f docker-compose-sparql.yml run --rm init --force
+COPY data/PAVS_phenopackets.json          ./data/
+COPY data/PAVS_phenopackets.zip           ./data/
+COPY phenopackets/generated_v2/           ./phenopackets/generated_v2/
+
+# ── Application code ──────────────────────────────────────────────────────────
+COPY normalization/   ./normalization/
+COPY intake/          ./intake/
+COPY website/backend/ ./backend/
+
+# ── Default: run the API backend ─────────────────────────────────────────────
+EXPOSE 8000
+CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
