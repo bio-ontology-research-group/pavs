@@ -15,9 +15,11 @@ Environment variables:
 
 from __future__ import annotations
 
+import gzip
 import json
 import logging
 import os
+import re
 import time
 import urllib.parse
 import urllib.request
@@ -147,6 +149,7 @@ hpo_obo_cache: Dict[str, Dict] = {}           # "HP:0001263" → {definition, la
 children_cache: Dict[str, Set[str]] = {}       # HP:ID → set of direct child HP IDs
 term_case_count: Dict[str, int] = {}           # HP:ID → propagated case count (all cohorts)
 term_saudi_count: Dict[str, int] = {}          # HP:ID → propagated case count (Saudi only)
+disease_hpo_cache: Dict[str, List[str]] = {}   # "OMIM:272200" → [HP:NNNNNNN, ...]
 
 
 # ---------------------------------------------------------------------------
@@ -228,6 +231,120 @@ def _load_disease_labels(hpoa_path: Path) -> Dict[str, str]:
     except Exception as e:
         log.warning(f"Could not load disease labels from {hpoa_path}: {e}")
     return labels
+
+
+def _load_disease_hpos(hpoa_path: Path) -> Dict[str, List[str]]:
+    """Parse phenotype.hpoa and return {OMIM:NNNNNN → [HP:NNNNNNN, ...]} dict (excludes NOT qualifiers)."""
+    result: Dict[str, List[str]] = defaultdict(list)
+    try:
+        with open(hpoa_path, encoding="utf-8") as fh:
+            for line in fh:
+                if line.startswith("#") or line.startswith("database_id"):
+                    continue
+                parts = line.split("\t")
+                if len(parts) < 4:
+                    continue
+                disease_id = parts[0].strip()   # e.g. OMIM:272200
+                qualifier = parts[2].strip()    # e.g. "NOT" or ""
+                hpo_id = parts[3].strip()       # e.g. HP:0001263
+                if disease_id and hpo_id.startswith("HP:") and qualifier != "NOT":
+                    if hpo_id not in result[disease_id]:
+                        result[disease_id].append(hpo_id)
+        log.info(f"  Loaded HPO annotations for {len(result)} diseases from phenotype.hpoa")
+    except Exception as e:
+        log.warning(f"Could not load disease HPO annotations from {hpoa_path}: {e}")
+    return dict(result)
+
+
+def _vcf_info_val(info_str: str, key: str) -> Optional[str]:
+    """Extract a value from a semicolon-delimited VCF INFO string."""
+    prefix = f"{key}="
+    for field in info_str.split(";"):
+        if field.startswith(prefix):
+            return field[len(prefix):]
+    return None
+
+
+def _load_clinvar_cases(
+    vcf_path: Path,
+    disease_hpo_cache: Dict[str, List[str]],
+    disease_label_cache: Dict[str, str],
+    ancestor_cache: Dict[str, Set[str]],
+) -> List[Dict[str, Any]]:
+    """Parse clinvar.vcf.gz and build one synthetic case per unique (gene, OMIM_disease) pair
+    for pathogenic / likely-pathogenic variants. HPO phenotypes come from disease_hpo_cache."""
+    PATHOGENIC_TERMS = {"Pathogenic", "Likely_pathogenic"}
+    seen: Dict[tuple, bool] = {}
+    cases: List[Dict[str, Any]] = []
+    skipped_no_hpo = 0
+
+    try:
+        open_fn = gzip.open if str(vcf_path).endswith(".gz") else open
+        with open_fn(vcf_path, "rt", encoding="utf-8", errors="replace") as fh:
+            for line in fh:
+                if line.startswith("#"):
+                    continue
+                parts = line.split("\t", 8)
+                if len(parts) < 8:
+                    continue
+                info_str = parts[7]
+
+                clnsig = _vcf_info_val(info_str, "CLNSIG")
+                if not clnsig:
+                    continue
+                sig_parts = set(re.split(r"[/|,]", clnsig))
+                if not (sig_parts & PATHOGENIC_TERMS):
+                    continue
+
+                geneinfo = _vcf_info_val(info_str, "GENEINFO")
+                if not geneinfo or geneinfo == ".":
+                    continue
+                genes = [g.split(":")[0] for g in geneinfo.split("|") if ":" in g]
+                if not genes:
+                    continue
+
+                clndisdb = _vcf_info_val(info_str, "CLNDISDB")
+                if not clndisdb or clndisdb == ".":
+                    continue
+                omim_ids = []
+                for entry in re.split(r"[|]", clndisdb):
+                    for db_ref in entry.split(","):
+                        db_ref = db_ref.strip()
+                        if db_ref.startswith("OMIM:") and not db_ref.startswith("OMIM_"):
+                            num = db_ref[5:]
+                            if num.isdigit():
+                                omim_ids.append(f"OMIM:{num}")
+
+                for gene in genes:
+                    for omim_id in omim_ids:
+                        key = (gene, omim_id)
+                        if key in seen:
+                            continue
+                        seen[key] = True
+                        hpo_ids = disease_hpo_cache.get(omim_id, [])
+                        if not hpo_ids:
+                            skipped_no_hpo += 1
+                            continue
+                        hpo_expanded = expand_hpos(hpo_ids, ancestor_cache)
+                        disease_label = disease_label_cache.get(omim_id, omim_id)
+                        cases.append({
+                            "id": f"ClinVar:{gene}:{omim_id}",
+                            "case_uri": "",
+                            "gene": gene,
+                            "disease": omim_id,          # OMIM ID for HPO lookup
+                            "disease_label": disease_label,  # human-readable name for display
+                            "source": "ClinVar",
+                            "is_saudi": False,
+                            "hpo_ids": hpo_ids,
+                            "hpo_expanded": hpo_expanded,
+                        })
+        log.info(
+            f"  Loaded {len(cases)} ClinVar (gene, disease) cases "
+            f"({skipped_no_hpo} pairs skipped — no HPOA phenotypes)"
+        )
+    except Exception as e:
+        log.warning(f"Could not load ClinVar cases from {vcf_path}: {e}")
+    return cases
 
 
 def _load_gene_disease(tsv_path: Path, disease_labels: Dict[str, str]) -> Dict[str, List[str]]:
@@ -325,7 +442,7 @@ def _parse_hpo_obo(obo_path: Path) -> Dict[str, Dict]:
 
 @app.on_event("startup")
 async def startup():
-    global ic_cache, ancestor_cache, descendant_cache, case_hpo_cache, disease_label_cache, gene_disease_cache, children_cache, term_case_count, term_saudi_count
+    global ic_cache, ancestor_cache, descendant_cache, case_hpo_cache, disease_label_cache, gene_disease_cache, children_cache, term_case_count, term_saudi_count, disease_hpo_cache
 
     log.info("Loading HPO IC values from Virtuoso …")
     try:
@@ -411,10 +528,21 @@ async def startup():
     except Exception as e:
         log.warning(f"Case HPO load failed: {e}")
 
-    log.info("Loading disease labels from phenotype.hpoa …")
+    log.info("Loading disease labels and HPO annotations from phenotype.hpoa …")
     hpoa_path = DATA_DIR / "reference" / "phenotype.hpoa"
     disease_label_cache.update(_load_disease_labels(hpoa_path))
     log.info(f"  Loaded {len(disease_label_cache)} disease labels")
+    disease_hpo_cache.update(_load_disease_hpos(hpoa_path))
+    log.info(f"  Loaded HPO annotations for {len(disease_hpo_cache)} diseases")
+
+    log.info("Loading ClinVar pathogenic cases …")
+    clinvar_vcf = DATA_DIR / "reference" / "clinvar.vcf.gz"
+    if clinvar_vcf.exists():
+        clinvar_cases = _load_clinvar_cases(clinvar_vcf, disease_hpo_cache, disease_label_cache, ancestor_cache)
+        case_hpo_cache.extend(clinvar_cases)
+        log.info(f"  case_hpo_cache now has {len(case_hpo_cache)} entries (incl. ClinVar)")
+    else:
+        log.warning(f"  ClinVar VCF not found at {clinvar_vcf}, skipping")
 
     log.info("Loading gene→disease map …")
     gene_disease_tsv = DATA_DIR / "reference" / "genes_to_disease.txt"
@@ -438,7 +566,10 @@ class PhenotypeSearchRequest(BaseModel):
     method: str = "lin"            # "lin" (default) or "resnik"
     limit: int = 20
     include_disease_phenotypes: bool = False
-    include_non_saudi: bool = False
+    include_saudi: bool = True
+    include_ddd: bool = False
+    include_literature: bool = False
+    include_clinvar: bool = False
 
 
 class VariantSearchRequest(BaseModel):
@@ -552,19 +683,28 @@ def search_by_phenotype(req: PhenotypeSearchRequest):
 
     results = []
     for case in case_hpo_cache:
-        if not req.include_non_saudi and not case["is_saudi"]:
+        src = case.get("source", "")
+        is_saudi = case.get("is_saudi", False)
+        is_ddd = "ddd" in src.lower()
+        is_clinvar = src == "ClinVar"
+        is_lit = not is_saudi and not is_ddd and not is_clinvar
+
+        if is_saudi and not req.include_saudi:
+            continue
+        if is_ddd and not req.include_ddd:
+            continue
+        if is_lit and not req.include_literature:
+            continue
+        if is_clinvar and not req.include_clinvar:
             continue
 
-        # Optionally expand with disease HPO terms (modifies target only)
+        # Optionally expand with disease HPO terms (modifies target only, uses in-memory cache)
         if req.include_disease_phenotypes and case.get("disease"):
-            target_hpos = case["hpo_ids"]
-            try:
-                disease_uri = f"https://omim.org/entry/{case['disease'].replace('OMIM:', '')}"
-                hpoa_rows = sparql_select(Q.hpoa_for_disease(disease_uri))
-                disease_hpos = [_hp_id(r.get("hpo", "")) for r in hpoa_rows if r.get("hpo")]
-                extra = list(set(target_hpos) | set(disease_hpos))
+            disease_hpos = disease_hpo_cache.get(case["disease"], [])
+            if disease_hpos:
+                extra = list(set(case["hpo_ids"]) | set(disease_hpos))
                 t_exp = expand_hpos(extra, ancestor_cache)
-            except Exception:
+            else:
                 t_exp = case.get("hpo_expanded") or expand_hpos(case["hpo_ids"], ancestor_cache)
         else:
             t_exp = case.get("hpo_expanded") or expand_hpos(case["hpo_ids"], ancestor_cache)
@@ -574,10 +714,23 @@ def search_by_phenotype(req: PhenotypeSearchRequest):
 
         score = bma_similarity_fast(q_exp, t_exp, ic_cache, ancestor_cache, method)
         if score > 0:
+            gene = case.get("gene", "")
+            disease_raw = case.get("disease", "")
+            # Prefer an explicit label; for ClinVar cases use disease_label; otherwise raw value
+            disease_display = case.get("disease_label") or disease_raw
+
+            # Suggested disease for Saudi cases that have no explicit diagnosis
+            suggested_disease = ""
+            if is_saudi and not disease_raw and gene:
+                assoc = gene_disease_cache.get(gene, [])
+                if 1 <= len(assoc) <= 3:
+                    suggested_disease = "; ".join(assoc)
+
             results.append({
                 "id": case["id"],
-                "gene": case["gene"],
-                "disease": case["disease"],
+                "gene": gene,
+                "disease": disease_display,
+                "suggested_disease": suggested_disease,
                 "source": case["source"],
                 "is_saudi": case["is_saudi"],
                 "hpo_ids": case["hpo_ids"],
@@ -1009,27 +1162,68 @@ def phenotype_cases(
     return results
 
 
-@app.post("/api/sparql")
-def sparql_proxy(body: dict):
-    """Execute a user-supplied SPARQL SELECT query against Virtuoso and return rows.
-    Restricted to SELECT queries; max 2000 rows returned."""
-    query = (body.get("query") or "").strip()
+def _sparql_check_and_run(query: str):
+    """Validate and execute a SELECT query; return (vars_list, rows)."""
     if not query:
         raise HTTPException(400, "query required")
-    # Only allow SELECT for safety
     upper = query.lstrip().upper()
-    if not upper.startswith("SELECT") and not upper.startswith("PREFIX"):
-        raise HTTPException(400, "Only SELECT queries are supported")
-    # If prefixed with PREFIX ... SELECT ..., still fine
     if "SELECT" not in upper:
         raise HTTPException(400, "Only SELECT queries are supported")
     try:
         rows = sparql_select(query)
         rows = rows[:2000]
         vars_list = list(rows[0].keys()) if rows else []
-        return {"vars": vars_list, "rows": rows, "count": len(rows)}
+        return vars_list, rows
     except Exception as e:
         raise HTTPException(500, str(e))
+
+
+@app.get("/api/sparql")
+def sparql_get(
+    query: str = Query(..., description="SPARQL SELECT query"),
+    format: str = Query("json", description="Response format: json | tsv | csv"),
+):
+    """Execute a SPARQL SELECT query and return results in the requested format.
+
+    Programmatic access example:
+      curl 'http://localhost:8000/api/sparql?format=tsv&query=SELECT+...'
+    """
+    vars_list, rows = _sparql_check_and_run(query)
+
+    if format == "tsv":
+        lines = ["\t".join(vars_list)]
+        for row in rows:
+            lines.append("\t".join(str(row.get(v, "")) for v in vars_list))
+        content = "\n".join(lines)
+        return StreamingResponse(
+            iter([content]),
+            media_type="text/tab-separated-values",
+            headers={"Content-Disposition": "attachment; filename=sparql_results.tsv"},
+        )
+    elif format == "csv":
+        import csv
+        import io
+        out = io.StringIO()
+        writer = csv.writer(out)
+        writer.writerow(vars_list)
+        for row in rows:
+            writer.writerow([str(row.get(v, "")) for v in vars_list])
+        return StreamingResponse(
+            iter([out.getvalue()]),
+            media_type="text/csv",
+            headers={"Content-Disposition": "attachment; filename=sparql_results.csv"},
+        )
+    else:
+        return {"vars": vars_list, "rows": rows, "count": len(rows)}
+
+
+@app.post("/api/sparql")
+def sparql_proxy(body: dict):
+    """Execute a user-supplied SPARQL SELECT query against Virtuoso and return rows.
+    Restricted to SELECT queries; max 2000 rows returned."""
+    query = (body.get("query") or "").strip()
+    vars_list, rows = _sparql_check_and_run(query)
+    return {"vars": vars_list, "rows": rows, "count": len(rows)}
 
 
 @app.get("/api/phenopacket/{case_id:path}/download")

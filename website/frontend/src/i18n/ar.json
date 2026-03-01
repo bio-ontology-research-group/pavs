@@ -18,8 +18,14 @@
     "lin": "Lin + BMA (الافتراضي)",
     "resnik": "Resnik + BMA",
     "includeDisease": "التوسع باستخدام مصطلحات HPO للأمراض (OMIM/ClinVar)",
-    "includeNonSaudi": "تضمين الحالات غير السعودية (DDD / الأدبيات / ClinVar)",
-    "limit": "الحد الأقصى للنتائج"
+    "cohorts": "المجموعات",
+    "includeSaudi": "سعودي",
+    "includeDDD": "DDD",
+    "includeLiterature": "الأدبيات",
+    "includeClinVar": "ClinVar",
+    "limit": "الحد الأقصى للجلب",
+    "showing": "عرض {{count}} من {{total}} نتيجة",
+    "showMore": "عرض المزيد"
   },
   "results": {
     "caseId": "معرف الحالة",
@@ -120,6 +126,27 @@
     "treeHint": "انقر ▶ للتوسيع، انقر على المصطلح لعرض الحالات",
     "casesCount": "الحالات",
     "subcategories": "فئات فرعية"
+  },
+  "sparql": {
+    "title": "مستكشف SPARQL",
+    "hint": "استعلم عن قاعدة بيانات PAVS مباشرةً. مدعوم فقط استعلامات SELECT. الحد الأقصى 2,000 صف. اضغط Ctrl+Enter للتشغيل.",
+    "examples": "أمثلة",
+    "run": "▶ تشغيل الاستعلام",
+    "running": "جارٍ التشغيل…",
+    "rows": "{{count}} صفوف",
+    "limitReached": " (تم الوصول للحد الأقصى)",
+    "downloadJson": "تنزيل JSON",
+    "downloadTsv": "تنزيل TSV",
+    "endpoint": "نقطة نهاية SPARQL",
+    "endpointHint": "استعلام برمجي عبر GET:",
+    "queries": {
+      "commonPhenotypes": "أكثر أنماط HPO الظاهرية شيوعًا (الحالات السعودية)",
+      "sumf1Cases": "الحالات السعودية لجين SUMF1",
+      "pathogenicVariants": "المتغيرات المُسبِّبة للمرض مع تسميات الأمراض",
+      "constrainedGenes": "أكثر الجينات تقييدًا (LOEUF أقل من 0.15)",
+      "diseaseHpo": "مصطلحات HPO لمرض OMIM:272200",
+      "consanguineous": "حالات بوالدَين من أقارب"
+    }
   },
   "links": {
     "hpo": "متصفح HPO",

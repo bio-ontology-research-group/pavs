@@ -18,8 +18,14 @@
     "lin": "Lin + BMA (default)",
     "resnik": "Resnik + BMA",
     "includeDisease": "Expand with OMIM/ClinVar disease HPO annotations",
-    "includeNonSaudi": "Include non-Saudi cases (DDD / Literature / ClinVar)",
-    "limit": "Max results"
+    "cohorts": "Cohorts",
+    "includeSaudi": "Saudi",
+    "includeDDD": "DDD",
+    "includeLiterature": "Literature",
+    "includeClinVar": "ClinVar",
+    "limit": "Max results to fetch",
+    "showing": "Showing {{count}} of {{total}} results",
+    "showMore": "Show more"
   },
   "results": {
     "caseId": "Case ID",
@@ -120,6 +126,27 @@
     "treeHint": "Click ▶ to expand, click a term to view cases",
     "casesCount": "Cases",
     "subcategories": "subcategories"
+  },
+  "sparql": {
+    "title": "SPARQL Explorer",
+    "hint": "Query the PAVS knowledge graph directly. Only SELECT queries are supported. Max 2,000 rows. Press Ctrl+Enter to run.",
+    "examples": "Examples",
+    "run": "▶ Run Query",
+    "running": "Running…",
+    "rows": "{{count}} rows",
+    "limitReached": " (limit reached)",
+    "downloadJson": "Download JSON",
+    "downloadTsv": "Download TSV",
+    "endpoint": "SPARQL Endpoint",
+    "endpointHint": "Query programmatically via GET:",
+    "queries": {
+      "commonPhenotypes": "Most common HPO phenotypes (Saudi cases)",
+      "sumf1Cases": "Saudi cases for a gene (SUMF1)",
+      "pathogenicVariants": "Pathogenic variants with disease labels",
+      "constrainedGenes": "Most constrained genes (LOEUF < 0.15)",
+      "diseaseHpo": "HPO terms for a disease (OMIM:272200)",
+      "consanguineous": "Cases with consanguineous parents"
+    }
   },
   "links": {
     "hpo": "HPO browser",
