@@ -55,6 +55,58 @@ Copy `.env.example` to `.env` and adjust as needed. Docker Compose automatically
 
 ## Production Deployment (`pavs.phenomebrowser.net`)
 
+### Server
+
+The production server is **`cbontsr01.kaust.edu.sa`**, configured as SSH host `onto`:
+
+```
+Host onto
+    Hostname cbontsr01.kaust.edu.sa
+    User hohndor
+```
+
+The PAVS stack lives at `/data/pavs/` on that server (not a git repo — deploy by copying files).
+
+**Port mapping** (Docker → host):
+| Service | Container port | Host port |
+|---|---|---|
+| frontend (nginx) | 80 | 20000 |
+| backend (FastAPI) | 8000 | 20001 |
+| Virtuoso HTTP | 8890 | (internal) |
+| Virtuoso iSQL | 1111 | (internal) |
+
+All external traffic goes through **Imperva CDN** (`X-CDN: Imperva`) in front of port 80.
+
+**CDN note**: Imperva aggressively caches static files. Dynamic content must be served through
+`/api/` to bypass the cache. For this reason, `about.md` is served via `GET /api/about?lang=en|ar`
+(backend reads `website/backend/about.md` / `about_ar.md`) rather than as a static file.
+
+### Deploying code changes to production
+
+```bash
+# 1. Copy changed files to onto
+scp website/backend/main.py onto:/data/pavs/website/backend/main.py
+scp website/frontend/src/components/SomeComponent.tsx onto:/data/pavs/website/frontend/src/components/SomeComponent.tsx
+# ... etc.
+
+# 2. Rebuild and restart on onto
+ssh onto 'cd /data/pavs && docker compose -f docker-compose-sparql.yml build backend frontend && docker compose -f docker-compose-sparql.yml up -d backend frontend'
+
+# 3. Verify
+curl https://pavs.phenomebrowser.net/api/health
+```
+
+### Updating about.md / about_ar.md
+
+These files live in `website/backend/` (baked into the backend image) and are served via `/api/about`:
+
+```bash
+scp website/frontend/public/about.md onto:/data/pavs/website/backend/about.md
+scp website/frontend/public/about_ar.md onto:/data/pavs/website/backend/about_ar.md
+# Hot-update running container (no restart needed):
+ssh onto 'docker cp /data/pavs/website/backend/about.md pavs-backend-1:/app/backend/about.md && docker cp /data/pavs/website/backend/about_ar.md pavs-backend-1:/app/backend/about_ar.md'
+```
+
 ### Minimal `.env`
 
 ```bash
@@ -101,7 +153,7 @@ curl 'https://pavs.phenomebrowser.net/sparql?query=SELECT+...&format=application
 
 ---
 
-## After Code Changes
+## After Code Changes (local or production)
 
 ```bash
 # Backend or frontend code changed:
@@ -111,6 +163,10 @@ docker compose -f docker-compose-sparql.yml up -d backend frontend
 # Data pipeline changed (intake/, normalization/):
 docker compose -f docker-compose-sparql.yml build init backend
 docker compose -f docker-compose-sparql.yml up -d
+
+# Force full RDF regeneration (e.g. after changes to compute_hpo_ic.py):
+docker compose -f docker-compose-sparql.yml run --rm init python intake/prepare_all.py --endpoint=http://virtuoso:8890 --skip-load --force
+docker compose -f docker-compose-sparql.yml up loader
 ```
 
 ---

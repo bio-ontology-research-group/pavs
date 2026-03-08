@@ -11,6 +11,7 @@ Usage:
 """
 
 import argparse
+import json
 import math
 import re
 from collections import defaultdict
@@ -143,7 +144,25 @@ def hp_uri(hpo_id: str) -> str:
     return "hp:" + hpo_id.replace("HP:", "")
 
 
-def write_ttl(ic: dict[str, float], parents: dict, children: dict, names: dict, output_path: str):
+def load_arabic_labels(json_path: str) -> dict[str, str]:
+    """Load hpo_arabic_translations.json → {HP:ID → arabic_technical_name}."""
+    result: dict[str, str] = {}
+    try:
+        with open(json_path, encoding="utf-8") as fh:
+            terms = json.load(fh)
+        for term in terms:
+            hp_id = term.get("id", "")
+            label = term.get("arabic_technical_name", "").strip()
+            if hp_id and label:
+                result[hp_id] = label
+        print(f"  Loaded {len(result)} Arabic HPO labels from {json_path}")
+    except Exception as e:
+        print(f"  Warning: could not load Arabic labels: {e}")
+    return result
+
+
+def write_ttl(ic: dict[str, float], parents: dict, children: dict, names: dict,
+              output_path: str, arabic: dict[str, str] | None = None):
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as fh:
         fh.write(PREFIXES)
@@ -153,12 +172,20 @@ def write_ttl(ic: dict[str, float], parents: dict, children: dict, names: dict, 
             uri = hp_uri(term)
             fh.write(f"{uri}  pavs:informationContent  {value:.6f} .\n")
 
-        # Labels
+        # English labels
         fh.write("\n# HPO term labels\n")
         for term, name in sorted(names.items()):
             uri = hp_uri(term)
             escaped = name.replace('\\', '\\\\').replace('"', '\\"')
             fh.write(f'{uri}  rdfs:label  "{escaped}" .\n')
+
+        # Arabic labels (language-tagged so SPARQL can match Arabic queries)
+        if arabic:
+            fh.write("\n# Arabic HPO term labels\n")
+            for term in sorted(arabic.keys()):
+                uri = hp_uri(term)
+                escaped = arabic[term].replace('\\', '\\\\').replace('"', '\\"')
+                fh.write(f'{uri}  rdfs:label  "{escaped}"@ar .\n')
 
         # Parent/child hierarchy (rdfs:subClassOf)
         fh.write("\n# HPO hierarchy\n")
@@ -168,7 +195,8 @@ def write_ttl(ic: dict[str, float], parents: dict, children: dict, names: dict, 
                 pu = hp_uri(parent)
                 fh.write(f"{uri}  rdfs:subClassOf  {pu} .\n")
 
-    print(f"Wrote {len(ic)} IC values + {len(names)} labels + hierarchy to {output_path}")
+    ar_count = len(arabic) if arabic else 0
+    print(f"Wrote {len(ic)} IC values + {len(names)} EN labels + {ar_count} AR labels + hierarchy to {output_path}")
 
 
 # ---------------------------------------------------------------------------
@@ -180,6 +208,8 @@ def main():
     parser.add_argument("--hpo", default="ontology/hp.obo", help="hp.obo path")
     parser.add_argument("--hpoa", default="data/reference/phenotype.hpoa", help="phenotype.hpoa path")
     parser.add_argument("--output", default="rdf_output/hpo_ic.ttl", help="Output TTL path")
+    parser.add_argument("--arabic", default="translation/hpo_arabic_translations.json",
+                        help="Arabic HPO translations JSON (optional)")
     args = parser.parse_args()
 
     print("Parsing hp.obo …")
@@ -193,7 +223,12 @@ def main():
     ic = compute_ic(args.hpoa, ancestors)
     print(f"  {len(ic)} terms with IC values")
 
-    write_ttl(ic, parents, children, names, args.output)
+    arabic: dict[str, str] = {}
+    if args.arabic and Path(args.arabic).exists():
+        print("Loading Arabic HPO labels …")
+        arabic = load_arabic_labels(args.arabic)
+
+    write_ttl(ic, parents, children, names, args.output, arabic or None)
 
 
 if __name__ == "__main__":

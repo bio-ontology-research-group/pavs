@@ -594,6 +594,19 @@ def health():
     }
 
 
+@app.get("/api/about")
+def get_about(lang: str = Query(default="en")):
+    """Serve about.md content (bypasses CDN cache via /api/ path)."""
+    from fastapi.responses import PlainTextResponse
+    base = Path(__file__).parent
+    path = base / ("about_ar.md" if lang == "ar" else "about.md")
+    if not path.exists():
+        path = base / "about.md"
+    if path.exists():
+        return PlainTextResponse(path.read_text(encoding="utf-8"))
+    return PlainTextResponse("# About\n\nContent not available.")
+
+
 @app.get("/api/search/hpo")
 def hpo_autocomplete(q: str = Query(..., min_length=2)):
     """HPO term autocomplete via SPARQL."""
