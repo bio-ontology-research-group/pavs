@@ -25,13 +25,13 @@ uv run python scripts/process_all_phenotypes.py --parallel --overwrite
 
 ### Process Specific File
 ```bash
-uv run python scripts/process_all_phenotypes.py --files ahmed-variants.tsv --overwrite
+uv run python scripts/process_all_phenotypes.py --files ahmed-pmid28454995.tsv --overwrite
 ```
 
 ### Background Processing (All Files in Parallel)
 ```bash
 # Ahmed files
-nohup uv run python scripts/process_all_phenotypes.py --files ahmed-variants.tsv,ahmed-pmid28454995.tsv --overwrite > logs/ahmed.log 2>&1 &
+nohup uv run python scripts/process_all_phenotypes.py --files ahmed-pmid28454995.tsv --overwrite > logs/ahmed.log 2>&1 &
 
 # Other files
 nohup uv run python scripts/process_all_phenotypes.py --files fawzan-variants.tsv --overwrite > logs/fawzan-variants.log 2>&1 &
@@ -117,7 +117,7 @@ Tests include:
 
 | Option | Description | Example |
 |--------|-------------|---------|
-| `--files` | Process specific files | `--files ahmed-variants.tsv` |
+| `--files` | Process specific files | `--files ahmed-pmid28454995.tsv` |
 | `--overwrite` | Delete existing and reprocess | `--overwrite` |
 | `--parallel` | Process files concurrently | `--parallel` |
 | `10` | Limit to N rows per file | `10` |

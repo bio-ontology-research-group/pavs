@@ -72,7 +72,7 @@ uv run python normalization/normalize_ddd.py
 
 ### 1. Ahmed Normalization (`normalize_ahmed*.py`)
 
-**Source**: `data/phenotypes/ahmed*` (A: 291 rows, B: 234 rows)
+**Source**: `data/phenotypes/ahmed-pmid28454995.tsv` (A/B, 525 rows total)
 **Focus**: Complex phenotypic sentences, mode of inheritance mapping, and merging multiple clinical descriptions.
 
 Standardized fields:

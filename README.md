@@ -63,7 +63,7 @@ Cases use the format `PAVS:XNNNNNNN` where X is the source letter:
 
 | Letter | Source dataset |
 |---|---|
-| A/B | Ahmed (variants + PMID:28454995) |
+| A, B | ahmed-pmid28454995 |
 | F | fawzan-variants |
 | M | marwa-variants |
 | P | PMC6562004 |
@@ -228,7 +228,7 @@ Source files (all in `data/phenotypes/`):
 
 | File | Source letter | Rows |
 |---|---|---|
-| `ahmed*` | A, B | 525 total |
+| `ahmed-pmid28454995.tsv` | A, B | 525 total |
 | `fawzan-variants.tsv` | F | 1,024 |
 | `marwa-variants.tsv` | M | 1,421 |
 | `PMC6562004.tsv` | P | 2,218 |
@@ -344,7 +344,7 @@ Each source dataset has a dedicated normalizer in `normalization/`:
 
 | Script | Source | Key handling |
 |---|---|---|
-| `normalization/normalize_ahmed*.py` | Ahmed (A/B) | Complex sentences, merges Diagnosis + Clinical columns |
+| `normalization/normalize_ahmed*.py` | ahmed-pmid28454995.tsv (A/B) | Complex sentences, merges Diagnosis + Clinical columns |
 | `normalization/normalize_fawzan.py` | fawzan-variants.tsv (F) | Variant nomenclature (HGVS), HGMD field parsing |
 | `normalization/normalize_marwa.py` | marwa-variants.tsv (M) | Disentangles mixed phenotype and disease descriptions |
 | `normalization/normalize_pmc6562004.py` | PMC6562004.tsv (P) | skiprows=1 (comment line), multi-gene/variant columns |

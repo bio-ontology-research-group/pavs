@@ -75,7 +75,7 @@ uv run python normalization/combine_normalize_phenotypes.py \
 
 | File | Source letter | Rows | Notes |
 |------|--------------|------|-------|
-| `ahmed*` | A/B | 525 | HPOs, Gene, Variant, Protein, Zygosity, ACMG Classification |
+| `ahmed-pmid28454995.tsv` | A/B | 525 | HPOs, Gene, Variant, Protein, Zygosity, ACMG Classification |
 | `fawzan-variants.tsv` | F | 1,024 | Phenotype, Variant(s), Zyogsity (typo in source) |
 | `marwa-variants.tsv` | M | 1,421 | phenotypes (pipe+HPO), variants (pipe) |
 | `PMC6562004.tsv` | P | 2,218 | skiprows=1 (comment line), Gene(s), Variant(s) |

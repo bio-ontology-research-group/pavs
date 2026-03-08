@@ -90,9 +90,9 @@ When both a parent and a descendant HPO term are matched (e.g., `"Intellectual d
 - **Ancestry**: `HANCESTRO:0852` (Middle Eastern) for all Saudi cases.
 - **Country**: `GAZ:00005279` (Saudi Arabia).
 
-### 3.2 Ahmed (A/B)
+### 3.2 Ahmed (`ahmed-pmid28454995.tsv`, A/B)
 
-- **Sources**: `ahmed*` (A/B, 525 rows total).
+- **Sources**: `ahmed-pmid28454995.tsv` (A/B, 525 rows total).
 - **Phenotypes**: Merged from free-text sentences, `Diagnosis`, and `Additional clinical phenotype` columns; embedded `(HP:XXXXXXX)` IDs stripped before matching.
 - **Variants**: HGVS-style `Gene:NM_XXXXXX:exon:c.X:p.X` or constructed from `c.DNA` and transcript columns.
 - **ACMG codes**: extracted from classification strings like `"LP (PM2, PP1)"`.

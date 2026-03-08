@@ -5,7 +5,7 @@
 ```
 data/
 ├── phenotypes/          # Source TSV files — input to the normalization pipeline
-│   ├── ahmed*                       (A/B, 525 rows total)
+│   ├── ahmed-pmid28454995.tsv       (A/B, 525 rows total)
 │   ├── fawzan-variants.tsv          (F, 1,024 rows)
 │   ├── marwa-variants.tsv           (M, 1,421 rows)
 │   ├── PMC6562004.tsv               (P, 2,218 rows)
