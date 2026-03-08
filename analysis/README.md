@@ -14,14 +14,14 @@ This analysis compares Saudi clinical cases against the Deciphering Developmenta
 
 We compare four combinations of Information Content (IC) and Similarity Measures. **Extrinsic Resnik** consistently provides the best prioritization performance.
 
-| Cohort | Method | Mean AUC | Mean AUPR (MRR) | Hits@1 | Hits@10 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **DDD** | Extrinsic Resnik | **0.9941** | **0.7134** | **60.50%** | **85.17%** |
-| **DDD** | Extrinsic Lin | 0.9941 | 0.6841 | 55.86% | 83.99% |
-| **Literature** | Extrinsic Resnik | **0.9813** | **0.6712** | **56.36%** | **79.60%** |
-| **Literature** | Extrinsic Lin | 0.9811 | 0.6465 | 51.60% | 77.91% |
-| **Saudi** | Extrinsic Resnik | 0.8861 | **0.0625** | **3.35%** | **11.29%** |
-| **Saudi** | Intrinsic Resnik | **0.8880** | 0.0574 | 2.81% | 10.97% |
+| Cohort | Method | n | Mean AUC | MRR | Hits@1 | Hits@10 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Literature** | Extrinsic Resnik | 8,887 | **0.9828** | **0.6542** | **57.78%** | **77.87%** |
+| **Literature** | Extrinsic Lin | 8,887 | 0.9811 | 0.6465 | 56.82% | 77.91% |
+| **DDD** | Extrinsic Resnik | 1,443 | **0.9951** | **0.7063** | **62.02%** | **85.45%** |
+| **DDD** | Extrinsic Lin | 1,443 | 0.9941 | 0.6841 | 60.29% | 83.99% |
+| **Saudi** | Extrinsic Resnik | 3,088 | **0.8915** | **0.0676** | **3.69%** | **12.47%** |
+| **Saudi** | Intrinsic Resnik | 3,088 | 0.8896 | 0.0585 | 2.91% | 11.24% |
 
 ### Saudi Source Sub-analysis (Extrinsic Resnik)
 
@@ -29,12 +29,12 @@ The Saudi cohort consists of six distinct sources. Performance using the top-per
 
 | Source | n | Hits@1 | Hits@10 | Mean AUC | MRR |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **marwa-variants** | 1,064 | 7.89% | 20.68% | 0.9307 | 0.1238 |
-| **ahmed-variants** | 200 | 2.50% | 9.00% | 0.8628 | 0.0482 |
-| **PMC7082194** | 122 | 1.64% | 7.38% | 0.8956 | 0.0455 |
-| **PMC6562004** | 1,228 | 1.63% | 8.71% | 0.8728 | 0.0423 |
-| **fawzan-variants** | 460 | 1.09% | 6.74% | 0.8654 | 0.0346 |
-| **ahmed-pmid28454995** | 88 | 1.14% | 3.41% | 0.8892 | 0.0251 |
+| **marwa-variants** | 1,018 | 8.35% | 21.91% | 0.9315 | 0.1287 |
+| **ahmed-variants** | 198 | 2.02% | 8.59% | 0.8599 | 0.0423 |
+| **PMC6562004** | 1,213 | 1.57% | 8.74% | 0.8715 | 0.0402 |
+| **PMC7082194** | 122 | 1.64% | 5.74% | 0.8933 | 0.0344 |
+| **fawzan-variants** | 453 | 0.66% | 5.96% | 0.8685 | 0.0306 |
+| **ahmed-pmid28454995** | 84 | 1.19% | 5.95% | 0.8909 | 0.0296 |
 
 ## Key Files
 - `phenotype_similarity_comprehensive.csv`: Raw results for all 4 methods.
@@ -46,5 +46,5 @@ The Saudi cohort consists of six distinct sources. Performance using the top-per
 
 ## Summary Observations
 1. **Method Optimization**: Using Extrinsic (gene-based) IC with Resnik similarity significantly improves prioritization accuracy, especially Hits@1 and MRR, by focusing on clinically informative terms.
-2. **DDD/Literature vs. Saudi**: Curated datasets show exceptional alignment. The Saudi cohort presents greater real-world challenge, with lower Hits@1 indicating phenotypic heterogeneity or sparse clinical descriptions.
-3. **Internal Variability**: Within the Saudi cohort, the Alkuraya dataset (marwa-variants) shows the highest quality phenotypic descriptions, achieving a 20.7% Hits@10.
+2. **Data Density Impact**: The Literature (Avg 21.5 HPO terms) and DDD (Avg 15.3 terms) cohorts significantly outperform the Saudi cohort (Avg 3.3 terms).
+3. **Internal Variability**: Within the Saudi cohort, the Alkuraya dataset (marwa-variants) shows the highest quality phenotypic descriptions, achieving a 21.9% Hits@10.
