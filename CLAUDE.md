@@ -172,8 +172,7 @@ Source files in `data/phenotypes/`:
 
 | File | Letter | Description |
 |---|---|---|
-| `ahmed-variants.tsv` | A | HPOs, Gene, Variant, Protein, Zygosity, ACMG |
-| `ahmed-pmid28454995.tsv` | B | c.DNA, g.DNA (GRCh38) |
+| `ahmed*` | A/B | HPOs, Gene, Variant, Protein, Zygosity, ACMG |
 | `fawzan-variants.tsv` | F | Phenotype, Variant(s), Zyogsity [sic] |
 | `marwa-variants.tsv` | M | phenotypes (pipe+HPO), variants (pipe) |
 | `PMC6562004.tsv` | P | skiprows=1, Gene(s), Variant(s) |

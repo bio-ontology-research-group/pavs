@@ -70,14 +70,14 @@ uv run python normalization/normalize_ddd.py
 
 ## Source-Specific Normalizers
 
-### 1. Ahmed Normalization (`normalize_ahmed.py`)
+### 1. Ahmed Normalization (`normalize_ahmed*.py`)
 
-**Source**: `data/phenotypes/ahmed-variants.tsv` (291 rows, source letter A)
-**Focus**: Complex phenotypic sentences and mode of inheritance mapping.
+**Source**: `data/phenotypes/ahmed*` (A: 291 rows, B: 234 rows)
+**Focus**: Complex phenotypic sentences, mode of inheritance mapping, and merging multiple clinical descriptions.
 
 Standardized fields:
-- `normalized_hpos`: List of validated HPO IDs.
-- `normalized_hpo_labels`: Official HPO names.
+- `normalized_hpos`: Features from sentences, `Diagnosis` and `Additional clinical phenotype` columns.
+- `normalized_variants_hgvs`: Constructed from transcript/cDNA columns.
 - `normalized_gene_entrez`: NCBI Entrez Gene ID.
 - `normalized_zygosity_geno`: GENO ID.
 - `normalized_moi_hpo`: HPO ID for Mode of Inheritance.
@@ -107,18 +107,7 @@ Standardized fields:
 - `normalized_diseases`: Syndrome/Disease identifiers (OMIM/ORPHA).
 - `normalized_disease_labels`: Official disease names from the annotation store.
 
-### 4. Ahmed PMID Normalization (`normalize_ahmed_pmid28454995.py`)
-
-**Source**: `data/phenotypes/ahmed-pmid28454995.tsv` (234 rows, source letter B)
-**Focus**: Merging multiple clinical descriptions and mapping variants from separate columns.
-
-Standardized fields:
-- `normalized_hpos`: Merged features from `Diagnosis` and `Additional clinical phenotype`.
-- `normalized_variants_hgvs`: Constructed HGVS strings from transcript and cDNA columns.
-- `normalized_genes_entrez`: Mapped variant genes to Entrez IDs.
-- `normalized_diseases`: Parsed OMIM identifiers.
-
-### 5. PMC7082194 Normalization (`normalize_pmc7082194.py`)
+### 3. PMC7082194 Normalization (`normalize_pmc7082194.py`)
 
 **Source**: `data/phenotypes/PMC7082194.tsv` (522 rows, source letter Q)
 **Focus**: Extracting phenotypes from non-standard trailing columns and standardizing inheritance to GENO.
@@ -128,12 +117,12 @@ Standardized fields:
 - `normalized_variants_hgvs`: Standardized variant nomenclature (converting 1-letter to 3-letter HGVS p.).
 - `normalized_zygosity_geno`: Inheritance terms (het/homo) mapped to GENO.
 
-### 6. PMC6562004 Normalization (`normalize_pmc6562004.py`)
+### 4. PMC6562004 Normalization (`normalize_pmc6562004.py`)
 
 **Source**: `data/phenotypes/PMC6562004.tsv` (2,218 rows, source letter P)
 **Focus**: Multi-gene/variant columns, skips first comment row.
 
-### 7. DDD Normalization (`normalize_ddd.py`)
+### 5. DDD Normalization (`normalize_ddd.py`)
 
 **Source**: `data/phenotypes/ddd-diagnoses.tsv` (1,856 rows, source letter D)
 **Focus**: Gene-disease associations with semicolon-delimited HPO IDs and allelic mode.

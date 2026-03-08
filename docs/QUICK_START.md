@@ -30,8 +30,10 @@ uv run python scripts/process_all_phenotypes.py --files ahmed-variants.tsv --ove
 
 ### Background Processing (All Files in Parallel)
 ```bash
-nohup uv run python scripts/process_all_phenotypes.py --files ahmed-variants.tsv --overwrite > logs/ahmed-variants.log 2>&1 &
-nohup uv run python scripts/process_all_phenotypes.py --files ahmed-pmid28454995.tsv --overwrite > logs/ahmed-pmid28454995.log 2>&1 &
+# Ahmed files
+nohup uv run python scripts/process_all_phenotypes.py --files ahmed-variants.tsv,ahmed-pmid28454995.tsv --overwrite > logs/ahmed.log 2>&1 &
+
+# Other files
 nohup uv run python scripts/process_all_phenotypes.py --files fawzan-variants.tsv --overwrite > logs/fawzan-variants.log 2>&1 &
 nohup uv run python scripts/process_all_phenotypes.py --files marwa-variants.tsv --overwrite > logs/marwa-variants.log 2>&1 &
 nohup uv run python scripts/process_all_phenotypes.py --files PMC6562004.tsv --overwrite > logs/PMC6562004.log 2>&1 &

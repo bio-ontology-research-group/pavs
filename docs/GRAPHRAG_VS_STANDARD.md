@@ -52,7 +52,7 @@ PAVS offers two normalization pipelines optimized for different use cases:
 uv run python scripts/process_all_phenotypes.py --parallel
 
 # Process specific files in background
-nohup uv run python scripts/process_all_phenotypes.py --files ahmed-variants.tsv --overwrite > logs/ahmed.log 2>&1 &
+nohup uv run python scripts/process_all_phenotypes.py --files ahmed-variants.tsv,ahmed-pmid28454995.tsv --overwrite > logs/ahmed.log 2>&1 &
 
 # Test with 10 rows
 uv run python scripts/process_all_phenotypes.py 10
@@ -237,7 +237,7 @@ uv run python scripts/process_all_phenotypes.py --parallel
 uv run python scripts/process_all_phenotypes_graphrag.py --parallel --embedding-model balanced
 
 # Compare outputs
-diff data/processed/ahmed-variants_normalized.tsv data/processed_graphrag/ahmed-variants_normalized.tsv
+diff data/processed/ahmed_normalized.tsv data/processed_graphrag/ahmed_normalized.tsv
 ```
 
 This allows you to:

@@ -90,18 +90,14 @@ When both a parent and a descendant HPO term are matched (e.g., `"Intellectual d
 - **Ancestry**: `HANCESTRO:0852` (Middle Eastern) for all Saudi cases.
 - **Country**: `GAZ:00005279` (Saudi Arabia).
 
-### 3.2 Ahmed (`ahmed-variants.tsv`, letter A)
+### 3.2 Ahmed (A/B)
 
-- Phenotypes: comma-separated free text; embedded `(HP:XXXXXXX)` IDs stripped before matching.
-- Variants: HGVS-style `Gene:NM_XXXXXX:exon:c.X:p.X` format.
-- ACMG codes: extracted from classification strings like `"LP (PM2, PP1)"`.
+- **Sources**: `ahmed*` (A/B, 525 rows total).
+- **Phenotypes**: Merged from free-text sentences, `Diagnosis`, and `Additional clinical phenotype` columns; embedded `(HP:XXXXXXX)` IDs stripped before matching.
+- **Variants**: HGVS-style `Gene:NM_XXXXXX:exon:c.X:p.X` or constructed from `c.DNA` and transcript columns.
+- **ACMG codes**: extracted from classification strings like `"LP (PM2, PP1)"`.
 
-### 3.3 Ahmed PMID (`ahmed-pmid28454995.tsv`, letter B)
-
-- Phenotypes: merged from `Diagnosis` and `Additional clinical phenotype` columns.
-- Variants: constructed from `c.DNA` and transcript columns.
-
-### 3.4 Fawzan (`fawzan-variants.tsv`, letter F)
+### 3.3 Fawzan (`fawzan-variants.tsv`, letter F)
 
 **Source**: 1,024 rows. Most complex source due to HGMD variant encoding.
 
