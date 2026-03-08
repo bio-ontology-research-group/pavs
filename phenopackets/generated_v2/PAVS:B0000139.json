@@ -1,0 +1,201 @@
+{
+  "id": "PAVS:B0000139",
+  "subject": {
+    "id": "PAVS:B0000139",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-pmid28454995",
+        "description": "Source dataset: ahmed-pmid28454995"
+      },
+      {
+        "id": "PMID:28454995",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:B0000139",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:B0000139",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:B0000139_IQSEC1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "IQSEC1",
+                  "valueId": "NCBIGene:9922"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000613206.2:c.962G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000003.12:g.12936054C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000480301.1:p.Arg321Gln"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr3",
+                  "pos": 12936054,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:683226"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0.01)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.049)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "1.445e-05"
+                  },
+                  {
+                    "name": "af_saudi",
+                    "value": "0.003311"
+                  },
+                  {
+                    "name": "ac_saudi",
+                    "value": "2"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "683226"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Likely pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9620e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.7100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "frontal_cortex:100|cerebral_cortex:98|cerebellum:96|spleen:94|cerebellar_hemisphere:92|aorta:91|tibial_artery:89|anterior_cingulate_cortex:87|blood:85|coronary_artery:83|lung:81|tibial_nerve:79|adrenal_gland:77|endocervix:75|uterus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of keratinocyte migration|regulation of postsynaptic neurotransmitter receptor internalization|vesicle-mediated transport|dendritic spine development|positive regulation of focal adhesion disassembly|regulation of ARF protein signal transduction"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

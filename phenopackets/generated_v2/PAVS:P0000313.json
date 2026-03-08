@@ -1,0 +1,190 @@
+{
+  "id": "PAVS:P0000313",
+  "subject": {
+    "id": "PAVS:P0000313",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P3M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000969",
+        "label": "Edema"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001396",
+        "label": "Cholestasis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000313",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000313",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000313_SLC17A5",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SLC17A5",
+                  "valueId": "NCBIGene:26503"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000355773.6:c.308G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000006.12:g.73641908G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000348019.5:p.Trp103Ter"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr6",
+                  "pos": 73641908,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "stop_gained"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF07690"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.1116e-09"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0650e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "thyroid_gland:100|skin:98|minor_salivary_gland:96|aorta:94|coronary_artery:92|lung:92|tibial_artery:92|pituitary_gland:87|subcutaneous_adipose_tissue:85|mammary_gland:83|omental_fat_pad:81|transverse_colon:81|uterus:81|ileum:75|tibial_nerve:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "D-glucuronate transmembrane transport|carbohydrate derivative transport|carbohydrate transmembrane transport|proton transmembrane transport|sialic acid transport|carboxylic acid transport|transmembrane transport|neurotransmitter loading into synaptic vesicle|amino acid transport|organic anion transport|monoatomic anion transport|glucuronate transmembrane transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal cell morphology|tremors|weakness|abnormal corpus callosum morphology|abnormal myelination|demyelination|decreased oligodendrocyte progenitor number|decreased body weight|decreased body size|abnormal optic nerve morphology|abnormal locomotor behavior|abnormal gait|short stride length|decreased exploration in new environment|postnatal growth retardation|premature death|behavioral despair|abnormal neuron morphology|abnormal myelin sheath morphology|tonic-clonic seizures|abnormal optic trac"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

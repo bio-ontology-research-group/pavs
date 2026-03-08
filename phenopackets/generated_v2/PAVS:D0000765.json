@@ -1,0 +1,137 @@
+{
+  "id": "PAVS:D0000765",
+  "subject": {
+    "id": "PAVS:D0000765",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013581",
+        "label": "intellectual disability, autosomal dominant 2"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000765",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013581",
+          "label": "intellectual disability, autosomal dominant 2"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000765",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000765_DOCK8",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "DOCK8",
+                  "valueId": "NCBIGene:81704"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.9093e-17"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.2200e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|blood:98|muscle_layer_of_esophagus:96|lung:94|ileum:92|testis:91|adrenal_gland:89|esophagogastric_junction:87|mammary_gland:87|omental_fat_pad:87|subcutaneous_adipose_tissue:87|thyroid_gland:79|coronary_artery:77|esophagus_mucosa:77|prostate_gland:77|tibial_nerve:77|urinary_bladder:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of GTPase activity|cellular response to chemokine|positive regulation of establishment of T cell polarity|regulation of small GTPase mediated signal transduction|small GTPase-mediated signal transduction|memory T cell proliferation|regulation of Rho protein signal transduction|positive regulation of T cell migration"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal myelination|abnormal humoral immune response|decreased IgG level|decreased IgM level|decreased activated T cell number|abnormal B cell differentiation|abnormal T cell differentiation|abnormal dendritic cell physiology|decreased susceptibility to experimental autoimmune encephalomyelitis|decreased B-1 B cell number|decreased T cell number|decreased T cell proliferation|increased CD4-positive, alpha-beta T cell number|decreased CD4-positive, alpha-beta T cell number|abnormal CD4-positive "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

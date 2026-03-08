@@ -1,0 +1,292 @@
+{
+  "id": "PAVS:D0000516",
+  "subject": {
+    "id": "PAVS:D0000516",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001254",
+        "label": "Lethargy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001259",
+        "label": "Coma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001262",
+        "label": "Excessive daytime somnolence"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001289",
+        "label": "Confusion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001298",
+        "label": "Encephalopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001324",
+        "label": "Muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001324",
+        "label": "Muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001397",
+        "label": "Hepatic steatosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001635",
+        "label": "Congestive heart failure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001639",
+        "label": "Hypertrophic cardiomyopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001640",
+        "label": "Cardiomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001706",
+        "label": "Endocardial fibroelastosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001987",
+        "label": "Hyperammonemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001988",
+        "label": "Recurrent hypoglycemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002013",
+        "label": "Vomiting"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002240",
+        "label": "Hepatomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002910",
+        "label": "Elevated circulating hepatic transaminase concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003198",
+        "label": "Myopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005959",
+        "label": "Impaired gluconeogenesis"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008919",
+        "label": "systemic primary carnitine deficiency disease"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000516",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008919",
+          "label": "systemic primary carnitine deficiency disease"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000516",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000516_SLC22A5",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SLC22A5",
+                  "valueId": "NCBIGene:6584"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "8.4286e-10"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.6300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skeletal_muscle_tissue:100|cerebellum:98|cerebellar_hemisphere:96|pituitary_gland:94|fallopian_tube:92|prostate_gland:92|cortex_of_kidney:89|endocervix:89|ileum:89|ovary:89|thyroid_gland:89|ectocervix:79|lower_leg_skin:79|minor_salivary_gland:79|renal_medulla:79|aorta:79|suprapubic_skin:79|tibial_nerve:79|transverse_colon:79|uterus:79|vagina:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "carnitine transmembrane transport|monoatomic ion transport|organic cation transport|response to tumor necrosis factor|sodium-dependent organic cation transport|xenobiotic transport|(R)-carnitine transport|positive regulation of intestinal epithelial structure maintenance|transport across blood-brain barrier|amine transport|quaternary ammonium group transport|sodium ion transport|response to symbiotic bacterium|response to type II interferon|transmembrane transport|(R)-carnitine transmembrane tra"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "hypoglycemia|pale liver|abnormal hepatocyte morphology|abnormal male reproductive system morphology|cardiac hypertrophy|postnatal growth retardation|abnormal glucose homeostasis|premature death|no abnormal phenotype detected|hepatic steatosis|abnormal epididymis morphology|abnormal corpus epididymis morphology|aminoaciduria|decreased circulating carnitine level|increased epididymis weight|increased circulating ammonia level|abnormal external male genitalia morphology|abnormal renal reabsorption|"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

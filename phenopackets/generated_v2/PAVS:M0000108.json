@@ -1,0 +1,213 @@
+{
+  "id": "PAVS:M0000108",
+  "subject": {
+    "id": "PAVS:M0000108",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0007875",
+        "label": "Congenital amaurosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:19956407",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/19956407/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012990",
+        "label": "Leber congenital amaurosis 13"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000108",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012990",
+          "label": "Leber congenital amaurosis 13"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000108",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000108_RDH12",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "RDH12",
+                  "valueId": "NCBIGene:145226"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000551171.6:c.226G>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000014.9:g.67725137G>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000449079.1:p.Gly76Arg"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr14",
+                  "pos": 67725137,
+                  "ref": "G",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:1063125"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.993)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00106"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "6.84e-07"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "1063125"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic/Likely pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.1151e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.6200e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "lower_leg_skin:100|suprapubic_skin:98|vagina:96|esophagus_mucosa:94|stomach:92|adrenal_gland:91|frontal_cortex:91|pituitary_gland:91|cerebellum:91|cerebral_cortex:83|cortex_of_kidney:83|liver:83|pancreas:83|substantia_nigra:83|thyroid_gland:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "lipid metabolic process|visual perception|retinol metabolic process|retinoid metabolic process|photoreceptor cell maintenance|cellular detoxification of aldehyde"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "delayed dark adaptation|abnormal eye physiology|abnormal eye electrophysiology|abnormal retina neuronal layer morphology|abnormal retina apoptosis|short retina rod cell outer segment"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

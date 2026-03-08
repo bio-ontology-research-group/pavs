@@ -1,0 +1,285 @@
+{
+  "id": "PAVS:D0001212",
+  "subject": {
+    "id": "PAVS:D0001212",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001251",
+        "label": "Ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001324",
+        "label": "Muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001347",
+        "label": "Hyperreflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001760",
+        "label": "Abnormal foot morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002093",
+        "label": "Respiratory insufficiency"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002171",
+        "label": "Gliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002380",
+        "label": "Fasciculations"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002398",
+        "label": "Degeneration of anterior horn cells"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002529",
+        "label": "Neuronal loss in central nervous system"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002803",
+        "label": "Congenital contracture"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003445",
+        "label": "EMG: neuropathic changes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003577",
+        "label": "Congenital onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003676",
+        "label": "Progressive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006850",
+        "label": "Hypoplasia of the ventral pons"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007053",
+        "label": "Spinal muscular atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007269",
+        "label": "Feeding difficulties in infancy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008872",
+        "label": "HP:0008872"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011866",
+        "label": "pontocerebellar hypoplasia type 1A"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001212",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011866",
+          "label": "pontocerebellar hypoplasia type 1A"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001212",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001212_VRK1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "VRK1",
+                  "valueId": "NCBIGene:7443"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.0755e-05"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.4700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|ectocervix:98|endocervix:98|fallopian_tube:98|lower_leg_skin:98|mammary_gland:98|ovary:98|skin:98|spleen:98|suprapubic_skin:98|tibial_nerve:98|uterus:98|vagina:98|coronary_artery:75|esophagus_mucosa:75|frontal_cortex:75|ileum:75|lung:75|minor_salivary_gland:75|nucleus_accumbens:75|omental_fat_pad:75|pituitary_gland:75|prostate_gland:75|sigmoid_colon:75|stomach:75|subcutaneous_adipose_tissue:75|thyroid_gland:75|tibial_artery:75|transverse_colon:75|urinary_bladder:75|cerebellar_hemisphere:75|cerebellum:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "Golgi disassembly|Cajal body organization|mitotic nuclear membrane disassembly|cell division|neuron projection development|chromatin remodeling|protein phosphorylation|regulation of neuron migration|signal transduction|DNA damage response|protein autophosphorylation|positive regulation of protein localization to chromatin"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "impaired fertilization|abnormal oocyte morphology|impaired ovarian folliculogenesis|small testis|seminiferous tubule degeneration|abnormal spermatogenesis|male infertility|female infertility|abnormal oogenesis|no abnormal phenotype detected|abnormal seminiferous tubule morphology|abnormal epididymis morphology|abnormal spermatogonia proliferation|increased circulating alanine transaminase level|decreased testis weight|decreased male germ cell number|abnormal behavior|azoospermia|abnormal female "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

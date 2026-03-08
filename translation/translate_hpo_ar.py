@@ -18,13 +18,98 @@ logger = logging.getLogger(__name__)
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
-SYSTEM_PROMPT = """You are a bilingual medical geneticist and expert translator. Translate the following JSON array of Human Phenotype Ontology (HPO) terms to Arabic. 
+SYSTEM_PROMPT = """You are a bilingual medical geneticist and expert translator. Translate the following JSON array of Human Phenotype Ontology (HPO) terms to Arabic.
 
 STRICT RULES:
-1. For 'arabic_technical_name': Provide the standard medical Arabic translation. If (and only if) no standard Arabic term exists in medical literature, keep the English name. 
+1. For 'arabic_technical_name': Provide the standard medical Arabic translation. If (and only if) no standard Arabic term exists in medical literature, keep the English name.
 2. For 'arabic_definition': ALWAYS translate the 'english_definition' into clear, descriptive medical Arabic. Never return English for the definition if an English definition was provided.
 3. For 'arabic_layperson_synonym': Provide a simplified Arabic version that a non-medical person would understand. If uncertain, you may use a simplified version of the technical name.
-4. Output strictly in the specified JSON format. Ensure the 'translations' array has the same length as the input."""
+4. Output strictly in the specified JSON format. Ensure the 'translations' array has the same length as the input.
+
+ARABIC SENTENCE STRUCTURE FOR HPO TERMS:
+In Arabic HPO translations, always state the problem first, then the anatomical location. This is the reverse of the English structure.
+Rule: Translate as: [Arabic term for abnormality] + في + [anatomical location]. Do not mirror English word order.
+Examples:
+- Fingernail hypoplasia → نقص تنسج في أظافر اليد
+- Renal tubular dysfunction → خلل في الأنابيب الكلوية
+- Cardiac rhythm abnormality → اضطراب في نظم القلب
+
+Exception for adjectives:
+- Metaphyseal dysplasia → خلل تنسجي كردوسي (Abnormality + Adjective)
+
+GLOSSARY (Use these EXACT terms):
+- Atresia: رتق
+- Malacia / -malacia: تلين
+- Metaphysis: كردوس
+- Metaphyseal (adjective): كردوسي
+- interface: الواجهة / السطح البيني
+- Serrated: مسنّن
+- -cele: قيلة
+- -pathy: اعتلال
+- Dystrophy: حثل
+- Atrophy: ضمور
+- Mesomelic: متوسط الأطراف
+- Intraepithelial: داخل الظهارة
+- Adenoid: اللحمية
+- Anteversion: انكفاء أمامي
+- Retroversion: انكفاء خلفي   
+- Polyps: سلائل
+- Capital femoral: رأس عظم الفخذ
+- Epiphysis: مشاشة
+- Notch: ثلمة
+- Cleft / Fissure: شق
+- Hyperplasia: فرط تنسج
+- Hypertrophy: تضخم
+- Neoplasia: تنشّؤ
+- Dysplasia: خلل تنسجي
+
+SPECIAL RULES FOR TERMS CONTAINING "Abnormal" OR "Abnormality":
+Apply the following decision rules IN ORDER, stopping at the first matching rule:
+
+Rule 1 — Physical Structure:
+  If the term describes the physical shape, size, or morphology of an anatomical structure (organ, bone, tissue, cell):
+  → Use شذوذ (Shudhūdh) as the translation for "Abnormal/Abnormality".
+  → If the structural change is at the histological or microscopic level, use شذوذ نسيجي.
+  → If Rule 1 applies, do NOT proceed to further rules.
+
+Rule 2 — Measurable Functional Deficit:
+  If the abnormality is a specific, measurable failure quantified as an output, level, activity, or pressure:
+  → Use خلل (Khalal).
+  → Append وظيفي only when the context explicitly denotes organ or physiological function.
+  → Omit وظيفي for enzyme activity and biochemical levels.
+  → If Rule 2 applies, do NOT proceed to further rules.
+
+Rule 3 — Complex System, Pattern, or Behavior:
+  If the term describes a complex pattern, rhythm, cycle, behavioral pattern, or a disturbance involving multiple interacting factors:
+  → Use اضطراب (Iḍitārāb).
+  → If Rule 3 applies, do NOT proceed to further rules.
+
+Rule 4 — Default Descriptive Quality (use sparingly):
+  For basic sensory or simple descriptive traits (color, odor, appearance, basic lab finding):
+  → Use غير طبيعي (Ghayr Ṭabīʼi).
+  → Re-examine Rules 1–3 before using this fallback.
+
+SPECIAL RULES FOR MORPHOGENESIS TERMS:
+These rules take STRICT PRIORITY over all other rules.
+
+Hypoplasia (underdevelopment / reduced size of a normally-formed structure):
+  → arabic_technical_name MUST begin with: نقص تنسج
+  → Pattern: نقص تنسج + في + [anatomical structure]
+  → NEVER use نقص التطور, نقص التخلق, ضمور, صغر, or any other variant.
+
+Aplasia (complete congenital absence of tissue/structure formation):
+  → arabic_technical_name MUST begin with: عدم التنسج
+  → Pattern: عدم التنسج + في + [anatomical structure]
+  → NEVER use عدم التكون, غياب, انعدام, غَيْبَة, فقد تطوري, or any other variant.
+
+Agenesis (embryological failure of an organ to develop):
+  → arabic_technical_name MUST begin with: عدم التكوّن
+  → Pattern: عدم التكوّن + في + [anatomical structure]
+  → NEVER use غياب, عدم تشكّل, عدم نمو, or any other variant.
+
+Combined Aplasia/Hypoplasia terms:
+  → Use: عدم التنسج أو نقص التنسج + في + [anatomical structure]
+"""
 
 RESPONSE_SCHEMA = {
     "type": "json_schema",
@@ -156,6 +241,16 @@ async def process_ontology(args):
         except Exception as e:
             logger.warning(f"Could not load existing output file: {e}")
 
+    # Force re-translation of terms whose English name contains the filter substring
+    if args.retranslate_filter:
+        removed = {
+            tid for tid, t in existing_translations.items()
+            if args.retranslate_filter.lower() in t.get('english_technical_name', '').lower()
+        }
+        for tid in removed:
+            del existing_translations[tid]
+        logger.info(f"--retranslate-filter '{args.retranslate_filter}': forcing re-translation of {len(removed)} terms.")
+
     logger.info(f"Loading ontology from {args.input}...")
     try:
         onto = pronto.Ontology(args.input)
@@ -210,7 +305,11 @@ async def process_ontology(args):
         }
         all_terms_map[term.id] = term_payload
         
-        if term.id not in existing_translations:
+        # If target_ids provided, we FORCE re-translation of those terms
+        if target_ids is not None:
+            if term.id in target_ids:
+                terms_to_translate.append(term_payload)
+        elif term.id not in existing_translations:
             terms_to_translate.append(term_payload)
 
     logger.info(f"Terms remaining: {len(terms_to_translate)}")
@@ -284,6 +383,7 @@ def main():
     parser.add_argument("--price-prompt", type=float, default=0.15, help="Price per 1M prompt tokens")
     parser.add_argument("--price-completion", type=float, default=0.60, help="Price per 1M completion tokens")
     parser.add_argument("--target-ids", help="Optional: File containing HPO IDs to focus on (one per line)")
+    parser.add_argument("--retranslate-filter", help="Force re-translation of already-translated terms whose English name contains this substring (e.g. 'Abnormal')")
     
     args = parser.parse_args()
     asyncio.run(process_ontology(args))

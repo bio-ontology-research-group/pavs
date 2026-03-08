@@ -1,0 +1,191 @@
+{
+  "id": "PAVS:M0000077",
+  "subject": {
+    "id": "PAVS:M0000077",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:26355662",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/26355662/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0014432",
+        "label": "Bardet-Biedl syndrome 2"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000077",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0014432",
+          "label": "Bardet-Biedl syndrome 2"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000077",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000077_BBS2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "BBS2",
+                  "valueId": "NCBIGene:583"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000245157.11:c.508G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000016.10:g.56510885G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000245157.5:p.Asp170Asn"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr16",
+                  "pos": 56510885,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0.01)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "possibly_damaging(0.804)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF14783"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.2071e-15"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.9200e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "tibial_nerve:100|ectocervix:98|ovary:98|adrenal_gland:94|endocervix:94|pituitary_gland:91|lower_leg_skin:89|suprapubic_skin:89|vagina:89|fallopian_tube:83|uterus:83|cerebellum:83|thyroid_gland:77|tibial_artery:77|cerebellar_hemisphere:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "striatum development|sperm axoneme assembly|intracellular protein localization|brain morphogenesis|negative regulation of appetite by leptin-mediated signaling pathway|cerebral cortex development|Golgi to plasma membrane protein transport|cell projection organization|visual perception|non-motile cilium assembly|cilium assembly|negative regulation of multicellular organism growth|hippocampus development|protein transport|fat cell differentiation|melanosome transport|photoreceptor cell maintenance"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal abdominal fat pad morphology|decreased salivation|increased body weight|obese|decreased body size|polyphagia|decreased startle reflex|abnormal placing response|increased circulating triglyceride level|male infertility|abnormal olfaction|hepatic steatosis|increased circulating alanine transaminase level|increased liver weight|kidney cyst|decreased lean body mass|anosmia|hyporesponsive to tactile stimuli|abnormal eye electrophysiology|decreased aggression|increased circulating leptin leve"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

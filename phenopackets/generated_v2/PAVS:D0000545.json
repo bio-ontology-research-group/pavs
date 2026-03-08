@@ -1,0 +1,208 @@
+{
+  "id": "PAVS:D0000545",
+  "subject": {
+    "id": "PAVS:D0000545",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000034",
+        "label": "Hydrocele testis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001028",
+        "label": "Hemangioma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001560",
+        "label": "Abnormality of the amniotic fluid"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001597",
+        "label": "Abnormal nail morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001790",
+        "label": "Nonimmune hydrops fetalis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003550",
+        "label": "Predominantly lower limb lymphedema"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003577",
+        "label": "Congenital onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003759",
+        "label": "Hypoplasia of lymphatic vessels"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007448",
+        "label": "Hyperkeratosis over edematous areas"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007919",
+        "label": "lymphatic malformation 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000545",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007919",
+          "label": "lymphatic malformation 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000545",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000545_FLT4",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "FLT4",
+                  "valueId": "NCBIGene:2324"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.6500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "thyroid_gland:100|lung:98|spleen:96|mammary_gland:94|omental_fat_pad:94|endocervix:91|fallopian_tube:91|ectocervix:87|subcutaneous_adipose_tissue:87|uterus:87|cortex_of_kidney:81|renal_medulla:79|pituitary_gland:77|adrenal_gland:75|prostate_gland:75|vagina:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of endothelial cell proliferation|positive regulation of endothelial cell migration|positive regulation of MAPK cascade|positive regulation of ERK1 and ERK2 cascade|positive regulation of vascular endothelial growth factor production|cell migration|positive regulation of protein phosphorylation|sprouting angiogenesis|negative regulation of apoptotic process|blood vessel morphogenesis|vascular endothelial growth factor signaling pathway|lymphangiogenesis|angiogenesis|regulatio"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal adipose tissue distribution|abnormal vascular development|abnormal intestine morphology|abnormal liver morphology|thick dermal layer|pale yolk sac|edema|pericardial edema|abnormal lymphatic vessel morphology|postnatal lethality|no abnormal phenotype detected|hydrops fetalis|extremity edema|lymphedema|abnormal lymph circulation|embryonic growth retardation|abnormal vitelline vascular remodeling|abnormal anterior cardinal vein morphology|abnormal dorsal aorta morphology|hemopericardium|ab"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

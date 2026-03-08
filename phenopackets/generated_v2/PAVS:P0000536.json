@@ -1,0 +1,197 @@
+{
+  "id": "PAVS:P0000536",
+  "subject": {
+    "id": "PAVS:P0000536",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P13Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0012735",
+        "label": "Cough"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008940",
+        "label": "Generalized lymphadenopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001945",
+        "label": "Fever"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000536",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000536",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000536_XRCC6",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "XRCC6",
+                  "valueId": "NCBIGene:2547"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000360079.8:c.1416A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000022.11:g.41657027A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000353192.3:p.Thr472="
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr22",
+                  "pos": 41657027,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "synonymous_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "LOW"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF03730"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.7200e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|skin:98|endocervix:96|ovary:96|uterus:92|tibial_artery:91|fallopian_tube:89|ectocervix:87|aorta:85|tibial_nerve:83|urinary_bladder:81|sigmoid_colon:79|vagina:79|lower_leg_skin:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cellular response to X-ray|response to ionizing radiation|telomere maintenance|positive regulation of immune system process|positive regulation of lymphocyte differentiation|immune system process|regulation of smooth muscle cell proliferation|cellular hyperosmotic salinity response|positive regulation of DNA-templated transcription|positive regulation of transcription by RNA polymerase II|innate immune response|cellular response to gamma radiation|negative regulation of DNA-templated transcripti"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "absent pre-B cells|decreased cell proliferation|small spleen|spleen hypoplasia|small thymus|decreased thymocyte number|abnormal diencephalon morphology|decreased body size|abnormal nursing|arrested B cell differentiation|decreased IgM level|thymus hypoplasia|decreased litter size|increased cellular sensitivity to gamma-irradiation induced cell death|increased T cell derived lymphoma incidence|abnormal B cell differentiation|abnormal T cell differentiation|small lymph nodes|abnormal bone marrow c"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

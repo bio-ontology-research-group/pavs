@@ -1,0 +1,281 @@
+{
+  "id": "PAVS:D0001373",
+  "subject": {
+    "id": "PAVS:D0001373",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000403",
+        "label": "Recurrent otitis media"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000509",
+        "label": "Conjunctivitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001287",
+        "label": "Meningitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001744",
+        "label": "Splenomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002014",
+        "label": "Diarrhea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002110",
+        "label": "Bronchiectasis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002240",
+        "label": "Hepatomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002664",
+        "label": "Neoplasm"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002665",
+        "label": "Lymphoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002716",
+        "label": "Lymphadenopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002718",
+        "label": "Recurrent bacterial infections"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002720",
+        "label": "Decreased circulating IgA concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002837",
+        "label": "Recurrent bronchitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002850",
+        "label": "Decreased circulating total IgM"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002960",
+        "label": "Autoimmunity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004315",
+        "label": "Decreased circulating IgG concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005435",
+        "label": "Impaired T cell function"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006532",
+        "label": "Recurrent pneumonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011108",
+        "label": "Recurrent sinusitis"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009413",
+        "label": "immunodeficiency, common variable, 2"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001373",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009413",
+          "label": "immunodeficiency, common variable, 2"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001373",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001373_TNFRSF13B",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TNFRSF13B",
+                  "valueId": "NCBIGene:23495"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.2736e-16"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.7940e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|ileum:98|blood:96|transverse_colon:94|minor_salivary_gland:92|lung:91|stomach:89|testis:89|esophagus_mucosa:85|fallopian_tube:83|cervical_vertebra:81|cortex_of_kidney:81|ectocervix:81|endocervix:81|hippocampus:81|liver:81|mammary_gland:81|omental_fat_pad:81|prostate_gland:81|renal_medulla:81|thyroid_gland:81|urinary_bladder:81|vagina:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "adaptive immune response|immune system process|B cell homeostasis|cell surface receptor signaling pathway|negative regulation of B cell proliferation|hematopoietic progenitor cell differentiation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal spleen morphology|enlarged spleen|enlarged lymph nodes|decreased IgM level|decreased IgA level|kidney inflammation|liver inflammation|increased leukemia incidence|premature death|abnormal lymph node primary follicle morphology|abnormal spleen periarteriolar lymphoid sheath morphology|abnormal Peyer's patch follicle morphology|abnormal immunoglobulin level|decreased IgE level|glomerulonephritis|increased urine protein level|increased anti-double stranded DNA antibody level|increased anti"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

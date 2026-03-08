@@ -1,0 +1,220 @@
+{
+  "id": "PAVS:Q0000062",
+  "subject": {
+    "id": "PAVS:Q0000062",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P7Y7M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0008404",
+        "label": "Nail dystrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001510",
+        "label": "Growth delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC7082194",
+        "description": "Source dataset: PMC7082194"
+      },
+      {
+        "id": "PMID:31618753",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31618753/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:Q0000062",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:Q0000062",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:Q0000062_GTF2H5",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GTF2H5",
+                  "valueId": "NCBIGene:404672"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000607778.2:c.1A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000006.12:g.158170504A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000476100.1:p.Met1?"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr6",
+                  "pos": 158170504,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:4850583"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "start_lost"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0.01)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "possibly_damaging(0.503)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF06331"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "1.373e-06"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "4850583"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.3389e-02"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.7270e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|tibial_artery:98|testis:96|adrenal_gland:94|cervical_vertebra:94|coronary_artery:94|muscle_layer_of_esophagus:94|aorta:94|tibial_nerve:94|cerebellar_hemisphere:94|frontal_cortex:81|nucleus_accumbens:81|ectocervix:77|endocervix:77|esophagogastric_junction:77|ovary:77|sigmoid_colon:77|urinary_bladder:77|uterus:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "transcription by RNA polymerase II|nucleotide-excision repair|nucleotide-excision repair, preincision complex assembly|transcription initiation at RNA polymerase II promoter|DNA damage response|DNA repair"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "postnatal lethality, complete penetrance"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

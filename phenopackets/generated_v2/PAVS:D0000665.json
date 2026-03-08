@@ -1,0 +1,215 @@
+{
+  "id": "PAVS:D0000665",
+  "subject": {
+    "id": "PAVS:D0000665",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000951",
+        "label": "Abnormality of the skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001425",
+        "label": "obsolete Heterogeneous"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002170",
+        "label": "Intracranial hemorrhage"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002315",
+        "label": "Headache"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002514",
+        "label": "Cerebral calcification"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003011",
+        "label": "Abnormality of the musculature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003829",
+        "label": "Typified by incomplete penetrance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006576",
+        "label": "Hepatic vascular malformations"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007797",
+        "label": "Retinal vascular malformation"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0020724",
+        "label": "cerebral cavernous malformation 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000665",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0020724",
+          "label": "cerebral cavernous malformation 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000665",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000665_KRIT1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "KRIT1",
+                  "valueId": "NCBIGene:889"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.1437e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.9000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ectocervix:100|ovary:100|endocervix:96|fallopian_tube:96|pituitary_gland:96|spleen:96|testis:96|thyroid_gland:96|tibial_nerve:96|uterus:96|vagina:96|cerebellar_hemisphere:96|coronary_artery:77|esophagogastric_junction:77|ileum:77|lung:77|mammary_gland:77|minor_salivary_gland:77|prostate_gland:77|sigmoid_colon:77|aorta:77|skin:77|subcutaneous_adipose_tissue:77|tibial_artery:77|urinary_bladder:77|cerebellum:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "integrin activation|regulation of angiogenesis|endothelium development|negative regulation of endothelial cell proliferation|regulation of establishment of cell polarity|cell redox homeostasis|negative regulation of endothelial cell migration|small GTPase-mediated signal transduction|angiogenesis|negative regulation of endothelial cell apoptotic process|negative regulation of angiogenesis"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal heart morphology|abnormal heart development|abnormal heart looping|abnormal pericardium morphology|absent optic nerve|abnormal blood vessel morphology|abnormal somite shape|abnormal embryo size|abnormal embryo turning|incomplete embryo turning|abnormal left-right axis patterning|abnormal visceral yolk sac morphology|abnormal allantois morphology|embryonic growth arrest|abnormal eye morphology|abnormal neural tube morphology|abnormal artery morphology|abnormal chorioallantoic fusion|abno"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

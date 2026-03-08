@@ -1,0 +1,236 @@
+{
+  "id": "PAVS:D0000961",
+  "subject": {
+    "id": "PAVS:D0000961",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000491",
+        "label": "Keratitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000509",
+        "label": "Conjunctivitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000613",
+        "label": "Photophobia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000621",
+        "label": "Entropion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000656",
+        "label": "Ectropion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000992",
+        "label": "Cutaneous photosensitivity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001009",
+        "label": "Telangiectasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001029",
+        "label": "Poikiloderma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002671",
+        "label": "Basal cell carcinoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002861",
+        "label": "Melanoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003079",
+        "label": "Defective DNA repair after ultraviolet radiation damage"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004334",
+        "label": "Dermal atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006739",
+        "label": "Squamous cell carcinoma of the skin"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010213",
+        "label": "xeroderma pigmentosum group E"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000961",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010213",
+          "label": "xeroderma pigmentosum group E"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000961",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000961_DDB2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "DDB2",
+                  "valueId": "NCBIGene:1643"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.4594e-04"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.1900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "suprapubic_skin:100|lower_leg_skin:98|aorta:96|tibial_nerve:94|uterus:92|ectocervix:91|vagina:91|fallopian_tube:87|skin:85|spleen:83|endocervix:81|lung:81|prostate_gland:81|esophagus_mucosa:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cellular response to UV|protein autoubiquitination|nucleotide-excision repair|response to UV|DNA damage response|protein ubiquitination|DNA repair|UV-damage excision repair|protein polyubiquitination"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased sensitivity to skin irradiation|decreased body size|increased tumor incidence|premature death|increased squamous cell carcinoma incidence|decreased cellular sensitivity to ionizing radiation induced cell death|increased incidence of tumors by UV-induction"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

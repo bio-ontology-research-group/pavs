@@ -1,0 +1,187 @@
+{
+  "id": "PAVS:D0000918",
+  "subject": {
+    "id": "PAVS:D0000918",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002240",
+        "label": "Hepatomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003198",
+        "label": "Myopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003236",
+        "label": "Elevated circulating creatine kinase concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003546",
+        "label": "Exercise intolerance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003701",
+        "label": "Proximal muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009058",
+        "label": "Increased muscle lipid content"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012545",
+        "label": "neutral lipid storage myopathy"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000918",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012545",
+          "label": "neutral lipid storage myopathy"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000918",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000918_PNPLA2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PNPLA2",
+                  "valueId": "NCBIGene:57104"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.7218e-09"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.2210e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "subcutaneous_adipose_tissue:100|omental_fat_pad:98|mammary_gland:96|coronary_artery:94|tibial_nerve:92|aorta:91|thyroid_gland:89|tibial_artery:87|lung:85|minor_salivary_gland:83|spleen:81|fallopian_tube:79|urinary_bladder:77|ovary:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of triglyceride catabolic process|lipid droplet fusion|lipid droplet disassembly|lipid metabolic process|lipid homeostasis|triglyceride catabolic process|negative regulation of triglyceride storage|intracellular triglyceride homeostasis|lipid droplet organization|diacylglycerol biosynthetic process|acylglycerol acyl-chain remodeling|retinol metabolic process|retinoid metabolic process|lipid storage|acylglycerol metabolic process|lipid catabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased brown adipose tissue amount|increased white adipose tissue amount|decreased circulating HDL cholesterol level|abnormal circulating glucose level|abnormal heart morphology|abnormal myocardial fiber morphology|abnormal retina photoreceptor morphology|increased body weight|retina degeneration|abnormal cardiovascular system physiology|abnormal circulating insulin level|cardiac hypertrophy|abnormal homeostasis|premature death|abnormal lipid homeostasis|abnormal cardiovascular system morphol"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

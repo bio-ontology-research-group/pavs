@@ -1,0 +1,121 @@
+{
+  "id": "PAVS:D0000312",
+  "subject": {
+    "id": "PAVS:D0000312",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000312",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000312",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000312_RARB",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "RARB",
+                  "valueId": "NCBIGene:5915"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9414e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.7700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "muscle_layer_of_esophagus:100|ectocervix:98|endocervix:98|prostate_gland:98|thyroid_gland:98|tibial_nerve:98|uterus:98|pituitary_gland:87|esophagogastric_junction:85|fallopian_tube:85|nucleus_accumbens:85|ovary:85|tibial_artery:85|urinary_bladder:85|vagina:85"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of transcription by RNA polymerase II|retinoic acid receptor signaling pathway|embryonic digestive tract development|cell differentiation|positive regulation of transcription by RNA polymerase II|signal transduction|regulation of DNA-templated transcription"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal basioccipital bone morphology|abnormal lung development|decreased body weight|persistence of hyaloid vascular system|abnormal lens morphology|cataract|abnormal cornea morphology|cornea opacity|abnormal spatial learning|reduced long-term potentiation|postnatal growth retardation|absent long-term depression|no abnormal phenotype detected|abnormal pulmonary alveolar duct morphology|abnormal respiratory function|abnormal excitatory postsynaptic potential|vertebral transformation|decreased p"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

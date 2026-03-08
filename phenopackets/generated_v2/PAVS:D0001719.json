@@ -1,0 +1,129 @@
+{
+  "id": "PAVS:D0001719",
+  "subject": {
+    "id": "PAVS:D0001719",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0000489",
+        "label": "diabetic encephalopathy"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0001423",
+        "label": "X-linked dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001719",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0000489",
+          "label": "diabetic encephalopathy"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001719",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001719_IQSEC2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "IQSEC2",
+                  "valueId": "NCBIGene:23096"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellum:100|cerebellar_hemisphere:98|cerebral_cortex:96|frontal_cortex:94|anterior_cingulate_cortex:92|nucleus_accumbens:91|hippocampus:89|caudate_nucleus:87|amygdala:85|pituitary_gland:85|endocervix:81|putamen:81|testis:81|uterus:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of synaptic transmission, glutamatergic|positive regulation of long-term synaptic depression|regulation of neurotransmitter receptor localization to postsynaptic specialization membrane|positive regulation of synapse assembly|regulation of postsynaptic neurotransmitter receptor internalization|vesicle-mediated transport|modulation of chemical synaptic transmission|regulation of ARF protein signal transduction"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "convulsive seizures|sporadic seizures|social withdrawal|increased anxiety-related response|increased exploration in new environment|postnatal growth retardation|premature death|abnormal CNS synaptic transmission|abnormal sexual interaction|decreased susceptibility to pharmacologically induced seizures|abnormal response to novelty|astrocytosis|abnormal brain interneuron morphology|abnormal miniature excitatory postsynaptic currents|abnormal CNS synapse formation|abnormal spatial working memory|de"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

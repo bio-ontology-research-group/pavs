@@ -1,0 +1,295 @@
+{
+  "id": "PAVS:P0001600",
+  "subject": {
+    "id": "PAVS:P0001600",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P15M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "familyHistory",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0032316",
+            "label": "Positive family history"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001561",
+        "label": "Polyhydramnios"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002194",
+        "label": "Delayed gross motor development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002013",
+        "label": "Vomiting"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002020",
+        "label": "Gastroesophageal reflux"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000047",
+        "label": "Hypospadias"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001999",
+        "label": "Abnormal facial shape"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0012444",
+        "label": "Brain atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000124",
+        "label": "Renal tubular dysfunction"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001600",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001600",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001600_SLC12A1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SLC12A1",
+                  "valueId": "NCBIGene:6557"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000380993.8:c.1834G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000015.10:g.48251662G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000370381.3:p.Gly612Arg"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr15",
+                  "pos": 48251662,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:1017923"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.967)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00324"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "1017923"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Likely pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.4594e-17"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.7100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "renal_medulla:100|cortex_of_kidney:98|pituitary_gland:96|cerebellar_hemisphere:94|cerebellum:94|testis:91|adrenal_gland:89|hypothalamus:87|aorta:87|cerebral_cortex:83|frontal_cortex:83|nucleus_accumbens:83|ovary:83|cervical_vertebra:75|coronary_artery:75|ectocervix:75|endocervix:75|esophagogastric_junction:75|fallopian_tube:75|amygdala:75|hippocampus:75|ileum:75|lower_leg_skin:75|lung:75|mammary_gland:75|minor_salivary_gland:75|muscle_layer_of_esophagus:75|anterior_cingulate_cortex:75|omental_fat_pad:75|putamen:75|spleen:75|subcutaneous_adipose_tissue:75|substantia_nigra:75|tibial_artery:75|tibial_nerve:75|uterus:75|vagina:75|blood:75|caudate_nucleus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "monoatomic ion transport|ammonium homeostasis|potassium ion transmembrane transport|potassium ion transport|transepithelial ammonium transport|sodium ion transport|cell volume homeostasis|transmembrane transport|sodium ion transmembrane transport|chloride transport|monoatomic ion transmembrane transport|chloride transmembrane transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased bone mineral density|abnormal mineral level|increased circulating calcium level|hydronephrosis|weight loss|polydipsia|postnatal growth retardation|polyuria|abnormal circulating magnesium level|abnormal fluid regulation|abnormal kidney morphology|abnormal kidney physiology|increased hematocrit|abnormal renal tubule morphology|increased circulating alkaline phosphatase level|decreased urine osmolality|increased circulating chloride level|decreased circulating chloride level|alkalosis|nep"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

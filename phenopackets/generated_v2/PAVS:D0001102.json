@@ -1,0 +1,257 @@
+{
+  "id": "PAVS:D0001102",
+  "subject": {
+    "id": "PAVS:D0001102",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Micrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000407",
+        "label": "Sensorineural hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000508",
+        "label": "Ptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000736",
+        "label": "Short attention span"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000752",
+        "label": "Hyperactivity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000938",
+        "label": "Osteopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Motor delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001511",
+        "label": "Intrauterine growth retardation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001939",
+        "label": "Abnormality of metabolism/homeostasis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002750",
+        "label": "Delayed skeletal maturation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003577",
+        "label": "Congenital onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004325",
+        "label": "Decreased body weight"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009466",
+        "label": "Radial deviation of finger"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012110",
+        "label": "growth delay due to insulin-like growth factor type 1 deficiency"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001102",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012110",
+          "label": "growth delay due to insulin-like growth factor type 1 deficiency"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001102",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001102_IGF1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "IGF1",
+                  "valueId": "NCBIGene:3479"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "7.5933e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.7500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "endocervix:100|ectocervix:98|omental_fat_pad:96|mammary_gland:94|prostate_gland:94|coronary_artery:91|subcutaneous_adipose_tissue:89|thyroid_gland:89|uterus:89|vagina:89|fallopian_tube:81|liver:81|tibial_nerve:81|esophagogastric_junction:75|lung:75|muscle_layer_of_esophagus:75|tibial_artery:75|urinary_bladder:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "myoblast differentiation|positive regulation of glycogen biosynthetic process|positive regulation of transcription regulatory region DNA binding|positive regulation of MAPK cascade|positive regulation of ERK1 and ERK2 cascade|positive regulation of osteoblast differentiation|osteoblast differentiation|activation of protein kinase B activity|bone mineralization involved in bone maturation|positive regulation of smooth muscle cell proliferation|myotube cell development|proteoglycan biosynthetic pr"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal cochlea morphology|abnormal otic capsule morphology|delayed bone ossification|abnormal trabecular bone morphology|abnormal long bone hypertrophic chondrocyte zone|abnormal chondrocyte morphology|muscle hypoplasia|abnormal myelination|decreased motor neuron number|abnormal sensory neuron innervation pattern|abnormal lung morphology|decreased body length|decreased body weight|decreased body size|postnatal growth retardation|infertility|respiratory failure|abnormal glucose homeostasis|incr"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

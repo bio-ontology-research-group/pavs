@@ -1,0 +1,204 @@
+{
+  "id": "PAVS:M0000917",
+  "subject": {
+    "id": "PAVS:M0000917",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0033495",
+        "label": "Segmental glomerulosclerosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:25558065",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/25558065/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000917",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000917",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000917_NUP107",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "NUP107",
+                  "valueId": "NCBIGene:57122"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000229179.9:c.303G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000012.12:g.68690746G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000229179.4:p.Met101Ile"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr12",
+                  "pos": 68690746,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:181435"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "start_lost"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "tolerated(0.16)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.001)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "8.21e-06"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "181435"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic/Likely pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.8313e-09"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.3300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|ovary:98|skin:98|endocervix:94|tibial_nerve:94|uterus:94|ectocervix:89|fallopian_tube:89|mammary_gland:85|subcutaneous_adipose_tissue:85|spleen:81|tibial_artery:79|coronary_artery:77|ileum:77|vagina:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "nuclear pore complex assembly|nephron development|protein transport|protein import into nucleus|post-transcriptional tethering of RNA polymerase II gene DNA at nuclear periphery|mRNA export from nucleus|female gonad development|nucleocytoplasmic transport|mRNA transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "reduced female fertility"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

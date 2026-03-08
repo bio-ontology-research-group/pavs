@@ -1,0 +1,236 @@
+{
+  "id": "PAVS:D0000956",
+  "subject": {
+    "id": "PAVS:D0000956",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000388",
+        "label": "Otitis media"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000704",
+        "label": "Periodontitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001574",
+        "label": "Abnormality of the integument"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001939",
+        "label": "Abnormality of metabolism/homeostasis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002090",
+        "label": "Pneumonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002120",
+        "label": "Cerebral cortical atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005400",
+        "label": "Reduction of neutrophil motility"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006887",
+        "label": "Intellectual disability, progressive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010864",
+        "label": "Intellectual disability, severe"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009953",
+        "label": "leukocyte adhesion deficiency type II"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000956",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009953",
+          "label": "leukocyte adhesion deficiency type II"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000956",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000956_SLC35C1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SLC35C1",
+                  "valueId": "NCBIGene:55343"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "5.8493e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.6400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "esophagus_mucosa:100|liver:98|minor_salivary_gland:96|skin:94|subcutaneous_adipose_tissue:92|omental_fat_pad:91|urinary_bladder:89|vagina:89|ileum:85|transverse_colon:83|pituitary_gland:81|tibial_nerve:81|endocervix:77|mammary_gland:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "GDP-L-fucose salvage|'de novo' GDP-L-fucose biosynthetic process|GDP-L-fucose biosynthetic process|GDP-fucose import into Golgi lumen"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased leukocyte cell number|increased neutrophil cell number|increased monocyte cell number|ruffled hair|overexpanded pulmonary alveolus|decreased body weight|abnormal maternal nurturing|abnormal posture|postnatal growth retardation|reduced male fertility|reduced female fertility|decreased litter size|abnormal lymph node primary follicle morphology|abnormal leukocyte adhesion|increased eosinophil cell number|increased lymphocyte cell number|abnormal metabolism|lymph node hypoplasia|lethality"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

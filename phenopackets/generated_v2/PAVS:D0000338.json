@@ -1,0 +1,208 @@
+{
+  "id": "PAVS:D0000338",
+  "subject": {
+    "id": "PAVS:D0000338",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000176",
+        "label": "Submucous cleft hard palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000193",
+        "label": "Bifid uvula"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000403",
+        "label": "Recurrent otitis media"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000951",
+        "label": "Abnormality of the skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002159",
+        "label": "Heparan sulfate excretion in urine"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003170",
+        "label": "Abnormal acetabulum morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005280",
+        "label": "Depressed nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0012069",
+        "label": "Keratan sulfate excretion in urine"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011093",
+        "label": "mucopolysaccharidosis type 9"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000338",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011093",
+          "label": "mucopolysaccharidosis type 9"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000338",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000338_HYAL1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "HYAL1",
+                  "valueId": "NCBIGene:3373"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "5.1904e-04"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.7500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|liver:98|lung:96|renal_medulla:94|cortex_of_kidney:92|lower_leg_skin:91|heart_left_ventricle:89|suprapubic_skin:87|adrenal_gland:85|stomach:83|ectocervix:81|tibial_nerve:81|vagina:81|uterus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cellular response to tumor necrosis factor|positive regulation of cell growth|cellular response to pH|positive regulation of angiogenesis|cellular response to fibroblast growth factor stimulus|response to reactive oxygen species|positive regulation of cell adhesion|response to antibiotic|hyaluronan catabolic process|hyaluronan metabolic process|cartilage development|carbohydrate metabolic process|chondroitin sulfate proteoglycan catabolic process|positive regulation of hyaluranon cable assembly|"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal chondrocyte morphology|abnormal liver morphology|osteoarthritis|small lung|increased hyaluronic acid level"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

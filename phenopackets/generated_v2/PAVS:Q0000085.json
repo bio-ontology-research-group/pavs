@@ -1,0 +1,227 @@
+{
+  "id": "PAVS:Q0000085",
+  "subject": {
+    "id": "PAVS:Q0000085",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P3Y0M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001629",
+        "label": "Ventricular septal defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001251",
+        "label": "Ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001274",
+        "label": "Agenesis of corpus callosum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC7082194",
+        "description": "Source dataset: PMC7082194"
+      },
+      {
+        "id": "PMID:31618753",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31618753/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0019248",
+        "label": "mucolipidosis"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:Q0000085",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0019248",
+          "label": "mucolipidosis"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:Q0000085",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:Q0000085_MCOLN1|MCOLN1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MCOLN1|MCOLN1",
+                  "valueId": "NCBIGene:57192|57192"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000264079.11:c.964C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.7528683C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000264079.5:p.Arg322Ter"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 7528683,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000402|GENO:0000402",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:20172"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "stop_gained"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "3.42e-06"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "20172"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.3607e-12"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.9500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|pituitary_gland:98|lung:96|adrenal_gland:94|blood:92|subcutaneous_adipose_tissue:91|lower_leg_skin:89|urinary_bladder:89|omental_fat_pad:85|endocervix:83|fallopian_tube:83|tibial_nerve:83|suprapubic_skin:77|uterus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "monoatomic ion transport|calcium-mediated signaling|cellular response to pH|calcium ion transport|cellular response to calcium ion|positive regulation of lysosome organization|monoatomic ion transmembrane transport|adaptive immune response|immune system process|phagosome maturation|intracellular zinc ion homeostasis|transferrin transport|iron ion transmembrane transport|potassium ion transmembrane transport|calcium ion transmembrane transport|monoatomic anion transmembrane transport|monoatomic c"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal stomach morphology|distended urinary bladder|weakness|hindlimb paralysis|decreased brain size|decreased body weight|distended abdomen|retina degeneration|abnormal optic nerve morphology|abnormal gait|short stride length|hunched posture|limb grasping|postnatal growth retardation|premature death|abnormal macrophage physiology|dilated cardiomyopathy|abnormal nervous system morphology|abnormal retina outer nuclear layer morphology|enlarged stomach|abnormal gastric parietal cell morphology|i"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

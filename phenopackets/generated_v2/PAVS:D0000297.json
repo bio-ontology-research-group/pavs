@@ -1,0 +1,159 @@
+{
+  "id": "PAVS:D0000297",
+  "subject": {
+    "id": "PAVS:D0000297",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001256",
+        "label": "Intellectual disability, mild"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011828",
+        "label": "intellectual disability, autosomal recessive 2"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000297",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011828",
+          "label": "intellectual disability, autosomal recessive 2"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000297",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000297_CRBN",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CRBN",
+                  "valueId": "NCBIGene:51185"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0366e-10"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1470e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "tibial_nerve:100|ovary:98|uterus:96|endocervix:94|subcutaneous_adipose_tissue:94|tibial_artery:94|ectocervix:89|mammary_gland:87|testis:87|thyroid_gland:87|coronary_artery:81|fallopian_tube:81|lung:81|aorta:81|urinary_bladder:81|vagina:81|cerebellar_hemisphere:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of Wnt signaling pathway|negative regulation of monoatomic ion transmembrane transport|limb development|negative regulation of protein-containing complex assembly|positive regulation of protein-containing complex assembly|locomotory exploration behavior|proteasome-mediated ubiquitin-dependent protein catabolic process|protein ubiquitination"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased leukocyte cell number|decreased granulocyte number|abnormal cecum morphology|abnormal liver morphology|small liver|decreased body weight|anophthalmia|absent optic nerve|reduced long-term potentiation|abnormal eye morphology|decreased circulating free fatty acids level|decreased circulating insulin level|increased insulin sensitivity|thrombocytopenia|decreased liver weight|decreased B cell number|decreased T cell number|improved glucose tolerance|decreased circulating glucose level|decr"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

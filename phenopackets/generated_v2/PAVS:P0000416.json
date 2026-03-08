@@ -1,0 +1,172 @@
+{
+  "id": "PAVS:P0000416",
+  "subject": {
+    "id": "PAVS:P0000416",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P6M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002098",
+        "label": "Respiratory distress"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000416",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000416",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000416_SFTPB",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SFTPB",
+                  "valueId": "NCBIGene:6439"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000519937.7:c.826del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.85663694del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000428719.2:p.Arg276GlyfsTer30"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.5919e-07"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.4600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "lung:100|thyroid_gland:98|cortex_of_kidney:96|ileum:94|minor_salivary_gland:94|pituitary_gland:94|prostate_gland:94|spleen:94|testis:94|uterus:94|vagina:94|blood:94|cerebellar_hemisphere:94|cerebellum:94"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "respiratory gaseous exchange by respiratory system|sphingolipid metabolic process|animal organ morphogenesis|lipid metabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "atelectasis|pup cannibalization|cyanosis|respiratory failure|respiratory distress|abnormal lipid homeostasis|abnormal pulmonary alveolus morphology|abnormal type II pneumocyte morphology|abnormal surfactant secretion|abnormal surfactant composition|abnormal surfactant physiology|absent alveolar lamellar bodies|decreased lung compliance|decreased total lung capacity|neonatal lethality, incomplete penetrance|increased susceptibility to hyperoxia-induced injury"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

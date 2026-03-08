@@ -1,0 +1,186 @@
+{
+  "id": "PAVS:M0000057",
+  "subject": {
+    "id": "PAVS:M0000057",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000510",
+        "label": "Retinitis pigmentosa"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:26355662",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/26355662/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000057",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000057",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000057_CNGB1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CNGB1",
+                  "valueId": "NCBIGene:1258"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000251102.13:c.2294G>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000016.10:g.57915259G>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000251102.8:p.Arg765Leu"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr16",
+                  "pos": 57915259,
+                  "ref": "G",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.991)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "2.053e-06"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.6912e-34"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.4000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "hypothalamus:100|cerebral_cortex:98|frontal_cortex:98|anterior_cingulate_cortex:98|amygdala:92|hippocampus:92|sigmoid_colon:89|testis:87|pituitary_gland:85|substantia_nigra:85|transverse_colon:85|ileum:79|nucleus_accumbens:79|cervical_vertebra:75|ectocervix:75|esophagogastric_junction:75|fallopian_tube:75|lung:75|minor_salivary_gland:75|muscle_layer_of_esophagus:75|spleen:75|tibial_nerve:75|blood:75|cerebellum:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "monoatomic ion transport|detection of light stimulus involved in visual perception|membrane depolarization|calcium ion transport|transmembrane transport|sensory perception of smell|monoatomic ion transmembrane transport|response to odorant|olfactory nerve maturation|sodium ion transport|visual perception|detection of chemical stimulus involved in sensory perception of smell|retina homeostasis|calcium ion transmembrane transport|monoatomic cation transport|regulation of cytosolic calcium ion conc"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal retina rod cell morphology|decreased body weight|decreased body size|decreased retina photoreceptor cell number|postnatal lethality|abnormal single cell response|abnormal rod electrophysiology|abnormal neuron physiology|abnormal retina pigment epithelium morphology|abnormal action potential|abnormal retina horizontal cell morphology|abnormal retina rod bipolar cell morphology|retina photoreceptor degeneration|abnormal retina rod cell outer segment morphology|thin retina outer nuclear la"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

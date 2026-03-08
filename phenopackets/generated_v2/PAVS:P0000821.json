@@ -1,0 +1,227 @@
+{
+  "id": "PAVS:P0000821",
+  "subject": {
+    "id": "PAVS:P0000821",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P4M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "familyHistory",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0032316",
+            "label": "Positive family history"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001057",
+        "label": "Aplasia cutis congenita"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000579",
+        "label": "Nasolacrimal duct obstruction"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000821",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000821",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000821_CUBN",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CUBN",
+                  "valueId": "NCBIGene:8029"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000377833.10:c.6560C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000010.11:g.16925327C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000367064.4:p.Ser2187Leu"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr10",
+                  "pos": 16925327,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "possibly_damaging(0.705)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00431"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "0.0001115"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0686e-57"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.5600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cortex_of_kidney:100|tibial_nerve:98|thyroid_gland:96|ovary:94|renal_medulla:94|testis:91|pituitary_gland:89|endocervix:87|fallopian_tube:87|coronary_artery:83|ectocervix:83|ileum:83|prostate_gland:83|aorta:83|uterus:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cobalamin metabolic process|cobalamin transport|lipid metabolic process|steroid metabolic process|protein transport|vitamin D metabolic process|endocytosis|cholesterol metabolic process|tissue homeostasis|receptor-mediated endocytosis"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "fused cornea and lens|abnormal iris morphology|abnormal endoderm development|decreased embryo size|abnormal allantois morphology|premature death|abnormal embryonic tissue morphology|absent allantois|abnormal vitelline vasculature morphology|abnormal vitelline vascular remodeling|failure of initiation of embryo turning|iris synechia|absent amnion|decreased mean corpuscular hemoglobin concentration|absent somites|absent chorion|embryonic lethality during organogenesis, complete penetrance|preweani"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

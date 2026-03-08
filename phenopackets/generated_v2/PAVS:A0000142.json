@@ -1,0 +1,223 @@
+{
+  "id": "PAVS:A0000142",
+  "subject": {
+    "id": "PAVS:A0000142",
+    "sex": "FEMALE",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002066",
+        "label": "Gait ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-variants",
+        "description": "Source dataset: ahmed-variants"
+      },
+      {
+        "id": "PMID:28454995",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0014917|MONDO:0007163|MONDO:0020756|MONDO:0008457",
+        "label": "developmental and epileptic encephalopathy, 42|episodic ataxia type 2|migraine, familial hemiplegic, 1|spinocerebellar ataxia type 6"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:A0000142",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0014917|MONDO:0007163|MONDO:0020756|MONDO:0008457",
+          "label": "developmental and epileptic encephalopathy, 42|episodic ataxia type 2|migraine, familial hemiplegic, 1|spinocerebellar ataxia type 6"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:A0000142",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:A0000142_CACNA1A",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CACNA1A",
+                  "valueId": "NCBIGene:773"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000360228.11:c.154A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.13506071A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000353362.5:p.Met52Val"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 13506071,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.165)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "6.842e-06"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "3.3100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellum:100|cerebellar_hemisphere:98|cerebral_cortex:96|frontal_cortex:94|nucleus_accumbens:92|anterior_cingulate_cortex:91|caudate_nucleus:91|amygdala:87|hippocampus:87|hypothalamus:87|putamen:87|cervical_vertebra:79|fallopian_tube:79|pituitary_gland:79|substantia_nigra:79|testis:79|tibial_nerve:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "monoatomic ion transport|response to amyloid-beta|cellular response to amyloid-beta|calcium ion transmembrane transport|positive regulation of cytosolic calcium ion concentration|calcium ion transport|transmembrane transport|calcium ion import across plasma membrane|chemical synaptic transmission|monoatomic ion transmembrane transport|modulation of chemical synaptic transmission"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased bone marrow cell number|muscle spasm|tremors|weakness|muscle weakness|abnormal cerebellum morphology|cerebellum hypoplasia|small cerebellum|abnormal cerebellum external granule cell layer morphology|Purkinje cell degeneration|abnormal Purkinje cell morphology|abnormal cerebellar molecular layer|thin cerebellar molecular layer|sporadic seizures|decreased body weight|decreased body size|abnormal nursing|abnormal maternal nurturing|abnormal locomotor behavior|ataxia|circling|decreased loc"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "id": "PAVS:D0001821",
+  "subject": {
+    "id": "PAVS:D0001821",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000135",
+        "label": "Hypogonadism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000618",
+        "label": "Blindness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000802",
+        "label": "Impotence"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000924",
+        "label": "Abnormality of the skeletal system"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000953",
+        "label": "Hyperpigmentation of the skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001258",
+        "label": "Spastic paraplegia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001271",
+        "label": "Polyneuropathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001350",
+        "label": "Slurred speech"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001417",
+        "label": "X-linked inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002070",
+        "label": "Limb ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002078",
+        "label": "Truncal ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002839",
+        "label": "Urinary bladder sphincter dysfunction"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003455",
+        "label": "Elevated circulating long chain fatty acid concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008207",
+        "label": "Primary adrenal insufficiency"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0018544",
+        "label": "adrenoleukodystrophy"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001821",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0018544",
+          "label": "adrenoleukodystrophy"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001821",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001821_ABCD1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ABCD1",
+                  "valueId": "NCBIGene:215"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|adrenal_gland:98|uterus:96|sigmoid_colon:94|aorta:92|spleen:91|ileum:89|subcutaneous_adipose_tissue:89|esophagogastric_junction:85|fallopian_tube:83|muscle_layer_of_esophagus:83|coronary_artery:79|endocervix:79|pituitary_gland:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of fatty acid beta-oxidation|alpha-linolenic acid metabolic process|long-chain fatty acid catabolic process|fatty-acyl-CoA transport|transmembrane transport|very long-chain fatty-acyl-CoA catabolic process|long-chain fatty acid import into peroxisome|positive regulation of unsaturated fatty acid biosynthetic process|regulation of oxidative phosphorylation|regulation of fatty acid beta-oxidation|negative regulation of cytokine production involved in inflammatory response|fatty"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal microglial cell morphology|abnormal myelination|abnormal spinal cord morphology|abnormal Schwann cell morphology|abnormal lens morphology|cataract|impaired coordination|abnormal motor coordination/balance|reduced fertility|abnormal lipid homeostasis|no abnormal phenotype detected|abnormal astrocyte morphology|decreased vertical activity|abnormal locomotor activation|astrocytosis|abnormal nervous system physiology|increased fatty acids level|increased saturated fatty acids level|abnormal"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "id": "PAVS:P0001596",
+  "subject": {
+    "id": "PAVS:P0001596",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P26Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "familyHistory",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0032316",
+            "label": "Positive family history"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002505",
+        "label": "Loss of ambulation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000763",
+        "label": "Sensory neuropathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001251",
+        "label": "Ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001596",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001596",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001596_ERCC6",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ERCC6",
+                  "valueId": "NCBIGene:2074"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000355832.10:c.3952_3953del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000010.11:g.49461382_49461383del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000348089.5:p.Arg1318GlyfsTer12"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "2.19e-05"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.2087e-23"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.0300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "aorta:100|lower_leg_skin:98|pituitary_gland:98|skin:98|coronary_artery:92|ectocervix:92|endocervix:92|ovary:92|suprapubic_skin:92|testis:92|thyroid_gland:92|tibial_artery:92|tibial_nerve:92|uterus:92|vagina:92|cerebellar_hemisphere:92|cerebellum:92"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "transcription by RNA polymerase II|response to oxidative stress|regulation of transcription elongation by RNA polymerase II|positive regulation of double-strand break repair via homologous recombination|positive regulation of peptidyl-serine phosphorylation of STAT protein|positive regulation of gene expression|positive regulation of transcription by RNA polymerase II|DNA protection|positive regulation of transcription by RNA polymerase III|negative regulation of double-strand break repair via n"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "skin photosensitivity|decreased body weight|retina degeneration|abnormal locomotor behavior|circling|impaired coordination|impaired balance|postnatal growth retardation|photosensitivity|increased incidence of induced tumors|astrocytosis|cochlear inner hair cell degeneration|cochlear outer hair cell degeneration|degeneration of organ of Corti supporting cells|pillar cell degeneration|Deiters cell degeneration|abnormal cell physiology|impaired hearing|increased cellular sensitivity to ultraviolet "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

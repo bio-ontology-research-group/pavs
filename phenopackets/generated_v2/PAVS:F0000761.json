@@ -1,0 +1,214 @@
+{
+  "id": "PAVS:F0000761",
+  "subject": {
+    "id": "PAVS:F0000761",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P57Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002721",
+        "label": "Immunodeficiency"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013862",
+        "label": "immunodeficiency, common variable, 7"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000761",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013862",
+          "label": "immunodeficiency, common variable, 7"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000761",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000761_TNFRSF13B",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TNFRSF13B",
+                  "valueId": "NCBIGene:23495"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000261652.7:c.515G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000017.11:g.16940442C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000261652.2:p.Cys172Tyr"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr17",
+                  "pos": 16940442,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:445700"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.394)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "0.0001738"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "445700"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Conflicting classifications of pathogenicity"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.2736e-16"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.7940e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|ileum:98|blood:96|transverse_colon:94|minor_salivary_gland:92|lung:91|stomach:89|testis:89|esophagus_mucosa:85|fallopian_tube:83|cervical_vertebra:81|cortex_of_kidney:81|ectocervix:81|endocervix:81|hippocampus:81|liver:81|mammary_gland:81|omental_fat_pad:81|prostate_gland:81|renal_medulla:81|thyroid_gland:81|urinary_bladder:81|vagina:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "adaptive immune response|immune system process|B cell homeostasis|cell surface receptor signaling pathway|negative regulation of B cell proliferation|hematopoietic progenitor cell differentiation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal spleen morphology|enlarged spleen|enlarged lymph nodes|decreased IgM level|decreased IgA level|kidney inflammation|liver inflammation|increased leukemia incidence|premature death|abnormal lymph node primary follicle morphology|abnormal spleen periarteriolar lymphoid sheath morphology|abnormal Peyer's patch follicle morphology|abnormal immunoglobulin level|decreased IgE level|glomerulonephritis|increased urine protein level|increased anti-double stranded DNA antibody level|increased anti"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

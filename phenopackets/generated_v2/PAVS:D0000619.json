@@ -1,0 +1,267 @@
+{
+  "id": "PAVS:D0000619",
+  "subject": {
+    "id": "PAVS:D0000619",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001254",
+        "label": "Lethargy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001265",
+        "label": "Hyporeflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001284",
+        "label": "Areflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001302",
+        "label": "Pachygyria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001308",
+        "label": "Tongue fasciculations"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001336",
+        "label": "Myoclonus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001522",
+        "label": "Death in infancy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002120",
+        "label": "Cerebral cortical atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002151",
+        "label": "Increased circulating lactate concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002240",
+        "label": "Hepatomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002319",
+        "label": "Increased CSF lactate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002490",
+        "label": "Lactic acidosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003128",
+        "label": "CNS hypomyelination"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003429",
+        "label": "Congenital onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003577",
+        "label": "Severe muscular hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006829",
+        "label": "Peripheral neuropathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009830",
+        "label": "Feeding difficulties"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011968",
+        "label": "HP:0011968"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013969",
+        "label": "combined oxidative phosphorylation defect type 11"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000619",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013969",
+          "label": "combined oxidative phosphorylation defect type 11"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000619",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000619_RMND1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "RMND1",
+                  "valueId": "NCBIGene:55005"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.7418e-02"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.5100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|ovary:98|thyroid_gland:96|endocervix:94|ectocervix:92|tibial_artery:92|tibial_nerve:92|uterus:92|cerebellar_hemisphere:92|coronary_artery:83|mammary_gland:83|aorta:83|subcutaneous_adipose_tissue:83|vagina:83|cerebellum:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "translation|positive regulation of mitochondrial translation"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

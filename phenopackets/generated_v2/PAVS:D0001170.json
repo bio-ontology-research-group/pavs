@@ -1,0 +1,137 @@
+{
+  "id": "PAVS:D0001170",
+  "subject": {
+    "id": "PAVS:D0001170",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011477",
+        "label": "tooth agenesis, selective, 3"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001170",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011477",
+          "label": "tooth agenesis, selective, 3"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001170",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001170_PAX9",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PAX9",
+                  "valueId": "NCBIGene:5083"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9608e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.3500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "esophagus_mucosa:100|minor_salivary_gland:98|vagina:96|prostate_gland:94|pituitary_gland:92|skin:92|tibial_artery:89|tibial_nerve:89|thyroid_gland:85|endocervix:83|esophagogastric_junction:83|muscle_layer_of_esophagus:83|urinary_bladder:83|ectocervix:75|sigmoid_colon:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of DNA-templated transcription|regulation of DNA-templated transcription|regulation of transcription by RNA polymerase II|positive regulation of transcription by RNA polymerase II"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "absent alveolar process|cleft palate|abnormal tooth development|arrest of tooth development|failure of tooth eruption|absent incisors|growth retardation of molars|double outlet right ventricle|absent maxillary shelf|absent palatine bone horizontal plate|abnormal cranium morphology|abnormal mandible morphology|polydactyly|absent parathyroid glands|athymia|decreased body size|distended abdomen|thymus hypoplasia|respiratory distress|neonatal lethality|abnormal tooth morphology|abnormal craniofacial"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "id": "PAVS:P0001892",
+  "subject": {
+    "id": "PAVS:P0001892",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "familyHistory",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0032316",
+            "label": "Positive family history"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001892",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001892",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001892_INSR",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "INSR",
+                  "valueId": "NCBIGene:3643"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000302850.10:c.1546T>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.7168032T>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000303830.4:p.Trp516Arg"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 7168032,
+                  "ref": "T",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(1)"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.5345e-04"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.5600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|ovary:98|uterus:96|pancreas:94|fallopian_tube:92|endocervix:91|tibial_nerve:91|aorta:87|pituitary_gland:85|thyroid_gland:85|ectocervix:81|prostate_gland:81|minor_salivary_gland:77|sigmoid_colon:77|tibial_artery:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of nitric oxide biosynthetic process|positive regulation of glycogen biosynthetic process|positive regulation of MAPK cascade|positive regulation of meiotic cell cycle|transport across blood-brain barrier|protein autophosphorylation|cellular response to insulin stimulus|positive regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction|regulation of embryonic development|system development|regulation of DNA-templated transcription|learning|regulation of"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "enlarged liver|abnormal liver physiology|decreased body weight|increased circulating triglyceride level|increased circulating free fatty acids level|hyperglycemia|postnatal growth retardation|increased urine glucose level|abnormal glucose homeostasis|increased circulating insulin level|postnatal lethality|hepatic steatosis|increased insulin sensitivity|ketoaciduria|increased insulin secretion|impaired glucose tolerance|insulin resistance|increased glycosylated hemoglobin level|increased suscepti"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "id": "PAVS:D0001849",
+  "subject": {
+    "id": "PAVS:D0001849",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000491",
+        "label": "Keratitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000518",
+        "label": "Cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000541",
+        "label": "Retinal detachment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000554",
+        "label": "Uveitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000568",
+        "label": "Microphthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000573",
+        "label": "Retinal hemorrhage"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000648",
+        "label": "Optic atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000668",
+        "label": "Hypodontia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000684",
+        "label": "Delayed eruption of teeth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000962",
+        "label": "Hyperkeratosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001000",
+        "label": "Abnormality of skin pigmentation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001257",
+        "label": "Spasticity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001423",
+        "label": "X-linked dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001803",
+        "label": "Nail pits"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001805",
+        "label": "Onychogryposis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001807",
+        "label": "Ridged nail"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001880",
+        "label": "Eosinophilia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002164",
+        "label": "Nail dysplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002208",
+        "label": "Coarse hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002213",
+        "label": "Fine hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002557",
+        "label": "Hypoplastic nipples"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002558",
+        "label": "Supernumerary nipple"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002751",
+        "label": "Kyphoscoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002937",
+        "label": "Hemivertebrae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003187",
+        "label": "Breast hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004529",
+        "label": "Atrophic, patchy alopecia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005815",
+        "label": "Supernumerary ribs"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007850",
+        "label": "Retinal vascular proliferation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008070",
+        "label": "Sparse hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008404",
+        "label": "Nail dystrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010783",
+        "label": "Erythema"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100699",
+        "label": "Scarring"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100783",
+        "label": "Breast aplasia"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010631",
+        "label": "incontinentia pigmenti"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001849",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010631",
+          "label": "incontinentia pigmenti"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001849",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001849_IKBKG",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "IKBKG",
+                  "valueId": "NCBIGene:8517"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|lung:98|thyroid_gland:96|blood:96|uterus:92|cerebellum:92|fallopian_tube:89|pituitary_gland:89|tibial_nerve:89|ectocervix:83|endocervix:83|ileum:83|ovary:77|prostate_gland:77|aorta:77|urinary_bladder:77|vagina:77|cerebellar_hemisphere:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "apoptotic process|defense response to bacterium|negative regulation of endoplasmic reticulum stress-induced intrinsic apoptotic signaling pathway|positive regulation of T cell receptor signaling pathway|positive regulation of gene expression|positive regulation of ubiquitin-dependent protein catabolic process|positive regulation of transcription by RNA polymerase II|innate immune response|positive regulation of macroautophagy|establishment of vesicle localization|immune response|DNA damage respo"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "sparse hair|retarded hair growth|abnormal liver morphology|enlarged spleen|small spleen|small thymus|tremors|scaly skin|spontaneous skin ulceration|thick epidermis|abnormal epidermis stratum basale morphology|abnormal epidermis suprabasal layer morphology|hyperkeratosis|decreased body weight|abnormal locomotor behavior|postnatal growth retardation|abnormal humoral immune response|reduced female fertility|abnormal fertility/fecundity|no abnormal phenotype detected|abnormal bone marrow cell morpho"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

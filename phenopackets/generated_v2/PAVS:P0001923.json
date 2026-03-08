@@ -1,0 +1,222 @@
+{
+  "id": "PAVS:P0001923",
+  "subject": {
+    "id": "PAVS:P0001923",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P52M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001945",
+        "label": "Fever"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002007",
+        "label": "Frontal bossing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0200141",
+        "label": "Small, conical teeth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002299",
+        "label": "Brittle hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000964",
+        "label": "Eczematoid dermatitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002209",
+        "label": "Sparse scalp hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001923",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001923",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001923_GJA1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GJA1",
+                  "valueId": "NCBIGene:2697"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000282561.4:c.887C>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000006.12:g.121447734C>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000282561.3:p.Ser296Tyr"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr6",
+                  "pos": 121447734,
+                  "ref": "C",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "tolerated(0.53)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF03508"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.6386e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.2200e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "suprapubic_skin:100|adrenal_gland:98|lower_leg_skin:96|aorta:94|endocervix:92|ectocervix:91|vagina:89|muscle_layer_of_esophagus:87|anterior_cingulate_cortex:87|caudate_nucleus:83|skin:81|amygdala:79|thyroid_gland:77|omental_fat_pad:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heart development|intracellular protein localization|xenobiotic transport|atrial cardiac muscle cell action potential|positive regulation of morphogenesis of an epithelium|transmembrane transport|bone development|monoatomic ion transmembrane transport|regulation of blood circulation|spermatogenesis|immune system process|maintenance of blood-brain barrier|cardiac conduction system development|positive regulation of gene expression|bone remodeling|positive regulation of mesodermal cell differentia"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "delayed bone ossification|decreased bone mineral density|abnormal neurocranium morphology|abnormal parietal bone morphology|abnormal tooth development|brittle teeth|abnormal rib morphology|abnormal heart morphology|abnormal heart development|abnormal heart shape|thin ventricular wall|abnormal interventricular septum morphology|decreased bone marrow cell number|abnormal cranium morphology|pointed snout|syndactyly|abnormal spleen morphology|abnormal ovary morphology|small ovary|impaired ovarian fo"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

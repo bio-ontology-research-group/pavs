@@ -1,0 +1,202 @@
+{
+  "id": "PAVS:P0001769",
+  "subject": {
+    "id": "PAVS:P0001769",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P37M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000846",
+        "label": "Adrenal insufficiency"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001769",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001769",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001769_NNT",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "NNT",
+                  "valueId": "NCBIGene:23530"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000344920.9:c.1025T>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000005.10:g.43644252T>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000343873.4:p.Val342Ala"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr5",
+                  "pos": 43644252,
+                  "ref": "T",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:2847083"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.998)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF01262"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "2847083"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.7582e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.8800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skeletal_muscle_tissue:100|atrium_auricular_region:98|heart_left_ventricle:96|skin:94|liver:92|muscle_layer_of_esophagus:91|sigmoid_colon:91|stomach:91|thyroid_gland:91|tibial_artery:91|frontal_cortex:81|urinary_bladder:81|subcutaneous_adipose_tissue:77|cerebral_cortex:75|esophagogastric_junction:75|transverse_colon:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of mitochondrial membrane potential|tricarboxylic acid cycle|negative regulation of apoptotic process|NADPH regeneration|proton transmembrane transport|positive regulation of hydrogen peroxide catabolic process|response to vitamin|cell redox homeostasis|cellular oxidant detoxification|intracellular oxygen homeostasis|reactive oxygen species metabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal gait|decreased circulating corticosterone level|decreased insulin secretion|increased circulating cholesterol level|impaired glucose tolerance|increased circulating glucose level|abnormal cell physiology|abnormal adrenocortical cell morphology|disorganized adrenal gland zona fasciculata"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "id": "PAVS:D0000201",
+  "subject": {
+    "id": "PAVS:D0000201",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Prominent occiput"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000269",
+        "label": "Retrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000278",
+        "label": "Wide nose"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000445",
+        "label": "Long eyelashes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000527",
+        "label": "Blepharophimosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000581",
+        "label": "Hand clenching"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001188",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Abnormality of metabolism/homeostasis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001939",
+        "label": "Hepatomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002240",
+        "label": "Hypoventilation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002791",
+        "label": "Thoracic scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002943",
+        "label": "Feeding difficulties in infancy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008872",
+        "label": "Overlapping fingers"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010557",
+        "label": "HP:0010557"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011629",
+        "label": "MOGS-congenital disorder of glycosylation"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000201",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011629",
+          "label": "MOGS-congenital disorder of glycosylation"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000201",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000201_MOGS",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MOGS",
+                  "valueId": "NCBIGene:7841"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.6946e-10"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.5000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|thyroid_gland:98|stomach:96|pituitary_gland:94|skin:92|ileum:91|lung:91|prostate_gland:87|endocervix:85|minor_salivary_gland:83|uterus:81|fallopian_tube:79|ovary:79|tibial_nerve:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "viral protein processing|protein N-linked glycosylation|carbohydrate metabolic process|oligosaccharide metabolic process|protein folding"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased bone mineral density|abnormal esophagus morphology|abnormal thyroid gland morphology|enlarged thymus|anophthalmia|abnormal pancreas morphology|abnormal trachea morphology|brachydactyly|absent adrenal gland|absent lymph nodes|preweaning lethality, complete penetrance|abnormal skin coloration|embryonic lethality prior to organogenesis"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

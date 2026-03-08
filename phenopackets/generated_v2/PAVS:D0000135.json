@@ -1,0 +1,152 @@
+{
+  "id": "PAVS:D0000135",
+  "subject": {
+    "id": "PAVS:D0000135",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002221",
+        "label": "Absent axillary hair"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0014027",
+        "label": "hypotrichosis 11"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000135",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0014027",
+          "label": "hypotrichosis 11"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000135",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000135_SNRPE",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SNRPE",
+                  "valueId": "NCBIGene:6635"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.8047e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.5400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|ovary:98|endocervix:96|ectocervix:94|fallopian_tube:92|uterus:92|tibial_nerve:89|mammary_gland:87|urinary_bladder:85|vagina:83|subcutaneous_adipose_tissue:81|tibial_artery:81|renal_medulla:77|thyroid_gland:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of mRNA splicing, via spliceosome|RNA splicing|spliceosomal tri-snRNP complex assembly|spliceosome conformational change to release U4 (or U4atac) and U1 (or U11)|spliceosomal complex assembly|mRNA splicing, via spliceosome|7-methylguanosine cap hypermethylation|mRNA processing|nuclear histone mRNA catabolic process|U2-type prespliceosome assembly|spliceosomal snRNP assembly"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal spermatogenesis|decreased testis weight"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

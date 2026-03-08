@@ -1,0 +1,306 @@
+{
+  "id": "PAVS:D0000456",
+  "subject": {
+    "id": "PAVS:D0000456",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000047",
+        "label": "Hypospadias"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000219",
+        "label": "Thin upper lip vermilion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000322",
+        "label": "Short philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000327",
+        "label": "Hypoplasia of the maxilla"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000336",
+        "label": "Prominent supraorbital ridges"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000431",
+        "label": "Wide nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000482",
+        "label": "Microcornea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000485",
+        "label": "Megalocornea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000501",
+        "label": "Glaucoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000526",
+        "label": "Aniridia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000558",
+        "label": "Rieger anomaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000627",
+        "label": "Posterior embryotoxon"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000668",
+        "label": "Hypodontia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000824",
+        "label": "Decreased response to growth hormone stimulation test"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002023",
+        "label": "Anal atresia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002025",
+        "label": "Anal stenosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003828",
+        "label": "Variable expressivity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004298",
+        "label": "Abnormality of the abdominal wall"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007676",
+        "label": "Hypoplasia of the iris"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007873",
+        "label": "Abnormally prominent line of Schwalbe"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011500",
+        "label": "Polycoria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0200086",
+        "label": "HP:0200086"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008386",
+        "label": "Axenfeld-Rieger syndrome type 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000456",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008386",
+          "label": "Axenfeld-Rieger syndrome type 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000456",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000456_PITX2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PITX2",
+                  "valueId": "NCBIGene:5308"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9745e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.1000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "urinary_bladder:100|pituitary_gland:98|skeletal_muscle_tissue:96|muscle_layer_of_esophagus:94|esophagogastric_junction:92|minor_salivary_gland:92|skin:92|vagina:87|ileum:85|esophagus_mucosa:83|suprapubic_skin:81|testis:79|mammary_gland:77|lower_leg_skin:75|transverse_colon:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "spleen development|outflow tract morphogenesis|system development|embryonic heart tube left/right pattern formation|regulation of DNA-templated transcription|somatotropin secreting cell differentiation|cardiac neural crest cell migration involved in outflow tract morphogenesis|determination of left/right symmetry|iris morphogenesis|animal organ morphogenesis|regulation of transcription by RNA polymerase II|positive regulation of transcription by RNA polymerase II|anatomical structure morphogenes"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "cleft palate|arrest of tooth development|malocclusion|lordosis|abnormal heart morphology|abnormal heart development|abnormal aorta morphology|enlarged heart|ventricular hypoplasia|abnormal interventricular septum morphology|abnormal interatrial septum morphology|double outlet right ventricle|abnormal atrioventricular cushion morphology|failure of atrioventricular cushion closure|abnormal maxilla morphology|abnormal mandible morphology|abnormal intestine morphology|right pulmonary isomerism|abnor"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

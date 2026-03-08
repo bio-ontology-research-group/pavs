@@ -1,0 +1,202 @@
+{
+  "id": "PAVS:B0000135",
+  "subject": {
+    "id": "PAVS:B0000135",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-pmid28454995",
+        "description": "Source dataset: ahmed-pmid28454995"
+      },
+      {
+        "id": "PMID:28454995",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0100224",
+        "label": "mitochondrial complex I deficiency, nuclear type 1"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:B0000135",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0100224",
+          "label": "mitochondrial complex I deficiency, nuclear type 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:B0000135",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:B0000135_NDUFAF5",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "NDUFAF5",
+                  "valueId": "NCBIGene:79133"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000378106.10:c.821T>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000020.11:g.13816505T>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000367346.5:p.Leu274Gln"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr20",
+                  "pos": 13816505,
+                  "ref": "T",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:788935"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.993)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "1.368e-06"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "788935"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Uncertain significance"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.5767e-05"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0680e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellar_hemisphere:100|cerebellum:98|testis:96|ectocervix:94|sigmoid_colon:94|tibial_nerve:94|uterus:94|endocervix:87|fallopian_tube:87|frontal_cortex:87|lower_leg_skin:87|muscle_layer_of_esophagus:87|prostate_gland:87|suprapubic_skin:87|urinary_bladder:87"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "methylation|mitochondrial respiratory chain complex I assembly"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal locomotor behavior|decreased exploration in new environment|preweaning lethality, complete penetrance|embryonic lethality prior to tooth bud stage"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

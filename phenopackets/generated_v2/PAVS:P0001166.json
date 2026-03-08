@@ -1,0 +1,203 @@
+{
+  "id": "PAVS:P0001166",
+  "subject": {
+    "id": "PAVS:P0001166",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P57M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002194",
+        "label": "Delayed gross motor development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006970",
+        "label": "Periventricular leukomalacia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000729",
+        "label": "Autistic behavior"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001166",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001166",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001166_MTOR|MED17",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MTOR|MED17",
+                  "valueId": "NCBIGene:2475|9440"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000361445.9:c.2514+10A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000001.11:g.11232426A>G"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr1",
+                  "pos": 11232426,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135|GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "intron_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODIFIER"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.6800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|cerebellum:98|cerebellar_hemisphere:96|uterus:94|sigmoid_colon:92|thyroid_gland:92|tibial_nerve:92|muscle_layer_of_esophagus:87|pituitary_gland:87|skin:87|tibial_artery:81|endocervix:79|esophagogastric_junction:79|prostate_gland:79|aorta:79|spleen:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "TORC2 signaling|negative regulation of lysosome organization|positive regulation of cell growth|regulation of cellular response to stress|regulation of autophagosome assembly|cellular response to insulin stimulus|protein phosphorylation|positive regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction|cellular response to leucine starvation|TOR signaling|cellular response to nutrient levels|regulation of circadian rhythm|positive regulation of biosynthetic process|respons"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased circulating LDL cholesterol level|decreased circulating LDL cholesterol level|decreased neutrophil cell number|decreased monocyte cell number|small spleen|decreased thymocyte number|abnormal forebrain morphology|forebrain hypoplasia|abnormal diencephalon morphology|abnormal midbrain morphology|decreased body weight|decreased body size|abnormal gastrulation|decreased embryo size|incomplete embryo turning|embryonic growth arrest|abnormal humoral immune response|decreased IgG level|decrea"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

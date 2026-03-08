@@ -1,0 +1,306 @@
+{
+  "id": "PAVS:D0000154",
+  "subject": {
+    "id": "PAVS:D0000154",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Hypertelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000670",
+        "label": "Carious teeth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000883",
+        "label": "Thin ribs"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000890",
+        "label": "Long clavicles"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001281",
+        "label": "Tetany"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001476",
+        "label": "Delayed closure of the anterior fontanelle"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001511",
+        "label": "Intrauterine growth retardation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001773",
+        "label": "Short foot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001903",
+        "label": "Anemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002718",
+        "label": "Recurrent bacterial infections"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002750",
+        "label": "Delayed skeletal maturation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002901",
+        "label": "Hypocalcemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002917",
+        "label": "Hypomagnesemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003100",
+        "label": "Slender long bone"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003508",
+        "label": "Proportionate short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003561",
+        "label": "Birth length less than 3rd percentile"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004279",
+        "label": "Short palm"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004331",
+        "label": "Decreased skull ossification"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005450",
+        "label": "Calvarial osteosclerosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006645",
+        "label": "Thin clavicles"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008198",
+        "label": "Congenital hypoparathyroidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0200055",
+        "label": "Small hand"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009486",
+        "label": "autosomal recessive Kenny-Caffey syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000154",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009486",
+          "label": "autosomal recessive Kenny-Caffey syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000154",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000154_TBCE",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TBCE",
+                  "valueId": "NCBIGene:6905"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.2119e-12"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.6800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "endocervix:100|ovary:100|pituitary_gland:100|cerebellar_hemisphere:100|ectocervix:92|skin:92|testis:92|thyroid_gland:92|uterus:92|cerebellum:92|cervical_vertebra:81|coronary_artery:81|fallopian_tube:81|hypothalamus:81|ileum:81|lung:81|prostate_gland:81|renal_medulla:81|aorta:81|spleen:81|tibial_nerve:81|urinary_bladder:81|vagina:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "tubulin complex assembly|post-chaperonin tubulin folding pathway|microtubule cytoskeleton organization|mitotic spindle organization|protein folding"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "progressive muscle weakness|paralysis|motor neuron degeneration|abnormal facial nerve morphology|abnormal phrenic nerve morphology|abnormal lens morphology|cataract|respiratory failure|premature death|muscular atrophy|axon degeneration|preweaning lethality, complete penetrance"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

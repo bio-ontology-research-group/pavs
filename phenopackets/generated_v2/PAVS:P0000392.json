@@ -1,0 +1,188 @@
+{
+  "id": "PAVS:P0000392",
+  "subject": {
+    "id": "PAVS:P0000392",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P4M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000392",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000392",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000392_CACNA1G",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CACNA1G",
+                  "valueId": "NCBIGene:8913"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000359106.10:c.4759+1G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000017.11:g.50609936G>A"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr17",
+                  "pos": 50609936,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "splice_donor_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "6.86e-07"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.0600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellum:100|ectocervix:98|endocervix:96|cerebral_cortex:94|cerebellar_hemisphere:92|frontal_cortex:91|ovary:91|hypothalamus:87|vagina:85|fallopian_tube:83|anterior_cingulate_cortex:81|uterus:79|substantia_nigra:77|amygdala:75|omental_fat_pad:75|prostate_gland:75|suprapubic_skin:75|atrium_auricular_region:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cardiac muscle cell action potential involved in contraction|sinoatrial node development|monoatomic ion transport|AV node cell action potential|regulation of membrane potential|calcium ion transmembrane transport|regulation of heart rate by cardiac conduction|SA node cell to atrial cardiac muscle cell signaling|membrane depolarization during AV node cell action potential|calcium ion transport|transmembrane transport|calcium ion import across plasma membrane|calcium ion import|membrane depolariza"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal spleen morphology|enlarged lymph nodes|tremors|Purkinje cell degeneration|thin cerebellar molecular layer|enlarged testis|ataxia|hyperactivity|decreased locomotor activity|impaired coordination|abnormal gait|increased exploration in new environment|abnormal sleep pattern|abnormal cardiovascular system physiology|abnormal skin morphology|abnormal kidney morphology|neurodegeneration|impaired ability to fire action potentials|decreased susceptibility to pharmacologically induced seizures|e"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

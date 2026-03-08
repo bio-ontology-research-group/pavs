@@ -1,0 +1,176 @@
+{
+  "id": "PAVS:F0000716",
+  "subject": {
+    "id": "PAVS:F0000716",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P7M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000716",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000716",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000716_PAX3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PAX3",
+                  "valueId": "NCBIGene:5077"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000392070.7:c.449C>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.222295530C>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000375922.3:p.Ser150Ter"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 222295530,
+                  "ref": "C",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "stop_gained"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00292"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9985e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.0900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "minor_salivary_gland:100|cerebellum:98|suprapubic_skin:96|testis:96|cerebellar_hemisphere:96|lower_leg_skin:91|skin:91|tibial_artery:91|mammary_gland:85|cervical_vertebra:83|skeletal_muscle_tissue:83|coronary_artery:79|ectocervix:79|subcutaneous_adipose_tissue:79|substantia_nigra:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "apoptotic process|anatomical structure morphogenesis|positive regulation of DNA-templated transcription|positive regulation of transcription by RNA polymerase II|nervous system development|sensory perception of sound|animal organ morphogenesis|regulation of transcription by RNA polymerase II|regulation of DNA-templated transcription|muscle organ development"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "thin ventricular wall|abnormal interventricular septum morphology|double outlet right ventricle|decreased cell proliferation|diluted coat color|belly spot|abnormal hindlimb morphology|kinked tail|abnormal thyroid gland morphology|abnormal thymus morphology|abnormal myogenesis|abnormal muscle development|abnormal myotome development|abnormal skeletal muscle morphology|thin diaphragm muscle|abnormal brain ventricle morphology|abnormal lateral ventricle morphology|abnormal hindbrain morphology|exen"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

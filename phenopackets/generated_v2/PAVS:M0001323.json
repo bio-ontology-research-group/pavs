@@ -1,0 +1,227 @@
+{
+  "id": "PAVS:M0001323",
+  "subject": {
+    "id": "PAVS:M0001323",
+    "sex": "MALE",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001276",
+        "label": "Hypertonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Motor delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001323",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001323",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001323_GJC2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GJC2",
+                  "valueId": "NCBIGene:57165"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000366714.3:c.755A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000001.11:g.228158513A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000355675.2:p.His252Arg"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr1",
+                  "pos": 228158513,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:1330651"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.964)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00029"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "1330651"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Likely pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.5701e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.6040e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cervical_vertebra:100|substantia_nigra:98|uterus:96|fallopian_tube:94|hippocampus:92|endocervix:91|esophagogastric_junction:91|sigmoid_colon:91|tibial_nerve:85|urinary_bladder:85|ectocervix:81|hypothalamus:79|muscle_layer_of_esophagus:79|ovary:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cell communication by electrical coupling|cell-cell signaling|cell communication|transmembrane transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal cerebellum morphology|Purkinje cell degeneration|abnormal myelination|decreased locomotor activity|abnormal brain morphology|no abnormal phenotype detected|neurodegeneration|decreased vertical activity|abnormal motor learning|astrocytosis|abnormal brain white matter morphology|abnormal oligodendrocyte physiology|microgliosis|abnormal cerebellum white matter morphology|increased oligodendrocyte number"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "id": "PAVS:D0001319",
+  "subject": {
+    "id": "PAVS:D0001319",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000565",
+        "label": "Esotropia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000577",
+        "label": "Exotropia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001276",
+        "label": "Hypertonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001321",
+        "label": "Cerebellar hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001347",
+        "label": "Hyperreflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002078",
+        "label": "Truncal ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002136",
+        "label": "Broad-based gait"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002365",
+        "label": "Hypoplasia of the brainstem"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003487",
+        "label": "Babinski sign"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006821",
+        "label": "Frontal polymicrogyria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007095",
+        "label": "obsolete Frontoparietal polymicrogyria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007266",
+        "label": "Cerebral dysmyelination"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011448",
+        "label": "Ankle clonus"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011738",
+        "label": "bilateral frontoparietal polymicrogyria"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001319",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011738",
+          "label": "bilateral frontoparietal polymicrogyria"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001319",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001319_ADGRG1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ADGRG1",
+                  "valueId": "NCBIGene:9289"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.3056e-12"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.7100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "thyroid_gland:100|renal_medulla:98|cortex_of_kidney:96|lower_leg_skin:94|suprapubic_skin:92|minor_salivary_gland:91|testis:89|cerebral_cortex:87|amygdala:85|mammary_gland:83|anterior_cingulate_cortex:81|nucleus_accumbens:79|vagina:79|caudate_nucleus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of neuron migration|layer formation in cerebral cortex|Rho-activating G protein-coupled receptor signaling pathway|cell migration|synapse pruning|regulation of cell population proliferation|positive regulation of cell adhesion|cell surface receptor signaling pathway|positive regulation of signal transduction|signal transduction|positive regulation of vascular endothelial growth factor signaling pathway|angiogenesis|cerebral cortex radial glia-guided migration|phospholipase C-"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal cerebral cortex morphology|ectopic Purkinje cell|abnormal testis morphology|small testis|abnormal locomotor behavior|impaired coordination|reduced male fertility|abnormal astrocyte morphology|abnormal seminiferous tubule morphology|ectopic cerebellar granule cells|ectopic Bergmann glia cells|abnormal Sertoli cell morphology|abnormal radial glial cell morphology|decreased thermal nociceptive threshold|abnormal cerebellar cortex morphology|abnormal basement membrane morphology|decreased m"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

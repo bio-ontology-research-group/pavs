@@ -1,0 +1,190 @@
+{
+  "id": "PAVS:P0000562",
+  "subject": {
+    "id": "PAVS:P0000562",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P59Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001332",
+        "label": "Dystonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002500",
+        "label": "Abnormal cerebral white matter morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001260",
+        "label": "Dysarthria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000562",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000562",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000562_GPR88",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GPR88",
+                  "valueId": "NCBIGene:54112"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000315033.5:c.299_300insC"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000001.11:g.100539265_100539266insC"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000314223.4:p.Glu100AspfsTer288"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00001"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.6074e-08"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.7700e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "caudate_nucleus:100|putamen:98|nucleus_accumbens:96|spleen:94|frontal_cortex:92|ovary:91|cerebral_cortex:89|esophagogastric_junction:89|amygdala:89|liver:89|muscle_layer_of_esophagus:89|anterior_cingulate_cortex:89|coronary_artery:77|hypothalamus:77|sigmoid_colon:77|tibial_nerve:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cellular response to light stimulus|phototransduction|detection of visible light|G protein-coupled receptor signaling pathway|adenylate cyclase-modulating G protein-coupled receptor signaling pathway|adrenergic receptor signaling pathway|signal transduction|motor learning"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased anxiety-related response|circling|hyperactivity|impaired coordination|increased stereotypic behavior|increased exploration in new environment|decreased grooming behavior|abnormal nest building behavior|abnormal associative learning|abnormal nervous system electrophysiology|decreased vertical activity|abnormal motor learning|abnormal excitatory postsynaptic currents|abnormal inhibitory postsynaptic currents|abnormal GABA-mediated receptor currents|abnormal neuron physiology|abnormal beh"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

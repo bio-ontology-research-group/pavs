@@ -1,0 +1,284 @@
+{
+  "id": "PAVS:Q0000128",
+  "subject": {
+    "id": "PAVS:Q0000128",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P7Y5M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012829",
+          "label": "Profound"
+        },
+        {
+          "id": "HP:0012825",
+          "label": "Mild"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0000545",
+        "label": "Myopia"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012829",
+          "label": "Profound"
+        },
+        {
+          "id": "HP:0012825",
+          "label": "Mild"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012829",
+          "label": "Profound"
+        },
+        {
+          "id": "HP:0012825",
+          "label": "Mild"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0000324",
+        "label": "Facial asymmetry"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012829",
+          "label": "Profound"
+        },
+        {
+          "id": "HP:0012825",
+          "label": "Mild"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001332",
+        "label": "Dystonia"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012829",
+          "label": "Profound"
+        },
+        {
+          "id": "HP:0012825",
+          "label": "Mild"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC7082194",
+        "description": "Source dataset: PMC7082194"
+      },
+      {
+        "id": "PMID:31618753",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31618753/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:Q0000128",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:Q0000128",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:Q0000128_SLC18A2|SLC18A2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SLC18A2|SLC18A2",
+                  "valueId": "NCBIGene:6571|6571"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000644641.2:c.895G>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000010.11:g.117255657G>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000496339.1:p.Gly299Arg"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr10",
+                  "pos": 117255657,
+                  "ref": "G",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000402|GENO:0000402",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:511854"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.996)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF07690"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "1.369e-06"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "511854"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Likely pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.1613e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.8000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ectocervix:100|ovary:100|vagina:100|endocervix:94|lung:94|lower_leg_skin:91|suprapubic_skin:91|esophagogastric_junction:87|ileum:87|muscle_layer_of_esophagus:87|prostate_gland:87|stomach:87|subcutaneous_adipose_tissue:87|urinary_bladder:87|uterus:87"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "serotonin secretion by mast cell|proton transmembrane transport|histamine secretion by mast cell|aminergic neurotransmitter loading into synaptic vesicle|establishment of localization in cell|somato-dendritic dopamine secretion|neurotransmitter transport|negative regulation of reactive oxygen species biosynthetic process|serotonin uptake|monoamine transport|dopamine transport|histamine uptake|neurotransmitter loading into synaptic vesicle|transmembrane transport|chemical synaptic transmission|se"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased body weight|decreased body size|increased anxiety-related response|decreased locomotor activity|impaired coordination|stereotypic behavior|abnormal response to new environment|abnormal liquid preference|abnormal sleep pattern|postnatal growth retardation|abnormal dopamine level|abnormal associative learning|abnormal motor capabilities/coordination/movement|premature death|abnormal synaptic neurotransmitter level|abnormal emotion/affect behavior|decreased vertical activity|enhanced long"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

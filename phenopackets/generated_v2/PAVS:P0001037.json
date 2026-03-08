@@ -1,0 +1,204 @@
+{
+  "id": "PAVS:P0001037",
+  "subject": {
+    "id": "PAVS:P0001037",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P8Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000518",
+        "label": "Cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002510",
+        "label": "Spastic tetraplegia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000618",
+        "label": "Blindness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000568",
+        "label": "Microphthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001037",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001037",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001037_PITX3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PITX3",
+                  "valueId": "NCBIGene:5309"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000370002.8:c.640_656del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000010.11:g.102230767_102230783del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000359019.3:p.Ala214ArgfsTer42"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "4.122e-05"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "7.6933e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.9100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skeletal_muscle_tissue:100|testis:98|substantia_nigra:96|heart_left_ventricle:94|renal_medulla:92|skin:91|omental_fat_pad:89|subcutaneous_adipose_tissue:89|atrium_auricular_region:89|coronary_artery:83|cortex_of_kidney:83|amygdala:83|lung:83|mammary_gland:83|minor_salivary_gland:83|pituitary_gland:83|prostate_gland:83|aorta:83|cerebellum:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of gliogenesis|midbrain development|regulation of DNA-templated transcription|response to cocaine|animal organ morphogenesis|positive regulation of DNA-templated transcription|positive regulation of transcription by RNA polymerase II|regulation of transcription by RNA polymerase II|cellular response to glial cell derived neurotrophic factor|anatomical structure morphogenesis|lens fiber cell differentiation|positive regulation of cell proliferation in midbrain|negative regulat"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased leukocyte cell number|increased granulocyte number|abnormal midbrain morphology|decreased body length|decreased body weight|decreased body size|anophthalmia|microphthalmia|abnormal eye distance/ position|fused cornea and lens|abnormal retina morphology|disorganized retina layers|increased anxiety-related response|decreased anxiety-related response|abnormal locomotor behavior|hyperactivity|decreased locomotor activity|impaired coordination|decreased exploration in new environment|abnorm"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

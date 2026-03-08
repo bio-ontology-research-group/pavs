@@ -1,0 +1,221 @@
+{
+  "id": "PAVS:F0000033",
+  "subject": {
+    "id": "PAVS:F0000033",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P2Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002376",
+        "label": "Developmental regression"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002194",
+        "label": "Delayed gross motor development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000729",
+        "label": "Autistic behavior"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000033",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000033",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000033_CTNNA2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CTNNA2",
+                  "valueId": "NCBIGene:1496"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000421865.3:c.3924+2T>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000006.12:g.129315952T>C"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr6",
+                  "pos": 129315952,
+                  "ref": "T",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:440912"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "splice_donor_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "440912"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.7551e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.9100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "frontal_cortex:100|cerebral_cortex:98|anterior_cingulate_cortex:96|amygdala:94|caudate_nucleus:92|nucleus_accumbens:91|hippocampus:89|hypothalamus:87|testis:85|putamen:83|substantia_nigra:81|cerebellar_hemisphere:79|cerebellum:77|cervical_vertebra:75|pituitary_gland:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "radial glia guided migration of Purkinje cell|negative regulation of Arp2/3 complex-mediated actin nucleation|modification of postsynaptic actin cytoskeleton|axonogenesis|regulation of synapse structural plasticity|dendrite morphogenesis|prepulse inhibition|cell differentiation|cell-cell adhesion|regulation of neuron migration|cell migration|regulation of neuron projection development|brain morphogenesis|cell adhesion|cytoskeleton organization"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal hippocampus layer morphology|abnormal cerebellum morphology|cerebellum hypoplasia|small cerebellum|abnormal cerebellum vermis morphology|ectopic Purkinje cell|abnormal cerebellar granule layer morphology|decreased body weight|abnormal maternal nurturing|abnormal tail movements|ataxia|abnormal cued conditioning behavior|increased startle reflex|limb grasping|reduced male fertility|abnormal neuron morphology|increased erythrocyte cell number|abnormal linear vestibular evoked potential|red"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

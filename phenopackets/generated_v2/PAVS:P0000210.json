@@ -1,0 +1,210 @@
+{
+  "id": "PAVS:P0000210",
+  "subject": {
+    "id": "PAVS:P0000210",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P16Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "familyHistory",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0032316",
+            "label": "Positive family history"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0011451",
+        "label": "Primary microcephaly"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012828",
+          "label": "Severe"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000210",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000210",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000210_ACOX1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ACOX1",
+                  "valueId": "NCBIGene:51"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000293217.10:c.1453G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000017.11:g.75949743G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000293217.4:p.Glu485Lys"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr17",
+                  "pos": 75949743,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "tolerated(0.18)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.003)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF01756"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "3.01e-05"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.7103e-05"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.7000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "liver:100|lower_leg_skin:98|suprapubic_skin:98|esophagus_mucosa:94|subcutaneous_adipose_tissue:92|pituitary_gland:91|omental_fat_pad:89|tibial_nerve:89|urinary_bladder:89|lung:83|mammary_gland:83|transverse_colon:83|adrenal_gland:77|ileum:77|prostate_gland:77|stomach:77|vagina:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "fatty acid metabolic process|very long-chain fatty acid metabolic process|lipid metabolic process|prostaglandin metabolic process|fatty acid oxidation|peroxisome fission|lipid homeostasis|fatty acid beta-oxidation|generation of precursor metabolites and energy|fatty acid beta-oxidation using acyl-CoA oxidase|very long-chain fatty acid beta-oxidation|fatty acid biosynthetic process|cholesterol homeostasis|hydrogen peroxide biosynthetic process|fatty acid catabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased bone mineral density|abnormal liver morphology|enlarged liver|pale liver|abnormal hepatocyte morphology|abnormal liver physiology|small ovary|small testis|abnormal spermatogenesis|decreased body length|decreased body weight|hyperlipidemia|postnatal growth retardation|liver inflammation|reduced fertility|male infertility|female infertility|abnormal liver regeneration|increased circulating alanine transaminase level|increased circulating alkaline phosphatase level|increased liver weight|"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

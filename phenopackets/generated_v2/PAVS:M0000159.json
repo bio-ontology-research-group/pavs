@@ -1,0 +1,213 @@
+{
+  "id": "PAVS:M0000159",
+  "subject": {
+    "id": "PAVS:M0000159",
+    "sex": "FEMALE",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007018",
+        "label": "Attention deficit hyperactivity disorder"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:30926181",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/30926181/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000159",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000159",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000159_PTS",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PTS",
+                  "valueId": "NCBIGene:5805"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000280362.8:c.238A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000011.10:g.112230677A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000280362.3:p.Met80Val"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr11",
+                  "pos": 112230677,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:359983"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0.01)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.214)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF01242"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "359983"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic/Likely pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.4801e-10"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.6950e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "adrenal_gland:100|pituitary_gland:98|skin:96|ectocervix:94|endocervix:92|thyroid_gland:92|renal_medulla:89|uterus:89|fallopian_tube:85|liver:85|ovary:85|aorta:85|vagina:85|coronary_artery:75|hypothalamus:75|prostate_gland:75|tibial_artery:75|tibial_nerve:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "central nervous system development|amino acid metabolic process|tetrahydrobiopterin biosynthetic process|tetrahydrobiopterin metabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "diluted coat color|alopecia|increased salivation|tremors|decreased locomotor activity|no swallowing reflex|postnatal growth retardation|abnormal dopamine level|abnormal sexual maturation|premature death|abnormal nervous system physiology|abnormal circulating amino acid level|abnormal biopterin level|abnormal neopterin level|abnormal serotonin level|dystonia|decreased heart rate|decreased dopamine level|decreased serotonin level|postnatal lethality, complete penetrance|postnatal lethality, incomp"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "id": "PAVS:F0000917",
+  "subject": {
+    "id": "PAVS:F0000917",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P2Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "familyHistory",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0032316",
+            "label": "Positive family history"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0033725",
+        "label": "Thin corpus callosum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007204",
+        "label": "Diffuse white matter abnormalities"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002500",
+        "label": "Abnormal cerebral white matter morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002119",
+        "label": "Ventriculomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001272",
+        "label": "Cerebellar atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000917",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000917",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000917_AGTPBP1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "AGTPBP1",
+                  "valueId": "NCBIGene:23287"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000357081.8:c.2908C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000009.12:g.85586956C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000349592.3:p.Arg970Cys"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr9",
+                  "pos": 85586956,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(1)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00246"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.6485e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.5600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cervical_vertebra:100|blood:100|lung:96|spleen:94|cerebellar_hemisphere:94|cerebellum:91|testis:89|frontal_cortex:87|substantia_nigra:87|tibial_nerve:83|coronary_artery:81|hypothalamus:81|subcutaneous_adipose_tissue:81|cerebral_cortex:75|hippocampus:75|aorta:75|tibial_artery:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "proteolysis|neuromuscular process|cerebellar Purkinje cell differentiation|mitochondrion organization|olfactory bulb development|eye photoreceptor cell differentiation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal spleen morphology|spleen hypoplasia|abnormal lymphocyte cell number|tremors|abnormal olfactory bulb morphology|abnormal thalamus morphology|abnormal cerebellum morphology|small cerebellum|abnormal cerebellar Purkinje cell layer|Purkinje cell degeneration|abnormal Purkinje cell morphology|decreased Purkinje cell number|abnormal cerebellar granule layer morphology|thin cerebellar molecular layer|abnormal retina rod cell morphology|decreased body weight|decreased body size|retina degenerat"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

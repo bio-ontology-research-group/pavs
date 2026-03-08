@@ -1,0 +1,316 @@
+{
+  "id": "PAVS:D0000926",
+  "subject": {
+    "id": "PAVS:D0000926",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000105",
+        "label": "Enlarged kidney"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000150",
+        "label": "Gonadoblastoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000158",
+        "label": "Macroglossia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000239",
+        "label": "Large fontanelles"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000269",
+        "label": "Prominent occiput"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000280",
+        "label": "Coarse facial features"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000520",
+        "label": "Proptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000598",
+        "label": "Abnormality of the ear"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001305",
+        "label": "Dandy-Walker malformation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001528",
+        "label": "Hemihypertrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001539",
+        "label": "Omphalocele"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001540",
+        "label": "Diastasis recti"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001548",
+        "label": "Overgrowth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001638",
+        "label": "Cardiomyopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001640",
+        "label": "Cardiomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001998",
+        "label": "Neonatal hypoglycemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002240",
+        "label": "Hepatomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002667",
+        "label": "Nephroblastoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002884",
+        "label": "Hepatoblastoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003247",
+        "label": "Overgrowth of external genitalia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005616",
+        "label": "Accelerated skeletal maturation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006277",
+        "label": "Pancreatic hyperplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006744",
+        "label": "Adrenocortical carcinoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008186",
+        "label": "Adrenocortical cytomegaly"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007534",
+        "label": "Beckwith-Wiedemann syndrome"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000926",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007534",
+          "label": "Beckwith-Wiedemann syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000926",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000926_CDKN1C",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CDKN1C",
+                  "valueId": "NCBIGene:1028"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.3741e-04"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.9430e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ovary:100|tibial_nerve:98|cervical_vertebra:96|uterus:94|adrenal_gland:92|ectocervix:91|endocervix:89|omental_fat_pad:87|subcutaneous_adipose_tissue:85|fallopian_tube:83|urinary_bladder:81|mammary_gland:79|cortex_of_kidney:77|muscle_layer_of_esophagus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of cell cycle|negative regulation of DNA-templated transcription|negative regulation of mitotic cell cycle|negative regulation of epithelial cell proliferation|positive regulation of transforming growth factor beta receptor signaling pathway"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "delayed bone ossification|cleft palate|abnormal long bone epiphysis morphology|abnormal vertebrae morphology|abnormal rib morphology|abnormal digestive system morphology|abnormal intestine morphology|absent jejunum|cortical renal glomerulopathies|small inner medullary pyramid|short limbs|enlarged adrenal glands|herniated abdominal wall|abnormal skeletal muscle morphology|abnormal midbrain morphology|abnormal female reproductive system morphology|vagina atresia|abnormal male reproductive system m"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

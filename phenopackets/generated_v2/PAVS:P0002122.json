@@ -1,0 +1,196 @@
+{
+  "id": "PAVS:P0002122",
+  "subject": {
+    "id": "PAVS:P0002122",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P2M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002910",
+        "label": "Elevated circulating hepatic transaminase concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001511",
+        "label": "Intrauterine growth retardation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0002122",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0002122",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0002122_MPV17",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MPV17",
+                  "valueId": "NCBIGene:4358"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.27312679G>T"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 27312679,
+                  "ref": "G",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "splice_donor_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODIFIER"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "6.841e-07"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.4056e-10"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.3680e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|adrenal_gland:98|thyroid_gland:96|pituitary_gland:94|ovary:92|cerebellar_hemisphere:92|cerebellum:89|endocervix:87|uterus:85|ectocervix:83|fallopian_tube:83|spleen:79|tibial_nerve:79|urinary_bladder:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "inner ear development|transmembrane transport|glomerular basement membrane development"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal cochlea morphology|organ of Corti degeneration|hypertension|decreased hair follicle number|cortical renal glomerulopathies|abnormal hepatocyte morphology|abnormal sebaceous gland morphology|thin skin|thin epidermis|decreased body weight|decreased locomotor activity|anemia|polyuria|abnormal skin morphology|abnormal coat/hair pigmentation|premature death|increased heart rate|abnormal renal tubule morphology|dilated renal tubule|increased heart weight|cochlear ganglion degeneration|albumin"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "id": "PAVS:D0000515",
+  "subject": {
+    "id": "PAVS:D0000515",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000975",
+        "label": "Hyperhidrosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001760",
+        "label": "Abnormal foot morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002380",
+        "label": "Fasciculations"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002411",
+        "label": "Myokymia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002486",
+        "label": "Myotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003236",
+        "label": "Elevated circulating creatine kinase concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003390",
+        "label": "Sensory axonal neuropathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003394",
+        "label": "Muscle spasm"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003552",
+        "label": "Muscle stiffness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003676",
+        "label": "Progressive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009027",
+        "label": "Foot dorsiflexor weakness"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007646",
+        "label": "Gamstorp-Wohlfart syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000515",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007646",
+          "label": "Gamstorp-Wohlfart syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000515",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000515_HINT1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "HINT1",
+                  "valueId": "NCBIGene:3094"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.9819e-05"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.7780e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|pituitary_gland:98|thyroid_gland:96|cerebellar_hemisphere:94|endocervix:92|prostate_gland:92|ileum:89|transverse_colon:87|lung:85|renal_medulla:85|suprapubic_skin:85|uterus:85|spleen:77|tibial_nerve:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "proteolysis|apoptotic process|protein desumoylation|purine ribonucleotide catabolic process|positive regulation of calcium-mediated signaling|signal transduction|intrinsic apoptotic signaling pathway by p53 class mediator|regulation of DNA-templated transcription"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased body weight|no abnormal phenotype detected|decreased erythrocyte cell number|decreased cellular sensitivity to gamma-irradiation|decreased response of heart to induced stress|increased incidence of tumors by chemical induction|increased mean corpuscular hemoglobin concentration|increased fibroblast proliferation"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

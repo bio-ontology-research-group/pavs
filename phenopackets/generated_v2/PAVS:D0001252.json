@@ -1,0 +1,201 @@
+{
+  "id": "PAVS:D0001252",
+  "subject": {
+    "id": "PAVS:D0001252",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000529",
+        "label": "Progressive visual loss"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000546",
+        "label": "Retinal degeneration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001311",
+        "label": "Abnormal nervous system electrophysiology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002074",
+        "label": "Increased neuronal autofluorescent lipopigment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002333",
+        "label": "Motor deterioration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003205",
+        "label": "Curvilinear intracellular accumulation of autofluorescent lipopigment storage material"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003208",
+        "label": "Fingerprint intracellular accumulation of autofluorescent lipopigment storage material"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011144",
+        "label": "ceroid lipofuscinosis, neuronal, 6A"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001252",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011144",
+          "label": "ceroid lipofuscinosis, neuronal, 6A"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001252",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001252_CLN6",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CLN6",
+                  "valueId": "NCBIGene:54982"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "8.7664e-06"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0150e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|endocervix:98|spleen:98|thyroid_gland:98|ectocervix:92|fallopian_tube:92|lung:92|tibial_nerve:92|uterus:92|cerebellar_hemisphere:92|cerebellum:92|lower_leg_skin:79|minor_salivary_gland:79|ovary:79|pituitary_gland:79|prostate_gland:79|suprapubic_skin:79|testis:79|vagina:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "glycosaminoglycan metabolic process|positive regulation of proteolysis|lysosomal lumen acidification|ganglioside metabolic process|protein catabolic process|cholesterol metabolic process|lysosome organization"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "paralysis|abnormal myelination|abnormal retina morphology|seizures|premature death|increased heart weight|astrocytosis|abnormal nervous system morphology|abnormal neuron physiology|impaired glucose tolerance|axon degeneration|decreased prepulse inhibition|decreased total body fat amount|hindlimb paresis|increased susceptibility to age-related retinal degeneration"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

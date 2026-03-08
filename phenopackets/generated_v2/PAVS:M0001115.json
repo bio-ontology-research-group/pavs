@@ -1,0 +1,213 @@
+{
+  "id": "PAVS:M0001115",
+  "subject": {
+    "id": "PAVS:M0001115",
+    "sex": "MALE",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Motor delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001999",
+        "label": "Abnormal facial shape"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001344",
+        "label": "Absent speech"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000717",
+        "label": "Autism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:28940097",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28940097/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001115",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001115",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001115_EHMT1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "EHMT1",
+                  "valueId": "NCBIGene:79813"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000460843.6:c.2968C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000009.12:g.137813106C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000417980.1:p.Gln990Ter"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr9",
+                  "pos": 137813106,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:3224284"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "stop_gained"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "3224284"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.5900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|ovary:98|uterus:98|ectocervix:94|endocervix:94|spleen:94|fallopian_tube:89|thyroid_gland:89|prostate_gland:85|tibial_nerve:85|lung:81|mammary_gland:81|urinary_bladder:81|vagina:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of DNA-templated transcription|negative regulation of white fat cell differentiation|beige fat cell differentiation|negative regulation of transcription by RNA polymerase II|response to fungicide|methylation|positive regulation of cold-induced thermogenesis|epigenetic regulation of gene expression|facultative heterochromatin formation|DNA methylation-dependent constitutive heterochromatin formation|chromatin organization|regulation of embryonic development|peptidyl-lysine dim"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal nasal bone morphology|malocclusion|increased circulating LDL cholesterol level|increased neutrophil cell number|open neural tube|cornea opacity|abnormal social investigation|increased anxiety-related response|decreased anxiety-related response|decreased locomotor activity|decreased exploration in new environment|abnormal suckling behavior|abnormal object recognition memory|increased startle reflex|incomplete somite formation|postnatal growth retardation|impaired synaptic plasticity|abno"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

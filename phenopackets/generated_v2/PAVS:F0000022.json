@@ -1,0 +1,216 @@
+{
+  "id": "PAVS:F0000022",
+  "subject": {
+    "id": "PAVS:F0000022",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P6Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002194",
+        "label": "Delayed gross motor development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000729",
+        "label": "Autistic behavior"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000022",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000022",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000022_WNT5A",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "WNT5A",
+                  "valueId": "NCBIGene:7474"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000264634.9:c.829C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000003.12:g.55470406C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000264634.4:p.Arg277Trp"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr3",
+                  "pos": 55470406,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.988)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00110"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "4.108e-06"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9800e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.3700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|vagina:98|esophagus_mucosa:96|uterus:94|ovary:92|endocervix:91|ectocervix:89|fallopian_tube:89|minor_salivary_gland:89|lung:83|muscle_layer_of_esophagus:83|prostate_gland:83|thyroid_gland:77|esophagogastric_junction:75|urinary_bladder:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of endothelial cell proliferation|ventricular septum development|positive regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction|chemorepulsion of dopaminergic neuron axon|presynapse assembly|positive regulation of type I interferon-mediated signaling pathway|negative regulation of synapse assembly|positive regulation of interleukin-8 production|regulation of postsynaptic cytosolic calcium ion concentration|non-canonical Wnt signaling pathway|neuron "
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "small ears|delayed bone ossification|short mandible|cleft palate|abnormal vertebrae morphology|rib fusion|double outlet right ventricle|short snout|abnormal intestine morphology|abnormal rectum morphology|abnormal colon morphology|abnormal urinary bladder morphology|short limbs|adactyly|syndactyly|abnormal autopod morphology|short tail|abnormal liver morphology|enlarged liver|abnormal lung development|pulmonary hypoplasia|decreased body length|decreased body size|thymus hypoplasia|respiratory fa"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

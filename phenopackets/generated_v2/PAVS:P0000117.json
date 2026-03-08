@@ -1,0 +1,206 @@
+{
+  "id": "PAVS:P0000117",
+  "subject": {
+    "id": "PAVS:P0000117",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P40Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "familyHistory",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0032316",
+            "label": "Positive family history"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000117",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000117",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000117_CLCN2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CLCN2",
+                  "valueId": "NCBIGene:1181"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000265593.9:c.1609G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000003.12:g.184354213G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000265593.4:p.Ala537Thr"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr3",
+                  "pos": 184354213,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "possibly_damaging(0.905)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00654"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "1.368e-06"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.1071e-15"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.8600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "tibial_nerve:100|testis:98|cerebellum:96|ovary:94|cerebellar_hemisphere:94|uterus:91|endocervix:89|pituitary_gland:89|transverse_colon:89|adrenal_gland:83|cervical_vertebra:83|ectocervix:83|fallopian_tube:83|ileum:83|thyroid_gland:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "monoatomic ion transport|regulation of aldosterone biosynthetic process|regulation of membrane depolarization during action potential|cellular hypotonic response|positive regulation of oligodendrocyte differentiation|lung development|regulation of resting membrane potential|monoatomic anion transmembrane transport|phagocytosis, engulfment|transmembrane transport|chloride transport|monoatomic ion transmembrane transport|stabilization of membrane potential|chloride transmembrane transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal corpus callosum morphology|abnormal cerebellum morphology|abnormal spinal cord morphology|abnormal testis morphology|small testis|increased Leydig cell number|seminiferous tubule degeneration|abnormal spermatogenesis|retina degeneration|male infertility|abnormal spermiogenesis|abnormal kidney morphology|abnormal brain morphology|abnormal seminiferous tubule morphology|neurodegeneration|increased heart rate|increased circulating aldosterone level|abnormal Sertoli cell morphology|increase"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

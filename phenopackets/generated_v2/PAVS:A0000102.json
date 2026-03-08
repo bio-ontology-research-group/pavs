@@ -1,0 +1,200 @@
+{
+  "id": "PAVS:A0000102",
+  "subject": {
+    "id": "PAVS:A0000102",
+    "sex": "FEMALE",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-variants",
+        "description": "Source dataset: ahmed-variants"
+      },
+      {
+        "id": "PMID:28454995",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0019568",
+        "label": "Ehlers-Danlos syndrome, classic type, 2"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:A0000102",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0019568",
+          "label": "Ehlers-Danlos syndrome, classic type, 2"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:A0000102",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:A0000102_COL5A2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "COL5A2",
+                  "valueId": "NCBIGene:1290"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000374866.9:c.3260C>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.189045849C>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000364000.3:p.Thr1087Ser"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 189045849,
+                  "ref": "C",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "tolerated(0.44)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "2.736e-06"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|ectocervix:98|endocervix:96|aorta:94|sigmoid_colon:92|coronary_artery:91|uterus:89|tibial_artery:87|subcutaneous_adipose_tissue:85|vagina:83|urinary_bladder:81|esophagogastric_junction:79|fallopian_tube:77|ovary:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of endodermal cell differentiation|animal organ development|skin development|collagen fibril organization|system development|eye morphogenesis"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "blood vessel congestion|abnormal spleen morphology|abnormal thymus morphology|enlarged thymus|spontaneous skin ulceration|thin dermal layer|decreased body weight|decreased body size|abnormal cornea morphology|cornea opacity|pup cannibalization|hunched posture|abnormal cardiovascular system physiology|respiratory distress|abnormal skin morphology|abnormal skeleton development|no abnormal phenotype detected|decreased skin tensile strength|decreased cornea stroma thickness|abnormal hypodermis morph"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

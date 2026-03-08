@@ -1,0 +1,173 @@
+{
+  "id": "PAVS:D0000642",
+  "subject": {
+    "id": "PAVS:D0000642",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000407",
+        "label": "Sensorineural hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000496",
+        "label": "Abnormality of eye movement"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002194",
+        "label": "Delayed gross motor development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002363",
+        "label": "Abnormal brainstem morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009145",
+        "label": "Abnormal cerebral artery morphology"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011099",
+        "label": "human HOXA1 syndromes"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000642",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011099",
+          "label": "human HOXA1 syndromes"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000642",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000642_HOXA1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "HOXA1",
+                  "valueId": "NCBIGene:3198"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.1851e-06"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0120e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "esophagus_mucosa:100|skin:100|spleen:96|fallopian_tube:94|ileum:94|lower_leg_skin:94|renal_medulla:94|suprapubic_skin:94|transverse_colon:94|urinary_bladder:94|uterus:94|cervical_vertebra:79|cortex_of_kidney:79|endocervix:79|mammary_gland:79|omental_fat_pad:79|ovary:79|prostate_gland:79|sigmoid_colon:79|tibial_artery:79|tibial_nerve:79|vagina:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "abducens nerve formation|artery morphogenesis|neuromuscular process|cochlea development|inner ear development|semicircular canal formation|positive regulation of transcription by RNA polymerase II|regulation of transcription by RNA polymerase II|sensory perception of sound|optokinetic behavior|cognition|outer ear morphogenesis|artery development|cochlea morphogenesis|regulation of DNA-templated transcription|embryonic neurocranium morphogenesis|regulation of behavior|anatomical structure morphog"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal inner ear morphology|abnormal tympanic ring morphology|abnormal cochlea morphology|absent scala media|abnormal inner ear vestibule morphology|abnormal membranous labyrinth morphology|absent semicircular canals|abnormal otic capsule morphology|decreased middle ear ossicle number|absent endolymphatic duct|abnormal middle ear morphology|abnormal interparietal bone morphology|abnormal basioccipital bone morphology|abnormal exoccipital bone morphology|overriding aortic valve|heart right vent"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

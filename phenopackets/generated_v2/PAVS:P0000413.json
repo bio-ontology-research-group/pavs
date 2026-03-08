@@ -1,0 +1,187 @@
+{
+  "id": "PAVS:P0000413",
+  "subject": {
+    "id": "PAVS:P0000413",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P20Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0012265",
+        "label": "Ciliary dyskinesia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100660",
+        "label": "Dyskinesia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000413",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000413",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000413_CCDC39",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CCDC39",
+                  "valueId": "NCBIGene:339829"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000476379.6:c.1871_1872del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000003.12:g.180641995_180641996del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000417960.2:p.Ile624LysfsTer3"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF24161"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "3.511e-06"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.1729e-20"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.2260e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|ovary:98|ectocervix:96|endocervix:96|fallopian_tube:96|pituitary_gland:96|thyroid_gland:89|tibial_nerve:89|lung:85|mammary_gland:85|subcutaneous_adipose_tissue:85|uterus:85|vagina:85|coronary_artery:75|esophagogastric_junction:75|ileum:75|lower_leg_skin:75|nucleus_accumbens:75|prostate_gland:75|spleen:75|urinary_bladder:75|caudate_nucleus:75|cerebellar_hemisphere:75|cerebellum:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heart looping|protein localization to cilium|inner dynein arm assembly|flagellated sperm motility|determination of digestive tract left/right asymmetry|motile cilium assembly|cilium organization|cilium movement|epithelial cilium movement involved in determination of left/right asymmetry|axonemal dynein complex assembly|lung development|cilium-dependent cell motility|determination of pancreatic left/right asymmetry|determination of liver left/right asymmetry|regulation of cilium beat frequency"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "overriding aortic valve|double outlet right ventricle|hydronephrosis|abnormal liver morphology|dextrocardia|absent spleen|spleen hypoplasia|dilated lateral ventricle|dilated third ventricle|abnormal brain development|decreased body weight|hydrocephaly|gliosis|micrognathia|small olfactory bulb|left pulmonary isomerism|abnormal aortic arch morphology|heterotaxia|interrupted aortic arch|abnormal postnatal subventricular zone morphology|right atrial isomerism|abnormal inferior vena cava morphology|a"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

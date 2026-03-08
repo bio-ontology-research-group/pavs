@@ -1,0 +1,202 @@
+{
+  "id": "PAVS:B0000013",
+  "subject": {
+    "id": "PAVS:B0000013",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-pmid28454995",
+        "description": "Source dataset: ahmed-pmid28454995"
+      },
+      {
+        "id": "PMID:28454995",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0014143",
+        "label": "Noonan syndrome 8"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:B0000013",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0014143",
+          "label": "Noonan syndrome 8"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:B0000013",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:B0000013_RIT1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "RIT1",
+                  "valueId": "NCBIGene:6016"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000368323.8:c.244T>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000001.11:g.155904496A>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000357306.3:p.Phe82Val"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr1",
+                  "pos": 155904496,
+                  "ref": "A",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:181508"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.995)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00071"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "181508"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.6123e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.2300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "lung:100|esophagus_mucosa:98|blood:96|spleen:94|vagina:94|aorta:91|urinary_bladder:89|coronary_artery:87|ectocervix:85|endocervix:85|tibial_nerve:85|uterus:79|omental_fat_pad:77|subcutaneous_adipose_tissue:77|tibial_artery:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "Ras protein signal transduction|signal transduction"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal heart morphology|short snout|rectal prolapse|enlarged spleen|decreased body height|decreased body length|decreased body weight|anophthalmia|abnormal cardiovascular system physiology|anemia|hemorrhage|reduced female fertility|prenatal lethality|premature death|abnormal kidney morphology|hydrops fetalis|increased mean platelet volume|increased heart weight|thick ventricular wall|increased circulating alkaline phosphatase level|enlarged kidney|cardiac fibrosis|increased circulating asparta"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

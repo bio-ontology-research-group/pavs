@@ -57,7 +57,7 @@ def main():
     parser.add_argument("--endpoint", default="http://localhost:8890", help="Virtuoso base URL")
     parser.add_argument("--skip-load", action="store_true", help="Skip Virtuoso loading step")
     # Pass-through args for individual scripts
-    parser.add_argument("--input", default="data/combined_annotated.tsv")
+    parser.add_argument("--input", default="data/combined_annotated-gpt4oss.tsv")
     parser.add_argument("--hpo", default="ontology/hp.obo")
     parser.add_argument("--hpoa", default="data/reference/phenotype.hpoa")
     parser.add_argument("--literature-dir", default="phenopackets/0.1.26")

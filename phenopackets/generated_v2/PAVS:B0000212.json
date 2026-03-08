@@ -1,0 +1,201 @@
+{
+  "id": "PAVS:B0000212",
+  "subject": {
+    "id": "PAVS:B0000212",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-pmid28454995",
+        "description": "Source dataset: ahmed-pmid28454995"
+      },
+      {
+        "id": "PMID:28454995",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010590",
+        "label": "FG syndrome 1"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:B0000212",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010590",
+          "label": "FG syndrome 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:B0000212",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:B0000212_MED12",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MED12",
+                  "valueId": "NCBIGene:9968"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000374080.8:c.3797G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000023.11:g.71129785G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000363193.3:p.Arg1266His"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chrX",
+                  "pos": 71129785,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000134",
+                  "label": "hemizygous"
+                },
+                "xrefs": [
+                  "ClinVar:135037"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0.03)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "possibly_damaging(0.766)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "0.0001304"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "135037"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Conflicting classifications of pathogenicity"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ovary:100|uterus:98|spleen:96|endocervix:94|tibial_nerve:94|ectocervix:91|adrenal_gland:89|thyroid_gland:89|mammary_gland:85|prostate_gland:85|fallopian_tube:81|subcutaneous_adipose_tissue:81|vagina:81|lung:75|pituitary_gland:75|urinary_bladder:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of transcription initiation by RNA polymerase II|positive regulation of transcription by RNA polymerase II|regulation of transcription by RNA polymerase II|positive regulation of DNA-templated transcription|protein ubiquitination"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal heart development|open neural tube|abnormal somite development|abnormal somite shape|abnormal neural tube morphology|no abnormal phenotype detected|abnormal pharyngeal arch morphology|abnormal neural crest cell migration|kinked neural tube|caudal body truncation|failure of heart looping|abnormal dorsal-ventral polarity of the somites|abnormal first pharyngeal arch morphology|absent second pharyngeal arch|absent third pharyngeal arch|embryonic lethality, complete penetrance|embryonic let"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

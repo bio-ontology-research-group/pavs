@@ -1,0 +1,121 @@
+{
+  "id": "PAVS:D0001350",
+  "subject": {
+    "id": "PAVS:D0001350",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001350",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001350",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001350_YWHAE",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "YWHAE",
+                  "valueId": "NCBIGene:7531"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9999e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.7500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cervical_vertebra:100|cerebellar_hemisphere:98|skin:96|frontal_cortex:94|cerebellum:92|hypothalamus:91|anterior_cingulate_cortex:89|tibial_nerve:87|amygdala:85|substantia_nigra:83|nucleus_accumbens:81|cerebral_cortex:79|hippocampus:77|caudate_nucleus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of calcium ion export across plasma membrane|positive regulation of hippo signaling|regulation of membrane repolarization|intracellular protein localization|regulation of heart rate by cardiac conduction|protein localization to endoplasmic reticulum|protein localization to nucleus|regulation of mitotic cell cycle|signal transduction|regulation of heart rate by hormone|MAPK cascade|intracellular signal transduction|membrane repolarization during cardiac muscle cell action pote"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal heart morphology|thin ventricular wall|abnormal cerebral cortex morphology|cyanosis|female infertility|decreased litter size|abnormal brain morphology|abnormal myocardial trabeculae morphology|abnormal cell cycle|abnormal heart left ventricle morphology|thin myocardium compact layer|decreased mitotic index|abnormal heart ventricle morphology|dilated heart ventricle|abnormal hippocampus pyramidal cell layer|ventricular septal defect|thin ventricle myocardium compact layer|perinatal letha"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

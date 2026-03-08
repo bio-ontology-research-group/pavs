@@ -1,0 +1,236 @@
+{
+  "id": "PAVS:F0000689",
+  "subject": {
+    "id": "PAVS:F0000689",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P11Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002194",
+        "label": "Delayed gross motor development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0018772",
+        "label": "Joubert syndrome"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000689",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0018772",
+          "label": "Joubert syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000689",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000689_CEP290",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CEP290",
+                  "valueId": "NCBIGene:80184"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000552810.6:c.5668G>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000012.12:g.88077263C>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000448012.1:p.Gly1890Ter"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr12",
+                  "pos": 88077263,
+                  "ref": "C",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:16372"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "stop_gained"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "0.0001431"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "16372"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic/Likely pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.2493e-48"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0940e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ovary:100|tibial_nerve:98|uterus:98|endocervix:94|fallopian_tube:94|pituitary_gland:94|skin:94|thyroid_gland:94|ectocervix:85|testis:85|prostate_gland:81|urinary_bladder:81|cerebellar_hemisphere:81|cerebellum:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "pronephros development|cilium assembly|ciliary transition zone assembly|positive regulation of intracellular protein transport|hindbrain development|protein transport|kidney development|regulation of establishment of protein localization|cell projection organization|positive regulation of DNA-templated transcription|ciliary basal body-plasma membrane docking|otic vesicle formation|camera-type eye development|non-motile cilium assembly|eye photoreceptor cell development|protein localization to ci"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "double outlet right ventricle|kidney cortex cyst|left-sided isomerism|spleen hypoplasia|abnormal cerebellum morphology|abnormal cerebellum vermis morphology|abnormal retina photoreceptor morphology|decreased body size|retina degeneration|no spontaneous movement|polydipsia|abnormal blood vessel morphology|abnormal placenta morphology|polyuria|hydrocephaly|hemorrhage|male infertility|female infertility|no abnormal phenotype detected|micrognathia|abnormal cell nucleus morphology|accessory spleen|ki"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

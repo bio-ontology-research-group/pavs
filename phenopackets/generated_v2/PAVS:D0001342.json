@@ -1,0 +1,137 @@
+{
+  "id": "PAVS:D0001342",
+  "subject": {
+    "id": "PAVS:D0001342",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:241432",
+        "label": "OMIM:241432"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001342",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:241432",
+          "label": "OMIM:241432"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001342",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001342_FOXC2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "FOXC2",
+                  "valueId": "NCBIGene:2303"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.6521e-04"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.8070e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "aorta:100|tibial_artery:98|coronary_artery:96|tibial_nerve:94|skin:92|renal_medulla:91|cortex_of_kidney:89|fallopian_tube:87|ectocervix:85|lung:85|testis:85|thyroid_gland:85|atrium_auricular_region:85|endocervix:75|mammary_gland:75|minor_salivary_gland:75|omental_fat_pad:75|subcutaneous_adipose_tissue:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heart development|mesoderm development|negative regulation of transcription by RNA polymerase II|somitogenesis|positive regulation of endothelial cell migration|lymphangiogenesis|anatomical structure morphogenesis|positive regulation of cell adhesion mediated by integrin|positive regulation of DNA-templated transcription|positive regulation of transcription by RNA polymerase II|negative regulation of cold-induced thermogenesis|insulin receptor signaling pathway|regulation of transcription by RNA"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased brown adipose tissue amount|abnormal malleus morphology|abnormal supraoccipital bone morphology|abnormal sphenoid bone morphology|abnormal basisphenoid bone morphology|cleft palate|abnormal vertebral body morphology|rib fusion|abnormal cartilage morphology|absent palatine bone horizontal plate|enlarged lymph nodes|atelectasis|cataract|abnormal iris morphology|blepharoptosis|abnormal blood vessel morphology|abnormal somite shape|periorbital edema|intracranial hemorrhage|abnormal eye mor"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

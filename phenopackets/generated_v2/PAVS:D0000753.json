@@ -1,0 +1,334 @@
+{
+  "id": "PAVS:D0000753",
+  "subject": {
+    "id": "PAVS:D0000753",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000076",
+        "label": "Vesicoureteral reflux"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000400",
+        "label": "Macrotia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000414",
+        "label": "Bulbous nose"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000431",
+        "label": "Wide nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000490",
+        "label": "Deeply set eye"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000577",
+        "label": "Exotropia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000896",
+        "label": "Rib exostoses"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000918",
+        "label": "Scapular exostoses"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001159",
+        "label": "Syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001382",
+        "label": "Joint hypermobility"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001530",
+        "label": "Mild postnatal growth retardation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001808",
+        "label": "Fragile nails"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002002",
+        "label": "Deep philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002209",
+        "label": "Sparse scalp hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002788",
+        "label": "Recurrent upper respiratory tract infections"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003691",
+        "label": "Scapular winging"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003764",
+        "label": "Nevus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005039",
+        "label": "Multiple long-bone exostoses"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005743",
+        "label": "Avascular necrosis of the capital femoral epiphysis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007595",
+        "label": "Redundant skin in infancy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010230",
+        "label": "Cone-shaped epiphyses of the phalanges of the hand"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007874",
+        "label": "trichorhinophalangeal syndrome type II"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000753",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007874",
+          "label": "trichorhinophalangeal syndrome type II"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000753",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000753_EXT1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "EXT1",
+                  "valueId": "NCBIGene:2131"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "3.3900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "aorta:100|skin:98|tibial_artery:96|coronary_artery:94|lung:92|thyroid_gland:91|subcutaneous_adipose_tissue:89|endocervix:87|omental_fat_pad:87|uterus:87|vagina:87|ectocervix:79|ileum:79|mammary_gland:79|suprapubic_skin:79|tibial_nerve:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heparan sulfate proteoglycan biosynthetic process|ossification|glycosaminoglycan biosynthetic process|glycoprotein biosynthetic process|polysaccharide biosynthetic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "absent mesoderm|failure of primitive streak formation|failure to gastrulate|decreased embryo size|premature death|abnormal developmental patterning|abnormal embryonic tissue morphology|abnormal extraembryonic tissue morphology|abnormal eye morphology|abnormal limb morphology|no abnormal phenotype detected|abnormal long bone epiphyseal plate proliferative zone|disorganized embryonic tissue|abnormal skeleton morphology|embryonic lethality|increased osteochondroma incidence|prenatal lethality, comp"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "id": "PAVS:P0001018",
+  "subject": {
+    "id": "PAVS:P0001018",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P49M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001018",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001018",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001018_GRM1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GRM1",
+                  "valueId": "NCBIGene:2911"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000282753.6:c.1568dup"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000006.12:g.146357659_146357660insT"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000282753.1:p.Cys524ValfsTer3"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF07562"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9997e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.1700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellar_hemisphere:100|cerebellum:98|frontal_cortex:96|cerebral_cortex:94|anterior_cingulate_cortex:94|amygdala:91|hippocampus:91|hypothalamus:91|nucleus_accumbens:91|caudate_nucleus:91|putamen:81|substantia_nigra:81|testis:81|renal_medulla:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of synaptic transmission, glutamatergic|regulation of sensory perception of pain|regulation of postsynaptic membrane potential|adenylate cyclase-inhibiting G protein-coupled glutamate receptor signaling pathway|phospholipase C-activating G protein-coupled receptor signaling pathway|positive regulation of MAPK cascade|synaptic signaling via neuropeptide|regulation of membrane potential|phospholipase C-activating G protein-coupled glutamate receptor signaling pathway|G protein-coupled r"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased brown adipose tissue amount|decreased bone mineral density|kyphoscoliosis|kyphosis|muscle spasm|tremors|weakness|hyperpigmentation|decreased body weight|decreased body size|abnormal maternal nurturing|ataxia|decreased locomotor activity|abnormal gait|decreased exploration in new environment|abnormal spatial learning|abnormal contextual conditioning behavior|reduced long-term potentiation|reduced long-term depression|hunched posture|limb grasping|impaired righting response|impaired limb"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

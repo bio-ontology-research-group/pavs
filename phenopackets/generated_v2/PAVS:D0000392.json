@@ -1,0 +1,334 @@
+{
+  "id": "PAVS:D0000392",
+  "subject": {
+    "id": "PAVS:D0000392",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000202",
+        "label": "Orofacial cleft"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000509",
+        "label": "Conjunctivitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000579",
+        "label": "Nasolacrimal duct obstruction"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000668",
+        "label": "Hypodontia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000677",
+        "label": "Oligodontia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000691",
+        "label": "Microdontia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000958",
+        "label": "Dry skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000963",
+        "label": "Thin skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000964",
+        "label": "Eczematoid dermatitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000968",
+        "label": "Ectodermal dysplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000992",
+        "label": "Cutaneous photosensitivity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001171",
+        "label": "Split hand"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001480",
+        "label": "Freckling"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001770",
+        "label": "Toe syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001803",
+        "label": "Nail pits"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001839",
+        "label": "Split foot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002209",
+        "label": "Sparse scalp hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002215",
+        "label": "Sparse axillary hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002286",
+        "label": "Fair hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002293",
+        "label": "Alopecia of scalp"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002557",
+        "label": "Hypoplastic nipples"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002561",
+        "label": "Absent nipple"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003187",
+        "label": "Breast hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004334",
+        "label": "Dermal atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006357",
+        "label": "Premature loss of permanent teeth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006610",
+        "label": "Wide intermamillary distance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007455",
+        "label": "Adermatoglyphia"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007072",
+        "label": "ADULT syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000392",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007072",
+          "label": "ADULT syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000392",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000392_TP63",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TP63",
+                  "valueId": "NCBIGene:8626"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.9600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "suprapubic_skin:100|lower_leg_skin:98|vagina:96|esophagus_mucosa:94|prostate_gland:92|minor_salivary_gland:91|skeletal_muscle_tissue:89|mammary_gland:87|testis:85|urinary_bladder:85|tibial_nerve:81|ectocervix:79|endocervix:79|lung:75|tibial_artery:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of fibroblast apoptotic process|positive regulation of osteoblast differentiation|apoptotic process|negative regulation of cellular senescence|regulation of DNA-templated transcription|spermatogenesis|Notch signaling pathway|positive regulation of DNA-templated transcription|positive regulation of transcription by RNA polymerase II|intrinsic apoptotic signaling pathway in response to DNA damage by p53 class mediator|positive regulation of cell cycle G1/S phase transition|posi"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "cleft palate|abnormal tooth development|absent tooth placode|kyphosis|decreased cell proliferation|absent hair follicles|decreased hair follicle number|alopecia|ruffled hair|abnormal craniofacial morphology|abnormal esophageal epithelium morphology|abnormal esophageal squamous epithelium morphology|abnormal stomach epithelium morphology|abnormal stomach non-glandular epithelium morphology|abnormal rectum morphology|rectal prolapse|distended urinary bladder|abnormal urinary bladder urothelium mor"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

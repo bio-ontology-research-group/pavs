@@ -1,0 +1,186 @@
+{
+  "id": "PAVS:P0000126",
+  "subject": {
+    "id": "PAVS:P0000126",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P6Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0025406",
+        "label": "Asthenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001945",
+        "label": "Fever"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001324",
+        "label": "Muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000126",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000126",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000126_ZPR1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ZPR1",
+                  "valueId": "NCBIGene:8882"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000227322.8:c.923_937del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000011.10:g.116783574_116783588del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000227322.3:p.Gly308_Leu313delinsVal"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "inframe_deletion"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "7.0253e-07"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.1500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|skin:98|tibial_artery:96|tibial_nerve:96|ovary:92|endocervix:91|fallopian_tube:91|omental_fat_pad:91|aorta:91|uterus:91|coronary_artery:81|subcutaneous_adipose_tissue:81|lung:77|mammary_gland:77|thyroid_gland:77|urinary_bladder:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "RNA splicing|positive regulation of RNA splicing|inner cell mass cell proliferation|positive regulation of cell cycle|DNA replication|Cajal body organization|positive regulation of gene expression|trophectodermal cell proliferation|pre-mRNA catabolic process|positive regulation of protein import into nucleus|signal transduction|mRNA processing|DNA endoreduplication|protein folding|regulation of myelination|axon development|cellular response to epidermal growth factor stimulus|negative regulation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal inner cell mass morphology|abnormal trophectoderm morphology|abnormal trophoblast giant cell morphology|abnormal Cajal body morphology|abnormal inner cell mass apoptosis|embryonic lethality, complete penetrance|decreased inner cell mass proliferation"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

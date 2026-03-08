@@ -1,0 +1,176 @@
+{
+  "id": "PAVS:B0000220",
+  "subject": {
+    "id": "PAVS:B0000220",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-pmid28454995",
+        "description": "Source dataset: ahmed-pmid28454995"
+      },
+      {
+        "id": "PMID:28454995",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010860",
+        "label": "autosomal recessive nonsyndromic hearing loss 3"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:B0000220",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010860",
+          "label": "autosomal recessive nonsyndromic hearing loss 3"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:B0000220",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:B0000220_MYO15A|MYO15A",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MYO15A|MYO15A",
+                  "valueId": "NCBIGene:51168|51168"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000647165.2:c.855dup"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000017.11:g.18119654_18119655insT"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000495481.1:p.Pro286SerfsTer15"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000402|GENO:0000402",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "6.885e-07"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.3858e-82"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.8900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "pituitary_gland:100|testis:98|cerebellar_hemisphere:96|cerebellum:96|ovary:92|cerebral_cortex:91|endocervix:91|fallopian_tube:91|frontal_cortex:91|tibial_nerve:91|uterus:91|ectocervix:79|hypothalamus:79|prostate_gland:79|aorta:79|thyroid_gland:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "endocytosis|response to light stimulus|sensory perception of sound|actin filament organization"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal organ of Corti morphology|organ of Corti degeneration|abnormal stria vascularis morphology|abnormal lens morphology|cataract|ataxia|circling|impaired coordination|head bobbing|impaired swimming|deafness|abnormal motor capabilities/coordination/movement|abnormal cochlear hair cell morphology|head shaking|abnormal cochlear ganglion morphology|cochlear ganglion degeneration|abnormal tectorial membrane morphology|cochlear ganglion hypoplasia|abnormal utricular macula morphology|cochlear hai"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "id": "PAVS:P0000469",
+  "subject": {
+    "id": "PAVS:P0000469",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P7Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002783",
+        "label": "Recurrent lower respiratory tract infections"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002028",
+        "label": "Chronic diarrhea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001251",
+        "label": "Ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000469",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000469",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000469_RAG1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "RAG1",
+                  "valueId": "NCBIGene:5896"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000299440.6:c.1438A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000011.10:g.36574742A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000299440.5:p.Ser480Gly"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr11",
+                  "pos": 36574742,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:188823"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.939)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF12940"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "6.156e-06"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "188823"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Conflicting classifications of pathogenicity"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.2369e-05"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.0300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|thyroid_gland:100|adrenal_gland:96|testis:96|cortex_of_kidney:92|minor_salivary_gland:92|renal_medulla:92|ileum:87|skin:87|fallopian_tube:83|lung:83|mammary_gland:83|aorta:83|uterus:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of T cell differentiation|adaptive immune response|V(D)J recombination|T cell differentiation in thymus|pre-B cell allelic exclusion|DNA recombination|visual learning|chromatin organization|regulation of behavioral fear response|immune response|protein autoubiquitination|B cell differentiation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased neutrophil cell number|increased granulocyte number|spleen hypoplasia|small thymus|absent lymphocyte|scaly skin|dermatitis|thick skin|epidermal hyperplasia|mixed cellular infiltration to dermis|abnormal retina morphology|decreased anxiety-related response|arrested B cell differentiation|decreased IgG level|decreased IgM level|thymus hypoplasia|arrested T cell differentiation|autoimmune response|ear inflammation|abnormal lymphatic vessel morphology|abnormal coat/hair pigmentation|abnorm"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

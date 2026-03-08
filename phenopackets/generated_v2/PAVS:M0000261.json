@@ -1,0 +1,194 @@
+{
+  "id": "PAVS:M0000261",
+  "subject": {
+    "id": "PAVS:M0000261",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:27629047",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/27629047/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000261",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000261",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000261_ASS1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ASS1",
+                  "valueId": "NCBIGene:445"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000352480.10:c.370G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000009.12:g.130464117G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000253004.6:p.Asp124Asn"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr9",
+                  "pos": 130464117,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:458934"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0.05)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "possibly_damaging(0.476)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00764"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "1.094e-05"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "458934"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic/Likely pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.4303e-18"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1400e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "liver:100|cortex_of_kidney:98|subcutaneous_adipose_tissue:96|omental_fat_pad:94|mammary_gland:92|uterus:91|adrenal_gland:89|thyroid_gland:87|minor_salivary_gland:85|skin:83|fallopian_tube:81|ileum:79|endocervix:77|urinary_bladder:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cellular response to tumor necrosis factor|positive regulation of nitric oxide biosynthetic process|cellular response to glucagon stimulus|cellular response to amine stimulus|response to mycotoxin|amino acid biosynthetic process|cellular response to laminar fluid shear stress|urea cycle|response to toxic substance|response to amine|response to peptide hormone|response to glucocorticoid|response to lipopolysaccharide|circadian rhythm|L-arginine biosynthetic process|cellular response to oleic acid"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal hair follicle morphology|alopecia|sparse hair|delayed hair appearance|tremors|abnormal cerebellum external granule cell layer morphology|abnormal cerebellar granule layer morphology|wrinkled skin|epidermal hyperplasia|hyperkeratosis|decreased body length|decreased body size|circling|abnormal gait|postnatal lethality|premature death|no abnormal phenotype detected|decreased brain weight|oxidative stress|abnormal hair follicle development|abnormal hair shaft morphology|increased circulatin"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

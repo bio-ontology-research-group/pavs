@@ -1,0 +1,266 @@
+{
+  "id": "PAVS:D0001671",
+  "subject": {
+    "id": "PAVS:D0001671",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000275",
+        "label": "Narrow face"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000276",
+        "label": "Long face"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000400",
+        "label": "Macrotia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000426",
+        "label": "Prominent nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000448",
+        "label": "Prominent nose"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000482",
+        "label": "Microcornea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000501",
+        "label": "Glaucoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000519",
+        "label": "Developmental cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000568",
+        "label": "Microphthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000572",
+        "label": "Visual loss"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000699",
+        "label": "Diastema"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000717",
+        "label": "Autism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001423",
+        "label": "X-linked dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001500",
+        "label": "Broad finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002342",
+        "label": "Intellectual disability, moderate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006332",
+        "label": "Supernumerary maxillary incisor"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006346",
+        "label": "Screwdriver-shaped incisors"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008031",
+        "label": "Posterior Y-sutural cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009803",
+        "label": "Short phalanx of finger"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010545",
+        "label": "Nance-Horan syndrome"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001671",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010545",
+          "label": "Nance-Horan syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001671",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001671_NHS",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "NHS",
+                  "valueId": "NCBIGene:4810"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "expressed_in",
+                    "value": "aorta:100|endocervix:98|tibial_nerve:98|ectocervix:94|tibial_artery:92|uterus:91|coronary_artery:89|sigmoid_colon:89|urinary_bladder:89|vagina:89|ovary:81|prostate_gland:81|fallopian_tube:77|mammary_gland:77|subcutaneous_adipose_tissue:77|thyroid_gland:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cell differentiation|lens development in camera-type eye"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal lens morphology|cataract|decreased exploration in new environment|increased startle reflex|abnormal lens fiber morphology|abnormal lens capsule morphology|ruptured lens capsule|total cataract|shortened QRS complex duration|lens vacuoles"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

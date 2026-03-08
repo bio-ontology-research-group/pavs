@@ -1,0 +1,241 @@
+{
+  "id": "PAVS:B0000043",
+  "subject": {
+    "id": "PAVS:B0000043",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012828",
+          "label": "Severe"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0032794",
+        "label": "Myoclonic seizure"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012828",
+          "label": "Severe"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012828",
+          "label": "Severe"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-pmid28454995",
+        "description": "Source dataset: ahmed-pmid28454995"
+      },
+      {
+        "id": "PMID:28454995",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0033613",
+        "label": "neurodevelopmental disorder with progressive spasticity and brain white matter abnormalities"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:B0000043",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0033613",
+          "label": "neurodevelopmental disorder with progressive spasticity and brain white matter abnormalities"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:B0000043",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:B0000043_GAD1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GAD1",
+                  "valueId": "NCBIGene:2571"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000358196.8:c.1402T>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.170854011T>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000350928.3:p.Trp468Gly"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 170854011,
+                  "ref": "T",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:788743"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(1)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00282"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "788743"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Likely pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.8136e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.6900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "frontal_cortex:100|anterior_cingulate_cortex:98|hypothalamus:96|nucleus_accumbens:94|cerebellum:92|cerebral_cortex:91|caudate_nucleus:89|cerebellar_hemisphere:87|putamen:85|amygdala:83|hippocampus:81|pituitary_gland:79|tibial_artery:77|aorta:75|substantia_nigra:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "gamma-aminobutyric acid biosynthetic process|gamma-aminobutyrate shunt|L-glutamate catabolic process|chemical synaptic transmission|carboxylic acid metabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "cleft palate|atelectasis|distended abdomen|dehydration|abnormal suckling behavior|cyanosis|respiratory distress|no abnormal phenotype detected|abnormal nervous system electrophysiology|abnormal excitatory postsynaptic potential|abnormal involuntary movement|abnormal brain interneuron morphology|abnormal brain wave pattern|hypoxia|meteorism|absent gastric milk in neonates|failure of palatal shelf elevation|palatal shelves fail to meet at midline|cleft secondary palate|umbilical hernia|neonatal le"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

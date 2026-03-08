@@ -1,0 +1,150 @@
+{
+  "id": "PAVS:M0001080",
+  "subject": {
+    "id": "PAVS:M0001080",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0011451",
+        "label": "Primary microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001080",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001080",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001080_BLM",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "BLM",
+                  "valueId": "NCBIGene:641"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "8.7183e-22"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.4700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|cerebellum:100|testis:96|cerebellar_hemisphere:96|cervical_vertebra:92|amygdala:92|hypothalamus:92|ileum:92|pituitary_gland:92|skin:92|substantia_nigra:92|atrium_auricular_region:92|blood:92|cerebral_cortex:75|esophagus_mucosa:75|frontal_cortex:75|heart_left_ventricle:75|hippocampus:75|lung:75|anterior_cingulate_cortex:75|nucleus_accumbens:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "t-circle formation|resolution of DNA recombination intermediates|telomere maintenance|protein homooligomerization|DNA replication|cellular response to ionizing radiation|DNA geometric change|double-strand break repair via homologous recombination|protein complex oligomerization|positive regulation of DNA-templated transcription|cellular response to camptothecin|telomeric D-loop disassembly|mitotic G2 DNA damage checkpoint signaling|response to X-ray|negative regulation of DNA recombination|cellu"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal erythropoiesis|macrocytosis|abnormal cell morphology|anemia|abnormal blood volume|abnormal apoptosis|decreased embryo size|postnatal growth retardation|decreased IgM level|increased tumor incidence|increased incidence of induced tumors|prenatal lethality|no abnormal phenotype detected|abnormal proerythroblast morphology|abnormal reticulocyte morphology|abnormal erythrocyte morphology|anisopoikilocytosis|pallor|embryonic growth retardation|chromosome breakage|embryonic lethality, complet"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

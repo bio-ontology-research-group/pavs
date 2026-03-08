@@ -1,0 +1,278 @@
+{
+  "id": "PAVS:D0000775",
+  "subject": {
+    "id": "PAVS:D0000775",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000938",
+        "label": "Osteopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000978",
+        "label": "Bruising susceptibility"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001020",
+        "label": "Premature graying of hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002216",
+        "label": "Osteosarcoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002669",
+        "label": "Pathologic fracture"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002756",
+        "label": "Bowing of the legs"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002979",
+        "label": "Recurrent long bone fractures"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003084",
+        "label": "Myopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003198",
+        "label": "Skeletal muscle atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003202",
+        "label": "Progressive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003676",
+        "label": "Limb muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003690",
+        "label": "Proximal muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003701",
+        "label": "Osteomyelitis leading to amputation due to slow healing fractures"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005010",
+        "label": "Diaphyseal cortical sclerosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005045",
+        "label": "Patchy osteosclerosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005686",
+        "label": "Presenile cataracts"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007819",
+        "label": "Fibrosarcoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100244",
+        "label": "Stenosis of the medullary cavity of the long bones"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100254",
+        "label": "HP:0100254"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007205",
+        "label": "diaphyseal medullary stenosis-bone malignancy syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000775",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007205",
+          "label": "diaphyseal medullary stenosis-bone malignancy syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000775",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000775_MTAP",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MTAP",
+                  "valueId": "NCBIGene:4507"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0889e-11"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.4890e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|tibial_nerve:98|ectocervix:96|ovary:96|uterus:96|endocervix:91|urinary_bladder:91|vagina:91|fallopian_tube:85|tibial_artery:85|coronary_artery:81|esophagus_mucosa:81|mammary_gland:81|prostate_gland:81|sigmoid_colon:81|aorta:81|subcutaneous_adipose_tissue:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "L-methionine salvage from methylthioadenosine|purine ribonucleoside salvage|nucleoside metabolic process|nucleobase-containing compound metabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal liver morphology|small liver|abnormal spleen morphology|enlarged spleen|enlarged lymph nodes|abnormal thymus morphology|enlarged thymus|cataract|abnormal visceral yolk sac morphology|abnormal allantois morphology|abnormal skin morphology|abnormal bronchus morphology|abnormal lymph node morphology|abnormal vitreous body morphology|abnormal chorioallantoic fusion|abnormal vitelline vasculature morphology|embryonic growth retardation|arteritis|embryonic lethality between somite formation a"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

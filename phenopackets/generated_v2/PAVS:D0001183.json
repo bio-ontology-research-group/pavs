@@ -1,0 +1,173 @@
+{
+  "id": "PAVS:D0001183",
+  "subject": {
+    "id": "PAVS:D0001183",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000518",
+        "label": "Cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000568",
+        "label": "Microphthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000616",
+        "label": "Miosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008927",
+        "label": "colobomatous optic disc-macular atrophy-chorioretinopathy syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001183",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008927",
+          "label": "colobomatous optic disc-macular atrophy-chorioretinopathy syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001183",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001183_SIX6",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SIX6",
+                  "valueId": "NCBIGene:4990"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.3883e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.2100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "pituitary_gland:100|hypothalamus:98|testis:96|prostate_gland:94|skeletal_muscle_tissue:94|minor_salivary_gland:91|adrenal_gland:89|cerebral_cortex:89|cervical_vertebra:89|coronary_artery:89|cortex_of_kidney:89|ectocervix:89|endocervix:89|esophagogastric_junction:89|esophagus_mucosa:89|fallopian_tube:89|frontal_cortex:89|amygdala:89|heart_left_ventricle:89|hippocampus:89|ileum:89|liver:89|lower_leg_skin:89|lung:89|mammary_gland:89|muscle_layer_of_esophagus:89|anterior_cingulate_cortex:89|nucleus_accumbens:89|omental_fat_pad:89|ovary:89|pancreas:89|putamen:89|renal_medulla:89|sigmoid_colon:89|aorta:89|skin:89|spleen:89|stomach:89|subcutaneous_adipose_tissue:89|substantia_nigra:89|suprapubic_skin:89|thyroid_gland:89|tibial_artery:89|tibial_nerve:89|atrium_auricular_region:89|transverse_colon:89|urinary_bladder:89|uterus:89|vagina:89|blood:89|caudate_nucleus:89|cerebellar_hemisphere:89|cerebellum:89"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "eye development|visual perception|regulation of transcription by RNA polymerase II|animal organ morphogenesis"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal ovary morphology|small ovary|abnormal retina morphology|absent optic nerve|reduced male fertility|reduced female fertility|pituitary gland hypoplasia|decreased corpora lutea number|decreased circulating follicle stimulating hormone level|retina hypoplasia|decreased ovary weight|decreased seminal vesicle weight|abnormal retina ganglion layer morphology|abnormal axon morphology|abnormal protein level|anovulation|decreased neuron number|prolonged estrous cycle|short proestrus|prolonged est"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "id": "PAVS:D0001425",
+  "subject": {
+    "id": "PAVS:D0001425",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000407",
+        "label": "Sensorineural hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000580",
+        "label": "Pigmentary retinopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000602",
+        "label": "Ophthalmoplegia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000648",
+        "label": "Optic atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000712",
+        "label": "Emotional lability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000998",
+        "label": "Hypertrichosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001251",
+        "label": "Ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001257",
+        "label": "Spasticity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001260",
+        "label": "Dysarthria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001332",
+        "label": "Dystonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001347",
+        "label": "Hyperreflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001404",
+        "label": "Hepatocellular necrosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001425",
+        "label": "obsolete Heterogeneous"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001427",
+        "label": "Mitochondrial inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002093",
+        "label": "Respiratory insufficiency"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002151",
+        "label": "Increased circulating lactate concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002171",
+        "label": "Gliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002171",
+        "label": "Gliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002490",
+        "label": "Increased CSF lactate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002793",
+        "label": "Abnormal pattern of respiration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003128",
+        "label": "Lactic acidosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003593",
+        "label": "Infantile onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003676",
+        "label": "Progressive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003812",
+        "label": "Phenotypic variability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007305",
+        "label": "CNS demyelination"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009723",
+        "label": "Leigh syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001425",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009723",
+          "label": "Leigh syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001425",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001425_TACO1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TACO1",
+                  "valueId": "NCBIGene:51204"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.6187e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.4800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|liver:98|adrenal_gland:96|ileum:96|ovary:96|skeletal_muscle_tissue:96|testis:96|uterus:96|coronary_artery:85|cortex_of_kidney:85|endocervix:85|esophagogastric_junction:85|fallopian_tube:85|muscle_layer_of_esophagus:85|pituitary_gland:85|prostate_gland:85|renal_medulla:85|sigmoid_colon:85|spleen:85|stomach:85|subcutaneous_adipose_tissue:85|thyroid_gland:85|tibial_nerve:85|transverse_colon:85"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of translation|positive regulation of mitochondrial translation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal coat/ hair morphology|ruffled hair|Purkinje cell degeneration|optic nerve atrophy|impaired coordination|abnormal gait|cardiac hypertrophy|abnormal skin morphology|abnormal vision|decreased circulating triglyceride level|increased heart weight|thick ventricular wall|premature aging|iris synechia|decreased circulating creatinine level|thin retina inner nuclear layer|thin retina outer plexiform layer|increased grip strength|thick interventricular septum|abnormal respiratory electron transp"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

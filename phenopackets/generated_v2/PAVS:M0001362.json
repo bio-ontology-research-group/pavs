@@ -1,0 +1,200 @@
+{
+  "id": "PAVS:M0001362",
+  "subject": {
+    "id": "PAVS:M0001362",
+    "sex": "MALE",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001324",
+        "label": "Muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0025406",
+        "label": "Asthenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001362",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001362",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001362_RYR1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "RYR1",
+                  "valueId": "NCBIGene:6261"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000359596.8:c.14209C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.38577954C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000352608.2:p.Arg4737Trp"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 38577954,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:136808"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "unknown(0)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "2.052e-06"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "136808"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Likely pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.2930e-56"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.4400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skeletal_muscle_tissue:100|cerebellum:98|cerebellar_hemisphere:96|hypothalamus:94|testis:92|cerebral_cortex:91|frontal_cortex:89|anterior_cingulate_cortex:89|amygdala:85|nucleus_accumbens:85|tibial_nerve:85|cervical_vertebra:79|caudate_nucleus:79|hippocampus:75|substantia_nigra:75|suprapubic_skin:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "monoatomic ion transport|calcium-mediated signaling|outflow tract morphogenesis|calcium ion transport|transmembrane transport|intracellular calcium ion homeostasis|cellular response to calcium ion|monoatomic ion transmembrane transport|response to caffeine|response to hypoxia|release of sequestered calcium ion into cytosol|release of sequestered calcium ion into cytosol by sarcoplasmic reticulum|calcium ion transmembrane transport|ossification involved in bone maturation|muscle contraction|regul"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased brown adipose tissue amount|delayed bone ossification|abnormal rib morphology|kyphosis|underdeveloped hair follicles|domed cranium|abnormal muscle development|impaired muscle contractility|muscle weakness|myopathy|paralysis|hindlimb paralysis|abnormal skeletal muscle morphology|abnormal skin condition|tight skin|translucent skin|abnormal dermal layer morphology|decreased body length|increased body weight|decreased body weight|abnormal locomotor behavior|decreased locomotor activity|no "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

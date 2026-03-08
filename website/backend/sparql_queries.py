@@ -122,21 +122,30 @@ def search_by_gene(gene: str, limit: int = 100) -> str:
     g_lower = gene.lower().replace('"', '\\"')
     return f"""
 {PREFIXES}
-SELECT DISTINCT ?case ?id ?disease ?source ?isSaudi ?hgvsC ?hgvsG ?acmg ?saudiAF WHERE {{
-  GRAPH ?g {{
-    ?case a pavs:Case ;
-          dc:identifier ?id ;
-          pavs:source ?source ;
-          pavs:isSaudi ?isSaudi ;
-          pavs:hasVariant ?v .
-    ?v pavs:affectsGene ?geneUri .
-    FILTER(CONTAINS(LCASE(STRAFTER(STR(?geneUri), "hgnc.symbol/")), "{g_lower}"))
-    OPTIONAL {{ ?case pavs:diseaseLabel ?disease }}
-    OPTIONAL {{ ?v pavs:hgvsC ?hgvsC }}
-    OPTIONAL {{ ?v pavs:hgvsG ?hgvsG }}
-    OPTIONAL {{ ?v pavs:acmgClass ?acmg }}
-    OPTIONAL {{ ?v pavs:saudiAF ?saudiAF }}
-  }}
+SELECT DISTINCT ?case ?id ?disease ?source ?isSaudi ?gene ?hgvsC ?hgvsG ?acmg ?saudiAF ?rsId ?consequence ?sift ?polyphen ?gnomadAF ?vepImpact ?caddPhred ?revelScore ?clinvarSig WHERE {{
+  ?case a pavs:Case ;
+        dc:identifier ?id ;
+        pavs:source ?source ;
+        pavs:isSaudi ?isSaudi ;
+        pavs:hasVariant ?v .
+  ?v pavs:affectsGene ?geneUri .
+  FILTER(CONTAINS(LCASE(STRAFTER(STR(?geneUri), "hgnc.symbol/")), "{g_lower}"))
+  BIND(STRAFTER(STR(?geneUri), "hgnc.symbol/") AS ?gene)
+  OPTIONAL {{ ?case pavs:diseaseLabel ?disease }}
+  OPTIONAL {{ ?v pavs:hgvsC ?hgvsC }}
+  OPTIONAL {{ ?v pavs:hgvsG ?hgvsG }}
+  OPTIONAL {{ ?v pavs:acmgClass ?acmg }}
+  OPTIONAL {{ ?v pavs:saudiAF ?saudiAF }}
+  OPTIONAL {{ ?v pavs:rsId ?rsIdUri .
+             BIND(STRAFTER(STR(?rsIdUri), "dbsnp/") AS ?rsId) }}
+  OPTIONAL {{ ?v pavs:vepConsequence ?consequence }}
+  OPTIONAL {{ ?v pavs:vepImpact ?vepImpact }}
+  OPTIONAL {{ ?v pavs:sift ?sift }}
+  OPTIONAL {{ ?v pavs:polyphen ?polyphen }}
+  OPTIONAL {{ ?v pavs:gnomadAF ?gnomadAF }}
+  OPTIONAL {{ ?v pavs:caddPhred ?caddPhred }}
+  OPTIONAL {{ ?v pavs:revelScore ?revelScore }}
+  OPTIONAL {{ ?v pavs:clinvarSig ?clinvarSig }}
 }} LIMIT {limit}
 """
 
@@ -147,22 +156,28 @@ def search_by_rsid(rsid: str, limit: int = 100) -> str:
     rs_num = rs_clean.replace("rs", "").strip()
     return f"""
 {PREFIXES}
-SELECT DISTINCT ?case ?id ?disease ?source ?isSaudi ?hgvsC ?hgvsG ?acmg ?saudiAF ?gene WHERE {{
-  GRAPH ?g {{
-    ?case a pavs:Case ;
-          dc:identifier ?id ;
-          pavs:source ?source ;
-          pavs:isSaudi ?isSaudi ;
-          pavs:hasVariant ?v .
-    ?v pavs:rsId dbsnp:rs{rs_num} .
-    OPTIONAL {{ ?case pavs:diseaseLabel ?disease }}
-    OPTIONAL {{ ?v pavs:hgvsC ?hgvsC }}
-    OPTIONAL {{ ?v pavs:hgvsG ?hgvsG }}
-    OPTIONAL {{ ?v pavs:acmgClass ?acmg }}
-    OPTIONAL {{ ?v pavs:saudiAF ?saudiAF }}
-    OPTIONAL {{ ?v pavs:affectsGene ?gUri .
-               BIND(STRAFTER(STR(?gUri), "hgnc.symbol/") AS ?gene) }}
-  }}
+SELECT DISTINCT ?case ?id ?disease ?source ?isSaudi ?hgvsC ?hgvsG ?acmg ?saudiAF ?gene ?consequence ?sift ?polyphen ?gnomadAF ?vepImpact ?caddPhred ?revelScore ?clinvarSig WHERE {{
+  ?case a pavs:Case ;
+        dc:identifier ?id ;
+        pavs:source ?source ;
+        pavs:isSaudi ?isSaudi ;
+        pavs:hasVariant ?v .
+  ?v pavs:rsId dbsnp:rs{rs_num} .
+  OPTIONAL {{ ?case pavs:diseaseLabel ?disease }}
+  OPTIONAL {{ ?v pavs:hgvsC ?hgvsC }}
+  OPTIONAL {{ ?v pavs:hgvsG ?hgvsG }}
+  OPTIONAL {{ ?v pavs:acmgClass ?acmg }}
+  OPTIONAL {{ ?v pavs:saudiAF ?saudiAF }}
+  OPTIONAL {{ ?v pavs:affectsGene ?gUri .
+             BIND(STRAFTER(STR(?gUri), "hgnc.symbol/") AS ?gene) }}
+  OPTIONAL {{ ?v pavs:vepConsequence ?consequence }}
+  OPTIONAL {{ ?v pavs:vepImpact ?vepImpact }}
+  OPTIONAL {{ ?v pavs:sift ?sift }}
+  OPTIONAL {{ ?v pavs:polyphen ?polyphen }}
+  OPTIONAL {{ ?v pavs:gnomadAF ?gnomadAF }}
+  OPTIONAL {{ ?v pavs:caddPhred ?caddPhred }}
+  OPTIONAL {{ ?v pavs:revelScore ?revelScore }}
+  OPTIONAL {{ ?v pavs:clinvarSig ?clinvarSig }}
 }} LIMIT {limit}
 """
 
@@ -171,23 +186,29 @@ def search_by_hgvs(hgvs: str, limit: int = 100) -> str:
     h = hgvs.strip().replace('"', '\\"')
     return f"""
 {PREFIXES}
-SELECT DISTINCT ?case ?id ?disease ?source ?isSaudi ?hgvsC ?hgvsG ?acmg ?saudiAF ?gene WHERE {{
-  GRAPH ?g {{
-    ?case a pavs:Case ;
-          dc:identifier ?id ;
-          pavs:source ?source ;
-          pavs:isSaudi ?isSaudi ;
-          pavs:hasVariant ?v .
-    {{ ?v pavs:hgvsC ?hgvsC . FILTER(CONTAINS(?hgvsC, "{h}")) }}
-    UNION
-    {{ ?v pavs:hgvsG ?hgvsG . FILTER(CONTAINS(?hgvsG, "{h}")) }}
-    OPTIONAL {{ ?case pavs:diseaseLabel ?disease }}
-    OPTIONAL {{ ?v pavs:hgvsG ?hgvsG }}
-    OPTIONAL {{ ?v pavs:acmgClass ?acmg }}
-    OPTIONAL {{ ?v pavs:saudiAF ?saudiAF }}
-    OPTIONAL {{ ?v pavs:affectsGene ?gUri .
-               BIND(STRAFTER(STR(?gUri), "hgnc.symbol/") AS ?gene) }}
-  }}
+SELECT DISTINCT ?case ?id ?disease ?source ?isSaudi ?hgvsC ?hgvsG ?acmg ?saudiAF ?gene ?consequence ?sift ?polyphen ?gnomadAF ?vepImpact ?caddPhred ?revelScore ?clinvarSig WHERE {{
+  ?case a pavs:Case ;
+        dc:identifier ?id ;
+        pavs:source ?source ;
+        pavs:isSaudi ?isSaudi ;
+        pavs:hasVariant ?v .
+  {{ ?v pavs:hgvsC ?hgvsC . FILTER(CONTAINS(?hgvsC, "{h}")) }}
+  UNION
+  {{ ?v pavs:hgvsG ?hgvsG . FILTER(CONTAINS(?hgvsG, "{h}")) }}
+  OPTIONAL {{ ?case pavs:diseaseLabel ?disease }}
+  OPTIONAL {{ ?v pavs:hgvsG ?hgvsG }}
+  OPTIONAL {{ ?v pavs:acmgClass ?acmg }}
+  OPTIONAL {{ ?v pavs:saudiAF ?saudiAF }}
+  OPTIONAL {{ ?v pavs:affectsGene ?gUri .
+             BIND(STRAFTER(STR(?gUri), "hgnc.symbol/") AS ?gene) }}
+  OPTIONAL {{ ?v pavs:vepConsequence ?consequence }}
+  OPTIONAL {{ ?v pavs:vepImpact ?vepImpact }}
+  OPTIONAL {{ ?v pavs:sift ?sift }}
+  OPTIONAL {{ ?v pavs:polyphen ?polyphen }}
+  OPTIONAL {{ ?v pavs:gnomadAF ?gnomadAF }}
+  OPTIONAL {{ ?v pavs:caddPhred ?caddPhred }}
+  OPTIONAL {{ ?v pavs:revelScore ?revelScore }}
+  OPTIONAL {{ ?v pavs:clinvarSig ?clinvarSig }}
 }} LIMIT {limit}
 """
 
@@ -196,20 +217,29 @@ def search_by_acmg(acmg_class: str, limit: int = 200) -> str:
     a = acmg_class.strip().replace('"', '\\"')
     return f"""
 {PREFIXES}
-SELECT DISTINCT ?case ?id ?disease ?source ?isSaudi ?hgvsC ?gene WHERE {{
-  GRAPH ?g {{
-    ?case a pavs:Case ;
-          dc:identifier ?id ;
-          pavs:source ?source ;
-          pavs:isSaudi ?isSaudi ;
-          pavs:hasVariant ?v .
-    ?v pavs:acmgClass ?acmg .
-    FILTER(CONTAINS(LCASE(?acmg), LCASE("{a}")))
-    OPTIONAL {{ ?case pavs:diseaseLabel ?disease }}
-    OPTIONAL {{ ?v pavs:hgvsC ?hgvsC }}
-    OPTIONAL {{ ?v pavs:affectsGene ?gUri .
-               BIND(STRAFTER(STR(?gUri), "hgnc.symbol/") AS ?gene) }}
-  }}
+SELECT DISTINCT ?case ?id ?disease ?source ?isSaudi ?hgvsC ?acmg ?saudiAF ?gene ?rsId ?consequence ?sift ?polyphen ?gnomadAF ?vepImpact ?caddPhred ?revelScore ?clinvarSig WHERE {{
+  ?case a pavs:Case ;
+        dc:identifier ?id ;
+        pavs:source ?source ;
+        pavs:isSaudi ?isSaudi ;
+        pavs:hasVariant ?v .
+  ?v pavs:acmgClass ?acmg .
+  FILTER(CONTAINS(LCASE(?acmg), LCASE("{a}")))
+  OPTIONAL {{ ?case pavs:diseaseLabel ?disease }}
+  OPTIONAL {{ ?v pavs:hgvsC ?hgvsC }}
+  OPTIONAL {{ ?v pavs:saudiAF ?saudiAF }}
+  OPTIONAL {{ ?v pavs:affectsGene ?gUri .
+             BIND(STRAFTER(STR(?gUri), "hgnc.symbol/") AS ?gene) }}
+  OPTIONAL {{ ?v pavs:rsId ?rsIdUri .
+             BIND(STRAFTER(STR(?rsIdUri), "dbsnp/") AS ?rsId) }}
+  OPTIONAL {{ ?v pavs:vepConsequence ?consequence }}
+  OPTIONAL {{ ?v pavs:vepImpact ?vepImpact }}
+  OPTIONAL {{ ?v pavs:sift ?sift }}
+  OPTIONAL {{ ?v pavs:polyphen ?polyphen }}
+  OPTIONAL {{ ?v pavs:gnomadAF ?gnomadAF }}
+  OPTIONAL {{ ?v pavs:caddPhred ?caddPhred }}
+  OPTIONAL {{ ?v pavs:revelScore ?revelScore }}
+  OPTIONAL {{ ?v pavs:clinvarSig ?clinvarSig }}
 }} LIMIT {limit}
 """
 
@@ -272,31 +302,40 @@ def get_case_variants(case_id: str) -> str:
     safe_id = case_id.replace('"', '\\"')
     return f"""
 {PREFIXES}
-SELECT ?v ?gene ?hgvsC ?hgvsG ?hgvsP ?rsId ?zygosity ?acmg ?consequence
-       ?sift ?polyphen ?gnomadAF ?saudiAF ?clinvarId ?clinvarSig
+SELECT ?v ?gene ?hgvsC ?hgvsG ?hgvsP ?rsId ?zygosity ?acmg ?consequence ?vepImpact
+       ?sift ?polyphen ?gnomadAF ?gnomadAF_MID ?gnomadAF_SAS ?caddPhred ?revelScore ?alphaMissense ?spliceAI
+       ?saudiAF ?saudiAC ?clinvarId ?clinvarSig ?clinvarReview ?clingenAssertion
        ?vcfChrom ?vcfPos WHERE {{
-  GRAPH ?g {{
-    ?case dc:identifier "{safe_id}" ;
-          pavs:hasVariant ?v .
-    OPTIONAL {{ ?v pavs:affectsGene ?gUri .
-               BIND(STRAFTER(STR(?gUri), "hgnc.symbol/") AS ?gene) }}
-    OPTIONAL {{ ?v pavs:hgvsC ?hgvsC }}
-    OPTIONAL {{ ?v pavs:hgvsG ?hgvsG }}
-    OPTIONAL {{ ?v pavs:hgvsP ?hgvsP }}
-    OPTIONAL {{ ?v pavs:rsId ?rsIdUri .
-               BIND(STRAFTER(STR(?rsIdUri), "dbsnp/") AS ?rsId) }}
-    OPTIONAL {{ ?v pavs:zygosity ?zygosity }}
-    OPTIONAL {{ ?v pavs:acmgClass ?acmg }}
-    OPTIONAL {{ ?v pavs:vepConsequence ?consequence }}
-    OPTIONAL {{ ?v pavs:sift ?sift }}
-    OPTIONAL {{ ?v pavs:polyphen ?polyphen }}
-    OPTIONAL {{ ?v pavs:gnomadAF ?gnomadAF }}
-    OPTIONAL {{ ?v pavs:saudiAF ?saudiAF }}
-    OPTIONAL {{ ?v pavs:clinvarId ?clinvarId }}
-    OPTIONAL {{ ?v pavs:clinvarSig ?clinvarSig }}
-    OPTIONAL {{ ?v pavs:vcfChrom ?vcfChrom }}
-    OPTIONAL {{ ?v pavs:vcfPos ?vcfPos }}
-  }}
+  ?case dc:identifier "{safe_id}" ;
+        pavs:hasVariant ?v .
+  OPTIONAL {{ ?v pavs:affectsGene ?gUri .
+             BIND(STRAFTER(STR(?gUri), "hgnc.symbol/") AS ?gene) }}
+  OPTIONAL {{ ?v pavs:hgvsC ?hgvsC }}
+  OPTIONAL {{ ?v pavs:hgvsG ?hgvsG }}
+  OPTIONAL {{ ?v pavs:hgvsP ?hgvsP }}
+  OPTIONAL {{ ?v pavs:rsId ?rsIdUri .
+             BIND(STRAFTER(STR(?rsIdUri), "dbsnp/") AS ?rsId) }}
+  OPTIONAL {{ ?v pavs:zygosity ?zygosity }}
+  OPTIONAL {{ ?v pavs:acmgClass ?acmg }}
+  OPTIONAL {{ ?v pavs:vepConsequence ?consequence }}
+  OPTIONAL {{ ?v pavs:vepImpact ?vepImpact }}
+  OPTIONAL {{ ?v pavs:sift ?sift }}
+  OPTIONAL {{ ?v pavs:polyphen ?polyphen }}
+  OPTIONAL {{ ?v pavs:gnomadAF ?gnomadAF }}
+  OPTIONAL {{ ?v pavs:gnomadAF_MID ?gnomadAF_MID }}
+  OPTIONAL {{ ?v pavs:gnomadAF_SAS ?gnomadAF_SAS }}
+  OPTIONAL {{ ?v pavs:caddPhred ?caddPhred }}
+  OPTIONAL {{ ?v pavs:revelScore ?revelScore }}
+  OPTIONAL {{ ?v pavs:alphaMissense ?alphaMissense }}
+  OPTIONAL {{ ?v pavs:spliceAI ?spliceAI }}
+  OPTIONAL {{ ?v pavs:saudiAF ?saudiAF }}
+  OPTIONAL {{ ?v pavs:saudiAC ?saudiAC }}
+  OPTIONAL {{ ?v pavs:clinvarId ?clinvarId }}
+  OPTIONAL {{ ?v pavs:clinvarSig ?clinvarSig }}
+  OPTIONAL {{ ?v pavs:clinvarReview ?clinvarReview }}
+  OPTIONAL {{ ?v pavs:clingenAssertion ?clingenAssertion }}
+  OPTIONAL {{ ?v pavs:vcfChrom ?vcfChrom }}
+  OPTIONAL {{ ?v pavs:vcfPos ?vcfPos }}
 }}
 """
 
@@ -344,6 +383,55 @@ SELECT ?disease WHERE {{
 """
 
 
+def list_all_genes(limit: int = 5000) -> str:
+    """List all genes from the Saudi cases graph with case counts."""
+    return f"""
+{PREFIXES}
+SELECT ?gene (COUNT(DISTINCT ?case) AS ?saudiCount) WHERE {{
+  GRAPH <{GRAPH_CASES}> {{
+    ?case a pavs:Case ;
+          pavs:hasVariant ?v .
+    ?v pavs:affectsGene ?geneUri .
+    BIND(STRAFTER(STR(?geneUri), "hgnc.symbol/") AS ?gene)
+  }}
+  FILTER(?gene != "")
+}}
+GROUP BY ?gene
+ORDER BY ?gene
+LIMIT {limit}
+"""
+
+
+def get_gene_cases(gene_symbol: str, graphs: str) -> str:
+    """Return cases with variants in a specific gene from the given graphs."""
+    safe = gene_symbol.replace('"', '\\"').replace("'", "\\'")
+    return f"""
+{PREFIXES}
+SELECT DISTINCT ?case ?id ?disease ?source ?isSaudi ?hgvsC ?acmg ?saudiAF ?rsId ?clinvarId ?clinvarSig ?vcfChrom ?vcfPos WHERE {{
+  GRAPH ?g {{
+    ?case a pavs:Case ;
+          dc:identifier ?id ;
+          pavs:source ?source ;
+          pavs:isSaudi ?isSaudi ;
+          pavs:hasVariant ?v .
+    ?v pavs:affectsGene hgnc:{safe} .
+  }}
+  VALUES ?g {{ {graphs} }}
+  OPTIONAL {{ ?case pavs:diseaseLabel ?disease }}
+  OPTIONAL {{ ?v pavs:hgvsC ?hgvsC }}
+  OPTIONAL {{ ?v pavs:acmgClass ?acmg }}
+  OPTIONAL {{ ?v pavs:saudiAF ?saudiAF }}
+  OPTIONAL {{ ?v pavs:rsId ?rsIdUri .
+             BIND(STRAFTER(STR(?rsIdUri), "dbsnp/") AS ?rsId) }}
+  OPTIONAL {{ ?v pavs:clinvarId ?clinvarId }}
+  OPTIONAL {{ ?v pavs:clinvarSig ?clinvarSig }}
+  OPTIONAL {{ ?v pavs:vcfChrom ?vcfChrom }}
+  OPTIONAL {{ ?v pavs:vcfPos ?vcfPos }}
+}}
+ORDER BY ?id
+"""
+
+
 def hpoa_for_disease(disease_uri: str) -> str:
     return f"""
 {PREFIXES}
@@ -353,5 +441,28 @@ SELECT ?hpo WHERE {{
            pavs:hpoTerm ?hpoTerm .
     BIND(REPLACE(STR(?hpoTerm), ".*HP_", "HP:") AS ?hpo)
   }}
+}}
+"""
+
+
+def get_gene_diseases_hpo(gene_symbol: str) -> str:
+    """Return diseases and their HPO terms (with labels) for a gene."""
+    safe = gene_symbol.replace('"', '\\"').replace("'", "\\'")
+    return f"""
+{PREFIXES}
+SELECT ?diseaseUri ?hpo ?hpoLabel WHERE {{
+  GRAPH <{GRAPH_GENES}> {{
+    hgnc:{safe} pavs:relatedDisease ?diseaseUri .
+  }}
+  GRAPH <{GRAPH_HPOA}> {{
+    ?assoc pavs:disease ?diseaseUri ;
+           pavs:hpoTerm ?hpoTerm .
+  }}
+  OPTIONAL {{
+    GRAPH <{GRAPH_HPO_IC}> {{
+      ?hpoTerm rdfs:label ?hpoLabel .
+    }}
+  }}
+  BIND(REPLACE(STR(?hpoTerm), ".*HP_", "HP:") AS ?hpo)
 }}
 """

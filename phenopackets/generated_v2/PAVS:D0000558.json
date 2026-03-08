@@ -1,0 +1,222 @@
+{
+  "id": "PAVS:D0000558",
+  "subject": {
+    "id": "PAVS:D0000558",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000201",
+        "label": "Pierre-Robin sequence"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000272",
+        "label": "Malar flattening"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000407",
+        "label": "Sensorineural hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000463",
+        "label": "Anteverted nares"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000478",
+        "label": "Abnormality of the eye"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000926",
+        "label": "Platyspondyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002656",
+        "label": "Epiphyseal dysplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002829",
+        "label": "Arthralgia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003088",
+        "label": "Premature osteoarthritis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010580",
+        "label": "Enlarged epiphyses"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008490",
+        "label": "otospondylomegaepiphyseal dysplasia, autosomal dominant"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000558",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008490",
+          "label": "otospondylomegaepiphyseal dysplasia, autosomal dominant"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000558",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000558_COL11A2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "COL11A2",
+                  "valueId": "NCBIGene:1302"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.2512e-04"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.0300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "pituitary_gland:100|cerebellum:98|cerebellar_hemisphere:96|testis:94|cervical_vertebra:92|thyroid_gland:91|cerebral_cortex:89|tibial_nerve:87|frontal_cortex:85|hippocampus:85|hypothalamus:85|substantia_nigra:85|caudate_nucleus:85|nucleus_accumbens:75|putamen:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "roof of mouth development|soft palate development|skeletal system morphogenesis|sensory perception of sound|collagen fibril organization|skeletal system development|cartilage development"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal nasal bone morphology|abnormal chondrocyte morphology|abnormal cranium morphology|short snout|decreased body size|increased startle reflex|postnatal growth retardation|decreased mean corpuscular volume|decreased circulating triglyceride level|abnormal tectorial membrane morphology|decreased cardiac output|enlarged tectorial membrane|sensorineural hearing loss|nonsyndromic hearing loss|increased circulating bilirubin level|impaired hearing|disorganized long bone epiphyseal plate|abnormal"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

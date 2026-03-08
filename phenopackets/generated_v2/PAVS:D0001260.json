@@ -1,0 +1,173 @@
+{
+  "id": "PAVS:D0001260",
+  "subject": {
+    "id": "PAVS:D0001260",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000510",
+        "label": "Rod-cone dystrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Motor delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001751",
+        "label": "Abnormal vestibular function"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003577",
+        "label": "Congenital onset"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013935",
+        "label": "Usher syndrome type 1J"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001260",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013935",
+          "label": "Usher syndrome type 1J"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001260",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001260_CIB2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CIB2",
+                  "valueId": "NCBIGene:10518"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.5892e-06"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.2740e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|atrium_auricular_region:98|endocervix:96|ectocervix:94|uterus:92|pituitary_gland:91|prostate_gland:89|muscle_layer_of_esophagus:87|anterior_cingulate_cortex:87|sigmoid_colon:87|adrenal_gland:81|urinary_bladder:81|ileum:77|vagina:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cellular response to ATP|calcium ion homeostasis|photoreceptor cell maintenance|positive regulation of cytosolic calcium ion concentration"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "tremors|abnormal startle reflex|decreased startle reflex|limb grasping|impaired balance|increased circulating triglyceride level|increased circulating HDL cholesterol level|abnormal hearing physiology|deafness|abnormal ear morphology|increased basophil cell number|abnormal cochlear hair cell morphology|cochlear hair cell degeneration|absent cochlear microphonics|abnormal hair cell mechanoelectric transduction|abnormal cochlear outer hair cell physiology|abnormal vestibular hair cell stereociliar"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

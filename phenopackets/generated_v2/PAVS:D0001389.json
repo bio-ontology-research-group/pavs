@@ -1,0 +1,222 @@
+{
+  "id": "PAVS:D0001389",
+  "subject": {
+    "id": "PAVS:D0001389",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000158",
+        "label": "Macroglossia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000684",
+        "label": "Delayed eruption of teeth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000851",
+        "label": "Congenital hypothyroidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000958",
+        "label": "Dry skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001374",
+        "label": "Congenital hip dislocation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001510",
+        "label": "Growth delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001539",
+        "label": "Omphalocele"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002019",
+        "label": "Constipation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002329",
+        "label": "Drowsiness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002750",
+        "label": "Delayed skeletal maturation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004482",
+        "label": "Relative macrocephaly"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013757",
+        "label": "congenital nongoitrous hypothyroidism 6"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001389",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013757",
+          "label": "congenital nongoitrous hypothyroidism 6"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001389",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001389_THRA",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "THRA",
+                  "valueId": "NCBIGene:7067"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9892e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.3900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "nucleus_accumbens:100|cerebellar_hemisphere:98|cerebellum:96|anterior_cingulate_cortex:94|caudate_nucleus:92|frontal_cortex:91|amygdala:89|cerebral_cortex:87|tibial_artery:85|ectocervix:83|hypothalamus:81|ovary:81|putamen:77|endocervix:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of DNA-templated transcription|thyroid hormone receptor signaling pathway|transcription by RNA polymerase II|mRNA transcription by RNA polymerase II|negative regulation of transcription by RNA polymerase II|retinoic acid receptor signaling pathway|negative regulation of RNA polymerase II transcription preinitiation complex assembly|positive regulation of cold-induced thermogenesis|cell differentiation|positive regulation of transcription by RNA polymerase II|regulation of tra"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased bone mineral density|decreased bone mineral density|abnormal trabecular bone morphology|abnormal long bone metaphysis morphology|decreased compact bone thickness|delayed hair appearance|abnormal enterocyte morphology|abnormal small intestine morphology|abnormal intestinal mucosa morphology|short limbs|short tail|abnormal hippocampus morphology|abnormal cerebellum external granule cell layer morphology|decreased body length|increased body weight|obese|decreased body weight|increased anx"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "id": "PAVS:P0001849",
+  "subject": {
+    "id": "PAVS:P0001849",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P38M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0025406",
+        "label": "Asthenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0012444",
+        "label": "Brain atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002194",
+        "label": "Delayed gross motor development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001324",
+        "label": "Muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001849",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001849",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001849_ERCC2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ERCC2",
+                  "valueId": "NCBIGene:2068"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000391945.10:c.1892G>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.45352756G>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000375809.4:p.Arg631Leu"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 45352756,
+                  "ref": "G",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.311)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF13307"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "2.736e-06"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.8729e-28"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0890e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|testis:98|pituitary_gland:96|thyroid_gland:94|cerebellum:92|adrenal_gland:91|lower_leg_skin:91|prostate_gland:91|spleen:91|uterus:91|cerebellar_hemisphere:91|ectocervix:79|endocervix:79|fallopian_tube:79|ovary:79|suprapubic_skin:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of mitotic cell cycle phase transition|transcription by RNA polymerase II|DNA-templated transcription|nucleotide-excision repair|apoptotic process|response to oxidative stress|nucleobase-containing compound metabolic process|chromosome segregation|hair cell differentiation|positive regulation of mitotic recombination|regulation of transcription by RNA polymerase II|transcription initiation at RNA polymerase II promoter|DNA damage response|transcription-coupled nucleotide-excision repa"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased bone mineral density|osteoporosis|kyphosis|decreased hematocrit|abnormal coat/ hair morphology|abnormal hair follicle morphology|enlarged hair follicles|alopecia|sparse hair|abnormal sebaceous gland morphology|enlarged sebaceous gland|enlarged spleen|tremors|abnormal testis morphology|reddish skin|scaly skin|thick skin|skin photosensitivity|abnormal epidermis stratum granulosum morphology|hyperkeratosis|decreased body size|microphthalmia|abnormal lens morphology|small lens|cornea opaci"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

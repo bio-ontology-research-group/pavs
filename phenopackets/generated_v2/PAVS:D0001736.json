@@ -1,0 +1,147 @@
+{
+  "id": "PAVS:D0001736",
+  "subject": {
+    "id": "PAVS:D0001736",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000668",
+        "label": "Hypodontia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000677",
+        "label": "Oligodontia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001423",
+        "label": "X-linked dominant inheritance"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010741",
+        "label": "tooth agenesis, selective, X-linked, 1"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001736",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010741",
+          "label": "tooth agenesis, selective, X-linked, 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001736",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001736_EDA",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "EDA",
+                  "valueId": "NCBIGene:1896"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "expressed_in",
+                    "value": "adrenal_gland:100|endocervix:98|fallopian_tube:98|ovary:98|thyroid_gland:98|tibial_nerve:98|ectocervix:89|esophagogastric_junction:89|muscle_layer_of_esophagus:89|tibial_artery:89|atrium_auricular_region:89|uterus:89|coronary_artery:77|lower_leg_skin:77|lung:77|mammary_gland:77|omental_fat_pad:77|prostate_gland:77|aorta:77|subcutaneous_adipose_tissue:77|suprapubic_skin:77|vagina:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "odontogenesis|cell surface receptor signaling pathway|regulation of non-canonical NF-kappaB signal transduction|cytokine-mediated signaling pathway|cell differentiation|immune response|odontogenesis of dentin-containing tooth|positive regulation of canonical NF-kappaB signal transduction"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal tooth development|abnormal tooth eruption|absent incisors|abnormal sternum morphology|enlarged heart|abnormal coat/ hair morphology|irregular coat pigmentation|decreased hair follicle number|increased curvature of hairs|abnormal guard hair morphology|sparse hair|short hair|focal hair loss|abnormal autopod morphology|absent eccrine glands|kinked tail|abnormal eccrine sweat gland morphology|thin skin|thin epidermis|decreased body weight|absent vibrissae|eyelids open at birth|abnormal corn"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

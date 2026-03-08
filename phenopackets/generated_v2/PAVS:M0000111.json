@@ -1,0 +1,186 @@
+{
+  "id": "PAVS:M0000111",
+  "subject": {
+    "id": "PAVS:M0000111",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000510",
+        "label": "Retinitis pigmentosa"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:19956407",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/19956407/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000111",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000111",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000111_CRB1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CRB1",
+                  "valueId": "NCBIGene:23418"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000367400.8:c.3231T>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000001.11:g.197435094T>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000356370.3:p.Asn1077Lys"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr1",
+                  "pos": 197435094,
+                  "ref": "T",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "tolerated(0.24)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.204)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF02210"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.3619e-17"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.7600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellar_hemisphere:100|cerebellum:100|cerebral_cortex:96|frontal_cortex:96|anterior_cingulate_cortex:96|caudate_nucleus:96|amygdala:89|hippocampus:89|nucleus_accumbens:89|putamen:89|testis:89|cervical_vertebra:79|hypothalamus:79|substantia_nigra:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "retina morphogenesis in camera-type eye|establishment or maintenance of epithelial cell apical/basal polarity|heterophilic cell-cell adhesion|signaling|cell communication|establishment or maintenance of cell polarity|cell-cell signaling"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal retina photoreceptor morphology|abnormal retina morphology|retina degeneration|decreased retina photoreceptor cell number|photosensitivity|abnormal retina vasculature morphology|abnormal ocular fundus morphology|abnormal retina photoreceptor layer morphology|abnormal photoreceptor inner segment morphology|abnormal retina outer nuclear layer morphology|abnormal retina inner nuclear layer morphology|abnormal retina pigmentation|abnormal retina pigment epithelium morphology|abnormal Muller"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "id": "PAVS:P0001713",
+  "subject": {
+    "id": "PAVS:P0001713",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P31Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "familyHistory",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0032316",
+            "label": "Positive family history"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001713",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001713",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001713_OTC",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "OTC",
+                  "valueId": "NCBIGene:5009"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000039007.5:c.231G>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000023.11:g.38369810G>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000039007.4:p.Leu77Phe"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chrX",
+                  "pos": 38369810,
+                  "ref": "G",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000134",
+                  "label": "hemizygous"
+                },
+                "xrefs": [
+                  "ClinVar:103030"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0.01)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.928)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF02729"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "103030"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "liver:100|ileum:98|fallopian_tube:96|transverse_colon:96|endocervix:92|pancreas:92|testis:92|uterus:87|lung:85|cervical_vertebra:83|coronary_artery:83|ectocervix:79|omental_fat_pad:79|tibial_nerve:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "midgut development|ammonium homeostasis|L-arginine biosynthetic process|liver development|L-ornithine catabolic process|monoatomic anion homeostasis|amino acid metabolic process|L-arginine biosynthetic process via ornithine|response to biotin|ornithine metabolic process|response to zinc ion|amino acid biosynthetic process|response to nutrient levels|urea cycle|citrulline biosynthetic process|response to xenobiotic stimulus|response to insulin"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "alopecia|sparse hair|focal hair loss|delayed hair appearance|abnormal head movements|abnormal liver morphology|enlarged liver|enlarged thymus|tremors|decreased brain size|abnormal cholinergic neuron morphology|abnormal testis morphology|wrinkled skin|weight loss|decreased body size|circling|hyperactivity|decreased locomotor activity|abnormal eating behavior|decreased grooming behavior|abnormal spatial learning|abnormal coat appearance|increased circulating triglyceride level|abnormal homeostasis"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

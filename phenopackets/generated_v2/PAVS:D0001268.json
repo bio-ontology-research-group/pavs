@@ -1,0 +1,593 @@
+{
+  "id": "PAVS:D0001268",
+  "subject": {
+    "id": "PAVS:D0001268",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000023",
+        "label": "Inguinal hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000047",
+        "label": "Hypospadias"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000054",
+        "label": "Micropenis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000143",
+        "label": "Rectovaginal fistula"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Open mouth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000194",
+        "label": "Cleft upper lip"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000204",
+        "label": "Triangular mouth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000207",
+        "label": "Macrocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000213",
+        "label": "Wide anterior fontanel"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000256",
+        "label": "Prominent occiput"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000260",
+        "label": "Epicanthus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000269",
+        "label": "Microretrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000286",
+        "label": "Hypertelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000308",
+        "label": "Smooth philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Short philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000319",
+        "label": "Broad forehead"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000322",
+        "label": "Long philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000337",
+        "label": "Posteriorly rotated ears"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000343",
+        "label": "Hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000358",
+        "label": "Abnormal pinna morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Preauricular skin tag"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000377",
+        "label": "Wide nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000384",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000431",
+        "label": "Downslanted palpebral fissures"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Coloboma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000494",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000589",
+        "label": "Optic atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Hypoplasia of teeth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000648",
+        "label": "Postaxial hand polydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000685",
+        "label": "Preaxial hand polydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001162",
+        "label": "Tapered finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001177",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001182",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Generalized hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "obsolete Heterogeneous"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001290",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001425",
+        "label": "Growth delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Umbilical hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001510",
+        "label": "Abnormal cardiac septum morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001537",
+        "label": "Toe syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001671",
+        "label": "Postaxial foot polydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001770",
+        "label": "Preaxial foot polydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001830",
+        "label": "Frontal bossing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001841",
+        "label": "Anal atresia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002007",
+        "label": "obsolete Malformation of the heart and great vessels"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002023",
+        "label": "Short nose"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002564",
+        "label": "Phenotypic variability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003196",
+        "label": "Clinodactyly of the 5th finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003812",
+        "label": "Pulmonary valve defects"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004209",
+        "label": "Finger syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005148",
+        "label": "Aplasia/Hypoplasia of the corpus callosum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006101",
+        "label": "Hypopigmentation of the fundus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007370",
+        "label": "Postnatal growth retardation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007894",
+        "label": "Bifid distal phalanx of the thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008897",
+        "label": "Duplication of thumb phalanx"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009611",
+        "label": "Duplication of phalanx of hallux"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009942",
+        "label": "Intracranial cystic lesion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010066",
+        "label": "Intellectual disability, severe"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010576",
+        "label": "Prominent forehead"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010864",
+        "label": "HP:0010864"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011220",
+        "label": "HP:0011220"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008708",
+        "label": "acrocallosal syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001268",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008708",
+          "label": "acrocallosal syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001268",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001268_KIF7",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "KIF7",
+                  "valueId": "NCBIGene:374654"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.0938e-31"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0380e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ectocervix:100|aorta:98|endocervix:96|ovary:96|uterus:92|fallopian_tube:91|skin:91|esophagogastric_junction:87|muscle_layer_of_esophagus:87|urinary_bladder:83|prostate_gland:81|subcutaneous_adipose_tissue:81|coronary_artery:77|thyroid_gland:77|tibial_nerve:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of smoothened signaling pathway|negative regulation of smoothened signaling pathway|microtubule-based movement"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "cleft palate|rib bifurcation|rib fusion|abnormal sternum morphology|abnormal xiphoid process morphology|overriding aortic valve|double outlet right ventricle|polydactyly|syndactyly|exencephaly|abnormal spinal cord morphology|pulmonary hypoplasia|anophthalmia|microphthalmia|edema|hydrocephaly|abnormal neural tube morphology|diaphragmatic hernia|abnormal reproductive system development|interrupted aortic arch|cleft upper lip|abnormal skeleton morphology|abnormal limb bud morphology|abnormal heart "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

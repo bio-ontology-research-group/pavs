@@ -1,0 +1,137 @@
+{
+  "id": "PAVS:D0000697",
+  "subject": {
+    "id": "PAVS:D0000697",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0018770",
+        "label": "Jeune syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000697",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0018770",
+          "label": "Jeune syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000697",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000697_DYNC2I1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "DYNC2I1",
+                  "valueId": "NCBIGene:55112"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.2708e-17"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.0200e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|endocervix:98|fallopian_tube:96|thyroid_gland:96|tibial_nerve:96|uterus:91|ovary:89|pituitary_gland:89|sigmoid_colon:89|ectocervix:83|muscle_layer_of_esophagus:83|cerebellum:83|esophagogastric_junction:77|tibial_artery:77|cerebellar_hemisphere:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "embryonic skeletal system morphogenesis|cilium assembly|intraciliary transport|cell projection organization|intraciliary retrograde transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal heart morphology|abnormal stomach morphology|polydactyly|abnormal telencephalon morphology|abnormal embryo size|edema|curly tail|embryonic growth retardation|small mandible|holoprosencephaly|abnormal maxillary prominence morphology|embryonic lethality during organogenesis, complete penetrance|preweaning lethality, complete penetrance|enlarged urinary bladder|decreased midbrain size|cardiac edema|abnormal cilium morphology|embryonic lethality prior to tooth bud stage|prenatal lethality p"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

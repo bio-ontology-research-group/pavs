@@ -1,0 +1,327 @@
+{
+  "id": "PAVS:M0000990",
+  "subject": {
+    "id": "PAVS:M0000990",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P4Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0004463",
+        "label": "Absent brainstem auditory responses"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012829",
+          "label": "Profound"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0008551",
+        "label": "Microtia"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012829",
+          "label": "Profound"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0030890",
+        "label": "Hyperintensity of cerebral white matter on MRI"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012829",
+          "label": "Profound"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0000687",
+        "label": "Widely spaced teeth"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012829",
+          "label": "Profound"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0012448",
+        "label": "Delayed myelination"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012829",
+          "label": "Profound"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0000369",
+        "label": "Low-set ears"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012829",
+          "label": "Profound"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0005274",
+        "label": "Prominent nasal tip"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012829",
+          "label": "Profound"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0000691",
+        "label": "Microdontia"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012829",
+          "label": "Profound"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0040080",
+        "label": "Anteverted ears"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012829",
+          "label": "Profound"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Hearing impairment"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012829",
+          "label": "Profound"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:18701883",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/18701883/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000990",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000990",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000990_FGF3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "FGF3",
+                  "valueId": "NCBIGene:2248"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000334134.4:c.196G>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000011.10:g.69818738G>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000334122.2:p.Gly66Cys"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr11",
+                  "pos": 69818738,
+                  "ref": "G",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0.01)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.999)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00167"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "7.452e-07"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.5771e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.8150e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellar_hemisphere:100|cerebellum:100|cervical_vertebra:96|testis:96|adrenal_gland:92|cerebral_cortex:92|coronary_artery:92|cortex_of_kidney:92|ectocervix:92|endocervix:92|esophagogastric_junction:92|esophagus_mucosa:92|fallopian_tube:92|frontal_cortex:92|amygdala:92|heart_left_ventricle:92|hippocampus:92|hypothalamus:92|ileum:92|liver:92|lower_leg_skin:92|lung:92|mammary_gland:92|minor_salivary_gland:92|muscle_layer_of_esophagus:92|anterior_cingulate_cortex:92|nucleus_accumbens:92|omental_fat_pad:92|ovary:92|pancreas:92|pituitary_gland:92|prostate_gland:92|putamen:92|renal_medulla:92|sigmoid_colon:92|skeletal_muscle_tissue:92|aorta:92|skin:92|spleen:92|stomach:92|subcutaneous_adipose_tissue:92|substantia_nigra:92|suprapubic_skin:92|thyroid_gland:92|tibial_artery:92|tibial_nerve:92|atrium_auricular_region:92|transverse_colon:92|urinary_bladder:92|uterus:92|vagina:92|blood:92|caudate_nucleus:92"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of multicellular organismal process|regulation of developmental process|fibroblast growth factor receptor signaling pathway|positive regulation of MAPK cascade|positive regulation of cell division|negative regulation of cardiac muscle tissue development|neurogenesis|cell differentiation|positive regulation of cell population proliferation|regulation of cell migration|signal transduction|cell-cell signaling|anatomical structure morphogenesis"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal inner ear morphology|abnormal cochlea morphology|abnormal inner ear vestibule morphology|abnormal membranous labyrinth morphology|absent endolymphatic duct|kinked tail|thick tail|short tail|enlarged lymph nodes|abnormal cranial ganglia morphology|decreased body weight|circling|hyperactivity|no spontaneous movement|decreased startle reflex|unresponsive to tactile stimuli|impaired righting response|decreased caudal vertebrae number|abnormal embryo development|abnormal somite development|a"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

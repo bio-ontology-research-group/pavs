@@ -1,0 +1,229 @@
+{
+  "id": "PAVS:D0000606",
+  "subject": {
+    "id": "PAVS:D0000606",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000737",
+        "label": "Irritability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000752",
+        "label": "Hyperactivity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001987",
+        "label": "Hyperammonemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002013",
+        "label": "Vomiting"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002039",
+        "label": "Anorexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002478",
+        "label": "Progressive spastic quadriplegia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003218",
+        "label": "Oroticaciduria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008339",
+        "label": "Diaminoaciduria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008897",
+        "label": "Postnatal growth retardation"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008814",
+        "label": "arginase deficiency"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000606",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008814",
+          "label": "arginase deficiency"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000606",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000606_ARG1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ARG1",
+                  "valueId": "NCBIGene:383"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.3675e-04"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.3300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "liver:100|blood:98|lower_leg_skin:96|suprapubic_skin:94|spleen:92|lung:91|fallopian_tube:89|omental_fat_pad:87|subcutaneous_adipose_tissue:87|ileum:83|mammary_gland:83|ovary:83|thyroid_gland:83|uterus:83|vagina:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "adaptive immune response|regulation of cell population proliferation|negative regulation of T-helper 2 cell cytokine production|immune system process|arginine metabolic process|positive regulation of neutrophil mediated killing of fungus|negative regulation of type II interferon-mediated signaling pathway|L-arginine catabolic process|urea cycle|negative regulation of activated T cell proliferation|negative regulation of T cell proliferation|defense response to protozoan|innate immune response"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal liver morphology|enlarged liver|pale liver|abnormal hepatocyte morphology|abnormal homeostasis|postnatal lethality|abnormal hepatobiliary system morphology|no abnormal phenotype detected|abnormal macrophage physiology|increased circulating ammonia level|abnormal circulating amino acid level|abnormal blood homeostasis|increased macrophage nitric oxide production|postnatal lethality, complete penetrance|increased circulating histidine level|increased circulating citrulline level|decreased"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

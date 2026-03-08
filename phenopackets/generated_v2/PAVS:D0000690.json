@@ -1,0 +1,264 @@
+{
+  "id": "PAVS:D0000690",
+  "subject": {
+    "id": "PAVS:D0000690",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000256",
+        "label": "Macrocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000278",
+        "label": "Retrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000306",
+        "label": "Abnormality of the chin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Hypertelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000343",
+        "label": "Long philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000400",
+        "label": "Macrotia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000494",
+        "label": "Downslanted palpebral fissures"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000973",
+        "label": "Cutis laxa"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001256",
+        "label": "Intellectual disability, mild"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001537",
+        "label": "Umbilical hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001548",
+        "label": "Overgrowth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001814",
+        "label": "Deep-set nails"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005469",
+        "label": "Flat occiput"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007481",
+        "label": "Hyperpigmented nevi"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011298",
+        "label": "Prominent digit pad"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011304",
+        "label": "Broad thumb"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010193",
+        "label": "Weaver syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000690",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010193",
+          "label": "Weaver syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000690",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000690_EZH2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "EZH2",
+                  "valueId": "NCBIGene:2146"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.7200e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|lower_leg_skin:98|suprapubic_skin:98|esophagus_mucosa:94|skin:92|spleen:92|vagina:92|ileum:87|lung:85|ovary:85|transverse_colon:85|cerebellar_hemisphere:85|cerebellum:85|ectocervix:75|endocervix:75|tibial_nerve:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of GTPase activity|heterochromatin formation|regulation of circadian rhythm|subtelomeric heterochromatin formation|negative regulation of gene expression|regulation of DNA-templated transcription|regulation of kidney development|negative regulation of cytokine production involved in inflammatory response|facultative heterochromatin formation|chromatin organization|regulatory ncRNA-mediated heterochromatin formation|positive regulation of MAP kinase activity|negative regulatio"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased body weight|increased circulating triglyceride level|failure to gastrulate|decreased embryo size|embryonic growth arrest|abnormal embryonic tissue morphology|abnormal extraembryonic tissue morphology|no abnormal phenotype detected|increased heart weight|increased growth rate|increased kidney weight|embryonic growth retardation|increased spleen weight|abnormal osteoblast physiology|increased mean corpuscular hemoglobin|increased sacral vertebrae number|primary atelectasis|perinatal leth"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

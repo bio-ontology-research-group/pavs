@@ -1,0 +1,137 @@
+{
+  "id": "PAVS:D0000584",
+  "subject": {
+    "id": "PAVS:D0000584",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0000508",
+        "label": "syndromic intellectual disability"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000584",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0000508",
+          "label": "syndromic intellectual disability"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000584",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000584_PHIP",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PHIP",
+                  "valueId": "NCBIGene:55023"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.4600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ectocervix:100|endocervix:98|uterus:98|fallopian_tube:94|tibial_nerve:94|cerebellar_hemisphere:94|cerebellum:94|ovary:87|pituitary_gland:85|tibial_artery:83|lung:81|mammary_gland:81|vagina:81|aorta:75|urinary_bladder:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of protein phosphorylation|regulation of signal transduction|negative regulation of apoptotic process|negative regulation of extrinsic apoptotic signaling pathway|positive regulation of insulin-like growth factor receptor signaling pathway|regulation of cell shape|positive regulation of transcription by RNA polymerase II|chromatin organization|positive regulation of cell population proliferation|insulin receptor signaling pathway|regulation of cell morphogenesis|replication fork proce"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "hypoglycemia|increased leukocyte cell number|abnormal cranium morphology|abnormal hepatocyte morphology|decreased body length|decreased body size|hyperactivity|abnormal embryo size|hydrocephaly|premature death|small uterus|increased insulin sensitivity|decreased circulating chloride level|decreased myocardial fiber size|increased circulating aspartate transaminase level|abnormal cell physiology|abnormal lung epithelium morphology|decreased total body fat amount|postnatal lethality, incomplete pe"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

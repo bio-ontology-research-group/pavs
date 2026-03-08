@@ -170,13 +170,42 @@ def generate_cases_ttl(phenopackets_json: str, output_path: str):
             fh.write(f"  pavs:source {ttl_str(source)} ;\n")
             fh.write(f"  pavs:isSaudi {is_saudi_str} ;\n")
 
-            # Ancestry for Saudi cases
-            if is_saudi:
-                fh.write(f"  pavs:ancestry hancestro:0852 ;\n")
-                fh.write(f"  pavs:geographicOrigin gaz:00005279 ;\n")
+            # PMID from external references
+            for ext in meta.get("externalReferences", []):
+                eid = ext.get("id", "")
+                if eid.startswith("PMID:"):
+                    fh.write(f"  pavs:pmid {ttl_str(eid.replace('PMID:', ''))} ;\n")
+
+            # Age from subject
+            subject = pp.get("subject", {})
+            age = subject.get("timeAtLastEncounter", {}).get("age", {}).get("iso8601duration", "")
+            if age:
+                fh.write(f"  pavs:age {ttl_str(age)} ;\n")
+
+            # Ancestry and Origin from Phenopacket features/extensions
+            for feat in pp.get("phenotypicFeatures", []):
+                fid = feat.get("type", {}).get("id", "")
+                if fid.startswith("HANCESTRO:"):
+                    fh.write(f"  pavs:ancestry hancestro:{fid.replace('HANCESTRO:', '')} ;\n")
+
+            for ext in subject.get("extensions", []):
+                name = ext.get("name")
+                val = ext.get("value", {})
+                if name == "geographicOrigin":
+                    if val.get("id", "").startswith("GAZ:"):
+                        fh.write(f"  pavs:geographicOrigin gaz:{val['id'].replace('GAZ:', '')} ;\n")
+                elif name == "consanguinity":
+                    cid = val.get("ontologyClass", {}).get("id", "")
+                    clabel = val.get("ontologyClass", {}).get("label", "")
+                    if cid:
+                        fh.write(f"  pavs:consanguinity {ttl_str(clabel or cid)} ;\n")
+                elif name == "familyHistory":
+                    fid = val.get("ontologyClass", {}).get("id", "")
+                    flabel = val.get("ontologyClass", {}).get("label", "")
+                    if fid:
+                        fh.write(f"  pavs:familyHistory {ttl_str(flabel or fid)} ;\n")
 
             # Subject sex
-            subject = pp.get("subject", {})
             sex = subject.get("sex", "UNKNOWN_SEX")
             sex_map = {
                 "MALE": "http://purl.obolibrary.org/obo/NCIT_C20197",
@@ -201,7 +230,10 @@ def generate_cases_ttl(phenopackets_json: str, output_path: str):
                 if did.startswith("OMIM:"):
                     fh.write(f"  pavs:hasDisease {omim_uri(did)} ;\n")
                 elif did.startswith("MONDO:"):
-                    fh.write(f"  pavs:hasDisease {mondo_uri(did)} ;\n")
+                    for m_id in did.split("|"):
+                        m_id = m_id.strip()
+                        if m_id.startswith("MONDO:"):
+                            fh.write(f"  pavs:hasDisease {mondo_uri(m_id)} ;\n")
                 if dlabel:
                     fh.write(f"  pavs:diseaseLabel {ttl_str(dlabel)} ;\n")
 
@@ -232,8 +264,11 @@ def generate_cases_ttl(phenopackets_json: str, output_path: str):
                     vu = var_uri(pid, gene_sym)
 
                     fh.write(f"\n{vu}\n")
-                    fh.write(f"  a pavs:Variant ;\n")
-                    fh.write(f"  pavs:affectsGene hgnc:{gene_sym} ;\n")
+                    fh.write(f"  a pavs:GenomicVariant ;\n")
+                    for g_sym in gene_sym.split("|"):
+                        g_sym = g_sym.strip()
+                        if g_sym:
+                            fh.write(f"  pavs:affectsGene hgnc:{g_sym} ;\n")
                     if acmg:
                         fh.write(f"  pavs:acmgClass {ttl_str(acmg)} ;\n")
 
@@ -254,7 +289,7 @@ def generate_cases_ttl(phenopackets_json: str, output_path: str):
                         fh.write(f"  pavs:vcfRef {ttl_str(vcf.get('ref', ''))} ;\n")
                         fh.write(f"  pavs:vcfAlt {ttl_str(vcf.get('alt', ''))} ;\n")
 
-                    fh.write(f"  rdfs:label {ttl_str(gene_sym)} .\n")
+                    fh.write(f"  rdfs:label {ttl_str(gene_sym.split('|')[0])} .\n")
 
     print(f"Wrote cases.ttl → {output_path}")
 
@@ -279,8 +314,12 @@ def generate_genes_ttl(annotated_tsv: str, output_path: str):
                 continue
             genes_seen.add(gene)
 
+            # Skip multi-gene rows (pipe-separated) for GeneRecord — no canonical single gene
+            if "|" in gene:
+                continue
+
             fh.write(f"\nhgnc:{gene}\n")
-            fh.write(f"  a pavs:Gene ;\n")
+            fh.write(f"  a pavs:GeneRecord ;\n")
             fh.write(f"  rdfs:label {ttl_str(gene)} ;\n")
 
             entrez = row.get("gene_entrez_id", "")
@@ -299,6 +338,18 @@ def generate_genes_ttl(annotated_tsv: str, output_path: str):
             if safe(go_bp):
                 fh.write(f"  pavs:goProcess {ttl_str(go_bp)} ;\n")
 
+            go_mf = row.get("go_molecular_function", "")
+            if safe(go_mf):
+                fh.write(f"  pavs:goMolecularFunction {ttl_str(go_mf)} ;\n")
+
+            go_cc = row.get("go_cellular_component", "")
+            if safe(go_cc):
+                fh.write(f"  pavs:goCellularComponent {ttl_str(go_cc)} ;\n")
+
+            mouse_mp = row.get("mouse_mp_labels", "")
+            if safe(mouse_mp):
+                fh.write(f"  pavs:mousePhenotypes {ttl_str(mouse_mp)} ;\n")
+
             expressed = row.get("expressed_in", "")
             if safe(expressed):
                 fh.write(f"  pavs:expressedIn {ttl_str(expressed[:500])} ;\n")
@@ -313,39 +364,118 @@ def generate_genes_ttl(annotated_tsv: str, output_path: str):
             fh.write(f"  rdfs:seeAlso {ttl_uri(f'http://identifiers.org/hgnc.symbol/{gene}')} .\n")
 
         # Also write variant-level data linking back to cases
-        fh.write("\n# Variant annotations from combined_annotated.tsv\n")
+        fh.write("\n# Variant and Case metadata from combined_annotated.tsv\n")
+        cases_seen_meta: set = set()
+
         for _, row in df.iterrows():
             pavs_id = row.get("pavs_id", "")
+            if not safe(pavs_id):
+                continue
+            
+            cu = case_uri(pavs_id)
+            
+            # Export case-level metadata once per case
+            if pavs_id not in cases_seen_meta:
+                cases_seen_meta.add(pavs_id)
+                
+                # Basic demographics from TSV
+                sex_id = row.get("sex_id", "")
+                if safe(sex_id):
+                    fh.write(f"{cu} pavs:sex <http://purl.obolibrary.org/obo/{sex_id.replace(':', '_')}> .\n")
+                
+                age = row.get("age_iso", "")
+                if safe(age):
+                    fh.write(f"{cu} pavs:age {ttl_str(age)} .\n")
+                
+                consang = row.get("consanguinity_label", "")
+                if safe(consang):
+                    fh.write(f"{cu} pavs:consanguinity {ttl_str(consang)} .\n")
+                
+                fam_hist = row.get("family_history_label", "")
+                if safe(fam_hist):
+                    fh.write(f"{cu} pavs:familyHistory {ttl_str(fam_hist)} .\n")
+                
+                status = row.get("result_status", "")
+                if safe(status):
+                    fh.write(f"{cu} pavs:progressStatus {ttl_str(status.upper())} .\n")
+                
+                pmid = row.get("pmid", "")
+                if safe(pmid):
+                    fh.write(f"{cu} pavs:pmid {ttl_str(str(pmid).strip())} .\n")
+
+                # Disease IDs from TSV
+                mondo = row.get("disease_mondo_id", "")
+                if safe(mondo):
+                    for m_id in str(mondo).split("|"):
+                        if safe(m_id): fh.write(f"{cu} pavs:hasDisease {mondo_uri(m_id)} .\n")
+                
+                omims = row.get("disease_omim_ids", "")
+                if safe(omims):
+                    for o_id in str(omims).split("|"):
+                        if safe(o_id): fh.write(f"{cu} pavs:hasDisease {omim_uri(o_id)} .\n")
+                
+                orphas = row.get("disease_orphanet_ids", "")
+                if safe(orphas):
+                    for or_id in str(orphas).split("|"):
+                        if safe(or_id): fh.write(f"{cu} pavs:hasDisease <http://www.orpha.net/ORDO/{or_id.replace(':', '_')}> .\n")
+
+                dlabel = row.get("disease_mondo_label", "") or row.get("disease_omim_labels", "")
+                if safe(dlabel):
+                    fh.write(f"{cu} pavs:diseaseLabel {ttl_str(dlabel)} .\n")
+
             gene = row.get("gene_symbol", "")
-            if not safe(pavs_id) or not safe(gene):
+            if not safe(gene):
                 continue
 
-            cu = case_uri(pavs_id)
             vu = var_uri(pavs_id, gene)
 
             rs_id = row.get("vep_rsid", "")
-            hgvsc = row.get("vep_hgvsc", row.get("variant_cdna", ""))
-            hgvsp = row.get("vep_hgvsp", row.get("variant_protein", ""))
-            hgvsg = row.get("vep_hgvsg", row.get("variant_genomic_grch38", ""))
+            
+            # Use VEP columns if available and safe, otherwise fallback to original columns
+            hgvsc = row.get("vep_hgvsc")
+            if not safe(hgvsc):
+                hgvsc = row.get("variant_cdna", "")
+                
+            hgvsp = row.get("vep_hgvsp")
+            if not safe(hgvsp):
+                hgvsp = row.get("variant_protein", "")
+                
+            hgvsg = row.get("vep_hgvsg")
+            if not safe(hgvsg):
+                hgvsg = row.get("variant_genomic_grch38", "")
+                
             zyg_id = row.get("zygosity_id", "")
             zyg_label = row.get("zygosity_label", "")
             acmg = row.get("acmg_classification", "")
             consequence = row.get("vep_consequence", "")
+            impact = row.get("vep_impact", "")
             sift = row.get("vep_sift", "")
             polyphen = row.get("vep_polyphen", "")
             gnomad_af = row.get("vep_af_gnomad", "")
+            gnomad_mid = row.get("vep_af_gnomad_mid", "")
+            gnomad_sas = row.get("vep_af_gnomad_sas", "")
+            cadd = row.get("vep_cadd_phred", "")
+            revel = row.get("vep_revel", "")
+            am = row.get("vep_alphamissense", "")
+            spliceai = row.get("vep_spliceai_max", "")
             af_saudi = row.get("af_saudi", "")
             ac_saudi = row.get("ac_saudi", "")
             clinvar_id = row.get("clinvar_allele_id", "")
             clinvar_sig = row.get("clinvar_sig", "")
+            clinvar_rev = row.get("clinvar_review_status", "")
+            clingen_assertion = row.get("clingen_assertion", "")
             source = row.get("source_file", "")
             pmid = row.get("pmid", "")
 
             is_saudi = source in SAUDI_SOURCES
 
+            fh.write(f"\n{cu} pavs:hasVariant {vu} .\n")
             fh.write(f"\n{vu}\n")
-            fh.write(f"  a pavs:Variant ;\n")
-            fh.write(f"  pavs:affectsGene hgnc:{gene} ;\n")
+            fh.write(f"  a pavs:GenomicVariant ;\n")
+            for g_sym in gene.split("|"):
+                g_sym = g_sym.strip()
+                if g_sym:
+                    fh.write(f"  pavs:affectsGene hgnc:{g_sym} ;\n")
             fh.write(f"  pavs:isSaudi {str(is_saudi).lower()} ;\n")
 
             if safe(hgvsc):
@@ -360,17 +490,31 @@ def generate_genes_ttl(annotated_tsv: str, output_path: str):
                     fh.write(f"  pavs:rsId dbsnp:rs{rs_num} ;\n")
                     fh.write(f"  rdfs:seeAlso dbsnp:rs{rs_num} ;\n")
             if safe(zyg_id):
-                fh.write(f"  pavs:zygosity {geno_uri(zyg_id)} ;\n")
+                fh.write(f"  pavs:zygosity {geno_uri(str(zyg_id).split('|')[0].strip())} ;\n")
             if safe(acmg):
                 fh.write(f"  pavs:acmgClass {ttl_str(acmg)} ;\n")
             if safe(consequence):
                 fh.write(f"  pavs:vepConsequence {ttl_str(consequence)} ;\n")
+            if safe(impact):
+                fh.write(f"  pavs:vepImpact {ttl_str(impact)} ;\n")
             if safe(sift):
                 fh.write(f"  pavs:sift {ttl_str(sift)} ;\n")
             if safe(polyphen):
                 fh.write(f"  pavs:polyphen {ttl_str(polyphen)} ;\n")
             if safe(gnomad_af):
                 fh.write(f"  pavs:gnomadAF {gnomad_af} ;\n")
+            if safe(gnomad_mid):
+                fh.write(f"  pavs:gnomadAF_MID {gnomad_mid} ;\n")
+            if safe(gnomad_sas):
+                fh.write(f"  pavs:gnomadAF_SAS {gnomad_sas} ;\n")
+            if safe(cadd):
+                fh.write(f"  pavs:caddPhred {cadd} ;\n")
+            if safe(revel):
+                fh.write(f"  pavs:revelScore {revel} ;\n")
+            if safe(am):
+                fh.write(f"  pavs:alphaMissense {ttl_str(am)} ;\n")
+            if safe(spliceai):
+                fh.write(f"  pavs:spliceAI {spliceai} ;\n")
             if safe(af_saudi):
                 fh.write(f"  pavs:saudiAF {af_saudi} ;\n")
             if safe(ac_saudi):
@@ -380,10 +524,14 @@ def generate_genes_ttl(annotated_tsv: str, output_path: str):
                 fh.write(f"  rdfs:seeAlso clinvar:{clinvar_id} ;\n")
             if safe(clinvar_sig):
                 fh.write(f"  pavs:clinvarSig {ttl_str(clinvar_sig)} ;\n")
+            if safe(clinvar_rev):
+                fh.write(f"  pavs:clinvarReview {ttl_str(clinvar_rev)} ;\n")
+            if safe(clingen_assertion):
+                fh.write(f"  pavs:clingenAssertion {ttl_str(clingen_assertion)} ;\n")
             if safe(pmid):
                 fh.write(f"  pavs:pmid {ttl_str(str(pmid).strip())} ;\n")
 
-            fh.write(f"  rdfs:label {ttl_str(gene)} .\n")
+            fh.write(f"  rdfs:label {ttl_str(gene.split('|')[0])} .\n")
 
     print(f"Wrote genes.ttl → {output_path} ({len(genes_seen)} genes)")
 
@@ -497,7 +645,10 @@ def generate_literature_ttl(lit_dir: str, output_path: str):
                 if did.startswith("OMIM:"):
                     fh.write(f"  pavs:hasDisease {omim_uri(did)} ;\n")
                 elif did.startswith("MONDO:"):
-                    fh.write(f"  pavs:hasDisease {mondo_uri(did)} ;\n")
+                    for m_id in did.split("|"):
+                        m_id = m_id.strip()
+                        if m_id.startswith("MONDO:"):
+                            fh.write(f"  pavs:hasDisease {mondo_uri(m_id)} ;\n")
                 if dlabel:
                     fh.write(f"  pavs:diseaseLabel {ttl_str(dlabel)} ;\n")
 
@@ -539,7 +690,7 @@ def generate_literature_ttl(lit_dir: str, output_path: str):
                     vu = f"pav:litvar_{v_safe}_{g_safe}"
 
                     fh.write(f"\n{vu}\n")
-                    fh.write(f"  a pavs:Variant ;\n")
+                    fh.write(f"  a pavs:GenomicVariant ;\n")
                     fh.write(f"  pavs:affectsGene hgnc:{gene_sym} ;\n")
                     fh.write(f"  pavs:isSaudi false ;\n")
                     if acmg:

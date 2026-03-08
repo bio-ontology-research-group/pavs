@@ -1,0 +1,276 @@
+{
+  "id": "PAVS:A0000174",
+  "subject": {
+    "id": "PAVS:A0000174",
+    "sex": "MALE",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000268",
+        "label": "Dolichocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008070",
+        "label": "Sparse hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009890",
+        "label": "High anterior hairline"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000508",
+        "label": "Ptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000369",
+        "label": "Low-set ears"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001780",
+        "label": "Abnormal toe morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002980",
+        "label": "Femoral bowing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010781",
+        "label": "Skin dimple"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001845",
+        "label": "Overlapping toe"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-variants",
+        "description": "Source dataset: ahmed-variants"
+      },
+      {
+        "id": "PMID:28454995",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0014343",
+        "label": "Desbuquois dysplasia 2"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:A0000174",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0014343",
+          "label": "Desbuquois dysplasia 2"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:A0000174",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:A0000174_XYLT1|XYLT1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "XYLT1|XYLT1",
+                  "valueId": "NCBIGene:64131|64131"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000261381.7:c.1129C>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000016.10:g.17198372C>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000261381.6:p.Gln377Glu"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr16",
+                  "pos": 17198372,
+                  "ref": "C",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000402|GENO:0000402",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0.02)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.348)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF02485"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "4.036e-05"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9280e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.7800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|endocervix:98|sigmoid_colon:96|ectocervix:94|muscle_layer_of_esophagus:92|subcutaneous_adipose_tissue:92|fallopian_tube:89|tibial_artery:89|uterus:85|omental_fat_pad:83|vagina:83|esophagogastric_junction:79|ileum:79|lower_leg_skin:79|ovary:79|spleen:79|tibial_nerve:79|urinary_bladder:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heparan sulfate proteoglycan biosynthetic process|embryonic skeletal system development|ossification involved in bone maturation|proteoglycan biosynthetic process|glycosaminoglycan biosynthetic process|chondroitin sulfate proteoglycan biosynthetic process|glycosaminoglycan-protein linkage region biosynthetic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "short mandible|decreased chondrocyte number|short snout|decreased body size|abnormal vocalization|abnormal coat/hair pigmentation|abnormal limb morphology|disproportionate dwarf|short tibia|short femur|decreased width of hypertrophic chondrocyte zone|premature bone ossification|abnormal facial morphology|abnormal bone structure|abnormal forelimb stylopod morphology|abnormal forelimb zeugopod morphology|abnormal hindlimb stylopod morphology|abnormal hindlimb zeugopod morphology|short humerus|shor"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

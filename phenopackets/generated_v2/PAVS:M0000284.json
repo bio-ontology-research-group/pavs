@@ -1,0 +1,171 @@
+{
+  "id": "PAVS:M0000284",
+  "subject": {
+    "id": "PAVS:M0000284",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:27629047",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/27629047/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000284",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000284",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000284_IDS",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "IDS",
+                  "valueId": "NCBIGene:3423"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000340855.11:c.405A>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000023.11:g.149503325A>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000339801.6:p.Lys135Asn"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chrX",
+                  "pos": 149503325,
+                  "ref": "A",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(1)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00884"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "aorta:100|frontal_cortex:98|anterior_cingulate_cortex:98|tibial_artery:94|cerebral_cortex:92|pituitary_gland:92|coronary_artery:89|ovary:89|uterus:89|ectocervix:83|endocervix:83|fallopian_tube:83|esophagogastric_junction:77|amygdala:77|nucleus_accumbens:77|tibial_nerve:77|urinary_bladder:77|blood:77|cerebellar_hemisphere:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "glycosaminoglycan catabolic process|dermatan sulfate proteoglycan catabolic process|carbohydrate derivative catabolic process|heparan sulfate proteoglycan catabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased bone mineral density|abnormal neurocranium morphology|abnormal vertebrae morphology|abnormal coat/ hair morphology|alopecia|abnormal cranium morphology|abnormal snout morphology|abnormal mandible morphology|distended urinary bladder|abnormal spinal cord morphology|abnormal body weight|decreased body weight|decreased body size|macrophthalmia|increased anxiety-related response|decreased locomotor activity|abnormal gait|short stride length|premature death|abnormal digit morphology|abnorma"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

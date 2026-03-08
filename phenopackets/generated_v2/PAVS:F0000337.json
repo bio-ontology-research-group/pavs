@@ -1,0 +1,214 @@
+{
+  "id": "PAVS:F0000337",
+  "subject": {
+    "id": "PAVS:F0000337",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P33Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002999",
+        "label": "Patellar dislocation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000337",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000337",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000337_FLNB",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "FLNB",
+                  "valueId": "NCBIGene:2317"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000295956.9:c.3482C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000003.12:g.58123448C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000295956.5:p.Ala1161Val"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr3",
+                  "pos": 58123448,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135|GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:2894569"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.999)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00630"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "3.43e-06"
+                  },
+                  {
+                    "name": "af_saudi",
+                    "value": "0.001656"
+                  },
+                  {
+                    "name": "ac_saudi",
+                    "value": "1"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "2894569"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Uncertain significance"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "5.7489e-04"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.0400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "tibial_nerve:100|uterus:98|urinary_bladder:96|prostate_gland:94|thyroid_gland:92|fallopian_tube:91|skin:89|transverse_colon:87|lower_leg_skin:85|mammary_gland:85|ovary:81|sigmoid_colon:81|suprapubic_skin:77|ileum:75|subcutaneous_adipose_tissue:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "actin cytoskeleton organization|muscle organ development|cell differentiation|signal transduction"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "delayed bone ossification|decreased bone mineral density|kyphoscoliosis|abnormal neurocranium morphology|abnormal parietal bone morphology|decreased compact bone thickness|rib fusion|abnormal sternum morphology|kyphosis|scoliosis|lordosis|abnormal chondrocyte morphology|decreased neutrophil cell number|abnormal angiogenesis|abnormal radius morphology|decreased body height|decreased body weight|decreased body size|abnormal gait|dehydration|abnormal posture|postnatal growth retardation|abnormal mo"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "id": "PAVS:D0001366",
+  "subject": {
+    "id": "PAVS:D0001366",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Narrow mouth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000160",
+        "label": "Mandibular prognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000303",
+        "label": "Triangular face"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000325",
+        "label": "Long philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000343",
+        "label": "Micrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Wide nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000431",
+        "label": "Webbed neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000465",
+        "label": "Downslanted palpebral fissures"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000494",
+        "label": "Abnormality of the ear"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000598",
+        "label": "Ulnar deviation of the hand or of fingers of the hand"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001193",
+        "label": "Talipes equinovarus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001762",
+        "label": "Rocker bottom foot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001838",
+        "label": "Metatarsus adductus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001840",
+        "label": "Calcaneovalgus deformity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001848",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Ulnar deviation of the wrist"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003049",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Prominent nasolabial fold"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005272",
+        "label": "Distal arthrogryposis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005684",
+        "label": "Absent phalangeal crease"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006109",
+        "label": "Camptodactyly of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100490",
+        "label": "HP:0100490"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0020820",
+        "label": "distal arthrogryposis type 2B1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001366",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0020820",
+          "label": "distal arthrogryposis type 2B1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001366",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001366_MYH3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MYH3",
+                  "valueId": "NCBIGene:4621"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.1337e-16"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.0400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|endocervix:98|prostate_gland:98|ectocervix:94|thyroid_gland:92|fallopian_tube:91|uterus:91|skeletal_muscle_tissue:87|urinary_bladder:87|vagina:87|ovary:81|spleen:81|tibial_artery:81|cerebellar_hemisphere:81|cerebellum:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "actin filament-based movement|ATP metabolic process|muscle filament sliding|face morphogenesis|muscle contraction|sarcomere organization|embryonic limb morphogenesis|skeletal muscle contraction|muscle organ development"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased body weight|decreased skeletal muscle fiber diameter|increased skeletal muscle fiber number|abnormal skeletal muscle fiber type ratio|decreased skeletal muscle weight|prenatal lethality, incomplete penetrance|abnormal muscle precursor cell morphology|increased myoblast apoptosis"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

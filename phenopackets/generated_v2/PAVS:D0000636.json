@@ -1,0 +1,222 @@
+{
+  "id": "PAVS:D0000636",
+  "subject": {
+    "id": "PAVS:D0000636",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000957",
+        "label": "Cafe-au-lait spot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000997",
+        "label": "Axillary freckling"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001438",
+        "label": "Abnormal abdomen morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001909",
+        "label": "Leukemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002665",
+        "label": "Lymphoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002671",
+        "label": "Basal cell carcinoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002859",
+        "label": "Rhabdomyosarcoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002885",
+        "label": "Medulloblastoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002888",
+        "label": "Ependymoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003006",
+        "label": "Neuroblastoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100843",
+        "label": "obsolete Glioblastoma"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010159",
+        "label": "mismatch repair cancer syndrome 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000636",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010159",
+          "label": "mismatch repair cancer syndrome 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000636",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000636_PMS2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PMS2",
+                  "valueId": "NCBIGene:5395"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "5.3905e-09"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.9800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellar_hemisphere:100|cerebellum:98|lower_leg_skin:96|suprapubic_skin:96|skin:92|ectocervix:91|endocervix:91|fallopian_tube:91|ovary:91|spleen:91|thyroid_gland:91|tibial_nerve:91|uterus:91|frontal_cortex:75|mammary_gland:75|pituitary_gland:75|prostate_gland:75|testis:75|urinary_bladder:75|vagina:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "somatic hypermutation of immunoglobulin genes|positive regulation of isotype switching to IgA isotypes|meiotic mismatch repair|DNA damage response|mismatch repair|DNA repair|positive regulation of isotype switching to IgG isotypes"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "small testis|male infertility|increased B cell derived lymphoma incidence|increased T cell derived lymphoma incidence|increased sarcoma incidence|increased carcinoma incidence|premature death|abnormal seminiferous tubule morphology|globozoospermia|oligozoospermia|increased hemangioma incidence|increased liver adenoma incidence|increased incidence of tumors by chemical induction|abnormal class switch recombination|decreased male germ cell number|abnormal male meiosis|teratozoospermia|abnormal cel"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

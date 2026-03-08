@@ -1,0 +1,159 @@
+{
+  "id": "PAVS:D0001023",
+  "subject": {
+    "id": "PAVS:D0001023",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002944",
+        "label": "Thoracolumbar scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007650",
+        "label": "Progressive ophthalmoplegia"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0020790",
+        "label": "gaze palsy, familial horizontal, with progressive scoliosis 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001023",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0020790",
+          "label": "gaze palsy, familial horizontal, with progressive scoliosis 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001023",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001023_ROBO3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ROBO3",
+                  "valueId": "NCBIGene:64221"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.7799e-19"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.4900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ovary:100|omental_fat_pad:98|tibial_nerve:96|fallopian_tube:94|spleen:92|thyroid_gland:91|prostate_gland:89|subcutaneous_adipose_tissue:87|mammary_gland:85|endocervix:83|lung:83|uterus:83|vagina:83|cerebral_cortex:75|ectocervix:75|renal_medulla:75|sigmoid_colon:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "brain development|chemotaxis|axon guidance|positive regulation of axonogenesis|negative regulation of negative chemotaxis|homophilic cell-cell adhesion|nervous system development|cell differentiation|tube development|axon midline choice point recognition|dendrite self-avoidance|commissural neuron axon guidance|positive regulation of axon guidance"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal floor plate morphology|abnormal retina morphology|ataxia|impaired balance|cyanosis|abnormal breathing pattern|abnormal brain commissure morphology|increased heart weight|increased circulating bilirubin level|abnormal pre-Botzinger complex physiology|neonatal lethality, complete penetrance|perinatal lethality, complete penetrance|preweaning lethality, complete penetrance|abnormal commissural neuron axon guidance"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

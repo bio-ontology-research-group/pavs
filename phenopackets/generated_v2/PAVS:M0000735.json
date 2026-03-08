@@ -1,0 +1,213 @@
+{
+  "id": "PAVS:M0000735",
+  "subject": {
+    "id": "PAVS:M0000735",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P7Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Micrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001620",
+        "label": "Abnormally high-pitched voice"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006682",
+        "label": "Premature ventricular contraction"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0034040",
+        "label": "Bidirectional ventricular tachycardia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:31890843",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31890843/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000735",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000735",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000735_KCNJ2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "KCNJ2",
+                  "valueId": "NCBIGene:3759"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000243457.4:c.366T>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000017.11:g.70175405T>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000243457.2:p.Cys122Ter"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr17",
+                  "pos": 70175405,
+                  "ref": "T",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "stop_gained"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF01007"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.7571e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.5100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|cervical_vertebra:98|mammary_gland:96|heart_left_ventricle:94|blood:94|esophagus_mucosa:91|lung:91|nucleus_accumbens:91|putamen:91|substantia_nigra:91|tibial_nerve:91|vagina:91|caudate_nucleus:91|fallopian_tube:75|hippocampus:75|hypothalamus:75|omental_fat_pad:75|skin:75|suprapubic_skin:75|transverse_colon:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "monoatomic ion transport|regulation of membrane repolarization|membrane repolarization during action potential|regulation of heart rate by cardiac conduction|membrane depolarization during cardiac muscle cell action potential|cardiac muscle cell action potential involved in contraction|monoatomic ion transmembrane transport|potassium ion import across plasma membrane|cellular response to mechanical stimulus|positive regulation of potassium ion transmembrane transport|regulation of resting membra"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "dehydration|abnormal suckling behavior|cyanosis|abnormal vasodilation|respiratory distress|abnormal digit morphology|abnormal intramembranous bone ossification|preaxial polydactyly|palatal shelves fail to meet at midline|cleft secondary palate|decreased maxillary shelf size|neonatal lethality, complete penetrance|narrow maxilla|small vomer bone"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "id": "PAVS:M0001294",
+  "subject": {
+    "id": "PAVS:M0001294",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007359",
+        "label": "Focal-onset seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:34055681",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/34055681/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001294",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001294",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001294_PEX1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PEX1",
+                  "valueId": "NCBIGene:5189"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000248633.9:c.2176C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000007.14:g.92503091C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000248633.4:p.Gln726Ter"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr7",
+                  "pos": 92503091,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "stop_gained"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00004"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "6.843e-07"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.6437e-11"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.4600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ovary:100|tibial_nerve:98|endocervix:96|thyroid_gland:96|uterus:96|lower_leg_skin:91|pituitary_gland:91|suprapubic_skin:91|ectocervix:85|cerebellar_hemisphere:85|cerebellum:85|fallopian_tube:79|mammary_gland:79|tibial_artery:79|vagina:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "protein targeting to peroxisome|protein import into peroxisome matrix|protein transport|protein import into peroxisome matrix, receptor recycling|peroxisome organization|microtubule-based peroxisome localization|protein unfolding"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "hydronephrosis|abnormal liver morphology|enlarged liver|cholestasis|weakness|decreased body weight|decreased body size|hyperglycemia|hepatic necrosis|postnatal growth retardation|liver inflammation|premature death|dilated heart left ventricle|bile duct proliferation|increased liver adenoma incidence|liver fibrosis|abnormal rod electrophysiology|abnormal cone electrophysiology|abnormal phospholipid level|decreased cardiac muscle contractility|abnormal fatty acids level|increased fatty acids level"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

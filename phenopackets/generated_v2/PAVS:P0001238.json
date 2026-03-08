@@ -1,0 +1,190 @@
+{
+  "id": "PAVS:P0001238",
+  "subject": {
+    "id": "PAVS:P0001238",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P5M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002376",
+        "label": "Developmental regression"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000256",
+        "label": "Macrocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001238",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001238",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001238_NODAL",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "NODAL",
+                  "valueId": "NCBIGene:4838"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000287139.8:c.1024_1027del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000010.11:g.70432953_70432956del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000287139.3:p.Glu342AsnfsTer28"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00019"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.6392e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.5400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|cerebellum:100|ectocervix:96|endocervix:96|lower_leg_skin:96|skeletal_muscle_tissue:96|subcutaneous_adipose_tissue:96|suprapubic_skin:96|tibial_artery:96|tibial_nerve:96|cerebellar_hemisphere:96|lung:79|mammary_gland:79|ovary:79|aorta:79|urinary_bladder:79|uterus:79|vagina:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of ERK1 and ERK2 cascade|positive regulation of vascular endothelial growth factor production|positive regulation of angiogenesis|determination of left/right asymmetry in lateral mesoderm|mesendoderm development|positive regulation of epithelial cell proliferation|negative regulation of chorionic trophoblast cell proliferation|positive regulation of transcription by RNA polymerase II|positive regulation of cell-cell adhesion|female pregnancy|negative regulation of reproductiv"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal heart development|abnormal heart looping|abnormal interventricular septum morphology|enlarged pericardium|trabecula carnea hypoplasia|abnormal foregut morphology|right-sided isomerism|right pulmonary isomerism|abnormal liver morphology|small liver|pale liver|abnormal spleen morphology|small spleen|spleen hypoplasia|abnormal brain development|absent floor plate|absent notochord|decreased body size|decreased locomotor activity|increased circulating triglyceride level|increased circulating"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

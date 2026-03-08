@@ -1,0 +1,243 @@
+{
+  "id": "PAVS:M0000994",
+  "subject": {
+    "id": "PAVS:M0000994",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P32Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0003124",
+        "label": "Hypercholesterolemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000488",
+        "label": "Retinopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003259",
+        "label": "Elevated circulating creatinine concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001397",
+        "label": "Hepatic steatosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002155",
+        "label": "Hypertriglyceridemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003394",
+        "label": "Muscle spasm"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000956",
+        "label": "Acanthosis nigricans"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0025092",
+        "label": "Epidermal acanthosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000855",
+        "label": "Insulin resistance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:35234134",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/35234134/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000994",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000994",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000994_POC1A",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "POC1A",
+                  "valueId": "NCBIGene:25886"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000296484.7:c.241C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000003.12:g.52149850C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000296484.2:p.Arg81Ter"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr3",
+                  "pos": 52149850,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "stop_gained"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00400"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "6.842e-06"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0342e-06"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.8800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|skin:98|esophagus_mucosa:96|adrenal_gland:94|ileum:92|spleen:92|blood:92|lower_leg_skin:87|lung:87|suprapubic_skin:87|tibial_nerve:87|transverse_colon:87|vagina:87|coronary_artery:75|endocervix:75|liver:75|mammary_gland:75|prostate_gland:75|renal_medulla:75|subcutaneous_adipose_tissue:75|thyroid_gland:75|urinary_bladder:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cilium assembly|cell projection organization"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "small gonad|arrest of spermatogenesis|decreased body length|decreased body weight|abnormal gait|limb grasping|postnatal growth retardation|male infertility|female infertility|abnormal seminiferous tubule morphology|disproportionate dwarf|increased urine microalbumin level|abnormal long bone epiphyseal plate morphology|abnormal long bone epiphyseal plate proliferative zone|decreased length of long bones|short lumbar vertebrae|azoospermia|decreased long bone epiphyseal plate size|preweaning lethal"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

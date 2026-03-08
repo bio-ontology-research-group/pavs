@@ -1,0 +1,258 @@
+{
+  "id": "PAVS:F0000097",
+  "subject": {
+    "id": "PAVS:F0000097",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P2Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002194",
+        "label": "Delayed gross motor development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009777",
+        "label": "Absent thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000356",
+        "label": "Abnormality of the outer ear"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001274",
+        "label": "Agenesis of corpus callosum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001511",
+        "label": "Intrauterine growth retardation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000097",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000097",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000097_IFNL1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "IFNL1",
+                  "valueId": "NCBIGene:282618"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000333625.3:c.305T>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.39298019T>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000329991.1:p.Leu102Pro"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 39298019,
+                  "ref": "T",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0.01)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(1)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF15177"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "2.736e-06"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0137e-05"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.3320e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|testis:98|blood:98|ectocervix:94|adrenal_gland:92|cerebral_cortex:92|cervical_vertebra:92|coronary_artery:92|cortex_of_kidney:92|endocervix:92|esophagogastric_junction:92|esophagus_mucosa:92|fallopian_tube:92|frontal_cortex:92|amygdala:92|heart_left_ventricle:92|hippocampus:92|hypothalamus:92|ileum:92|liver:92|lower_leg_skin:92|lung:92|mammary_gland:92|minor_salivary_gland:92|muscle_layer_of_esophagus:92|anterior_cingulate_cortex:92|nucleus_accumbens:92|omental_fat_pad:92|ovary:92|pancreas:92|pituitary_gland:92|prostate_gland:92|putamen:92|renal_medulla:92|sigmoid_colon:92|skeletal_muscle_tissue:92|aorta:92|skin:92|stomach:92|subcutaneous_adipose_tissue:92|substantia_nigra:92|suprapubic_skin:92|thyroid_gland:92|tibial_artery:92|tibial_nerve:92|atrium_auricular_region:92|transverse_colon:92|urinary_bladder:92|uterus:92|vagina:92|caudate_nucleus:92|cerebellar_hemisphere:92|cerebellum:92"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of DNA-templated transcription|defense response to virus|positive regulation of MHC class I biosynthetic process|positive regulation of tyrosine phosphorylation of STAT protein|negative regulation of interleukin-13 production|negative regulation of T cell differentiation|negative regulation of cell population proliferation|negative regulation of type 2 immune response|positive regulation of receptor signaling pathway via JAK-STAT|cellular response to virus|negative regulation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased susceptibility to viral infection|increased circulating sodium level|abnormal circulating interferon level|increased susceptibility to Riboviria infection|increased susceptibility to Orthomyxoviridae infection"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

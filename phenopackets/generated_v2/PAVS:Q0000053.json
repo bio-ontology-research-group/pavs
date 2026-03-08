@@ -1,0 +1,174 @@
+{
+  "id": "PAVS:Q0000053",
+  "subject": {
+    "id": "PAVS:Q0000053",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P11Y6M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002474",
+        "label": "Expressive language delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC7082194",
+        "description": "Source dataset: PMC7082194"
+      },
+      {
+        "id": "PMID:31618753",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31618753/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:Q0000053",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:Q0000053",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:Q0000053_GDI1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GDI1",
+                  "valueId": "NCBIGene:2664"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000023.11:g.154440025T>C"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chrX",
+                  "pos": 154440025,
+                  "ref": "T",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:426438"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODIFIER"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "426438"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Likely pathogenic"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellum:100|cerebellar_hemisphere:98|frontal_cortex:96|cerebral_cortex:94|pituitary_gland:92|tibial_nerve:91|cervical_vertebra:89|anterior_cingulate_cortex:87|hypothalamus:85|ovary:83|ectocervix:81|nucleus_accumbens:79|uterus:77|endocervix:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "Rab protein signal transduction|regulation of protein localization|positive regulation of toll-like receptor signaling pathway|negative regulation of axonogenesis|negative regulation of protein targeting to membrane|response to calcium ion|protein transport|vesicle-mediated transport|small GTPase-mediated signal transduction|signal transduction|positive regulation of axon extension"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal cued conditioning behavior|increased susceptibility to pharmacologically induced seizures|abnormal excitatory postsynaptic currents|abnormal excitatory postsynaptic potential|enhanced paired-pulse facilitation|decreased aggression towards mice|abnormal synaptic glutamate release|decreased synaptic glutamate release|abnormal synaptic vesicle number|abnormal hippocampus CA3 region morphology|abnormal spatial working memory|abnormal hippocampal mossy fiber suprapyramidal bundle morphology"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

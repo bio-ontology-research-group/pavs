@@ -1,0 +1,209 @@
+{
+  "id": "PAVS:F0000581",
+  "subject": {
+    "id": "PAVS:F0000581",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P7M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001987",
+        "label": "Hyperammonemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0012072",
+        "label": "Aciduria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000581",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000581",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000581_ASL",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ASL",
+                  "valueId": "NCBIGene:435"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000304874.14:c.485A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000007.14:g.66086623A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000307188.9:p.Gln162Arg"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr7",
+                  "pos": 66086623,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:544634"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.985)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00206"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "544634"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Uncertain significance"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.6098e-13"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.3700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "liver:100|skin:98|transverse_colon:96|ileum:94|spleen:92|tibial_nerve:92|cortex_of_kidney:89|lung:89|stomach:89|thyroid_gland:89|endocervix:81|ovary:81|fallopian_tube:77|renal_medulla:77|aorta:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of nitric oxide biosynthetic process|L-arginine biosynthetic process|arginine metabolic process|L-amino acid metabolic process|L-arginine biosynthetic process via ornithine|amino acid biosynthetic process|urea cycle"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal myocardial fiber morphology|abnormal coat/ hair morphology|abnormal hair follicle morphology|small hair follicles|thymus cortex hypoplasia|epidermal atrophy|abnormal dermal layer morphology|decreased body weight|postnatal growth retardation|premature death|no abnormal phenotype detected|abnormal erythrocyte morphology|decreased circulating alanine transaminase level|abnormal nitric oxide homeostasis|decreased lymphocyte cell number|lethargy|increased circulating ammonia level|abnormal c"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "id": "PAVS:A0000208",
+  "subject": {
+    "id": "PAVS:A0000208",
+    "sex": "MALE",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0200134",
+        "label": "Epileptic encephalopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000518",
+        "label": "Cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002518",
+        "label": "Abnormal periventricular white matter morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0012433",
+        "label": "Abnormal social behavior"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-variants",
+        "description": "Source dataset: ahmed-variants"
+      },
+      {
+        "id": "PMID:28454995",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013673|MONDO:0010963|MONDO:0007287|MONDO:0005148",
+        "label": "Wolfram-like syndrome|autosomal dominant nonsyndromic hearing loss 6|cataract 41|type 2 diabetes mellitus"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:A0000208",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013673|MONDO:0010963|MONDO:0007287|MONDO:0005148",
+          "label": "Wolfram-like syndrome|autosomal dominant nonsyndromic hearing loss 6|cataract 41|type 2 diabetes mellitus"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:A0000208",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:A0000208_WFS1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "WFS1",
+                  "valueId": "NCBIGene:7466"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000226760.5:c.2494C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000004.12:g.6302289C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000226760.1:p.Arg832Cys"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr4",
+                  "pos": 6302289,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:583094"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.984)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF19913"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "0.0001645"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "583094"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Uncertain significance"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.7214e-39"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.6400e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ovary:100|uterus:98|aorta:96|fallopian_tube:94|tibial_artery:92|endocervix:91|ectocervix:89|thyroid_gland:87|urinary_bladder:85|pituitary_gland:83|esophagogastric_junction:81|nucleus_accumbens:81|coronary_artery:77|lung:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of calcium ion transport|negative regulation of response to endoplasmic reticulum stress|olfactory behavior|ERAD pathway|negative regulation of endoplasmic reticulum stress-induced intrinsic apoptotic signaling pathway|negative regulation of apoptotic process|positive regulation of protein metabolic process|response to endoplasmic reticulum stress|sensory perception of sound|protein stabilization|regulation of gene expression|visual perception|intracellular signal transductio"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal inner ear vestibule morphology|abnormal thyroid gland morphology|decreased body weight|weight loss|decreased body size|abnormal social investigation|increased anxiety-related response|circling|decreased locomotor activity|impaired coordination|head bobbing|decreased exploration in new environment|abnormal eating behavior|abnormal cued conditioning behavior|abnormal spatial learning|impaired swimming|impaired righting response|abnormal vocalization|hyperglycemia|increased circulating cor"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

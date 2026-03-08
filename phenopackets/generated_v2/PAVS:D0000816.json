@@ -1,0 +1,271 @@
+{
+  "id": "PAVS:D0000816",
+  "subject": {
+    "id": "PAVS:D0000816",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001151",
+        "label": "Impaired horizontal smooth pursuit"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001258",
+        "label": "Spastic paraplegia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001337",
+        "label": "Tremor"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001344",
+        "label": "Absent speech"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002059",
+        "label": "Cerebral atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002069",
+        "label": "Bilateral tonic-clonic seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002123",
+        "label": "Generalized myoclonic seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002319",
+        "label": "Spastic tetraplegia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002510",
+        "label": "Hypsarrhythmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002521",
+        "label": "Neonatal onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003623",
+        "label": "Cerebral hypomyelination"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006808",
+        "label": "Infantile encephalopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007105",
+        "label": "Generalized tonic seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010818",
+        "label": "EEG with burst suppression"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010851",
+        "label": "Intellectual disability, severe"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010864",
+        "label": "Epileptic spasm"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011097",
+        "label": "Severe global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011344",
+        "label": "HP:0011344"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012812",
+        "label": "developmental and epileptic encephalopathy, 4"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000816",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012812",
+          "label": "developmental and epileptic encephalopathy, 4"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000816",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000816_STXBP1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "STXBP1",
+                  "valueId": "NCBIGene:6812"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.9000e-02"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellar_hemisphere:100|cerebellum:98|frontal_cortex:96|cerebral_cortex:94|pituitary_gland:92|anterior_cingulate_cortex:91|hypothalamus:89|nucleus_accumbens:87|hippocampus:85|amygdala:83|caudate_nucleus:81|fallopian_tube:79|tibial_nerve:79|uterus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of synaptic vesicle fusion to presynaptic active zone membrane|platelet aggregation|positive regulation of vesicle docking|positive regulation of glutamate secretion, neurotransmission|developmental process involved in reproduction|positive regulation of vesicle fusion|regulated exocytosis|vesicle-mediated transport|regulation of regulated secretory pathway|presynaptic dense core vesicle exocytosis|axon target recognition|positive regulation of exocytosis|negative regulation of synapt"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased hematocrit|hyperactivity|increased exploration in new environment|abnormal embryo size|edema|hemorrhage|neurodegeneration|increased mean corpuscular volume|increased thigmotaxis|neuron degeneration|abnormal synaptic transmission|impaired glucose tolerance|axon degeneration|abnormal neurotransmitter secretion|increased grip strength|neonatal lethality, complete penetrance|preweaning lethality, complete penetrance"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

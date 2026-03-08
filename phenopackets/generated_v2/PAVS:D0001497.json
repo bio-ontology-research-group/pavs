@@ -1,0 +1,271 @@
+{
+  "id": "PAVS:D0001497",
+  "subject": {
+    "id": "PAVS:D0001497",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000256",
+        "label": "Macrocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001264",
+        "label": "Spastic diplegia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001266",
+        "label": "Choreoathetosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001332",
+        "label": "Dystonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001942",
+        "label": "Metabolic acidosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001943",
+        "label": "Hypoglycemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001946",
+        "label": "Ketosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002063",
+        "label": "Rigidity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002179",
+        "label": "Opisthotonus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002240",
+        "label": "Hepatomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002919",
+        "label": "Ketonuria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003150",
+        "label": "Glutaric aciduria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006873",
+        "label": "Symmetrical progressive peripheral demyelination"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006956",
+        "label": "Lateral ventricle dilatation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007105",
+        "label": "Infantile encephalopathy"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009281",
+        "label": "glutaryl-CoA dehydrogenase deficiency"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001497",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009281",
+          "label": "glutaryl-CoA dehydrogenase deficiency"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001497",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001497_GCDH",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GCDH",
+                  "valueId": "NCBIGene:2639"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.7641e-05"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.5200e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "liver:100|ovary:98|fallopian_tube:96|tibial_nerve:96|uterus:92|thyroid_gland:91|endocervix:89|prostate_gland:89|esophagogastric_junction:85|mammary_gland:85|skin:85|spleen:85|tibial_artery:85|urinary_bladder:85"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "fatty acid oxidation|fatty acid beta-oxidation using acyl-CoA dehydrogenase|L-lysine catabolic process|fatty-acyl-CoA biosynthetic process|L-lysine catabolic process to acetyl-CoA via L-pipecolate|L-lysine catabolic process to acetyl-CoA via L-saccharopine|L-tryptophan metabolic process|acyl-CoA metabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "weight loss|decreased locomotor activity|impaired coordination|abnormal coat appearance|impaired righting response|neurodegeneration|glutaricadicuria|decreased circulating alkaline phosphatase level|enlarged kidney|lethargy|decreased circulating glucose level|decreased circulating total protein level|decreased circulating aspartate transaminase level|increased heart left ventricle size|preweaning lethality, incomplete penetrance|abnormal skin coloration|abnormal amino acid metabolism"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "id": "PAVS:D0000622",
+  "subject": {
+    "id": "PAVS:D0000622",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0005259",
+        "label": "obsolete Asperger syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000622",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0005259",
+          "label": "obsolete Asperger syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000622",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000622_VIP",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "VIP",
+                  "valueId": "NCBIGene:7432"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "8.7112e-06"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.4680e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "sigmoid_colon:100|transverse_colon:98|muscle_layer_of_esophagus:96|esophagogastric_junction:94|ileum:94|anterior_cingulate_cortex:91|frontal_cortex:89|spleen:87|cerebral_cortex:85|amygdala:83|hippocampus:81|lung:79|thyroid_gland:77|uterus:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of protein catabolic process|adenylate cyclase-activating G protein-coupled receptor signaling pathway|regulation of protein localization|antibacterial humoral response|body fluid secretion|prolactin secretion|G protein-coupled receptor signaling pathway|defense response to Gram-negative bacterium|positive regulation of cell population proliferation|defense response to Gram-positive bacterium|positive regulation of cAMP/PKA signal transduction|antifungal humoral response|mRNA"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "heart right ventricle hypertrophy|abnormal pulmonary artery morphology|seminiferous tubule degeneration|lung inflammation|premature death|no abnormal phenotype detected|decreased circulating testosterone level|decreased circulating follicle stimulating hormone level|pulmonary hypertension|abnormal lung vasculature morphology|decreased seminal vesicle weight|increased right ventricle systolic pressure|decreased testes secretion|shortened circadian behavior period|arrhythmic circadian behavior per"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

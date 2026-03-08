@@ -1,0 +1,190 @@
+{
+  "id": "PAVS:P0001959",
+  "subject": {
+    "id": "PAVS:P0001959",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000969",
+        "label": "Edema"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001959",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001959",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001959_GUSB",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GUSB",
+                  "valueId": "NCBIGene:2990"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000304895.9:c.307C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000007.14:g.65980313C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000302728.4:p.Arg103Trp"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr7",
+                  "pos": 65980313,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.978)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF02837"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "5.474e-06"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.6596e-11"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.7100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|thyroid_gland:98|lung:96|ovary:96|tibial_nerve:92|endocervix:91|mammary_gland:89|testis:89|uterus:85|subcutaneous_adipose_tissue:83|ectocervix:81|fallopian_tube:81|ileum:81|skin:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "glycosaminoglycan catabolic process|heparan sulfate proteoglycan catabolic process|carbohydrate metabolic process|hyaluronan catabolic process|chondroitin sulfate proteoglycan catabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal neurocranium morphology|abnormal cell morphology|shortened head|short snout|short limbs|thick tail|short tail|decreased body length|decreased body size|abnormal gait|postnatal growth retardation|decreased white adipose tissue amount|abnormal lactation|male infertility|deafness|postnatal lethality|premature death|abnormal axial skeleton morphology|abnormal limb bone morphology|disproportionate dwarf|abnormal sexual interaction|abnormal long bone morphology|abnormal facial morphology|smal"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

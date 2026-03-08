@@ -1,0 +1,215 @@
+{
+  "id": "PAVS:M0001421",
+  "subject": {
+    "id": "PAVS:M0001421",
+    "sex": "FEMALE",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0003323",
+        "label": "Progressive muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0025406",
+        "label": "Asthenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001421",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001421",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001421_CHMP2B",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CHMP2B",
+                  "valueId": "NCBIGene:25978"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000263780.9:c.85A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000003.12:g.87240749A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000263780.4:p.Ile29Val"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr3",
+                  "pos": 87240749,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:34359"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "tolerated(0.07)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.003)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF03357"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "0.0003325"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "34359"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Uncertain significance"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.8165e-04"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.5030e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "pituitary_gland:100|tibial_artery:98|cervical_vertebra:96|thyroid_gland:96|ectocervix:92|aorta:92|uterus:92|ovary:87|vagina:87|coronary_artery:83|fallopian_tube:83|endocervix:79|skin:77|tibial_nerve:77|urinary_bladder:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "macroautophagy|midbody abscission|endosome organization|plasma membrane repair|viral budding from plasma membrane|autophagosome maturation|membrane fission|autophagy|multivesicular body-lysosome fusion|regulation of centrosome duplication|multivesicular body assembly|nucleus organization|protein transport|regulation of mitotic spindle assembly|vacuolar transport|endosome transport via multivesicular body sorting pathway|late endosome to lysosome transport|late endosome to vacuole transport|viral"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "cellular necrosis|abnormal liver morphology|abnormal spleen morphology|enlarged spleen|abnormal cerebral cortex morphology|abnormal frontal lobe morphology|abnormal uterus morphology|abnormal testis morphology|small testis|increased anxiety-related response|no spontaneous movement|abnormal skin morphology|abnormal kidney morphology|small kidney|abnormal cell cycle checkpoint function|decreased heart rate|abnormal hippocampus CA1 region morphology|abnormal endoplasmic reticulum morphology|abnorma"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

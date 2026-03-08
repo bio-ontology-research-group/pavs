@@ -1,0 +1,208 @@
+{
+  "id": "PAVS:P0002096",
+  "subject": {
+    "id": "PAVS:P0002096",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P13Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001596",
+        "label": "Alopecia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001597",
+        "label": "Abnormal nail morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008064",
+        "label": "Ichthyosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001000",
+        "label": "Abnormality of skin pigmentation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0002096",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0002096",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0002096_PLCG2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PLCG2",
+                  "valueId": "NCBIGene:5336"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000564138.6:c.2865C>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000016.10:g.81936191C>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000482457.1:p.Ile955Met"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr16",
+                  "pos": 81936191,
+                  "ref": "C",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "tolerated(0.77)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00387"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9870e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.6100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|ileum:98|blood:98|cortex_of_kidney:94|lung:94|fallopian_tube:91|mammary_gland:91|renal_medulla:91|subcutaneous_adipose_tissue:91|uterus:91|ectocervix:81|endocervix:81|lower_leg_skin:81|minor_salivary_gland:81|omental_fat_pad:81|thyroid_gland:81|tibial_nerve:81|transverse_colon:81|urinary_bladder:81|vagina:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of interleukin-12 production|toll-like receptor signaling pathway|positive regulation of interleukin-6 production|positive regulation of MAPK cascade|calcium-mediated signaling|phospholipid catabolic process|response to axon injury|positive regulation of epithelial cell migration|positive regulation of reactive oxygen species biosynthetic process|macrophage activation involved in immune response|cellular response to calcium ion|positive regulation of interleukin-2 production|"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal trabecular bone morphology|abnormal foot pad morphology|spleen hyperplasia|dermatitis|internal hemorrhage|impaired macrophage phagocytosis|abnormal humoral immune response|arrested B cell differentiation|decreased IgM level|abnormal inflammatory response|abnormal lymphatic vessel morphology|premature death|abnormal B cell differentiation|abnormal dendritic cell physiology|abnormal B cell physiology|chronic inflammation|glomerulonephritis|increased pre-B cell number|decreased susceptibil"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

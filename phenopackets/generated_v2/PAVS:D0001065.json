@@ -1,0 +1,376 @@
+{
+  "id": "PAVS:D0001065",
+  "subject": {
+    "id": "PAVS:D0001065",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000023",
+        "label": "Inguinal hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000272",
+        "label": "Malar flattening"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000311",
+        "label": "Round face"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000403",
+        "label": "Recurrent otitis media"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000405",
+        "label": "Conductive hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000470",
+        "label": "Short neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000518",
+        "label": "Cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000520",
+        "label": "Proptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000541",
+        "label": "Retinal detachment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000545",
+        "label": "Myopia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000926",
+        "label": "Platyspondyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000947",
+        "label": "Dumbbell-shaped long bone"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Motor delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001288",
+        "label": "Gait disturbance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001537",
+        "label": "Umbilical hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002098",
+        "label": "Respiratory distress"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002663",
+        "label": "Delayed epiphyseal ossification"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002779",
+        "label": "Tracheomalacia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002812",
+        "label": "Coxa vara"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002827",
+        "label": "Hip dislocation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002829",
+        "label": "Arthralgia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003015",
+        "label": "Flared metaphysis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003037",
+        "label": "Enlarged joints"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003273",
+        "label": "Hip contracture"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003417",
+        "label": "Coronal cleft vertebrae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003521",
+        "label": "Disproportionate short-trunk short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004619",
+        "label": "Lumbar kyphoscoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005280",
+        "label": "Depressed nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006172",
+        "label": "Flattened, squared-off epiphyses of tubular bones"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008271",
+        "label": "Abnormal cartilage collagen"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008839",
+        "label": "Hypoplastic pelvis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0200003",
+        "label": "Splayed epiphyses"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007987",
+        "label": "Kniest dysplasia"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001065",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007987",
+          "label": "Kniest dysplasia"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001065",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001065_COL2A1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "COL2A1",
+                  "valueId": "NCBIGene:1280"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.8300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "pituitary_gland:100|stomach:98|testis:98|hypothalamus:94|ovary:92|hippocampus:91|ileum:91|cerebral_cortex:87|endocervix:87|mammary_gland:87|anterior_cingulate_cortex:87|nucleus_accumbens:87|transverse_colon:87|cerebellar_hemisphere:87|cerebellum:87"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "central nervous system development|chondrocyte differentiation|limb bud formation|embryonic skeletal joint morphogenesis|skeletal system morphogenesis|animal organ development|notochord development|otic vesicle development|sensory perception of sound|collagen fibril organization|system development|ossification|visual perception|skeletal system development|cartilage development"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased bone mineral density|abnormal bone marrow cavity morphology|abnormal neurocranium morphology|short mandible|nasal bone hypoplasia|cleft palate|abnormal trabecular bone morphology|abnormal long bone epiphysis morphology|abnormal long bone metaphysis morphology|abnormal vertebrae morphology|abnormal vertebral body morphology|abnormal scapula morphology|abnormal rib morphology|kyphosis|abnormal cartilage morphology|abnormal cartilage development|abnormal long bone hypertrophic chondrocyte"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

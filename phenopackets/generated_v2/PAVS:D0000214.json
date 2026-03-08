@@ -1,0 +1,542 @@
+{
+  "id": "PAVS:D0000214",
+  "subject": {
+    "id": "PAVS:D0000214",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000054",
+        "label": "Micropenis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000089",
+        "label": "Renal hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000107",
+        "label": "Renal cyst"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000237",
+        "label": "Small anterior fontanelle"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000269",
+        "label": "Prominent occiput"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000340",
+        "label": "Sloping forehead"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Micrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000369",
+        "label": "Low-set ears"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000377",
+        "label": "Abnormal pinna morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000448",
+        "label": "Prominent nose"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000470",
+        "label": "Short neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000520",
+        "label": "Proptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000535",
+        "label": "obsolete Sparse and thin eyebrow"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000653",
+        "label": "Sparse eyelashes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000878",
+        "label": "11 pairs of ribs"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000890",
+        "label": "Long clavicles"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000926",
+        "label": "Platyspondyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000946",
+        "label": "Hypoplastic ilia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000954",
+        "label": "Single transverse palmar crease"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000958",
+        "label": "Dry skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000962",
+        "label": "Hyperkeratosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001156",
+        "label": "Brachydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001176",
+        "label": "Large hands"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001274",
+        "label": "Agenesis of corpus callosum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001302",
+        "label": "Pachygyria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001511",
+        "label": "Intrauterine growth retardation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001562",
+        "label": "Oligohydramnios"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001631",
+        "label": "Atrial septal defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001636",
+        "label": "Tetralogy of Fallot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001680",
+        "label": "Coarctation of aorta"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001833",
+        "label": "Long foot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002209",
+        "label": "Sparse scalp hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002282",
+        "label": "Gray matter heterotopia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002335",
+        "label": "Agenesis of cerebellar vermis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002750",
+        "label": "Delayed skeletal maturation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002827",
+        "label": "Hip dislocation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002980",
+        "label": "Femoral bowing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002987",
+        "label": "Elbow flexion contracture"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003042",
+        "label": "Elbow dislocation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003044",
+        "label": "Shoulder flexion contracture"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003051",
+        "label": "Enlarged metaphyses"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003273",
+        "label": "Hip contracture"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003498",
+        "label": "Disproportionate short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003826",
+        "label": "Stillbirth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003865",
+        "label": "Bowed humerus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004616",
+        "label": "Cleft vertebral arch"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005753",
+        "label": "Short humerus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005792",
+        "label": "Knee flexion contracture"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006380",
+        "label": "Absent knee epiphyses"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006400",
+        "label": "Prolonged neonatal jaundice"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006579",
+        "label": "Hypoplasia of the frontal lobes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007333",
+        "label": "Microtia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008551",
+        "label": "Short metacarpal"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010049",
+        "label": "HP:0010049"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008871",
+        "label": "microcephalic osteodysplastic primordial dwarfism type I"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000214",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008871",
+          "label": "microcephalic osteodysplastic primordial dwarfism type I"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000214",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000214_RNU4ATAC",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "RNU4ATAC",
+                  "valueId": "NCBIGene:100151683"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|fallopian_tube:98|pituitary_gland:98|cervical_vertebra:94|ectocervix:94|endocervix:94|mammary_gland:94|omental_fat_pad:94|subcutaneous_adipose_tissue:94|tibial_nerve:94|urinary_bladder:94|coronary_artery:79|amygdala:79|hippocampus:79|hypothalamus:79|ileum:79|lung:79|nucleus_accumbens:79|ovary:79|prostate_gland:79|putamen:79|renal_medulla:79|sigmoid_colon:79|aorta:79|substantia_nigra:79|suprapubic_skin:79|thyroid_gland:79|tibial_artery:79|transverse_colon:79|vagina:79|caudate_nucleus:79|cerebellar_hemisphere:79|cerebellum:79"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

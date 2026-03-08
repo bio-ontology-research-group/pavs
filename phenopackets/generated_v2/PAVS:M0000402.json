@@ -1,0 +1,195 @@
+{
+  "id": "PAVS:M0000402",
+  "subject": {
+    "id": "PAVS:M0000402",
+    "sex": "FEMALE",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001639",
+        "label": "Hypertrophic cardiomyopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:32870709",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/32870709/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000402",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000402",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000402_ELAC2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ELAC2",
+                  "valueId": "NCBIGene:60528"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000338034.9:c.460T>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000017.11:g.13014469T>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000337445.4:p.Phe154Leu"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr17",
+                  "pos": 13014469,
+                  "ref": "T",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0.04)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.997)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "6.842e-07"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.8305e-27"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0200e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|muscle_layer_of_esophagus:98|esophagogastric_junction:96|testis:94|uterus:94|urinary_bladder:91|sigmoid_colon:89|thyroid_gland:89|tibial_artery:89|tibial_nerve:89|adrenal_gland:81|aorta:81|ectocervix:77|fallopian_tube:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "tRNA processing|tRNA 3'-end processing|mitochondrial tRNA 3'-end processing|mitochondrial tRNA processing|tRNA decay"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "prostate gland hyperplasia|abnormal prostate gland anterior lobe morphology|prostate gland inflammation|prostate gland anterior lobe hyperplasia|abnormal prostate gland dorsolateral lobe morphology|embryonic lethality, complete penetrance|preweaning lethality, complete penetrance|prostate gland dorsolateral lobe hyperplasia"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

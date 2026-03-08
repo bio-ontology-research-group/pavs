@@ -1,0 +1,150 @@
+{
+  "id": "PAVS:M0000663",
+  "subject": {
+    "id": "PAVS:M0000663",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:30705822",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/30705822/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011628",
+        "label": "propionic acidemia"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000663",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011628",
+          "label": "propionic acidemia"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000663",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000663_PCCB",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PCCB",
+                  "valueId": "NCBIGene:5096"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.1332e-04"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.4300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "adrenal_gland:100|testis:98|liver:96|skin:94|cervical_vertebra:92|cortex_of_kidney:91|pituitary_gland:91|skeletal_muscle_tissue:91|thyroid_gland:91|atrium_auricular_region:91|frontal_cortex:81|tibial_nerve:81|esophagus_mucosa:77|heart_left_ventricle:77|renal_medulla:77|stomach:77|subcutaneous_adipose_tissue:77|transverse_colon:77|urinary_bladder:77|uterus:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "short-chain fatty acid catabolic process|fatty acid metabolic process|branched-chain amino acid metabolic process|fatty acid catabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal craniofacial morphology|microphthalmia|edema|hemorrhage|abnormal kidney morphology|spina bifida|polycystic kidney|preweaning lethality, complete penetrance"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

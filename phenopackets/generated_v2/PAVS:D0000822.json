@@ -1,0 +1,137 @@
+{
+  "id": "PAVS:D0000822",
+  "subject": {
+    "id": "PAVS:D0000822",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008988",
+        "label": "citrullinemia type I"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000822",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008988",
+          "label": "citrullinemia type I"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000822",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000822_ASS1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ASS1",
+                  "valueId": "NCBIGene:445"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.4303e-18"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1400e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "liver:100|cortex_of_kidney:98|subcutaneous_adipose_tissue:96|omental_fat_pad:94|mammary_gland:92|uterus:91|adrenal_gland:89|thyroid_gland:87|minor_salivary_gland:85|skin:83|fallopian_tube:81|ileum:79|endocervix:77|urinary_bladder:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cellular response to tumor necrosis factor|positive regulation of nitric oxide biosynthetic process|cellular response to glucagon stimulus|cellular response to amine stimulus|response to mycotoxin|amino acid biosynthetic process|cellular response to laminar fluid shear stress|urea cycle|response to toxic substance|response to amine|response to peptide hormone|response to glucocorticoid|response to lipopolysaccharide|circadian rhythm|L-arginine biosynthetic process|cellular response to oleic acid"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal hair follicle morphology|alopecia|sparse hair|delayed hair appearance|tremors|abnormal cerebellum external granule cell layer morphology|abnormal cerebellar granule layer morphology|wrinkled skin|epidermal hyperplasia|hyperkeratosis|decreased body length|decreased body size|circling|abnormal gait|postnatal lethality|premature death|no abnormal phenotype detected|decreased brain weight|oxidative stress|abnormal hair follicle development|abnormal hair shaft morphology|increased circulatin"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

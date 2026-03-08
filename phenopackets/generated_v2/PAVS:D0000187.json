@@ -1,0 +1,137 @@
+{
+  "id": "PAVS:D0000187",
+  "subject": {
+    "id": "PAVS:D0000187",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:234480",
+        "label": "OMIM:234480"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000187",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:234480",
+          "label": "OMIM:234480"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000187",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000187_FANCL",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "FANCL",
+                  "valueId": "NCBIGene:55120"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.6815e-17"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.4440e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "pituitary_gland:100|uterus:98|ectocervix:96|endocervix:96|ovary:96|thyroid_gland:96|adrenal_gland:89|fallopian_tube:89|tibial_nerve:89|vagina:89|cervical_vertebra:81|coronary_artery:81|ileum:81|lower_leg_skin:81|lung:81|mammary_gland:81|minor_salivary_gland:81|prostate_gland:81|sigmoid_colon:81|spleen:81|subcutaneous_adipose_tissue:81|testis:81|tibial_artery:81|urinary_bladder:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "protein monoubiquitination|interstrand cross-link repair|DNA damage response|protein ubiquitination|DNA repair"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased bone mineral density|abnormal female reproductive system morphology|small ovary|impaired ovarian folliculogenesis|small testis|decreased body length|increased circulating follicle stimulating hormone level|male infertility|female infertility|abnormal estrous cycle|abnormal coat/hair pigmentation|abnormal seminiferous tubule morphology|increased basophil cell number|small uterus|decreased corpora lutea number|oligozoospermia|abnormal Sertoli cell morphology|abnormal bone structure|decre"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

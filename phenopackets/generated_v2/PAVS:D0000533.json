@@ -1,0 +1,236 @@
+{
+  "id": "PAVS:D0000533",
+  "subject": {
+    "id": "PAVS:D0000533",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000270",
+        "label": "Delayed cranial suture closure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000293",
+        "label": "Full cheeks"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Hypertelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Micrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000501",
+        "label": "Glaucoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000520",
+        "label": "Proptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000689",
+        "label": "Dental malocclusion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001090",
+        "label": "Abnormally large globe"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002564",
+        "label": "obsolete Malformation of the heart and great vessels"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003015",
+        "label": "Flared metaphysis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003026",
+        "label": "Short long bone"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004611",
+        "label": "Anterior concavity of thoracic vertebrae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005731",
+        "label": "Cortical irregularity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006487",
+        "label": "Bowing of the long bones"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009579",
+        "label": "Frank-Ter Haar syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000533",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009579",
+          "label": "Frank-Ter Haar syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000533",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000533_SH3PXD2B",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SH3PXD2B",
+                  "valueId": "NCBIGene:285590"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "5.9917e-05"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.5500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "endocervix:100|ectocervix:98|uterus:96|fallopian_tube:94|ovary:92|tibial_nerve:91|skin:89|urinary_bladder:87|esophagogastric_junction:85|lung:83|subcutaneous_adipose_tissue:83|vagina:79|mammary_gland:77|lower_leg_skin:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heart development|extracellular matrix disassembly|superoxide metabolic process|podosome assembly|superoxide anion generation|protein localization to membrane|adipose tissue development|cell differentiation|eye development|bone development|skeletal system development"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal middle ear morphology|decreased bone mineral density|abnormal neurocranium morphology|large anterior fontanelle|short mandible|short maxilla|abnormal xiphoid process morphology|kyphosis|lordosis|abnormal heart shape|abnormal mitral valve morphology|abnormal craniofacial morphology|domed cranium|short snout|optic nerve atrophy|decreased body weight|decreased body size|ocular hypertelorism|cataract|abnormal cornea morphology|cornea opacity|irregularly shaped pupil|abnormal retina morpholo"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

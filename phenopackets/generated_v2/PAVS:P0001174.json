@@ -1,0 +1,205 @@
+{
+  "id": "PAVS:P0001174",
+  "subject": {
+    "id": "PAVS:P0001174",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P45M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002901",
+        "label": "Hypocalcemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002748",
+        "label": "Rickets"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002148",
+        "label": "Hypophosphatemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001174",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001174",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001174_CYP27B1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CYP27B1",
+                  "valueId": "NCBIGene:1594"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000228606.9:c.562G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000012.12:g.57765324G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000228606.4:p.Gly188Arg"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr12",
+                  "pos": 57765324,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0.05)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.028)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00067"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.3072e-14"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1000e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cortex_of_kidney:100|thyroid_gland:98|pancreas:96|renal_medulla:94|adrenal_gland:92|minor_salivary_gland:91|esophagus_mucosa:89|lower_leg_skin:89|lung:89|pituitary_gland:89|suprapubic_skin:89|testis:89|coronary_artery:77|endocervix:77|fallopian_tube:77|ileum:77|mammary_gland:77|omental_fat_pad:77|ovary:77|prostate_gland:77|skin:77|stomach:77|transverse_colon:77|vagina:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "calcium ion transport|positive regulation of vitamin D receptor signaling pathway|positive regulation of keratinocyte differentiation|lipid biosynthetic process|response to lipopolysaccharide|decidualization|response to vitamin D|response to type II interferon|alcohol metabolic process|vitamin D metabolic process|response to estrogen|vitamin metabolic process|G1 to G0 transition|vitamin D biosynthetic process|cellular response to vitamin D|calcitriol biosynthetic process from calciol|bone minera"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased bone mineral density|thickened long bone epiphysis|abnormal long bone metaphysis morphology|abnormal vertebrae morphology|abnormal scapula morphology|abnormal rib morphology|decreased circulating calcium level|decreased circulating phosphate level|decreased leukocyte cell number|abnormal cranium morphology|abnormal radius morphology|abnormal tibia morphology|abnormal femur morphology|enlarged lymph nodes|small ovary|abnormal ovarian folliculogenesis|absent mature ovarian follicles|abse"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

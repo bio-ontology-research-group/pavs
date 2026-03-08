@@ -1,0 +1,193 @@
+{
+  "id": "PAVS:M0000184",
+  "subject": {
+    "id": "PAVS:M0000184",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P6Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002480",
+        "label": "Hepatic encephalopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:22060631",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/22060631/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009192",
+        "label": "Wolcott-Rallison syndrome"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000184",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009192",
+          "label": "Wolcott-Rallison syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000184",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000184_EIF2AK3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "EIF2AK3",
+                  "valueId": "NCBIGene:9451"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000303236.9:c.1044_1057del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.88590551_88590564del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000307235.3:p.Lys349GlnfsTer4"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "5.7257e-04"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.0600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "minor_salivary_gland:100|ectocervix:98|endocervix:98|pancreas:98|pituitary_gland:98|thyroid_gland:98|tibial_nerve:98|lung:87|stomach:87|vagina:87|coronary_artery:81|fallopian_tube:81|mammary_gland:81|ovary:81|prostate_gland:81|aorta:81|tibial_artery:81|urinary_bladder:81|uterus:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "response to manganese-induced endoplasmic reticulum stress|calcium-mediated signaling|positive regulation of vascular endothelial growth factor production|negative regulation of myelination|regulation of translation initiation in response to endoplasmic reticulum stress|negative regulation of translational initiation|PERK-mediated unfolded protein response|positive regulation of gene expression|cellular response to glucose starvation|regulation of translation|insulin-like growth factor receptor "
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "osteoporosis|decreased compact bone thickness|abnormal vertebral body morphology|abnormal hindlimb morphology|decreased body weight|decreased body size|decreased locomotor activity|hunched posture|hyperglycemia|postnatal growth retardation|postnatal lethality|abnormal axial skeleton morphology|abnormal pancreas physiology|decreased circulating insulin level|steatorrhea|exocrine pancreatic insufficiency|decreased pancreatic beta cell number|abnormal pancreatic beta cell physiology|abnormal insuli"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

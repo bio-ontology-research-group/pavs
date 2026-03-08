@@ -1,0 +1,197 @@
+{
+  "id": "PAVS:M0000062",
+  "subject": {
+    "id": "PAVS:M0000062",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000510",
+        "label": "Retinitis pigmentosa"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:26355662",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/26355662/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000062",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000062",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000062_CNGA3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CNGA3",
+                  "valueId": "NCBIGene:1261"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000272602.7:c.2050G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.98397220G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000272602.2:p.Gly684Arg"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 98397220,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:291365"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0.02)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.028)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "1.026e-05"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "291365"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Uncertain significance"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.6893e-14"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1260e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "pituitary_gland:100|sigmoid_colon:98|muscle_layer_of_esophagus:96|esophagogastric_junction:94|cervical_vertebra:92|hypothalamus:92|ileum:92|transverse_colon:92|testis:85|cerebral_cortex:83|stomach:83|esophagus_mucosa:79|frontal_cortex:77|hippocampus:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "inorganic cation import across plasma membrane|response to cAMP|monoatomic ion transport|retina development in camera-type eye|response to magnesium ion|transmembrane transport|calcium ion transmembrane transport|monoatomic cation transmembrane transport|sodium ion transport|calcium ion transport|signal transduction|monoatomic cation transport|sodium ion transmembrane transport|visual perception|monoatomic ion transmembrane transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "enlarged spleen|abnormal retina cone cell morphology|decreased body length|decreased retina photoreceptor cell number|abnormal olfactory system physiology|abnormal kidney morphology|increased circulating alanine transaminase level|abnormal cone electrophysiology|enlarged uterus|abnormal eye physiology|abnormal eye electrophysiology|decreased visual acuity|retina cone cell degeneration|abnormal retina cone cell outer segment morphology|photoreceptor outer segment degeneration|abnormal olfactory b"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "id": "PAVS:D0000583",
+  "subject": {
+    "id": "PAVS:D0000583",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000100",
+        "label": "Nephrotic syndrome"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Gingival overgrowth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000212",
+        "label": "Hydrocephalus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000238",
+        "label": "Coarse facial features"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000280",
+        "label": "Epicanthus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000286",
+        "label": "Anteverted nares"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000463",
+        "label": "Ptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000508",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Abnormal thorax morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000765",
+        "label": "Osteopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000938",
+        "label": "Hypopigmentation of the skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001010",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Ascites"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001541",
+        "label": "Premature birth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001622",
+        "label": "Congestive heart failure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001635",
+        "label": "Cardiomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001640",
+        "label": "Splenomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001744",
+        "label": "Abnormal foot morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001760",
+        "label": "Hydrops fetalis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001789",
+        "label": "Vacuolated lymphocytes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001922",
+        "label": "Cerebral atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002059",
+        "label": "Hepatomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002240",
+        "label": "Fair hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002286",
+        "label": "J-shaped sella turcica"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002680",
+        "label": "Conjugated hyperbilirubinemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002908",
+        "label": "Metaphyseal irregularity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003025",
+        "label": "Death in childhood"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003819",
+        "label": "HP:0003819"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010027",
+        "label": "free sialic acid storage disease, infantile form"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000583",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010027",
+          "label": "free sialic acid storage disease, infantile form"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000583",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000583_SLC17A5",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SLC17A5",
+                  "valueId": "NCBIGene:26503"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.1116e-09"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0650e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "thyroid_gland:100|skin:98|minor_salivary_gland:96|aorta:94|coronary_artery:92|lung:92|tibial_artery:92|pituitary_gland:87|subcutaneous_adipose_tissue:85|mammary_gland:83|omental_fat_pad:81|transverse_colon:81|uterus:81|ileum:75|tibial_nerve:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "D-glucuronate transmembrane transport|carbohydrate derivative transport|carbohydrate transmembrane transport|proton transmembrane transport|sialic acid transport|carboxylic acid transport|transmembrane transport|neurotransmitter loading into synaptic vesicle|amino acid transport|organic anion transport|monoatomic anion transport|glucuronate transmembrane transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal cell morphology|tremors|weakness|abnormal corpus callosum morphology|abnormal myelination|demyelination|decreased oligodendrocyte progenitor number|decreased body weight|decreased body size|abnormal optic nerve morphology|abnormal locomotor behavior|abnormal gait|short stride length|decreased exploration in new environment|postnatal growth retardation|premature death|behavioral despair|abnormal neuron morphology|abnormal myelin sheath morphology|tonic-clonic seizures|abnormal optic trac"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

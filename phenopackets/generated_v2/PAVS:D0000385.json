@@ -1,0 +1,121 @@
+{
+  "id": "PAVS:D0000385",
+  "subject": {
+    "id": "PAVS:D0000385",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000385",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000385",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000385_PIK3CA",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PIK3CA",
+                  "valueId": "NCBIGene:5290"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.2100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "tibial_artery:100|tibial_nerve:100|skin:96|subcutaneous_adipose_tissue:96|coronary_artery:92|mammary_gland:92|aorta:92|uterus:92|endocervix:85|fallopian_tube:85|lung:85|omental_fat_pad:85|ovary:85|ectocervix:75|muscle_layer_of_esophagus:75|sigmoid_colon:75|urinary_bladder:75|vagina:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "actin cytoskeleton organization|endothelial cell migration|TORC2 signaling|relaxation of cardiac muscle|positive regulation of smooth muscle cell proliferation|cellular response to insulin stimulus|positive regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction|cardiac muscle contraction|cell migration|regulation of actin filament organization|negative regulation of gene expression|phosphatidylinositol 3-kinase/protein kinase B signal transduction|platelet activation|po"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "blood vessel congestion|abnormal vascular development|abnormal angiogenesis|decreased cell proliferation|decreased body length|decreased body weight|polyphagia|internal hemorrhage|abnormal somite development|decreased embryo size|pale yolk sac|embryonic growth arrest|postnatal growth retardation|abnormal lymphatic vessel morphology|hemorrhage|increased circulating insulin level|abnormal retina vasculature morphology|abnormal vitelline vasculature morphology|increased pancreatic beta cell number|"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

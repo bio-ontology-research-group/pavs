@@ -1,0 +1,274 @@
+{
+  "id": "PAVS:D0000876",
+  "subject": {
+    "id": "PAVS:D0000876",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000256",
+        "label": "Macrocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001010",
+        "label": "Hypopigmentation of the skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001012",
+        "label": "Multiple lipomas"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001028",
+        "label": "Hemangioma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001140",
+        "label": "Limbal dermoid"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001528",
+        "label": "Hemihypertrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001548",
+        "label": "Overgrowth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002176",
+        "label": "Spinal cord compression"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002342",
+        "label": "Intellectual disability, moderate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002751",
+        "label": "Kyphoscoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003416",
+        "label": "Spinal canal stenosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003745",
+        "label": "Sporadic"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003764",
+        "label": "Nevus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004472",
+        "label": "Mandibular hyperostosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004490",
+        "label": "Calvarial hyperostosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005465",
+        "label": "Facial hyperostosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007403",
+        "label": "Hypertrophy of skin of soles"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007483",
+        "label": "Depigmentation/hyperpigmentation of skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0012032",
+        "label": "Lipoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100764",
+        "label": "Lymphangioma"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008318",
+        "label": "Proteus syndrome"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000876",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008318",
+          "label": "Proteus syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000876",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000876_PTEN",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PTEN",
+                  "valueId": "NCBIGene:5728"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.8668e-02"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.8500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ectocervix:100|endocervix:98|fallopian_tube:96|tibial_nerve:94|uterus:92|omental_fat_pad:91|blood:91|cerebellar_hemisphere:91|coronary_artery:85|subcutaneous_adipose_tissue:85|tibial_artery:81|spleen:79|vagina:79|mammary_gland:75|aorta:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heart development|regulation of cell cycle|negative regulation of axonogenesis|positive regulation of excitatory postsynaptic potential|apoptotic process|maternal behavior|cell migration|regulation of neuron projection development|postsynaptic density assembly|negative regulation of cellular senescence|negative regulation of epithelial to mesenchymal transition|regulation of protein stability|multicellular organismal response to stress|phosphatidylinositol 3-kinase/protein kinase B signal transd"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased cell proliferation|megacephaly|abnormal thyroid gland morphology|lymphoid hyperplasia|enlarged spleen|enlarged thymus|abnormal olfactory bulb morphology|abnormal metastatic potential|abnormal brain development|open neural tube|wavy neural tube|abnormal uterus morphology|abnormal prostate gland morphology|prostate gland epithelial hyperplasia|abnormal prostate gland epithelium morphology|decreased body size|increased metastatic potential|abnormal social investigation|increased stereotyp"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

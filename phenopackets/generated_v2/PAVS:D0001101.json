@@ -1,0 +1,320 @@
+{
+  "id": "PAVS:D0001101",
+  "subject": {
+    "id": "PAVS:D0001101",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000280",
+        "label": "Coarse facial features"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000303",
+        "label": "Mandibular prognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000484",
+        "label": "Hyperopic astigmatism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000488",
+        "label": "Retinopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000773",
+        "label": "Short ribs"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000885",
+        "label": "Broad ribs"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000943",
+        "label": "Dysostosis multiplex"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001072",
+        "label": "Thickened skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001171",
+        "label": "Split hand"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001328",
+        "label": "Specific learning disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001363",
+        "label": "Craniosynostosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001498",
+        "label": "Carpal bone hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001659",
+        "label": "Aortic regurgitation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002680",
+        "label": "J-shaped sella turcica"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003026",
+        "label": "Short long bone"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003182",
+        "label": "Shallow acetabular fossae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003264",
+        "label": "Deficiency of N-acetylglucosamine-1-phosphotransferase"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003333",
+        "label": "Increased serum beta-hexosaminidase"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003538",
+        "label": "Increased iduronate sulfatase level"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004236",
+        "label": "Irregular carpal bones"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006162",
+        "label": "Soft tissue swelling of interphalangeal joints"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007759",
+        "label": "Opacification of the corneal stroma"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0018931",
+        "label": "mucolipidosis type III, alpha/beta"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001101",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0018931",
+          "label": "mucolipidosis type III, alpha/beta"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001101",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001101_GNPTAB",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GNPTAB",
+                  "valueId": "NCBIGene:79158"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.5001e-13"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.0000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "minor_salivary_gland:100|tibial_nerve:98|lung:96|prostate_gland:94|skin:94|lower_leg_skin:91|suprapubic_skin:91|frontal_cortex:87|endocervix:85|spleen:85|tibial_artery:85|cerebellar_hemisphere:85|ileum:77|muscle_layer_of_esophagus:77|subcutaneous_adipose_tissue:77|urinary_bladder:77|vagina:77|cerebellum:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "N-glycan processing to lysosome|establishment of localization in cell|protein transport|carbohydrate phosphorylation|lysosome organization"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased bone mineral density|osteoporosis|kyphosis|abnormal chondrocyte morphology|abnormal heart morphology|enlarged heart|abnormal cell morphology|flattened snout|abnormal stomach morphology|abnormal salivary gland morphology|abnormal spleen morphology|enlarged spleen|enlarged lymph nodes|progressive muscle weakness|decreased brain size|Purkinje cell degeneration|abnormal cerebellar molecular layer|demyelination|abnormal uterus morphology|abnormal ovary morphology|abnormal bulbourethral glan"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

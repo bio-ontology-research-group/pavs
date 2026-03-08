@@ -1,0 +1,202 @@
+{
+  "id": "PAVS:P0000663",
+  "subject": {
+    "id": "PAVS:P0000663",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P6Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001251",
+        "label": "Ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000663",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000663",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000663_MBOAT7",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MBOAT7",
+                  "valueId": "NCBIGene:79143"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000245615.6:c.604G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.54181023G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000245615.1:p.Gly202Ser"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 54181023,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0.04)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "possibly_damaging(0.775)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF03062"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "1.641e-05"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.7407e-13"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.2290e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "blood:100|adrenal_gland:98|testis:96|cerebral_cortex:94|frontal_cortex:92|hypothalamus:91|spleen:89|pituitary_gland:87|skin:85|urinary_bladder:83|anterior_cingulate_cortex:81|endocervix:79|fallopian_tube:79|prostate_gland:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "phospholipid biosynthetic process|regulation of triglyceride metabolic process|layer formation in cerebral cortex|lipid metabolic process|lipid modification|phosphatidylinositol biosynthetic process|phosphatidylcholine acyl-chain remodeling|phospholipid metabolic process|phosphatidylinositol acyl-chain remodeling"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "domed cranium|forebrain hypoplasia|abnormal cerebral cortex morphology|abnormal hippocampus morphology|dilated lateral ventricle|dilated third ventricle|small seminal vesicle|decreased body size|abnormal gait|abnormal eating behavior|abnormal pilomotor reflex|hydrocephaly|premature death|abnormal lipid homeostasis|increased neuron apoptosis|decreased lean body mass|increased lymphocyte cell number|lethargy|increased fatty acids level|decreased fatty acids level|abnormal neuronal migration|small "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

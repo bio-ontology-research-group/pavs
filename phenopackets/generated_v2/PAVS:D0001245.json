@@ -1,0 +1,243 @@
+{
+  "id": "PAVS:D0001245",
+  "subject": {
+    "id": "PAVS:D0001245",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000577",
+        "label": "Exotropia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001008",
+        "label": "Accumulation of melanosomes in melanocytes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001010",
+        "label": "Hypopigmentation of the skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001251",
+        "label": "Ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001257",
+        "label": "Spasticity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002218",
+        "label": "Silver-gray hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002220",
+        "label": "Melanin pigment aggregation in hair shafts"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003593",
+        "label": "Infantile onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003819",
+        "label": "Death in childhood"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009742",
+        "label": "neuroectodermal melanolysosomal disease"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001245",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009742",
+          "label": "neuroectodermal melanolysosomal disease"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001245",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001245_MYO5A",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MYO5A",
+                  "valueId": "NCBIGene:4644"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9510e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.6100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellar_hemisphere:100|cerebellum:98|frontal_cortex:96|cerebral_cortex:94|anterior_cingulate_cortex:92|hypothalamus:91|nucleus_accumbens:91|skin:91|tibial_nerve:91|cervical_vertebra:83|pituitary_gland:83|subcutaneous_adipose_tissue:83|endocervix:77|amygdala:77|hippocampus:77|lower_leg_skin:77|substantia_nigra:77|caudate_nucleus:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "actin filament-based movement|endocytosis|protein transport|actin filament organization|vesicle-mediated transport|cellular response to insulin stimulus|protein localization to plasma membrane|post-Golgi vesicle-mediated transport|vesicle transport along actin filament|melanosome transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal ear pigmentation|myoclonus|diluted coat color|abnormal hair cycle|abnormal cerebellum morphology|decreased body size|ataxia|circling|hyperactivity|impaired coordination|abnormal gait|reduced long-term depression|impaired righting response|impaired limb coordination|impaired balance|seizures|abnormal motor capabilities/coordination/movement|abnormal coat/hair pigmentation|postnatal lethality|premature death|no abnormal phenotype detected|abnormal eye blink conditioning behavior|abnormal "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

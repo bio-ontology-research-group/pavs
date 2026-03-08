@@ -1,0 +1,236 @@
+{
+  "id": "PAVS:D0000595",
+  "subject": {
+    "id": "PAVS:D0000595",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000202",
+        "label": "Orofacial cleft"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000204",
+        "label": "Cleft upper lip"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000303",
+        "label": "Mandibular prognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000482",
+        "label": "Microcornea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000568",
+        "label": "Microphthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000581",
+        "label": "Blepharophimosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001566",
+        "label": "Widely-spaced maxillary central incisors"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001839",
+        "label": "Split foot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001939",
+        "label": "Abnormality of metabolism/homeostasis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100678",
+        "label": "Premature skin wrinkling"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011045",
+        "label": "MMEP syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000595",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011045",
+          "label": "MMEP syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000595",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000595_SNX3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SNX3",
+                  "valueId": "NCBIGene:8724"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.3341e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.1700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "tibial_artery:100|ovary:98|skin:96|ectocervix:94|endocervix:94|coronary_artery:91|aorta:89|omental_fat_pad:87|subcutaneous_adipose_tissue:85|uterus:83|tibial_nerve:81|fallopian_tube:79|mammary_gland:79|adrenal_gland:75|urinary_bladder:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "host-mediated suppression of symbiont invasion|negative regulation of protein transport|intralumenal vesicle formation|regulation of Wnt signaling pathway|response to bacterium|endocytic recycling|protein to membrane docking|negative regulation of early endosome to late endosome transport|protein transport|late endosome to Golgi transport|positive regulation of neuron projection development|negative regulation of phagocytosis|membrane invagination|negative regulation of protein catabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "cleft palate|abnormal craniofacial morphology|syndactyly|abnormal forebrain morphology|abnormal hindbrain morphology|abnormal midbrain morphology|exencephaly|anophthalmia|microphthalmia|abnormal embryo size|edema|abnormal limb morphology|abnormal tail morphology|increased mean corpuscular volume|spina bifida|pallor|abnormal neural tube closure|abnormal facial morphology|increased blood urea nitrogen level|increased grip strength|preweaning lethality, complete penetrance|abnormal head shape"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

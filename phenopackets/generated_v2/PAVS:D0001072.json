@@ -1,0 +1,250 @@
+{
+  "id": "PAVS:D0001072",
+  "subject": {
+    "id": "PAVS:D0001072",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001251",
+        "label": "Ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Motor delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001274",
+        "label": "Agenesis of corpus callosum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001302",
+        "label": "Pachygyria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001320",
+        "label": "Cerebellar vermis hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001339",
+        "label": "Lissencephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002119",
+        "label": "Ventriculomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002126",
+        "label": "Polymicrogyria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002282",
+        "label": "Gray matter heterotopia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002319",
+        "label": "Hypoplasia of the brainstem"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002365",
+        "label": "Spastic tetraplegia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002510",
+        "label": "Intellectual disability, severe"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010864",
+        "label": "HP:0010864"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012703",
+        "label": "lissencephaly due to TUBA1A mutation"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001072",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012703",
+          "label": "lissencephaly due to TUBA1A mutation"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001072",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001072_TUBA1A",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TUBA1A",
+                  "valueId": "NCBIGene:7846"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9979e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "3.7000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cervical_vertebra:100|hypothalamus:98|substantia_nigra:96|cerebellar_hemisphere:94|sigmoid_colon:92|cerebellum:91|tibial_nerve:89|muscle_layer_of_esophagus:87|esophagogastric_junction:85|uterus:83|frontal_cortex:81|hippocampus:79|cerebral_cortex:77|nucleus_accumbens:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "glial cell differentiation|neuron apoptotic process|response to tumor necrosis factor|pyramidal neuron differentiation|microtubule-based process|homeostasis of number of cells within a tissue|adult locomotory behavior|locomotory exploration behavior|mitotic cell cycle|gene expression|cellular response to calcium ion|response to L-glutamate|startle response|'de novo' protein folding|smoothened signaling pathway|memory|cerebral cortex development|cerebellar cortex morphogenesis|synapse organizatio"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "cleft palate|abnormal cerebral cortex morphology|abnormal visual cortex morphology|abnormal hippocampus morphology|abnormal dentate gyrus morphology|abnormal Ammon gyrus morphology|abnormal third ventricle morphology|abnormal somatosensory cortex morphology|abnormal telencephalon development|decreased body weight|decreased anxiety-related response|hyperactivity|abnormal nest building behavior|abnormal embryo size|edema|hemorrhage|abnormal hippocampal mossy fiber morphology|abnormal neuron morpho"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "id": "PAVS:M0000025",
+  "subject": {
+    "id": "PAVS:M0000025",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000510",
+        "label": "Cone rod dystrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:26355662",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/26355662/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000025",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000025",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000025_PDE6C",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PDE6C",
+                  "valueId": "NCBIGene:5146"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000371447.4:c.939+5G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000010.11:g.93625654G>A"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr10",
+                  "pos": 93625654,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:188816"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "splice_donor_5th_base_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "LOW"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "1.104e-05"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "188816"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic/Likely pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.3177e-14"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.7600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellar_hemisphere:100|cerebellum:100|ectocervix:96|endocervix:96|tibial_nerve:96|fallopian_tube:91|ovary:91|pituitary_gland:91|prostate_gland:91|thyroid_gland:91|uterus:91|vagina:91|coronary_artery:77|esophagogastric_junction:77|ileum:77|lower_leg_skin:77|lung:77|mammary_gland:77|muscle_layer_of_esophagus:77|sigmoid_colon:77|aorta:77|spleen:77|subcutaneous_adipose_tissue:77|suprapubic_skin:77|testis:77|tibial_artery:77|urinary_bladder:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "visual perception|negative regulation of cAMP/PKA signal transduction|signal transduction"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal retina inner nuclear layer morphology|abnormal cone electrophysiology|abnormal eye electrophysiology|retina cone cell degeneration|decreased retina cone cell number"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

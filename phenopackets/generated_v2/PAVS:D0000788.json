@@ -1,0 +1,285 @@
+{
+  "id": "PAVS:D0000788",
+  "subject": {
+    "id": "PAVS:D0000788",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000054",
+        "label": "Micropenis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000260",
+        "label": "Wide anterior fontanel"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000270",
+        "label": "Delayed cranial suture closure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000684",
+        "label": "Delayed eruption of teeth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000696",
+        "label": "Delayed eruption of permanent teeth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001159",
+        "label": "Syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001629",
+        "label": "Ventricular septal defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001760",
+        "label": "Abnormal foot morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002937",
+        "label": "Hemivertebrae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002944",
+        "label": "Thoracolumbar scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002948",
+        "label": "Vertebral fusion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003026",
+        "label": "Short long bone"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004590",
+        "label": "Hypoplastic sacrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005819",
+        "label": "Short middle phalanx of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008384",
+        "label": "Type A brachydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009370",
+        "label": "Joint contracture of the hand"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009473",
+        "label": "Aplasia/Hypoplasia of the distal phalanges of the hand"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009835",
+        "label": "Aplasia of metacarpal bones"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010048",
+        "label": "Broad thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011304",
+        "label": "HP:0011304"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007220",
+        "label": "brachydactyly type B1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000788",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007220",
+          "label": "brachydactyly type B1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000788",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000788_ROR2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ROR2",
+                  "valueId": "NCBIGene:4920"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.4970e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.4300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "sigmoid_colon:100|uterus:98|endocervix:96|ectocervix:94|esophagogastric_junction:92|muscle_layer_of_esophagus:91|ovary:89|urinary_bladder:87|prostate_gland:85|fallopian_tube:83|vagina:81|transverse_colon:79|skin:77|thyroid_gland:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of cell migration|cell surface receptor protein tyrosine kinase signaling pathway|Wnt signaling pathway|signal transduction"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal malleus morphology|abnormal organ of Corti morphology|delayed bone ossification|short mandible|abnormal nasal bone morphology|cleft palate|abnormal vertebrae morphology|abnormal rib morphology|rib fusion|abnormal cartilage morphology|abnormal cartilage development|abnormal craniofacial morphology|abnormal cranium morphology|increased cranium width|short snout|abnormal jaw morphology|abnormal maxilla morphology|abnormal mandible morphology|short limbs|abnormal radius morphology|abnormal "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

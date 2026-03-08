@@ -1,0 +1,181 @@
+{
+  "id": "PAVS:M0000082",
+  "subject": {
+    "id": "PAVS:M0000082",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:26355662",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/26355662/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0014438",
+        "label": "Bardet-Biedl syndrome 10"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000082",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0014438",
+          "label": "Bardet-Biedl syndrome 10"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000082",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000082_BBS10",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "BBS10",
+                  "valueId": "NCBIGene:79738"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000650064.2:c.1892_1896del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000012.12:g.76346089_76346093del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000497413.1:p.Met631AsnfsTer3"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.2190e-05"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.4180e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|tibial_nerve:98|cerebellar_hemisphere:96|uterus:94|endocervix:92|coronary_artery:91|ectocervix:91|lung:91|ovary:91|subcutaneous_adipose_tissue:91|cerebellum:91|fallopian_tube:79|mammary_gland:79|cervical_vertebra:75|muscle_layer_of_esophagus:75|spleen:75|thyroid_gland:75|vagina:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of protein-containing complex assembly|chaperone-mediated protein complex assembly|photoreceptor cell maintenance|visual perception|non-motile cilium assembly"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased body weight|obese|decreased body weight|retina degeneration|polyphagia|polyuria|increased urine microalbumin level|abnormal photoreceptor outer segment morphology|abnormal rod electrophysiology|abnormal glucose tolerance|increased circulating antidiuretic hormone level|increased circulating sodium level|increased circulating leptin level|abnormal retina apoptosis|absent podocyte foot process|retina photoreceptor degeneration|retina outer nuclear layer degeneration|photoreceptor inner s"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -113,12 +113,13 @@ skip_if_exists "$GTEX_DIR" || {
 # ── Saudi Allele Frequencies ───────────────────────────────────────────────────
 log ""
 log "NOTE: Saudi allele frequencies (data/reference/allele-frequencies/) are"
-log "      not publicly available. Contact the authors for access."
+log "      publicly available from Figshare: https://doi.org/10.6084/m9.figshare.28059686.v1"
+log "      Paper (PMC11761371): https://pmc.ncbi.nlm.nih.gov/articles/PMC11761371/"
 log "      These are derived from 302 WGS individuals."
 
 log ""
 log "All public reference files downloaded to $REFDIR/"
 log "Next steps:"
-log "  1. Obtain data/reference/allele-frequencies/ from the authors"
+log "  1. Download data/reference/allele-frequencies/ from Figshare"
 log "  2. Run: uv run python normalization/combine_normalize_phenotypes.py ..."
 log "  3. Run: uv run python normalization/annotate_variants.py ..."

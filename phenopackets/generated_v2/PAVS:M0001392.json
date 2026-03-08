@@ -1,0 +1,211 @@
+{
+  "id": "PAVS:M0001392",
+  "subject": {
+    "id": "PAVS:M0001392",
+    "sex": "MALE",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002728",
+        "label": "Chronic mucocutaneous candidiasis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001806",
+        "label": "Onycholysis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008064",
+        "label": "Ichthyosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001392",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001392",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001392_IL17RA",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "IL17RA",
+                  "valueId": "NCBIGene:23765"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000319363.11:c.1574T>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000022.11:g.17108793T>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000320936.6:p.Leu525Pro"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr22",
+                  "pos": 17108793,
+                  "ref": "T",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:3392510"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(1)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF08357"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "3392510"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Uncertain significance"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "5.4993e-09"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.9700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "blood:100|spleen:98|lung:96|skin:94|subcutaneous_adipose_tissue:92|endocervix:91|omental_fat_pad:91|fallopian_tube:87|aorta:87|lower_leg_skin:83|mammary_gland:83|coronary_artery:79|tibial_nerve:79|uterus:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "interleukin-17A-mediated signaling pathway|positive regulation of interleukin-6 production|fibroblast activation|interleukin-17-mediated signaling pathway|defense response to fungus|adaptive immune response|immune system process|cell surface receptor signaling pathway|positive regulation of interleukin-23 production|protein K63-linked ubiquitination|innate immune response|positive regulation of interleukin-5 production|regulation of keratinocyte proliferation|T-helper 17 type immune response|gra"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased neutrophil cell number|abnormal liver morphology|small liver|abnormal uterus morphology|abnormal ovary morphology|psoriasis|abnormal gait|decreased exploration in new environment|decreased inflammatory response|abnormal skin morphology|increased susceptibility to infection|increased vertical activity|pulmonary edema|skin inflammation|increased CD4-positive, alpha-beta T cell number|abnormal T-helper 2 cell differentiation|abnormal granulocyte differentiation|increased gamma-delta T cel"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

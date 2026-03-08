@@ -1,0 +1,362 @@
+{
+  "id": "PAVS:D0000793",
+  "subject": {
+    "id": "PAVS:D0000793",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000081",
+        "label": "Duplicated collecting system"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000085",
+        "label": "Horseshoe kidney"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000086",
+        "label": "Ectopic kidney"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000104",
+        "label": "Renal agenesis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000568",
+        "label": "Microphthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000792",
+        "label": "Hypergonadotropic hypogonadism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000815",
+        "label": "Cafe-au-lait spot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000957",
+        "label": "Bruising susceptibility"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000978",
+        "label": "Anemic pallor"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001017",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Small for gestational age"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001518",
+        "label": "Thrombocytopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001873",
+        "label": "Neutropenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001875",
+        "label": "Pancytopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001876",
+        "label": "Reticulocytopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001896",
+        "label": "Anemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001903",
+        "label": "Leukemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001909",
+        "label": "obsolete Malformation of the heart and great vessels"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002564",
+        "label": "Deficient excision of UV-induced pyrimidine dimers in DNA"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003213",
+        "label": "Prolonged G2 phase of cell cycle"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003214",
+        "label": "Chromosomal breakage induced by crosslinking agents"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003221",
+        "label": "Absent radius"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003974",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Absent thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009777",
+        "label": "Short thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009778",
+        "label": "Complete duplication of thumb phalanx"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009943",
+        "label": "HP:0009943"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009213",
+        "label": "Fanconi anemia complementation group C"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000793",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009213",
+          "label": "Fanconi anemia complementation group C"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000793",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000793_FANCC",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "FANCC",
+                  "valueId": "NCBIGene:2176"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.6625e-14"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0220e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|cerebellar_hemisphere:98|cerebellum:98|liver:94|ectocervix:92|endocervix:92|tibial_nerve:92|uterus:92|coronary_artery:85|esophagogastric_junction:85|fallopian_tube:85|ileum:85|lower_leg_skin:85|lung:85|pituitary_gland:85|prostate_gland:85|renal_medulla:85|aorta:85|skin:85|suprapubic_skin:85|thyroid_gland:85|urinary_bladder:85|vagina:85"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "nucleotide-excision repair|protein-containing complex assembly|interstrand cross-link repair|DNA damage response|DNA repair|cellular response to oxidative stress"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "absent common myeloid progenitor cells|uterus hypoplasia|abnormal ovary morphology|small ovary|impaired ovarian folliculogenesis|absent corpus luteum|seminiferous tubule degeneration|arrest of spermatogenesis|abnormal hematopoietic system physiology|reduced fertility|reduced female fertility|male infertility|female infertility|decreased litter size|abnormal reproductive system morphology|abnormal fertility/fecundity|decreased germ cell number|abnormal seminiferous tubule morphology|oligozoosperm"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

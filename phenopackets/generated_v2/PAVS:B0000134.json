@@ -1,0 +1,213 @@
+{
+  "id": "PAVS:B0000134",
+  "subject": {
+    "id": "PAVS:B0000134",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-pmid28454995",
+        "description": "Source dataset: ahmed-pmid28454995"
+      },
+      {
+        "id": "PMID:28454995",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010134",
+        "label": "Pendred syndrome"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:B0000134",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010134",
+          "label": "Pendred syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:B0000134",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:B0000134_SLC26A4",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SLC26A4",
+                  "valueId": "NCBIGene:5172"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000644269.2:c.716T>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000007.14:g.107675060T>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000494017.1:p.Val239Asp"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr7",
+                  "pos": 107675060,
+                  "ref": "T",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:52735"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "possibly_damaging(0.896)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00916"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "0.0001006"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "52735"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.1801e-20"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.5270e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "thyroid_gland:100|cerebral_cortex:98|cortex_of_kidney:98|frontal_cortex:98|anterior_cingulate_cortex:98|coronary_artery:91|ectocervix:91|prostate_gland:91|aorta:91|testis:91|endocervix:81|lung:81|ovary:81|tibial_artery:81|tibial_nerve:81|uterus:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "oxalate transport|regulation of protein localization|iodide transport|regulation of pH|sulfate transmembrane transport|inorganic anion transport|sensory perception of sound|transmembrane transport|chloride transmembrane transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal inner ear morphology|abnormal cochlea morphology|abnormal inner ear vestibule morphology|abnormal organ of Corti morphology|organ of Corti degeneration|abnormal hair cell morphology|abnormal stria vascularis morphology|abnormal thyroid gland morphology|decreased body weight|circling|bidirectional circling|impaired coordination|abnormal gait|head bobbing|impaired swimming|impaired balance|abnormal placing response|deafness|abnormal semicircular canal morphology|asthenozoospermia|oligozoo"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

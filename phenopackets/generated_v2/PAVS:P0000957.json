@@ -1,0 +1,208 @@
+{
+  "id": "PAVS:P0000957",
+  "subject": {
+    "id": "PAVS:P0000957",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P19M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000848",
+        "label": "Increased circulating renin concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0200114",
+        "label": "Metabolic alkalosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000124",
+        "label": "Renal tubular dysfunction"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002900",
+        "label": "Hypokalemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000957",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000957",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000957_SLC26A3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SLC26A3",
+                  "valueId": "NCBIGene:1811"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000340010.10:c.559G>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000007.14:g.107791059G>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000345873.5:p.Gly187Ter"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr7",
+                  "pos": 107791059,
+                  "ref": "G",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "stop_gained"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00916"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "6.842e-07"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.1356e-11"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.5700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "transverse_colon:100|ileum:98|sigmoid_colon:96|ectocervix:94|muscle_layer_of_esophagus:94|endocervix:91|esophagogastric_junction:91|mammary_gland:91|testis:91|fallopian_tube:83|stomach:83|prostate_gland:79|urinary_bladder:79|cerebellar_hemisphere:79|cerebellum:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "intracellular pH elevation|oxalate transport|membrane hyperpolarization|cellular response to cAMP|sulfate transmembrane transport|sperm capacitation|transmembrane transport|monoatomic anion transport|bicarbonate transport|chloride transmembrane transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased cell proliferation|rectal prolapse|abnormal colon morphology|decreased body weight|abnormal digestive system physiology|premature death|increased circulating aldosterone level|decreased circulating chloride level|abnormal feces composition|abnormal large intestine crypts of Lieberkuhn morphology|diarrhea|increased blood urea nitrogen level|decreased circulating potassium level|decreased circulating sodium level|postnatal lethality, incomplete penetrance|increased feces water content"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

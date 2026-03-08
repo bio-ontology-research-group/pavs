@@ -1,0 +1,171 @@
+{
+  "id": "PAVS:M0000338",
+  "subject": {
+    "id": "PAVS:M0000338",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P5Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001363",
+        "label": "Craniosynostosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001085",
+        "label": "Papilledema"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:33937142",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/33937142/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000338",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000338",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000338_FREM1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "FREM1",
+                  "valueId": "NCBIGene:158326"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000009.12:g.14851520_14851521insGAAGTGGATCAGTTCATCCTG"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "inframe_insertion"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODIFIER"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.6459e-52"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1570e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "uterus:100|cerebellum:98|aorta:96|cerebellar_hemisphere:96|tibial_artery:92|renal_medulla:91|coronary_artery:89|sigmoid_colon:89|cortex_of_kidney:85|endocervix:85|fallopian_tube:85|ileum:85|testis:77|ectocervix:75|lung:75|pancreas:75|tibial_nerve:75|vagina:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "epithelial structure maintenance|cell communication|craniofacial suture morphogenesis|cell adhesion|cell-matrix adhesion"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal nasal bone morphology|abnormal craniofacial morphology|short snout|rectal prolapse|absent kidney|abnormal kidney development|polydactyly|syndactyly|blistering|abnormal epidermal layer morphology|abnormal eye development|anophthalmia|microphthalmia|eyelids open at birth|abnormal conjunctiva morphology|abnormal cornea morphology|absent eyelids|abnormal postnatal growth/weight/body size|abnormal eye morphology|abnormal digit morphology|abnormal kidney morphology|abnormal brain morphology|n"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "id": "PAVS:P0000935",
+  "subject": {
+    "id": "PAVS:P0000935",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P19Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002028",
+        "label": "Chronic diarrhea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000729",
+        "label": "Autistic behavior"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000935",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000935",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000935_EPCAM",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "EPCAM",
+                  "valueId": "NCBIGene:4072"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000263735.9:c.497_498insC"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.47377019_47377020insC"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000263735.4:p.Gln167SerfsTer21"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF21283"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.2301e-06"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.3410e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "transverse_colon:100|ileum:98|thyroid_gland:96|pituitary_gland:94|renal_medulla:92|minor_salivary_gland:91|cortex_of_kidney:89|stomach:87|pancreas:85|lung:83|prostate_gland:81|testis:79|mammary_gland:77|esophagus_mucosa:75|lower_leg_skin:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "ureteric bud development|negative regulation of cell-cell adhesion mediated by cadherin|signal transduction involved in regulation of gene expression|stem cell differentiation|positive regulation of transcription by RNA polymerase II|cell-cell adhesion|positive regulation of cell population proliferation|positive regulation of stem cell proliferation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal intestine morphology|abnormal enterocyte morphology|abnormal intestinal epithelium morphology|abnormal crypts of Lieberkuhn morphology|abnormal colon morphology|abnormal intestinal mucosa morphology|decreased body size|internal hemorrhage|decreased embryo size|decreased trophoblast giant cell number|abnormal placenta labyrinth morphology|embryonic growth arrest|postnatal growth retardation|abnormal ileum morphology|delayed neural tube closure|abnormal duodenum morphology|intestinal edem"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

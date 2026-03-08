@@ -1,0 +1,163 @@
+{
+  "id": "PAVS:P0001160",
+  "subject": {
+    "id": "PAVS:P0001160",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001160",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001160",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001160_ATP11C",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ATP11C",
+                  "valueId": "NCBIGene:286410"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000682941.1:c.1677T>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000023.11:g.139783257T>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000507250.1:p.Leu559="
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chrX",
+                  "pos": 139783257,
+                  "ref": "T",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000134",
+                  "label": "hemizygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "synonymous_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "LOW"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF13246"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|uterus:100|endocervix:96|ectocervix:94|ovary:94|fallopian_tube:91|tibial_artery:91|coronary_artery:87|tibial_nerve:87|aorta:83|subcutaneous_adipose_tissue:83|urinary_bladder:83|mammary_gland:77|omental_fat_pad:75|sigmoid_colon:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "aminophospholipid translocation|phospholipid translocation|phospholipid transport|monoatomic ion transmembrane transport|lipid transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased hematocrit|decreased leukocyte cell number|increased circulating HDL cholesterol level|anemia|abnormal humoral immune response|arrested B cell differentiation|decreased IgM level|decreased IgA level|abnormal B cell differentiation|no abnormal phenotype detected|increased mean corpuscular volume|decreased hemoglobin content|decreased erythrocyte cell number|increased circulating alkaline phosphatase level|increased hepatocellular carcinoma incidence|decreased B-1 B cell number|decreased"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

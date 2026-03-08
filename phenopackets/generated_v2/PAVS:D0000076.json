@@ -1,0 +1,376 @@
+{
+  "id": "PAVS:D0000076",
+  "subject": {
+    "id": "PAVS:D0000076",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000161",
+        "label": "Median cleft upper lip"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000286",
+        "label": "Epicanthus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Hypertelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000327",
+        "label": "Hypoplasia of the maxilla"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000349",
+        "label": "Widow's peak"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000369",
+        "label": "Low-set ears"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000384",
+        "label": "Preauricular skin tag"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000405",
+        "label": "Conductive hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000431",
+        "label": "Wide nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000431",
+        "label": "Wide nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000455",
+        "label": "Broad nasal tip"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000456",
+        "label": "Bifid nasal tip"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000508",
+        "label": "Ptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000518",
+        "label": "Cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000568",
+        "label": "Microphthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000589",
+        "label": "Coloboma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001156",
+        "label": "Brachydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001162",
+        "label": "Postaxial hand polydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001274",
+        "label": "Agenesis of corpus callosum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001566",
+        "label": "Widely-spaced maxillary central incisors"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001636",
+        "label": "Tetralogy of Fallot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002000",
+        "label": "Short columella"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002738",
+        "label": "Hypoplastic frontal sinuses"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003745",
+        "label": "Sporadic"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004423",
+        "label": "Cranium bifidum occultum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005258",
+        "label": "Pectoral muscle hypoplasia/aplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006931",
+        "label": "Pericallosal lipoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006992",
+        "label": "Anterior basal encephalocele"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007541",
+        "label": "Frontal cutaneous lipoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009004",
+        "label": "Hypoplasia of the musculature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009099",
+        "label": "Median cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009466",
+        "label": "Radial deviation of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009473",
+        "label": "Joint contracture of the hand"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007636",
+        "label": "frontorhiny"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000076",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007636",
+          "label": "frontorhiny"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000076",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000076_ALX3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ALX3",
+                  "valueId": "NCBIGene:257"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "7.4098e-05"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0510e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "pituitary_gland:100|fallopian_tube:98|uterus:96|cerebral_cortex:94|endocervix:94|frontal_cortex:94|amygdala:94|hypothalamus:94|mammary_gland:94|minor_salivary_gland:94|anterior_cingulate_cortex:94|nucleus_accumbens:94|ovary:94|putamen:94|suprapubic_skin:94|testis:94|urinary_bladder:94|caudate_nucleus:94|cerebellar_hemisphere:94|cerebellum:94"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "neuron development|regulation of DNA-templated transcription|regulation of transcription by RNA polymerase II"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "midline facial cleft|abnormal cell death|exencephaly|open neural tube|reduced female fertility|increased circulating insulin level|decreased insulin secretion|abnormal pancreatic beta cell physiology|abnormal craniofacial development|embryonic growth retardation|abnormal embryonic neuroepithelium morphology|impaired glucose tolerance|insulin resistance|increased circulating glucose level|decreased pancreatic beta cell mass|small pancreatic islets|failure of eyelid fusion|neonatal lethality, inco"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "id": "PAVS:D0000123",
+  "subject": {
+    "id": "PAVS:D0000123",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000098",
+        "label": "Tall stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000119",
+        "label": "Abnormality of the genitourinary system"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Cleft upper lip"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000204",
+        "label": "Gingival overgrowth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000212",
+        "label": "Brachycephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000248",
+        "label": "Hypertelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Low-set ears"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000369",
+        "label": "Wide nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000431",
+        "label": "Anteverted nares"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000463",
+        "label": "Short neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000470",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Long eyelashes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000527",
+        "label": "Thick eyebrow"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000574",
+        "label": "Synophrys"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000664",
+        "label": "Anxiety"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000739",
+        "label": "Pectus excavatum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000767",
+        "label": "Rib fusion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000902",
+        "label": "Sprengel anomaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000912",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Hyporeflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001265",
+        "label": "Craniosynostosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001363",
+        "label": "Decreased fetal movement"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001558",
+        "label": "Polyhydramnios"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001561",
+        "label": "Talipes equinovarus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001762",
+        "label": "Pes planus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001763",
+        "label": "Constipation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002019",
+        "label": "Intention tremor"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002080",
+        "label": "Ventriculomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002119",
+        "label": "Highly arched eyebrow"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002553",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Vertebral fusion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002948",
+        "label": "Short nose"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003196",
+        "label": "Phenotypic variability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003812",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Feeding difficulties"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011968",
+        "label": "HP:0011968"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:614132",
+        "label": "OMIM:614132"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000123",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:614132",
+          "label": "OMIM:614132"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000123",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000123_TMCO1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TMCO1",
+                  "valueId": "NCBIGene:54499"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.8145e-07"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.4040e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|thyroid_gland:98|pituitary_gland:96|testis:96|endocervix:92|aorta:91|adrenal_gland:89|ectocervix:89|uterus:85|fallopian_tube:83|ovary:83|coronary_artery:79|tibial_artery:77|tibial_nerve:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "monoatomic ion transport|multi-pass transmembrane protein insertion into ER membrane|calcium ion transmembrane transport|endoplasmic reticulum calcium ion homeostasis|calcium ion transport|ossification|ER overload response|monoatomic ion transmembrane transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "delayed bone ossification|increased leukocyte cell number|megacephaly|abnormal cranium morphology|short snout|abnormal ovary morphology|small ovary|impaired ovarian folliculogenesis|abnormal ovarian follicle morphology|absent corpus luteum|decreased body weight|decreased body size|cornea opacity|ataxia|impaired coordination|postnatal growth retardation|increased circulating follicle stimulating hormone level|increased circulating luteinizing hormone level|reduced female fertility|female infertil"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

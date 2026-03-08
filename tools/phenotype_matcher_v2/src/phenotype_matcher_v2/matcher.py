@@ -6,6 +6,7 @@ Algorithm 6: match(s: str) → PhenotypeOutput
 """
 
 import os
+import re
 import threading
 from collections import OrderedDict
 from dataclasses import replace as dc_replace
@@ -138,6 +139,18 @@ class PhenotypeMatcher:
 
         O: Set[_MatchTuple] = set()
         idx = self._idx
+
+        # ----------------------------------------------------------------
+        # Phase 0 — Explicit IDs
+        # ----------------------------------------------------------------
+        # If the text contains literal HPO IDs (e.g. "(HP:0001263)"),
+        # treat them as trusted present phenotypes.
+        for hpo_id in re.findall(r"HP:\d{7}", s):
+            if hpo_id in idx.primary_label:
+                # Check for negation around the ID in the original text?
+                # For now, treat explicit IDs as trusted "present" unless
+                # we want to be very thorough.
+                O.add((hpo_id, None, False))
 
         # ----------------------------------------------------------------
         # Phase 1 — whole string
@@ -289,22 +302,37 @@ class PhenotypeMatcher:
                     cap=self.cfg.ann_top_k,
                 )
                 if filtered:
-                    mod_id = det_mod_in_text(t_lower, idx.modifier_map)
-                    negated = det_neg_in_text(t_lower)
+                    # Collect all candidate IDs for the filtered ANN labels
+                    ann_cand_ids: List[str] = []
                     for lbl in filtered:
-                        # If the ANN-matched label already encodes absence
-                        # (e.g. "Absent speech"), the negation trigger in the
-                        # token (e.g. "no" in "no speech") is what caused the
-                        # semantic match — not an external negation of the term.
-                        # Override negated=False for such labels.
-                        lbl_negated = negated
-                        if negated and any(
-                            lbl.lower().startswith(pfx)
-                            for pfx in _NEG_ENCODED_LABEL_STARTS
-                        ):
-                            lbl_negated = False
-                        for pid in idx.exact_map.get(lbl, []):
-                            O.add((pid, mod_id, lbl_negated))
+                        ann_cand_ids.extend(idx.exact_map.get(lbl, []))
+                    
+                    # Dedup IDs
+                    ann_cand_ids = list(set(ann_cand_ids))
+                    
+                    if ann_cand_ids:
+                        # Fix 1 & 2: Mandatory LLM validation with full context 's'
+                        valid_ann_ids = llm_val_batch(
+                            ann_cand_ids, s, idx.primary_label,
+                            api_key=self._api_key, model=self._llm_model,
+                            cache=self._llm_cache
+                        )
+                        
+                        if valid_ann_ids:
+                            mod_id = det_mod_in_text(t_lower, idx.modifier_map)
+                            negated = det_neg_in_text(t_lower)
+                            
+                            for pid in valid_ann_ids:
+                                # Determine if this specific label (primary) indicates negation
+                                # (e.g. "Absent speech")
+                                lbl = idx.primary_label.get(pid, "").lower()
+                                pid_negated = negated
+                                if negated and any(
+                                    lbl.startswith(pfx)
+                                    for pfx in _NEG_ENCODED_LABEL_STARTS
+                                ):
+                                    pid_negated = False
+                                O.add((pid, mod_id, pid_negated))
 
         output = self._build_output(O, s)
 
@@ -319,6 +347,103 @@ class PhenotypeMatcher:
                 if len(self._match_cache) >= self.cfg.match_cache_size:
                     self._match_cache.popitem(last=False)
                 self._match_cache[s_key] = output
+
+        return output
+
+    # ------------------------------------------------------------------
+    # Narrative mode: NER-based extraction for long clinical text
+    # ------------------------------------------------------------------
+
+    def match_narrative(self, text: str) -> PhenotypeOutput:
+        """
+        Match a long clinical narrative by first extracting candidate
+        phenotype spans via NER, then normalizing each with match().
+
+        For short texts (below ner_short_text_threshold words), falls
+        through to match() directly.
+        """
+        cfg = self.cfg
+
+        # Short text: just use match() directly
+        if len(text.split()) <= cfg.ner_short_text_threshold:
+            return self.match(text)
+
+        # Lazily create NER extractor
+        if not hasattr(self, "_ner_extractor") or self._ner_extractor is None:
+            from .ner_extractor import NerExtractor
+            self._ner_extractor = NerExtractor(
+                self._idx, self.cfg, self._batch_encode
+            )
+
+        # Run match() on the full text first (preserves Phase 0 HP:ID
+        # extraction + whole-string matching)
+        full_output = self.match(text)
+
+        # Extract candidate spans via NER
+        candidates = self._ner_extractor.extract(text)
+
+        # Normalize each candidate span individually
+        all_hpo_ids: Dict[str, Any] = {}  # hpo_id → PhenotypeMatch
+        all_diseases: Dict[str, Any] = {}  # disease key → DiseaseMatch
+
+        # Seed with full-text results
+        for pm in full_output.phenotypes:
+            all_hpo_ids[pm.hpo_id] = pm
+        for dm in full_output.diseases:
+            key = dm.mondo_id or (dm.omim_phenotype_ids[0] if dm.omim_phenotype_ids else None) or (dm.orphanet_ids[0] if dm.orphanet_ids else None) or id(dm)
+            all_diseases[key] = dm
+
+        # Process each candidate
+        for candidate in candidates:
+            try:
+                span_output = self.match(candidate.text)
+            except Exception:
+                continue
+
+            for pm in span_output.phenotypes:
+                existing = all_hpo_ids.get(pm.hpo_id)
+                if existing is None:
+                    all_hpo_ids[pm.hpo_id] = pm
+                elif existing.excluded and not pm.excluded:
+                    # Prefer non-negated over negated
+                    all_hpo_ids[pm.hpo_id] = pm
+
+            for dm in span_output.diseases:
+                key = dm.mondo_id or (dm.omim_phenotype_ids[0] if dm.omim_phenotype_ids else None) or (dm.orphanet_ids[0] if dm.orphanet_ids else None) or id(dm)
+                if key not in all_diseases:
+                    all_diseases[key] = dm
+
+        # Rebuild output with parent subsumption
+        merged_phenotypes = list(all_hpo_ids.values())
+        merged_diseases = list(all_diseases.values())
+
+        # Apply parent subsumption on merged phenotype set
+        idx = self._idx
+        all_hp_present = {
+            pm.hpo_id for pm in merged_phenotypes
+            if pm.hpo_id.startswith("HP:") and pm.hpo_id in idx.phenotype_ids and not pm.excluded
+        }
+        suppressed: set = set()
+        for tid in all_hp_present:
+            for other in all_hp_present:
+                if other != tid and tid in idx.hpo_ancestors.get(other, set()):
+                    suppressed.add(tid)
+                    break
+
+        final_phenotypes = [
+            pm for pm in merged_phenotypes
+            if not (not pm.excluded and pm.hpo_id in suppressed)
+        ]
+
+        output = PhenotypeOutput(
+            phenotypes=final_phenotypes,
+            diseases=merged_diseases,
+            raw_input=text,
+            processing_metadata={"mode": "narrative", "n_candidates": len(candidates)},
+        )
+
+        # Post-hoc LLM validation
+        output.phenotypes = self._llm_validate(output.phenotypes, text)
 
         return output
 
@@ -424,6 +549,34 @@ class PhenotypeMatcher:
             normalize_embeddings=True,
         )[0]
         return vec
+
+    def _batch_encode(self, texts: List[str]) -> Optional[np.ndarray]:
+        """Batch-encode multiple texts into normalized embedding vectors.
+
+        Returns an (N × D) numpy array, or None on failure.
+        """
+        if not texts:
+            return None
+
+        if self._encoder is None:
+            with self._encoder_lock:
+                if self._encoder is None:
+                    try:
+                        from sentence_transformers import SentenceTransformer
+                        emb_name = EMBEDDING_MODELS.get(
+                            self.cfg.embedding_model, self.cfg.embedding_model
+                        )
+                        self._encoder = SentenceTransformer(emb_name, device=self.cfg.device)
+                    except Exception:
+                        return None
+
+        vecs = self._encoder.encode(
+            texts,
+            batch_size=256,
+            convert_to_numpy=True,
+            normalize_embeddings=True,
+        )
+        return vecs
 
     # ------------------------------------------------------------------
     # Strategy 1 filter

@@ -1,0 +1,278 @@
+{
+  "id": "PAVS:D0000824",
+  "subject": {
+    "id": "PAVS:D0000824",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000158",
+        "label": "Macroglossia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000519",
+        "label": "Developmental cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000545",
+        "label": "Myopia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000556",
+        "label": "Retinal dystrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001321",
+        "label": "Cerebellar hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001344",
+        "label": "Absent speech"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001371",
+        "label": "Flexion contracture"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001638",
+        "label": "Cardiomyopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002280",
+        "label": "Enlarged cisterna magna"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002319",
+        "label": "Inability to walk"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002540",
+        "label": "Elevated circulating creatine kinase concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003236",
+        "label": "Muscular dystrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003560",
+        "label": "Infantile onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003593",
+        "label": "Cerebellar dysplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007033",
+        "label": "Facial palsy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010628",
+        "label": "Intellectual disability, severe"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010864",
+        "label": "HP:0010864"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013159",
+        "label": "muscular dystrophy-dystroglycanopathy (congenital with intellectual disability), type B1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000824",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013159",
+          "label": "muscular dystrophy-dystroglycanopathy (congenital with intellectual disability), type B1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000824",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000824_POMT1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "POMT1",
+                  "valueId": "NCBIGene:10585"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "7.2486e-26"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0020e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|cerebellum:98|cerebellar_hemisphere:96|pituitary_gland:94|ovary:92|endocervix:91|prostate_gland:89|tibial_nerve:89|uterus:85|ectocervix:83|esophagogastric_junction:81|fallopian_tube:81|muscle_layer_of_esophagus:81|sigmoid_colon:81|thyroid_gland:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "protein O-linked glycosylation via mannose|protein O-linked glycosylation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased neutrophil cell number|embryonic growth arrest|decreased IgG level|abnormal Reichert's membrane morphology|increased vasodilation|embryonic lethality during organogenesis, complete penetrance|preweaning lethality, complete penetrance"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

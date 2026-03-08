@@ -1,0 +1,188 @@
+{
+  "id": "PAVS:F0000260",
+  "subject": {
+    "id": "PAVS:F0000260",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P2Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000260",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000260",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000260_SCN4A",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SCN4A",
+                  "valueId": "NCBIGene:6329"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000435607.3:c.4390G>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000017.11:g.63941892G>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000396320.1:p.Gly1464Arg"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr17",
+                  "pos": 63941892,
+                  "ref": "G",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.145)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00520"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "2.738e-06"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.0645e-10"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.2800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skeletal_muscle_tissue:100|omental_fat_pad:98|mammary_gland:96|subcutaneous_adipose_tissue:94|thyroid_gland:92|testis:91|pituitary_gland:89|coronary_artery:87|renal_medulla:87|sigmoid_colon:87|spleen:87|lower_leg_skin:79|minor_salivary_gland:79|tibial_nerve:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "action potential|monoatomic ion transport|muscle contraction|sodium ion transport|transmembrane transport|regulation of skeletal muscle contraction by action potential|sodium ion transmembrane transport|cardiac muscle cell action potential involved in contraction|monoatomic ion transmembrane transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "muscle weakness|myopathy|decreased body weight|impaired coordination|limb grasping|abnormal grip strength|abnormal lung volume|respiratory distress|abnormal muscle physiology|abnormal muscle morphology|akinesia|impaired skeletal muscle contractility|decreased circulating alkaline phosphatase level|abnormal skeletal muscle fiber morphology|impaired muscle relaxation|increased muscle fatigability|increased muscle relaxation|abnormal muscle fiber morphology|abnormal muscle electrophysiology|increas"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

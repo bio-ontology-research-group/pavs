@@ -1,0 +1,292 @@
+{
+  "id": "PAVS:D0001394",
+  "subject": {
+    "id": "PAVS:D0001394",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000122",
+        "label": "Unilateral renal agenesis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000324",
+        "label": "Facial asymmetry"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000407",
+        "label": "Sensorineural hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000410",
+        "label": "Mixed hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000465",
+        "label": "Webbed neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000466",
+        "label": "Limited neck range of motion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000470",
+        "label": "Short neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000772",
+        "label": "Abnormal rib morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000912",
+        "label": "Sprengel anomaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001335",
+        "label": "Bimanual synkinesia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001425",
+        "label": "obsolete Heterogeneous"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002162",
+        "label": "Low posterior hairline"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002564",
+        "label": "obsolete Malformation of the heart and great vessels"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002813",
+        "label": "Abnormal limb bone morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003828",
+        "label": "Variable expressivity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004602",
+        "label": "Cervical C2/C3 vertebral fusion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005640",
+        "label": "Abnormal vertebral segmentation and fusion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005988",
+        "label": "Congenital muscular torticollis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007291",
+        "label": "Posterior fossa cyst"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007306",
+        "label": "Klippel-Feil syndrome 1, autosomal dominant"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001394",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007306",
+          "label": "Klippel-Feil syndrome 1, autosomal dominant"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001394",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001394_MEOX1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MEOX1",
+                  "valueId": "NCBIGene:4222"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "5.4063e-05"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1420e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "subcutaneous_adipose_tissue:100|mammary_gland:98|omental_fat_pad:96|fallopian_tube:94|tibial_nerve:92|ectocervix:91|spleen:91|muscle_layer_of_esophagus:87|uterus:87|vagina:87|esophagogastric_junction:81|coronary_artery:79|lower_leg_skin:79|urinary_bladder:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of transcription by RNA polymerase II|hematopoietic stem cell differentiation|regulation of transcription by RNA polymerase II|regulation of DNA-templated transcription|somite development|sclerotome development"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "rib fusion|short tail|abnormal tail morphology|abnormal rib development|curly tail|vertebral fusion|abnormal vertebrae development|hemivertebra"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

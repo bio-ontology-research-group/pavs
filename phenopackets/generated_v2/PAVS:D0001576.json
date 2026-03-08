@@ -1,0 +1,327 @@
+{
+  "id": "PAVS:D0001576",
+  "subject": {
+    "id": "PAVS:D0001576",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000246",
+        "label": "Sinusitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000907",
+        "label": "Anterior rib cupping"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000926",
+        "label": "Platyspondyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001442",
+        "label": "Typified by somatic mosaicism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001744",
+        "label": "Splenomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001880",
+        "label": "Eosinophilia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001888",
+        "label": "Lymphopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001890",
+        "label": "Autoimmune hemolytic anemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001967",
+        "label": "Diffuse mesangial sclerosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001973",
+        "label": "Autoimmune thrombocytopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002014",
+        "label": "Diarrhea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002090",
+        "label": "Pneumonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002099",
+        "label": "Asthma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002240",
+        "label": "Hepatomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002644",
+        "label": "Abnormal pelvic girdle bone morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002718",
+        "label": "Recurrent bacterial infections"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002841",
+        "label": "Recurrent fungal infections"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003212",
+        "label": "Increased circulating IgE concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004429",
+        "label": "Recurrent viral infections"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004430",
+        "label": "Severe combined immunodeficiency"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005359",
+        "label": "Aplasia of the thymus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005365",
+        "label": "Severe B lymphocytopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005424",
+        "label": "Absent specific antibody response"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010976",
+        "label": "B lymphocytopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0012191",
+        "label": "B-cell lymphoma"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007064",
+        "label": "severe combined immunodeficiency, autosomal recessive, T cell-negative, B cell-negative, NK cell-negative, due to adenosine deaminase deficiency"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001576",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007064",
+          "label": "severe combined immunodeficiency, autosomal recessive, T cell-negative, B cell-negative, NK cell-negative, due to adenosine deaminase deficiency"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001576",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001576_ADA",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ADA",
+                  "valueId": "NCBIGene:100"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.6400e-15"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1840e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "stomach:100|subcutaneous_adipose_tissue:98|spleen:96|ectocervix:94|skin:94|omental_fat_pad:91|blood:91|coronary_artery:87|endocervix:87|esophagogastric_junction:87|fallopian_tube:87|lung:87|mammary_gland:87|thyroid_gland:87|atrium_auricular_region:87"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "inosine biosynthetic process|nucleotide metabolic process|purine-containing compound salvage|adenosine catabolic process|purine ribonucleoside monophosphate biosynthetic process|response to hypoxia|response to purine-containing compound|adenosine metabolic process|negative regulation of adenosine receptor signaling pathway|regulation of cell-cell adhesion mediated by integrin|xenobiotic metabolic process|T cell activation|regulation of circadian sleep/wake cycle, sleep|dAMP catabolic process|pur"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "extramedullary hematopoiesis|heart right ventricle hypertrophy|abnormal small intestine morphology|abnormal liver morphology|small liver|decreased hepatocyte number|abnormal hepatocyte morphology|atelectasis|decreased body weight|abnormal penile erection|cyanosis|hepatic necrosis|abnormal placenta morphology|abnormal pulmonary alveolus morphology|abnormal pulmonary gas exchange|abnormal dendritic cell physiology|vascular smooth muscle hypertrophy|abnormal placenta vasculature|priapism|pulmonary "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

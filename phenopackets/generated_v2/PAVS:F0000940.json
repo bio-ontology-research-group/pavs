@@ -1,0 +1,172 @@
+{
+  "id": "PAVS:F0000940",
+  "subject": {
+    "id": "PAVS:F0000940",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P2Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0009830",
+        "label": "Peripheral neuropathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000940",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000940",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000940_WNK1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "WNK1",
+                  "valueId": "NCBIGene:65125"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000315939.11:c.2226dup"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000012.12:g.878213_878214insG"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000313059.6:p.Gln743AlafsTer25"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "splice_acceptor_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.2700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cervical_vertebra:100|lower_leg_skin:98|substantia_nigra:96|vagina:94|suprapubic_skin:92|esophagus_mucosa:91|subcutaneous_adipose_tissue:89|tibial_nerve:87|tibial_artery:85|coronary_artery:83|skin:81|mammary_gland:79|omental_fat_pad:79|uterus:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heart development|monoatomic ion transport|positive regulation of angiogenesis|cellular response to chemokine|protein phosphorylation|negative regulation of protein ubiquitination|neuron development|negative regulation of small GTPase mediated signal transduction|cell volume homeostasis|positive regulation of mitotic cytokinesis|negative regulation of protein localization to plasma membrane|lymphocyte migration into lymph node|negative regulation of heterotypic cell-cell adhesion|positive regula"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal angiogenesis|distended pericardium|trabecula carnea hypoplasia|abnormal blood vessel morphology|internal hemorrhage|abnormal placenta labyrinth morphology|abnormal visceral yolk sac morphology|pale yolk sac|pericardial edema|hemorrhage|intracranial hemorrhage|abnormal myocardial trabeculae morphology|thin myocardium|heart hypoplasia|decreased systemic arterial blood pressure|abnormal vascular branching morphogenesis|abnormal vitelline vasculature morphology|oliguria|embryonic growth ret"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

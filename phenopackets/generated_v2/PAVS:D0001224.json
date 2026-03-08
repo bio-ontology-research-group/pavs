@@ -1,0 +1,173 @@
+{
+  "id": "PAVS:D0001224",
+  "subject": {
+    "id": "PAVS:D0001224",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001635",
+        "label": "Congestive heart failure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001712",
+        "label": "Left ventricular hypertrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001723",
+        "label": "Restrictive cardiomyopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004308",
+        "label": "Ventricular arrhythmia"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013261",
+        "label": "dilated cardiomyopathy 1R"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001224",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013261",
+          "label": "dilated cardiomyopathy 1R"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001224",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001224_ACTC1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ACTC1",
+                  "valueId": "NCBIGene:70"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.7314e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.1100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "atrium_auricular_region:100|heart_left_ventricle:98|urinary_bladder:96|tibial_artery:94|aorta:92|coronary_artery:91|skeletal_muscle_tissue:89|vagina:87|endocervix:85|prostate_gland:83|esophagogastric_junction:81|muscle_layer_of_esophagus:79|uterus:77|ectocervix:75|lower_leg_skin:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "actin filament-based movement|actomyosin structure organization|skeletal muscle thin filament assembly|heart contraction|positive regulation of gene expression|cardiac muscle tissue morphogenesis|actin filament organization|cardiac myofibril assembly|mesenchyme migration|actin-myosin filament sliding|cardiac muscle contraction|response to xenobiotic stimulus|response to ethanol"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "enlarged heart|decreased body size|no abnormal phenotype detected|disorganized myocardium|abnormal sarcomere morphology|abnormal fetal cardiomyocyte morphology|postnatal lethality, complete penetrance|preweaning lethality, complete penetrance|lethality throughout fetal growth and development, incomplete penetrance|increased fetal cardiomyocyte apoptosis|delayed heart development|increased fetal cardiomyocyte size|fetal cardiomyocyte disarray"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

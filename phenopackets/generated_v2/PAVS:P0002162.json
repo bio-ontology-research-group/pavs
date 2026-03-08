@@ -1,0 +1,194 @@
+{
+  "id": "PAVS:P0002162",
+  "subject": {
+    "id": "PAVS:P0002162",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P9Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0033725",
+        "label": "Thin corpus callosum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0002162",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0002162",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0002162_MAPK8IP2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MAPK8IP2",
+                  "valueId": "NCBIGene:23542"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000329492.6:c.1067G>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000022.11:g.50604366G>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000330572.4:p.Ser356Thr"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr22",
+                  "pos": 50604366,
+                  "ref": "G",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0.01)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.273)"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9931e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.3400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellum:100|cerebellar_hemisphere:98|frontal_cortex:96|cerebral_cortex:94|anterior_cingulate_cortex:92|amygdala:91|hippocampus:89|hypothalamus:87|pituitary_gland:85|nucleus_accumbens:83|substantia_nigra:81|caudate_nucleus:81|putamen:77|cervical_vertebra:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of synaptic transmission, glutamatergic|mating behavior|signal complex assembly|regulation of JNK cascade|positive regulation of stress-activated MAPK cascade|JNK cascade|nonassociative learning|dendrite morphogenesis|social behavior|behavioral fear response|negative regulation of apoptotic signaling pathway|modulation of excitatory postsynaptic potential|MAPK cascade"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal Purkinje cell morphology|thin cerebellar molecular layer|decreased body size|abnormal social investigation|decreased anxiety-related response|impaired coordination|decreased exploration in new environment|reduced fertility|male infertility|abnormal NMDA-mediated synaptic currents|abnormal excitatory postsynaptic currents|enhanced NMDA-mediated synaptic currents|decreased synaptic glutamate release|abnormal miniature excitatory postsynaptic currents|abnormal Purkinje cell dendrite morpho"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

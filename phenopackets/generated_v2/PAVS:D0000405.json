@@ -1,0 +1,222 @@
+{
+  "id": "PAVS:D0000405",
+  "subject": {
+    "id": "PAVS:D0000405",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000098",
+        "label": "Tall stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000407",
+        "label": "Sensorineural hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000767",
+        "label": "Pectus excavatum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001836",
+        "label": "Camptodactyly of toe"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004570",
+        "label": "Increased vertebral height"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006417",
+        "label": "Wide femoral metaphysis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009473",
+        "label": "Joint contracture of the hand"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012504",
+        "label": "camptodactyly-tall stature-scoliosis-hearing loss syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000405",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012504",
+          "label": "camptodactyly-tall stature-scoliosis-hearing loss syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000405",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000405_FGFR3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "FGFR3",
+                  "valueId": "NCBIGene:2261"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9865e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.5800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "suprapubic_skin:100|lower_leg_skin:98|esophagus_mucosa:96|caudate_nucleus:94|nucleus_accumbens:92|vagina:92|cerebral_cortex:89|anterior_cingulate_cortex:87|putamen:85|amygdala:83|frontal_cortex:81|substantia_nigra:79|pancreas:77|cerebellum:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "endochondral bone growth|positive regulation of MAPK cascade|positive regulation of ERK1 and ERK2 cascade|fibroblast growth factor receptor apoptotic signaling pathway|apoptotic process|positive regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction|chondrocyte proliferation|bone morphogenesis|cell population proliferation|negative regulation of developmental growth|MAPK cascade|cartilage development|chondrocyte differentiation|fibroblast growth factor receptor signalin"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal malleus morphology|abnormal cochlea morphology|abnormal organ of Corti morphology|delayed bone ossification|fragile skeleton|decreased bone mineral density|kyphoscoliosis|abnormal neurocranium morphology|abnormal parietal bone morphology|malocclusion|abnormal trabecular bone morphology|abnormal long bone metaphysis morphology|decreased compact bone thickness|abnormal vertebrae morphology|abnormal vertebral body morphology|abnormal rib morphology|kyphosis|scoliosis|abnormal long bone hyp"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,376 @@
+{
+  "id": "PAVS:D0001187",
+  "subject": {
+    "id": "PAVS:D0001187",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Cleft upper lip"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000204",
+        "label": "Retrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000278",
+        "label": "Posteriorly rotated ears"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000358",
+        "label": "Low-set ears"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000369",
+        "label": "Flared nostrils"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000454",
+        "label": "Downslanted palpebral fissures"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000494",
+        "label": "Anophthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000528",
+        "label": "Microphthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000568",
+        "label": "Blepharophimosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000581",
+        "label": "Single transverse palmar crease"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000954",
+        "label": "Postaxial hand polydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001162",
+        "label": "obsolete Hand oligodactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001180",
+        "label": "Camptodactyly of 2nd-5th fingers"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001215",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Abnormal hair morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001595",
+        "label": "Abnormality of the cardiovascular system"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001626",
+        "label": "Talipes equinovarus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001762",
+        "label": "Toe syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001770",
+        "label": "Postaxial foot polydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001830",
+        "label": "Foot oligodactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001849",
+        "label": "Sandal gap"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001852",
+        "label": "Deep philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002002",
+        "label": "Frontal bossing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002007",
+        "label": "Hip dislocation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002827",
+        "label": "Tibial bowing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002982",
+        "label": "Fibular hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003038",
+        "label": "Short nose"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003196",
+        "label": "Depressed nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005280",
+        "label": "4-5 metacarpal synostosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005867",
+        "label": "Postnatal growth retardation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008897",
+        "label": "Prominent forehead"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011220",
+        "label": "HP:0011220"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008800",
+        "label": "microphthalmia with limb anomalies"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001187",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008800",
+          "label": "microphthalmia with limb anomalies"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001187",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001187_SMOC1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SMOC1",
+                  "valueId": "NCBIGene:64093"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.7366e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.0000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|tibial_artery:100|spleen:96|liver:94|prostate_gland:94|substantia_nigra:91|amygdala:89|hippocampus:89|cervical_vertebra:85|hypothalamus:83|ectocervix:81|anterior_cingulate_cortex:79|subcutaneous_adipose_tissue:79|tibial_nerve:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "limb development|extracellular matrix organization|cell differentiation|eye development|regulation of osteoblast differentiation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "cleft palate|increased neutrophil cell number|abnormal cranium morphology|abnormal snout morphology|abnormal maxilla morphology|abnormal hindlimb morphology|syndactyly|synostosis|interdigital webbing|clubfoot|decreased body weight|decreased body size|microphthalmia|abnormal lens morphology|abnormal retina morphology|retina degeneration|absent optic nerve|abnormal gait|decreased embryo size|postnatal growth retardation|abnormal coat/hair pigmentation|abnormal digit morphology|mydriasis|increased "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

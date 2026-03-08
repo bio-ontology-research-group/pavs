@@ -1,0 +1,516 @@
+{
+  "id": "PAVS:D0001230",
+  "subject": {
+    "id": "PAVS:D0001230",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000100",
+        "label": "Nephrotic syndrome"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Narrow mouth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000160",
+        "label": "Cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Thin upper lip vermilion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000219",
+        "label": "Large fontanelles"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000239",
+        "label": "Brachycephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000248",
+        "label": "Delayed cranial suture closure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000270",
+        "label": "Microretrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000308",
+        "label": "Hypertelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Facial asymmetry"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000324",
+        "label": "Broad forehead"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000337",
+        "label": "Long philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000343",
+        "label": "Posteriorly rotated ears"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000358",
+        "label": "Hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Microcornea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000412",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000482",
+        "label": "Downslanted palpebral fissures"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Glaucoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000494",
+        "label": "Telecanthus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000501",
+        "label": "Retinal detachment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000506",
+        "label": "Myopia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000541",
+        "label": "Blue sclerae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000545",
+        "label": "Abnormal anterior chamber morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000592",
+        "label": "Pectus excavatum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000593",
+        "label": "Hyperextensible skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000767",
+        "label": "Bruising susceptibility"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000974",
+        "label": "Fragile skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000978",
+        "label": "Arachnodactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001030",
+        "label": "Adducted thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001166",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001181",
+        "label": "Motor delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Joint dislocation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "obsolete Joint laxity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001373",
+        "label": "Umbilical hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001388",
+        "label": "Diastasis recti"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001537",
+        "label": "Recurrent skin infections"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001540",
+        "label": "Atrial septal defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001581",
+        "label": "Talipes equinovarus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001631",
+        "label": "Constipation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001762",
+        "label": "Hiatus hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002019",
+        "label": "Pneumothorax"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002036",
+        "label": "Ventriculomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002107",
+        "label": "Abnormal duodenum morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002119",
+        "label": "Intestinal malrotation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002246",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002566",
+        "label": "Generalized joint hypermobility"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Flat forehead"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002761",
+        "label": "Distal arthrogryposis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004425",
+        "label": "Scarring"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005684",
+        "label": "HP:0005684"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100699",
+        "label": "HP:0100699"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0200086",
+        "label": "HP:0200086"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0020681",
+        "label": "Ehlers-Danlos syndrome, musculocontractural type 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001230",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0020681",
+          "label": "Ehlers-Danlos syndrome, musculocontractural type 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001230",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001230_CHST14",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CHST14",
+                  "valueId": "NCBIGene:113189"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.4188e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.1700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "endocervix:100|ectocervix:98|skin:98|uterus:94|ovary:92|aorta:91|fallopian_tube:89|thyroid_gland:87|tibial_nerve:87|vagina:83|coronary_artery:81|tibial_artery:79|urinary_bladder:79|pituitary_gland:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "dermatan sulfate proteoglycan metabolic process|dermatan sulfate proteoglycan biosynthetic process|carbohydrate biosynthetic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal tooth development|abnormal tibia morphology|kinked tail|abnormal Schwann cell morphology|decreased body length|decreased body weight|decreased anxiety-related response|decreased exploration in new environment|abnormal fertility/fecundity|decreased heart weight|decreased skin tensile strength|decreased liver weight|abnormal axon extension|enhanced sensorimotor gating|decreased kidney weight|abnormal response to injury|abnormal neurite morphology|decreased birth weight|postnatal lethality"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

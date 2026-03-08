@@ -1,0 +1,292 @@
+{
+  "id": "PAVS:D0000375",
+  "subject": {
+    "id": "PAVS:D0000375",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000141",
+        "label": "Amenorrhea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Cupped ear"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000378",
+        "label": "Wide nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000431",
+        "label": "Microcornea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000482",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Telecanthus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000506",
+        "label": "Ptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000508",
+        "label": "Epicanthus inversus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000537",
+        "label": "Hypermetropia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000540",
+        "label": "Microphthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000568",
+        "label": "Blepharophimosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000581",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Abnormality of the breast"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000769",
+        "label": "Increased circulating gonadotropin level"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000837",
+        "label": "Irregular menstruation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000858",
+        "label": "Abnormal hair morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001595",
+        "label": "Depressed nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005280",
+        "label": "Depressed nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005280",
+        "label": "Premature ovarian insufficiency"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008209",
+        "label": "Female infertility"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008222",
+        "label": "HP:0008222"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007201",
+        "label": "blepharophimosis, ptosis, and epicanthus inversus syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000375",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007201",
+          "label": "blepharophimosis, ptosis, and epicanthus inversus syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000375",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000375_FOXL2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "FOXL2",
+                  "valueId": "NCBIGene:668"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.8008e-02"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.9130e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ovary:100|endocervix:98|fallopian_tube:96|ectocervix:94|pituitary_gland:92|uterus:91|vagina:89|adrenal_gland:87|testis:85|skin:83|substantia_nigra:81|cerebral_cortex:79|cervical_vertebra:79|frontal_cortex:75|hypothalamus:75|cerebellum:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "extraocular skeletal muscle development|negative regulation of DNA-templated transcription|embryonic eye morphogenesis|positive regulation of apoptotic process|ovarian follicle development|apoptotic DNA fragmentation|cell differentiation|oocyte growth|positive regulation of DNA-templated transcription|positive regulation of transcription by RNA polymerase II|regulation of transcription by RNA polymerase II|regulation of DNA-templated transcription|anatomical structure morphogenesis"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal ovary morphology|small ovary|impaired ovarian folliculogenesis|abnormal ovarian follicle morphology|absent mature ovarian follicles|decreased body weight|eyelids open at birth|reduced female fertility|female infertility|postnatal lethality|abnormal eye morphology|no abnormal phenotype detected|impaired granulosa cell differentiation|decreased circulating insulin-like growth factor I level|postnatal lethality, incomplete penetrance|absent primordial ovarian follicles|eyelid hypoplasia|de"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

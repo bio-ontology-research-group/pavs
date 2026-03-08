@@ -1,0 +1,220 @@
+{
+  "id": "PAVS:Q0000027",
+  "subject": {
+    "id": "PAVS:Q0000027",
+    "sex": "MALE",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001349",
+        "label": "Facial diplegia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000508",
+        "label": "Ptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002093",
+        "label": "Respiratory insufficiency"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001284",
+        "label": "Areflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001319",
+        "label": "Neonatal hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC7082194",
+        "description": "Source dataset: PMC7082194"
+      },
+      {
+        "id": "PMID:31618753",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31618753/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:Q0000027",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:Q0000027",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:Q0000027_CNTNAP1|CNTNAP1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CNTNAP1|CNTNAP1",
+                  "valueId": "NCBIGene:8506|8506"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000264638.9:c.3475-2A>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000017.11:g.42697272A>C"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr17",
+                  "pos": 42697272,
+                  "ref": "A",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000402|GENO:0000402",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:422168"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "splice_acceptor_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "1.171e-05"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "422168"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.5140e-07"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.7800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellum:100|cerebellar_hemisphere:98|frontal_cortex:96|cerebral_cortex:94|uterus:92|pituitary_gland:91|anterior_cingulate_cortex:89|ovary:87|fallopian_tube:85|endocervix:83|sigmoid_colon:81|ectocervix:79|hypothalamus:79|skin:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "paranodal junction maintenance|myelination|myelination in peripheral nervous system|postsynaptic density organization|neuromuscular process controlling balance|neuronal action potential propagation|neuromuscular process|neuron projection morphogenesis|axonogenesis|signal transduction|cytoskeleton organization|central nervous system development|central nervous system myelination|mitochondrion organization|nervous system development|protein localization to paranode region of axon|regulation of syn"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "kyphosis|muscle spasm|tremors|weakness|muscle weakness|paresis|abnormal Purkinje cell morphology|abnormal cerebellar molecular layer|decreased body weight|decreased body size|ataxia|decreased locomotor activity|impaired coordination|abnormal gait|abnormal motor coordination/balance|impaired swimming|impaired limb coordination|impaired balance|reduced fertility|reduced male fertility|premature death|abnormal myelin sheath morphology|abnormal limb posture|abnormal action potential|abnormal nerve c"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

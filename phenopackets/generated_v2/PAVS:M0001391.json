@@ -1,0 +1,192 @@
+{
+  "id": "PAVS:M0001391",
+  "subject": {
+    "id": "PAVS:M0001391",
+    "sex": "FEMALE",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001391",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001391",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001391_HAMP",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "HAMP",
+                  "valueId": "NCBIGene:57817"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000222304.5:c.232T>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.35285019T>C"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000222304.2:p.Cys78Arg"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 35285019,
+                  "ref": "T",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.953)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF06446"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "6.845e-07"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.4111e-02"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.4640e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "liver:100|atrium_auricular_region:98|cervical_vertebra:96|pancreas:94|hypothalamus:92|pituitary_gland:92|substantia_nigra:92|tibial_nerve:92|cerebral_cortex:85|frontal_cortex:85|amygdala:85|hippocampus:85|nucleus_accumbens:85|prostate_gland:85|caudate_nucleus:85"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of receptor catabolic process|defense response to fungus|defense response to bacterium|positive regulation of proteasomal ubiquitin-dependent protein catabolic process|negative regulation of iron ion transmembrane transport|defense response to Gram-positive bacterium|signal transduction|antimicrobial humoral immune response mediated by antimicrobial peptide|positive regulation of protein polyubiquitination|multicellular organismal-level iron ion homeostasis|intracellular iron"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "weight loss|abnormal iron level|abnormal erythrocyte morphology|abnormal circulating iron level|hemosiderosis|increased liver iron level|decreased spleen iron level|increased circulating iron level|increased susceptibility to bacterial infection induced morbidity/mortality|increased circulating ferritin level"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

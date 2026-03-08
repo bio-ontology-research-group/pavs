@@ -1,0 +1,204 @@
+{
+  "id": "PAVS:D0001587",
+  "subject": {
+    "id": "PAVS:D0001587",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000852",
+        "label": "Pseudohypoparathyroidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001156",
+        "label": "Brachydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001513",
+        "label": "Obesity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002901",
+        "label": "Hypocalcemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002905",
+        "label": "Hyperphosphatemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003165",
+        "label": "Elevated circulating parathyroid hormone level"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003456",
+        "label": "Low urinary cyclic AMP response to PTH administration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003745",
+        "label": "Sporadic"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010049",
+        "label": "Short metacarpal"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011301",
+        "label": "pseudohypoparathyroidism type 1B"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001587",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011301",
+          "label": "pseudohypoparathyroidism type 1B"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001587",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001587_GNAS",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GNAS",
+                  "valueId": "NCBIGene:2778"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9999e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "3.0200e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "pituitary_gland:100|thyroid_gland:98|hypothalamus:96|cerebellar_hemisphere:94|minor_salivary_gland:92|frontal_cortex:91|aorta:89|cerebellum:87|anterior_cingulate_cortex:85|tibial_artery:85|cerebral_cortex:81|endocervix:79|ectocervix:77|uterus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "adenylate cyclase-activating dopamine receptor signaling pathway|platelet aggregation|cellular response to glucagon stimulus|negative regulation of inflammatory response to antigenic stimulus|positive regulation of insulin secretion involved in cellular response to glucose stimulus|cellular response to catecholamine stimulus|adenylate cyclase-activating G protein-coupled bile acid receptor signaling pathway|sensory perception of smell|bone development|regulation of signal transduction|intracellu"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal adipose tissue morphology|increased brown adipose tissue amount|increased white adipose tissue amount|decreased bone mineral density|decreased circulating calcium level|decreased circulating phosphate level|delayed kidney development|tremors|weakness|skin lesions|decreased body length|abnormal body weight|obese|decreased body weight|ataxia|hyperactivity|decreased locomotor activity|no spontaneous movement|abnormal response to new environment|abnormal eating behavior|abnormal suckling be"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "id": "PAVS:D0000921",
+  "subject": {
+    "id": "PAVS:D0000921",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000047",
+        "label": "Hypospadias"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000069",
+        "label": "Abnormality of the ureter"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000270",
+        "label": "Delayed cranial suture closure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000325",
+        "label": "Triangular face"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Micrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000592",
+        "label": "Blue sclerae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000824",
+        "label": "Decreased response to growth hormone stimulation test"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000957",
+        "label": "Cafe-au-lait spot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001159",
+        "label": "Syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001402",
+        "label": "Hepatocellular carcinoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001511",
+        "label": "Intrauterine growth retardation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001518",
+        "label": "Small for gestational age"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001626",
+        "label": "Abnormality of the cardiovascular system"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001760",
+        "label": "Abnormal foot morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002007",
+        "label": "Frontal bossing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002667",
+        "label": "Nephroblastoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002714",
+        "label": "Downturned corners of mouth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002750",
+        "label": "Delayed skeletal maturation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003162",
+        "label": "Fasting hypoglycemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003745",
+        "label": "Sporadic"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004209",
+        "label": "Clinodactyly of the 5th finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004220",
+        "label": "Short middle phalanx of the 5th finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004227",
+        "label": "Short distal phalanx of the 5th finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005461",
+        "label": "Craniofacial disproportion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010957",
+        "label": "Congenital posterior urethral valve"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100617",
+        "label": "Testicular seminoma"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0020796",
+        "label": "Silver-Russell syndrome 1"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000921",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0020796",
+          "label": "Silver-Russell syndrome 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000921",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000921_IGF2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "IGF2",
+                  "valueId": "NCBIGene:3481"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.6000e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.9600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "fallopian_tube:100|omental_fat_pad:98|tibial_nerve:96|liver:94|endocervix:92|subcutaneous_adipose_tissue:91|uterus:89|ectocervix:87|ovary:85|mammary_gland:83|tibial_artery:81|renal_medulla:79|coronary_artery:77|pituitary_gland:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of glycogen biosynthetic process|positive regulation of MAPK cascade|osteoblast differentiation|positive regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction|in utero embryonic development|regulation of DNA-templated transcription|positive regulation of activated T cell proliferation|embryonic placenta development|positive regulation of organ growth|insulin-like growth factor receptor signaling pathway|positive regulation of cell division|positive "
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "delayed bone ossification|decreased bone mineral density|abnormal bone marrow cavity morphology|abnormal sternum morphology|abnormal xiphoid process morphology|abnormal cartilage development|abnormal heart morphology|abnormal tibia morphology|polydactyly|decreased body weight|decreased body size|abnormal lens morphology|abnormal postnatal growth|postnatal growth retardation|abnormal skeleton development|increased heart weight|increased liver weight|abnormal lumbar vertebrae morphology|omphalocel"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

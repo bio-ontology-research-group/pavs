@@ -1,0 +1,246 @@
+{
+  "id": "PAVS:D0000852",
+  "subject": {
+    "id": "PAVS:D0000852",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000093",
+        "label": "Proteinuria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000104",
+        "label": "Renal agenesis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000104",
+        "label": "Renal agenesis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000110",
+        "label": "Renal dysplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000110",
+        "label": "Renal dysplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000148",
+        "label": "Vaginal atresia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000278",
+        "label": "Retrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Hypertelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000369",
+        "label": "Low-set ears"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000786",
+        "label": "Primary amenorrhea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000813",
+        "label": "Bicornuate uterus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000822",
+        "label": "Hypertension"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001562",
+        "label": "Oligohydramnios"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001760",
+        "label": "Abnormal foot morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002089",
+        "label": "Pulmonary hypoplasia"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0024519",
+        "label": "renal hypodysplasia/aplasia 1"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000852",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0024519",
+          "label": "renal hypodysplasia/aplasia 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000852",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000852_RET",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "RET",
+                  "valueId": "NCBIGene:5979"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.4000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "substantia_nigra:100|pituitary_gland:98|sigmoid_colon:96|cerebellum:96|frontal_cortex:92|hypothalamus:92|testis:92|cerebellar_hemisphere:92|cerebral_cortex:85|ectocervix:85|esophagogastric_junction:85|muscle_layer_of_esophagus:85|anterior_cingulate_cortex:85|stomach:85|transverse_colon:85"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of MAPK cascade|lymphocyte migration into lymphoid organs|response to pain|positive regulation of extrinsic apoptotic signaling pathway in absence of ligand|neuron cell-cell adhesion|GDF15-GFRAL signaling pathway|positive regulation of neuron projection development|positive regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction|cell surface receptor protein tyrosine kinase signaling pathway|membrane protein proteolysis|positive regulation of metaneph"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased cell proliferation|abnormal large intestine morphology|abnormal colon morphology|abnormal small intestine morphology|hydronephrosis|absent kidney|abnormal kidney development|abnormal ureter morphology|abnormal urinary bladder morphology|abnormal adrenal gland morphology|abnormal thyroid gland morphology|decreased motor neuron number|abnormal motor neuron innervation pattern|abnormal sympathetic ganglion morphology|absent superior cervical ganglion|small superior cervical ganglion|abnor"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

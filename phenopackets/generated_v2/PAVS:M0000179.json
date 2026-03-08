@@ -1,0 +1,168 @@
+{
+  "id": "PAVS:M0000179",
+  "subject": {
+    "id": "PAVS:M0000179",
+    "sex": "FEMALE",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000851",
+        "label": "Congenital hypothyroidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000271",
+        "label": "Abnormality of the face"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001511",
+        "label": "Intrauterine growth retardation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:16715098",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/16715098/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000179",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000179",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000179_GLIS3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GLIS3",
+                  "valueId": "NCBIGene:169792"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.4153e-12"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.5300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "thyroid_gland:100|ovary:98|endocervix:96|aorta:94|skin:94|fallopian_tube:91|renal_medulla:91|tibial_nerve:91|coronary_artery:85|cortex_of_kidney:85|ectocervix:85|lung:85|omental_fat_pad:85|tibial_artery:85|urinary_bladder:85|uterus:85"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "transcription by RNA polymerase II|regulation of transcription by RNA polymerase II|positive regulation of transcription by RNA polymerase II|negative regulation of transcription by RNA polymerase II"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "kidney cortex cyst|decreased body size|dehydration|hyperglycemia|postnatal growth retardation|increased circulating insulin level|increased circulating ketone body level|abnormal pancreas physiology|dilated renal tubule|decreased circulating insulin level|decreased insulin secretion|decreased pancreatic beta cell number|decreased activity of thyroid gland|abnormal pancreatic islet morphology|impaired glucose tolerance|increased circulating glucose level|polycystic kidney|small pancreatic islets|"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

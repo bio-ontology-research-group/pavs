@@ -1,0 +1,166 @@
+{
+  "id": "PAVS:D0000712",
+  "subject": {
+    "id": "PAVS:D0000712",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000047",
+        "label": "Hypospadias"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000127",
+        "label": "Renal salt wasting"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000840",
+        "label": "Adrenogenital syndrome"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008725",
+        "label": "congenital lipoid adrenal hyperplasia due to STAR deficency"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000712",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008725",
+          "label": "congenital lipoid adrenal hyperplasia due to STAR deficency"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000712",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000712_STAR",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "STAR",
+                  "valueId": "NCBIGene:6770"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.2677e-11"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.2970e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "adrenal_gland:100|ovary:98|testis:96|suprapubic_skin:94|frontal_cortex:92|hypothalamus:92|lower_leg_skin:92|cerebral_cortex:87|fallopian_tube:87|ectocervix:83|esophagus_mucosa:83|anterior_cingulate_cortex:83|nucleus_accumbens:83|pituitary_gland:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of bile acid biosynthetic process|C21-steroid hormone biosynthetic process|steroid biosynthetic process|intracellular cholesterol transport|regulation of steroid biosynthetic process|glucocorticoid biosynthetic process|cholesterol metabolic process|lipid transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal adrenal gland morphology|abnormal uterus morphology|abnormal ovary morphology|abnormal ovarian folliculogenesis|absent corpus luteum|abnormal testis morphology|increased Leydig cell number|arrest of spermatogenesis|small seminal vesicle|decreased body weight|cyanosis|postnatal growth retardation|increased circulating corticotropin-releasing hormone level|decreased circulating corticosterone level|decreased circulating aldosterone level|small prostate gland|abnormal Leydig cell morpholog"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

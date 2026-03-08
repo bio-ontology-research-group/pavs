@@ -1,0 +1,166 @@
+{
+  "id": "PAVS:M0001078",
+  "subject": {
+    "id": "PAVS:M0001078",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001321",
+        "label": "Cerebellar hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002436",
+        "label": "Occipital meningocele"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006817",
+        "label": "Aplasia/Hypoplasia of the cerebellar vermis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001274",
+        "label": "Agenesis of corpus callosum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:27431290",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/27431290/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001078",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001078",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001078_SLC25A19",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SLC25A19",
+                  "valueId": "NCBIGene:60386"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.8079e-05"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.8600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|spleen:98|adrenal_gland:96|lung:96|tibial_nerve:96|endocervix:91|omental_fat_pad:91|sigmoid_colon:91|skin:91|transverse_colon:91|uterus:91|blood:91|coronary_artery:77|ectocervix:77|esophagogastric_junction:77|fallopian_tube:77|ileum:77|muscle_layer_of_esophagus:77|renal_medulla:77|aorta:77|stomach:77|subcutaneous_adipose_tissue:77|thyroid_gland:77|urinary_bladder:77|cerebellar_hemisphere:77|cerebellum:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "thiamine pyrophosphate transmembrane transport|thiamine diphosphate biosynthetic process|transmembrane transport|deoxynucleotide transport|thiamine-containing compound metabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "microcephaly|exencephaly|open neural tube|wavy neural tube|anemia|decreased embryo size|pale yolk sac|embryonic growth arrest|ketoaciduria|abnormal enzyme/coenzyme activity|abnormal mitochondrial physiology|embryonic lethality during organogenesis, complete penetrance|abnormal amniotic fluid composition|absent brain ventricles|embryo tissue necrosis"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

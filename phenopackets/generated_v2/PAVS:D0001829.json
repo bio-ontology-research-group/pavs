@@ -1,0 +1,161 @@
+{
+  "id": "PAVS:D0001829",
+  "subject": {
+    "id": "PAVS:D0001829",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000248",
+        "label": "Brachycephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001417",
+        "label": "X-linked inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001419",
+        "label": "X-linked recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010657",
+        "label": "methylmalonic acidemia with homocystinuria, type cblX"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001829",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010657",
+          "label": "methylmalonic acidemia with homocystinuria, type cblX"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001829",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001829_HCFC1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "HCFC1",
+                  "valueId": "NCBIGene:3054"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "expressed_in",
+                    "value": "uterus:100|fallopian_tube:98|ovary:96|pituitary_gland:94|spleen:92|cerebellum:92|endocervix:89|sigmoid_colon:89|thyroid_gland:85|lung:83|aorta:83|skin:79|tibial_nerve:79|cerebellar_hemisphere:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of protein-containing complex assembly|positive regulation of gene expression|negative regulation of transcription by RNA polymerase II|chromatin remodeling|chromatin organization|positive regulation of DNA-templated transcription|release from viral latency|positive regulation of transcription by RNA polymerase II|protein stabilization|regulation of DNA-templated transcription|positive regulation of cell cycle"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal nasal bone morphology|decreased hematocrit|belly spot|abnormal cranium morphology|decreased body size|decreased embryo size|decreased hemoglobin content|decreased erythrocyte cell number|small frontal bone|small parietal bone|small nasal bone|abnormal amino acid level|small cranium|abnormal enzyme/coenzyme activity|thin cerebral cortex|upturned snout|abnormal ventricle myocardium morphology|postnatal lethality, incomplete penetrance|decreased tail pigmentation|midface hypoplasia|increas"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

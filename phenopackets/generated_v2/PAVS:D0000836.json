@@ -1,0 +1,152 @@
+{
+  "id": "PAVS:D0000836",
+  "subject": {
+    "id": "PAVS:D0000836",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001647",
+        "label": "Bicuspid aortic valve"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0024523",
+        "label": "aortic valve disease 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000836",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0024523",
+          "label": "aortic valve disease 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000836",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000836_NOTCH1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "NOTCH1",
+                  "valueId": "NCBIGene:4851"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.1700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "lung:100|spleen:100|lower_leg_skin:96|suprapubic_skin:96|tibial_nerve:92|sigmoid_colon:91|ectocervix:89|uterus:89|endocervix:85|subcutaneous_adipose_tissue:83|vagina:83|fallopian_tube:79|urinary_bladder:79|esophagogastric_junction:75|muscle_layer_of_esophagus:75|omental_fat_pad:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heart development|negative regulation of cell-substrate adhesion|positive regulation of transcription of Notch receptor target|outflow tract morphogenesis|negative regulation of cardiac muscle cell apoptotic process|regulation of cell migration|luteolysis|animal organ regeneration|negative regulation of oligodendrocyte differentiation|regulation of DNA-templated transcription|cardiac vascular smooth muscle cell development|response to lipopolysaccharide|cardiac septum morphogenesis|positive regu"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal vertebrae morphology|abnormal vascular development|abnormal heart development|distended pericardium|trabecula carnea hypoplasia|abnormal cell death|decreased thymocyte number|abnormal trigeminal ganglion morphology|increased startle reflex|anemia|abnormal vasculogenesis|abnormal somite development|decreased embryo size|absent vitelline blood vessels|pale yolk sac|embryonic growth arrest|postnatal growth retardation|abnormal embryonic tissue morphology|abnormal T cell differentiation|no "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

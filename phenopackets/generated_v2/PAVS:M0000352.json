@@ -1,0 +1,199 @@
+{
+  "id": "PAVS:M0000352",
+  "subject": {
+    "id": "PAVS:M0000352",
+    "sex": "FEMALE",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0030682",
+        "label": "Left ventricular noncompaction"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:32870709",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/32870709/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000352",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000352",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000352_ACACB",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ACACB",
+                  "valueId": "NCBIGene:32"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000338432.12:c.6305G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000012.12:g.109258309G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000341044.7:p.Arg2102Gln"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr12",
+                  "pos": 109258309,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(1)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF01039"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "1.096e-05"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.7387e-49"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.4300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "subcutaneous_adipose_tissue:100|omental_fat_pad:98|mammary_gland:96|skeletal_muscle_tissue:94|sigmoid_colon:92|esophagogastric_junction:91|muscle_layer_of_esophagus:89|tibial_nerve:87|thyroid_gland:85|liver:83|urinary_bladder:83|uterus:79|ectocervix:77|endocervix:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "fatty acid metabolic process|lipid metabolic process|negative regulation of fatty acid beta-oxidation|energy homeostasis|negative regulation of lipid catabolic process|positive regulation of lipid storage|regulation of glucose metabolic process|response to nutrient levels|acetyl-CoA metabolic process|fatty acid biosynthetic process|fatty acid homeostasis|positive regulation of heart growth|negative regulation of fatty acid oxidation|malonyl-CoA biosynthetic process|protein homotetramerization|ac"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased body weight|polyphagia|increased circulating triglyceride level|abnormal glucose homeostasis|increased circulating insulin level|abnormal lipid homeostasis|small heart|increased circulating ketone body level|decreased circulating free fatty acids level|abnormal behavior|decreased fatty acids level|increased oxygen consumption|abnormal energy expenditure|decreased circulating glucose level|abnormal enzyme/coenzyme activity|decreased circulating leptin level|decreased subcutaneous adipos"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

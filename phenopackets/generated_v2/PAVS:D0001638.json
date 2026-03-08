@@ -1,0 +1,313 @@
+{
+  "id": "PAVS:D0001638",
+  "subject": {
+    "id": "PAVS:D0001638",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000407",
+        "label": "Sensorineural hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000635",
+        "label": "Blue irides"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000767",
+        "label": "Pectus excavatum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000957",
+        "label": "Cafe-au-lait spot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001053",
+        "label": "Hypopigmented skin patches"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001100",
+        "label": "Heterochromia iridis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001107",
+        "label": "Ocular albinism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001276",
+        "label": "Hypertonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001425",
+        "label": "obsolete Heterogeneous"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002211",
+        "label": "White forelock"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002216",
+        "label": "Premature graying of hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002226",
+        "label": "White eyebrow"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002227",
+        "label": "White eyelashes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003812",
+        "label": "Phenotypic variability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006808",
+        "label": "Cerebral hypomyelination"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007676",
+        "label": "Hypoplasia of the iris"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007894",
+        "label": "Hypopigmentation of the fundus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008936",
+        "label": "Axial hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011379",
+        "label": "Dilated vestibule of the inner ear"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011381",
+        "label": "Aplasia of the semicircular canal"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011382",
+        "label": "Hypoplasia of the semicircular canal"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012698",
+        "label": "Waardenburg syndrome type 2E"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001638",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012698",
+          "label": "Waardenburg syndrome type 2E"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001638",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001638_SOX10",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SOX10",
+                  "valueId": "NCBIGene:6663"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9999e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.4800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "tibial_nerve:100|cervical_vertebra:98|hippocampus:96|minor_salivary_gland:96|substantia_nigra:92|amygdala:91|hypothalamus:89|putamen:89|caudate_nucleus:85|sigmoid_colon:83|esophagogastric_junction:81|lower_leg_skin:79|muscle_layer_of_esophagus:79|nucleus_accumbens:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "developmental process|negative regulation of Schwann cell proliferation|stem cell differentiation|regulation of DNA-templated transcription|neural crest cell migration|negative regulation of apoptotic process|positive regulation of gene expression|positive regulation of gliogenesis|positive regulation of DNA-templated transcription|regulation of transcription by RNA polymerase II|positive regulation of transcription by RNA polymerase II|peripheral nervous system development|anatomical structure "
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "head blaze|diluted coat color|belly spot|absent hair follicle melanin granules|tremors|abnormal olfactory bulb morphology|abnormal myelination|demyelination|motor neuron degeneration|sporadic seizures|abnormal dorsal root ganglion morphology|small dorsal root ganglion|abnormal sensory neuron morphology|abnormal sympathetic ganglion morphology|abnormal superior cervical ganglion morphology|abnormal sympathetic neuron morphology|abnormal enteric nervous system morphology|abnormal enteric ganglia m"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

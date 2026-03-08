@@ -1,0 +1,355 @@
+{
+  "id": "PAVS:D0001171",
+  "subject": {
+    "id": "PAVS:D0001171",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000154",
+        "label": "Wide mouth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000219",
+        "label": "Thin upper lip vermilion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000260",
+        "label": "Wide anterior fontanel"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000272",
+        "label": "Malar flattening"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Hypertelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000319",
+        "label": "Smooth philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000336",
+        "label": "Prominent supraorbital ridges"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000343",
+        "label": "Long philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000431",
+        "label": "Wide nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000670",
+        "label": "Carious teeth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000684",
+        "label": "Delayed eruption of teeth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000685",
+        "label": "Hypoplasia of teeth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001388",
+        "label": "obsolete Joint laxity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001476",
+        "label": "Delayed closure of the anterior fontanelle"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001763",
+        "label": "Pes planus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002007",
+        "label": "Frontal bossing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002208",
+        "label": "Coarse hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002299",
+        "label": "Brittle hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002868",
+        "label": "Narrow iliac wing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005306",
+        "label": "Capillary hemangioma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005336",
+        "label": "Forehead hyperpigmentation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007648",
+        "label": "Punctate cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008070",
+        "label": "Sparse hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008444",
+        "label": "Posterior wedging of vertebral bodies"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008808",
+        "label": "High iliac wing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010695",
+        "label": "Sutural cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0200086",
+        "label": "HP:0200086"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011911",
+        "label": "craniolenticulosutural dysplasia"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001171",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011911",
+          "label": "craniolenticulosutural dysplasia"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001171",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001171_SEC23A",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SEC23A",
+                  "valueId": "NCBIGene:10484"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.8029e-05"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.0800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|tibial_artery:98|aorta:96|coronary_artery:94|muscle_layer_of_esophagus:92|uterus:91|esophagogastric_junction:89|sigmoid_colon:89|urinary_bladder:85|ovary:83|subcutaneous_adipose_tissue:83|ectocervix:79|endocervix:79|fallopian_tube:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "COPII-coated vesicle budding|intracellular protein transport|endoplasmic reticulum to Golgi vesicle-mediated transport|protein transport|vesicle-mediated transport|protein localization to plasma membrane|COPII-coated vesicle cargo loading"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal cartilage development|exencephaly|open neural tube|abnormal telencephalon development|decreased embryo size|abnormal visceral yolk sac morphology|intracranial hemorrhage|abnormal brain morphology|abnormal extraembryonic tissue physiology|abnormal amnion morphology|decreased total body fat amount|embryonic lethality during organogenesis, complete penetrance|collapsed brain ventricles|decreased embryonic neuroepithelial cell proliferation|small brain ventricles|abnormal collagen level|inc"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

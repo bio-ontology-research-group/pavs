@@ -1,0 +1,216 @@
+{
+  "id": "PAVS:B0000106",
+  "subject": {
+    "id": "PAVS:B0000106",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0040078",
+        "label": "Axonal degeneration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-pmid28454995",
+        "description": "Source dataset: ahmed-pmid28454995"
+      },
+      {
+        "id": "PMID:28454995",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:B0000106",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:B0000106",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:B0000106_RIPK1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "RIPK1",
+                  "valueId": "NCBIGene:8737"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000371117.8:c.4870C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000006.12:g.52024940G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000360158.3:p.Arg1624Trp"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr6",
+                  "pos": 52024940,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:186055"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "possibly_damaging(0.725)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF01833"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "0.0001012"
+                  },
+                  {
+                    "name": "af_saudi",
+                    "value": "0.001656"
+                  },
+                  {
+                    "name": "ac_saudi",
+                    "value": "1"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "186055"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic/Likely pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.1054e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.0000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "fallopian_tube:100|lower_leg_skin:100|spleen:100|subcutaneous_adipose_tissue:100|suprapubic_skin:100|thyroid_gland:91|uterus:91|ileum:87|mammary_gland:87|tibial_nerve:87|ectocervix:81|endocervix:81|lung:81|skin:81|tibial_artery:81|urinary_bladder:81|vagina:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cellular response to tumor necrosis factor|response to tumor necrosis factor|positive regulation of extrinsic apoptotic signaling pathway|positive regulation of MAPK cascade|regulation of necroptotic process|response to oxidative stress|apoptotic process|positive regulation of apoptotic process|ripoptosome assembly|positive regulation of macrophage differentiation|extrinsic apoptotic signaling pathway|negative regulation of necroptotic process|positive regulation of interleukin-8 production|posi"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal leukocyte cell number|abnormal intestine morphology|abnormal colon morphology|abnormal thymus morphology|decreased thymocyte number|abnormal dermal layer morphology|decreased body weight|edema|neonatal lethality|abnormal lymph node morphology|abnormal immune system organ morphology|abnormal brown adipose tissue morphology|lymph node inflammation|abnormal body temperature|increased spleen red pulp amount|decreased sensitivity to induced cell death|increased thymocyte apoptosis|postnatal "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

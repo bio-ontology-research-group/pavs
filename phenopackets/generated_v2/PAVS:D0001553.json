@@ -1,0 +1,348 @@
+{
+  "id": "PAVS:D0001553",
+  "subject": {
+    "id": "PAVS:D0001553",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000407",
+        "label": "Sensorineural hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000467",
+        "label": "Neck muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000508",
+        "label": "Ptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000544",
+        "label": "External ophthalmoplegia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001251",
+        "label": "Ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001283",
+        "label": "Bulbar palsy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001308",
+        "label": "Tongue fasciculations"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001347",
+        "label": "Hyperreflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001605",
+        "label": "Vocal cord paralysis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001621",
+        "label": "Weak voice"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002015",
+        "label": "Dysphagia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002058",
+        "label": "Myopathic facies"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002093",
+        "label": "Respiratory insufficiency"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002205",
+        "label": "Recurrent respiratory infections"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002312",
+        "label": "Clumsiness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002808",
+        "label": "Kyphosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002877",
+        "label": "Nocturnal hypoventilation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003621",
+        "label": "Juvenile onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003676",
+        "label": "Progressive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003701",
+        "label": "Proximal muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007097",
+        "label": "Cranial nerve motor loss"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009113",
+        "label": "Diaphragmatic weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009130",
+        "label": "Hand muscle atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009830",
+        "label": "Peripheral neuropathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010307",
+        "label": "Stridor"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011448",
+        "label": "Ankle clonus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011449",
+        "label": "Knee clonus"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0024537",
+        "label": "Brown-Vialetto-van Laere syndrome 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001553",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0024537",
+          "label": "Brown-Vialetto-van Laere syndrome 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001553",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001553_SLC52A3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SLC52A3",
+                  "valueId": "NCBIGene:113278"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.5009e-06"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0120e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|prostate_gland:98|renal_medulla:98|cortex_of_kidney:94|ileum:94|transverse_colon:91|esophagus_mucosa:89|tibial_nerve:89|cerebral_cortex:85|cervical_vertebra:85|mammary_gland:85|minor_salivary_gland:85|substantia_nigra:85|vagina:85"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "riboflavin metabolic process|riboflavin transport|sensory perception of sound"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "hypoglycemia|increased body weight|decreased body weight|hyperlipidemia|premature death|abnormal vibrissa morphology|abnormal lipid homeostasis|glutaricadicuria|increased circulating carnitine level|abnormal vitamin homeostasis|abnormal placental transport|decreased placenta weight|abnormal vitamin level|decreased fetal weight|decreased birth weight|postnatal lethality, incomplete penetrance|neonatal lethality, incomplete penetrance|decreased food intake|decreased fatty acid beta-oxidation"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

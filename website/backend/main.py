@@ -607,9 +607,34 @@ def get_about(lang: str = Query(default="en")):
     return PlainTextResponse("# About\n\nContent not available.")
 
 
+_AR_RE = re.compile(r'[\u0600-\u06FF]')
+
+
+def _normalize_ar(text: str) -> str:
+    """Normalize Arabic text for fuzzy matching: replace ه at word-end with ة."""
+    return re.sub(r'ه(?=\s|$)', 'ة', text)
+
+
 @app.get("/api/search/hpo")
 def hpo_autocomplete(q: str = Query(..., min_length=2)):
-    """HPO term autocomplete via SPARQL."""
+    """HPO term autocomplete. Arabic queries are matched against the in-memory
+    Arabic label cache with ه/ة end-of-word normalization; English queries use
+    the SPARQL index."""
+    if _AR_RE.search(q):
+        # Arabic query: search hpo_ar_cache in-memory
+        q_norm = _normalize_ar(q.strip())
+        results = []
+        for hp_id, ar in hpo_ar_cache.items():
+            ar_label = ar.get("arabic_label", "")
+            if not ar_label:
+                continue
+            if q_norm in _normalize_ar(ar_label):
+                obo_name = hpo_obo_cache.get(hp_id, {}).get("name", hp_id)
+                results.append({"id": hp_id, "label": ar_label, "en_label": obo_name})
+        # Sort: shorter labels first (closer match), cap at 20
+        results.sort(key=lambda x: len(x["label"]))
+        return results[:20]
+
     try:
         rows = sparql_select(Q.hpo_autocomplete_simple(q, limit=20))
         results = []

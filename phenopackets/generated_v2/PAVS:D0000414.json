@@ -1,0 +1,159 @@
+{
+  "id": "PAVS:D0000414",
+  "subject": {
+    "id": "PAVS:D0000414",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000204",
+        "label": "Cleft upper lip"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012142",
+        "label": "orofacial cleft 5"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000414",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012142",
+          "label": "orofacial cleft 5"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000414",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000414_MSX1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MSX1",
+                  "valueId": "NCBIGene:4487"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.6306e-04"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.2890e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "endocervix:100|ectocervix:98|pituitary_gland:96|uterus:94|subcutaneous_adipose_tissue:92|skin:91|omental_fat_pad:89|vagina:87|fallopian_tube:85|mammary_gland:83|thyroid_gland:81|aorta:79|tibial_nerve:77|urinary_bladder:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "mesenchymal cell proliferation|face morphogenesis|embryonic morphogenesis|odontogenesis of dentin-containing tooth|regulation of DNA-templated transcription|negative regulation of gene expression|regulation of odontogenesis|positive regulation of cell cycle|cardiac conduction system development|negative regulation of odontoblast differentiation|positive regulation of odontogenesis|inner ear development|animal organ morphogenesis|positive regulation of transcription by RNA polymerase II|protein s"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "overlapping parietal bones|large anterior fontanelle|short mandible|absent premaxilla|absent alveolar process|short maxilla|abnormal frontal bone morphology|cleft palate|cleft chin|absent incisors|growth retardation of molars|absent maxillary shelf|absent palatine bone horizontal plate|shortened head|abnormal cranium morphology|short snout|abnormal mandible morphology|abnormal liver development|dilated third ventricle|dilated fourth ventricle|abnormal diencephalon morphology|exencephaly|abnormal"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

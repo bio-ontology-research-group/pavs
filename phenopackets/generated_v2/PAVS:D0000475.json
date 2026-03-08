@@ -1,0 +1,306 @@
+{
+  "id": "PAVS:D0000475",
+  "subject": {
+    "id": "PAVS:D0000475",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Large fontanelles"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000239",
+        "label": "Coarse facial features"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000280",
+        "label": "Ptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000508",
+        "label": "Pectus excavatum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000767",
+        "label": "Long clavicles"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000890",
+        "label": "Osteopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000938",
+        "label": "Osteoporosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000939",
+        "label": "Palmoplantar hyperkeratosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000972",
+        "label": "Hyperhidrosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000975",
+        "label": "obsolete Eczematoid dermatitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000976",
+        "label": "Seborrheic dermatitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001051",
+        "label": "Clubbing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001217",
+        "label": "Arthritis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001369",
+        "label": "Limitation of joint mobility"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001376",
+        "label": "Disproportionate tall stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001519",
+        "label": "Redundant skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001582",
+        "label": "Patent ductus arteriosus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001643",
+        "label": "Wormian bones"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002645",
+        "label": "Thickened calvaria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002684",
+        "label": "Arthralgia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002829",
+        "label": "Congenital onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003577",
+        "label": "Osteolytic defects of the phalanges of the hand"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009771",
+        "label": "HP:0009771"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0024546",
+        "label": "hypertrophic osteoarthropathy, primary, autosomal recessive, 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000475",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0024546",
+          "label": "hypertrophic osteoarthropathy, primary, autosomal recessive, 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000475",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000475_HPGD",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "HPGD",
+                  "valueId": "NCBIGene:3248"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.4881e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.2800e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "vagina:100|lung:98|esophagus_mucosa:96|urinary_bladder:94|lower_leg_skin:92|transverse_colon:91|liver:89|sigmoid_colon:89|uterus:85|ileum:83|stomach:81|suprapubic_skin:79|esophagogastric_junction:77|fallopian_tube:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "prostaglandin metabolic process|positive regulation of apoptotic process|prostaglandin catabolic process|response to ethanol|response to lipopolysaccharide|negative regulation of cell cycle|ovulation|female pregnancy|ductus arteriosus closure|lipoxygenase pathway|regulation of prostaglandin catabolic process|fatty acid metabolic process|thrombin-activated receptor signaling pathway|transforming growth factor beta receptor signaling pathway|parturition|lipoxin biosynthetic process|lipid metabolic"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal vascular regression|abnormal corpus luteum morphology|patent ductus arteriosus|increased circulating progesterone level|congestive heart failure|abnormal prostaglandin level|increased prostaglandin level|neonatal lethality, complete penetrance|preweaning lethality, complete penetrance|early parturition"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

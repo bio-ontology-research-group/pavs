@@ -1,0 +1,194 @@
+{
+  "id": "PAVS:D0000366",
+  "subject": {
+    "id": "PAVS:D0000366",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000286",
+        "label": "Epicanthus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000465",
+        "label": "Webbed neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000601",
+        "label": "Hypotelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001004",
+        "label": "Lymphedema"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001182",
+        "label": "Tapered finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001876",
+        "label": "Pancytopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002863",
+        "label": "Myelodysplasia"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013540",
+        "label": "deafness-lymphedema-leukemia syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000366",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013540",
+          "label": "deafness-lymphedema-leukemia syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000366",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000366_GATA2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GATA2",
+                  "valueId": "NCBIGene:2624"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9993e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "3.3500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "uterus:100|prostate_gland:98|endocervix:96|fallopian_tube:94|ectocervix:92|lung:91|vagina:89|subcutaneous_adipose_tissue:87|renal_medulla:85|urinary_bladder:83|mammary_gland:81|spleen:81|omental_fat_pad:77|tibial_nerve:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "eosinophil fate commitment|negative regulation of Notch signaling pathway|response to lipid|positive regulation of angiogenesis|cell fate commitment|system development|negative regulation of gene expression|regulation of DNA-templated transcription|negative regulation of neural precursor cell proliferation|positive regulation of gene expression|positive regulation of blood vessel endothelial cell migration|positive regulation of transcription by RNA polymerase II|regulation of transcription by R"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "enlarged pericardium|abnormal renal/urinary system morphology|hydronephrosis|abnormal ureter morphology|abnormal ovary morphology|decreased body weight|decreased body size|anemia|impaired hematopoiesis|abnormal embryo size|absent vitelline blood vessels|pale yolk sac|premature death|abnormal definitive hematopoiesis|abnormal kidney morphology|no abnormal phenotype detected|abnormal megakaryocyte progenitor cell morphology|abnormal blood cell morphology/development|abnormal epididymis morphology|"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

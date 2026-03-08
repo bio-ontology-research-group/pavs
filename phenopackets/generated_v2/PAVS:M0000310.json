@@ -1,0 +1,164 @@
+{
+  "id": "PAVS:M0000310",
+  "subject": {
+    "id": "PAVS:M0000310",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:27629047",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/27629047/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000310",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000310",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000310_SUCLA2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SUCLA2",
+                  "valueId": "NCBIGene:8803"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000646932.1:c.362_363del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000013.11:g.47988890_47988891del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000494360.1:p.Ile121SerfsTer38"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF08442"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.2137e-04"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.1300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skeletal_muscle_tissue:100|cerebellar_hemisphere:98|cerebellum:96|frontal_cortex:94|tibial_artery:94|uterus:91|ectocervix:89|aorta:89|tibial_nerve:89|coronary_artery:83|ovary:83|skin:83|subcutaneous_adipose_tissue:83|vagina:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "succinyl-CoA metabolic process|tricarboxylic acid cycle|succinate metabolic process|succinyl-CoA pathway|succinyl-CoA catabolic process|malate metabolic process|toxic metabolite repair"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal placenta morphology|prenatal lethality|increased circulating carnitine level|decreased fetal size|abnormal mitochondrial morphology|abnormal mitochondrial physiology|abnormal oxidative phosphorylation|perinatal lethality, complete penetrance|decreased mitochondrial DNA content|decreased hepatocyte mitochondrial DNA content|decreased myocardial fiber mitochondrial DNA content|increased mitochondrial DNA content"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

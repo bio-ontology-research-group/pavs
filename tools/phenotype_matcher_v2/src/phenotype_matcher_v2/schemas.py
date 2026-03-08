@@ -66,6 +66,13 @@ class MatcherConfig:
     llm_validate_negation: bool = True
     llm_validate_modifiers: bool = True
 
+    # NER extractor settings (used by match_narrative)
+    ner_max_ngram_words: int = 5         # Max sliding window size (words)
+    ner_min_ngram_words: int = 1         # Min sliding window size
+    ner_peak_min_delta: float = 0.10     # Min prominence above sentence median to count as peak
+    ner_length_bonus: float = 0.05       # Bonus per log(window_size) favoring longer matches
+    ner_short_text_threshold: int = 50   # Word count below which match_narrative() → match()
+
 
 @dataclass
 class PhenotypeMatch:

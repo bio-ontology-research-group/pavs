@@ -1,0 +1,173 @@
+{
+  "id": "PAVS:D0001335",
+  "subject": {
+    "id": "PAVS:D0001335",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000482",
+        "label": "Microcornea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000612",
+        "label": "Iris coloboma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007780",
+        "label": "Cortical pulverulent cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007976",
+        "label": "Cerulean cataract"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012437",
+        "label": "cataract 21 multiple types"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001335",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012437",
+          "label": "cataract 21 multiple types"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001335",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001335_MAF",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MAF",
+                  "valueId": "NCBIGene:4094"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.8112e-02"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.5200e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ovary:100|endocervix:98|lower_leg_skin:96|tibial_nerve:94|suprapubic_skin:92|ectocervix:91|vagina:89|uterus:87|thyroid_gland:85|ileum:83|fallopian_tube:81|omental_fat_pad:79|spleen:79|subcutaneous_adipose_tissue:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of transcription by RNA polymerase II|transcription by RNA polymerase II|lens fiber cell differentiation|integrated stress response signaling|positive regulation of transcription by RNA polymerase II|regulation of transcription by RNA polymerase II|megakaryocyte differentiation|regulation of DNA-templated transcription"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal heart morphology|enlarged heart|shortened head|abnormal liver morphology|small liver|abnormal spleen morphology|enlarged spleen|small spleen|tremors|weakness|abnormal ovary morphology|decreased body size|abnormal lens induction|abnormal lens vesicle development|microphthalmia|abnormal lens morphology|cataract|small lens|small pupil|abnormal eating behavior|abnormal blood vessel morphology|abnormal placenta morphology|increased urine glucose level|edema|abnormal kidney morphology|abnorma"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

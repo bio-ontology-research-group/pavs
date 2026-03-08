@@ -1,0 +1,327 @@
+{
+  "id": "PAVS:D0000750",
+  "subject": {
+    "id": "PAVS:D0000750",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000219",
+        "label": "Thin upper lip vermilion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000319",
+        "label": "Smooth philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000343",
+        "label": "Long philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000411",
+        "label": "Protruding ear"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000430",
+        "label": "Underdeveloped nasal alae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000447",
+        "label": "Pear-shaped nose"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000678",
+        "label": "Dental crowding"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000707",
+        "label": "Abnormality of the nervous system"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000938",
+        "label": "Osteopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001773",
+        "label": "Short foot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002750",
+        "label": "Delayed skeletal maturation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002805",
+        "label": "Accelerated bone age after puberty"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003279",
+        "label": "Coxa magna"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004279",
+        "label": "Short palm"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005338",
+        "label": "Sparse lateral eyebrow"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005743",
+        "label": "Avascular necrosis of the capital femoral epiphysis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008070",
+        "label": "Sparse hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009381",
+        "label": "Short finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009803",
+        "label": "Short phalanx of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010049",
+        "label": "Short metacarpal"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010259",
+        "label": "Cone-shaped epiphyses of the middle phalanges of the hand"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010743",
+        "label": "Short metatarsal"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011069",
+        "label": "Supernumerary tooth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0200086",
+        "label": "HP:0200086"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008597",
+        "label": "obsolete trichorhinophalangeal syndrome, type III"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000750",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008597",
+          "label": "obsolete trichorhinophalangeal syndrome, type III"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000750",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000750_TRPS1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TRPS1",
+                  "valueId": "NCBIGene:7227"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "mammary_gland:100|vagina:98|ectocervix:96|endocervix:94|esophagus_mucosa:94|minor_salivary_gland:94|lower_leg_skin:89|prostate_gland:87|aorta:87|coronary_artery:83|esophagogastric_junction:83|muscle_layer_of_esophagus:83|sigmoid_colon:83|tibial_artery:83|uterus:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of DNA-templated transcription|regulation of chondrocyte differentiation|negative regulation of transcription by RNA polymerase II|regulation of transcription by RNA polymerase II|regulation of DNA-templated transcription|skeletal system development"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased bone mineral density|kyphoscoliosis|short mandible|short maxilla|cleft palate|abnormal rib morphology|scoliosis|abnormal chondrocyte morphology|abnormal hair follicle morphology|decreased hair follicle number|sparse hair|short snout|increased rib number|abnormal kidney development|abnormal lung morphology|atelectasis|thick pulmonary interalveolar septum|abnormal epidermal layer morphology|absent vibrissae|hunched posture|cyanosis|respiratory failure|respiratory distress|abnormal nose m"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

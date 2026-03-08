@@ -1,0 +1,159 @@
+{
+  "id": "PAVS:D0000724",
+  "subject": {
+    "id": "PAVS:D0000724",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000044",
+        "label": "Hypogonadotropic hypogonadism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000458",
+        "label": "Anosmia"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012880",
+        "label": "hypogonadotropic hypogonadism 5 with or without anosmia"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000724",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012880",
+          "label": "hypogonadotropic hypogonadism 5 with or without anosmia"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000724",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000724_CHD7",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CHD7",
+                  "valueId": "NCBIGene:55636"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellar_hemisphere:100|cerebellum:98|pituitary_gland:96|tibial_nerve:96|ileum:92|spleen:91|thyroid_gland:91|cervical_vertebra:87|lower_leg_skin:87|lung:87|suprapubic_skin:87|esophagus_mucosa:79|transverse_colon:79|mammary_gland:75|minor_salivary_gland:75|omental_fat_pad:75|sigmoid_colon:75|skeletal_muscle_tissue:75|subcutaneous_adipose_tissue:75|testis:75|vagina:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "secondary palate development|chordate embryonic development|genitalia development|in utero embryonic development|T cell differentiation|regulation of DNA-templated transcription|regulation of growth hormone secretion|head development|retina development in camera-type eye|rRNA processing|limb development|chromatin organization|regulation of gene expression|central nervous system development|heart morphogenesis|chromatin remodeling|camera-type eye development|inner ear morphogenesis|skeletal syste"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal malleus morphology|abnormal lateral semicircular canal morphology|abnormal otic capsule morphology|decreased circulating calcium level|decreased hematocrit|decreased leukocyte cell number|decreased monocyte cell number|thin ventricular wall|decreased cell proliferation|long snout|abnormal pulmonary trunk morphology|hydronephrosis|abnormal hindlimb morphology|small thymus|decreased brain size|abnormal corpus callosum morphology|abnormal telencephalon morphology|abnormal cerebral cortex m"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

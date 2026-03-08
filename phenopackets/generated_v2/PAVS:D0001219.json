@@ -1,0 +1,152 @@
+{
+  "id": "PAVS:D0001219",
+  "subject": {
+    "id": "PAVS:D0001219",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002121",
+        "label": "Generalized non-motor (absence) seizure"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012843",
+        "label": "epilepsy, childhood absence, susceptibility to, 5"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001219",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012843",
+          "label": "epilepsy, childhood absence, susceptibility to, 5"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001219",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001219_GABRB3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GABRB3",
+                  "valueId": "NCBIGene:2562"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9912e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.3900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "frontal_cortex:100|pituitary_gland:98|cerebellar_hemisphere:98|nucleus_accumbens:94|cerebral_cortex:92|cerebellum:92|anterior_cingulate_cortex:89|hippocampus:87|hypothalamus:87|caudate_nucleus:87|amygdala:81|putamen:81|thyroid_gland:77|testis:75|atrium_auricular_region:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "monoatomic ion transport|inner ear receptor cell development|chemical synaptic transmission|neuron development|gamma-aminobutyric acid signaling pathway|monoatomic ion transmembrane transport|inhibitory postsynaptic potential|negative regulation of synaptic transmission, GABAergic|signal transduction|chloride transport|inhibitory synapse assembly|chloride transmembrane transport|innervation|roof of mouth development|cochlea development|cellular response to histamine|synaptic transmission, GABAer"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal cochlea morphology|cleft palate|myoclonus|tremors|decreased body size|increased anxiety-related response|abnormal maternal nurturing|circling|hyperactivity|hyperresponsive|impaired coordination|increased stereotypic behavior|abnormal nest building behavior|limb grasping|impaired swimming|reduced male fertility|abnormal reflex|seizures|abnormal motor capabilities/coordination/movement|abnormal parental behavior|premature death|no abnormal phenotype detected|abnormal CNS synaptic transmis"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

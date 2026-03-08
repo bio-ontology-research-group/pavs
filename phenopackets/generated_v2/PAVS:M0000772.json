@@ -1,0 +1,204 @@
+{
+  "id": "PAVS:M0000772",
+  "subject": {
+    "id": "PAVS:M0000772",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007359",
+        "label": "Focal-onset seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:34055681",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/34055681/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000772",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000772",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000772_PEX13",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PEX13",
+                  "valueId": "NCBIGene:5194"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000295030.6:c.1A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.61017760A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000295030.4:p.Met1?"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 61017760,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:1363777"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "start_lost"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.069)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "1.933e-05"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "1363777"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Uncertain significance"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.8784e-07"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1590e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "thyroid_gland:100|skin:98|testis:98|ectocervix:94|ovary:94|vagina:94|endocervix:89|esophagus_mucosa:89|fallopian_tube:89|lung:89|prostate_gland:89|urinary_bladder:89|uterus:89|mammary_gland:75|minor_salivary_gland:75|aorta:75|tibial_artery:75|tibial_nerve:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "neuron migration|protein import into peroxisome matrix, translocation|cerebral cortex cell migration|fatty acid alpha-oxidation|protein transport|protein import into peroxisome matrix, docking|suckling behavior|microtubule-based peroxisome localization|locomotory behavior|cellular response to reactive oxygen species"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal cerebral cortex morphology|decreased body weight|aphagia|respiratory distress|neuron degeneration|oxidative stress|hypotonia|bradykinesia|abnormal renal glomerulus morphology|abnormal mitochondrial morphology|abnormal mitochondrial physiology|thin cerebral cortex|abnormal podocyte foot process morphology|abnormal adrenocortical cell morphology|neonatal lethality, complete penetrance|abnormal mitochondrial crista morphology|abnormal peroxisome morphology|abnormal peroxisome physiology|ma"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

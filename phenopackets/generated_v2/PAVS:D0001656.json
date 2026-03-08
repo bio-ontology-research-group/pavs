@@ -1,0 +1,593 @@
+{
+  "id": "PAVS:D0001656",
+  "subject": {
+    "id": "PAVS:D0001656",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000076",
+        "label": "Vesicoureteral reflux"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000098",
+        "label": "Tall stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000113",
+        "label": "Polycystic kidney dysplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Abnormality of the dentition"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000164",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Macrocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000256",
+        "label": "Dolichocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000268",
+        "label": "Malar flattening"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000272",
+        "label": "Epicanthus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000286",
+        "label": "Full cheeks"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000293",
+        "label": "Pointed chin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000307",
+        "label": "Short chin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000331",
+        "label": "Long philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000343",
+        "label": "Hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Macrotia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000400",
+        "label": "Bulbous nose"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000412",
+        "label": "Wide nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000414",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000431",
+        "label": "Deeply set eye"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Ptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000490",
+        "label": "Long eyelashes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000508",
+        "label": "Thick eyebrow"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000527",
+        "label": "Dental malocclusion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000574",
+        "label": "Hyperorality"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000689",
+        "label": "Autism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000710",
+        "label": "Aggressive behavior"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000717",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000718",
+        "label": "Reduced eye contact"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Sacral dimple"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000817",
+        "label": "Hypohidrosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000960",
+        "label": "Lymphedema"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000966",
+        "label": "Large hands"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001004",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001176",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Hyporeflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Motor delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001265",
+        "label": "Generalized hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Neonatal hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001290",
+        "label": "Ventricular septal defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001319",
+        "label": "Patent ductus arteriosus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001629",
+        "label": "Hypoplastic toenails"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001643",
+        "label": "Gastroesophageal reflux"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001800",
+        "label": "Heat intolerance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002020",
+        "label": "Ventriculomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002046",
+        "label": "Broad-based gait"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002119",
+        "label": "Delayed CNS myelination"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002136",
+        "label": "Unsteady gait"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002188",
+        "label": "Intellectual disability, moderate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002317",
+        "label": "Abnormal periventricular white matter morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002342",
+        "label": "Episodic vomiting"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002518",
+        "label": "Sporadic"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002572",
+        "label": "Bruxism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003745",
+        "label": "Clinodactyly of the 5th finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003763",
+        "label": "2-3 toe syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004209",
+        "label": "Impaired pain sensation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004691",
+        "label": "Concave nasal ridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007328",
+        "label": "Feeding difficulties"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011120",
+        "label": "Palpebral edema"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011968",
+        "label": "Cellulitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100540",
+        "label": "Arachnoid cyst"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100658",
+        "label": "Tongue thrusting"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100702",
+        "label": "Cerebral visual impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100703",
+        "label": "Toenail dysplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100704",
+        "label": "HP:0100704"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100797",
+        "label": "HP:0100797"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011652",
+        "label": "Phelan-McDermid syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001656",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011652",
+          "label": "Phelan-McDermid syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001656",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001656_SHANK3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SHANK3",
+                  "valueId": "NCBIGene:85358"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9995e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.2800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellum:100|spleen:98|cerebellar_hemisphere:96|subcutaneous_adipose_tissue:94|mammary_gland:92|omental_fat_pad:91|lung:89|uterus:87|cerebral_cortex:85|thyroid_gland:83|endocervix:81|frontal_cortex:81|fallopian_tube:77|anterior_cingulate_cortex:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of dendritic spine morphogenesis|regulation of long-term synaptic depression|positive regulation of excitatory postsynaptic potential|vocal learning|regulation of long-term synaptic potentiation|positive regulation of glutamate receptor signaling pathway|positive regulation of long-term synaptic potentiation|brain morphogenesis|postsynaptic density assembly|neuromuscular process controlling balance|learning|NMDA glutamate receptor clustering|associative learning|memory|synapse organiz"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased circulating calcium level|abnormal autopod morphology|weakness|thalamus hyperplasia|skin lesions|increased body weight|decreased body weight|increased aggression towards mice|abnormal social investigation|social withdrawal|increased anxiety-related response|decreased anxiety-related response|circling|hyperactivity|decreased locomotor activity|impaired coordination|abnormal gait|increased stereotypic behavior|abnormal response to new environment|decreased exploration in new environment|"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

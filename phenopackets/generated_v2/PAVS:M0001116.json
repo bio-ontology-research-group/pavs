@@ -1,0 +1,193 @@
+{
+  "id": "PAVS:M0001116",
+  "subject": {
+    "id": "PAVS:M0001116",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P1Y2M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007537",
+        "label": "Severe photosensitivity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000519",
+        "label": "Developmental cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:28940097",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28940097/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001116",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001116",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001116_ERCC8",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ERCC8",
+                  "valueId": "NCBIGene:1161"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000676185.1:c.427del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000005.10:g.60904846del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000501614.1:p.Thr143GlnfsTer17"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.7192e-11"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.6080e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ectocervix:100|endocervix:100|fallopian_tube:100|ovary:100|pituitary_gland:100|skin:100|testis:100|thyroid_gland:100|tibial_nerve:100|uterus:100|vagina:100|cerebellar_hemisphere:100|cerebellum:100|cervical_vertebra:75|coronary_artery:75|esophagogastric_junction:75|esophagus_mucosa:75|ileum:75|lower_leg_skin:75|lung:75|mammary_gland:75|minor_salivary_gland:75|muscle_layer_of_esophagus:75|omental_fat_pad:75|prostate_gland:75|renal_medulla:75|sigmoid_colon:75|aorta:75|spleen:75|subcutaneous_adipose_tissue:75|suprapubic_skin:75|tibial_artery:75|transverse_colon:75|urinary_bladder:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of transcription-coupled nucleotide-excision repair|response to auditory stimulus|protein autoubiquitination|nucleotide-excision repair|response to oxidative stress|single strand break repair|response to UV|proteasome-mediated ubiquitin-dependent protein catabolic process|DNA damage response|transcription-coupled nucleotide-excision repair|protein ubiquitination|DNA repair|positive regulation of DNA repair|protein polyubiquitination|double-strand break repair via classical nonhomologo"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "skin photosensitivity|increased sensitivity to skin irradiation|abnormal locomotor behavior|increased circulating HDL cholesterol level|astrocytosis|cochlear inner hair cell degeneration|cochlear outer hair cell degeneration|increased incidence of tumors by UV-induction|increased circulating cholesterol level|impaired hearing|increased cellular sensitivity to ultraviolet irradiation induced cell death|retina photoreceptor degeneration|microgliosis|increased or absent threshold for auditory brain"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

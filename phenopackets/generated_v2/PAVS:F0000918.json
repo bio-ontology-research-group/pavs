@@ -1,0 +1,247 @@
+{
+  "id": "PAVS:F0000918",
+  "subject": {
+    "id": "PAVS:F0000918",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P45Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0040081",
+        "label": "Abnormal circulating creatine kinase concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002401",
+        "label": "Stroke-like episode"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0025406",
+        "label": "Asthenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002076",
+        "label": "Migraine"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0012378",
+        "label": "Fatigue"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001324",
+        "label": "Muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003546",
+        "label": "Exercise intolerance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000918",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000918",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000918_PAX7",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PAX7",
+                  "valueId": "NCBIGene:5081"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000420770.7:c.433C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000001.11:g.18635222C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000403389.2:p.Arg145Ter"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr1",
+                  "pos": 18635222,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:677184"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "stop_gained"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00292"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "2.053e-06"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "677184"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.7674e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.0400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "frontal_cortex:100|skeletal_muscle_tissue:100|cerebral_cortex:96|cervical_vertebra:94|anterior_cingulate_cortex:94|hypothalamus:91|testis:91|amygdala:87|hippocampus:87|substantia_nigra:87|caudate_nucleus:87|nucleus_accumbens:79|putamen:79|adrenal_gland:75|coronary_artery:75|cortex_of_kidney:75|ectocervix:75|endocervix:75|esophagogastric_junction:75|esophagus_mucosa:75|fallopian_tube:75|heart_left_ventricle:75|ileum:75|liver:75|lower_leg_skin:75|lung:75|mammary_gland:75|minor_salivary_gland:75|muscle_layer_of_esophagus:75|omental_fat_pad:75|ovary:75|pancreas:75|pituitary_gland:75|prostate_gland:75|renal_medulla:75|sigmoid_colon:75|aorta:75|skin:75|spleen:75|stomach:75|subcutaneous_adipose_tissue:75|suprapubic_skin:75|thyroid_gland:75|tibial_artery:75|tibial_nerve:75|atrium_auricular_region:75|transverse_colon:75|urinary_bladder:75|uterus:75|vagina:75|blood:75|cerebellar_hemisphere:75|cerebellum:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "muscle organ development|negative regulation of apoptotic process|nervous system development|regulation of transcription by RNA polymerase II|skeletal muscle satellite cell differentiation|regulation of DNA-templated transcription|anatomical structure morphogenesis"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "short maxilla|pointed snout|abnormal small intestine morphology|muscle weakness|abnormal muscle regeneration|thin diaphragm muscle|decreased body size|postnatal growth retardation|premature death|no abnormal phenotype detected|decreased circulating triglyceride level|decreased satellite cell number|myositis|abnormal nasal capsule morphology|decreased skeletal muscle mass|cachexia|abnormal serous gland morphology|decreased skeletal muscle fiber diameter|skeletal muscle fibrosis|decreased birth bo"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

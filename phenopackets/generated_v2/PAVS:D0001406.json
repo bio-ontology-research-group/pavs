@@ -1,0 +1,292 @@
+{
+  "id": "PAVS:D0001406",
+  "subject": {
+    "id": "PAVS:D0001406",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000239",
+        "label": "Large fontanelles"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000444",
+        "label": "Convex nasal ridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000592",
+        "label": "Blue sclerae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000923",
+        "label": "obsolete Beaded ribs"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000926",
+        "label": "Platyspondyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000963",
+        "label": "Thin skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001518",
+        "label": "Small for gestational age"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001622",
+        "label": "Premature birth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001635",
+        "label": "Congestive heart failure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001790",
+        "label": "Nonimmune hydrops fetalis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002093",
+        "label": "Respiratory insufficiency"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002644",
+        "label": "Abnormal pelvic girdle bone morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002645",
+        "label": "Wormian bones"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002757",
+        "label": "Recurrent fractures"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002982",
+        "label": "Tibial bowing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005474",
+        "label": "Decreased calvarial ossification"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005622",
+        "label": "Broad long bones"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005855",
+        "label": "Multiple prenatal fractures"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006367",
+        "label": "Crumpled long bones"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008873",
+        "label": "Disproportionate short-limb short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010444",
+        "label": "Pulmonic regurgitation"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008147",
+        "label": "osteogenesis imperfecta type 2"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001406",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008147",
+          "label": "osteogenesis imperfecta type 2"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001406",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001406_COL1A1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "COL1A1",
+                  "valueId": "NCBIGene:1277"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.5900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|ectocervix:98|endocervix:96|uterus:94|ovary:92|vagina:91|coronary_artery:89|urinary_bladder:87|sigmoid_colon:85|aorta:83|fallopian_tube:81|tibial_artery:79|prostate_gland:77|omental_fat_pad:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cellular response to tumor necrosis factor|response to cAMP|embryonic skeletal system development|cellular response to vitamin E|osteoblast differentiation|response to hyperoxia|response to xenobiotic stimulus|cellular response to fibroblast growth factor stimulus|system development|response to peptide hormone|cellular response to fluoride|cellular response to mechanical stimulus|animal organ development|blood vessel development|positive regulation of DNA-templated transcription|skin morphogenes"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal adipose tissue distribution|big ears|delayed bone ossification|fragile skeleton|increased bone mineral density|decreased bone mineral density|failure of bone resorption|osteoporosis|osteopetrosis|kyphoscoliosis|abnormal neurocranium morphology|abnormal trabecular bone morphology|decreased compact bone thickness|abnormal vertebral body morphology|abnormal rib morphology|kyphosis|scoliosis|heart right ventricle hypertrophy|increased cell proliferation|abnormal cell morphology|focal hair l"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

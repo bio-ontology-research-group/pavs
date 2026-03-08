@@ -1,0 +1,214 @@
+{
+  "id": "PAVS:F0000558",
+  "subject": {
+    "id": "PAVS:F0000558",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P11Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "familyHistory",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0032316",
+            "label": "Positive family history"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:6000127",
+        "label": "Elevated urinary creatine/creatinine ratio"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0034598",
+        "label": "Elevated urinary creatine level"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000558",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000558",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000558_SLC6A8",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SLC6A8",
+                  "valueId": "NCBIGene:6535"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000253122.10:c.740_745del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000023.11:g.153692067_153692072del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000253122.5:p.Tyr247_Phe248del"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000134",
+                  "label": "hemizygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "inframe_deletion"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00209"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "sigmoid_colon:100|cerebellum:98|skeletal_muscle_tissue:96|cerebellar_hemisphere:94|cervical_vertebra:92|transverse_colon:92|muscle_layer_of_esophagus:89|esophagogastric_junction:87|testis:85|renal_medulla:83|ileum:81|atrium_auricular_region:79|cerebral_cortex:77|cortex_of_kidney:77|urinary_bladder:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "creatine metabolic process|monoatomic ion transport|neurotransmitter transport|muscle contraction|sodium ion transport|gamma-aminobutyric acid transport|amino acid transport|creatine transmembrane transport|sodium ion transmembrane transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "kyphoscoliosis|kyphosis|muscle weakness|abnormal dentate gyrus morphology|decreased body length|decreased body weight|hyperactivity|decreased locomotor activity|impaired coordination|increased grooming behavior|abnormal object recognition memory|abnormal spatial learning|impaired swimming|abnormal ion homeostasis|abnormal muscle physiology|abnormal muscle morphology|abnormal motor learning|decreased aerobic running capacity|abnormal GABAergic neuron morphology|increased lean body mass|hypotonia|"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

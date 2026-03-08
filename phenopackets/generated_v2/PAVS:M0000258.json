@@ -1,0 +1,168 @@
+{
+  "id": "PAVS:M0000258",
+  "subject": {
+    "id": "PAVS:M0000258",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:27629047",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/27629047/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000258",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000258",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000258_ALDOB",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ALDOB",
+                  "valueId": "NCBIGene:229"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000647789.2:c.360_363del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000009.12:g.101428485_101428488del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000497767.1:p.Asn120LysfsTer32"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00274"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "7.184e-05"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.3588e-11"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1830e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "liver:100|cortex_of_kidney:98|ileum:96|renal_medulla:94|pancreas:92|stomach:91|pituitary_gland:89|cervical_vertebra:87|adrenal_gland:85|sigmoid_colon:85|testis:85|tibial_nerve:85|transverse_colon:85|cerebellar_hemisphere:85|cerebellum:85"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "glycolytic process|negative regulation of pentose-phosphate shunt|fructose catabolic process|fructose catabolic process to hydroxyacetone phosphate and glyceraldehyde-3-phosphate|gluconeogenesis|fructose metabolic process|fructose 1,6-bisphosphate metabolic process|vacuolar proton-transporting V-type ATPase complex assembly"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased bone mineral density|abnormal liver morphology|pale liver|decreased body length|decreased body size|liver inflammation|hepatic steatosis|liver fibrosis|abnormal heart left ventricle morphology|abnormal portal triad morphology|increased susceptibility to induced morbidity/mortality|preweaning lethality, incomplete penetrance"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

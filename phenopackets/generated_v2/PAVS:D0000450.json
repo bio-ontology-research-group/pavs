@@ -1,0 +1,166 @@
+{
+  "id": "PAVS:D0000450",
+  "subject": {
+    "id": "PAVS:D0000450",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000044",
+        "label": "Hypogonadotropic hypogonadism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000786",
+        "label": "Primary amenorrhea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008734",
+        "label": "Decreased testicular size"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007794",
+        "label": "hypogonadotropic hypogonadism 7 with or without anosmia"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000450",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007794",
+          "label": "hypogonadotropic hypogonadism 7 with or without anosmia"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000450",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000450_TACR3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TACR3",
+                  "valueId": "NCBIGene:6870"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.8788e-12"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.2100e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "hypothalamus:100|urinary_bladder:100|cervical_vertebra:96|substantia_nigra:94|amygdala:92|hippocampus:91|cortex_of_kidney:89|frontal_cortex:89|anterior_cingulate_cortex:89|cerebral_cortex:83|lung:83|nucleus_accumbens:83|pituitary_gland:83|putamen:83|testis:83|caudate_nucleus:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "adenylate cyclase-activating G protein-coupled receptor signaling pathway|positive regulation of blood pressure|positive regulation of uterine smooth muscle contraction|positive regulation of heart rate|response to cocaine|conditioned place preference|G protein-coupled receptor signaling pathway|regulation of feeding behavior|positive regulation of luteinizing hormone secretion|positive regulation of flagellated sperm motility|signal transduction|regulation of dopamine metabolic process|tachykin"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased bone mineral density|small testis|increased body weight|decreased body weight|abnormal cornea morphology|abnormal spatial learning|reduced female fertility|female infertility|abnormal estrous cycle|decreased circulating follicle stimulating hormone level|abnormal active avoidance behavior|impaired passive avoidance behavior|decreased uterus weight|prolonged diestrus|increased total body fat amount|decreased grip strength|decreased bone mineral content"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

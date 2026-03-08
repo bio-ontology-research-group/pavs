@@ -1,0 +1,292 @@
+{
+  "id": "PAVS:D0000490",
+  "subject": {
+    "id": "PAVS:D0000490",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000804",
+        "label": "Xanthine nephrolithiasis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001083",
+        "label": "Ectopia lentis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001285",
+        "label": "Spastic tetraparesis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002059",
+        "label": "Cerebral atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002932",
+        "label": "Aldehyde oxidase deficiency"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003166",
+        "label": "Increased urinary taurine"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003359",
+        "label": "Decreased urinary sulfate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003534",
+        "label": "Reduced xanthine dehydrogenase level"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003570",
+        "label": "Molybdenum cofactor deficiency"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003606",
+        "label": "Absent urinary urothione"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003643",
+        "label": "Sulfite oxidase deficiency"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003739",
+        "label": "Myoclonic spasms"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003808",
+        "label": "Abnormal muscle tone"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008872",
+        "label": "Feeding difficulties in infancy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010934",
+        "label": "Xanthinuria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011814",
+        "label": "Increased urinary hypoxanthine level"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011935",
+        "label": "Decreased urinary urate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011942",
+        "label": "Increased urinary sulfite level"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011943",
+        "label": "Increased urinary thiosulfate"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009643",
+        "label": "sulfite oxidase deficiency due to molybdenum cofactor deficiency type A"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000490",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009643",
+          "label": "sulfite oxidase deficiency due to molybdenum cofactor deficiency type A"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000490",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000490_MOCS2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MOCS2",
+                  "valueId": "NCBIGene:4338"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.2064e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0660e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "frontal_cortex:100|tibial_artery:98|tibial_nerve:96|muscle_layer_of_esophagus:94|aorta:94|adrenal_gland:91|coronary_artery:91|cerebellar_hemisphere:91|esophagogastric_junction:85|thyroid_gland:85|cervical_vertebra:81|anterior_cingulate_cortex:81|sigmoid_colon:81|endocervix:75|hypothalamus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "Mo-molybdopterin cofactor biosynthetic process|molybdopterin cofactor biosynthetic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "hemoglobinuria|weakness|muscle weakness|flaky skin|wrinkled skin|decreased body length|decreased body size|curly vibrissae|persistence of hyaloid vascular system|postnatal growth retardation|abnormal hair growth|abnormal vibrissa morphology|nephrolithiasis|increased urine protein level|increased neuron apoptosis|kidney failure|ischuria|abnormal kidney pelvis morphology|abnormal kidney collecting duct morphology|increased circulating creatinine level|abnormal enzyme/coenzyme activity|decreased ci"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

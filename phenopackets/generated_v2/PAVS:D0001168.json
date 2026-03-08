@@ -1,0 +1,194 @@
+{
+  "id": "PAVS:D0001168",
+  "subject": {
+    "id": "PAVS:D0001168",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000739",
+        "label": "Anxiety"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001260",
+        "label": "Dysarthria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Motor delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001288",
+        "label": "Gait disturbance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002072",
+        "label": "Chorea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003621",
+        "label": "Juvenile onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003812",
+        "label": "Phenotypic variability"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0021011",
+        "label": "hereditary progressive chorea without dementia"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001168",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0021011",
+          "label": "hereditary progressive chorea without dementia"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001168",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001168_NKX2-1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "NKX2-1",
+                  "valueId": "NCBIGene:7080"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.6360e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.2200e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "thyroid_gland:100|lung:98|hypothalamus:96|nucleus_accumbens:94|caudate_nucleus:94|putamen:91|testis:89|amygdala:87|anterior_cingulate_cortex:87|cerebral_cortex:83|frontal_cortex:83|pituitary_gland:83|hippocampus:77|stomach:77|vagina:77|cerebellum:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "gene expression|regulation of DNA-templated transcription|negative regulation of epithelial to mesenchymal transition|negative regulation of transforming growth factor beta receptor signaling pathway|positive regulation of gene expression|positive regulation of circadian rhythm|animal organ development|epithelial tube branching involved in lung morphogenesis|positive regulation of DNA-templated transcription|forebrain development|positive regulation of transcription by RNA polymerase II|regulati"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal foregut morphology|abnormal forebrain morphology|abnormal diencephalon morphology|abnormal hypothalamus morphology|abnormal lung morphology|abnormal lung development|pulmonary hypoplasia|impaired coordination|respiratory failure|no abnormal phenotype detected|abnormal bronchus morphology|abnormal pulmonary alveolus epithelial cell morphology|abnormal type II pneumocyte morphology|abnormal trachea morphology|abnormal pulmonary circulation|abnormal Leydig cell morphology|small thyroid gla"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

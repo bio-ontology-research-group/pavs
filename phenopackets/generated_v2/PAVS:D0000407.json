@@ -1,0 +1,320 @@
+{
+  "id": "PAVS:D0000407",
+  "subject": {
+    "id": "PAVS:D0000407",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000238",
+        "label": "Hydrocephalus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000272",
+        "label": "Malar flattening"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000403",
+        "label": "Recurrent otitis media"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000405",
+        "label": "Conductive hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001156",
+        "label": "Brachydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Motor delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001355",
+        "label": "Megalencephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001377",
+        "label": "Limited elbow extension"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002007",
+        "label": "Frontal bossing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002512",
+        "label": "Brain stem compression"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002761",
+        "label": "Generalized joint hypermobility"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002781",
+        "label": "Upper airway obstruction"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002938",
+        "label": "Lumbar hyperlordosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002970",
+        "label": "Genu varum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003015",
+        "label": "Flared metaphysis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003093",
+        "label": "Limited hip extension"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004060",
+        "label": "Trident hand"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005280",
+        "label": "Depressed nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005468",
+        "label": "Spinal stenosis with reduced interpedicular distance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005733",
+        "label": "Lumbar kyphosis in infancy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008414",
+        "label": "Rhizomelia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008905",
+        "label": "Neonatal short-limb short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008921",
+        "label": "Infantile muscular hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008947",
+        "label": "Short femoral neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100864",
+        "label": "HP:0100864"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007037",
+        "label": "achondroplasia"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000407",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007037",
+          "label": "achondroplasia"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000407",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000407_FGFR3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "FGFR3",
+                  "valueId": "NCBIGene:2261"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9865e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.5800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "suprapubic_skin:100|lower_leg_skin:98|esophagus_mucosa:96|caudate_nucleus:94|nucleus_accumbens:92|vagina:92|cerebral_cortex:89|anterior_cingulate_cortex:87|putamen:85|amygdala:83|frontal_cortex:81|substantia_nigra:79|pancreas:77|cerebellum:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "endochondral bone growth|positive regulation of MAPK cascade|positive regulation of ERK1 and ERK2 cascade|fibroblast growth factor receptor apoptotic signaling pathway|apoptotic process|positive regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction|chondrocyte proliferation|bone morphogenesis|cell population proliferation|negative regulation of developmental growth|MAPK cascade|cartilage development|chondrocyte differentiation|fibroblast growth factor receptor signalin"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal malleus morphology|abnormal cochlea morphology|abnormal organ of Corti morphology|delayed bone ossification|fragile skeleton|decreased bone mineral density|kyphoscoliosis|abnormal neurocranium morphology|abnormal parietal bone morphology|malocclusion|abnormal trabecular bone morphology|abnormal long bone metaphysis morphology|decreased compact bone thickness|abnormal vertebrae morphology|abnormal vertebral body morphology|abnormal rib morphology|kyphosis|scoliosis|abnormal long bone hyp"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

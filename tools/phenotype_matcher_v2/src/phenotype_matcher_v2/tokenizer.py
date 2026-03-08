@@ -28,15 +28,14 @@ def tokenize_expand(text: str) -> List[str]:
     Algorithm 1: segment *text* and expand coordinated structures.
 
     Steps:
+    0. Pre-process: add space around (HP:XXXXXXX) to help segmentation.
     1. Split on hard delimiters (,  ;  .  ' but ').
-    2. For each segment, try coordination patterns:
-       - Pattern 1: Adj1 and Adj2 Noun  → emit two tokens
-       - Pattern 2: Noun with A and B   → emit two tokens
-       - Pattern 3: Multi-word and B    → emit two tokens (last resort;
-         left side must be multi-word to avoid splitting compounds)
-       - Otherwise                      → keep as-is.
-    3. Return non-empty, deduplicated list (order preserved).
+    ...
     """
+    # Fix: add space before/after HPO IDs in parentheses to help splitters
+    text = re.sub(r"([^\s])(\(HP:\d{7}\))", r"\1 \2", text)
+    text = re.sub(r"(\(HP:\d{7}\))([^\s])", r"\1 \2", text)
+
     segments = [s.strip() for s in _HARD_SEG.split(text)]
     seen: set = set()
     result: List[str] = []

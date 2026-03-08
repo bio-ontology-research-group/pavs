@@ -1,0 +1,250 @@
+{
+  "id": "PAVS:D0000575",
+  "subject": {
+    "id": "PAVS:D0000575",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000207",
+        "label": "Triangular mouth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Hypertelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000322",
+        "label": "Short philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000337",
+        "label": "Broad forehead"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000369",
+        "label": "Low-set ears"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000412",
+        "label": "Broad nasal tip"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000455",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Ptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000508",
+        "label": "Thick eyebrow"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000574",
+        "label": "Intellectual disability, mild"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001256",
+        "label": "Patent ductus arteriosus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001643",
+        "label": "Highly arched eyebrow"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002553",
+        "label": "Clinodactyly of the 5th finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004209",
+        "label": "Distal/middle symphalangism of 5th finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009244",
+        "label": "HP:0009244"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008209",
+        "label": "Char syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000575",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008209",
+          "label": "Char syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000575",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000575_TFAP2B",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TFAP2B",
+                  "valueId": "NCBIGene:7021"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9997e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "3.5300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "renal_medulla:100|lower_leg_skin:98|mammary_gland:98|suprapubic_skin:94|cerebellum:94|esophagus_mucosa:91|cerebellar_hemisphere:89|cortex_of_kidney:87|minor_salivary_gland:87|pituitary_gland:83|testis:83|tibial_nerve:83|cervical_vertebra:77|ectocervix:75|endocervix:75|vagina:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "aorta morphogenesis|sympathetic nervous system development|gene expression|distal tubule development|regulation of DNA-templated transcription|regulation of cell population proliferation|negative regulation of apoptotic process|metanephric nephron development|forelimb morphogenesis|regulation of transcription by RNA polymerase II|retina layer formation|regulation of cell differentiation|positive regulation of DNA-templated transcription|positive regulation of transcription by RNA polymerase II|d"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased circulating calcium level|kidney vascular congestion|polydactyly|muscle spasm|tremors|scaly skin|increased circulating phosphate level|postnatal growth retardation|abnormal ion homeostasis|abnormal kidney morphology|abnormal kidney physiology|dilated renal tubule|increased circulating parathyroid hormone level|decreased urine calcium level|decreased urine osmolality|small kidney|patent ductus arteriosus|kidney cyst|increased renal tubule apoptosis|iris synechia|increased circulating cr"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

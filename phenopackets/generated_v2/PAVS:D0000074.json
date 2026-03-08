@@ -1,0 +1,313 @@
+{
+  "id": "PAVS:D0000074",
+  "subject": {
+    "id": "PAVS:D0000074",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000160",
+        "label": "Narrow mouth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000162",
+        "label": "Glossoptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000256",
+        "label": "Macrocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000311",
+        "label": "Round face"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Micrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000358",
+        "label": "Posteriorly rotated ears"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000369",
+        "label": "Low-set ears"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000378",
+        "label": "Cupped ear"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000384",
+        "label": "Preauricular skin tag"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000402",
+        "label": "Stenosis of the external auditory canal"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000678",
+        "label": "Dental crowding"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000689",
+        "label": "Dental malocclusion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002094",
+        "label": "Dyspnea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002104",
+        "label": "Apnea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004451",
+        "label": "Postauricular skin tag"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004453",
+        "label": "Overfolding of the superior helices"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005216",
+        "label": "Impaired mastication"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007627",
+        "label": "Mandibular condyle aplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007628",
+        "label": "Mandibular condyle hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008537",
+        "label": "Cleft at the superior portion of the pinna"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008559",
+        "label": "Hypoplastic superior helix"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009088",
+        "label": "Speech articulation difficulties"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009102",
+        "label": "Anterior open-bite malocclusion"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011234",
+        "label": "auriculocondylar syndrome 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000074",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011234",
+          "label": "auriculocondylar syndrome 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000074",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000074_GNAI3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GNAI3",
+                  "valueId": "NCBIGene:2773"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.6981e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1130e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|esophagus_mucosa:98|lower_leg_skin:98|suprapubic_skin:94|vagina:92|ectocervix:91|tibial_artery:91|subcutaneous_adipose_tissue:87|uterus:87|tibial_nerve:83|coronary_artery:81|endocervix:81|fallopian_tube:81|mammary_gland:75|omental_fat_pad:75|aorta:75|blood:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "GTP metabolic process|cell division|G protein-coupled receptor signaling pathway|adenylate cyclase-modulating G protein-coupled receptor signaling pathway|adenylate cyclase-inhibiting G protein-coupled receptor signaling pathway|signal transduction|negative regulation of adenylate cyclase activity|positive regulation of macroautophagy"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal rib morphology|rib fusion|abnormal T cell physiology|abnormal lumbar vertebrae morphology|lumbar vertebral fusion|abnormal sternocostal joint morphology"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

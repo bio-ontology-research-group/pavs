@@ -1,0 +1,230 @@
+{
+  "id": "PAVS:M0000479",
+  "subject": {
+    "id": "PAVS:M0000479",
+    "sex": "MALE",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0004488",
+        "label": "Macrocephaly at birth( HP:0004488)"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007260",
+        "label": "Cobblestone cortex( HP:0007260)"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000238",
+        "label": "Hydrocephalus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000557",
+        "label": "Buphthalmos"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000568",
+        "label": "Microphthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002282",
+        "label": "Gray matter heterotopia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:33199158",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/33199158/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013835",
+        "label": "muscular dystrophy-dystroglycanopathy (congenital with brain and eye anomalies), type A, 7"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000479",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013835",
+          "label": "muscular dystrophy-dystroglycanopathy (congenital with brain and eye anomalies), type A, 7"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000479",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000479_CRPPA|PGAP2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CRPPA|PGAP2",
+                  "valueId": "NCBIGene:729920|27315"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000407010.7:c.790-1G>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000007.14:g.16301467G>C"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr7",
+                  "pos": 16301467,
+                  "ref": "G",
+                  "alt": "C"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136|GENO:0000136",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "splice_acceptor_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "0"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.8872e-06"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.4620e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ectocervix:100|frontal_cortex:100|tibial_nerve:100|cerebellar_hemisphere:100|cerebral_cortex:92|cervical_vertebra:92|coronary_artery:92|endocervix:92|fallopian_tube:92|hippocampus:92|hypothalamus:92|mammary_gland:92|minor_salivary_gland:92|anterior_cingulate_cortex:92|nucleus_accumbens:92|ovary:92|pituitary_gland:92|sigmoid_colon:92|skin:92|stomach:92|substantia_nigra:92|testis:92|thyroid_gland:92|tibial_artery:92|atrium_auricular_region:92|urinary_bladder:92|uterus:92|vagina:92|caudate_nucleus:92|cerebellum:92"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "protein O-linked glycosylation via mannose|isoprenoid biosynthetic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased neutrophil cell number|abnormal nervous system tract morphology|respiratory failure|increased mean platelet volume|abnormal axon guidance|abnormal basement membrane morphology|abnormal axon fasciculation|abnormal spinal cord dorsal column morphology|abnormal spinal cord ventral commissure morphology|neonatal lethality, complete penetrance|ectopic neuron|radial glial endfoot detachment"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

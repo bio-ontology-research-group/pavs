@@ -1,0 +1,194 @@
+{
+  "id": "PAVS:B0000063",
+  "subject": {
+    "id": "PAVS:B0000063",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-pmid28454995",
+        "description": "Source dataset: ahmed-pmid28454995"
+      },
+      {
+        "id": "PMID:28454995|20558144",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995|20558144/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011613",
+        "label": "autosomal recessive early-onset Parkinson disease 6"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:B0000063",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011613",
+          "label": "autosomal recessive early-onset Parkinson disease 6"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:B0000063",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:B0000063_PINK1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PINK1",
+                  "valueId": "NCBIGene:65018"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000321556.5:c.774C>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000001.11:g.20639990C>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000364204.3:p.Tyr258Ter"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr1",
+                  "pos": 20639990,
+                  "ref": "C",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:619987"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "stop_gained"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "2.069e-06"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "619987"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.1236e-21"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.3140e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skeletal_muscle_tissue:100|frontal_cortex:98|testis:98|adrenal_gland:94|cerebral_cortex:92|cervical_vertebra:91|anterior_cingulate_cortex:89|substantia_nigra:89|amygdala:85|nucleus_accumbens:83|hypothalamus:81|tibial_artery:79|caudate_nucleus:79|cerebellar_hemisphere:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "macroautophagy|respiratory electron transport chain|TORC2 signaling|positive regulation of release of cytochrome c from mitochondria|response to oxidative stress|regulation of hydrogen peroxide metabolic process|positive regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction|protein phosphorylation|regulation of neuron apoptotic process|protein localization to mitochondrion|cellular response to toxic substance|positive regulation of type 2 mitophagy|cellular response to"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased bone mineral density|abnormal cerebral cortex morphology|decreased body weight|abnormal social investigation|decreased locomotor activity|abnormal gait|reduced long-term potentiation|reduced long-term depression|extended life span|abnormal olfaction|abnormal sensory capabilities/reflexes/nociception|abnormal innervation|abnormal nervous system electrophysiology|increased neuron apoptosis|abnormal dopaminergic neuron morphology|abnormal nervous system physiology|oxidative stress|abnorma"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

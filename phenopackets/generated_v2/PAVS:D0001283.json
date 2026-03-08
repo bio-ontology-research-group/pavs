@@ -1,0 +1,334 @@
+{
+  "id": "PAVS:D0001283",
+  "subject": {
+    "id": "PAVS:D0001283",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000107",
+        "label": "Renal cyst"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000169",
+        "label": "Gingival fibromatosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000717",
+        "label": "Autism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000821",
+        "label": "Hypothyroidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000826",
+        "label": "Precocious puberty"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000957",
+        "label": "Cafe-au-lait spot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001328",
+        "label": "Specific learning disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001482",
+        "label": "Subcutaneous nodule"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001716",
+        "label": "Wolff-Parkinson-White syndrome"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002514",
+        "label": "Cerebral calcification"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002888",
+        "label": "Ependymoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003812",
+        "label": "Phenotypic variability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005584",
+        "label": "Renal cell carcinoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006772",
+        "label": "Renal angiomyolipoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007018",
+        "label": "Attention deficit hyperactivity disorder"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009592",
+        "label": "Astrocytoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009716",
+        "label": "Subependymal nodules"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009717",
+        "label": "Cortical tubers"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009720",
+        "label": "Adenoma sebaceum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009721",
+        "label": "Shagreen patch"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009724",
+        "label": "Subungual fibromas"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009727",
+        "label": "Achromatic retinal patches"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009729",
+        "label": "Cardiac rhabdomyoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009734",
+        "label": "Optic nerve glioma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010762",
+        "label": "Chordoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011097",
+        "label": "Epileptic spasm"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013199",
+        "label": "tuberous sclerosis 2"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001283",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013199",
+          "label": "tuberous sclerosis 2"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001283",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001283_TSC2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TSC2",
+                  "valueId": "NCBIGene:7249"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.0300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellum:100|pituitary_gland:98|cerebellar_hemisphere:96|thyroid_gland:94|endocervix:92|ovary:91|testis:89|ectocervix:87|uterus:85|fallopian_tube:83|tibial_nerve:81|prostate_gland:79|urinary_bladder:77|sigmoid_colon:75|spleen:75|vagina:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heart development|regulation of cell cycle|intracellular protein localization|vesicle-mediated transport|positive chemotaxis|negative regulation of mitophagy|protein import into nucleus|regulation of macroautophagy|neural tube closure|positive regulation of macroautophagy|endocytosis|negative regulation of cell population proliferation|negative regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction|cellular response to starvation|negative regulation of TORC1 signaling|r"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal vascular development|heart hyperplasia|liver hypoplasia|incomplete rostral neuropore closure|open neural tube|abnormal social investigation|abnormal spatial learning|abnormal contextual conditioning behavior|internal hemorrhage|decreased embryo size|increased tumor incidence|increased renal cystadenoma incidence|increased hepatic hemangioma incidence|increased lung adenoma incidence|increased extremity angiosarcoma incidence|no abnormal phenotype detected|increased vertical activity|enh"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

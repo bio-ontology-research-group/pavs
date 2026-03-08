@@ -1,0 +1,341 @@
+{
+  "id": "PAVS:D0000528",
+  "subject": {
+    "id": "PAVS:D0000528",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000154",
+        "label": "Wide mouth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000160",
+        "label": "Narrow mouth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000185",
+        "label": "Cleft soft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000197",
+        "label": "Abnormal parotid gland morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000272",
+        "label": "Malar flattening"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Micrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000372",
+        "label": "Abnormal auditory canal morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000377",
+        "label": "Abnormal pinna morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000377",
+        "label": "Abnormal pinna morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000384",
+        "label": "Preauricular skin tag"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000405",
+        "label": "Conductive hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000453",
+        "label": "Choanal atresia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000494",
+        "label": "Downslanted palpebral fissures"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000508",
+        "label": "Ptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000572",
+        "label": "Visual loss"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000636",
+        "label": "Upper eyelid coloboma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000652",
+        "label": "Lower eyelid coloboma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002564",
+        "label": "obsolete Malformation of the heart and great vessels"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007633",
+        "label": "Bilateral microphthalmos"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007678",
+        "label": "Lacrimal duct stenosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007776",
+        "label": "Sparse lower eyelashes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007776",
+        "label": "Sparse lower eyelashes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009554",
+        "label": "Preauricular hair displacement"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009555",
+        "label": "Hypoplasia of the pharynx"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007944",
+        "label": "Treacher Collins syndrome 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000528",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007944",
+          "label": "Treacher Collins syndrome 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000528",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000528_TCOF1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TCOF1",
+                  "valueId": "NCBIGene:6949"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.8800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|uterus:98|ectocervix:96|endocervix:96|urinary_bladder:96|fallopian_tube:91|ovary:91|sigmoid_colon:91|spleen:91|tibial_nerve:91|muscle_layer_of_esophagus:81|tibial_artery:81|testis:77|esophagogastric_junction:75|lower_leg_skin:75|prostate_gland:75|vagina:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "neural crest cell development|regulation of translation|nucleolar large rRNA transcription by RNA polymerase I|skeletal system development|ribosome biogenesis|neural crest formation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "lowered ear position|abnormal tympanic ring morphology|abnormal neurocranium morphology|short mandible|short premaxilla|short maxilla|abnormal nasal bone morphology|nasal bone hypoplasia|abnormal frontal bone morphology|cleft palate|rib fusion|abnormal craniofacial morphology|microcephaly|shortened head|abnormal cranium morphology|domed cranium|abnormal maxilla morphology|maxilla hypoplasia|mandible hypoplasia|abnormal forebrain morphology|exencephaly|open neural tube|abnormal dorsal root gangli"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

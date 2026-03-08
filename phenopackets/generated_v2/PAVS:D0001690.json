@@ -1,0 +1,252 @@
+{
+  "id": "PAVS:D0001690",
+  "subject": {
+    "id": "PAVS:D0001690",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000737",
+        "label": "Irritability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001254",
+        "label": "Lethargy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001259",
+        "label": "Coma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001297",
+        "label": "Stroke"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001419",
+        "label": "X-linked recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001950",
+        "label": "Respiratory alkalosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001951",
+        "label": "Episodic ammonia intoxication"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001987",
+        "label": "Hyperammonemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002013",
+        "label": "Vomiting"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002038",
+        "label": "Protein avoidance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002131",
+        "label": "Episodic ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002181",
+        "label": "Cerebral edema"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003217",
+        "label": "Hyperglutaminemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003572",
+        "label": "Low plasma citrulline"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010703",
+        "label": "ornithine carbamoyltransferase deficiency"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001690",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010703",
+          "label": "ornithine carbamoyltransferase deficiency"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001690",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001690_OTC",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "OTC",
+                  "valueId": "NCBIGene:5009"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "expressed_in",
+                    "value": "liver:100|ileum:98|fallopian_tube:96|transverse_colon:96|endocervix:92|pancreas:92|testis:92|uterus:87|lung:85|cervical_vertebra:83|coronary_artery:83|ectocervix:79|omental_fat_pad:79|tibial_nerve:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "midgut development|ammonium homeostasis|L-arginine biosynthetic process|liver development|L-ornithine catabolic process|monoatomic anion homeostasis|amino acid metabolic process|L-arginine biosynthetic process via ornithine|response to biotin|ornithine metabolic process|response to zinc ion|amino acid biosynthetic process|response to nutrient levels|urea cycle|citrulline biosynthetic process|response to xenobiotic stimulus|response to insulin"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "alopecia|sparse hair|focal hair loss|delayed hair appearance|abnormal head movements|abnormal liver morphology|enlarged liver|enlarged thymus|tremors|decreased brain size|abnormal cholinergic neuron morphology|abnormal testis morphology|wrinkled skin|weight loss|decreased body size|circling|hyperactivity|decreased locomotor activity|abnormal eating behavior|decreased grooming behavior|abnormal spatial learning|abnormal coat appearance|increased circulating triglyceride level|abnormal homeostasis"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

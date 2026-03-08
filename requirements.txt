@@ -2,8 +2,19 @@ spacy
 negspacy
 pronto
 rapidfuzz
-unicodedata
 pandas
-hgvs
+# hgvs and psycopg2-binary are handled surgically in Dockerfile
+biocommons.seqrepo
+bioutils
+configparser
+pyparsing
+python-levenshtein
 tqdm
 pyphetools
+fastapi
+uvicorn
+sqlalchemy
+pyhpo
+pydantic
+aiosqlite
+python-multipart

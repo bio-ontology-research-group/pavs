@@ -1,0 +1,141 @@
+{
+  "id": "PAVS:D0000059",
+  "subject": {
+    "id": "PAVS:D0000059",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013466",
+        "label": "orofacial cleft 13"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000059",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013466",
+          "label": "orofacial cleft 13"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000059",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000059_FAF1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "FAF1",
+                  "valueId": "NCBIGene:11124"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9507e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.5000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|tibial_artery:98|skeletal_muscle_tissue:96|ectocervix:94|lower_leg_skin:94|muscle_layer_of_esophagus:91|ovary:89|suprapubic_skin:89|uterus:89|sigmoid_colon:83|endocervix:81|esophagogastric_junction:81|aorta:81|fallopian_tube:75|thyroid_gland:75|tibial_nerve:75|urinary_bladder:75|cerebellar_hemisphere:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of protein catabolic process|regulation of signal transduction|positive regulation of DNA replication|regulation of protein catabolic process|apoptotic process|positive regulation of apoptotic process|Fas signaling pathway|proteasome-mediated ubiquitin-dependent protein catabolic process|ubiquitin-dependent protein catabolic process|negative regulation of canonical NF-kappaB signal transduction|ERAD pathway"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "tremors|impaired coordination|abnormal gait|male infertility|increased circulating alanine transaminase level|decreased lean body mass|decreased circulating glucose level|increased circulating iron level|decreased sensitivity to induced cell death|increased total body fat amount|embryonic lethality, complete penetrance|embryonic lethality before implantation, complete penetrance|decreased susceptibility to dopaminergic neuron neurotoxicity|increased freezing behavior"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "id": "PAVS:D0000628",
+  "subject": {
+    "id": "PAVS:D0000628",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000679",
+        "label": "Taurodontia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000691",
+        "label": "Microdontia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000700",
+        "label": "Periapical bone loss"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006350",
+        "label": "Pulp obliteration"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007436",
+        "label": "dentin dysplasia type I"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000628",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007436",
+          "label": "dentin dysplasia type I"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000628",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000628_SMOC2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SMOC2",
+                  "valueId": "NCBIGene:64094"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.0705e-07"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.2400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "aorta:100|coronary_artery:98|uterus:96|ovary:94|fallopian_tube:92|tibial_artery:91|endocervix:89|esophagogastric_junction:87|urinary_bladder:85|tibial_nerve:83|muscle_layer_of_esophagus:81|subcutaneous_adipose_tissue:79|omental_fat_pad:77|mammary_gland:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of endothelial cell chemotaxis|positive regulation of mitotic cell cycle|positive regulation of endothelial cell migration|extracellular matrix organization|positive regulation of angiogenesis|positive regulation of DNA biosynthetic process|positive regulation of vascular endothelial growth factor signaling pathway|positive regulation of fibroblast growth factor receptor signaling pathway|positive regulation of vascular wound healing"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased bone mineral density|increased cranium width|decreased body length|abnormal coat appearance|increased circulating phosphate level|decreased palatal length|abnormal bone structure|decreased susceptibility to injury|increased circulating sodium level|decreased bone mineral content|decreased cranium length"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

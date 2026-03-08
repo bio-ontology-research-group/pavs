@@ -1,0 +1,125 @@
+{
+  "id": "PAVS:D0001741",
+  "subject": {
+    "id": "PAVS:D0001741",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0005258",
+        "label": "autism spectrum disorder"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001741",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0005258",
+          "label": "autism spectrum disorder"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001741",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001741_NLGN3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "NLGN3",
+                  "valueId": "NCBIGene:54413"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellum:100|cerebral_cortex:98|cervical_vertebra:96|tibial_nerve:96|cerebellar_hemisphere:96|frontal_cortex:91|amygdala:91|nucleus_accumbens:91|hippocampus:85|anterior_cingulate_cortex:85|hypothalamus:81|caudate_nucleus:81|putamen:77|substantia_nigra:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of excitatory postsynaptic potential|neuron cell-cell adhesion|presynapse assembly|positive regulation of glutamate receptor signaling pathway|regulation of respiratory gaseous exchange by nervous system process|learning|inhibitory postsynaptic potential|synapse organization|postsynaptic membrane assembly|modulation of chemical synaptic transmission|vocalization behavior|rhythmic synaptic transmission|positive regulation of synapse assembly|presynaptic membrane assembly|recep"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased bone mineral density|decreased brain size|abnormal social investigation|decreased anxiety-related response|hyperactivity|impaired coordination|stereotypic behavior|increased stereotypic behavior|increased exploration in new environment|abnormal spatial learning|decreased startle reflex|abnormal motor coordination/balance|postnatal growth retardation|absent long-term depression|impaired synaptic plasticity|abnormal learning/memory/conditioning|no abnormal phenotype detected|increased ve"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

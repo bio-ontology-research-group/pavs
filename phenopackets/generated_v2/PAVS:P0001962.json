@@ -1,0 +1,213 @@
+{
+  "id": "PAVS:P0001962",
+  "subject": {
+    "id": "PAVS:P0001962",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P51M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001510",
+        "label": "Growth delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001962",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001962",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001962_GHRHR",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GHRHR",
+                  "valueId": "NCBIGene:2692"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000326139.7:c.458C>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000007.14:g.30971210C>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000320180.2:p.Ala153Asp"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr7",
+                  "pos": 30971210,
+                  "ref": "C",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:189138"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "tolerated(0.16)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.99)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00002"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "7.772e-07"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "189138"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic/Likely pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.5012e-08"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.8400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "pituitary_gland:100|hypothalamus:98|testis:98|anterior_cingulate_cortex:94|cerebral_cortex:92|cortex_of_kidney:92|amygdala:92|lung:92|prostate_gland:92|aorta:92|cerebellar_hemisphere:92|cerebellum:92|cervical_vertebra:77|fallopian_tube:77|frontal_cortex:77|hippocampus:77|nucleus_accumbens:77|substantia_nigra:77|caudate_nucleus:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "adenylate cyclase-activating G protein-coupled receptor signaling pathway|positive regulation of growth hormone secretion|cell surface receptor signaling pathway|cAMP/PKA signal transduction|positive regulation of insulin-like growth factor receptor signaling pathway|G protein-coupled receptor signaling pathway|cellular response to glucose stimulus|positive regulation of circadian sleep/wake cycle, non-REM sleep|response to estrogen|positive regulation of cell population proliferation|positive r"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased bone mineral density|decreased bone mineral density|decreased body length|obese|decreased body weight|hyperactivity|abnormal sleep pattern|increased circulating triglyceride level|abnormal postnatal growth|postnatal growth retardation|abnormal lactation|reduced male fertility|abnormal glucose homeostasis|increased circulating insulin level|abnormal skeleton development|decreased vertical activity|decreased heart weight|increased circulating alanine transaminase level|short femur|thromb"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

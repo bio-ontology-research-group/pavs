@@ -34,7 +34,39 @@ Converts the JSON output into distribution formats.
 python3 translation/export_results.py --json hpo_arabic_translations.json --obo-in ../ontology/hp.obo
 ```
 
-## Output Files
-- `hpo_arabic_translations.json`: Raw LLM output.
-- `hpo_arabic_translations.tsv`: Tabular version.
-- `hp-ar.obo`: Standard OBO file enriched with Arabic language synonyms.
+## Translation Conventions
+
+### 1. Arabic Sentence Structure
+For HPO terms, always state the abnormality/problem first, followed by the anatomical location.
+- **Rule**: `[Abnormality] + في + [Location]`
+- **Examples**:
+    - *Fingernail hypoplasia* → نقص تنسج في أظافر اليد
+    - *Renal tubular dysfunction* → خلل في الأنابيب الكلوية
+    - *Cardiac rhythm abnormality* → اضطراب في نظم القلب
+
+**Exception**: When using an adjective like "Metaphyseal" (كردوسي):
+- *Metaphyseal dysplasia* → خلل تنسجي كردوسي
+
+### 2. Medical Glossary
+| English | Arabic |
+| :--- | :--- |
+| Metaphysis | كردوس |
+| Metaphyseal | كردوسي |
+| Epiphysis | مشاشة |
+| Dysplasia | خلل تنسجي |
+| Hyperplasia | فرط تنسج |
+| Hypertrophy | تضخم |
+| Atresia | رتق |
+| Malacia | تلين |
+| -pathy | اعتلال |
+| Dystrophy | حثل |
+| Atrophy | ضمور |
+
+### 3. Abnormality Translation Rules
+- **Physical Structure**: Use **شذوذ** (e.g., bone shape).
+- **Functional Deficit**: Use **خلل** (e.g., enzyme activity).
+- **Complex System/Pattern**: Use **اضطراب** (e.g., heart rhythm).
+- **Morphogenesis**:
+    - *Hypoplasia* → نقص تنسج في ...
+    - *Aplasia* → عدم التنسج في ...
+    - *Agenesis* → عدم التكوّن في ...

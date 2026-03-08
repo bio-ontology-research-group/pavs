@@ -1,0 +1,194 @@
+{
+  "id": "PAVS:P0000885",
+  "subject": {
+    "id": "PAVS:P0000885",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P37M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0008064",
+        "label": "Ichthyosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000885",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000885",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000885_DSG1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "DSG1",
+                  "valueId": "NCBIGene:1828"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000257192.5:c.724C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000018.10:g.31333628C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000257192.4:p.Arg242Ter"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr18",
+                  "pos": 31333628,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:264724"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "stop_gained"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00028"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "264724"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9927e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.5500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "lower_leg_skin:100|suprapubic_skin:98|vagina:96|esophagus_mucosa:94|testis:92|liver:91|atrium_auricular_region:89|mammary_gland:87|minor_salivary_gland:85|cerebral_cortex:83|cervical_vertebra:83|coronary_artery:83|frontal_cortex:83|heart_left_ventricle:83|anterior_cingulate_cortex:83|nucleus_accumbens:83|omental_fat_pad:83|putamen:83|aorta:83|subcutaneous_adipose_tissue:83|tibial_artery:83|tibial_nerve:83|caudate_nucleus:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cell-cell junction assembly|response to progesterone|homophilic cell-cell adhesion|maternal process involved in female pregnancy|cell-cell adhesion|protein stabilization|cell adhesion|calcium-dependent cell-cell adhesion"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased circulating calcium level|abnormal lens morphology|cataract|abnormal cornea morphology|abnormal iris morphology|abnormal eyelid morphology|decreased anxiety-related response|decreased locomotor activity|abnormal coat appearance|increased circulating HDL cholesterol level|increased circulating serum albumin level|thrombocytopenia|abnormal behavior|increased circulating cholesterol level|increased circulating creatinine level|increased circulating total protein level|increased bone miner"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

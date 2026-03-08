@@ -1,0 +1,152 @@
+{
+  "id": "PAVS:D0000267",
+  "subject": {
+    "id": "PAVS:D0000267",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008024",
+        "label": "obsolete Congenital nuclear cataract"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0100436",
+        "label": "cataract 2, multiple types"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000267",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0100436",
+          "label": "cataract 2, multiple types"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000267",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000267_CRYGC",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CRYGC",
+                  "valueId": "NCBIGene:1420"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.8396e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.4100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|adrenal_gland:98|cerebral_cortex:98|cervical_vertebra:98|coronary_artery:98|cortex_of_kidney:98|ectocervix:98|endocervix:98|esophagogastric_junction:98|esophagus_mucosa:98|fallopian_tube:98|frontal_cortex:98|amygdala:98|heart_left_ventricle:98|hippocampus:98|hypothalamus:98|ileum:98|liver:98|lower_leg_skin:98|lung:98|mammary_gland:98|minor_salivary_gland:98|muscle_layer_of_esophagus:98|anterior_cingulate_cortex:98|nucleus_accumbens:98|omental_fat_pad:98|ovary:98|pancreas:98|pituitary_gland:98|prostate_gland:98|putamen:98|renal_medulla:98|sigmoid_colon:98|skeletal_muscle_tissue:98|aorta:98|skin:98|spleen:98|stomach:98|subcutaneous_adipose_tissue:98|substantia_nigra:98|suprapubic_skin:98|thyroid_gland:98|tibial_artery:98|tibial_nerve:98|atrium_auricular_region:98|transverse_colon:98|urinary_bladder:98|uterus:98|vagina:98|blood:98|caudate_nucleus:98|cerebellar_hemisphere:98|cerebellum:98"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "visual perception|lens development in camera-type eye"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "enlarged heart|microphthalmia|abnormal lens morphology|cataract|small lens|abnormal pancreas morphology|abnormal eye morphology|abnormal lens fiber morphology|abnormal lens epithelium morphology|abnormal eye physiology|nuclear cataract|cortical cataract|preweaning lethality, incomplete penetrance|developmental cataract"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

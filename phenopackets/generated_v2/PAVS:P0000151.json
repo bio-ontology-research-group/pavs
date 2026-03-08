@@ -1,0 +1,220 @@
+{
+  "id": "PAVS:P0000151",
+  "subject": {
+    "id": "PAVS:P0000151",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0006471",
+        "label": "Fixed elbow flexion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001762",
+        "label": "Talipes equinovarus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002987",
+        "label": "Elbow flexion contracture"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000969",
+        "label": "Edema"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000476",
+        "label": "Cystic hygroma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001562",
+        "label": "Oligohydramnios"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000151",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000151",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000151_CHRNG",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CHRNG",
+                  "valueId": "NCBIGene:1146"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000408957.7:c.*3596G>C"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.232544511C>G"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 232544511,
+                  "ref": "C",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:1241961"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODIFIER"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "3.9e-05"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "1241961"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Uncertain significance"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.4206e-25"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.2860e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skeletal_muscle_tissue:100|pituitary_gland:98|spleen:98|suprapubic_skin:98|testis:98|adrenal_gland:91|cerebral_cortex:91|cervical_vertebra:91|coronary_artery:91|cortex_of_kidney:91|ectocervix:91|endocervix:91|esophagogastric_junction:91|esophagus_mucosa:91|fallopian_tube:91|frontal_cortex:91|amygdala:91|heart_left_ventricle:91|hippocampus:91|hypothalamus:91|ileum:91|liver:91|lower_leg_skin:91|lung:91|mammary_gland:91|minor_salivary_gland:91|muscle_layer_of_esophagus:91|anterior_cingulate_cortex:91|nucleus_accumbens:91|omental_fat_pad:91|ovary:91|pancreas:91|prostate_gland:91|putamen:91|renal_medulla:91|sigmoid_colon:91|aorta:91|skin:91|stomach:91|subcutaneous_adipose_tissue:91|substantia_nigra:91|thyroid_gland:91|tibial_artery:91|tibial_nerve:91|atrium_auricular_region:91|transverse_colon:91|urinary_bladder:91|uterus:91|vagina:91|blood:91|caudate_nucleus:91|cerebellar_hemisphere:91|cerebellum:91"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "monoatomic ion transport|acetylcholine receptor signaling pathway|regulation of postsynaptic membrane potential|synaptic transmission, cholinergic|excitatory postsynaptic potential|membrane depolarization|muscle contraction|calcium ion transport|signal transduction|skeletal muscle contraction|monoatomic ion transmembrane transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "hindlimb paralysis|thin diaphragm muscle|abnormal motor neuron morphology|abnormal neuromuscular synapse morphology|abnormal phrenic nerve morphology|no spontaneous movement|dehydration|abnormal suckling behavior|trunk curl|cyanosis|decreased embryo size|abnormal breathing pattern|abnormal skin pigmentation|abnormal muscle physiology|abnormal diaphragm morphology|abnormal neuron morphology|abnormal endplate potential|abnormal skeletal muscle fiber morphology|abnormal miniature endplate potential"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "id": "PAVS:Q0000154",
+  "subject": {
+    "id": "PAVS:Q0000154",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P8Y0M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000256",
+        "label": "Macrocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000581",
+        "label": "Blepharophimosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007970",
+        "label": "Congenital ptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC7082194",
+        "description": "Source dataset: PMC7082194"
+      },
+      {
+        "id": "PMID:31618753",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31618753/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:Q0000154",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:Q0000154",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:Q0000154_WNT10A",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "WNT10A",
+                  "valueId": "NCBIGene:80326"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000258411.8:c.682T>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.218890289T>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000258411.3:p.Phe228Ile"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr2",
+                  "pos": 218890289,
+                  "ref": "T",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:19501"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.99)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00110"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "0.02149"
+                  },
+                  {
+                    "name": "af_saudi",
+                    "value": "0.001656"
+                  },
+                  {
+                    "name": "ac_saudi",
+                    "value": "1"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "19501"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Conflicting classifications of pathogenicity"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.5865e-14"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.4840e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "suprapubic_skin:100|lower_leg_skin:98|pituitary_gland:98|esophagus_mucosa:94|minor_salivary_gland:92|spleen:92|vagina:92|prostate_gland:87|ileum:85|nucleus_accumbens:85|renal_medulla:85|cerebral_cortex:79|frontal_cortex:79|anterior_cingulate_cortex:79|putamen:79|testis:79|transverse_colon:79|caudate_nucleus:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "hair follicle morphogenesis|odontogenesis|epidermis morphogenesis|neuron differentiation|animal organ development|skin development|cellular response to transforming growth factor beta stimulus|cell fate commitment|Wnt signaling pathway|canonical Wnt signaling pathway|hair follicle development|sebaceous gland development|tongue development"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal coat/ hair morphology|abnormal nail morphology|abnormal sweat gland morphology|abnormal tongue morphology|abnormal filiform papillae morphology|abnormal coat/hair pigmentation|abnormal molar morphology|short tibia|abnormal dentin morphology|absent molars|abnormal molar crown morphology|abnormal alveolar process morphology|abnormal incisor morphology|abnormal fungiform papillae morphology|abnormal gustatory papilla taste bud morphology|small molars|decreased total body fat amount|increas"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

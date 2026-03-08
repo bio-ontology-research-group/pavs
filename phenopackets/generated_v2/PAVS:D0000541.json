@@ -1,0 +1,523 @@
+{
+  "id": "PAVS:D0000541",
+  "subject": {
+    "id": "PAVS:D0000541",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000023",
+        "label": "Inguinal hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000034",
+        "label": "Hydrocele testis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000256",
+        "label": "Macrocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000278",
+        "label": "Retrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000286",
+        "label": "Epicanthus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000303",
+        "label": "Mandibular prognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000311",
+        "label": "Round face"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Hypertelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000343",
+        "label": "Long philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000400",
+        "label": "Macrotia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000494",
+        "label": "Downslanted palpebral fissures"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000708",
+        "label": "Atypical behavior"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000773",
+        "label": "Short ribs"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000945",
+        "label": "Cutis laxa"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000973",
+        "label": "Large hands"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001176",
+        "label": "Prominent fingertip pads"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001212",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Spasticity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001257",
+        "label": "Dysarthria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001260",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Absent septum pellucidum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001331",
+        "label": "Slurred speech"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001350",
+        "label": "Limited elbow extension"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001377",
+        "label": "Umbilical hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001537",
+        "label": "Diastasis recti"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001540",
+        "label": "Abnormality of the voice"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001608",
+        "label": "Pes cavus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001761",
+        "label": "Talipes equinovarus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001762",
+        "label": "Deep-set nails"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001814",
+        "label": "Metatarsus adductus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001840",
+        "label": "Overlapping toe"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001845",
+        "label": "Calcaneovalgus deformity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001848",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Coxa valga"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002673",
+        "label": "Kyphosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002808",
+        "label": "Hypoplastic iliac wing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002866",
+        "label": "Limited knee extension"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003066",
+        "label": "Inverted nipples"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003186",
+        "label": "Short fourth metatarsal"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004689",
+        "label": "Depressed nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005280",
+        "label": "Accelerated skeletal maturation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005616",
+        "label": "Lateral ventricle dilatation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006956",
+        "label": "Sparse hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008070",
+        "label": "Radial deviation of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009466",
+        "label": "Joint contracture of the hand"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009473",
+        "label": "Dimple chin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010751",
+        "label": "Broad thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011304",
+        "label": "Dysharmonic skeletal maturation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0200000",
+        "label": "HP:0200000"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010193",
+        "label": "Weaver syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000541",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010193",
+          "label": "Weaver syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000541",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000541_NSD1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "NSD1",
+                  "valueId": "NCBIGene:64324"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.4400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellar_hemisphere:100|testis:98|uterus:98|cerebellum:98|skin:92|thyroid_gland:92|endocervix:89|ovary:89|tibial_nerve:89|ectocervix:83|fallopian_tube:83|lower_leg_skin:83|pituitary_gland:83|sigmoid_colon:75|spleen:75|suprapubic_skin:75|tibial_artery:75|vagina:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of transcription by RNA polymerase II|regulation of DNA-templated transcription|methylation|chromatin remodeling|regulation of RNA polymerase II regulatory region sequence-specific DNA binding|chromatin organization|positive regulation of DNA-templated transcription|regulation of peptidyl-serine phosphorylation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "absent mesoderm|abnormal developmental patterning|abnormal extraembryonic tissue morphology|abnormal gastrulation movements|abnormal primitive streak morphology|abnormal egg cylinder morphology|abnormal rostral-caudal axis patterning|abnormal mesendoderm development|absent primitive node|embryonic lethality during organogenesis, complete penetrance"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

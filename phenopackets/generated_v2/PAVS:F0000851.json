@@ -1,0 +1,219 @@
+{
+  "id": "PAVS:F0000851",
+  "subject": {
+    "id": "PAVS:F0000851",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P11Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "familyHistory",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0032316",
+            "label": "Positive family history"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000851",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000851",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000851_KIF14",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "KIF14",
+                  "valueId": "NCBIGene:9928"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000367350.5:c.4071G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000001.11:g.200565069G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000356319.4:p.Gln1357="
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr1",
+                  "pos": 200565069,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "splice_region_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "LOW"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF23313"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "6.894e-07"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.0983e-06"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.5000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|testis:98|esophagus_mucosa:96|ileum:94|spleen:94|suprapubic_skin:91|vagina:91|lower_leg_skin:87|transverse_colon:85|lung:83|aorta:81|adrenal_gland:79|coronary_artery:79|ectocervix:79|endocervix:79|fallopian_tube:79|mammary_gland:79|minor_salivary_gland:79|omental_fat_pad:79|stomach:79|subcutaneous_adipose_tissue:79|thyroid_gland:79|tibial_artery:79|tibial_nerve:79|blood:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of integrin activation|cerebellar cortex development|regulation of neuron apoptotic process|regulation of cell migration|negative regulation of apoptotic process|regulation of G1/S transition of mitotic cell cycle|cerebellar granular layer structural organization|regulation of Rap protein signal transduction|cerebral cortex development|cerebellar Purkinje cell layer structural organization|microtubule-based movement|SCF-dependent proteasomal ubiquitin-dependent protein catabo"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased cell proliferation|microcephaly|tremors|weakness|decreased brain size|abnormal cerebral cortex morphology|abnormal hippocampus morphology|abnormal olfactory bulb morphology|cerebellum hypoplasia|ectopic Purkinje cell|demyelination|abnormal spinal cord morphology|decreased body weight|decreased body size|ataxia|abnormal gait|impaired balance|abnormal motor capabilities/coordination/movement|decreased brain weight|small olfactory bulb|abnormal locomotor coordination|abnormal cerebellar c"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "id": "PAVS:D0000482",
+  "subject": {
+    "id": "PAVS:D0000482",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000164",
+        "label": "Abnormality of the dentition"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000256",
+        "label": "Macrocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000303",
+        "label": "Mandibular prognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Hypertelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000410",
+        "label": "Mixed hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000925",
+        "label": "Abnormality of the vertebral column"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001507",
+        "label": "Growth abnormality"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001739",
+        "label": "Abnormal nasopharynx morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001742",
+        "label": "Nasal congestion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002644",
+        "label": "Abnormal pelvic girdle bone morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002694",
+        "label": "Sclerosis of skull base"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003016",
+        "label": "Metaphyseal widening"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004407",
+        "label": "Bony paranasal bossing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004975",
+        "label": "Erlenmeyer flask deformity of the femurs"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006384",
+        "label": "Club-shaped distal femur"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010628",
+        "label": "Facial palsy"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007397",
+        "label": "craniometaphyseal dysplasia, autosomal dominant"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000482",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007397",
+          "label": "craniometaphyseal dysplasia, autosomal dominant"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000482",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000482_ANKH",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ANKH",
+                  "valueId": "NCBIGene:56172"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9706e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.6300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "aorta:100|cerebellar_hemisphere:98|cerebellum:96|pituitary_gland:94|tibial_artery:94|prostate_gland:91|coronary_artery:89|cervical_vertebra:87|tibial_nerve:87|lower_leg_skin:83|frontal_cortex:81|suprapubic_skin:79|ovary:77|thyroid_gland:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "ATP export|phosphate ion transmembrane transport|transmembrane transport|locomotory behavior|skeletal system development|regulation of bone mineralization"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased bone mineral density|abnormal basioccipital bone morphology|decreased compact bone thickness|kyphosis|abnormal cartilage morphology|abnormal chondrocyte morphology|abnormal cranium morphology|abnormal femur morphology|decreased body length|decreased body weight|abnormal gait|abnormal posture|abnormal circulating enzyme level|abnormal ion homeostasis|reduced male fertility|reduced female fertility|premature death|abnormal limb morphology|abnormal digit morphology|abnormal craniofacial b"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "id": "PAVS:D0001815",
+  "subject": {
+    "id": "PAVS:D0001815",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Hydrocephalus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000238",
+        "label": "Macrocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000256",
+        "label": "Narrow face"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000275",
+        "label": "Long face"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000276",
+        "label": "Neck muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000467",
+        "label": "External ophthalmoplegia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000544",
+        "label": "Arachnodactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001166",
+        "label": "Areflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001284",
+        "label": "Flexion contracture"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001371",
+        "label": "Decreased liver function"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001410",
+        "label": "X-linked recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001419",
+        "label": "Decreased fetal movement"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001558",
+        "label": "Polyhydramnios"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001561",
+        "label": "Pyloric stenosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002021",
+        "label": "Hypokinesia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002375",
+        "label": "Neonatal respiratory distress"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002643",
+        "label": "Generalized muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003324",
+        "label": "Birth length greater than 97th percentile"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003517",
+        "label": "Respiratory failure requiring assisted ventilation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004887",
+        "label": "Severe muscular hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006829",
+        "label": "Diaphragmatic eventration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009110",
+        "label": "Facial palsy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010628",
+        "label": "Slender toe"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011308",
+        "label": "HP:0011308"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010683",
+        "label": "X-linked myotubular myopathy"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001815",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010683",
+          "label": "X-linked myotubular myopathy"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001815",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001815_MTM1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MTM1",
+                  "valueId": "NCBIGene:4534"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "expressed_in",
+                    "value": "ovary:100|testis:100|tibial_nerve:100|spleen:94|adrenal_gland:92|fallopian_tube:92|lung:92|thyroid_gland:92|transverse_colon:92|coronary_artery:83|ectocervix:83|endocervix:83|ileum:83|lower_leg_skin:83|mammary_gland:83|aorta:83|subcutaneous_adipose_tissue:83|suprapubic_skin:83|tibial_artery:83|uterus:83|vagina:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "protein dephosphorylation|intermediate filament organization|lipid metabolic process|regulation of vacuole organization|protein transport|muscle cell cellular homeostasis|endosome to lysosome transport|phosphatidylinositol biosynthetic process|negative regulation of autophagosome assembly|mitochondrion organization|phosphatidylinositol dephosphorylation|mitochondrion distribution"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "kyphosis|progressive muscle weakness|myopathy|hindlimb paralysis|decreased body weight|decreased locomotor activity|abnormal gait|abnormal vocalization|abnormal cardiovascular system physiology|postnatal growth retardation|reduced male fertility|respiratory distress|abnormal motor capabilities/coordination/movement|premature death|abnormal muscle physiology|abnormal respiratory system physiology|muscular atrophy|decreased vertical activity|abnormal gastrocnemius morphology|abnormal skeletal musc"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

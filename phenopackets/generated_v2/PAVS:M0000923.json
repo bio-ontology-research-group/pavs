@@ -1,0 +1,218 @@
+{
+  "id": "PAVS:M0000923",
+  "subject": {
+    "id": "PAVS:M0000923",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P3Y2M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001883",
+        "label": "Talipes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:6001070",
+        "label": "Subdural hygroma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000938",
+        "label": "Osteopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001999",
+        "label": "Abnormal facial shape"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009882",
+        "label": "Short distal phalanx of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001053",
+        "label": "Hypopigmented skin patches"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0012736",
+        "label": "Profound global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:24389050",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/24389050/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000923",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000923",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000923_CRIPT",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CRIPT",
+                  "valueId": "NCBIGene:9419"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000238892.4:c.133_134insGG"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.46619677_46619678insGG"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000238892.3:p.Ala45GlyfsTer87"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF10235"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.8985e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.8520e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cervical_vertebra:100|cerebellar_hemisphere:100|ovary:96|tibial_nerve:96|cerebellum:96|endocervix:91|fallopian_tube:91|uterus:91|ectocervix:85|pituitary_gland:85|esophagogastric_junction:81|frontal_cortex:81|hypothalamus:81|mammary_gland:81|muscle_layer_of_esophagus:81|prostate_gland:81|sigmoid_colon:81|aorta:81|skin:81|spleen:81|tibial_artery:81|urinary_bladder:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "protein localization to microtubule|RNA splicing|regulation of postsynaptic density protein 95 clustering|cytoplasmic microtubule organization|mRNA splicing, via spliceosome|mRNA processing|regulation of postsynaptic density assembly"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased mean corpuscular hemoglobin|embryonic lethality between somite formation and embryo turning, complete penetrance|preweaning lethality, complete penetrance|embryonic lethality prior to tooth bud stage"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

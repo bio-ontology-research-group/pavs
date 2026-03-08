@@ -1,0 +1,174 @@
+{
+  "id": "PAVS:M0000556",
+  "subject": {
+    "id": "PAVS:M0000556",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001392",
+        "label": "Abnormality of the liver"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002910",
+        "label": "Elevated circulating hepatic transaminase concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:14748773",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/14748773/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000556",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000556",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000556_ATP7B",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ATP7B",
+                  "valueId": "NCBIGene:540"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000242839.10:c.4195del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000013.11:g.51934961del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000242839.5:p.Gln1399ArgfsTer6"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0828e-35"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0630e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|cerebellum:98|cerebellar_hemisphere:96|liver:94|fallopian_tube:92|tibial_nerve:92|uterus:92|ectocervix:87|endocervix:87|ileum:87|mammary_gland:87|minor_salivary_gland:87|omental_fat_pad:87|ovary:87|aorta:87|subcutaneous_adipose_tissue:87|transverse_colon:87"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "monoatomic ion transmembrane transport|monoatomic ion transport|xenobiotic detoxification by transmembrane export across the plasma membrane|copper ion export|copper ion import|intracellular copper ion homeostasis|monoatomic cation transport|viral translational frameshifting|copper ion transport|response to copper ion"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "diluted coat color|abnormal liver morphology|abnormal hepatocyte morphology|tremors|abnormal parietal lobe morphology|abnormal frontal lobe morphology|abnormal occipital lobe morphology|decreased body weight|curly vibrissae|abnormal locomotor behavior|ataxia|disheveled coat|abnormal circulating bilirubin level|postnatal growth retardation|abnormal mammary gland physiology|reduced female fertility|postnatal lethality|abnormal muscle physiology|abnormal brain morphology|liver cirrhosis|abnormal li"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

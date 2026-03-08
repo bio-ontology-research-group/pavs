@@ -1035,6 +1035,7 @@ NEW_GENE_COLS = [
     "mouse_mp_ids", "mouse_mp_labels",
     "go_biological_process", "go_molecular_function", "go_cellular_component",
     "expressed_in",
+    "ancestry_id", "ancestry_label",
 ]
 
 EMPTY_VARIANT = {c: "" for c in NEW_VARIANT_COLS}
@@ -1050,7 +1051,13 @@ def annotate_row(row, variant_map, vep_results, clinvar_index, clinvar_varid_ind
     out.update(EMPTY_GENE)
 
     pid = row["pavs_id"]
+    source = str(row.get("source_file", ""))
     gene = str(row.get("gene_symbol", "") or "").split("|")[0].strip()
+
+    # --- Ancestry --- (HANCESTRO:0852 Middle Eastern for all except DDD)
+    if "ddd" not in source.lower():
+        out["ancestry_id"] = "HANCESTRO:0852"
+        out["ancestry_label"] = "Middle Eastern"
 
     variants = variant_map.get(pid, [])
 

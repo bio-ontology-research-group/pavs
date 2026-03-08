@@ -1,0 +1,150 @@
+{
+  "id": "PAVS:M0001081",
+  "subject": {
+    "id": "PAVS:M0001081",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0011451",
+        "label": "Primary microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001081",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001081",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001081_ERCC4",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ERCC4",
+                  "valueId": "NCBIGene:2072"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.5282e-11"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.8400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|fallopian_tube:98|skin:98|adrenal_gland:94|coronary_artery:94|endocervix:94|ovary:94|tibial_nerve:94|urinary_bladder:94|uterus:94|cervical_vertebra:81|ectocervix:81|esophagogastric_junction:81|ileum:81|lower_leg_skin:81|lung:81|mammary_gland:81|minor_salivary_gland:81|muscle_layer_of_esophagus:81|omental_fat_pad:81|pituitary_gland:81|prostate_gland:81|sigmoid_colon:81|skeletal_muscle_tissue:81|aorta:81|spleen:81|subcutaneous_adipose_tissue:81|suprapubic_skin:81|thyroid_gland:81|tibial_artery:81|vagina:81|cerebellar_hemisphere:81|cerebellum:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "nucleotide-excision repair involved in interstrand cross-link repair|resolution of meiotic recombination intermediates|mitotic recombination|negative regulation of telomere maintenance|cellular response to UV|negative regulation of telomere maintenance via telomere lengthening|nucleotide-excision repair|telomeric DNA-containing double minutes formation|double-strand break repair via homologous recombination|double-strand break repair via nonhomologous end joining|negative regulation of protectio"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal liver morphology|decreased body weight|anophthalmia|postnatal growth retardation|increased cellular sensitivity to alkylating agent induced cell death|increased cellular sensitivity to ultraviolet irradiation induced cell death|decreased grip strength|lethality at weaning, complete penetrance|preweaning lethality, complete penetrance|impaired DNA repair|increased hepatocyte karyomegaly"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

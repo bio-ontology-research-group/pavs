@@ -1,0 +1,184 @@
+{
+  "id": "PAVS:P0002199",
+  "subject": {
+    "id": "PAVS:P0002199",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "familyHistory",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0032316",
+            "label": "Positive family history"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0002199",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0002199",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0002199_SMAD6",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SMAD6",
+                  "valueId": "NCBIGene:4091"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000288840.10:c.818A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000015.10:g.66711668A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000288840.5:p.Glu273Gly"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr15",
+                  "pos": 66711668,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0.03)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "possibly_damaging(0.899)"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "8.1308e-55"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.9960e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "lung:100|thyroid_gland:98|tibial_artery:96|coronary_artery:94|aorta:92|atrium_auricular_region:91|subcutaneous_adipose_tissue:89|omental_fat_pad:87|urinary_bladder:87|endocervix:83|fallopian_tube:83|ectocervix:79|mammary_gland:79|prostate_gland:79|tibial_nerve:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "mitral valve morphogenesis|response to laminar fluid shear stress|negative regulation of cell differentiation|SMAD protein signal transduction|negative regulation of ossification|regulation of DNA-templated transcription|response to lipopolysaccharide|negative regulation of transforming growth factor beta receptor signaling pathway|negative regulation of apoptotic process|pulmonary valve morphogenesis|BMP signaling pathway|negative regulation of activin receptor signaling pathway|response to est"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal blood vessel physiology|abnormal heart morphology|abnormal aorta morphology|overriding aortic valve|double outlet right ventricle|abnormal heart valve morphology|abnormal cardiovascular system physiology|poor circulation|increased systemic arterial blood pressure|heart valve hyperplasia|abnormal endocardium morphology|abnormal thrombosis|decreased vasodilation|tricuspid valve atresia|abnormal cardiac epithelial to mesenchymal transition|perimembraneous ventricular septal defect|muscular"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

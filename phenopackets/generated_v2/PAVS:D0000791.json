@@ -1,0 +1,121 @@
+{
+  "id": "PAVS:D0000791",
+  "subject": {
+    "id": "PAVS:D0000791",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000791",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000791",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000791_BICD2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "BICD2",
+                  "valueId": "NCBIGene:23299"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.5260e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.0700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "lower_leg_skin:100|suprapubic_skin:98|esophagus_mucosa:96|vagina:94|skin:92|aorta:91|tibial_artery:89|coronary_artery:87|uterus:87|cerebellar_hemisphere:83|lung:81|ectocervix:79|tibial_nerve:79|fallopian_tube:75|sigmoid_colon:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "centrosome localization|protein transport|retrograde vesicle-mediated transport, Golgi to endoplasmic reticulum|regulation of microtubule cytoskeleton organization|microtubule anchoring at microtubule organizing center|protein localization to Golgi apparatus|microtubule-based movement|mRNA transport|minus-end-directed organelle transport along microtubule"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "domed cranium|abnormal stratification in cerebral cortex|abnormal hippocampus layer morphology|small cerebellum|abnormal cerebellar Purkinje cell layer|absent cerebellar granule layer|abnormal cerebellar molecular layer|decreased body weight|weight loss|impaired coordination|abnormal gait|limb grasping|hydrocephaly|premature death|cerebral aqueductal stenosis|thin cerebral cortex|abnormal hippocampus pyramidal cell layer|enlarged lateral ventricles|abnormal Purkinje cell dendrite morphology|abno"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

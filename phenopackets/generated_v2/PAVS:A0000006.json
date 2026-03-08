@@ -1,0 +1,184 @@
+{
+  "id": "PAVS:A0000006",
+  "subject": {
+    "id": "PAVS:A0000006",
+    "sex": "MALE",
+    "extensions": [
+      {
+        "name": "familyHistory",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0032316",
+            "label": "Positive family history"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000253",
+        "label": "Progressive microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001272",
+        "label": "Cerebellar atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-variants",
+        "description": "Source dataset: ahmed-variants"
+      },
+      {
+        "id": "PMID:28454995",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0014335",
+        "label": "diffuse cerebral and cerebellar atrophy - intractable seizures - progressive microcephaly syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:A0000006",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0014335",
+          "label": "diffuse cerebral and cerebellar atrophy - intractable seizures - progressive microcephaly syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:A0000006",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:A0000006_EPRS1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "EPRS1",
+                  "valueId": "NCBIGene:2058"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.9945e-02"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.4900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|tibial_nerve:98|ovary:96|pituitary_gland:94|tibial_artery:94|aorta:91|uterus:89|coronary_artery:87|cerebellar_hemisphere:85|ectocervix:83|endocervix:81|fallopian_tube:81|minor_salivary_gland:77|lower_leg_skin:75|subcutaneous_adipose_tissue:75|urinary_bladder:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of translation|tRNA aminoacylation for protein translation|glutamyl-tRNA aminoacylation|negative regulation of formation of translation preinitiation complex|translation|regulation of translation|prolyl-tRNA aminoacylation|cellular response to type II interferon|regulation of long-chain fatty acid import into cell|cellular response to insulin stimulus|tRNA aminoacylation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal lung morphology|decreased body weight|extended life span|abnormal embryo size|decreased brown adipose tissue amount|no abnormal phenotype detected|increased insulin sensitivity|increased energy expenditure|increased oxygen consumption|impaired glucose tolerance|decreased susceptibility to diet-induced obesity|abnormal adipose tissue physiology|enhanced lipolysis|decreased abdominal adipose tissue amount|increased carbon dioxide production|decreased white fat cell size|decreased prepulse"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

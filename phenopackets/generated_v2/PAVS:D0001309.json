@@ -1,0 +1,383 @@
+{
+  "id": "PAVS:D0001309",
+  "subject": {
+    "id": "PAVS:D0001309",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000023",
+        "label": "Inguinal hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000047",
+        "label": "Hypospadias"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000121",
+        "label": "Nephrocalcinosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000126",
+        "label": "Hydronephrosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000154",
+        "label": "Wide mouth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000213",
+        "label": "Smooth philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000319",
+        "label": "Triangular face"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000325",
+        "label": "Posteriorly rotated ears"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000358",
+        "label": "Recurrent otitis media"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000403",
+        "label": "Conductive hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000405",
+        "label": "Prominent nose"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000448",
+        "label": "Short neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000470",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Deeply set eye"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000490",
+        "label": "Long eyelashes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000527",
+        "label": "Hypermetropia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000540",
+        "label": "Hirsutism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001007",
+        "label": "obsolete Joint laxity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001388",
+        "label": "Umbilical hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001537",
+        "label": "Atrial septal defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001631",
+        "label": "Coarctation of aorta"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001680",
+        "label": "Low posterior hairline"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002162",
+        "label": "Expressive language delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002474",
+        "label": "Celiac disease"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002608",
+        "label": "Downturned corners of mouth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002714",
+        "label": "Delayed skeletal maturation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002750",
+        "label": "Clinodactyly of the 5th finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004209",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Persistent left superior vena cava"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005301",
+        "label": "Cone-shaped epiphyses of the phalanges of the hand"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010230",
+        "label": "Congenital posterior urethral valve"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010957",
+        "label": "Mesocardia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011599",
+        "label": "HP:0011599"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007621",
+        "label": "Floating-Harbor syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001309",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007621",
+          "label": "Floating-Harbor syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001309",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001309_SRCAP",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SRCAP",
+                  "valueId": "NCBIGene:10847"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.2300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "thyroid_gland:100|ectocervix:98|endocervix:98|fallopian_tube:98|ovary:98|pituitary_gland:98|prostate_gland:98|spleen:98|testis:98|tibial_nerve:98|uterus:98|cerebellar_hemisphere:98|cerebellum:98|adrenal_gland:75|coronary_artery:75|esophagogastric_junction:75|esophagus_mucosa:75|ileum:75|lower_leg_skin:75|lung:75|mammary_gland:75|minor_salivary_gland:75|muscle_layer_of_esophagus:75|omental_fat_pad:75|sigmoid_colon:75|aorta:75|skin:75|stomach:75|subcutaneous_adipose_tissue:75|suprapubic_skin:75|tibial_artery:75|transverse_colon:75|urinary_bladder:75|vagina:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cAMP/PKA signal transduction|chromatin remodeling|positive regulation of macromolecule biosynthetic process|chromatin organization|positive regulation of transcription by RNA polymerase II|regulation of gene expression|regulation of DNA-templated transcription"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal hair growth|thrombocytopenia|embryonic lethality, complete penetrance|abnormal blastocyst formation"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

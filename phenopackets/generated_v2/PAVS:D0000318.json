@@ -1,0 +1,264 @@
+{
+  "id": "PAVS:D0000318",
+  "subject": {
+    "id": "PAVS:D0000318",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000271",
+        "label": "Abnormality of the face"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000926",
+        "label": "Platyspondyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001256",
+        "label": "Intellectual disability, mild"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001332",
+        "label": "Dystonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001350",
+        "label": "Slurred speech"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001871",
+        "label": "Abnormality of blood and blood-forming tissues"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002506",
+        "label": "Diffuse cerebral atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002808",
+        "label": "Kyphosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002869",
+        "label": "Flared iliac wing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003202",
+        "label": "Skeletal muscle atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003274",
+        "label": "Hypoplastic acetabulae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003651",
+        "label": "Foam cells"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007759",
+        "label": "Opacification of the corneal stroma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008166",
+        "label": "Decreased beta-galactosidase activity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008430",
+        "label": "Anterior beaking of lumbar vertebrae"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009262",
+        "label": "GM1 gangliosidosis type 3"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000318",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009262",
+          "label": "GM1 gangliosidosis type 3"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000318",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000318_GLB1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GLB1",
+                  "valueId": "NCBIGene:2720"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.9564e-15"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.3800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|thyroid_gland:98|endocervix:96|adrenal_gland:94|lung:92|ectocervix:91|ovary:91|spleen:91|uterus:85|fallopian_tube:83|aorta:83|urinary_bladder:83|ileum:77|minor_salivary_gland:77|stomach:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "response to cortisone|ganglioside catabolic process|keratan sulfate proteoglycan catabolic process|carbohydrate metabolic process|glycoprotein catabolic process|galactose catabolic process|response to Thyroglobulin triiodothyronine"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "small liver|abnormal hepatocyte morphology|small spleen|tremors|paralysis|abnormal cerebellum morphology|Purkinje cell degeneration|pup cannibalization|ataxia|decreased locomotor activity|abnormal gait|abnormal eating behavior|limb grasping|reduced fertility|premature death|abnormal brain morphology|gliosis|abnormal lymphopoiesis|decreased vertical activity|abnormal neuron morphology|abnormal locomotor activation|cachexia|abnormal brainstem morphology|abnormal renal glomerulus morphology|abnorma"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

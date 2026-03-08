@@ -1,0 +1,206 @@
+{
+  "id": "PAVS:M0001375",
+  "subject": {
+    "id": "PAVS:M0001375",
+    "sex": "FEMALE",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0004923",
+        "label": "Hyperphenylalaninemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0032245",
+        "label": "Abnormal metabolism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001375",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001375",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001375_PAH",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PAH",
+                  "valueId": "NCBIGene:5053"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000553106.6:c.898G>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000012.12:g.102851701G>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000448059.1:p.Ala300Ser"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr12",
+                  "pos": 102851701,
+                  "ref": "G",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.998)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00351"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "0.000403"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.0947e-20"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.2650e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "liver:100|cortex_of_kidney:98|renal_medulla:96|pancreas:94|testis:92|adrenal_gland:91|pituitary_gland:91|cerebral_cortex:87|frontal_cortex:87|cervical_vertebra:83|anterior_cingulate_cortex:83|amygdala:79|substantia_nigra:77|cerebellum:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "L-tyrosine biosynthetic process|aromatic amino acid metabolic process|L-phenylalanine catabolic process|L-tyrosine biosynthetic process, by oxidation of phenylalanine|catecholamine biosynthetic process|amino acid biosynthetic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal sternum morphology|decreased circulating LDL cholesterol level|decreased circulating HDL cholesterol level|diluted coat color|microcephaly|small spleen|abnormal corpus callosum morphology|abnormal cerebral cortex morphology|decreased body weight|decreased body size|microphthalmia|cataract|abnormal cornea morphology|decreased exploration in new environment|abnormal nest building behavior|abnormal olfactory discrimination memory|audiogenic seizures|impaired swimming|impaired balance|postn"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "id": "PAVS:D0000874",
+  "subject": {
+    "id": "PAVS:D0000874",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000825",
+        "label": "Hyperinsulinemic hypoglycemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001325",
+        "label": "Hypoglycemic coma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002173",
+        "label": "Hypoglycemic seizures"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003674",
+        "label": "Onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007185",
+        "label": "Loss of consciousness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008162",
+        "label": "Asymptomatic hyperammonemia"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011717",
+        "label": "hyperinsulinism-hyperammonemia syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000874",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011717",
+          "label": "hyperinsulinism-hyperammonemia syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000874",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000874_GLUD1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GLUD1",
+                  "valueId": "NCBIGene:2746"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.6085e-02"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.4800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "liver:100|anterior_cingulate_cortex:98|nucleus_accumbens:98|amygdala:94|caudate_nucleus:94|frontal_cortex:91|cerebral_cortex:89|substantia_nigra:89|hypothalamus:85|putamen:83|skin:81|lower_leg_skin:79|cervical_vertebra:77|tibial_artery:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "glutamine metabolic process|amino acid metabolic process|L-glutamate biosynthetic process|tricarboxylic acid metabolic process|positive regulation of insulin secretion|L-glutamate catabolic process|substantia nigra development"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

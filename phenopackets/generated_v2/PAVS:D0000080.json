@@ -1,0 +1,194 @@
+{
+  "id": "PAVS:D0000080",
+  "subject": {
+    "id": "PAVS:D0000080",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000020",
+        "label": "Urinary incontinence"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000238",
+        "label": "Hydrocephalus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001012",
+        "label": "Multiple lipomas"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002323",
+        "label": "Anencephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002475",
+        "label": "Myelomeningocele"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003298",
+        "label": "Spina bifida occulta"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008482",
+        "label": "Asymmetry of spinal facet joints"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0020705",
+        "label": "neural tube defects, susceptibility to"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000080",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0020705",
+          "label": "neural tube defects, susceptibility to"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000080",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000080_VANGL1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "VANGL1",
+                  "valueId": "NCBIGene:81839"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.0849e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.3100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|esophagus_mucosa:98|fallopian_tube:98|vagina:94|ectocervix:92|lower_leg_skin:92|sigmoid_colon:92|suprapubic_skin:92|urinary_bladder:92|uterus:92|coronary_artery:81|minor_salivary_gland:81|thyroid_gland:81|endocervix:75|aorta:75|tibial_artery:75|transverse_colon:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "Wnt signaling pathway, planar cell polarity pathway"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal foot pad morphology|increased foot pad pigmentation|no abnormal phenotype detected|greasy coat|abnormal orientation of cochlear hair cell stereociliary bundles|increased mean corpuscular hemoglobin|increased bone mineral content|preweaning lethality, incomplete penetrance"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

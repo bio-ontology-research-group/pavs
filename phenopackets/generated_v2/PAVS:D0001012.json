@@ -1,0 +1,229 @@
+{
+  "id": "PAVS:D0001012",
+  "subject": {
+    "id": "PAVS:D0001012",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000054",
+        "label": "Micropenis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000160",
+        "label": "Narrow mouth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000213",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Delayed skeletal maturation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002750",
+        "label": "Hypoplasia of the ulna"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003022",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Aplasia/Hypoplasia of the radius"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006501",
+        "label": "Absent thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009777",
+        "label": "HP:0009777"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012909",
+        "label": "skeletal defects, genital hypoplasia, and intellectual disability"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001012",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012909",
+          "label": "skeletal defects, genital hypoplasia, and intellectual disability"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001012",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001012_ZBTB16",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ZBTB16",
+                  "valueId": "NCBIGene:7704"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.4500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "tibial_artery:100|aorta:98|tibial_nerve:96|subcutaneous_adipose_tissue:94|fallopian_tube:92|uterus:91|coronary_artery:89|esophagogastric_junction:87|ovary:85|urinary_bladder:83|muscle_layer_of_esophagus:81|skeletal_muscle_tissue:81|mammary_gland:77|ectocervix:75|endocervix:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "apoptotic process|positive regulation of fat cell differentiation|embryonic hindlimb morphogenesis|embryonic digit morphogenesis|protein ubiquitination|positive regulation of NK T cell differentiation|myeloid cell differentiation|negative regulation of myeloid cell differentiation|positive regulation of macromolecule biosynthetic process|tolerance induction in gut-associated lymphoid tissue|regulation of cell differentiation|positive regulation of DNA-templated transcription|positive regulation "
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal xiphoid process morphology|polyphalangy|increased presacral vertebrae number|increased rib number|long fibula|abnormal forelimb morphology|abnormal hindlimb morphology|abnormal tibia morphology|polydactyly|oligodactyly|ectopic digits|interdigital webbing|abnormal autopod morphology|kinked tail|short tail|abnormal liver morphology|small liver|abnormal spleen morphology|small spleen|decreased brain size|abnormal testis morphology|small testis|increased Leydig cell number|seminiferous tubu"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

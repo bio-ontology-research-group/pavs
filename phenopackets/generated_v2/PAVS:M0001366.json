@@ -1,0 +1,215 @@
+{
+  "id": "PAVS:M0001366",
+  "subject": {
+    "id": "PAVS:M0001366",
+    "sex": "FEMALE",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001396",
+        "label": "Cholestasis"
+      },
+      "excluded": false,
+      "modifiers": [
+        {
+          "id": "HP:0012828",
+          "label": "Severe"
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001366",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001366",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001366_SMPD1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SMPD1",
+                  "valueId": "NCBIGene:6609"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000342245.9:c.1267C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000011.10:g.6393620C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000340409.4:p.His423Tyr"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr11",
+                  "pos": 6393620,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:18031"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0.02)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.084)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00149"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "3.425e-06"
+                  },
+                  {
+                    "name": "af_saudi",
+                    "value": "0.001656"
+                  },
+                  {
+                    "name": "ac_saudi",
+                    "value": "1"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "18031"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "7.3388e-14"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0570e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|pituitary_gland:98|thyroid_gland:96|aorta:94|lung:92|cerebellum:91|lower_leg_skin:89|tibial_nerve:87|cerebellar_hemisphere:87|coronary_artery:83|prostate_gland:81|suprapubic_skin:81|cortex_of_kidney:77|ectocervix:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of MAPK cascade|response to tumor necrosis factor|termination of signal transduction|cellular response to UV|positive regulation of apoptotic process|response to ionizing radiation|plasma membrane repair|cellular response to calcium ion|glycosphingolipid catabolic process|sphingomyelin metabolic process|response to cocaine|wound healing|signal transduction|positive regulation of endocytosis|response to interleukin-1|symbiont entry into host cell|nervous system development|pos"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "enlarged liver|enlarged spleen|abnormal immune system cell morphology|tremors|decreased brain size|abnormal cerebral cortex morphology|abnormal choroid plexus morphology|Purkinje cell degeneration|decreased body weight|ataxia|impaired coordination|hunched posture|increased circulating HDL cholesterol level|abnormal apoptosis|respiratory distress|premature death|abnormal lipid homeostasis|gliosis|abnormal pulmonary alveolus morphology|increased susceptibility to bacterial infection|abnormal granu"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

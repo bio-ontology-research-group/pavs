@@ -1,0 +1,171 @@
+{
+  "id": "PAVS:M0000006",
+  "subject": {
+    "id": "PAVS:M0000006",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000510",
+        "label": "Retinitis pigmentosa"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:26355662",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/26355662/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000006",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000006",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000006_ABCA4",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ABCA4",
+                  "valueId": "NCBIGene:24"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000370225.4:c.5391_5392del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000001.11:g.94014611_94014612del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000359245.3:p.Ala1798Ter"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF12698"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.4822e-43"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.8600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "renal_medulla:100|testis:98|ileum:96|suprapubic_skin:96|thyroid_gland:92|cortex_of_kidney:91|mammary_gland:91|lower_leg_skin:87|omental_fat_pad:85|liver:83|lung:83|subcutaneous_adipose_tissue:83|cerebral_cortex:77|endocervix:77|fallopian_tube:77|ovary:77|prostate_gland:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "phototransduction, visible light|retinal metabolic process|phospholipid translocation|organic hydroxy compound transport|retinol transport|retinoid metabolic process|transmembrane transport|visual perception|lipid transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "delayed dark adaptation|abnormal photoreceptor outer segment morphology|vertebral fusion|abnormal retina pigment epithelium morphology|abnormal Bruch membrane morphology|abnormal eye physiology|increased mean corpuscular hemoglobin|retina photoreceptor degeneration|thin retina outer nuclear layer|photoreceptor outer segment degeneration|lipofuscinosis|abnormal vitamin A level"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

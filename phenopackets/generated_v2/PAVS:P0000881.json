@@ -1,0 +1,173 @@
+{
+  "id": "PAVS:P0000881",
+  "subject": {
+    "id": "PAVS:P0000881",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P38M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002194",
+        "label": "Delayed gross motor development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000256",
+        "label": "Macrocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001548",
+        "label": "Overgrowth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000881",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000881",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000881_SHANK3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SHANK3",
+                  "valueId": "NCBIGene:85358"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9995e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.2800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellum:100|spleen:98|cerebellar_hemisphere:96|subcutaneous_adipose_tissue:94|mammary_gland:92|omental_fat_pad:91|lung:89|uterus:87|cerebral_cortex:85|thyroid_gland:83|endocervix:81|frontal_cortex:81|fallopian_tube:77|anterior_cingulate_cortex:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of dendritic spine morphogenesis|regulation of long-term synaptic depression|positive regulation of excitatory postsynaptic potential|vocal learning|regulation of long-term synaptic potentiation|positive regulation of glutamate receptor signaling pathway|positive regulation of long-term synaptic potentiation|brain morphogenesis|postsynaptic density assembly|neuromuscular process controlling balance|learning|NMDA glutamate receptor clustering|associative learning|memory|synapse organiz"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased circulating calcium level|abnormal autopod morphology|weakness|thalamus hyperplasia|skin lesions|increased body weight|decreased body weight|increased aggression towards mice|abnormal social investigation|social withdrawal|increased anxiety-related response|decreased anxiety-related response|circling|hyperactivity|decreased locomotor activity|impaired coordination|abnormal gait|increased stereotypic behavior|abnormal response to new environment|decreased exploration in new environment|"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,642 @@
+{
+  "id": "PAVS:D0000551",
+  "subject": {
+    "id": "PAVS:D0000551",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000047",
+        "label": "Hypospadias"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000104",
+        "label": "Renal agenesis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000107",
+        "label": "Renal cyst"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000164",
+        "label": "Abnormality of the dentition"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000196",
+        "label": "Lower lip pit"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000204",
+        "label": "Cleft upper lip"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000268",
+        "label": "Dolichocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000272",
+        "label": "Malar flattening"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Hypertelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Micrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000350",
+        "label": "Small forehead"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000368",
+        "label": "obsolete Low-set, posteriorly rotated ears"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000396",
+        "label": "Overfolded helix"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000405",
+        "label": "Conductive hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000407",
+        "label": "Sensorineural hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000420",
+        "label": "Short nasal septum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000455",
+        "label": "Broad nasal tip"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000470",
+        "label": "Short neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000480",
+        "label": "Retinal coloboma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000506",
+        "label": "Telecanthus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000508",
+        "label": "Ptosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000518",
+        "label": "Cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000528",
+        "label": "Anophthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000545",
+        "label": "Myopia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000568",
+        "label": "Microphthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000579",
+        "label": "Nasolacrimal duct obstruction"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000582",
+        "label": "Upslanted palpebral fissure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000612",
+        "label": "Iris coloboma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000945",
+        "label": "Single transverse palmar crease"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000954",
+        "label": "Atypical scarring of skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000987",
+        "label": "Aplasia cutis congenita"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001057",
+        "label": "Preaxial hand polydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001177",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Intellectual disability, mild"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001256",
+        "label": "Intrauterine growth retardation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001511",
+        "label": "Hypernasal speech"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001611",
+        "label": "Hypoplastic fingernail"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001804",
+        "label": "Gastroesophageal reflux"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002020",
+        "label": "Pyloric stenosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002021",
+        "label": "Low posterior hairline"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002162",
+        "label": "White forelock"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002211",
+        "label": "Premature graying of hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002216",
+        "label": "Agenesis of cerebellar vermis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002335",
+        "label": "Supernumerary nipple"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002558",
+        "label": "Abnormality of the immune system"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002715",
+        "label": "Kyphosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002808",
+        "label": "Elbow flexion contracture"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002987",
+        "label": "Hyperlordosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003307",
+        "label": "Clinodactyly of the 5th finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004209",
+        "label": "Dermal atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004334",
+        "label": "Postauricular pit"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004464",
+        "label": "Preauricular pit"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004467",
+        "label": "Malrotation of colon"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004785",
+        "label": "Abdominal organ duplication"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005217",
+        "label": "Depressed nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005280",
+        "label": "Fusion of middle ear ossicles"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005473",
+        "label": "Wide intermamillary distance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006610",
+        "label": "Microtia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008551",
+        "label": "Hypoplastic superior helix"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008559",
+        "label": "Supraauricular pit"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008606",
+        "label": "Postnatal growth retardation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008897",
+        "label": "Proximal placement of thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009623",
+        "label": "Short thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009778",
+        "label": "Branchial anomaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009794",
+        "label": "Hamartoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010566",
+        "label": "HP:0010566"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007235",
+        "label": "branchiooculofacial syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000551",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007235",
+          "label": "branchiooculofacial syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000551",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000551_TFAP2A",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TFAP2A",
+                  "valueId": "NCBIGene:7020"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9993e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "3.3400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "suprapubic_skin:100|lower_leg_skin:98|esophagus_mucosa:96|vagina:94|minor_salivary_gland:92|mammary_gland:91|prostate_gland:89|renal_medulla:87|cortex_of_kidney:85|testis:83|cerebellar_hemisphere:83|cerebellum:83|ectocervix:77|endocervix:77|urinary_bladder:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "eyelid development in camera-type eye|trigeminal nerve development|cellular response to iron ion|regulation of DNA-templated transcription|bone morphogenesis|optic cup structural organization|regulation of cell population proliferation|negative regulation of apoptotic process|positive regulation of tooth mineralization|positive regulation of gene expression|regulation of cell differentiation|positive regulation of DNA-templated transcription|sensory perception of sound|retina layer formation|pos"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal malleus morphology|decreased middle ear ossicle number|abnormal neurocranium morphology|short mandible|short maxilla|midline facial cleft|cleft palate|absent sternum|scoliosis|double outlet right ventricle|abnormal cell death|abnormal head morphology|abnormal cranium morphology|short snout|absent snout|absent mouth|abnormal maxilla morphology|abnormal mandible morphology|absent radius|polydactyly|abnormal forebrain morphology|exencephaly|cranioschisis|incomplete rostral neuropore closur"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

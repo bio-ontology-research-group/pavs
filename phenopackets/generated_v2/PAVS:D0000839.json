@@ -1,0 +1,137 @@
+{
+  "id": "PAVS:D0000839",
+  "subject": {
+    "id": "PAVS:D0000839",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0000489",
+        "label": "diabetic encephalopathy"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000839",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0000489",
+          "label": "diabetic encephalopathy"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000839",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000839_GRIN1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GRIN1",
+                  "valueId": "NCBIGene:2902"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.8437e-02"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.7400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellum:100|cerebral_cortex:98|frontal_cortex:96|cerebellar_hemisphere:94|nucleus_accumbens:92|anterior_cingulate_cortex:91|caudate_nucleus:89|hypothalamus:87|hippocampus:85|putamen:83|amygdala:81|substantia_nigra:79|minor_salivary_gland:77|cervical_vertebra:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "monoatomic ion transport|calcium-mediated signaling|excitatory postsynaptic potential|positive regulation of excitatory postsynaptic potential|regulation of synaptic plasticity|propylene metabolic process|protein heterotetramerization|positive regulation of reactive oxygen species biosynthetic process|chemical synaptic transmission|response to ethanol|monoatomic ion transmembrane transport|calcium ion transmembrane import into cytosol|regulation of membrane potential|response to glycine|positive"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal trigeminal nerve morphology|atelectasis|lung hemorrhage|overexpanded pulmonary alveolus|decreased body weight|abnormal social investigation|social withdrawal|abnormal anxiety-related response|decreased male mating frequency|abnormal pup retrieval|pup cannibalization|abnormal maternal nurturing|abnormal locomotor behavior|ataxia|hyperactivity|decreased locomotor activity|impaired coordination|stereotypic behavior|increased exploration in new environment|absent suckling reflex|abnormal su"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "id": "PAVS:F0000220",
+  "subject": {
+    "id": "PAVS:F0000220",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P11Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0017570",
+        "label": "leukocyte adhesion deficiency"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000220",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0017570",
+          "label": "leukocyte adhesion deficiency"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000220",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000220_CPAP",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CPAP",
+                  "valueId": "NCBIGene:55835"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000652462.1:c.1756C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000021.9:g.44889397G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000498780.1:p.Arg586Trp"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr21",
+                  "pos": 44889397,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:24502"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.211)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "0.00851"
+                  },
+                  {
+                    "name": "af_saudi",
+                    "value": "0.003311"
+                  },
+                  {
+                    "name": "ac_saudi",
+                    "value": "2"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "24502"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Benign/Likely benign"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cilium assembly|regulation of centriole replication|microtubule polymerization|positive regulation of receptor signaling pathway via JAK-STAT|positive regulation of centriole elongation|positive regulation of centriole replication|cell division|positive regulation of G1/S transition of mitotic cell cycle|positive regulation of establishment of protein localization|microtubule nucleation|positive regulation of DNA-templated transcription|regulation of mitotic spindle organization|centriole replic"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal parietal bone morphology|abnormal vertebrae morphology|decreased circulating calcium level|abnormal myocardial fiber morphology|abnormal head morphology|abnormal cranium morphology|abnormal tibia morphology|abnormal femur morphology|abnormal dentate gyrus morphology|decreased body length|decreased body weight|decreased body size|anophthalmia|abnormal iris morphology|abnormal social investigation|abnormal tail movements|decreased locomotor activity|abnormal embryo development|abnormal em"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

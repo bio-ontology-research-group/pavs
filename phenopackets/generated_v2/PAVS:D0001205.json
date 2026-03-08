@@ -1,0 +1,173 @@
+{
+  "id": "PAVS:D0001205",
+  "subject": {
+    "id": "PAVS:D0001205",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000821",
+        "label": "Hypothyroidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002925",
+        "label": "Elevated circulating thyroid-stimulating hormone concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003593",
+        "label": "Infantile onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005990",
+        "label": "Thyroid hypoplasia"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010142",
+        "label": "hypothyroidism due to TSH receptor mutations"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001205",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010142",
+          "label": "hypothyroidism due to TSH receptor mutations"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001205",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001205_TSHR",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TSHR",
+                  "valueId": "NCBIGene:7253"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "7.3450e-14"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0120e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "thyroid_gland:100|fallopian_tube:98|spleen:96|endocervix:94|ectocervix:92|mammary_gland:92|minor_salivary_gland:92|omental_fat_pad:92|testis:92|uterus:92|caudate_nucleus:92|adrenal_gland:79|cervical_vertebra:79|ileum:79|liver:79|lower_leg_skin:79|nucleus_accumbens:79|ovary:79|pituitary_gland:79|prostate_gland:79|putamen:79|subcutaneous_adipose_tissue:79|suprapubic_skin:79|tibial_nerve:79|vagina:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cellular response to glycoprotein|adenylate cyclase-activating G protein-coupled receptor signaling pathway|cell surface receptor signaling pathway|cellular response to thyrotropin-releasing hormone|thyroid-stimulating hormone signaling pathway|G protein-coupled receptor signaling pathway, coupled to cyclic nucleotide second messenger|positive regulation of cold-induced thermogenesis|G protein-coupled receptor signaling pathway|positive regulation of cell population proliferation|signal transduc"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal organ of Corti morphology|delayed bone ossification|decreased compact bone thickness|short limbs|decreased body length|decreased body weight|decreased body size|circling|unidirectional circling|increased stereotypic behavior|anemia|postnatal growth retardation|reduced fertility|reduced male fertility|reduced female fertility|male infertility|female infertility|deafness|premature death|abnormal thyroid gland physiology|abnormal bone mineralization|small thyroid gland|abnormal bone remode"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

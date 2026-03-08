@@ -1,0 +1,362 @@
+{
+  "id": "PAVS:D0001148",
+  "subject": {
+    "id": "PAVS:D0001148",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000272",
+        "label": "Malar flattening"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000286",
+        "label": "Epicanthus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000343",
+        "label": "Long philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Micrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000431",
+        "label": "Wide nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000470",
+        "label": "Short neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000581",
+        "label": "Blepharophimosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001028",
+        "label": "Hemangioma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001060",
+        "label": "Axillary pterygium"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001537",
+        "label": "Umbilical hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001629",
+        "label": "Ventricular septal defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001631",
+        "label": "Atrial septal defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002007",
+        "label": "Frontal bossing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003038",
+        "label": "Fibular hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003196",
+        "label": "Short nose"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004415",
+        "label": "Pulmonary artery stenosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005025",
+        "label": "Hypoplastic distal humeri"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005050",
+        "label": "Anterolateral radial head dislocation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005060",
+        "label": "Limited elbow flexion/extension"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005085",
+        "label": "Limited knee flexion/extension"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005280",
+        "label": "Depressed nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005736",
+        "label": "Short tibia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005792",
+        "label": "Short humerus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006376",
+        "label": "Limited elbow flexion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006389",
+        "label": "Limited knee flexion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008800",
+        "label": "Limited hip movement"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008873",
+        "label": "Disproportionate short-limb short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008905",
+        "label": "Rhizomelia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009756",
+        "label": "Popliteal pterygium"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0200082",
+        "label": "HP:0200082"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009779",
+        "label": "autosomal recessive omodysplasia"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001148",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009779",
+          "label": "autosomal recessive omodysplasia"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001148",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001148_GPC6",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GPC6",
+                  "valueId": "NCBIGene:10082"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9996e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "3.8400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "tibial_artery:100|skin:98|aorta:96|tibial_nerve:96|coronary_artery:92|ovary:91|urinary_bladder:91|sigmoid_colon:87|esophagogastric_junction:85|subcutaneous_adipose_tissue:83|ectocervix:81|fallopian_tube:81|omental_fat_pad:81|endocervix:75|liver:75|lung:75|muscle_layer_of_esophagus:75|prostate_gland:75|transverse_colon:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of signal transduction|regulation of neurotransmitter receptor localization to postsynaptic specialization membrane|cell migration"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "cleft palate|short tibia|short fibula|short femur|abnormal long bone epiphyseal plate proliferative zone|abnormal long bone diaphysis morphology|decreased length of long bones|absent nasal septum|small cranium|decreased fetal weight|neonatal lethality, complete penetrance|decreased chondrocyte proliferation|small snout"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

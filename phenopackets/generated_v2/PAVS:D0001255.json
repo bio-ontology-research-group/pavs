@@ -1,0 +1,453 @@
+{
+  "id": "PAVS:D0001255",
+  "subject": {
+    "id": "PAVS:D0001255",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000054",
+        "label": "Micropenis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000077",
+        "label": "Abnormality of the kidney"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000135",
+        "label": "Hypogonadism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000137",
+        "label": "Abnormality of the ovary"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000148",
+        "label": "Vaginal atresia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Macrocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000256",
+        "label": "Hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Astigmatism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000483",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Glaucoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000501",
+        "label": "Rod-cone dystrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000510",
+        "label": "Cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000518",
+        "label": "Myopia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000545",
+        "label": "Retinal dystrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000556",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Hypodontia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000668",
+        "label": "Dental crowding"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000678",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Diabetes mellitus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000819",
+        "label": "Hypertension"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000822",
+        "label": "Hirsutism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001007",
+        "label": "Biliary tract abnormality"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001080",
+        "label": "Brachydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001156",
+        "label": "Syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001159",
+        "label": "Postaxial hand polydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001162",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001251",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Specific learning disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001328",
+        "label": "Hepatic fibrosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001395",
+        "label": "Obesity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001513",
+        "label": "Left ventricular hypertrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001712",
+        "label": "Short foot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001773",
+        "label": "Foot polydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001829",
+        "label": "Asthma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002099",
+        "label": "Gait imbalance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002141",
+        "label": "Abnormal speech pattern"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002167",
+        "label": "Aganglionic megacolon"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002251",
+        "label": "Poor coordination"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002370",
+        "label": "Congenital aphakia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007707",
+        "label": "Decreased testicular size"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008734",
+        "label": "Radial deviation of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009466",
+        "label": "Nephrogenic diabetes insipidus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009806",
+        "label": "HP:0009806"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008854",
+        "label": "Bardet-Biedl syndrome 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001255",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008854",
+          "label": "Bardet-Biedl syndrome 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001255",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001255_BBS4",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "BBS4",
+                  "valueId": "NCBIGene:585"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.8130e-12"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.5300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "pituitary_gland:100|testis:98|endocervix:96|ovary:94|thyroid_gland:92|tibial_nerve:91|ectocervix:89|prostate_gland:89|uterus:89|fallopian_tube:83|tibial_artery:81|sigmoid_colon:79|aorta:79|urinary_bladder:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heart looping|striatum development|protein localization to cilium|sensory perception of smell|brain morphogenesis|negative regulation of appetite by leptin-mediated signaling pathway|cerebral cortex development|microtubule anchoring at centrosome|cell projection organization|visual perception|spermatid development|neural tube closure|sensory processing|non-motile cilium assembly|cilium assembly|retina homeostasis|centrosome cycle|hippocampus development|maintenance of protein location in nucleus"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased circulating LDL cholesterol level|abnormal liver morphology|enlarged liver|abnormal liver physiology|decreased salivation|optic nerve atrophy|obese|decreased body weight|decreased body size|abnormal retina morphology|retina degeneration|increased anxiety-related response|hyperactivity|decreased exploration in new environment|polyphagia|increased startle reflex|abnormal placing response|increased circulating HDL cholesterol level|male infertility|abnormal olfaction|increased circulating"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

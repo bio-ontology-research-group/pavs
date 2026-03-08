@@ -1,0 +1,383 @@
+{
+  "id": "PAVS:D0000514",
+  "subject": {
+    "id": "PAVS:D0000514",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Brachycephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000248",
+        "label": "Dolichocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000268",
+        "label": "Micrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Short neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000470",
+        "label": "Myopia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000545",
+        "label": "Pectus carinatum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000768",
+        "label": "Osteopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000938",
+        "label": "Ectopia lentis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001083",
+        "label": "Arachnodactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001166",
+        "label": "Adducted thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001181",
+        "label": "Motor delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Disproportionate tall stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001519",
+        "label": "Ventricular septal defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001629",
+        "label": "Atrial septal defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001631",
+        "label": "Mitral valve prolapse"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001634",
+        "label": "Patent ductus arteriosus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001643",
+        "label": "Bicuspid aortic valve"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001647",
+        "label": "Mitral regurgitation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001653",
+        "label": "Talipes equinovarus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001762",
+        "label": "Metatarsus adductus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001840",
+        "label": "Frontal bossing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002007",
+        "label": "Aortic root aneurysm"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002616",
+        "label": "Kyphoscoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002751",
+        "label": "Elbow flexion contracture"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002987",
+        "label": "Patellar dislocation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002999",
+        "label": "Hip contracture"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003273",
+        "label": "Knee flexion contracture"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006380",
+        "label": "Congenital kyphoscoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008453",
+        "label": "Calf muscle hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008962",
+        "label": "Ulnar deviation of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009465",
+        "label": "Crumpled ear"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009698",
+        "label": "Patellar subluxation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009901",
+        "label": "HP:0009901"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010499",
+        "label": "HP:0010499"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007363",
+        "label": "congenital contractural arachnodactyly"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000514",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007363",
+          "label": "congenital contractural arachnodactyly"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000514",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000514_FBN2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "FBN2",
+                  "valueId": "NCBIGene:2201"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "3.1200e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|testis:98|adrenal_gland:96|muscle_layer_of_esophagus:94|ectocervix:92|esophagogastric_junction:92|heart_left_ventricle:92|uterus:92|endocervix:85|pituitary_gland:85|fallopian_tube:81|prostate_gland:81|thyroid_gland:81|tibial_nerve:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of transforming growth factor beta receptor signaling pathway|placenta development|embryonic eye morphogenesis|glucose metabolic process|positive regulation of osteoblast differentiation|camera-type eye development|bone trabecula formation|regulation of trophoblast cell migration|positive regulation of bone mineralization|signal transduction|glucose homeostasis"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal rib morphology|abnormal heart morphology|enlarged heart|abnormal cranium morphology|abnormal mandible morphology|abnormal radius morphology|abnormal carpal bone morphology|abnormal tibia morphology|abnormal femur morphology|syndactyly|abnormal autopod morphology|abnormal nail morphology|abnormal liver morphology|muscle weakness|decreased body length|decreased body size|cornea opacity|decreased anxiety-related response|hyperactivity|abnormal gait|limb grasping|postnatal growth retardatio"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

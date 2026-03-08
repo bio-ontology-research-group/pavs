@@ -1,0 +1,195 @@
+{
+  "id": "PAVS:P0000855",
+  "subject": {
+    "id": "PAVS:P0000855",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P12Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000855",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000855",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000855_CFTR",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CFTR",
+                  "valueId": "NCBIGene:1080"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000003084.11:c.1736A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000007.14:g.117590409A>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000003084.6:p.Asp579Gly"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr7",
+                  "pos": 117590409,
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:68033"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(1)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "6.892e-07"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "68033"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "drug response"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.3757e-39"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1520e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "pancreas:100|transverse_colon:98|minor_salivary_gland:96|ileum:94|lung:92|cervical_vertebra:91|fallopian_tube:91|lower_leg_skin:91|prostate_gland:91|testis:91|suprapubic_skin:81|cortex_of_kidney:79|endocervix:77|uterus:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "transepithelial water transport|monoatomic ion transport|bicarbonate transport|intracellular pH elevation|membrane hyperpolarization|positive regulation of enamel mineralization|cellular response to cAMP|chloride transmembrane transport|water transport|response to endoplasmic reticulum stress|sperm capacitation|amelogenesis|transmembrane transport|cellular response to forskolin|chloride transport|monoatomic ion transmembrane transport|multicellular organismal-level water homeostasis"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased neutrophil cell number|impaired fertilization|abnormal intestine morphology|abnormal crypts of Lieberkuhn morphology|crypts of Lieberkuhn abscesses|abnormal colon morphology|abnormal small intestine morphology|abnormal intestinal mucosa morphology|intestinal ulcer|abnormal hepatocyte morphology|abnormal salivary gland morphology|spleen hyperplasia|small ovary|abnormal uterine cervix morphology|abnormal lung morphology|atelectasis|decreased body length|decreased body weight|weight loss|"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

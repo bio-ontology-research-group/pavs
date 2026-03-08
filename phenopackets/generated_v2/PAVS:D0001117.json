@@ -1,0 +1,243 @@
+{
+  "id": "PAVS:D0001117",
+  "subject": {
+    "id": "PAVS:D0001117",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000766",
+        "label": "Abnormal sternum morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001191",
+        "label": "Abnormal carpal morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001199",
+        "label": "Triphalangeal thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001629",
+        "label": "Ventricular septal defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001631",
+        "label": "Atrial septal defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001643",
+        "label": "Patent ductus arteriosus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002943",
+        "label": "Thoracic scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002984",
+        "label": "Hypoplasia of the radius"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003468",
+        "label": "Abnormal vertebral morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004383",
+        "label": "Hypoplastic left heart"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009751",
+        "label": "Aplasia of the pectoralis major muscle"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009777",
+        "label": "Absent thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009829",
+        "label": "Phocomelia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009944",
+        "label": "Partial duplication of thumb phalanx"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007732",
+        "label": "Holt-Oram syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001117",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007732",
+          "label": "Holt-Oram syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001117",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001117_TBX5",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TBX5",
+                  "valueId": "NCBIGene:6910"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.6700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "atrium_auricular_region:100|lung:98|muscle_layer_of_esophagus:96|esophagogastric_junction:94|heart_left_ventricle:92|coronary_artery:91|mammary_gland:91|urinary_bladder:91|prostate_gland:85|skin:85|subcutaneous_adipose_tissue:85|esophagus_mucosa:79|thyroid_gland:79|suprapubic_skin:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heart development|sinoatrial node development|ventricular septum development|positive regulation of gap junction assembly|cell fate specification|regulation of DNA-templated transcription|negative regulation of epithelial to mesenchymal transition|cell migration involved in coronary vasculogenesis|positive regulation of cardiac conduction|cardiac left ventricle formation|negative regulation of cardiac muscle cell proliferation|positive regulation of cardioblast differentiation|forelimb morphogen"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal heart morphology|abnormal heart development|abnormal heart tube morphology|enlarged heart|absent atrioventricular cushions|abnormal carpal bone morphology|abnormal cardiovascular system physiology|embryonic growth arrest|abnormal digit morphology|no abnormal phenotype detected|hydrops fetalis|abnormal heart atrium morphology|abnormal impulse conducting system conduction|dilated heart atrium|prolonged PR interval|abnormal heart left ventricle morphology|heart atrium hypoplasia|prolonged "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

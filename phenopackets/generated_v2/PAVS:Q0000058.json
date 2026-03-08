@@ -1,0 +1,173 @@
+{
+  "id": "PAVS:Q0000058",
+  "subject": {
+    "id": "PAVS:Q0000058",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P3Y4M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC7082194",
+        "description": "Source dataset: PMC7082194"
+      },
+      {
+        "id": "PMID:31618753",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31618753/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011411",
+        "label": "Chudley-McCullough syndrome"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:Q0000058",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011411",
+          "label": "Chudley-McCullough syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:Q0000058",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:Q0000058_GPSM2|GPSM2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GPSM2|GPSM2",
+                  "valueId": "NCBIGene:29899|29899"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000264126.9:c.1600+3_1600+6del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000001.11:g.108922579_108922582del"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000402|GENO:0000402",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "splice_donor_5th_base_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "LOW"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "7.7889e-05"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.6000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cervical_vertebra:100|esophagus_mucosa:100|lower_leg_skin:100|suprapubic_skin:100|esophagogastric_junction:92|muscle_layer_of_esophagus:92|skin:92|vagina:92|hypothalamus:85|lung:85|sigmoid_colon:85|substantia_nigra:85|testis:85|tibial_nerve:85"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of protein localization to cell cortex|cell division|mitotic spindle organization|G protein-coupled receptor signaling pathway|establishment of mitotic spindle orientation|regulation of mitotic spindle organization|maintenance of centrosome location|positive regulation of spindle assembly"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal lens morphology|cataract|abnormal retina morphology|deafness|increased mean platelet volume|abnormal cochlear hair cell morphology|abnormal vitreous body morphology|abnormal neuron specification|abnormal orientation of outer hair cell stereociliary bundles|abnormal cochlear hair cell stereociliary bundle morphology|abnormal outer hair cell stereociliary bundle morphology|abnormal inner hair cell stereociliary bundle morphology|short inner hair cell stereocilia|abnormal cell differentiat"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

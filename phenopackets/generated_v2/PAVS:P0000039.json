@@ -1,0 +1,169 @@
+{
+  "id": "PAVS:P0000039",
+  "subject": {
+    "id": "PAVS:P0000039",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P39Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000039",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000039",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000039_DES",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "DES",
+                  "valueId": "NCBIGene:1674"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000373960.4:c.1076_1084del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000002.12:g.219421392_219421400del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000363071.3:p.Glu359_Ser361del"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "inframe_deletion"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00038"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.4033e-06"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.1000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "muscle_layer_of_esophagus:100|sigmoid_colon:98|esophagogastric_junction:96|skeletal_muscle_tissue:94|heart_left_ventricle:92|urinary_bladder:91|atrium_auricular_region:89|uterus:87|prostate_gland:85|transverse_colon:83|tibial_artery:81|fallopian_tube:79|ectocervix:77|coronary_artery:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of heart contraction|intermediate filament organization|nuclear envelope organization|skeletal muscle organ development|muscle contraction|cytoskeleton organization"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal heart morphology|enlarged heart|abnormal myocardial fiber morphology|abnormal interventricular septum morphology|progressive muscle weakness|muscle degeneration|myopathy|dystrophic muscle|abnormal skeletal muscle morphology|thin diaphragm muscle|abnormal smooth muscle morphology|abnormal cardiovascular system physiology|cardiac hypertrophy|irregular heartbeat|hemorrhage|premature death|disorganized myocardium|abnormal diaphragm morphology|thin myocardium|dilated heart left ventricle|dil"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

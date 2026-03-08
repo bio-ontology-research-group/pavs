@@ -1,0 +1,322 @@
+{
+  "id": "PAVS:D0001831",
+  "subject": {
+    "id": "PAVS:D0001831",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000053",
+        "label": "Macroorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Abnormality of the dentition"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000164",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Facial hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000297",
+        "label": "Micrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Macrotia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000400",
+        "label": "Short neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000470",
+        "label": "Psychosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000709",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001251",
+        "label": "Intellectual disability, mild"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001256",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Choreoathetosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001266",
+        "label": "Parkinsonism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001300",
+        "label": "Tremor"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001337",
+        "label": "Hyperreflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001347",
+        "label": "X-linked recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001419",
+        "label": "Pes cavus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001761",
+        "label": "Spastic gait"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002064",
+        "label": "Drooling"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002307",
+        "label": "EEG abnormality"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002353",
+        "label": "Shuffling gait"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002362",
+        "label": "Babinski sign"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003487",
+        "label": "Slowly progressive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003677",
+        "label": "Bruxism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003763",
+        "label": "Excessive salivation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003781",
+        "label": "HP:0003781"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0010235",
+        "label": "X-linked intellectual disability-psychosis-macroorchidism syndrome"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001831",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0010235",
+          "label": "X-linked intellectual disability-psychosis-macroorchidism syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001831",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001831_MECP2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MECP2",
+                  "valueId": "NCBIGene:4204"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellar_hemisphere:100|cerebellum:98|fallopian_tube:96|uterus:96|endocervix:92|ovary:92|tibial_artery:92|tibial_nerve:87|ectocervix:85|aorta:83|coronary_artery:81|pituitary_gland:81|esophagogastric_junction:77|muscle_layer_of_esophagus:77|prostate_gland:77|sigmoid_colon:77|thyroid_gland:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "protein localization to presynapse|epigenetic regulation of gene expression|gene expression|negative regulation of gene expression|associative learning|Notch signaling pathway|negative regulation of developmental process|regulation of multicellular organismal development|negative regulation of DNA-templated transcription|negative regulation of gene expression via chromosomal CpG island methylation|negative regulation of smooth muscle cell differentiation|neuron differentiation|negative regulatio"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "malocclusion|kyphosis|increased circulating LDL cholesterol level|focal hair loss|ruffled hair|abnormal jaw morphology|tremors|decreased brain size|abnormal cerebral cortex morphology|abnormal hippocampus morphology|abnormal dentate gyrus morphology|abnormal olfactory bulb morphology|abnormal cerebellum morphology|abnormal cerebellar granule layer morphology|abnormal brain development|sporadic seizures|skin lesions|abnormal body weight|increased body weight|obese|decreased body weight|weight los"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

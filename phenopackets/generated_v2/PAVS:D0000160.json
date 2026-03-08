@@ -1,0 +1,348 @@
+{
+  "id": "PAVS:D0000160",
+  "subject": {
+    "id": "PAVS:D0000160",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Hypertelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Anteverted nares"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000463",
+        "label": "Visual impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000505",
+        "label": "Optic atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000648",
+        "label": "Pallor"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000980",
+        "label": "obsolete Decreased subcutaneous fat"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001002",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Agenesis of corpus callosum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001274",
+        "label": "Cholestasis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001396",
+        "label": "Hepatic failure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001399",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Polycythemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001901",
+        "label": "Metabolic acidosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001942",
+        "label": "Frontal bossing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002007",
+        "label": "Cerebral atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002059",
+        "label": "Polymicrogyria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002126",
+        "label": "Status epilepticus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002133",
+        "label": "Abnormal speech pattern"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002167",
+        "label": "Intellectual disability, profound"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002187",
+        "label": "Choroid plexus cyst"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002190",
+        "label": "Lactic acidosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003128",
+        "label": "Aminoaciduria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003355",
+        "label": "Relative macrocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004482",
+        "label": "Depressed nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005280",
+        "label": "Cutaneous leiomyoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007620",
+        "label": "Open operculum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100954",
+        "label": "HP:0100954"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011730",
+        "label": "fumaric aciduria"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000160",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011730",
+          "label": "fumaric aciduria"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000160",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000160_FH",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "FH",
+                  "valueId": "NCBIGene:2271"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.6752e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.9900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|liver:98|skeletal_muscle_tissue:98|adrenal_gland:94|testis:92|atrium_auricular_region:92|heart_left_ventricle:89|muscle_layer_of_esophagus:87|sigmoid_colon:87|transverse_colon:87|uterus:81|cerebellar_hemisphere:79|esophagogastric_junction:77|tibial_nerve:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "tricarboxylic acid cycle|arginine metabolic process|positive regulation of cold-induced thermogenesis|urea cycle|malate metabolic process|fumarate metabolic process|DNA damage response|positive regulation of double-strand break repair via nonhomologous end joining|DNA repair"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "embryonic lethality between implantation and somite formation, complete penetrance"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

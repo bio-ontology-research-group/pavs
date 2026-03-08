@@ -1,0 +1,320 @@
+{
+  "id": "PAVS:D0000308",
+  "subject": {
+    "id": "PAVS:D0000308",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000141",
+        "label": "Amenorrhea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001162",
+        "label": "Postaxial hand polydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001180",
+        "label": "obsolete Hand oligodactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001374",
+        "label": "Congenital hip dislocation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001762",
+        "label": "Talipes equinovarus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001770",
+        "label": "Toe syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001802",
+        "label": "Absent toenail"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001849",
+        "label": "Foot oligodactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001964",
+        "label": "Aplasia/Hypoplasia of metatarsal bones"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002866",
+        "label": "Hypoplastic iliac wing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002980",
+        "label": "Femoral bowing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002984",
+        "label": "Hypoplasia of the radius"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002986",
+        "label": "Radial bowing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005613",
+        "label": "Aplasia/hypoplasia of the femur"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005914",
+        "label": "Aplasia/Hypoplasia involving the metacarpal bones"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006101",
+        "label": "Finger syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006143",
+        "label": "Abnormal finger flexion crease"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006262",
+        "label": "Aplasia/Hypoplasia of the 5th finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006443",
+        "label": "Patellar aplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006492",
+        "label": "Aplasia/Hypoplasia of the fibula"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006495",
+        "label": "Aplasia/Hypoplasia of the ulna"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008839",
+        "label": "Hypoplastic pelvis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009465",
+        "label": "Ulnar deviation of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009767",
+        "label": "Aplasia/Hypoplasia of the phalanges of the hand"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009232",
+        "label": "Fuhrmann syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000308",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009232",
+          "label": "Fuhrmann syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000308",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000308_WNT7A",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "WNT7A",
+                  "valueId": "NCBIGene:7476"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.0533e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.0700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebral_cortex:100|frontal_cortex:100|amygdala:96|anterior_cingulate_cortex:96|testis:96|lung:91|nucleus_accumbens:91|spleen:91|caudate_nucleus:91|hypothalamus:83|putamen:83|substantia_nigra:83|cervical_vertebra:77|hippocampus:77|cerebellum:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "secondary palate development|positive regulation of excitatory postsynaptic potential|positive regulation of epithelial cell proliferation involved in wound healing|presynapse assembly|embryonic hindlimb morphogenesis|postsynapse assembly|embryonic digit morphogenesis|system development|cell fate commitment|wound healing, spreading of epidermal cells|regulation of presynapse assembly|tissue development|embryonic axis specification|positive regulation of protein metabolic process|animal organ dev"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased presacral vertebrae number|increased rib number|abnormal forelimb morphology|abnormal hindlimb morphology|polydactyly|oligodactyly|abnormal uterus morphology|abnormal gait|limb grasping|infertility|male infertility|female infertility|abnormal limb morphology|abnormal digit morphology|no abnormal phenotype detected|small uterus|abnormal sperm motility|short fibula|abnormal uterus development|abnormal oviduct morphology|abnormal Mullerian duct morphology|scapular bone foramen|short humer"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

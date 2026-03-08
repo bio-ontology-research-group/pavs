@@ -1,0 +1,383 @@
+{
+  "id": "PAVS:D0000471",
+  "subject": {
+    "id": "PAVS:D0000471",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000078",
+        "label": "Abnormality of the genital system"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000113",
+        "label": "Polycystic kidney dysplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000256",
+        "label": "Macrocephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000260",
+        "label": "Wide anterior fontanel"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000348",
+        "label": "High forehead"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000377",
+        "label": "Abnormal pinna morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000506",
+        "label": "Telecanthus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000519",
+        "label": "Developmental cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000803",
+        "label": "Renal cortical cysts"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000806",
+        "label": "Jaundice"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000952",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Pachygyria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001302",
+        "label": "Muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001324",
+        "label": "Hypoglycemic coma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001325",
+        "label": "Hepatic steatosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001397",
+        "label": "Hypoglycemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001943",
+        "label": "Abnormal facial shape"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001999",
+        "label": "Vomiting"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002013",
+        "label": "Nausea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002018",
+        "label": "Pulmonary hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002089",
+        "label": "Respiratory distress"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002098",
+        "label": "Gliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002171",
+        "label": "Hepatomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002240",
+        "label": "Hepatic periportal necrosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002614",
+        "label": "Generalized aminoaciduria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002909",
+        "label": "Glycosuria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003076",
+        "label": "Glutaric aciduria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003150",
+        "label": "Ethylmalonic aciduria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003219",
+        "label": "obsolete Defective dehydrogenation of isovaleryl CoA and butyryl CoA"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003490",
+        "label": "Elevated circulating glutaric acid concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003530",
+        "label": "Electron transfer flavoprotein-ubiquinone oxidoreductase defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003647",
+        "label": "Neonatal death"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003811",
+        "label": "Depressed nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005280",
+        "label": "HP:0005280"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009282",
+        "label": "multiple acyl-CoA dehydrogenase deficiency"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000471",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009282",
+          "label": "multiple acyl-CoA dehydrogenase deficiency"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000471",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000471_ETFDH",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ETFDH",
+                  "valueId": "NCBIGene:2110"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "7.6935e-06"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1260e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "adrenal_gland:100|liver:100|skeletal_muscle_tissue:100|tibial_nerve:100|heart_left_ventricle:92|subcutaneous_adipose_tissue:92|lower_leg_skin:89|mammary_gland:89|ovary:89|suprapubic_skin:89|atrium_auricular_region:89|ectocervix:79|endocervix:79|esophagogastric_junction:79|esophagus_mucosa:79|fallopian_tube:79|ileum:79|muscle_layer_of_esophagus:79|omental_fat_pad:79|sigmoid_colon:79|thyroid_gland:79|transverse_colon:79|uterus:79|vagina:79|cerebellar_hemisphere:79|cerebellum:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "fatty acid beta-oxidation using acyl-CoA dehydrogenase|respiratory electron transport chain|response to oxidative stress|electron transport chain"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal lens morphology|preweaning lethality, complete penetrance"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

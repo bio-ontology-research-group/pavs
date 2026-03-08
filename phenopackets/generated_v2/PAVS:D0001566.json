@@ -1,0 +1,355 @@
+{
+  "id": "PAVS:D0001566",
+  "subject": {
+    "id": "PAVS:D0001566",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001762",
+        "label": "Talipes equinovarus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001772",
+        "label": "Talipes equinovalgus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002750",
+        "label": "Delayed skeletal maturation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003067",
+        "label": "Madelung deformity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004209",
+        "label": "Clinodactyly of the 5th finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005819",
+        "label": "Short middle phalanx of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006206",
+        "label": "Hypersegmentation of proximal phalanx of second finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009324",
+        "label": "Enlarged epiphysis of the middle phalanx of the 3rd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009331",
+        "label": "Triangular epiphysis of the middle phalanx of the 3rd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009349",
+        "label": "Enlarged epiphysis of the proximal phalanx of the 3rd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009356",
+        "label": "Triangular epiphysis of the proximal phalanx of the 3rd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009417",
+        "label": "Pseudoepiphyses of the 3rd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009436",
+        "label": "Triangular shaped middle phalanx of the 3rd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009456",
+        "label": "Triangular shaped proximal phalanx of the 3rd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009461",
+        "label": "Short 3rd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009463",
+        "label": "Ulnar deviation of the 3rd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009464",
+        "label": "Ulnar deviation of the 2nd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009495",
+        "label": "Pseudoepiphysis of the 2nd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009516",
+        "label": "Enlarged epiphysis of the middle phalanx of the 2nd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009523",
+        "label": "Triangular epiphysis of the middle phalanx of the 2nd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009527",
+        "label": "Enlarged epiphysis of the proximal phalanx of the 2nd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009534",
+        "label": "Triangular epiphysis of the proximal phalanx of the 2nd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009536",
+        "label": "Short 2nd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009575",
+        "label": "Triangular shaped middle phalanx of the 2nd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009587",
+        "label": "Triangular shaped proximal phalanx of the 2nd finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010034",
+        "label": "Short 1st metacarpal"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010259",
+        "label": "Cone-shaped epiphyses of the middle phalanges of the hand"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010442",
+        "label": "Polydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011929",
+        "label": "Hypersegmentation of proximal phalanx of third finger"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007221",
+        "label": "brachydactyly type C"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001566",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007221",
+          "label": "brachydactyly type C"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001566",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001566_GDF5",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GDF5",
+                  "valueId": "NCBIGene:8200"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.5782e-02"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.1000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|minor_salivary_gland:98|lung:96|sigmoid_colon:96|testis:96|prostate_gland:91|pituitary_gland:89|endocervix:87|mammary_gland:87|omental_fat_pad:87|aorta:81|subcutaneous_adipose_tissue:81|thyroid_gland:77|uterus:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of neuron apoptotic process|chondroblast differentiation|cartilage development|ossification involved in bone remodeling|transforming growth factor beta receptor signaling pathway|negative regulation of epithelial cell proliferation|cell differentiation|BMP signaling pathway|positive regulation of SMAD protein signal transduction|regulation of transmembrane receptor protein serine/threonine kinase signaling pathway|positive regulation of chondrocyte differentiation|cell surfac"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "delayed bone ossification|increased bone mineral density|abnormal long bone epiphysis morphology|abnormal cartilage morphology|abnormal cartilage development|decreased chondrocyte number|short limbs|abnormal forelimb morphology|abnormal carpal bone morphology|abnormal hindlimb morphology|abnormal tibia morphology|abnormal femur morphology|abnormal autopod morphology|decreased body weight|decreased locomotor activity|abnormal gait|decreased exploration in new environment|limb grasping|reduced mal"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

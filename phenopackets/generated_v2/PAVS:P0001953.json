@@ -1,0 +1,172 @@
+{
+  "id": "PAVS:P0001953",
+  "subject": {
+    "id": "PAVS:P0001953",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P15Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001953",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001953",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001953_RUNX1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "RUNX1",
+                  "valueId": "NCBIGene:861"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000651798.1:n.661+22530C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000021.9:g.34859476G>A"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr21",
+                  "pos": 34859476,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODIFIER"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "6.858e-07"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.9231e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.3300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "minor_salivary_gland:100|skin:98|lung:96|mammary_gland:96|tibial_nerve:92|urinary_bladder:91|vagina:91|omental_fat_pad:87|prostate_gland:87|spleen:87|subcutaneous_adipose_tissue:87|coronary_artery:79|lower_leg_skin:79|suprapubic_skin:75|blood:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of granulocyte differentiation|positive regulation of developmental process|positive regulation of angiogenesis|regulation of connective tissue replacement|peripheral nervous system neuron development|myeloid cell differentiation|regulation of DNA-templated transcription|positive regulation of interleukin-2 production|positive regulation of CD8-positive, alpha-beta T cell differentiation|positive regulation of extracellular matrix organization|regulation of cardiac muscle cel"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased hematocrit|increased monocyte cell number|decreased leukocyte cell number|abnormal megakaryocyte differentiation|abnormal erythropoiesis|abnormal angiogenesis|increased granulocyte number|pale liver|enlarged spleen|small spleen|abnormal Peyer's patch morphology|small thymus|decreased thymocyte number|decreased body weight|decreased body size|anemia|abnormal myelopoiesis|impaired myelopoiesis|impaired hematopoiesis|internal hemorrhage|postnatal growth retardation|skin edema|thymus hypop"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "id": "PAVS:P0000865",
+  "subject": {
+    "id": "PAVS:P0000865",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P30Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001324",
+        "label": "Muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0025406",
+        "label": "Asthenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000865",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000865",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000865_SLC25A4",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SLC25A4",
+                  "valueId": "NCBIGene:291"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000281456.11:c.350T>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000004.12:g.185145002T>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000281456.5:p.Leu117Arg"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr4",
+                  "pos": 185145002,
+                  "ref": "T",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.991)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00153"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.1728e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.8700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "heart_left_ventricle:100|atrium_auricular_region:98|skeletal_muscle_tissue:96|cerebellar_hemisphere:94|aorta:92|muscle_layer_of_esophagus:91|sigmoid_colon:89|cerebellum:89|esophagogastric_junction:85|tibial_artery:83|coronary_artery:81|frontal_cortex:79|stomach:77|pituitary_gland:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "proton transmembrane transport|ADP transport|mitochondrial ATP transmembrane transport|generation of precursor metabolites and energy|mitochondrial ADP transmembrane transport|adaptive thermogenesis|regulation of mitochondrial membrane permeability|positive regulation of mitophagy|transmembrane transport|adenine transport|negative regulation of necroptotic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased circulating calcium level|myopathy|cardiac hypertrophy|increased circulating insulin level|no abnormal phenotype detected|abnormal exercise endurance|increased heart weight|increased circulating alkaline phosphatase level|decreased circulating chloride level|fusion of vertebral arches|improved glucose tolerance|increased blood urea nitrogen level|abnormal blood homeostasis|abnormal aerobic respiration|increased circulating lactate level|increased circulating alanine level"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

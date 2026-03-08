@@ -1,0 +1,180 @@
+{
+  "id": "PAVS:D0000925",
+  "subject": {
+    "id": "PAVS:D0000925",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001279",
+        "label": "Syncope"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001645",
+        "label": "Sudden cardiac death"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001657",
+        "label": "Prolonged QT interval"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001664",
+        "label": "Torsade de pointes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008527",
+        "label": "Congenital sensorineural hearing impairment"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0024540",
+        "label": "Jervell and Lange-Nielsen syndrome 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000925",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0024540",
+          "label": "Jervell and Lange-Nielsen syndrome 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000925",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000925_KCNQ1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "KCNQ1",
+                  "valueId": "NCBIGene:3784"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0954e-12"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.1500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "adrenal_gland:100|stomach:98|thyroid_gland:96|pancreas:94|renal_medulla:92|ileum:91|minor_salivary_gland:89|cortex_of_kidney:87|lung:85|atrium_auricular_region:85|transverse_colon:81|blood:79|heart_left_ventricle:77|spleen:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heart development|renal sodium ion absorption|monoatomic ion transport|membrane repolarization during atrial cardiac muscle cell action potential|intracellular chloride ion homeostasis|iodide transport|regulation of membrane repolarization|auditory receptor cell development|erythrocyte differentiation|membrane repolarization during action potential|atrial cardiac muscle cell action potential|regulation of heart rate by cardiac conduction|negative regulation of delayed rectifier potassium channel"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal inner ear morphology|abnormal cochlea morphology|abnormal inner ear vestibule morphology|abnormal membranous labyrinth morphology|organ of Corti degeneration|abnormal stria vascularis morphology|tremors|decreased body weight|circling|bidirectional circling|hyperactivity|impaired coordination|abnormal gait|stereotypic behavior|head bobbing|spinning|impaired swimming|impaired righting response|impaired balance|cardiac hypertrophy|deafness|abnormal motor capabilities/coordination/movement|"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

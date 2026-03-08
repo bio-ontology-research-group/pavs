@@ -1,0 +1,165 @@
+{
+  "id": "PAVS:P0000777",
+  "subject": {
+    "id": "PAVS:P0000777",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P58M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000777",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000777",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000777_STAT3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "STAT3",
+                  "valueId": "NCBIGene:6774"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000264657.10:c.1454del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000017.11:g.42324973del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000264657.4:p.Asn485ThrfsTer6"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "lung:100|aorta:98|tibial_artery:98|omental_fat_pad:94|fallopian_tube:92|tibial_nerve:91|subcutaneous_adipose_tissue:89|coronary_artery:87|mammary_gland:87|uterus:87|ovary:81|thyroid_gland:79|endocervix:77|ectocervix:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "radial glial cell differentiation|response to peptide hormone|regulation of DNA-templated transcription|response to ethanol|positive regulation of interleukin-8 production|interleukin-6-mediated signaling pathway|cytokine-mediated signaling pathway|signal transduction|positive regulation of ATP biosynthetic process|eating behavior|endoplasmic reticulum unfolded protein response|T-helper 17 type immune response|positive regulation of tumor necrosis factor production|positive regulation of interle"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased thymocyte number|decreased body weight|decreased body size|absent mesoderm|failure to gastrulate|decreased embryo size|postnatal growth retardation|no abnormal phenotype detected|abnormal macrophage physiology|decreased urine protein level|fetal growth retardation|abnormal circulating insulin-like growth factor I level|decreased growth hormone level|increased susceptibility to endotoxin shock|increased thymocyte apoptosis|increased susceptibility to induced morbidity/mortality|postnata"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

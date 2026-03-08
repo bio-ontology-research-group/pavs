@@ -1,0 +1,214 @@
+{
+  "id": "PAVS:M0000327",
+  "subject": {
+    "id": "PAVS:M0000327",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P1Y6M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001363",
+        "label": "Craniosynostosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:33937142",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/33937142/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:1010169",
+        "label": "infantile hypophosphatasia"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000327",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:1010169",
+          "label": "infantile hypophosphatasia"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000327",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000327_ALPL",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ALPL",
+                  "valueId": "NCBIGene:249"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000374840.8:c.293C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000001.11:g.21561208C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000363973.3:p.Ser98Phe"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr1",
+                  "pos": 21561208,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:3224570"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.981)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00245"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "3224570"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Uncertain significance"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.7059e-11"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.8700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "blood:100|spleen:98|lung:96|adrenal_gland:94|liver:92|omental_fat_pad:91|mammary_gland:89|cortex_of_kidney:87|subcutaneous_adipose_tissue:85|coronary_artery:83|thyroid_gland:81|cerebral_cortex:79|frontal_cortex:79|pituitary_gland:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "response to lipopolysaccharide|calcium ion homeostasis|cementum mineralization|phosphate ion homeostasis|response to insulin|osteoblast differentiation|response to vitamin B6|positive regulation of cold-induced thermogenesis|response to sodium phosphate|response to vitamin D|inhibition of non-skeletal tissue mineralization|pyridoxal phosphate metabolic process|response to glucocorticoid|futile creatine cycle|response to macrophage colony-stimulating factor|skeletal system development|biomineral "
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "fragile skeleton|decreased bone mineral density|abnormal parietal bone morphology|abnormal tooth development|abnormal long bone metaphysis morphology|decreased leukocyte cell number|abnormal small intestine morphology|abnormal spleen morphology|small spleen|weakness|abnormal spinal nerve morphology|lung hemorrhage|decreased body size|impaired coordination|internal hemorrhage|abnormal digestion|intracranial hemorrhage|apnea|seizures|abnormal tooth morphology|abnormal muscle morphology|abnormal th"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

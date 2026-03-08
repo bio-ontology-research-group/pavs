@@ -1,0 +1,164 @@
+{
+  "id": "PAVS:M0001022",
+  "subject": {
+    "id": "PAVS:M0001022",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001331",
+        "label": "Absent septum pellucidum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001302",
+        "label": "Pachygyria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001338",
+        "label": "Partial agenesis of the corpus callosum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001022",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001022",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001022_STIL",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "STIL",
+                  "valueId": "NCBIGene:6491"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "5.0023e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.7500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|skin:98|esophagus_mucosa:96|ileum:96|minor_salivary_gland:96|spleen:96|transverse_colon:96|lower_leg_skin:87|prostate_gland:87|suprapubic_skin:87|tibial_nerve:87|vagina:87|coronary_artery:77|ectocervix:77|endocervix:77|fallopian_tube:77|lung:77|mammary_gland:77|omental_fat_pad:77|ovary:77|pituitary_gland:77|subcutaneous_adipose_tissue:77|thyroid_gland:77|uterus:77|cerebellar_hemisphere:77|cerebellum:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heart looping|mitotic spindle organization|regulation of mitotic spindle organization|in utero embryonic development|multicellular organism growth|smoothened signaling pathway|centrosome duplication|negative regulation of apoptotic process|embryonic axis specification|determination of left/right symmetry|positive regulation of G1/S transition of mitotic cell cycle|notochord development|forebrain development|neural tube closure|positive regulation of spindle assembly|positive regulation of centri"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "absent floor plate|abnormal apoptosis|abnormal left-right axis patterning|abnormal neural tube morphology|delayed neural tube closure|embryonic growth retardation|notochord degeneration|holoprosencephaly|embryonic lethality during organogenesis, complete penetrance"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

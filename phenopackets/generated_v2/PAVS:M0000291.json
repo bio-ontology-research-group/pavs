@@ -1,0 +1,138 @@
+{
+  "id": "PAVS:M0000291",
+  "subject": {
+    "id": "PAVS:M0000291",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:27629047",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/27629047/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000291",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000291",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000291_ARSB",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ARSB",
+                  "valueId": "NCBIGene:411"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.1124e-13"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0320e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "muscle_layer_of_esophagus:100|skin:98|aorta:96|coronary_artery:94|esophagogastric_junction:92|uterus:92|tibial_artery:89|ectocervix:87|endocervix:87|lung:87|urinary_bladder:87|fallopian_tube:79|sigmoid_colon:79|omental_fat_pad:75|prostate_gland:75|spleen:75|subcutaneous_adipose_tissue:75|thyroid_gland:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "colon epithelial cell migration|response to methylmercury|response to pH|autophagy|positive regulation of neuron projection development|regulation of epithelial cell migration|response to nutrient|chondroitin sulfate proteoglycan catabolic process|response to estrogen|lysosome organization|lysosomal transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased bone mineral density|short maxilla|abnormal rib morphology|abnormal cartilage morphology|abnormal heart valve morphology|broad head|abnormal cell morphology|increased cranium width|short snout|short limbs|thick tail|peripheral nervous system degeneration|decreased body weight|decreased body size|ocular hypertelorism|abnormal cornea morphology|abnormal gait|reduced fertility|decreased litter size|abnormal digit morphology|abnormal blood cell morphology/development|short tibia|decreased "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

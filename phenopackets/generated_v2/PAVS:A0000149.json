@@ -1,0 +1,226 @@
+{
+  "id": "PAVS:A0000149",
+  "subject": {
+    "id": "PAVS:A0000149",
+    "sex": "MALE",
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "familyHistory",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0032316",
+            "label": "Positive family history"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001596",
+        "label": "Alopecia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001006",
+        "label": "obsolete Hypotrichosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008070",
+        "label": "Sparse hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-variants",
+        "description": "Source dataset: ahmed-variants"
+      },
+      {
+        "id": "PMID:28454995",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013975",
+        "label": "ectodermal dysplasia 7, hair/nail type"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:A0000149",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013975",
+          "label": "ectodermal dysplasia 7, hair/nail type"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:A0000149",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:A0000149_KRT74",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "KRT74",
+                  "valueId": "NCBIGene:121391"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000305620.3:c.1403G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000012.12:g.52567156G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000307240.2:p.Ser468Asn"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr12",
+                  "pos": 52567156,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "tolerated(0.28)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.001)"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.3537e-13"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.2780e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "lower_leg_skin:100|testis:100|suprapubic_skin:96|cervical_vertebra:94|esophagus_mucosa:92|vagina:91|minor_salivary_gland:89|prostate_gland:89|cerebellar_hemisphere:89|cerebellum:89|adrenal_gland:81|cerebral_cortex:81|coronary_artery:81|cortex_of_kidney:81|ectocervix:81|endocervix:81|esophagogastric_junction:81|fallopian_tube:81|frontal_cortex:81|amygdala:81|heart_left_ventricle:81|hippocampus:81|hypothalamus:81|ileum:81|liver:81|lung:81|mammary_gland:81|muscle_layer_of_esophagus:81|anterior_cingulate_cortex:81|nucleus_accumbens:81|omental_fat_pad:81|ovary:81|pancreas:81|pituitary_gland:81|putamen:81|renal_medulla:81|sigmoid_colon:81|skeletal_muscle_tissue:81|aorta:81|skin:81|spleen:81|stomach:81|subcutaneous_adipose_tissue:81|substantia_nigra:81|thyroid_gland:81|tibial_artery:81|tibial_nerve:81|atrium_auricular_region:81|transverse_colon:81|urinary_bladder:81|uterus:81|blood:81|caudate_nucleus:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "keratinization|intermediate filament organization|intermediate filament cytoskeleton organization"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

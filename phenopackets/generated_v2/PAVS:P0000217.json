@@ -1,0 +1,260 @@
+{
+  "id": "PAVS:P0000217",
+  "subject": {
+    "id": "PAVS:P0000217",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P38M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001290",
+        "label": "Generalized hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002194",
+        "label": "Delayed gross motor development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000618",
+        "label": "Blindness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002134",
+        "label": "Abnormal basal ganglia morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0410014",
+        "label": "Abnormal ganglion morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000217",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000217",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000217_KIF9",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "KIF9",
+                  "valueId": "NCBIGene:64147"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000684063.1:c.859C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000003.12:g.47265787C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000507186.1:p.Arg287Trp"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr3",
+                  "pos": 47265787,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(1)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00225"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "1.437e-05"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.5621e-14"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.7300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|thyroid_gland:98|pituitary_gland:96|renal_medulla:96|fallopian_tube:92|cortex_of_kidney:91|endocervix:91|frontal_cortex:91|hypothalamus:91|lung:91|uterus:91|cerebral_cortex:79|cervical_vertebra:79|coronary_artery:79|ectocervix:79|esophagogastric_junction:79|amygdala:79|hippocampus:79|ileum:79|lower_leg_skin:79|mammary_gland:79|minor_salivary_gland:79|muscle_layer_of_esophagus:79|anterior_cingulate_cortex:79|nucleus_accumbens:79|omental_fat_pad:79|ovary:79|prostate_gland:79|sigmoid_colon:79|aorta:79|skin:79|spleen:79|stomach:79|subcutaneous_adipose_tissue:79|substantia_nigra:79|suprapubic_skin:79|tibial_artery:79|tibial_nerve:79|atrium_auricular_region:79|transverse_colon:79|urinary_bladder:79|vagina:79|caudate_nucleus:79|cerebellar_hemisphere:79|cerebellum:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "organelle disassembly|regulation of flagellated sperm motility|microtubule-based movement|regulation of podosome assembly|extracellular matrix disassembly"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal liver morphology|small liver|small spleen|reduced male fertility|male infertility|abnormal skin morphology|asthenozoospermia|decreased fertilization frequency|decreased sperm progressive motility|impaired sperm penetration of zona pellucida"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

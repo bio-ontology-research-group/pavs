@@ -1,0 +1,194 @@
+{
+  "id": "PAVS:D0000579",
+  "subject": {
+    "id": "PAVS:D0000579",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001425",
+        "label": "obsolete Heterogeneous"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002654",
+        "label": "Multiple epiphyseal dysplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002758",
+        "label": "Osteoarthritis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002815",
+        "label": "Abnormality of the knee"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002829",
+        "label": "Arthralgia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003365",
+        "label": "Arthralgia of the hip"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005106",
+        "label": "Abnormality of the vertebral endplates"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013591",
+        "label": "epiphyseal dysplasia, multiple, 6"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000579",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013591",
+          "label": "epiphyseal dysplasia, multiple, 6"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000579",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000579_COL9A1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "COL9A1",
+                  "valueId": "NCBIGene:1297"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.4083e-24"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.8900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "hypothalamus:100|substantia_nigra:98|hippocampus:96|testis:96|cerebral_cortex:92|cervical_vertebra:92|amygdala:92|anterior_cingulate_cortex:92|nucleus_accumbens:92|pituitary_gland:92|putamen:92|caudate_nucleus:92|frontal_cortex:77|prostate_gland:77|cerebellum:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "animal organ morphogenesis|extracellular matrix organization"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal tibia morphology|abnormal femur morphology|absent cartilage|abnormal bone healing|abnormal tectorial membrane morphology|osteoarthritis|enlarged tectorial membrane|abnormal patella morphology|impaired hearing|abnormal articular cartilage morphology|increased or absent threshold for auditory brainstem response|abnormal tectorial membrane striated-sheet matrix morphology|increased chondrocyte proliferation|abnormal knee joint morphology"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

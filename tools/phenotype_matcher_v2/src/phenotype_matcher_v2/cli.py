@@ -162,8 +162,10 @@ def cmd_match(args: argparse.Namespace) -> None:
 
     json_results = []
 
+    match_fn = matcher.match_narrative if getattr(args, "narrative", False) else matcher.match
+
     for i, text in enumerate(texts):
-        out = matcher.match(text)
+        out = match_fn(text)
 
         # Apply output filters
         if args.present_only:
@@ -251,6 +253,7 @@ def cmd_batch(args: argparse.Namespace) -> None:
     writer.writeheader()
 
     total = len(rows)
+    match_fn = matcher.match_narrative if getattr(args, "narrative", False) else matcher.match
 
     if workers > 1:
         # Parallel processing: submit all non-empty rows to the thread pool,
@@ -264,7 +267,7 @@ def cmd_batch(args: argparse.Namespace) -> None:
                 return idx, None
             if args.debug:
                 print(f"[submitting {idx + 1}/{total}] {text[:70]}", file=sys.stderr)
-            return idx, matcher.match(text)
+            return idx, match_fn(text)
 
         with ThreadPoolExecutor(max_workers=workers) as pool:
             future_to_idx = {pool.submit(_match_row, i): i for i in range(total)}
@@ -293,7 +296,7 @@ def cmd_batch(args: argparse.Namespace) -> None:
             if args.debug or (i % 10 == 0):
                 print(f"[{i}/{total}] {text[:70]}", file=sys.stderr)
 
-            result = matcher.match(text)
+            result = match_fn(text)
             _apply_result(row, result)
             writer.writerow(row)
 
@@ -507,6 +510,8 @@ def main() -> None:
                          help="Suppress disease matches from output")
     p_match.add_argument("--diseases-only", action="store_true",
                          help="Suppress phenotype matches from output")
+    p_match.add_argument("--narrative", action="store_true",
+                         help="Use NER-based narrative mode for long clinical text")
     _add_common_args(p_match)
     p_match.set_defaults(func=cmd_match)
 
@@ -535,6 +540,8 @@ def main() -> None:
                          help="Input file delimiter  [default: tab]")
     p_batch.add_argument("--workers", type=int, default=1, metavar="N",
                          help="Parallel worker threads for LLM I/O  [default: 1]")
+    p_batch.add_argument("--narrative", action="store_true",
+                         help="Use NER-based narrative mode for long clinical text")
     _add_common_args(p_batch)
     p_batch.set_defaults(func=cmd_batch)
 

@@ -1,0 +1,194 @@
+{
+  "id": "PAVS:D0000273",
+  "subject": {
+    "id": "PAVS:D0000273",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001319",
+        "label": "Neonatal hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001396",
+        "label": "Cholestasis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001511",
+        "label": "Intrauterine growth retardation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003281",
+        "label": "Increased circulating ferritin concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003355",
+        "label": "Aminoaciduria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003452",
+        "label": "Increased circulating iron concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003542",
+        "label": "Increased circulating pyruvate concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004925",
+        "label": "Chronic lactic acidosis"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011308",
+        "label": "GRACILE syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000273",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011308",
+          "label": "GRACILE syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000273",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000273_BCS1L",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "BCS1L",
+                  "valueId": "NCBIGene:617"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.6741e-10"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.5800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "endocervix:100|ovary:98|prostate_gland:98|ectocervix:94|thyroid_gland:94|uterus:94|spleen:89|tibial_nerve:87|skin:85|fallopian_tube:83|vagina:81|pituitary_gland:79|urinary_bladder:79|esophagus_mucosa:75|ileum:75|mammary_gland:75|suprapubic_skin:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "mitochondrial respiratory chain complex IV assembly|mitochondrial respiratory chain complex I assembly|mitochondrial respiratory chain complex III assembly|mitochondrion organization|protein insertion into mitochondrial inner membrane from matrix"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased neutrophil cell number|abnormal liver morphology|small liver|abnormal hepatocyte morphology|abnormal liver physiology|decreased body weight|weight loss|decreased locomotor activity|hunched posture|hepatic necrosis|failure of primitive streak formation|failure to gastrulate|decreased embryo size|liver inflammation|premature death|abnormal macrophage morphology|increased circulating alanine transaminase level|increased circulating alkaline phosphatase level|liver fibrosis|abnormal proxim"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

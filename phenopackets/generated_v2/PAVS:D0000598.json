@@ -1,0 +1,271 @@
+{
+  "id": "PAVS:D0000598",
+  "subject": {
+    "id": "PAVS:D0000598",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000926",
+        "label": "Platyspondyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002515",
+        "label": "Waddling gait"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002812",
+        "label": "Coxa vara"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002970",
+        "label": "Genu varum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002980",
+        "label": "Femoral bowing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003301",
+        "label": "Irregular vertebral endplates"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003371",
+        "label": "Enlargement of the proximal femoral epiphysis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003502",
+        "label": "Mild short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005819",
+        "label": "Short middle phalanx of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005871",
+        "label": "Metaphyseal chondrodysplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006028",
+        "label": "Metaphyseal cupping of metacarpals"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006208",
+        "label": "Metaphyseal cupping of proximal phalanges"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006414",
+        "label": "Distal tibial bowing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006431",
+        "label": "Abnormal proximal femoral metaphysis morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006634",
+        "label": "Osteosclerosis of ribs"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008833",
+        "label": "Irregular acetabular roof"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009844",
+        "label": "Broad middle phalanx of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009882",
+        "label": "Short distal phalanx of finger"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007983",
+        "label": "Schmid metaphyseal chondrodysplasia"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000598",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007983",
+          "label": "Schmid metaphyseal chondrodysplasia"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000598",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000598_COL10A1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "COL10A1",
+                  "valueId": "NCBIGene:1300"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.6450e-02"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.5500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|minor_salivary_gland:98|coronary_artery:96|ovary:94|tibial_artery:94|spleen:91|cerebral_cortex:89|frontal_cortex:89|lung:89|aorta:89|pituitary_gland:81|thyroid_gland:81|lower_leg_skin:77|suprapubic_skin:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "skeletal system development|extracellular matrix organization"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal tooth development|abnormal trabecular bone morphology|kyphosis|lordosis|abnormal cartilage morphology|abnormal cell morphology|abnormal femur morphology|abnormal spleen morphology|small spleen|spleen hypoplasia|small thymus|decreased thymocyte number|decreased body weight|postnatal growth retardation|thymus hypoplasia|hydrocephaly|premature death|abnormal bone marrow morphology|abnormal proerythroblast morphology|disproportionate dwarf|abnormal long bone epiphyseal plate morphology|shor"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "id": "PAVS:D0000567",
+  "subject": {
+    "id": "PAVS:D0000567",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011026",
+        "label": "autosomal recessive congenital ichthyosis 4A"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000567",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011026",
+          "label": "autosomal recessive congenital ichthyosis 4A"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000567",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000567_PNPLA1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PNPLA1",
+                  "valueId": "NCBIGene:285848"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.6659e-08"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.4500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "lower_leg_skin:100|suprapubic_skin:98|blood:96|stomach:94|testis:94|spleen:91|cortex_of_kidney:89|lung:87|ileum:85|aorta:83|tibial_nerve:83|vagina:83|cerebellum:83|adrenal_gland:75|cerebral_cortex:75|coronary_artery:75|ectocervix:75|endocervix:75|fallopian_tube:75|frontal_cortex:75|pituitary_gland:75|renal_medulla:75|tibial_artery:75|transverse_colon:75|cerebellar_hemisphere:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "lipid homeostasis|lipid metabolic process|triglyceride catabolic process|ceramide biosynthetic process|omega-hydroxyceramide biosynthetic process|lipid catabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "reddish skin|shiny skin|tight skin|wrinkled skin|abnormal epidermal layer morphology|epidermal hyperplasia|abnormal epidermis stratum corneum morphology|hyperkeratosis|increased body length|decreased locomotor activity|decreased embryo size|acanthosis|abnormal skin morphology|abnormal motor capabilities/coordination/movement|impaired skin barrier function|eclabion|dry skin|abnormal skin development|increased cholesterol level|decreased fatty acids level|increased triglyceride level|decreased emb"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "id": "PAVS:D0000401",
+  "subject": {
+    "id": "PAVS:D0000401",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000280",
+        "label": "Coarse facial features"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000470",
+        "label": "Short neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000894",
+        "label": "Short clavicles"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000943",
+        "label": "Dysostosis multiplex"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001387",
+        "label": "Joint stiffness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001433",
+        "label": "Hepatosplenomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001653",
+        "label": "Mitral regurgitation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001659",
+        "label": "Aortic regurgitation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001706",
+        "label": "Endocardial fibroelastosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002205",
+        "label": "Recurrent respiratory infections"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002680",
+        "label": "J-shaped sella turcica"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002808",
+        "label": "Kyphosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002869",
+        "label": "Flared iliac wing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003311",
+        "label": "Hypoplasia of the odontoid process"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003320",
+        "label": "C1-C2 subluxation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003541",
+        "label": "Urinary glycosaminoglycan excretion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004490",
+        "label": "Calvarial hyperostosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004586",
+        "label": "Biconcave vertebral bodies"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005019",
+        "label": "Diaphyseal undertubulation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005280",
+        "label": "Depressed nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007957",
+        "label": "Corneal opacity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011400",
+        "label": "Abnormal CNS myelination"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100790",
+        "label": "Hernia"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011758",
+        "label": "Hurler syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000401",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011758",
+          "label": "Hurler syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000401",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000401_IDUA",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "IDUA",
+                  "valueId": "NCBIGene:3425"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.8166e-24"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.3440e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellum:100|cerebellar_hemisphere:98|endocervix:96|thyroid_gland:94|ovary:92|prostate_gland:92|pituitary_gland:89|uterus:89|fallopian_tube:85|ectocervix:83|tibial_nerve:83|spleen:79|mammary_gland:77|lung:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "glycosaminoglycan catabolic process|dermatan sulfate proteoglycan catabolic process|heparan sulfate proteoglycan catabolic process|heparin proteoglycan catabolic process|carbohydrate metabolic process|disaccharide metabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal inner ear morphology|organ of Corti degeneration|increased bone mineral density|abnormal microglial cell morphology|abnormal vertebrae morphology|abnormal rib morphology|kyphosis|abnormal long bone hypertrophic chondrocyte zone|abnormal chondrocyte morphology|enlarged heart|abnormal myocardial fiber morphology|abnormal mitral valve morphology|sparse hair|abnormal craniofacial morphology|increased cranium width|abnormal snout morphology|short snout|abnormal tibia morphology|pale liver|in"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

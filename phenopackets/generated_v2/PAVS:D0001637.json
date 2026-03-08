@@ -1,0 +1,194 @@
+{
+  "id": "PAVS:D0001637",
+  "subject": {
+    "id": "PAVS:D0001637",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000482",
+        "label": "Microcornea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000611",
+        "label": "obsolete Choroid coloboma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000612",
+        "label": "Iris coloboma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001595",
+        "label": "Abnormal hair morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007509",
+        "label": "Patchy hypo- and hyperpigmentation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008625",
+        "label": "Severe sensorineural hearing impairment"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011133",
+        "label": "deaf blind hypopigmentation syndrome, Yemenite type"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001637",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011133",
+          "label": "deaf blind hypopigmentation syndrome, Yemenite type"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001637",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001637_SOX10",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SOX10",
+                  "valueId": "NCBIGene:6663"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9999e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.4800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "tibial_nerve:100|cervical_vertebra:98|hippocampus:96|minor_salivary_gland:96|substantia_nigra:92|amygdala:91|hypothalamus:89|putamen:89|caudate_nucleus:85|sigmoid_colon:83|esophagogastric_junction:81|lower_leg_skin:79|muscle_layer_of_esophagus:79|nucleus_accumbens:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "developmental process|negative regulation of Schwann cell proliferation|stem cell differentiation|regulation of DNA-templated transcription|neural crest cell migration|negative regulation of apoptotic process|positive regulation of gene expression|positive regulation of gliogenesis|positive regulation of DNA-templated transcription|regulation of transcription by RNA polymerase II|positive regulation of transcription by RNA polymerase II|peripheral nervous system development|anatomical structure "
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "head blaze|diluted coat color|belly spot|absent hair follicle melanin granules|tremors|abnormal olfactory bulb morphology|abnormal myelination|demyelination|motor neuron degeneration|sporadic seizures|abnormal dorsal root ganglion morphology|small dorsal root ganglion|abnormal sensory neuron morphology|abnormal sympathetic ganglion morphology|abnormal superior cervical ganglion morphology|abnormal sympathetic neuron morphology|abnormal enteric nervous system morphology|abnormal enteric ganglia m"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

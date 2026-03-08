@@ -1,0 +1,453 @@
+{
+  "id": "PAVS:D0001311",
+  "subject": {
+    "id": "PAVS:D0001311",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000003",
+        "label": "Multicystic kidney dysplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000047",
+        "label": "Hypospadias"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000048",
+        "label": "Bifid scrotum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000076",
+        "label": "Vesicoureteral reflux"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000083",
+        "label": "Renal insufficiency"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000089",
+        "label": "Renal hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000110",
+        "label": "Renal dysplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000136",
+        "label": "Bifid uterus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000143",
+        "label": "Rectovaginal fistula"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000384",
+        "label": "Preauricular skin tag"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000400",
+        "label": "Macrotia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000407",
+        "label": "Sensorineural hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000567",
+        "label": "Chorioretinal coloboma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000821",
+        "label": "Hypothyroidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001177",
+        "label": "Preaxial hand polydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001199",
+        "label": "Triphalangeal thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001440",
+        "label": "Metatarsal synostosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001537",
+        "label": "Umbilical hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001629",
+        "label": "Ventricular septal defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001636",
+        "label": "Tetralogy of Fallot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001864",
+        "label": "Clinodactyly of the 5th toe"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002020",
+        "label": "Gastroesophageal reflux"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002023",
+        "label": "Anal atresia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002025",
+        "label": "Anal stenosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002247",
+        "label": "Duodenal atresia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004453",
+        "label": "Overfolding of the superior helices"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004467",
+        "label": "Preauricular pit"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004691",
+        "label": "2-3 toe syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004792",
+        "label": "Rectoperineal fistula"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006097",
+        "label": "3-4 finger osseus syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006179",
+        "label": "Pseudoepiphyses of second metacarpal"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008551",
+        "label": "Microtia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009779",
+        "label": "3-4 toe syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009921",
+        "label": "Duane anomaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009944",
+        "label": "Partial duplication of thumb phalanx"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010331",
+        "label": "Aplasia/Hypoplasia of the 3rd toe"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010481",
+        "label": "Urethral valve"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010709",
+        "label": "2-4 finger cutaneous syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010743",
+        "label": "Short metatarsal"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011304",
+        "label": "Broad thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100015",
+        "label": "Stahl ear"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0054581",
+        "label": "Townes-Brocks syndrome 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001311",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0054581",
+          "label": "Townes-Brocks syndrome 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001311",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001311_SALL1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SALL1",
+                  "valueId": "NCBIGene:6299"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.2800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "renal_medulla:100|thyroid_gland:98|endocervix:96|cervical_vertebra:94|uterus:92|ectocervix:91|fallopian_tube:89|liver:89|cortex_of_kidney:85|pituitary_gland:83|substantia_nigra:83|vagina:83|hippocampus:77|caudate_nucleus:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "branching involved in ureteric bud morphogenesis|heart development|olfactory bulb mitral cell layer development|ventricular septum development|embryonic digestive tract development|embryonic digit morphogenesis|olfactory nerve development|regulation of signal transduction|pituitary gland development|limb development|gonad development|positive regulation of DNA-templated transcription|positive regulation of transcription by RNA polymerase II|regulation of transcription by RNA polymerase II|induct"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "absent kidney|abnormal kidney cortex morphology|abnormal kidney development|abnormal carpal bone morphology|absent carpal bone|syndactyly|oligodactyly|abnormal olfactory bulb morphology|exencephaly|abnormal suckling behavior|deafness|premature death|abnormal kidney morphology|no abnormal phenotype detected|dilated renal tubule|small kidney|anal atresia|intestinal obstruction|renal hypoplasia|single kidney|kidney cyst|absent ureter|renal tubular necrosis|metacarpal bone hypoplasia|fused metacarpa"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

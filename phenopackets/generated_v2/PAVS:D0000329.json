@@ -1,0 +1,166 @@
+{
+  "id": "PAVS:D0000329",
+  "subject": {
+    "id": "PAVS:D0000329",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000668",
+        "label": "Hypodontia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006335",
+        "label": "Persistence of primary teeth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006352",
+        "label": "Failure of eruption of permanent teeth"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007434",
+        "label": "primary failure of tooth eruption"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000329",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007434",
+          "label": "primary failure of tooth eruption"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000329",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000329_PTH1R",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PTH1R",
+                  "valueId": "NCBIGene:5745"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.9329e-04"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.6700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cortex_of_kidney:100|renal_medulla:98|spleen:96|endocervix:94|adrenal_gland:92|ectocervix:91|fallopian_tube:89|lung:89|uterus:89|liver:83|omental_fat_pad:81|coronary_artery:79|subcutaneous_adipose_tissue:77|ovary:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "intracellular calcium ion homeostasis|adenylate cyclase-activating G protein-coupled receptor signaling pathway|cell surface receptor signaling pathway|positive regulation of inositol phosphate biosynthetic process|phospholipase C-activating G protein-coupled receptor signaling pathway|G protein-coupled receptor signaling pathway, coupled to cyclic nucleotide second messenger|G protein-coupled receptor signaling pathway|adenylate cyclase-modulating G protein-coupled receptor signaling pathway|si"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal neurocranium morphology|short mandible|abnormal long bone hypertrophic chondrocyte zone|increased circulating calcium level|domed cranium|short snout|short limbs|abnormal thymus morphology|atelectasis|abnormal lens morphology|abnormal circulating phosphate level|decreased embryo size|abnormal placenta morphology|postnatal growth retardation|respiratory failure|abnormal limb morphology|abnormal skeleton development|abnormal brain morphology|abnormal bone mineralization|decreased circulat"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "id": "PAVS:D0000212",
+  "subject": {
+    "id": "PAVS:D0000212",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000158",
+        "label": "Macroglossia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000821",
+        "label": "Hypothyroidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000853",
+        "label": "Goiter"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000958",
+        "label": "Dry skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001254",
+        "label": "Lethargy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001510",
+        "label": "Growth delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001537",
+        "label": "Umbilical hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001615",
+        "label": "Hoarse cry"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001662",
+        "label": "Bradycardia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002019",
+        "label": "Constipation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002045",
+        "label": "Hypothermia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002750",
+        "label": "Delayed skeletal maturation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002904",
+        "label": "Hyperbilirubinemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002925",
+        "label": "Elevated circulating thyroid-stimulating hormone concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003270",
+        "label": "Abdominal distention"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004491",
+        "label": "Large posterior fontanelle"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005990",
+        "label": "Thyroid hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008191",
+        "label": "Thyroid agenesis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008872",
+        "label": "Feeding difficulties in infancy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100028",
+        "label": "Ectopic thyroid"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0024264",
+        "label": "hypothyroidism, congenital, nongoitrous, 2"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000212",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0024264",
+          "label": "hypothyroidism, congenital, nongoitrous, 2"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000212",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000212_PAX8",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PAX8",
+                  "valueId": "NCBIGene:7849"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9965e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.1500e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "thyroid_gland:100|renal_medulla:98|cortex_of_kidney:96|fallopian_tube:94|adrenal_gland:92|testis:91|tibial_nerve:91|ectocervix:87|endocervix:87|esophagus_mucosa:87|ileum:87|lower_leg_skin:87|lung:87|mammary_gland:87|omental_fat_pad:87|ovary:87|pituitary_gland:87|skin:87|subcutaneous_adipose_tissue:87|suprapubic_skin:87|uterus:87"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "branching involved in ureteric bud morphogenesis|pronephros development|ventricular septum development|positive regulation of metanephric DCT cell differentiation|negative regulation of cardiac muscle cell apoptotic process|metanephric S-shaped body morphogenesis|negative regulation of mesenchymal cell apoptotic process involved in metanephros development|regulation of DNA-templated transcription|urogenital system development|regulation of metanephric nephron tubule epithelial cell differentiati"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "small ears|abnormal organ of Corti morphology|abnormal middle ear morphology|delayed bone ossification|decreased compact bone thickness|short limbs|abnormal thyroid gland morphology|uterus hypoplasia|dilated uterine cervix|vagina atresia|arrest of spermatogenesis|postnatal growth retardation|male infertility|female infertility|deafness|premature death|no abnormal phenotype detected|abnormal outer ear morphology|abnormal cochlear hair cell morphology|abnormal caput epididymis morphology|abnormal "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

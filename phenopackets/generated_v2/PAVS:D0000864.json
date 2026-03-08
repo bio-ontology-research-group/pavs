@@ -1,0 +1,593 @@
+{
+  "id": "PAVS:D0000864",
+  "subject": {
+    "id": "PAVS:D0000864",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Hypertelorism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000316",
+        "label": "Broad forehead"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000337",
+        "label": "Long philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000343",
+        "label": "Hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Short neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000470",
+        "label": "obsolete Sparse and thin eyebrow"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000535",
+        "label": "Delayed eruption of teeth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000684",
+        "label": "Widely spaced teeth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000687",
+        "label": "Microdontia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000691",
+        "label": "Brachydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001156",
+        "label": "Barrel-shaped chest"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001552",
+        "label": "Ventricular septal defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001629",
+        "label": "Pulmonic stenosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001642",
+        "label": "Aortic valve stenosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001650",
+        "label": "Mitral regurgitation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001653",
+        "label": "Aortic regurgitation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001659",
+        "label": "Ventricular hypertrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001714",
+        "label": "Mitral stenosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001718",
+        "label": "Talipes equinovarus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001762",
+        "label": "Pes planus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001763",
+        "label": "Pulmonary arterial hypertension"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002092",
+        "label": "Delayed gross motor development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002194",
+        "label": "Waddling gait"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002515",
+        "label": "Highly arched eyebrow"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002553",
+        "label": "Spondyloepiphyseal dysplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002655",
+        "label": "Delayed skeletal maturation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002750",
+        "label": "Kyphoscoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002751",
+        "label": "Arthralgia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002829",
+        "label": "Genu valgum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002857",
+        "label": "Lumbar hyperlordosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002938",
+        "label": "Intervertebral space narrowing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002945",
+        "label": "Cubitus valgus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002967",
+        "label": "Tibial bowing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002982",
+        "label": "Hypoplasia of the ulna"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003022",
+        "label": "Ulnar bowing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003031",
+        "label": "Arthropathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003040",
+        "label": "Elbow dislocation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003042",
+        "label": "Flattened epiphysis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003071",
+        "label": "Hypoplasia of the capital femoral epiphysis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003090",
+        "label": "Limited hip extension"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003093",
+        "label": "Decreased hip abduction"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003184",
+        "label": "Irregular vertebral endplates"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003301",
+        "label": "Coronal cleft vertebrae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003417",
+        "label": "Shoulder dislocation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003834",
+        "label": "Knee dislocation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004976",
+        "label": "Tricuspid regurgitation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005180",
+        "label": "Multiple carpal ossification centers"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006067",
+        "label": "Generalized bone demineralization"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006462",
+        "label": "Fixed elbow flexion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006471",
+        "label": "Wide intermamillary distance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006610",
+        "label": "Bilateral single transverse palmar creases"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007598",
+        "label": "Narrow vertebral interpedicular distance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008450",
+        "label": "Microtia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008551",
+        "label": "Rhizomelia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008905",
+        "label": "Deviation of the 5th finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009179",
+        "label": "Short phalanx of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009803",
+        "label": "Short distal phalanx of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009882",
+        "label": "Short metacarpal"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010049",
+        "label": "Tricuspid stenosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010446",
+        "label": "Small epiphyses"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010585",
+        "label": "Camptodactyly of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100490",
+        "label": "Short femoral neck"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100864",
+        "label": "HP:0100864"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007738",
+        "label": "spondyloepiphyseal dysplasia with congenital joint dislocations"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000864",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007738",
+          "label": "spondyloepiphyseal dysplasia with congenital joint dislocations"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000864",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000864_CHST3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CHST3",
+                  "valueId": "NCBIGene:9469"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "4.1464e-06"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1190e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "aorta:100|ovary:98|tibial_nerve:98|tibial_artery:94|coronary_artery:92|testis:91|uterus:89|fallopian_tube:87|endocervix:85|skin:83|esophagogastric_junction:81|sigmoid_colon:81|muscle_layer_of_esophagus:77|omental_fat_pad:77|prostate_gland:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "sulfur compound metabolic process|carbohydrate metabolic process|carbohydrate derivative metabolic process|chondroitin sulfate proteoglycan biosynthetic process|N-acetylglucosamine metabolic process|keratan sulfate proteoglycan biosynthetic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased neutrophil cell number|abnormal ovarian folliculogenesis|decreased locomotor activity|abnormal bone marrow morphology|increased coping response|decreased aggression towards mice|decreased T cell number|increased T cell proliferation|lymph node hypoplasia|decreased prepulse inhibition"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

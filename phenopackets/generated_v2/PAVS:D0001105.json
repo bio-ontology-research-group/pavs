@@ -1,0 +1,121 @@
+{
+  "id": "PAVS:D0001105",
+  "subject": {
+    "id": "PAVS:D0001105",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001105",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001105",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001105_ASCL1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ASCL1",
+                  "valueId": "NCBIGene:429"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.5264e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.1000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "pituitary_gland:100|amygdala:98|cerebral_cortex:96|cervical_vertebra:96|frontal_cortex:96|hippocampus:91|substantia_nigra:91|hypothalamus:87|anterior_cingulate_cortex:85|caudate_nucleus:85|cerebellum:81|putamen:79|cerebellar_hemisphere:77|nucleus_accumbens:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heart development|sympathetic nervous system development|response to epidermal growth factor|negative regulation of neuron differentiation|forebrain neuron differentiation|neuron development|response to retinoic acid|negative regulation of apoptotic process|Notch signaling pathway|sympathetic ganglion development|positive regulation of transcription by RNA polymerase II|regulation of transcription by RNA polymerase II|cerebral cortex GABAergic interneuron differentiation|regulation of gene expre"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal telencephalon development|abnormal sympathetic ganglion morphology|abnormal parasympathetic ganglion morphology|abnormal enteric neuron morphology|absent enteric neurons|abnormal lung development|respiratory distress|abnormal skin pigmentation|no abnormal phenotype detected|abnormal neuron apoptosis|abnormal locus ceruleus morphology|abnormal nervous system development|abnormal olfactory sensory neuron morphology|abnormal olfactory epithelium morphology|absent gastric milk in neonates|d"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

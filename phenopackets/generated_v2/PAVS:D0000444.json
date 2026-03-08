@@ -1,0 +1,173 @@
+{
+  "id": "PAVS:D0000444",
+  "subject": {
+    "id": "PAVS:D0000444",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000360",
+        "label": "Tinnitus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000703",
+        "label": "Dentinogenesis imperfecta"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005101",
+        "label": "High-frequency hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008619",
+        "label": "Bilateral sensorineural hearing impairment"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011571",
+        "label": "deafness, autosomal dominant 39, with dentinogenesis imperfecta 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000444",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011571",
+          "label": "deafness, autosomal dominant 39, with dentinogenesis imperfecta 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000444",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000444_DSPP",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "DSPP",
+                  "valueId": "NCBIGene:1834"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.3084e-09"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.2710e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "coronary_artery:100|aorta:100|testis:100|adrenal_gland:94|cerebral_cortex:94|cervical_vertebra:94|cortex_of_kidney:94|ectocervix:94|endocervix:94|esophagogastric_junction:94|esophagus_mucosa:94|fallopian_tube:94|frontal_cortex:94|amygdala:94|heart_left_ventricle:94|hippocampus:94|hypothalamus:94|ileum:94|liver:94|lower_leg_skin:94|lung:94|mammary_gland:94|minor_salivary_gland:94|muscle_layer_of_esophagus:94|anterior_cingulate_cortex:94|nucleus_accumbens:94|omental_fat_pad:94|ovary:94|pancreas:94|pituitary_gland:94|prostate_gland:94|putamen:94|renal_medulla:94|sigmoid_colon:94|skeletal_muscle_tissue:94|skin:94|spleen:94|stomach:94|subcutaneous_adipose_tissue:94|substantia_nigra:94|suprapubic_skin:94|thyroid_gland:94|tibial_artery:94|tibial_nerve:94|atrium_auricular_region:94|transverse_colon:94|urinary_bladder:94|uterus:94|vagina:94|blood:94|caudate_nucleus:94|cerebellar_hemisphere:94|cerebellum:94"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "dentinogenesis|odontoblast differentiation|regulation of odontoblast differentiation|biomineral tissue development"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "brittle teeth|abnormal kidney development|abnormal lung development|abnormal tooth morphology|abnormal kidney morphology|abnormal dentin morphology|abnormal dental pulp cavity morphology|abnormal periodontal ligament morphology|abnormal cementum morphology|abnormal alveolar process morphology|improved glucose tolerance|polycystic kidney|abnormal branching involved in alveolar duct morphogenesis|preweaning lethality, incomplete penetrance|small metanephros|increased kidney apoptosis|abnormal meta"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "id": "PAVS:D0001008",
+  "subject": {
+    "id": "PAVS:D0001008",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000519",
+        "label": "Developmental cataract"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000556",
+        "label": "Retinal dystrophy"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013411",
+        "label": "cataract 16 multiple types"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001008",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013411",
+          "label": "cataract 16 multiple types"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001008",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001008_CRYAB",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CRYAB",
+                  "valueId": "NCBIGene:1410"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "5.4680e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1800e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cervical_vertebra:100|heart_left_ventricle:100|atrium_auricular_region:96|skeletal_muscle_tissue:94|tibial_nerve:92|aorta:91|tibial_artery:89|coronary_artery:87|substantia_nigra:85|subcutaneous_adipose_tissue:83|cortex_of_kidney:81|hippocampus:79|muscle_layer_of_esophagus:77|sigmoid_colon:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of metabolic process|negative regulation of intracellular transport|negative regulation of apoptotic process|protein stabilization|regulation of programmed cell death|cellular response to gamma radiation|stress-activated MAPK cascade|negative regulation of amyloid fibril formation|negative regulation of DNA-templated transcription|response to hydrogen peroxide|muscle contraction|protein folding|protein refolding|negative regulation of cell growth|response to heat|negative reg"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "myopathy|microphthalmia|cataract|small lens|abnormal cornea morphology|cardiac hypertrophy|disorganized secondary lens fibers|abnormal lens fiber morphology|cardiac fibrosis|abnormal lens epithelium morphology|increased left ventricle diastolic pressure|abnormal heart left ventricle morphology|decreased heart ventricle muscle contractility|centrally nucleated skeletal muscle fibers|skeletal muscle fiber necrosis|skeletal muscle fibrosis|decreased grip strength|myocardium hypertrophy|abnormal ret"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

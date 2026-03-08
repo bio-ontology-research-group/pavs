@@ -1,0 +1,206 @@
+{
+  "id": "PAVS:Q0000104",
+  "subject": {
+    "id": "PAVS:Q0000104",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P12Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000541",
+        "label": "Retinal detachment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010566",
+        "label": "Hamartoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000717",
+        "label": "Autism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC7082194",
+        "description": "Source dataset: PMC7082194"
+      },
+      {
+        "id": "PMID:31618753",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31618753/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013308",
+        "label": "CBL-related disorder"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0025352",
+        "label": "Typically de novo"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:Q0000104",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013308",
+          "label": "CBL-related disorder"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:Q0000104",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:Q0000104_NF2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "NF2",
+                  "valueId": "NCBIGene:4771"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000338641.10:c.1334_1337del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000022.11:g.29673480_29673483del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000344666.5:p.Glu445GlyfsTer9"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF20492"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.8700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|cerebellum:100|cerebellar_hemisphere:96|cerebral_cortex:94|testis:94|frontal_cortex:91|anterior_cingulate_cortex:89|hippocampus:87|thyroid_gland:87|uterus:87|renal_medulla:81|endocervix:79|amygdala:79|fallopian_tube:75|ovary:75|prostate_gland:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "actin cytoskeleton organization|regulation of cell cycle|regulation of gliogenesis|Schwann cell proliferation|negative regulation of cell growth involved in contact inhibition|regulation of cell shape|hippo signaling|regulation of hippo signaling|negative regulation of cell-matrix adhesion|regulation of organelle assembly|negative regulation of cell-cell adhesion|negative regulation of receptor signaling pathway via JAK-STAT|positive regulation of protein localization to early endosome|lens fibe"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal tooth development|impaired coordination|absent mesoderm|failure to gastrulate|abnormal dorsal-ventral axis patterning|abnormal placenta morphology|increased thermal nociceptive threshold|increased malignant tumor incidence|increased lung adenocarcinoma incidence|increased neurofibrosarcoma incidence|increased sarcoma incidence|increased carcinoma incidence|abnormal developmental patterning|abnormal embryonic tissue morphology|abnormal extraembryonic tissue morphology|disorganized extrae"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

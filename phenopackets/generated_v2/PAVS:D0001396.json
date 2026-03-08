@@ -1,0 +1,201 @@
+{
+  "id": "PAVS:D0001396",
+  "subject": {
+    "id": "PAVS:D0001396",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000121",
+        "label": "Nephrocalcinosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001947",
+        "label": "Renal tubular acidosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002749",
+        "label": "Osteomalacia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002756",
+        "label": "Pathologic fracture"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002901",
+        "label": "Hypocalcemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003768",
+        "label": "Periodic paralysis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008153",
+        "label": "Periodic hypokalemic paresis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008897",
+        "label": "Postnatal growth retardation"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008368",
+        "label": "autosomal dominant distal renal tubular acidosis"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001396",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008368",
+          "label": "autosomal dominant distal renal tubular acidosis"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001396",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001396_SLC4A1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SLC4A1",
+                  "valueId": "NCBIGene:6521"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9999e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.0700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "blood:100|renal_medulla:98|cortex_of_kidney:96|spleen:94|lung:92|cerebellar_hemisphere:92|cerebellum:92|testis:87|pituitary_gland:85|cervical_vertebra:83|liver:83|thyroid_gland:83|omental_fat_pad:77|cerebral_cortex:75|coronary_artery:75|ectocervix:75|endocervix:75|fallopian_tube:75|frontal_cortex:75|hypothalamus:75|lower_leg_skin:75|mammary_gland:75|ovary:75|prostate_gland:75|putamen:75|aorta:75|subcutaneous_adipose_tissue:75|substantia_nigra:75|suprapubic_skin:75|tibial_artery:75|tibial_nerve:75|urinary_bladder:75|uterus:75|vagina:75|caudate_nucleus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "monoatomic ion transport|bicarbonate transport|regulation of intracellular pH|intracellular monoatomic ion homeostasis|transmembrane transport|monoatomic anion transport|chloride transport|chloride transmembrane transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal bone marrow cell number|decreased hematocrit|absent erythroid progenitor cell|abnormal mean corpuscular volume|abnormal heart shape|enlarged spleen|decreased body weight|weight loss|decreased body size|dehydration|increased circulating phosphate level|anemia|hemolytic anemia|abnormal erythrocyte cell number|abnormal hemoglobin|abnormal mean corpuscular hemoglobin|cardiac hypertrophy|postnatal growth retardation|polyuria|premature death|abnormal definitive hematopoiesis|abnormal kidney p"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,306 @@
+{
+  "id": "PAVS:D0000513",
+  "subject": {
+    "id": "PAVS:D0000513",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Pectus excavatum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000767",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Hyporeflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001265",
+        "label": "Motor delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Areflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001284",
+        "label": "Neonatal hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001319",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Decreased fetal movement"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001558",
+        "label": "Hypernasal speech"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001611",
+        "label": "Talipes equinovarus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001762",
+        "label": "Dysphagia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002015",
+        "label": "Restrictive ventilatory defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002091",
+        "label": "Respiratory insufficiency"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002093",
+        "label": "Poor head control"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002421",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Congenital onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003577",
+        "label": "Variable expressivity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003828",
+        "label": "Diaphragmatic paralysis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006597",
+        "label": "Difficulty running"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009046",
+        "label": "Facial palsy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010628",
+        "label": "Camptodactyly of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100490",
+        "label": "HP:0100490"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013731",
+        "label": "MEGF10-related myopathy"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000513",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013731",
+          "label": "MEGF10-related myopathy"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000513",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000513_MEGF10",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MEGF10",
+                  "valueId": "NCBIGene:84466"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e-12"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.0700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cervical_vertebra:100|caudate_nucleus:98|putamen:96|nucleus_accumbens:94|amygdala:92|substantia_nigra:92|cerebral_cortex:89|frontal_cortex:89|hippocampus:89|anterior_cingulate_cortex:89|hypothalamus:81|cerebellar_hemisphere:81|cerebellum:81|pituitary_gland:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of myoblast proliferation|skeletal muscle satellite cell proliferation|vesicle-mediated transport|myoblast development|skeletal muscle satellite cell differentiation|muscle cell proliferation|phagocytosis|positive regulation of cell-cell adhesion|engulfment of apoptotic cell|muscle organ development|regulation of skeletal muscle tissue development|muscle cell development|regulation of muscle cell differentiation|myoblast migration|homotypic cell-cell adhesion|apoptotic proces"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal cerebellum morphology|abnormal amacrine cell morphology|abnormal retina horizontal cell morphology|abnormal astrocyte physiology|increased hindbrain apoptosis"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

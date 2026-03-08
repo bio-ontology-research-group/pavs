@@ -28,7 +28,8 @@ data/
 │   ├── GCF_000001405.40_GRCh38.p14_genomic.gff  # GRCh38 genome annotation
 │   ├── E-GTEX-8/                    # GTEx v8 tissue expression (EBI Expression Atlas)
 │   └── allele-frequencies/          # Saudi population allele frequencies (302 WGS)
-│                                    # ⚠ Not publicly available — contact authors
+│                                    # Publicly available: https://doi.org/10.6084/m9.figshare.28059686.v1
+│                                    # Paper: https://pmc.ncbi.nlm.nih.gov/articles/PMC11761371/
 │
 ├── combined_normalized.tsv   # Generated: Step 1 output (38 columns, ~7,500 rows)
 ├── combined_annotated.tsv    # Generated: Step 2 output (77+ columns)
@@ -50,7 +51,7 @@ bash scripts/download_reference_data.sh
 
 This downloads all publicly available reference files to `data/reference/`.
 
-The Saudi allele frequencies (`data/reference/allele-frequencies/`) are not publicly available. Contact the authors for access.
+The Saudi allele frequencies (`data/reference/allele-frequencies/`) are publicly available from Figshare (https://doi.org/10.6084/m9.figshare.28059686.v1). They were published as part of the paper PMC11761371 (https://pmc.ncbi.nlm.nih.gov/articles/PMC11761371/).
 
 ## Generated Files
 

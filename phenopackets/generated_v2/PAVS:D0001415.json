@@ -1,0 +1,243 @@
+{
+  "id": "PAVS:D0001415",
+  "subject": {
+    "id": "PAVS:D0001415",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000381",
+        "label": "Stapes ankylosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000405",
+        "label": "Conductive hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000430",
+        "label": "Underdeveloped nasal alae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000466",
+        "label": "Limited neck range of motion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000540",
+        "label": "Hypermetropia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001770",
+        "label": "Toe syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002949",
+        "label": "Fused cervical vertebrae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003189",
+        "label": "Long nose"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007943",
+        "label": "Congenital stapes ankylosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009177",
+        "label": "Proximal/middle symphalangism of 5th finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009765",
+        "label": "Low hanging columella"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009882",
+        "label": "Short distal phalanx of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010055",
+        "label": "Broad hallux"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011304",
+        "label": "Broad thumb"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008484",
+        "label": "stapes ankylosis with broad thumbs and toes"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001415",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008484",
+          "label": "stapes ankylosis with broad thumbs and toes"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001415",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001415_NOG",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "NOG",
+                  "valueId": "NCBIGene:9241"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9555e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "3.6700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ectocervix:100|endocervix:98|tibial_nerve:98|nucleus_accumbens:94|vagina:92|caudate_nucleus:91|frontal_cortex:89|amygdala:89|anterior_cingulate_cortex:89|cerebral_cortex:83|hippocampus:83|hypothalamus:83|putamen:83|aorta:83|skin:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "mesoderm development|middle ear morphogenesis|embryonic skeletal system development|cranial skeletal system development|ventricular septum morphogenesis|osteoblast differentiation|negative regulation of cell differentiation|outflow tract morphogenesis|embryonic digit morphogenesis|negative regulation of astrocyte differentiation|smoothened signaling pathway|dorsal/ventral pattern formation|positive regulation of gene expression|regulation of fibroblast growth factor receptor signaling pathway|li"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal malleus morphology|abnormal cochlea morphology|abnormal middle ear morphology|abnormal interparietal bone morphology|abnormal frontal bone morphology|abnormal parietal bone morphology|abnormal rib morphology|kyphosis|abnormal heart morphology|abnormal craniofacial morphology|abnormal head morphology|abnormal snout morphology|abnormal foregut morphology|abnormal urethra morphology|short limbs|kinked tail|abnormal diencephalon morphology|exencephaly|incomplete rostral neuropore closure|op"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

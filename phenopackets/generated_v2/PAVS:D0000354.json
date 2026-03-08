@@ -1,0 +1,243 @@
+{
+  "id": "PAVS:D0000354",
+  "subject": {
+    "id": "PAVS:D0000354",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000430",
+        "label": "Underdeveloped nasal alae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000431",
+        "label": "Wide nasal bridge"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000664",
+        "label": "Synophrys"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001022",
+        "label": "Albinism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001100",
+        "label": "Heterochromia iridis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001425",
+        "label": "obsolete Heterogeneous"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002211",
+        "label": "White forelock"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002216",
+        "label": "Premature graying of hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002226",
+        "label": "White eyebrow"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002227",
+        "label": "White eyelashes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003828",
+        "label": "Variable expressivity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007443",
+        "label": "Partial albinism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007990",
+        "label": "Hypoplastic iris stroma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008527",
+        "label": "Congenital sensorineural hearing impairment"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008671",
+        "label": "Waardenburg syndrome type 2A"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000354",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008671",
+          "label": "Waardenburg syndrome type 2A"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000354",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000354_MITF",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MITF",
+                  "valueId": "NCBIGene:4286"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9203e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.8200e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ectocervix:100|endocervix:98|uterus:96|muscle_layer_of_esophagus:94|skeletal_muscle_tissue:92|sigmoid_colon:91|esophagogastric_junction:89|vagina:87|ovary:85|subcutaneous_adipose_tissue:83|tibial_artery:83|urinary_bladder:79|fallopian_tube:77|mammary_gland:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of gene expression|negative regulation of transcription by RNA polymerase II|positive regulation of DNA-templated transcription initiation|protein-containing complex assembly|regulation of RNA biosynthetic process|positive regulation of DNA-templated transcription|positive regulation of transcription by RNA polymerase II|regulation of transcription by RNA polymerase II|negative regulation of cell migration|regulation of DNA-templated transcription|developmental pigmentation|m"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal inner ear morphology|abnormal cochlea morphology|abnormal stria vascularis morphology|osteopetrosis|failure of tooth eruption|abnormal long bone metaphysis morphology|decreased mast cell number|diluted coat color|irregular coat pigmentation|belly spot|abnormal hair follicle morphology|abnormal spleen morphology|abnormal retina photoreceptor morphology|absent skin pigmentation|decreased body size|abnormal eye development|anophthalmia|microphthalmia|abnormal lens morphology|cataract|abnor"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

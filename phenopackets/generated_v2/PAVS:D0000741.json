@@ -1,0 +1,173 @@
+{
+  "id": "PAVS:D0000741",
+  "subject": {
+    "id": "PAVS:D0000741",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000568",
+        "label": "Microphthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000589",
+        "label": "Coloboma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010469",
+        "label": "Absent testis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100259",
+        "label": "Postaxial polydactyly"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013130",
+        "label": "isolated microphthalmia 4"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000741",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013130",
+          "label": "isolated microphthalmia 4"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000741",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000741_GDF6",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GDF6",
+                  "valueId": "NCBIGene:392255"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9958e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "3.4200e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "coronary_artery:100|omental_fat_pad:100|skin:100|atrium_auricular_region:100|uterus:100|esophagogastric_junction:91|fallopian_tube:91|ileum:91|muscle_layer_of_esophagus:91|sigmoid_colon:91|aorta:91|testis:91|thyroid_gland:91|urinary_bladder:91|vagina:91"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of cell differentiation|metanephros development|apoptotic process|fat cell differentiation|positive regulation of p38MAPK cascade|positive regulation of SMAD protein signal transduction|retinal cell apoptotic process|BMP signaling pathway|positive regulation of DNA-templated transcription|activin receptor signaling pathway|positive regulation of chondrocyte differentiation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal malleus morphology|abnormal carpal bone morphology|abnormal spleen morphology|enlarged spleen|abnormal thymus morphology|enlarged thymus|decreased body weight|abnormal retina morphology|no spontaneous movement|postnatal growth retardation|hydrocephaly|abnormal hearing physiology|postnatal lethality|abnormal digit morphology|abnormal brain morphology|fused joints|abnormal tarsal bone morphology|abnormal middle ear ossicle morphology|abnormal incus morphology|abnormal stapes morphology|ab"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

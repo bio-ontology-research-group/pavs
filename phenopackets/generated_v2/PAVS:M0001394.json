@@ -1,0 +1,186 @@
+{
+  "id": "PAVS:M0001394",
+  "subject": {
+    "id": "PAVS:M0001394",
+    "sex": "FEMALE",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0002037",
+        "label": "Inflammation of the large intestine"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001394",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001394",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001394_ITGB2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ITGB2",
+                  "valueId": "NCBIGene:3689"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000652462.1:c.1756C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000021.9:g.44889397C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000498780.1:p.Arg586Trp"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr21",
+                  "pos": 44889397,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "benign(0.211)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "0.00851"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.1008e-11"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.1000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "blood:100|spleen:98|lung:96|omental_fat_pad:94|subcutaneous_adipose_tissue:92|ileum:91|coronary_artery:89|aorta:87|tibial_nerve:85|endocervix:83|cervical_vertebra:81|urinary_bladder:79|adrenal_gland:77|fallopian_tube:77|mammary_gland:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "endothelial cell migration|receptor internalization|positive regulation of nitric oxide biosynthetic process|cell-cell adhesion mediated by integrin|neutrophil chemotaxis|neuron cell-cell adhesion|apoptotic process|positive regulation of angiogenesis|cell-cell adhesion|neutrophil migration|regulation of cell shape|negative regulation of dopamine metabolic process|cell-matrix adhesion|leukocyte adhesion to vascular endothelial cell|cellular response to low-density lipoprotein particle stimulus|he"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "osteoporosis|abnormal long bone metaphysis morphology|increased leukocyte cell number|increased neutrophil cell number|increased monocyte cell number|decreased neutrophil cell number|increased bone marrow cell number|increased granulocyte number|alopecia|abnormal spleen morphology|enlarged spleen|enlarged lymph nodes|abnormal immune system cell morphology|reddish skin|abnormal skin condition|scaly skin|psoriasis|dermatitis|spontaneous skin ulceration|abnormal epidermal layer morphology|epidermal"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

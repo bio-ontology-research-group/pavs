@@ -1,0 +1,237 @@
+{
+  "id": "PAVS:M0001113",
+  "subject": {
+    "id": "PAVS:M0001113",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P3Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Micrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000879",
+        "label": "Short sternum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001838",
+        "label": "Rocker bottom foot"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000269",
+        "label": "Prominent occiput"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002979",
+        "label": "Bowing of the legs"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006101",
+        "label": "Finger syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:28940097",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28940097/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0001113",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0001113",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0001113_DHCR7",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "DHCR7",
+                  "valueId": "NCBIGene:1717"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000355527.8:c.778C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000011.10:g.71438932C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000347717.4:p.Arg260Trp"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr11",
+                  "pos": 71438932,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0.03)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "possibly_damaging(0.56)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF01222"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "8.21e-06"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.1484e-12"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0870e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "lower_leg_skin:100|ovary:98|suprapubic_skin:98|liver:94|adrenal_gland:92|cervical_vertebra:91|esophagus_mucosa:89|testis:87|minor_salivary_gland:85|skin:85|hypothalamus:81|lung:81|vagina:81|pituitary_gland:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "steroid biosynthetic process|lipid metabolic process|cholesterol biosynthetic process via lathosterol|positive regulation of ferroptosis|cholesterol biosynthetic process via desmosterol|cholesterol biosynthetic process|steroid metabolic process|cholesterol metabolic process|sterol biosynthetic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "distended urinary bladder|syndactyly|abnormal spleen morphology|enlarged spleen|weakness|decreased brain size|abnormal corpus callosum morphology|dilated lateral ventricle|dilated third ventricle|abnormal brain development|abnormal lung morphology|abnormal lung development|atelectasis|pulmonary hypoplasia|microphthalmia|decreased locomotor activity|no spontaneous movement|absent suckling reflex|abnormal suckling behavior|no swallowing reflex|abnormal vocalization|abnormal lipid level|cyanosis|ab"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

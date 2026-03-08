@@ -1,0 +1,166 @@
+{
+  "id": "PAVS:D0001048",
+  "subject": {
+    "id": "PAVS:D0001048",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001644",
+        "label": "Dilated cardiomyopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004756",
+        "label": "Ventricular tachycardia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006670",
+        "label": "Impaired myocardial contractility"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012062",
+        "label": "dilated cardiomyopathy 1O"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001048",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012062",
+          "label": "dilated cardiomyopathy 1O"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001048",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001048_ABCC9",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ABCC9",
+                  "valueId": "NCBIGene:10060"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "7.2745e-06"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.5700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "uterus:100|fallopian_tube:98|skin:96|skeletal_muscle_tissue:94|subcutaneous_adipose_tissue:94|esophagogastric_junction:91|endocervix:89|muscle_layer_of_esophagus:87|omental_fat_pad:87|tibial_artery:87|ectocervix:81|mammary_gland:79|liver:77|ovary:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "potassium ion import across plasma membrane|defense response to virus|cardiac conduction|potassium ion transmembrane transport|potassium ion transport|transport across blood-brain barrier|monoatomic cation transmembrane transport|transmembrane transport|response to ATP"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "hypoglycemia|increased monocyte cell number|abnormal systemic arterial blood pressure|hypertension|abnormal blood vessel physiology|enlarged heart|abnormal myocardial fiber morphology|hypotension|cardiac hypertrophy|premature death|dilated heart left ventricle|increased heart weight|increased systemic arterial blood pressure|increased insulin sensitivity|abnormal impulse conducting system conduction|increased cardiac output|abnormal channel response|increased muscle fatigability|abnormal ST segm"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "id": "PAVS:D0001634",
+  "subject": {
+    "id": "PAVS:D0001634",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000132",
+        "label": "Menorrhagia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000421",
+        "label": "Epistaxis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000978",
+        "label": "Bruising susceptibility"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001658",
+        "label": "Myocardial infarction"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001873",
+        "label": "Thrombocytopenia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001892",
+        "label": "Abnormal bleeding"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001902",
+        "label": "Giant platelets"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001977",
+        "label": "Abnormal thrombosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003010",
+        "label": "Prolonged bleeding time"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008264",
+        "label": "Neutrophil inclusion bodies"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0015912",
+        "label": "macrothrombocytopenia and granulocyte inclusions with or without nephritis or sensorineural hearing loss"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001634",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0015912",
+          "label": "macrothrombocytopenia and granulocyte inclusions with or without nephritis or sensorineural hearing loss"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001634",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001634_MYH9",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MYH9",
+                  "valueId": "NCBIGene:4627"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.5900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "aorta:100|tibial_artery:98|coronary_artery:96|uterus:94|lung:92|subcutaneous_adipose_tissue:91|skin:89|spleen:87|endocervix:85|mammary_gland:83|ectocervix:81|fallopian_tube:79|omental_fat_pad:77|tibial_nerve:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "actin cytoskeleton organization|actomyosin structure organization|platelet aggregation|regulated exocytosis|plasma membrane repair|regulation of cell shape|actin filament-based movement|lysosome localization|membrane protein ectodomain proteolysis|angiogenesis|cytoskeleton organization|integrin-mediated signaling pathway|negative regulation of actin filament severing|protein transport|symbiont entry into host cell|platelet formation|leukocyte migration|monocyte differentiation|actin filament-bas"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal thrombopoiesis|abnormal megakaryocyte differentiation|cataract|increased incidence of corneal inflammation|abnormal germ layer development|failure to gastrulate|decreased embryo size|abnormal placenta morphology|abnormal placenta labyrinth morphology|pale yolk sac|no abnormal phenotype detected|abnormal megakaryocyte morphology|abnormal blood coagulation|abnormal lens fiber morphology|albuminuria|abnormal cell migration|thrombocytopenia|abnormal vascular branching morphogenesis|abnormal"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

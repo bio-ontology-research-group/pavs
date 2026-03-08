@@ -1,0 +1,264 @@
+{
+  "id": "PAVS:D0001257",
+  "subject": {
+    "id": "PAVS:D0001257",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000825",
+        "label": "Hyperinsulinemic hypoglycemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001394",
+        "label": "Cirrhosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001395",
+        "label": "Hepatic fibrosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001399",
+        "label": "Hepatic failure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001892",
+        "label": "Abnormal bleeding"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001929",
+        "label": "Reduced factor XI activity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001976",
+        "label": "Reduced antithrombin III activity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001977",
+        "label": "Abnormal thrombosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002013",
+        "label": "Vomiting"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002014",
+        "label": "Diarrhea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002240",
+        "label": "Hepatomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002243",
+        "label": "Protein-losing enteropathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003073",
+        "label": "Hypoalbuminemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003642",
+        "label": "Type I transferrin isoform profile"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011473",
+        "label": "Villous atrophy"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011257",
+        "label": "MPI-congenital disorder of glycosylation"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001257",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011257",
+          "label": "MPI-congenital disorder of glycosylation"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001257",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001257_MPI",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MPI",
+                  "valueId": "NCBIGene:4351"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.3378e-10"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0400e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ovary:100|skin:98|adrenal_gland:96|tibial_nerve:96|endocervix:92|uterus:92|fallopian_tube:89|prostate_gland:89|testis:89|thyroid_gland:89|cerebellum:89|ectocervix:79|pituitary_gland:79|cerebellar_hemisphere:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "carbohydrate metabolic process|GDP-D-mannose biosynthetic process from fructose-6-phosphate|GDP-mannose biosynthetic process|mannose to fructose-6-phosphate catabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal vascular development|abnormal angiogenesis|abnormal cell proliferation|abnormal placenta morphology|abnormal placenta labyrinth morphology|absent vitelline blood vessels|abnormal chorioallantoic fusion|abnormal bone mineralization|abnormal vitelline vasculature morphology|embryonic growth retardation|caudal body truncation|delayed embryo turning|abnormal spongiotrophoblast layer morphology|abnormal trophoblast layer morphology|abnormal cell physiology|increased prepulse inhibition|embry"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

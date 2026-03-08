@@ -1,0 +1,565 @@
+{
+  "id": "PAVS:D0000060",
+  "subject": {
+    "id": "PAVS:D0000060",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000049",
+        "label": "Shawl scrotum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000054",
+        "label": "Micropenis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000057",
+        "label": "obsolete Clitoromegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000059",
+        "label": "Hypoplastic labia majora"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000064",
+        "label": "Hypoplastic labia minora"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Narrow mouth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000160",
+        "label": "Cleft palate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000175",
+        "label": "Thick lower lip vermilion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000179",
+        "label": "Small anterior fontanelle"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000237",
+        "label": "Microcephaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000252",
+        "label": "Hypoplasia of the maxilla"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000327",
+        "label": "Micrognathia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Low-set ears"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000369",
+        "label": "Incomplete partition of the cochlea type II"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000376",
+        "label": "Atresia of the external auditory canal"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000413",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Long eyelashes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000527",
+        "label": "Blepharophimosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000581",
+        "label": "Microdontia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000691",
+        "label": "Pectus carinatum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000768",
+        "label": "Short ribs"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000773",
+        "label": "Thin ribs"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000883",
+        "label": "Lateral clavicle hook"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000895",
+        "label": "Flat glenoid fossa"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000911",
+        "label": "Thin skin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000963",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "obsolete Joint laxity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001388",
+        "label": "obsolete Heterogeneous"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001425",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Intrauterine growth retardation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001511",
+        "label": "Small for gestational age"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001518",
+        "label": "Abnormal rib cage morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001547",
+        "label": "Breech presentation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001623",
+        "label": "Talipes equinovarus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001762",
+        "label": "Hyperconvex nail"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001795",
+        "label": "Frontal bossing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002007",
+        "label": "Gastroesophageal reflux"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002020",
+        "label": "Respiratory distress"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002098",
+        "label": "Abnormal pelvic girdle bone morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002644",
+        "label": "Delayed skeletal maturation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002750",
+        "label": "Genu valgum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002857",
+        "label": "Hemivertebrae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002937",
+        "label": "Genu varum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002970",
+        "label": "Elbow dislocation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003042",
+        "label": "Slender long bone"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003100",
+        "label": "Breast hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003187",
+        "label": "Birth length less than 3rd percentile"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003561",
+        "label": "Clinodactyly of the 5th finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004209",
+        "label": "Short palm"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004279",
+        "label": "Aplasia/Hypoplasia of the patella"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006498",
+        "label": "Absent glenoid fossa"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006591",
+        "label": "Absent sternal ossification"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006628",
+        "label": "Microtia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008551",
+        "label": "Feeding difficulties in infancy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008872",
+        "label": "Joint contracture of the hand"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009473",
+        "label": "Cutaneous finger syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010554",
+        "label": "Small hand"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0200055",
+        "label": "HP:0200055"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009143",
+        "label": "Meier-Gorlin syndrome 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000060",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009143",
+          "label": "Meier-Gorlin syndrome 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000060",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000060_ORC1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "ORC1",
+                  "valueId": "NCBIGene:4998"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "8.5922e-10"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.1900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|skin:98|esophagus_mucosa:96|spleen:94|ileum:92|lower_leg_skin:92|blood:92|lung:87|suprapubic_skin:87|transverse_colon:87|vagina:87|cerebellar_hemisphere:87|cerebellum:87|adrenal_gland:75|ectocervix:75|endocervix:75|minor_salivary_gland:75|ovary:75|pituitary_gland:75|prostate_gland:75|subcutaneous_adipose_tissue:75|thyroid_gland:75|tibial_nerve:75|uterus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "DNA replication initiation|mitotic DNA replication checkpoint signaling|DNA replication"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased bone mineral density|increased lean body mass|decreased total body fat amount|increased grip strength|increased bone mineral content|embryonic lethality at implantation, complete penetrance|preweaning lethality, complete penetrance|embryonic lethality prior to organogenesis|prenatal lethality prior to heart atrial septation"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

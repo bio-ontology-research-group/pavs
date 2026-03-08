@@ -1,0 +1,209 @@
+{
+  "id": "PAVS:P0000006",
+  "subject": {
+    "id": "PAVS:P0000006",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P51M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001382",
+        "label": "Joint hypermobility"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002616",
+        "label": "Aortic root aneurysm"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000006",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000006",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000006_TGFBR2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TGFBR2",
+                  "valueId": "NCBIGene:7048"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000295754.10:c.1301T>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000003.12:g.30674151T>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000295754.5:p.Met434Lys"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr3",
+                  "pos": 30674151,
+                  "ref": "T",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:1680017"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF07714"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "6.841e-07"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "1680017"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Pathogenic/Likely pathogenic"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.0792e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "5.3100e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|subcutaneous_adipose_tissue:98|omental_fat_pad:96|mammary_gland:94|coronary_artery:92|tibial_nerve:91|aorta:89|lung:87|thyroid_gland:85|tibial_artery:83|sigmoid_colon:81|ectocervix:79|uterus:77|muscle_layer_of_esophagus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heart development|heart looping|aorta morphogenesis|secondary palate development|response to lipid|ventricular septum morphogenesis|apoptotic process|embryonic hemopoiesis|positive regulation of developmental process|positive regulation of mesenchymal cell proliferation|positive regulation of T cell tolerance induction|outflow tract morphogenesis|activin receptor signaling pathway|cardiac left ventricle morphogenesis|myeloid dendritic cell differentiation|endocardial cushion fusion|positive regu"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "kyphosis|abnormal erythropoiesis|abnormal heart morphology|enlarged heart|enlarged pericardium|abnormal liver morphology|small liver|decreased embryo size|absent vitelline blood vessels|pale yolk sac|premature death|abnormal kidney morphology|no abnormal phenotype detected|enlarged kidney|abnormal aorta elastic fiber morphology|abnormal vitelline vasculature morphology|abnormal embryonic hematopoiesis|increased hepatocyte proliferation|embryonic growth retardation|aortic dissection|abnormal coro"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

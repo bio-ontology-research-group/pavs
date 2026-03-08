@@ -1,0 +1,257 @@
+{
+  "id": "PAVS:D0000949",
+  "subject": {
+    "id": "PAVS:D0000949",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000033",
+        "label": "Ambiguous genitalia, male"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000037",
+        "label": "Male pseudohermaphroditism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000061",
+        "label": "Ambiguous genitalia, female"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000097",
+        "label": "Focal segmental glomerulosclerosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000100",
+        "label": "Nephrotic syndrome"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000112",
+        "label": "Nephropathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000133",
+        "label": "Gonadal dysgenesis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000149",
+        "label": "Ovarian gonadoblastoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000776",
+        "label": "Congenital diaphragmatic hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000822",
+        "label": "Hypertension"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001428",
+        "label": "obsolete Somatic mutation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002667",
+        "label": "Nephroblastoma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003248",
+        "label": "Gonadal tissue inappropriate for external genitalia or chromosomal sex"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003774",
+        "label": "Stage 5 chronic kidney disease"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004728",
+        "label": "True hermaphroditism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010459",
+        "label": "HP:0010459"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008682",
+        "label": "Denys-Drash syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000949",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008682",
+          "label": "Denys-Drash syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000949",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000949_WT1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "WT1",
+                  "valueId": "NCBIGene:7490"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.5300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "uterus:100|fallopian_tube:98|ovary:96|testis:94|omental_fat_pad:92|endocervix:91|spleen:89|ectocervix:87|cortex_of_kidney:85|vagina:83|renal_medulla:81|atrium_auricular_region:81|coronary_artery:77|heart_left_ventricle:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "branching involved in ureteric bud morphogenesis|heart development|glomerular basement membrane development|RNA splicing|positive regulation of apoptotic process|thorax and anterior abdomen determination|circulatory system development|epithelial cell differentiation|metanephric S-shaped body morphogenesis|glomerulus development|podocyte differentiation|regulation of DNA-templated transcription|positive regulation of metanephric ureteric bud development|sex determination|positive regulation of ma"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal heart development|abnormal heart shape|kidney cortex cyst|abnormal kidney development|abnormal kidney vasculature morphology|abnormal liver development|liver hypoplasia|absent spleen|small ovary|impaired ovarian folliculogenesis|small testis|abnormal lung development|pulmonary hypoplasia|decreased embryo size|edema|abnormal reproductive system physiology|reduced female fertility|male infertility|prenatal lethality|premature death|abnormal embryonic tissue morphology|no abnormal phenotyp"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

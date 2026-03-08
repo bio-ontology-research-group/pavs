@@ -1,0 +1,411 @@
+{
+  "id": "PAVS:D0001506",
+  "subject": {
+    "id": "PAVS:D0001506",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000763",
+        "label": "Sensory neuropathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000772",
+        "label": "Abnormal rib morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000926",
+        "label": "Platyspondyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001156",
+        "label": "Brachydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001377",
+        "label": "Limited elbow extension"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001379",
+        "label": "obsolete Degenerative joint disease"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001380",
+        "label": "obsolete Ligamentous laxity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001388",
+        "label": "obsolete Joint laxity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001498",
+        "label": "Carpal bone hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002341",
+        "label": "Cervical cord compression"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002515",
+        "label": "Waddling gait"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002663",
+        "label": "Delayed epiphyseal ossification"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002758",
+        "label": "Osteoarthritis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002808",
+        "label": "Kyphosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002816",
+        "label": "Genu recurvatum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002829",
+        "label": "Arthralgia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002857",
+        "label": "Genu valgum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002938",
+        "label": "Lumbar hyperlordosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002970",
+        "label": "Genu varum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003016",
+        "label": "Metaphyseal widening"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003025",
+        "label": "Metaphyseal irregularity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003026",
+        "label": "Short long bone"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003049",
+        "label": "Ulnar deviation of the wrist"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003093",
+        "label": "Limited hip extension"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003311",
+        "label": "Hypoplasia of the odontoid process"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003414",
+        "label": "Atlantoaxial dislocation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004236",
+        "label": "Irregular carpal bones"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004568",
+        "label": "Beaking of vertebral bodies"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005063",
+        "label": "Fragmented, irregular epiphyses"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008873",
+        "label": "Disproportionate short-limb short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009487",
+        "label": "Ulnar deviation of the hand"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009882",
+        "label": "Short distal phalanx of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010049",
+        "label": "Short metacarpal"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010582",
+        "label": "Irregular epiphyses"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010585",
+        "label": "Small epiphyses"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011405",
+        "label": "Childhood onset short-limb short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100168",
+        "label": "Fragmented epiphyses"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008322",
+        "label": "pseudoachondroplasia"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001506",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008322",
+          "label": "pseudoachondroplasia"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001506",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001506_COMP",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "COMP",
+                  "valueId": "NCBIGene:1311"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.6355e-24"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0730e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "tibial_artery:100|aorta:98|lower_leg_skin:96|tibial_nerve:94|coronary_artery:92|subcutaneous_adipose_tissue:91|suprapubic_skin:89|testis:87|vagina:85|minor_salivary_gland:83|atrium_auricular_region:81|ectocervix:79|esophagus_mucosa:77|lung:77|mammary_gland:77|omental_fat_pad:77|thyroid_gland:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of apoptotic process|apoptotic process|limb development|animal organ morphogenesis|protein homooligomerization|cell adhesion|skeletal system development|cartilage homeostasis"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal cartilage morphology|abnormal chondrocyte morphology|short limbs|myopathy|decreased body weight|no abnormal phenotype detected|disproportionate dwarf|short tibia|abnormal long bone epiphyseal plate morphology|decreased tendon stiffness|short femur|osteoarthritis|increased muscle fatigability|abnormal long bone epiphyseal plate proliferative zone|abnormal ischium morphology|abnormal pelvic girdle bone morphology|abnormal vascular wound healing|abnormal tendon morphology|centrally nucleat"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

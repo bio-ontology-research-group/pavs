@@ -1,0 +1,271 @@
+{
+  "id": "PAVS:D0000737",
+  "subject": {
+    "id": "PAVS:D0000737",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000090",
+        "label": "Nephronophthisis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000546",
+        "label": "Retinal degeneration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000567",
+        "label": "Chorioretinal coloboma"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000618",
+        "label": "Blindness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000657",
+        "label": "Oculomotor apraxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001251",
+        "label": "Ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001320",
+        "label": "Cerebellar vermis hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001395",
+        "label": "Hepatic fibrosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001408",
+        "label": "Bile duct proliferation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002404",
+        "label": "Thickened superior cerebellar peduncle"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002419",
+        "label": "Molar tooth sign on MRI"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003774",
+        "label": "Stage 5 chronic kidney disease"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005957",
+        "label": "Breathing dysregulation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011933",
+        "label": "Elongated superior cerebellar peduncle"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100951",
+        "label": "Enlarged fossa interpeduncularis"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012539",
+        "label": "Joubert syndrome 6"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000737",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012539",
+          "label": "Joubert syndrome 6"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000737",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000737_TMEM67",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TMEM67",
+                  "valueId": "NCBIGene:91147"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.1439e-18"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0790e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|pituitary_gland:98|ovary:96|thyroid_gland:96|endocervix:92|tibial_nerve:92|uterus:92|ectocervix:87|fallopian_tube:87|skin:83|adrenal_gland:81|coronary_artery:81|esophagogastric_junction:81|heart_left_ventricle:81|lung:81|mammary_gland:81|prostate_gland:81|sigmoid_colon:81|aorta:81|tibial_artery:81|atrium_auricular_region:81|urinary_bladder:81|vagina:81|cerebellar_hemisphere:81|cerebellum:81"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of centrosome duplication|cilium assembly|non-canonical Wnt signaling pathway|cell projection organization|protein localization to ciliary transition zone|ERAD pathway"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "double outlet right ventricle|microcephaly|mandible hypoplasia|abnormal corpus callosum morphology|dilated fourth ventricle|small cerebellum|cerebellum vermis hypoplasia|exencephaly|abnormal roof plate morphology|incomplete rostral neuropore closure|increased exploration in new environment|abnormal dorsal-ventral axis patterning|postnatal growth retardation|perinatal lethality|postnatal lethality|abnormal neural tube morphology|abnormal forebrain development|abnormal nervous system morphology|ki"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

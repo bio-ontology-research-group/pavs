@@ -1,0 +1,177 @@
+{
+  "id": "PAVS:M0000594",
+  "subject": {
+    "id": "PAVS:M0000594",
+    "sex": "FEMALE",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0010919",
+        "label": "Abnormal circulating homocysteine concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003235",
+        "label": "Hypermethioninemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:21517828",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/21517828/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000594",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000594",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000594_CBS",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CBS",
+                  "valueId": "NCBIGene:875"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000398165.8:c.969G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000021.9:g.43062381G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000381231.4:p.Trp323Ter"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr21",
+                  "pos": 43062381,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "stop_gained"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00291"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "liver:100|tibial_nerve:98|cerebellum:98|pancreas:94|cerebellar_hemisphere:92|thyroid_gland:91|ovary:89|skin:87|cerebral_cortex:85|endocervix:85|pituitary_gland:85|prostate_gland:85|ectocervix:77|fallopian_tube:77|frontal_cortex:77|hypothalamus:77|lung:77|anterior_cingulate_cortex:77|aorta:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of apoptotic process|L-homocysteine catabolic process|sulfur compound biosynthetic process|hydrogen sulfide biosynthetic process|homocysteine metabolic process|L-cysteine catabolic process|L-serine metabolic process|amino acid biosynthetic process|response to nutrient levels|L-cysteine biosynthetic process via L-cystathionine|L-serine catabolic process|DNA protection|cellular response to hypoxia|transsulfuration|L-cysteine biosynthetic process|L-cysteine biosynthetic process "
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "kyphoscoliosis|kyphosis|abnormal cartilage development|abnormal long bone hypertrophic chondrocyte zone|extramedullary hematopoiesis|blood vessel congestion|abnormal heart development|abnormal hair follicle morphology|pointed snout|delayed kidney development|kinked tail|short tail|enlarged liver|pale liver|abnormal hepatocyte morphology|enlarged sebaceous gland|abnormal lung development|wrinkled skin|enlarged spinous cells|hyperkeratosis|thin dermal layer|decreased body weight|decreased body siz"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

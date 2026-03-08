@@ -77,6 +77,7 @@ class OntologyIndex:
         self.embeddings: Optional[np.ndarray] = None
         self.embedding_labels: List[str] = []
         self.hpo_ancestors: Dict[str, Set[str]] = {}
+        self.phenotype_word_set: Set[str] = set()
 
         os.makedirs(cache_dir, exist_ok=True)
         self._build()
@@ -113,6 +114,10 @@ class OntologyIndex:
         if self.debug:
             print("[OntologyIndex] Building embeddings …")
         self._build_embeddings()
+
+        if self.debug:
+            print("[OntologyIndex] Building phenotype word set …")
+        self._build_phenotype_word_set()
 
         if self.debug:
             print("[OntologyIndex] Ready.")
@@ -175,18 +180,18 @@ class OntologyIndex:
 
     def _generate_abnormality_synonyms(self) -> None:
         """
-        For every HPO label matching "Abnormality of [the] X" — including
+        1. For every HPO label matching "Abnormality of [the] X" — including
         synonyms, not just primary labels — add "X abnormality" and
         "X abnormalities" as synthetic synonyms.
 
-        Also generates a singular form when the last word of X ends in 's'
-        but not 'ss' (e.g. "limbs"→"limb", "hands"→"hand") so that both
-        "limb abnormalities" and "limbs abnormalities" resolve to
-        HP:0040064 "Abnormality of limbs".
+        2. For every label containing "ganglia" or "ganglion", generate the
+        opposite form (e.g. "basal ganglion" from "basal ganglia") as a
+        synthetic synonym.
 
         NOTE: delete the embeddings cache after this change so the new
         synonym labels are included in the ANN index.
         """
+        # --- Part 1: Abnormality of X ---
         pattern = re.compile(r"^abnormality of (?:the )?(.+)$", re.I)
         seen_pairs: set = set()
 
@@ -196,8 +201,6 @@ class OntologyIndex:
                 continue
             noun = m.group(1).strip()
 
-            # Build set of noun forms: original + singular if noun ends in
-            # a non-doubled 's' (limbs→limb, hands→hand; skip thickness, loss)
             noun_forms = {noun}
             words = noun.split()
             last = words[-1] if words else ""
@@ -217,6 +220,15 @@ class OntologyIndex:
                         if pair in seen_pairs:
                             continue
                         seen_pairs.add(pair)
+                        self._add_label(term_id, syn)
+
+        # --- Part 2: Ganglion/Ganglia expansion ---
+        for label_lower, term_ids in list(self.exact_map.items()):
+            if "ganglia" in label_lower or "ganglion" in label_lower:
+                for term_id in term_ids:
+                    # Switch ganglia <-> ganglion
+                    syn = label_lower.replace("ganglia", "@@@").replace("ganglion", "ganglia").replace("@@@", "ganglion")
+                    if syn != label_lower:
                         self._add_label(term_id, syn)
 
     # ------------------------------------------------------------------
@@ -326,6 +338,34 @@ class OntologyIndex:
             A.add_word(label_lower, label_lower)
         A.make_automaton()
         self.ac_automaton = A
+
+    # ------------------------------------------------------------------
+    # Phenotype word set (for NER n-gram pre-filtering)
+    # ------------------------------------------------------------------
+
+    _PHENOTYPE_WORD_STOPWORDS = frozenset({
+        "of", "the", "and", "with", "abnormality", "abnormalities",
+        "increased", "decreased", "abnormal", "type", "that", "this",
+        "for", "from", "are", "was", "were", "been", "has", "have",
+    })
+
+    def _build_phenotype_word_set(self) -> None:
+        """
+        Extract single words (>=4 chars, excluding stopwords) from all
+        HPO-related exact_map keys. Used as a cheap pre-filter: only n-grams
+        containing at least one word in this set proceed to embedding.
+        """
+        words: Set[str] = set()
+        for label_lower, term_ids in self.exact_map.items():
+            # Only include labels that map to at least one HPO phenotype term
+            if not any(tid.startswith("HP:") for tid in term_ids):
+                continue
+            for word in label_lower.split():
+                if len(word) >= 4 and word not in self._PHENOTYPE_WORD_STOPWORDS:
+                    words.add(word)
+        self.phenotype_word_set = words
+        if self.debug:
+            print(f"[OntologyIndex] phenotype_word_set: {len(words)} words")
 
     # ------------------------------------------------------------------
     # Embeddings

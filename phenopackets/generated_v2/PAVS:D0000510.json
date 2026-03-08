@@ -1,0 +1,278 @@
+{
+  "id": "PAVS:D0000510",
+  "subject": {
+    "id": "PAVS:D0000510",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000133",
+        "label": "Gonadal dysgenesis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000156",
+        "label": "Sensorineural hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000407",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Primary amenorrhea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000786",
+        "label": "Increased circulating gonadotropin level"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000837",
+        "label": "Osteoporosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000939",
+        "label": "Spastic diplegia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001264",
+        "label": "Hyporeflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001265",
+        "label": "Motor delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001270",
+        "label": "Areflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001284",
+        "label": "Pes cavus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001761",
+        "label": "Talipes equinovarus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001762",
+        "label": "Gait ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002066",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Phenotypic variability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003812",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Sensorimotor neuropathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007141",
+        "label": "Limited extraocular movements"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007941",
+        "label": "HP:0007941"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009300",
+        "label": "Perrault syndrome 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000510",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009300",
+          "label": "Perrault syndrome 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000510",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000510_HSD17B4",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "HSD17B4",
+                  "valueId": "NCBIGene:3295"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.0678e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.5400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "thyroid_gland:100|liver:98|adrenal_gland:96|lung:94|endocervix:92|mammary_gland:91|vagina:91|cervical_vertebra:87|ectocervix:87|omental_fat_pad:87|pituitary_gland:87|prostate_gland:87|aorta:87|subcutaneous_adipose_tissue:87|tibial_nerve:87|uterus:87"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "androgen metabolic process|fatty acid metabolic process|lipid metabolic process|osteoblast differentiation|fatty acid beta-oxidation|fatty acid beta-oxidation using acyl-CoA oxidase|fatty acid biosynthetic process|very long-chain fatty-acyl-CoA metabolic process|medium-chain fatty-acyl-CoA metabolic process|estrogen metabolic process"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal sternum morphology|enlarged heart|enlarged adrenal glands|abnormal spleen morphology|tremors|Purkinje cell degeneration|abnormal male reproductive system morphology|abnormal testis morphology|small testis|seminiferous tubule degeneration|abnormal spermatogenesis|decreased body weight|cataract|irregularly shaped pupil|abnormal iris morphology|increased anxiety-related response|ataxia|impaired coordination|abnormal gait|limb grasping|abnormal lipid level|abnormal intestinal absorption|abn"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "id": "PAVS:D0000626",
+  "subject": {
+    "id": "PAVS:D0000626",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0000508",
+        "label": "syndromic intellectual disability"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000626",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0000508",
+          "label": "syndromic intellectual disability"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000626",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000626_QKI",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "QKI",
+                  "valueId": "NCBIGene:9444"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9613e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.4900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cervical_vertebra:100|tibial_nerve:98|substantia_nigra:96|amygdala:94|hippocampus:92|caudate_nucleus:91|putamen:89|hypothalamus:87|nucleus_accumbens:85|anterior_cingulate_cortex:83|subcutaneous_adipose_tissue:83|cerebral_cortex:79|frontal_cortex:79|lung:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "RNA splicing|vascular associated smooth muscle cell differentiation|myofibroblast contraction|microglia differentiation|regulation of translation|positive regulation of DNA-templated transcription|mRNA stabilization|mRNA processing|regulation of mRNA splicing, via spliceosome|regulation of multicellular organismal development|negative regulation of translation|regulation of epithelial to mesenchymal transition|negative regulation of 3'-UTR-mediated mRNA stabilization|negative regulation of macro"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal angiogenesis|abnormal heart morphology|abnormal heart development|abnormal heart looping|enlarged heart|tremors|Purkinje cell degeneration|abnormal myelination|demyelination|open neural tube|wavy neural tube|abnormal oligodendrocyte morphology|abnormal spermatogenesis|abnormal stationary movement|abnormal locomotor behavior|ataxia|decreased locomotor activity|impaired coordination|abnormal gait|short stride length|increased grooming behavior|abnormal blood vessel morphology|abnormal vas"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

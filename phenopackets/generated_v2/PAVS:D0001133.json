@@ -1,0 +1,148 @@
+{
+  "id": "PAVS:D0001133",
+  "subject": {
+    "id": "PAVS:D0001133",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001751",
+        "label": "Abnormal vestibular function"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012977",
+        "label": "autosomal recessive nonsyndromic hearing loss 1B"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001133",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012977",
+          "label": "autosomal recessive nonsyndromic hearing loss 1B"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001133",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001133_GJB6",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GJB6",
+                  "valueId": "NCBIGene:10804"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.4146e-05"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.5240e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "vagina:100|esophagus_mucosa:98|lower_leg_skin:96|suprapubic_skin:94|cerebral_cortex:92|anterior_cingulate_cortex:92|frontal_cortex:89|nucleus_accumbens:87|caudate_nucleus:85|amygdala:83|putamen:83|substantia_nigra:79|hypothalamus:77|hippocampus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "gap junction-mediated intercellular transport|sinoatrial node development|maintenance of blood-brain barrier|gap junction assembly|sensory perception of sound|cell communication|transmembrane transport|cell communication by electrical coupling|cell-cell signaling"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "organ of Corti degeneration|abnormal stria vascularis morphology|abnormal sebaceous gland morphology|enlarged sebaceous gland|abnormal epidermal layer morphology|hyperkeratosis|increased anxiety-related response|deafness|decreased vertical activity|abnormal nervous system physiology|greasy coat|abnormal hair cell physiology|cochlear hair cell degeneration|abnormal stria vascularis vasculature morphology|cochlear inner hair cell degeneration|cochlear outer hair cell degeneration|absent endocochle"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -7,3 +7,6 @@ ambiguity_queue.json
 unique_unmatched_terms.json
 master_data_v1.tsv
 scripts/a.csv
+# Exclude from git tracking but keep locally
+data/phenotypes/ahmed-variants.tsv
+phenopackets/0.1.26/

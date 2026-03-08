@@ -1,0 +1,306 @@
+{
+  "id": "PAVS:D0001303",
+  "subject": {
+    "id": "PAVS:D0001303",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000510",
+        "label": "Rod-cone dystrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000529",
+        "label": "Progressive visual loss"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000550",
+        "label": "Undetectable electroretinogram"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000608",
+        "label": "Macular degeneration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000618",
+        "label": "Blindness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000648",
+        "label": "Optic atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000709",
+        "label": "Psychosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000726",
+        "label": "Dementia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000739",
+        "label": "Anxiety"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001260",
+        "label": "Dysarthria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001300",
+        "label": "Parkinsonism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001317",
+        "label": "Abnormal cerebellum morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001336",
+        "label": "Myoclonus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001922",
+        "label": "Vacuolated lymphocytes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002059",
+        "label": "Cerebral atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002074",
+        "label": "Increased neuronal autofluorescent lipopigment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002361",
+        "label": "Psychomotor deterioration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002505",
+        "label": "Loss of ambulation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003205",
+        "label": "Curvilinear intracellular accumulation of autofluorescent lipopigment storage material"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003208",
+        "label": "Fingerprint intracellular accumulation of autofluorescent lipopigment storage material"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003463",
+        "label": "Increased extraneuronal autofluorescent lipopigment"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008767",
+        "label": "neuronal ceroid lipofuscinosis 3"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001303",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008767",
+          "label": "neuronal ceroid lipofuscinosis 3"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001303",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001303_CLN3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "CLN3",
+                  "valueId": "NCBIGene:1201"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "5.3225e-14"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0220e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "blood:100|spleen:98|lung:96|thyroid_gland:96|transverse_colon:96|ectocervix:91|endocervix:91|fallopian_tube:91|ileum:91|lower_leg_skin:91|mammary_gland:91|ovary:91|prostate_gland:91|suprapubic_skin:91|tibial_nerve:91|urinary_bladder:91|uterus:91|vagina:91|cerebellar_hemisphere:91|cerebellum:91"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of autophagosome maturation|L-arginine transmembrane transport|lysosomal lumen acidification|regulation of autophagosome size|regulation of cellular response to osmotic stress|vesicle transport along microtubule|amino acid transport|Golgi to lysosome transport|regulation of arginine biosynthetic process|glycerophospholipid biosynthetic process|neuromuscular process controlling balance|autophagosome maturation|regulation of synaptic transmission, GABAergic|amyloid precursor protein cat"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal liver morphology|abnormal hepatocyte morphology|tremors|abnormal cerebral cortex morphology|abnormal hippocampus morphology|abnormal dentate gyrus morphology|abnormal cerebellar Purkinje cell layer|decreased body weight|abnormal retina morphology|retina degeneration|decreased retina photoreceptor cell number|impaired coordination|abnormal gait|short stride length|polydipsia|limb grasping|polyuria|premature death|abnormal kidney morphology|abnormal brain morphology|abnormal fertility/fec"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

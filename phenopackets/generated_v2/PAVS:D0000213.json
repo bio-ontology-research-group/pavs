@@ -1,0 +1,137 @@
+{
+  "id": "PAVS:D0000213",
+  "subject": {
+    "id": "PAVS:D0000213",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:261768",
+        "label": "OMIM:261768"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000213",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:261768",
+          "label": "OMIM:261768"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000213",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000213_GLI2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GLI2",
+                  "valueId": "NCBIGene:2736"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "3.6400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ovary:100|uterus:98|endocervix:96|ectocervix:94|skin:94|fallopian_tube:91|esophagogastric_junction:89|muscle_layer_of_esophagus:89|tibial_artery:89|sigmoid_colon:83|tibial_nerve:83|urinary_bladder:83|coronary_artery:77|prostate_gland:77|testis:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "heart development|positive regulation of DNA replication|branching morphogenesis of an epithelial tube|hindbrain development|osteoblast differentiation|embryonic digestive tract development|spinal cord dorsal/ventral patterning|odontogenesis of dentin-containing tooth|floor plate formation|proximal/distal pattern formation|neuron development|smoothened signaling pathway|hindgut morphogenesis|osteoblast development|mammary gland development|positive regulation of smoothened signaling pathway|pitu"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "delayed bone ossification|abnormal basioccipital bone morphology|short maxilla|abnormal basisphenoid bone morphology|abnormal frontal bone morphology|abnormal parietal bone morphology|abnormal vertebral body morphology|decreased chondrocyte number|absent maxillary shelf|absent palatine bone horizontal plate|microcephaly|abnormal foregut morphology|increased rib number|short limbs|polydactyly|small cerebellum|abnormal cerebellar foliation|thin external granule cell layer|exencephaly|abnormal floo"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

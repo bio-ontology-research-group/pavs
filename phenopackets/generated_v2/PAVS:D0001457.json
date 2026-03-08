@@ -1,0 +1,355 @@
+{
+  "id": "PAVS:D0001457",
+  "subject": {
+    "id": "PAVS:D0001457",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000511",
+        "label": "Vertical supranuclear gaze palsy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000709",
+        "label": "Psychosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000726",
+        "label": "Dementia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001251",
+        "label": "Ataxia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001252",
+        "label": "Hypotonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001257",
+        "label": "Spasticity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001260",
+        "label": "Dysarthria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001332",
+        "label": "Dystonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001744",
+        "label": "Splenomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001791",
+        "label": "Fetal ascites"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001982",
+        "label": "Sea-blue histiocytosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002015",
+        "label": "Dysphagia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002185",
+        "label": "Neurofibrillary tangles"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002240",
+        "label": "Hepatomegaly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002371",
+        "label": "Loss of speech"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002524",
+        "label": "Cataplexy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002529",
+        "label": "Neuronal loss in central nervous system"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003349",
+        "label": "Low cholesterol esterification rate"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003464",
+        "label": "obsolete Abnormal cholesterol homeostasis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003593",
+        "label": "Infantile onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003640",
+        "label": "CNS foam cells"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003674",
+        "label": "Onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003812",
+        "label": "Phenotypic variability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003812",
+        "label": "Phenotypic variability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004333",
+        "label": "Bone-marrow foam cells"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006579",
+        "label": "Prolonged neonatal jaundice"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006583",
+        "label": "Fatal liver failure in infancy"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009757",
+        "label": "Niemann-Pick disease, type C1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001457",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009757",
+          "label": "Niemann-Pick disease, type C1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001457",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001457_NPC1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "NPC1",
+                  "valueId": "NCBIGene:4864"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.0265e-11"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "6.7600e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cervical_vertebra:100|lung:98|skin:96|adrenal_gland:94|tibial_nerve:92|minor_salivary_gland:91|lower_leg_skin:89|aorta:89|tibial_artery:85|endocervix:83|uterus:83|vagina:83|ovary:77|suprapubic_skin:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "membrane raft organization|establishment of protein localization to membrane|gene expression|lipid transport|response to cadmium ion|intracellular lipid transport|intracellular cholesterol transport|autophagy|intestinal cholesterol absorption|cholesterol metabolic process|lysosomal transport|negative regulation of epithelial cell apoptotic process|bile acid metabolic process|cholesterol transport|symbiont entry into host cell|sterol transport|cholesterol homeostasis|glycoprotein biosynthetic pro"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "impaired fertilization|abnormal liver morphology|enlarged liver|dilated liver sinusoidal space|pale liver|abnormal hepatocyte morphology|enlarged spleen|tremors|decreased brain size|decreased corpus callosum size|abnormal cerebral cortex morphology|abnormal olfactory bulb morphology|abnormal pons morphology|small cerebellum|abnormal cerebellum anterior vermis morphology|abnormal cerebellum posterior vermis morphology|Purkinje cell degeneration|abnormal Purkinje cell morphology|decreased Purkinje"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

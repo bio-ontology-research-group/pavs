@@ -1,0 +1,172 @@
+{
+  "id": "PAVS:P0002022",
+  "subject": {
+    "id": "PAVS:P0002022",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P7M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0002022",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0002022",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0002022_JAK3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "JAK3",
+                  "valueId": "NCBIGene:3718"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000458235.7:c.1142+1G>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.17841388G>A"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 17841388,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "splice_donor_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "7.161e-07"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.5795e-23"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "9.3300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|blood:98|ovary:96|lung:94|ileum:92|fallopian_tube:91|omental_fat_pad:89|endocervix:87|thyroid_gland:85|mammary_gland:83|prostate_gland:83|renal_medulla:83|coronary_artery:77|subcutaneous_adipose_tissue:77|cerebellum:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of thymocyte apoptotic process|negative regulation of interleukin-12 production|response to interleukin-2|growth hormone receptor signaling pathway via JAK-STAT|interleukin-4-mediated signaling pathway|regulation of leukocyte cell-cell adhesion|interleukin-7-mediated signaling pathway|response to interleukin-15|response to interleukin-4|enzyme-linked receptor protein signaling pathway|adaptive immune response|T cell homeostasis|immune system process|interleukin-9-mediated sig"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "increased leukocyte cell number|increased neutrophil cell number|increased monocyte cell number|decreased leukocyte cell number|abnormal erythropoiesis|rectal prolapse|abnormal spleen morphology|enlarged spleen|small spleen|spleen hypoplasia|enlarged lymph nodes|abnormal thymus morphology|small thymus|thymus cortex hypoplasia|decreased thymocyte number|cataract|decreased anxiety-related response|hyperactivity|no spontaneous movement|decreased exploration in new environment|abnormal myelopoiesis|"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

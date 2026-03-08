@@ -1,0 +1,299 @@
+{
+  "id": "PAVS:D0000427",
+  "subject": {
+    "id": "PAVS:D0000427",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000112",
+        "label": "Nephropathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000213",
+        "label": "Full cheeks"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000293",
+        "label": "Smooth philtrum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000319",
+        "label": "Protruding ear"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000411",
+        "label": "Rod-cone dystrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000510",
+        "label": "Hypermetropia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000540",
+        "label": "Pectus excavatum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000767",
+        "label": "Narrow chest"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000774",
+        "label": "Cutis laxa"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000973",
+        "label": "Joint hypermobility"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001382",
+        "label": "Hip dysplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001385",
+        "label": "Frontal bossing"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002007",
+        "label": "Stage 5 chronic kidney disease"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003774",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Sagittal craniosynostosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004442",
+        "label": "Bone marrow hypocellularity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005528",
+        "label": "Recurrent pneumonia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006532",
+        "label": "Broad distal phalanx of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009836",
+        "label": "Short distal phalanx of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009882",
+        "label": "Broad phalanx of the toes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010174",
+        "label": "Cutaneous finger syndactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010554",
+        "label": "HP:0010554"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013719",
+        "label": "cranioectodermal dysplasia 4"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000427",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013719",
+          "label": "cranioectodermal dysplasia 4"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000427",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000427_WDR19",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "WDR19",
+                  "valueId": "NCBIGene:57728"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.3650e-23"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.3300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "ovary:100|fallopian_tube:98|thyroid_gland:96|pituitary_gland:94|uterus:92|endocervix:91|tibial_nerve:89|cerebellum:87|cerebellar_hemisphere:85|ectocervix:83|aorta:81|testis:79|coronary_artery:77|lung:77|vagina:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "cilium assembly|intraciliary anterograde transport|cilium organization|protein-containing complex assembly|cell projection organization|intraciliary retrograde transport|protein localization to membrane|protein localization to ciliary membrane|protein localization to non-motile cilium"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal tympanic ring morphology|short mandible|short premaxilla|short maxilla|cleft palate|abnormal vertebrae morphology|abnormal rib morphology|rib bifurcation|rib fusion|polyphalangy|abnormal cranium morphology|abnormal maxilla morphology|polydactyly|ectopic digits|abnormal myotome development|exencephaly|anophthalmia|abnormal somite development|absent tibia|abnormal premaxilla morphology|abnormal craniofacial development|abnormal spine curvature|abnormal dermomyotome development|split stern"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

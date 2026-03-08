@@ -58,6 +58,24 @@ def sparql_update(opener, auth_url: str, query: str) -> bool:
         return False
 
 
+def sparql_query(opener, auth_url: str, query: str) -> bool:
+    """Send a query (e.g. CALL ...) to /sparql-auth."""
+    params = urllib.parse.urlencode({"query": query, "format": "application/json"})
+    url = f"{auth_url}?{params}"
+    req = urllib.request.Request(url)
+    try:
+        with opener.open(req, timeout=600) as resp:
+            resp.read()
+        return True
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")[:300]
+        print(f"  HTTP {e.code}: {body}")
+        return False
+    except Exception as e:
+        print(f"  Error: {e}")
+        return False
+
+
 def sparql_count(sparql_url: str, graph: str) -> int:
     query = f"SELECT (COUNT(*) AS ?n) WHERE {{ GRAPH <{graph}> {{ ?s ?p ?o }} }}"
     url = sparql_url + "?" + urllib.parse.urlencode({
@@ -73,18 +91,32 @@ def sparql_count(sparql_url: str, graph: str) -> int:
 
 def load_file(opener, auth_url: str, sparql_url: str,
               fname: str, graph: str, virtuoso_dir: str) -> bool:
-    file_uri = f"file://{virtuoso_dir.rstrip('/')}/{fname}"
+    virtuoso_dir = virtuoso_dir.rstrip("/")
     print(f"  {fname} → <{graph}>")
     print(f"    CLEAR …", end=" ", flush=True)
     sparql_update(opener, auth_url, f"CLEAR SILENT GRAPH <{graph}>")
-    print(f"LOAD …", end=" ", flush=True)
-    ok = sparql_update(opener, auth_url, f"LOAD <{file_uri}> INTO GRAPH <{graph}>")
-    if ok:
-        n = sparql_count(sparql_url, graph)
+    
+    print(f"QUEUE …", end=" ", flush=True)
+    # 1. Clear previous loader state for this file
+    # (Using CALL instead of raw DELETE because /sparql-auth expects SPARQL or CALL)
+    sparql_query(opener, auth_url, f"CALL DB.DBA.loader_status('{virtuoso_dir}/{fname}', 0)")
+    
+    # 2. Add to bulk loader queue
+    ld_dir_query = f"CALL DB.DBA.ld_dir('{virtuoso_dir}', '{fname}', '{graph}')"
+    sparql_query(opener, auth_url, ld_dir_query)
+    
+    print(f"RUN …", end=" ", flush=True)
+    # 3. Execute the loader
+    sparql_query(opener, auth_url, "CALL DB.DBA.rdf_loader_run()")
+    
+    # Check if loaded
+    n = sparql_count(sparql_url, graph)
+    if n > 0:
         print(f"OK  ({n:,} triples)")
+        return True
     else:
-        print("FAILED")
-    return ok
+        print("FAILED (check Virtuoso load_list)")
+        return False
 
 
 def wait_for_virtuoso(endpoint: str, max_seconds: int = 120):

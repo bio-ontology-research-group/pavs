@@ -1,0 +1,327 @@
+{
+  "id": "PAVS:D0000985",
+  "subject": {
+    "id": "PAVS:D0000985",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000020",
+        "label": "Urinary incontinence"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000762",
+        "label": "Decreased nerve conduction velocity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000764",
+        "label": "Peripheral axonal degeneration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001064",
+        "label": "Hyporeflexia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001265",
+        "label": "Failure to thrive"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Intrauterine growth retardation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001511",
+        "label": "Small for gestational age"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001518",
+        "label": "Decreased fetal movement"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001558",
+        "label": "Weak cry"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001612",
+        "label": "Premature birth"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001622",
+        "label": "Talipes equinovarus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001762",
+        "label": "Constipation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002019",
+        "label": "Degeneration of anterior horn cells"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002398",
+        "label": "Distal muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002460",
+        "label": "Tachypnea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002789",
+        "label": "EMG: neuropathic changes"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003445",
+        "label": "Limb muscle weakness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003690",
+        "label": "Distal amyotrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003693",
+        "label": "Inspiratory stridor"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005348",
+        "label": "Ventilator dependence with inability to wean"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005946",
+        "label": "Diaphragmatic paralysis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0006597",
+        "label": "Spinal muscular atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007269",
+        "label": "Denervation of the diaphragm"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009109",
+        "label": "Diaphragmatic eventration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009110",
+        "label": "Camptodactyly of finger"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100490",
+        "label": "HP:0100490"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011436",
+        "label": "autosomal recessive distal spinal muscular atrophy 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000985",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011436",
+          "label": "autosomal recessive distal spinal muscular atrophy 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000985",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000985_IGHMBP2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "IGHMBP2",
+                  "valueId": "NCBIGene:3508"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.1887e-22"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0190e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|esophagogastric_junction:98|sigmoid_colon:96|uterus:94|tibial_artery:92|muscle_layer_of_esophagus:91|aorta:89|ectocervix:87|endocervix:85|cerebellum:85|prostate_gland:81|cerebellar_hemisphere:81|coronary_artery:77|fallopian_tube:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "DNA damage response"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal heart morphology|abnormal myocardial fiber morphology|thin ventricular wall|abnormal heart valve morphology|muscle degeneration|hindlimb paralysis|motor neuron degeneration|abnormal innervation pattern to muscle|abnormal neuromuscular synapse morphology|abnormal Schwann cell morphology|decreased body weight|weight loss|decreased body size|impaired coordination|abnormal gait|abnormal coat appearance|limb grasping|abnormal grip strength|abnormal motor coordination/balance|impaired rightin"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

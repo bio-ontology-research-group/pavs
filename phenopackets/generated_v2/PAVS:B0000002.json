@@ -1,0 +1,206 @@
+{
+  "id": "PAVS:B0000002",
+  "subject": {
+    "id": "PAVS:B0000002",
+    "sex": "UNKNOWN_SEX",
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ahmed-pmid28454995",
+        "description": "Source dataset: ahmed-pmid28454995"
+      },
+      {
+        "id": "PMID:28454995|24940677",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28454995|24940677/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012793",
+        "label": "hypouricemia, renal, 2"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:B0000002",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012793",
+          "label": "hypouricemia, renal, 2"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:B0000002",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:B0000002_SLC2A9|ETFB",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "SLC2A9|ETFB",
+                  "valueId": "NCBIGene:56606|2109"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000264784.8:c.1138C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000004.12:g.9890687G>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000264784.3:p.Arg380Trp"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr4",
+                  "pos": 9890687,
+                  "ref": "G",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135|GENO:0000136",
+                  "label": "heterozygous"
+                },
+                "xrefs": [
+                  "ClinVar:19635"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0.01)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(1)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00083"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "0.0001136"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "19635"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Conflicting classifications of pathogenicity"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.6878e-10"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0220e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cortex_of_kidney:100|urinary_bladder:98|muscle_layer_of_esophagus:96|esophagus_mucosa:94|liver:94|lung:94|minor_salivary_gland:94|prostate_gland:94|vagina:94|coronary_artery:83|endocervix:83|esophagogastric_junction:83|ileum:83|renal_medulla:83|aorta:83|thyroid_gland:83|tibial_artery:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "proton transmembrane transport|dehydroascorbic acid transport|urate transport|urate metabolic process|hexose transmembrane transport|D-glucose import across plasma membrane|transmembrane transport|D-glucose transmembrane transport|fructose transmembrane transport"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "hydronephrosis|kidney cortex cyst|decreased body weight|polydipsia|polyuria|kidney inflammation|no abnormal phenotype detected|dilated renal tubule|nephrolithiasis|decreased urine osmolality|renal interstitial fibrosis|increased circulating creatinine level|increased urine potassium level|increased urine sodium level|increased blood uric acid level|decreased urine pH|increased circulating magnesium level|abnormal renal reabsorption|prenatal lethality, incomplete penetrance|renal tubule atrophy|t"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

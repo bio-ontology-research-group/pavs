@@ -1,0 +1,133 @@
+{
+  "id": "PAVS:D0000346",
+  "subject": {
+    "id": "PAVS:D0000346",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008428",
+        "label": "septooptic dysplasia"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000346",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008428",
+          "label": "septooptic dysplasia"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000346",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000346_HESX1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "HESX1",
+                  "valueId": "NCBIGene:8820"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.2422e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "8.4000e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|endocervix:98|ovary:98|pituitary_gland:98|spleen:98|thyroid_gland:98|tibial_nerve:98|adrenal_gland:87|cervical_vertebra:87|coronary_artery:87|ectocervix:87|fallopian_tube:87|lower_leg_skin:87|lung:87|mammary_gland:87|prostate_gland:87|renal_medulla:87|aorta:87|skin:87|stomach:87|subcutaneous_adipose_tissue:87|substantia_nigra:87|suprapubic_skin:87|uterus:87|vagina:87"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of transcription by RNA polymerase II|brain development|pituitary gland development|forebrain development|regulation of transcription by RNA polymerase II|gene expression|regulation of DNA-templated transcription"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "cleft palate|abnormal craniofacial morphology|microcephaly|short snout|abnormal pituitary gland morphology|abnormal corpus callosum morphology|abnormal forebrain morphology|abnormal telencephalon morphology|abnormal hypothalamus morphology|abnormal telencephalon development|small embryonic telencephalon|abnormal eye development|anophthalmia|microphthalmia|abnormal eye morphology|absent corpus callosum|abnormal nose morphology|abnormal nasal cavity morphology|abnormal forebrain development|abnorm"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

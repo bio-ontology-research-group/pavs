@@ -1,0 +1,327 @@
+{
+  "id": "PAVS:D0001387",
+  "subject": {
+    "id": "PAVS:D0001387",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000013",
+        "label": "Hypoplasia of the uterus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000047",
+        "label": "Hypospadias"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000074",
+        "label": "Ureteropelvic junction obstruction"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000089",
+        "label": "Renal hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000093",
+        "label": "Proteinuria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000107",
+        "label": "Renal cyst"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000122",
+        "label": "Unilateral renal agenesis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000787",
+        "label": "Nephrolithiasis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000792",
+        "label": "Bicornuate uterus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000813",
+        "label": "obsolete Glucose intolerance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000833",
+        "label": "Biliary tract abnormality"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001080",
+        "label": "Exocrine pancreatic insufficiency"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001738",
+        "label": "Gout"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001997",
+        "label": "Cerebral cortical atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002120",
+        "label": "Pancreatic hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002594",
+        "label": "Elevated circulating hepatic transaminase concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002910",
+        "label": "Glycosuria"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003076",
+        "label": "Elevated circulating creatinine concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003259",
+        "label": "Onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003674",
+        "label": "Stage 5 chronic kidney disease"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003774",
+        "label": "Phenotypic variability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003812",
+        "label": "Abnormality of alkaline phosphatase level"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004379",
+        "label": "Maturity-onset diabetes of the young"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004904",
+        "label": "Decreased numbers of nephrons"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005563",
+        "label": "Multiple glomerular cysts"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0100611",
+        "label": "HP:0100611"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0007669",
+        "label": "renal cysts and diabetes syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001387",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0007669",
+          "label": "renal cysts and diabetes syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001387",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001387_HNF1B",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "HNF1B",
+                  "valueId": "NCBIGene:6928"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "2.3900e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "renal_medulla:100|cortex_of_kidney:98|pancreas:96|transverse_colon:94|stomach:92|ileum:91|testis:91|liver:87|lung:87|prostate_gland:83|urinary_bladder:81|fallopian_tube:79|ectocervix:77|endocervix:77|frontal_cortex:77|amygdala:77|hypothalamus:77|anterior_cingulate_cortex:77|pituitary_gland:77|sigmoid_colon:77"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "pancreas development|pronephros development|pronephric nephron tubule development|liver development|insulin secretion|animal organ development|positive regulation of DNA-templated transcription|regulation of transcription by RNA polymerase II|genitalia development|system development|positive regulation of transcription initiation by RNA polymerase II|kidney development|endocrine pancreas development|regulation of pronephros size"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "hyperglycemia|abnormal ectoderm development|failure to gastrulate|decreased embryo size|abnormal extraembryonic endoderm formation|embryonic growth arrest|abnormal developmental patterning|abnormal embryonic tissue morphology|abnormal extraembryonic tissue morphology|disorganized extraembryonic tissue|absent blastocoele|abnormal inner cell mass morphology|decreased circulating insulin level|decreased insulin secretion|pancreas fibrosis|pancreas lipomatosis|chronic pancreas inflammation|abnormal "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

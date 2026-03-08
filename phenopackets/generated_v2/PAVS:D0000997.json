@@ -1,0 +1,222 @@
+{
+  "id": "PAVS:D0000997",
+  "subject": {
+    "id": "PAVS:D0000997",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000483",
+        "label": "Astigmatism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000486",
+        "label": "Strabismus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000505",
+        "label": "Visual impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000545",
+        "label": "Myopia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000613",
+        "label": "Photophobia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000635",
+        "label": "Blue irides"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000639",
+        "label": "Nystagmus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001107",
+        "label": "Ocular albinism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003577",
+        "label": "Congenital onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007750",
+        "label": "Hypoplasia of the fovea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011364",
+        "label": "White hair"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008745",
+        "label": "oculocutaneous albinism type 1A"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000997",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008745",
+          "label": "oculocutaneous albinism type 1A"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000997",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000997_TYR",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TYR",
+                  "valueId": "NCBIGene:7299"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.1138e-21"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.3460e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "lower_leg_skin:100|suprapubic_skin:98|testis:96|aorta:94|coronary_artery:92|minor_salivary_gland:92|tibial_artery:92|caudate_nucleus:92|adrenal_gland:85|cerebral_cortex:85|cervical_vertebra:85|cortex_of_kidney:85|ectocervix:85|endocervix:85|esophagogastric_junction:85|esophagus_mucosa:85|fallopian_tube:85|frontal_cortex:85|amygdala:85|heart_left_ventricle:85|hippocampus:85|hypothalamus:85|ileum:85|liver:85|lung:85|mammary_gland:85|muscle_layer_of_esophagus:85|anterior_cingulate_cortex:85|nucleus_accumbens:85|omental_fat_pad:85|ovary:85|pancreas:85|pituitary_gland:85|prostate_gland:85|putamen:85|renal_medulla:85|sigmoid_colon:85|skeletal_muscle_tissue:85|skin:85|spleen:85|stomach:85|subcutaneous_adipose_tissue:85|substantia_nigra:85|thyroid_gland:85|tibial_nerve:85|atrium_auricular_region:85|transverse_colon:85|urinary_bladder:85|uterus:85|vagina:85|blood:85|cerebellar_hemisphere:85|cerebellum:85"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "eye pigmentation|response to cAMP|melanin biosynthetic process|melanin biosynthetic process from tyrosine|pigmentation|response to vitamin D|response to UV|response to blue light|eye pigment biosynthetic process|visual perception|developmental pigmentation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal cell morphology|diluted coat color|irregular coat pigmentation|belly spot|absent hair follicle melanin granules|shiny fur|mottled coat|abnormal retina photoreceptor morphology|absent skin pigmentation|abnormal keratinocyte apoptosis|abnormal eye pigmentation|abnormal retina morphology|retina degeneration|decreased retina photoreceptor cell number|abnormal coat appearance|male infertility|abnormal coat/hair pigmentation|prenatal lethality|premature death|abnormal vision|abnormal skin pig"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

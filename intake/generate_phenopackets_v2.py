@@ -74,6 +74,15 @@ def parse_pipe(val) -> list:
     return [x.strip() for x in str(val).split("|") if x.strip()]
 
 
+def parse_pipe_parallel(val, length=None) -> list:
+    if not safe(val):
+        return [""] * (length if length else 0)
+    parts = [x.strip() for x in str(val).split("|")]
+    if length and len(parts) < length:
+        parts.extend([""] * (length - len(parts)))
+    return parts
+
+
 def parse_hgvsg(hgvsg: str):
     """Extract chrom, pos, ref, alt from HGVS g. notation NC_000003.12:g.4417183A>G"""
     if not safe(hgvsg):
@@ -214,8 +223,15 @@ def build_phenopacket(row: pd.Series) -> dict:
             "excluded": True,
         })
 
-    # Ancestry: HANCESTRO:0852 for Saudi cases
-    if is_saudi:
+    # Ancestry: Use ancestry_id/label from annotated file if present, else fallback for Saudi
+    ancestry_id = str(row.get("ancestry_id", "")).strip()
+    ancestry_label = str(row.get("ancestry_label", "")).strip()
+    if safe(ancestry_id):
+        phenotypic_features.append({
+            "type": {"id": ancestry_id, "label": ancestry_label if safe(ancestry_label) else ancestry_id},
+            "excluded": False,
+        })
+    elif is_saudi:
         phenotypic_features.append({
             "type": {"id": "HANCESTRO:0852", "label": "Middle Eastern"},
             "excluded": False,
@@ -238,76 +254,114 @@ def build_phenopacket(row: pd.Series) -> dict:
                 ol = omim_labels[i] if i < len(omim_labels) else oid
                 diseases.append({"term": {"id": oid, "label": ol if safe(ol) else oid}})
 
-    # Variant interpretation
-    gene = str(row.get("gene_symbol", "")).strip()
-    hgvsc = str(row.get("vep_hgvsc", row.get("variant_cdna", ""))).strip()
-    hgvsp = str(row.get("vep_hgvsp", row.get("variant_protein", ""))).strip()
-    hgvsg = str(row.get("vep_hgvsg", row.get("variant_genomic_grch38", ""))).strip()
-    acmg_raw = str(row.get("acmg_classification", "")).strip()
-    acmg_label = acmg_code(acmg_raw) if safe(acmg_raw) else "UNCERTAIN_SIGNIFICANCE"
+    # Variant interpretations
+    genes = parse_pipe_parallel(row.get("gene_symbol", ""))
+    num_vars = len(genes)
+    hgvscs = parse_pipe_parallel(row.get("vep_hgvsc", row.get("variant_cdna", "")), num_vars)
+    hgvsp_annotated = row.get("vep_hgvsp", row.get("variant_protein", ""))
+    hgvsp_list = parse_pipe_parallel(hgvsp_annotated, num_vars)
+    hgvsg_annotated = row.get("vep_hgvsg", row.get("variant_genomic_grch38", ""))
+    hgvsg_list = parse_pipe_parallel(hgvsg_annotated, num_vars)
+    acmg_classes = parse_pipe_parallel(row.get("acmg_classification", ""), num_vars)
+    zyg_ids = parse_pipe_parallel(row.get("zygosity_id", ""), num_vars)
+    variant_originals = parse_pipe_parallel(row.get("variant_original", ""), num_vars)
+    gene_entrezs = parse_pipe_parallel(row.get("gene_entrez_id", ""), num_vars)
+
     result_status = str(row.get("result_status", "")).strip().upper()
     progress = "SOLVED" if result_status == "SOLVED" else "IN_PROGRESS"
 
-    zyg_id = str(row.get("zygosity_id", "")).strip()
-    zyg_label = ZYGOSITY_LABEL.get(zyg_id, "heterozygous")
+    genomic_interpretations = []
 
-    gene_entrez = str(row.get("gene_entrez_id", "")).strip()
+    for i in range(num_vars):
+        gene = genes[i]
+        hgvsc = hgvscs[i]
+        hgvsp = hgvsp_list[i]
+        hgvsg = hgvsg_list[i]
+        acmg_raw = acmg_classes[i]
+        acmg_label = acmg_code(acmg_raw) if safe(acmg_raw) else "UNCERTAIN_SIGNIFICANCE"
+        zyg_id = zyg_ids[i]
+        zyg_label = ZYGOSITY_LABEL.get(zyg_id, "heterozygous")
+        variant_original = variant_originals[i]
+        gene_entrez = gene_entrezs[i]
 
-    # Build variation descriptor
-    expressions = []
-    if safe(hgvsc):
-        expressions.append({"syntax": "hgvs.c", "value": hgvsc})
-    if safe(hgvsg):
-        expressions.append({"syntax": "hgvs.g", "value": hgvsg})
-    if safe(hgvsp):
-        expressions.append({"syntax": "hgvs.p", "value": hgvsp})
+        # Build variation descriptor
+        expressions = []
+        if safe(hgvsc):
+            expressions.append({"syntax": "hgvs.c", "value": hgvsc})
+        if safe(hgvsg):
+            expressions.append({"syntax": "hgvs.g", "value": hgvsg})
+        if safe(hgvsp):
+            expressions.append({"syntax": "hgvs.p", "value": hgvsp})
 
-    vcf_rec = parse_hgvsg(hgvsg)
+        vcf_rec = parse_hgvsg(hgvsg)
 
-    var_desc: dict = {
-        "id": f"{pavs_id}_{gene}",
-        "moleculeContext": "genomic",
-    }
-    if safe(gene):
-        gene_ctx: dict = {"symbol": gene}
-        if safe(gene_entrez):
-            gene_ctx["valueId"] = f"NCBIGene:{gene_entrez}"
-        var_desc["geneContext"] = gene_ctx
-    if expressions:
-        var_desc["expressions"] = expressions
-    if vcf_rec:
-        var_desc["vcfRecord"] = vcf_rec
+        var_desc: dict = {
+            "id": f"{pavs_id}_{gene or 'var'}_{i}",
+            "moleculeContext": "genomic",
+        }
+        if safe(gene):
+            gene_ctx: dict = {"symbol": gene}
+            if safe(gene_entrez):
+                gene_ctx["valueId"] = f"NCBIGene:{gene_entrez}"
+            var_desc["geneContext"] = gene_ctx
+        if expressions:
+            var_desc["expressions"] = expressions
+        if vcf_rec:
+            var_desc["vcfRecord"] = vcf_rec
 
-    # Zygosity as allelic state
-    if zyg_id:
-        var_desc["allelicState"] = {
-            "id": zyg_id,
-            "label": zyg_label,
+        # Zygosity as allelic state
+        if zyg_id:
+            var_desc["allelicState"] = {
+                "id": zyg_id,
+                "label": zyg_label,
+            }
+
+        # Add extra variant annotations as extensions in variationDescriptor
+        v_exts = []
+        # VEP and others
+        for col in ["vep_consequence", "vep_impact", "vep_sift", "vep_polyphen", "vep_domains",
+                    "vep_cadd_phred", "vep_revel", "vep_alphamissense", "vep_spliceai_max",
+                    "vep_af_gnomad", "af_saudi", "ac_saudi", "clinvar_allele_id", "clinvar_sig",
+                    "gnomad_pli", "gnomad_loeuf", "expressed_in"]:
+            val_raw = row.get(col)
+            if safe(val_raw):
+                val_parts = parse_pipe_parallel(val_raw, num_vars)
+                if i < len(val_parts) and safe(val_parts[i]):
+                    v_exts.append({"name": col, "value": str(val_parts[i])})
+
+        # Always add variant_original
+        if safe(variant_original):
+            v_exts.append({"name": "variant_original", "value": str(variant_original)})
+
+        # GO / Mouse (truncated for brevity in extensions)
+        for col in ["go_biological_process", "mouse_mp_labels"]:
+            val_raw = row.get(col)
+            if safe(val_raw):
+                val_parts = parse_pipe_parallel(val_raw, num_vars)
+                if i < len(val_parts) and safe(val_parts[i]):
+                    v_exts.append({"name": col, "value": str(val_parts[i])[:500]})
+
+        if v_exts:
+            var_desc["extensions"] = v_exts
+
+        # ClinVar Xref
+        clinvar_id_parts = parse_pipe_parallel(row.get("clinvar_allele_id", ""), num_vars)
+        if i < len(clinvar_id_parts) and safe(clinvar_id_parts[i]):
+            var_desc["xrefs"] = [f"ClinVar:{clinvar_id_parts[i]}"]
+
+        interp_status = "CAUSATIVE" if acmg_label in ("PATHOGENIC", "LIKELY_PATHOGENIC") else "CONTRIBUTORY"
+
+        variant_interpretation: dict = {
+            "acmgPathogenicityClassification": acmg_label,
+            "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+            "variationDescriptor": var_desc,
         }
 
-    # ClinVar
-    clinvar_id = str(row.get("clinvar_allele_id", "")).strip()
-    clinvar_sig = str(row.get("clinvar_sig", "")).strip()
-    if safe(clinvar_id):
-        var_desc["vcfRecord"] = var_desc.get("vcfRecord") or {}
-        # Add ClinVar reference to the descriptor
-        var_desc["xrefs"] = [f"ClinVar:{clinvar_id}"]
-        if safe(clinvar_sig):
-            var_desc["clinvarId"] = clinvar_id
-
-    interp_status = "CAUSATIVE" if acmg_label in ("PATHOGENIC", "LIKELY_PATHOGENIC") else "CONTRIBUTORY"
-
-    variant_interpretation: dict = {
-        "acmgPathogenicityClassification": acmg_label,
-        "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
-        "variationDescriptor": var_desc,
-    }
-
-    genomic_interpretation: dict = {
-        "subjectOrBiosampleId": pavs_id,
-        "interpretationStatus": interp_status,
-        "variantInterpretation": variant_interpretation,
-    }
+        genomic_interpretations.append({
+            "subjectOrBiosampleId": pavs_id,
+            "interpretationStatus": interp_status,
+            "variantInterpretation": variant_interpretation,
+        })
 
     # Inheritance
     inheritance_id = str(row.get("inheritance_id", "")).strip()
@@ -315,8 +369,8 @@ def build_phenopacket(row: pd.Series) -> dict:
     disease_with_inheritance = diseases.copy()
     if disease_with_inheritance and safe(inheritance_id):
         disease_with_inheritance[0]["modeOfInheritance"] = {
-            "id": inheritance_id,
-            "label": inheritance_label,
+            "id": inheritance_id.split("|")[0],
+            "label": inheritance_label.split("|")[0],
         }
 
     # Build interpretation
@@ -324,11 +378,11 @@ def build_phenopacket(row: pd.Series) -> dict:
         "id": f"interp-{pavs_id}",
         "progressStatus": progress,
     }
-    if disease_with_inheritance or safe(gene):
+    if disease_with_inheritance or genomic_interpretations:
         diag: dict = {}
         if disease_with_inheritance:
             diag["disease"] = disease_with_inheritance[0]["term"]
-        diag["genomicInterpretations"] = [genomic_interpretation]
+        diag["genomicInterpretations"] = genomic_interpretations
         interp_obj["diagnosis"] = diag
 
     # Individual extensions for consanguinity
@@ -365,16 +419,18 @@ def build_phenopacket(row: pd.Series) -> dict:
     if disease_with_inheritance:
         pp["diseases"] = disease_with_inheritance
 
-    if safe(gene):
+    if genomic_interpretations:
         pp["interpretations"] = [interp_obj]
 
     # PMID
     pmid = str(row.get("pmid", "")).strip()
     if safe(pmid):
-        pp["metaData"]["externalReferences"].append({
-            "id": f"PMID:{pmid}",
-            "reference": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
-        })
+        pmid_list = parse_pipe(pmid)
+        for p in pmid_list:
+            pp["metaData"]["externalReferences"].append({
+                "id": f"PMID:{p}",
+                "reference": f"https://pubmed.ncbi.nlm.nih.gov/{p}/",
+            })
 
     return pp
 

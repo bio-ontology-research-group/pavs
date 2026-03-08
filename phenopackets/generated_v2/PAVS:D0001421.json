@@ -1,0 +1,215 @@
+{
+  "id": "PAVS:D0001421",
+  "subject": {
+    "id": "PAVS:D0001421",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000028",
+        "label": "Cryptorchidism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000126",
+        "label": "Hydronephrosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002023",
+        "label": "Anal atresia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002564",
+        "label": "obsolete Malformation of the heart and great vessels"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002984",
+        "label": "Hypoplasia of the radius"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003241",
+        "label": "External genital hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003774",
+        "label": "Stage 5 chronic kidney disease"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004322",
+        "label": "Short stature"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009777",
+        "label": "Absent thumb"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0009778",
+        "label": "Short thumb"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013248",
+        "label": "Fanconi anemia complementation group O"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001421",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013248",
+          "label": "Fanconi anemia complementation group O"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001421",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001421_RAD51C",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "RAD51C",
+                  "valueId": "NCBIGene:5889"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.0641e-13"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1390e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|ectocervix:98|endocervix:98|ovary:98|tibial_artery:98|tibial_nerve:98|uterus:98|cerebellar_hemisphere:98|cerebellum:98|cerebral_cortex:83|coronary_artery:83|esophagogastric_junction:83|fallopian_tube:83|frontal_cortex:83|mammary_gland:83|muscle_layer_of_esophagus:83|pituitary_gland:83|prostate_gland:83|sigmoid_colon:83|aorta:83|skin:83|spleen:83|urinary_bladder:83|vagina:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "telomere maintenance via recombination|reciprocal meiotic recombination|sister chromatid cohesion|positive regulation of G2/M transition of mitotic cell cycle|double-strand break repair via homologous recombination|DNA recombination|replication fork processing|meiotic DNA recombinase assembly|supramolecular fiber organization|DNA damage response|DNA repair"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal female reproductive system morphology|absent corpus luteum|abnormal male reproductive system morphology|abnormal spermatogenesis|decreased embryo size|abnormal reproductive system physiology|infertility|male infertility|female infertility|decreased litter size|abnormal reproductive system morphology|abnormal seminiferous tubule morphology|oligozoospermia|decreased testis weight|abnormal female meiosis|abnormal spermatocyte morphology|arrest of male meiosis|embryonic lethality, complete "
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -65,6 +65,7 @@ OUTPUT_COLUMNS = [
     "variant_cdna",
     "variant_protein",
     "variant_genomic_grch38",
+    "variant_original",
     "variant_hgvs_valid",
     "zygosity_id",
     "zygosity_label",
@@ -759,6 +760,13 @@ def parse_ahmed_variants(path: str, limit: Optional[int] = None) -> List[dict]:
             acmg = safe_str(row.get(slot["acmg"], ""))
             if inh:
                 inheritance_vals.append(inh)
+            
+            # Use cdna + protein as raw variant info for this source
+            raw_parts = []
+            if cdna: raw_parts.append(cdna)
+            if protein: raw_parts.append(protein)
+            raw_var = ":".join(raw_parts)
+
             variants.append({
                 "gene": gene,
                 "cdna": cdna,
@@ -768,6 +776,7 @@ def parse_ahmed_variants(path: str, limit: Optional[int] = None) -> List[dict]:
                 "acmg_class": path_val if path_val else acmg,
                 "acmg_evidence": acmg,
                 "omim": omim,
+                "raw": raw_var,
             })
 
         rec["_raw_variants"] = variants
@@ -841,6 +850,14 @@ def parse_ahmed_pmid(path: str, limit: Optional[int] = None) -> List[dict]:
             zyg = safe_str(row.get(slot["zygosity"], ""))
             pmid_raw = safe_str(row.get(slot["pmid_col"], ""))
             pmids.extend(extract_pmid(pmid_raw))
+
+            # Combine genomic, cdna, protein as raw variant info
+            raw_parts = []
+            if gdna: raw_parts.append(gdna)
+            if cdna: raw_parts.append(cdna)
+            if protein: raw_parts.append(protein)
+            raw_var = ":".join(raw_parts)
+
             # gdna is GRCh38 format e.g. ChrX(GRCh38):g.78123223G>C
             variants.append({
                 "gene": gene,
@@ -851,6 +868,7 @@ def parse_ahmed_pmid(path: str, limit: Optional[int] = None) -> List[dict]:
                 "acmg_class": "",
                 "acmg_evidence": "",
                 "omim": "",
+                "raw": raw_var,
             })
 
         rec["_raw_variants"] = variants
@@ -987,6 +1005,7 @@ def parse_fawzan(path: str, limit: Optional[int] = None) -> List[dict]:
                     "acmg_class": "",
                     "acmg_evidence": "",
                     "omim": "",
+                    "raw": var_item,
                 })
 
         # Fix 5: parse HGMD entries for disease name and Ensembl genomic lookup
@@ -1024,12 +1043,15 @@ def parse_fawzan(path: str, limit: Optional[int] = None) -> List[dict]:
                                 "acmg_class": "",
                                 "acmg_evidence": "",
                                 "omim": "",
+                                "raw": genomic_str,
                             })
                         else:
                             # Update the first existing variant that lacks genomic coords
                             for v in variants:
                                 if not v.get("genomic"):
                                     v["genomic"] = genomic_str
+                                    # Update raw too to include genomic info if possible
+                                    v["raw"] = (v["raw"] + ";" + genomic_str) if v.get("raw") else genomic_str
                                     break
                     elif fields.get("Start", ".") not in (".", ""):
                         note_frag = f"HGMD:{cm_id};hg19_pos={fields['Start']};Ref={ref};Alt={alt}"
@@ -1125,6 +1147,7 @@ def parse_marwa(path: str, limit: Optional[int] = None) -> List[dict]:
                     "acmg_class": safe_str(row.get("pathogenicity", "")),
                     "acmg_evidence": "",
                     "omim": "",
+                    "raw": vp,
                 })
 
         rec["_raw_variants"] = variants
@@ -1194,6 +1217,7 @@ def parse_pmc6562004(path: str, limit: Optional[int] = None) -> List[dict]:
                     "acmg_class": "",
                     "acmg_evidence": "",
                     "omim": "",
+                    "raw": v,
                 })
 
         rec["_raw_variants"] = variants
@@ -1273,6 +1297,14 @@ def parse_pmc7082194(path: str, limit: Optional[int] = None) -> List[dict]:
             for i in range(max_vars):
                 c = cdna_parts[i] if i < len(cdna_parts) else ""
                 p = prot_parts[i] if i < len(prot_parts) else ""
+                # Use hgvs_raw as original if present, else construct from c/p
+                raw_var = hgvs_raw
+                if not raw_var:
+                    raw_parts = []
+                    if c: raw_parts.append(c)
+                    if p: raw_parts.append(p)
+                    raw_var = ":".join(raw_parts)
+
                 variants.append({
                     "gene": gene,
                     "cdna": c.strip(),
@@ -1282,6 +1314,7 @@ def parse_pmc7082194(path: str, limit: Optional[int] = None) -> List[dict]:
                     "acmg_class": "",
                     "acmg_evidence": "",
                     "omim": "",
+                    "raw": raw_var,
                 })
 
         rec["_raw_variants"] = variants
@@ -1344,6 +1377,7 @@ def parse_ddd_diagnoses(path: str, limit: Optional[int] = None) -> List[dict]:
             "acmg_class": "",
             "acmg_evidence": "",
             "omim": omim_raw,
+            "raw": gene,
         }]
 
         rows.append(rec)
@@ -1647,6 +1681,7 @@ def normalize_one_row(
     variant_cdna: List[str] = []
     variant_protein: List[str] = []
     variant_genomic: List[str] = []
+    variant_original: List[str] = []
     variant_hgvs_valid: List[str] = []
     zygosity_ids: List[str] = []
     zygosity_labels: List[str] = []
@@ -1681,6 +1716,9 @@ def normalize_one_row(
         # Genomic
         genomic = vd.get("genomic", "")
         variant_genomic.append(genomic)
+
+        # Original
+        variant_original.append(vd.get("raw", ""))
 
         # Zygosity - extract from zygosity field or inheritance text
         zyg_raw = vd.get("zygosity", "")
@@ -1731,6 +1769,7 @@ def normalize_one_row(
     out["variant_cdna"] = pipe_join(variant_cdna)
     out["variant_protein"] = pipe_join(variant_protein)
     out["variant_genomic_grch38"] = pipe_join(variant_genomic)
+    out["variant_original"] = pipe_join(variant_original)
     out["variant_hgvs_valid"] = pipe_join(variant_hgvs_valid)
     out["zygosity_id"] = pipe_join(zygosity_ids)
     out["zygosity_label"] = pipe_join(zygosity_labels)

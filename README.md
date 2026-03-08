@@ -200,7 +200,7 @@ Required reference data (in `data/reference/`, downloaded by script):
 | `HMD_HumanPhenotype.rpt` | Mouse phenotype homologs (MGI) |
 | `MGI_GenePheno.rpt` | MGI genotype-phenotype associations |
 | `E-GTEX-8/` | GTEx v8 tissue expression (EBI) |
-| `allele-frequencies/` | Saudi population AF — **not public**, contact authors |
+| `allele-frequencies/` | Saudi population AF — Public (https://doi.org/10.6084/m9.figshare.28059686.v1) |
 
 Other required data:
 

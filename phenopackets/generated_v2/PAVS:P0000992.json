@@ -1,0 +1,195 @@
+{
+  "id": "PAVS:P0000992",
+  "subject": {
+    "id": "PAVS:P0000992",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P44M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0031292",
+        "label": "Cutaneous abscess"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000992",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000992",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000992_TBXA2R",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TBXA2R",
+                  "valueId": "NCBIGene:6915"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000375190.10:c.883C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000019.10:g.3595837C>T"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000364336.4:p.Arg295Cys"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr19",
+                  "pos": 3595837,
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0.01)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.999)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00001"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "4.112e-06"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "8.0489e-06"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.4800e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "aorta:100|tibial_artery:98|coronary_artery:96|tibial_nerve:94|spleen:92|ectocervix:91|adrenal_gland:89|muscle_layer_of_esophagus:87|endocervix:85|lung:85|uterus:85|esophagogastric_junction:79|fallopian_tube:77|cortex_of_kidney:75|omental_fat_pad:75|renal_medulla:75|thyroid_gland:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "adenylate cyclase-activating G protein-coupled receptor signaling pathway|positive regulation of vasoconstriction|positive regulation of blood pressure|positive regulation of blood coagulation|cellular response to lipopolysaccharide|response to ethanol|G protein-coupled receptor signaling pathway|positive regulation of angiogenesis|negative regulation of cell migration involved in sprouting angiogenesis|response to nutrient|inflammatory response|signal transduction|response to testosterone|respo"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal blood vessel physiology|enlarged spleen|enlarged lymph nodes|abnormal cardiovascular system physiology|edema|abnormal immune system physiology|abnormal airway resistance|abnormal lymph node morphology|abnormal cervical lymph node morphology|abnormal type I hypersensitivity reaction|abnormal immune system organ morphology|abnormal immune serum protein physiology|abnormal platelet physiology|increased susceptibility to type I hypersensitivity reaction|increased bleeding time|abnormal plat"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

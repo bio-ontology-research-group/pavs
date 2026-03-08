@@ -1,0 +1,243 @@
+{
+  "id": "PAVS:D0000183",
+  "subject": {
+    "id": "PAVS:D0000183",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000717",
+        "label": "Autism"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000721",
+        "label": "Lack of spontaneous play"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000723",
+        "label": "Restrictive behavior"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000728",
+        "label": "Impaired ability to form peer relationships"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000732",
+        "label": "Inflexible adherence to routines"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000733",
+        "label": "Motor stereotypy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000750",
+        "label": "Delayed speech and language development"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000758",
+        "label": "Abnormal nonverbal communicative behavior"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001249",
+        "label": "Intellectual disability"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001250",
+        "label": "Seizure"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001426",
+        "label": "Non-Mendelian inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002353",
+        "label": "EEG abnormality"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003144",
+        "label": "Increased serum serotonin"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003745",
+        "label": "Sporadic"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011463",
+        "label": "Childhood onset"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0005260",
+        "label": "autism"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000183",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0005260",
+          "label": "autism"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000183",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000183_NRXN1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "NRXN1",
+                  "valueId": "NCBIGene:9378"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "3.1700e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellar_hemisphere:100|frontal_cortex:98|cerebellum:96|tibial_nerve:94|cerebral_cortex:92|anterior_cingulate_cortex:91|amygdala:89|hypothalamus:87|nucleus_accumbens:87|hippocampus:83|caudate_nucleus:83|putamen:79|sigmoid_colon:79|esophagogastric_junction:75|muscle_layer_of_esophagus:75|pituitary_gland:75|substantia_nigra:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of ERK1 and ERK2 cascade|synaptic vesicle clustering|positive regulation of excitatory postsynaptic potential|AMPA selective glutamate receptor signaling pathway|neuron cell-cell adhesion|protein localization to synapse|negative regulation of filopodium assembly|neurotransmitter secretion|positive regulation of phospholipase C-activating G protein-coupled receptor signaling pathway|vocal learning|positive regulation of phosphatidylinositol 3-kinase/protein kinase B signal tra"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased circulating HDL cholesterol level|increased neutrophil cell number|increased monocyte cell number|tremors|increased grooming behavior|abnormal nest building behavior|no abnormal phenotype detected|abnormal motor learning|abnormal excitatory postsynaptic currents|decreased circulating alkaline phosphatase level|abnormal bone structure|increased lean body mass|decreased synaptic glutamate release|abnormal miniature excitatory postsynaptic currents|decreased lymphocyte cell number|decreas"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

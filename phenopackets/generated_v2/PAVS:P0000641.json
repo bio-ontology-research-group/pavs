@@ -1,0 +1,191 @@
+{
+  "id": "PAVS:P0000641",
+  "subject": {
+    "id": "PAVS:P0000641",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P34M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000528",
+        "label": "Anophthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0000641",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0000641",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0000641_OTX2",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "OTX2",
+                  "valueId": "NCBIGene:5015"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000672264.2:c.296C>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000014.9:g.56802333C>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000500115.1:p.Ala99Asp"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr14",
+                  "pos": 56802333,
+                  "ref": "C",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(1)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00046"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9980e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "3.2400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellar_hemisphere:100|cerebellum:98|substantia_nigra:96|hypothalamus:94|testis:92|pituitary_gland:91|cervical_vertebra:89|hippocampus:89|nucleus_accumbens:89|putamen:89|caudate_nucleus:89|adrenal_gland:79|cerebral_cortex:79|coronary_artery:79|cortex_of_kidney:79|ectocervix:79|endocervix:79|esophagogastric_junction:79|esophagus_mucosa:79|fallopian_tube:79|frontal_cortex:79|amygdala:79|heart_left_ventricle:79|ileum:79|liver:79|lower_leg_skin:79|lung:79|mammary_gland:79|minor_salivary_gland:79|muscle_layer_of_esophagus:79|anterior_cingulate_cortex:79|omental_fat_pad:79|ovary:79|pancreas:79|prostate_gland:79|renal_medulla:79|sigmoid_colon:79|skeletal_muscle_tissue:79|aorta:79|skin:79|spleen:79|stomach:79|subcutaneous_adipose_tissue:79|suprapubic_skin:79|thyroid_gland:79|tibial_artery:79|tibial_nerve:79|atrium_auricular_region:79|transverse_colon:79|urinary_bladder:79|uterus:79|vagina:79|blood:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "regulation of fibroblast growth factor receptor signaling pathway|primitive streak formation|protein-containing complex assembly|axon guidance|positive regulation of embryonic development|positive regulation of gastrulation|positive regulation of DNA-templated transcription|midbrain development|regulation of smoothened signaling pathway|forebrain development|positive regulation of transcription by RNA polymerase II|regulation of transcription by RNA polymerase II|regulation of DNA-templated tran"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal malleus morphology|absent mandible|abnormal basisphenoid bone morphology|abnormal craniofacial morphology|abnormal head morphology|microcephaly|abnormal cranium morphology|abnormal snout morphology|short snout|abnormal mandible morphology|abnormal inferior colliculus morphology|abnormal forebrain morphology|forebrain hypoplasia|abnormal cerebral cortex morphology|abnormal third ventricle morphology|abnormal diencephalon morphology|abnormal hindbrain morphology|abnormal metencephalon mor"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

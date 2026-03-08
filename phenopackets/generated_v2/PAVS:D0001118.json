@@ -1,0 +1,355 @@
+{
+  "id": "PAVS:D0001118",
+  "subject": {
+    "id": "PAVS:D0001118",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000023",
+        "label": "Inguinal hernia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000049",
+        "label": "Shawl scrotum"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000054",
+        "label": "Micropenis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000668",
+        "label": "Hypodontia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000823",
+        "label": "Delayed puberty"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000882",
+        "label": "Hypoplastic scapulae"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000894",
+        "label": "Short clavicles"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001162",
+        "label": "Postaxial hand polydactyly"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001513",
+        "label": "Obesity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001607",
+        "label": "Subglottic stenosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001629",
+        "label": "Ventricular septal defect"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002021",
+        "label": "Pyloric stenosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002023",
+        "label": "Anal atresia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002025",
+        "label": "Anal stenosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002215",
+        "label": "Sparse axillary hair"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002557",
+        "label": "Hypoplastic nipples"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002984",
+        "label": "Hypoplasia of the radius"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003022",
+        "label": "Hypoplasia of the ulna"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003186",
+        "label": "Inverted nipples"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003187",
+        "label": "Breast hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003974",
+        "label": "Absent radius"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003977",
+        "label": "Deformed radius"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003982",
+        "label": "Aplasia of the ulna"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005338",
+        "label": "Sparse lateral eyebrow"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005792",
+        "label": "Short humerus"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007397",
+        "label": "Axillary apocrine gland hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008093",
+        "label": "Short 4th toe"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0010627",
+        "label": "Anterior pituitary hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011755",
+        "label": "Ectopic posterior pituitary"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011917",
+        "label": "Short 5th toe"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0008411",
+        "label": "ulnar-mammary syndrome"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001118",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0008411",
+          "label": "ulnar-mammary syndrome"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001118",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001118_TBX3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "TBX3",
+                  "valueId": "NCBIGene:6926"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9465e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "4.6800e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "adrenal_gland:100|prostate_gland:98|thyroid_gland:96|endocervix:94|ovary:92|urinary_bladder:91|ectocervix:89|vagina:87|lung:85|uterus:83|fallopian_tube:81|mammary_gland:79|skin:77|minor_salivary_gland:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "negative regulation of cell proliferation involved in heart morphogenesis|mesoderm morphogenesis|cell fate specification|embryonic digit morphogenesis|atrioventricular canal development|follicle-stimulating hormone secretion|regulation of DNA-templated transcription|positive regulation of cell cycle|regulation of protein stability|negative regulation of apoptotic process|mammary gland development|semicircular canal morphogenesis|forelimb morphogenesis|animal organ morphogenesis|regulation of tra"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal heart development|abnormal heart looping|abnormal forelimb morphology|absent carpal bone|abnormal hindlimb morphology|oligodactyly|small liver|abnormal mammary gland development|absent mammary gland|abnormal female reproductive system morphology|abnormal vagina orifice morphology|decreased body size|microphthalmia|decreased locomotor activity|irregular heartbeat|thin apical ectodermal ridge|absent vitelline blood vessels|pale yolk sac|edema|pericardial edema|reduced male fertility|reduc"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

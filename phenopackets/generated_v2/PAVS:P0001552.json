@@ -1,0 +1,183 @@
+{
+  "id": "PAVS:P0001552",
+  "subject": {
+    "id": "PAVS:P0001552",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P23M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000488",
+        "label": "Retinopathy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007875",
+        "label": "Congenital blindness"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC6562004",
+        "description": "Source dataset: PMC6562004"
+      },
+      {
+        "id": "PMID:31130284",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31130284/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:P0001552",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:P0001552",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:P0001552_AIPL1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "AIPL1",
+                  "valueId": "NCBIGene:23746"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000381129.8:c.178dup"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000017.11:g.6434017_6434018insC"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000370521.3:p.His60ProfsTer98"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF23322"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "7.0113e-07"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.0100e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|ectocervix:98|spleen:98|cerebellar_hemisphere:98|cerebellum:98|fallopian_tube:91|ovary:91|pituitary_gland:91|coronary_artery:85|endocervix:85|esophagogastric_junction:85|ileum:85|lower_leg_skin:85|lung:85|mammary_gland:85|minor_salivary_gland:85|muscle_layer_of_esophagus:85|prostate_gland:85|sigmoid_colon:85|aorta:85|subcutaneous_adipose_tissue:85|suprapubic_skin:85|thyroid_gland:85|tibial_nerve:85|urinary_bladder:85|uterus:85|vagina:85|blood:85"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "protein farnesylation|visual perception"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal retina photoreceptor morphology|abnormal retina cone cell morphology|retina degeneration|decreased retina photoreceptor cell number|abnormal photoreceptor outer segment morphology|abnormal photoreceptor inner segment morphology|abnormal retina outer plexiform layer morphology|abnormal rod electrophysiology|abnormal Muller cell morphology|abnormal eye electrophysiology|abnormal retina neuronal layer morphology|abnormal retina bipolar cell morphology|decreased retina cone cell number|reti"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

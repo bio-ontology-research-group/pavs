@@ -1,0 +1,242 @@
+{
+  "id": "PAVS:Q0000055",
+  "subject": {
+    "id": "PAVS:Q0000055",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P6Y8M"
+      }
+    },
+    "extensions": [
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001263",
+        "label": "Global developmental delay"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0012583",
+        "label": "Unilateral renal hypoplasia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001513",
+        "label": "Obesity"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002871",
+        "label": "Central apnea"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0005164",
+        "label": "Dysplastic pulmonary valve"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0031218",
+        "label": "Inappropriate antidiuretic hormone secretion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:PMC7082194",
+        "description": "Source dataset: PMC7082194"
+      },
+      {
+        "id": "PMID:31618753",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/31618753/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0018699",
+        "label": "obsolete pseudohypoparathyroidism with Albright hereditary osteodystrophy"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0025352",
+        "label": "Typically de novo"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:Q0000055",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0018699",
+          "label": "obsolete pseudohypoparathyroidism with Albright hereditary osteodystrophy"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:Q0000055",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:Q0000055_GNAS",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GNAS",
+                  "valueId": "NCBIGene:2778"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000371085.8:c.501C>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000020.11:g.58905451C>G"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000360126.3:p.Asn167Lys"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr20",
+                  "pos": 58905451,
+                  "ref": "C",
+                  "alt": "G"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious_low_confidence(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.91)"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF00503"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "9.9999e-01"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "3.0200e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "pituitary_gland:100|thyroid_gland:98|hypothalamus:96|cerebellar_hemisphere:94|minor_salivary_gland:92|frontal_cortex:91|aorta:89|cerebellum:87|anterior_cingulate_cortex:85|tibial_artery:85|cerebral_cortex:81|endocervix:79|ectocervix:77|uterus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "adenylate cyclase-activating dopamine receptor signaling pathway|platelet aggregation|cellular response to glucagon stimulus|negative regulation of inflammatory response to antigenic stimulus|positive regulation of insulin secretion involved in cellular response to glucose stimulus|cellular response to catecholamine stimulus|adenylate cyclase-activating G protein-coupled bile acid receptor signaling pathway|sensory perception of smell|bone development|regulation of signal transduction|intracellu"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal adipose tissue morphology|increased brown adipose tissue amount|increased white adipose tissue amount|decreased bone mineral density|decreased circulating calcium level|decreased circulating phosphate level|delayed kidney development|tremors|weakness|skin lesions|decreased body length|abnormal body weight|obese|decreased body weight|ataxia|hyperactivity|decreased locomotor activity|no spontaneous movement|abnormal response to new environment|abnormal eating behavior|abnormal suckling be"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

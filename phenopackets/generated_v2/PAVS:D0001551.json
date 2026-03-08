@@ -1,0 +1,229 @@
+{
+  "id": "PAVS:D0001551",
+  "subject": {
+    "id": "PAVS:D0001551",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000246",
+        "label": "Sinusitis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000365",
+        "label": "Hearing impairment"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000388",
+        "label": "Otitis media"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000462",
+        "label": "Infertility"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000789",
+        "label": "Situs inversus totalis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001696",
+        "label": "Respiratory distress"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002098",
+        "label": "Bronchiectasis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002110",
+        "label": "Recurrent respiratory infections"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002205",
+        "label": "Congenital onset"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0003577",
+        "label": "Absent inner and outer dynein arms"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0012259",
+        "label": "Immotile cilia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0012263",
+        "label": "HP:0012263"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0011718",
+        "label": "primary ciliary dyskinesia 2"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001551",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0011718",
+          "label": "primary ciliary dyskinesia 2"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001551",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001551_DNAAF3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "DNAAF3",
+                  "valueId": "NCBIGene:352909"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "6.1143e-12"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.1390e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "testis:100|heart_left_ventricle:98|fallopian_tube:96|thyroid_gland:94|lung:92|renal_medulla:92|suprapubic_skin:92|adrenal_gland:87|cortex_of_kidney:87|lower_leg_skin:87|atrium_auricular_region:87|esophagus_mucosa:79|pancreas:79|pituitary_gland:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "motile cilium assembly|cell projection organization|axonemal dynein complex assembly"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal liver morphology|dextrocardia|abnormal vein morphology|left pulmonary isomerism|abnormal body wall morphology|abnormal aortic arch morphology|heterotaxia|right aortic arch|abnormal vertebral column morphology|abnormal inferior vena cava morphology|preweaning lethality, incomplete penetrance|abdominal situs inversus|abdominal situs ambiguus|situs inversus totalis|immotile respiratory cilia|dual inferior vena cava"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

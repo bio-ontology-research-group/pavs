@@ -1,0 +1,197 @@
+{
+  "id": "PAVS:M0000095",
+  "subject": {
+    "id": "PAVS:M0000095",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P19Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0007875",
+        "label": "Congenital amaurosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:marwa-variants",
+        "description": "Source dataset: marwa-variants"
+      },
+      {
+        "id": "PMID:24265693",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/24265693/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013231",
+        "label": "Leber congenital amaurosis 14"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:M0000095",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013231",
+          "label": "Leber congenital amaurosis 14"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:M0000095",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:M0000095_LRAT",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "LRAT",
+                  "valueId": "NCBIGene:9227"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000336356.4:c.233_242del"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000004.12:g.154744559_154744568del"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000337224.3:p.Leu78ArgfsTer85"
+                  }
+                ],
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "frameshift_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "HIGH"
+                  },
+                  {
+                    "name": "vep_domains",
+                    "value": "Pfam/PF04970"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0654e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.2140e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cervical_vertebra:100|testis:100|thyroid_gland:100|hypothalamus:94|sigmoid_colon:94|tibial_nerve:94|ileum:89|nucleus_accumbens:89|prostate_gland:89|fallopian_tube:83|amygdala:83|liver:83|anterior_cingulate_cortex:83|pituitary_gland:83|substantia_nigra:83|caudate_nucleus:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "lipid metabolic process|vitamin A metabolic process|retinol metabolic process|response to vitamin A|retinoid metabolic process|visual perception|response to retinoic acid|lipid storage"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal retina photoreceptor morphology|abnormal testis morphology|testis hypoplasia|oligozoospermia|testicular atrophy|abnormal eye electrophysiology|retina cone cell degeneration|abnormal retina cone cell outer segment morphology|retina photoreceptor degeneration|retina rod cell degeneration|thin retina outer nuclear layer|short photoreceptor outer segment|dilated seminiferous tubule|preweaning lethality, incomplete penetrance|abnormal vitamin A level|abnormal vitamin A metabolism|abnormal re"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

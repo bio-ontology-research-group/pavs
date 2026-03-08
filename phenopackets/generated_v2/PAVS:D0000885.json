@@ -1,0 +1,121 @@
+{
+  "id": "PAVS:D0000885",
+  "subject": {
+    "id": "PAVS:D0000885",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000885",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000885",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000885_KIF11",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "KIF11",
+                  "valueId": "NCBIGene:3832"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0000e+00"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.8400e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "skin:100|testis:98|esophagus_mucosa:96|lower_leg_skin:94|spleen:94|suprapubic_skin:94|vagina:94|ileum:87|transverse_colon:85|lung:83|thyroid_gland:83|urinary_bladder:83|blood:83|adrenal_gland:75|cervical_vertebra:75|coronary_artery:75|ectocervix:75|endocervix:75|fallopian_tube:75|mammary_gland:75|minor_salivary_gland:75|nucleus_accumbens:75|ovary:75|prostate_gland:75|aorta:75|stomach:75|subcutaneous_adipose_tissue:75|tibial_artery:75|tibial_nerve:75|uterus:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "spindle assembly|spindle elongation|cell division|mitotic spindle organization|mitotic spindle assembly|spindle organization|mitotic nuclear division|microtubule-based movement|mitotic cell cycle|regulation of mitotic centrosome separation"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "decreased embryo size|failure of embryo implantation|embryonic growth arrest|failure of blastocyst to hatch from the zona pellucida|embryonic lethality before implantation|abnormal preimplantation embryo development|embryonic lethality between implantation and somite formation, complete penetrance|embryonic lethality before implantation, incomplete penetrance|failure of morula compaction"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

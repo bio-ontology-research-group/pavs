@@ -1,0 +1,137 @@
+{
+  "id": "PAVS:D0000041",
+  "subject": {
+    "id": "PAVS:D0000041",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0009744",
+        "label": "neuronal ceroid lipofuscinosis 1"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0000041",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0009744",
+          "label": "neuronal ceroid lipofuscinosis 1"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0000041",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0000041_PPT1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PPT1",
+                  "valueId": "NCBIGene:5538"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "7.7317e-04"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "7.3300e-01"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "spleen:100|aorta:98|uterus:96|endocervix:94|lung:94|blood:91|cerebellar_hemisphere:89|skin:87|coronary_artery:85|frontal_cortex:83|tibial_artery:81|ectocervix:79|tibial_nerve:79|ovary:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of receptor-mediated endocytosis|lysosomal lumen acidification|membrane raft organization|protein depalmitoylation|neuron development|negative regulation of apoptotic process|sphingolipid catabolic process|regulation of synapse structure or activity|negative regulation of toll-like receptor 9 signaling pathway|visual perception|negative regulation of neuron apoptotic process|brain development|protein transport|protein catabolic process|nervous system development|fatty-acyl-Co"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "myoclonus|abnormal liver morphology|abnormal spleen morphology|hindlimb paralysis|decreased brain size|abnormal cerebral cortex morphology|abnormal visual cortex morphology|abnormal hippocampus morphology|hippocampal neuron degeneration|Purkinje cell degeneration|increased body weight|decreased retina photoreceptor cell number|impaired coordination|abnormal gait|decreased exploration in new environment|decreased grooming behavior|limb grasping|abnormal motor coordination/balance|brain inflammati"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

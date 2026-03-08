@@ -1,0 +1,166 @@
+{
+  "id": "PAVS:D0001037",
+  "subject": {
+    "id": "PAVS:D0001037",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002650",
+        "label": "Scoliosis"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0004635",
+        "label": "Cervical C5/C6 vertebrae fusion"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007748",
+        "label": "obsolete Irido-fundal coloboma"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0013375",
+        "label": "Klippel-Feil syndrome 3, autosomal dominant"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000006",
+        "label": "Autosomal dominant inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001037",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0013375",
+          "label": "Klippel-Feil syndrome 3, autosomal dominant"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001037",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001037_GDF3",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "GDF3",
+                  "valueId": "NCBIGene:9573"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "1.0543e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.5130e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "renal_medulla:100|spleen:98|testis:96|adrenal_gland:94|ectocervix:94|subcutaneous_adipose_tissue:94|tibial_nerve:94|coronary_artery:87|fallopian_tube:87|mammary_gland:87|omental_fat_pad:87|thyroid_gland:87|urinary_bladder:87|cortex_of_kidney:75|endocervix:75|esophagogastric_junction:75|ileum:75|muscle_layer_of_esophagus:75|pituitary_gland:75|uterus:75|vagina:75"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "positive regulation of fat cell differentiation|negative regulation of BMP signaling pathway|regulation of cell fate commitment|negative regulation of epidermal cell differentiation|animal organ development|regulation of transmembrane receptor protein serine/threonine kinase signaling pathway|BMP signaling pathway|eye development|skeletal system development"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal mesoderm development|absent mesoderm|abnormal endoderm development|thin endoderm|decreased white adipose tissue amount|abnormal developmental patterning|abnormal primitive streak formation|split notochord|abnormal rostral-caudal axis patterning|improved glucose tolerance|decreased susceptibility to diet-induced obesity|abnormal anterior visceral endoderm morphology|decreased survivor rate|increased basal metabolism|abnormal fat cell morphology|embryonic lethality, complete penetrance|pr"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

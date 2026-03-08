@@ -1,0 +1,125 @@
+{
+  "id": "PAVS:D0001767",
+  "subject": {
+    "id": "PAVS:D0001767",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:300319",
+        "label": "OMIM:300319"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001767",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:300319",
+          "label": "OMIM:300319"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001767",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001767_NXF5",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "NXF5",
+                  "valueId": "NCBIGene:55998"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "expressed_in",
+                    "value": "cerebellum:100|cerebellar_hemisphere:98|cervical_vertebra:96|cerebral_cortex:94|renal_medulla:94|testis:94|thyroid_gland:94|tibial_artery:94|tibial_nerve:94|adrenal_gland:83|coronary_artery:83|cortex_of_kidney:83|endocervix:83|frontal_cortex:83|hippocampus:83|hypothalamus:83|lung:83|mammary_gland:83|nucleus_accumbens:83|pituitary_gland:83|aorta:83|spleen:83|subcutaneous_adipose_tissue:83|substantia_nigra:83"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "mRNA export from nucleus|RNA transport|mRNA transport|poly(A)+ mRNA export from nucleus"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "small seminiferous tubules|abnormal spermatogenesis|reduced male fertility|male infertility|decreased litter size|asthenozoospermia|abnormal spermatogonia proliferation|oligozoospermia|meiotic nondisjunction during M1 phase|decreased testis weight|decreased male germ cell number|abnormal male meiosis|arrest of male meiosis|abnormal male germ cell apoptosis|early reproductive senescence|impaired spatial learning|decreased spermatogonia number"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

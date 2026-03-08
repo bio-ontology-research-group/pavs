@@ -1,0 +1,208 @@
+{
+  "id": "PAVS:D0001018",
+  "subject": {
+    "id": "PAVS:D0001018",
+    "sex": "UNKNOWN_SEX"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000493",
+        "label": "Abnormal foveal morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000568",
+        "label": "Microphthalmia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0000591",
+        "label": "Abnormal sclera morphology"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0001000",
+        "label": "Abnormality of skin pigmentation"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007698",
+        "label": "obsolete Retinal pigment epithelial atrophy"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0007737",
+        "label": "Bone spicule pigmentation of the retina"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0008323",
+        "label": "Abnormal light- and dark-adapted electroretinogram"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0011510",
+        "label": "Drusen"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0012152",
+        "label": "Foveoschisis"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:ddd-diagnoses",
+        "description": "Source dataset: ddd-diagnoses"
+      },
+      {
+        "id": "PMID:39353430",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/39353430/"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "term": {
+        "id": "MONDO:0012605",
+        "label": "isolated microphthalmia 5"
+      },
+      "modeOfInheritance": {
+        "id": "HP:0000007",
+        "label": "Autosomal recessive inheritance"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "interp-PAVS:D0001018",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "MONDO:0012605",
+          "label": "isolated microphthalmia 5"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:D0001018",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:D0001018_MFRP",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "MFRP",
+                  "valueId": "NCBIGene:83552"
+                },
+                "allelicState": {
+                  "id": "GENO:0000137",
+                  "label": "heterozygous"
+                },
+                "extensions": [
+                  {
+                    "name": "gnomad_pli",
+                    "value": "2.0484e-27"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.3070e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "cervical_vertebra:100|fallopian_tube:100|hippocampus:100|hypothalamus:100|lung:100|mammary_gland:100|omental_fat_pad:100|spleen:100|subcutaneous_adipose_tissue:100|substantia_nigra:100|testis:100|adrenal_gland:79|cerebral_cortex:79|coronary_artery:79|cortex_of_kidney:79|ectocervix:79|endocervix:79|esophagogastric_junction:79|esophagus_mucosa:79|frontal_cortex:79|amygdala:79|heart_left_ventricle:79|ileum:79|liver:79|lower_leg_skin:79|minor_salivary_gland:79|muscle_layer_of_esophagus:79|anterior_cingulate_cortex:79|nucleus_accumbens:79|ovary:79|pancreas:79|pituitary_gland:79|prostate_gland:79|putamen:79|renal_medulla:79|sigmoid_colon:79|skeletal_muscle_tissue:79|aorta:79|skin:79|stomach:79|suprapubic_skin:79|thyroid_gland:79|tibial_artery:79|tibial_nerve:79|atrium_auricular_region:79|transverse_colon:79|urinary_bladder:79|uterus:79|vagina:79|blood:79|caudate_nucleus:79|cerebellar_hemisphere:79|cerebellum:79"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "embryo development ending in birth or egg hatching"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "abnormal retina photoreceptor morphology|abnormal retina cone cell morphology|microphthalmia|abnormal lens morphology|abnormal retina morphology|retina degeneration|abnormal eye morphology|no abnormal phenotype detected|decreased circulating insulin level|abnormal ocular fundus morphology|increased insulin sensitivity|increased insulin secretion|increased vascular permeability|abnormal photoreceptor outer segment morphology|abnormal photoreceptor inner segment morphology|abnormal rod electrophys"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

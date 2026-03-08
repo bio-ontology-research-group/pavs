@@ -1,0 +1,242 @@
+{
+  "id": "PAVS:F0000887",
+  "subject": {
+    "id": "PAVS:F0000887",
+    "sex": "MALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P7Y"
+      }
+    },
+    "extensions": [
+      {
+        "name": "consanguinity",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0025820",
+            "label": "Offspring of consanguineous parents"
+          }
+        }
+      },
+      {
+        "name": "familyHistory",
+        "value": {
+          "ontologyClass": {
+            "id": "HP:0032316",
+            "label": "Positive family history"
+          }
+        }
+      },
+      {
+        "name": "geographicOrigin",
+        "value": {
+          "id": "GAZ:00005279",
+          "label": "Saudi Arabia"
+        }
+      }
+    ]
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0001943",
+        "label": "Hypoglycemia"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002013",
+        "label": "Vomiting"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HP:0002910",
+        "label": "Elevated circulating hepatic transaminase concentration"
+      },
+      "excluded": false
+    },
+    {
+      "type": {
+        "id": "HANCESTRO:0852",
+        "label": "Middle Eastern"
+      },
+      "excluded": false
+    }
+  ],
+  "metaData": {
+    "created": "2026-02-24",
+    "createdBy": "PAVS pipeline",
+    "submittedBy": "Robert Hoehndorf",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-08-13",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      },
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "https://github.com/oborel/obo-relations",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "omim",
+        "name": "Online Mendelian Inheritance in Man",
+        "url": "https://www.omim.org",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "mondo",
+        "name": "Monarch Disease Ontology",
+        "url": "http://purl.obolibrary.org/obo/mondo.obo",
+        "namespacePrefix": "MONDO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/MONDO_"
+      },
+      {
+        "id": "hancestro",
+        "name": "Human Ancestry Ontology",
+        "url": "https://github.com/EBISPOT/ancestro",
+        "namespacePrefix": "HANCESTRO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HANCESTRO_"
+      },
+      {
+        "id": "gaz",
+        "name": "Gazetteer",
+        "url": "http://purl.obolibrary.org/obo/gaz.obo",
+        "namespacePrefix": "GAZ",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GAZ_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "pavs:source:fawzan-variants",
+        "description": "Source dataset: fawzan-variants"
+      },
+      {
+        "id": "PMID:28600779",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/28600779/"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interp-PAVS:F0000887",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "PAVS:F0000887",
+            "interpretationStatus": "CONTRIBUTORY",
+            "variantInterpretation": {
+              "acmgPathogenicityClassification": "UNCERTAIN_SIGNIFICANCE",
+              "therapeuticActionability": "UNKNOWN_ACTIONABILITY",
+              "variationDescriptor": {
+                "id": "PAVS:F0000887_PDX1",
+                "moleculeContext": "genomic",
+                "geneContext": {
+                  "symbol": "PDX1",
+                  "valueId": "NCBIGene:3651"
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000381033.5:c.98C>A"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000013.11:g.27920236C>A"
+                  },
+                  {
+                    "syntax": "hgvs.p",
+                    "value": "ENSP00000370421.4:p.Pro33His"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr13",
+                  "pos": 27920236,
+                  "ref": "C",
+                  "alt": "A"
+                },
+                "allelicState": {
+                  "id": "GENO:0000136",
+                  "label": "homozygous"
+                },
+                "xrefs": [
+                  "ClinVar:1474821"
+                ],
+                "extensions": [
+                  {
+                    "name": "vep_consequence",
+                    "value": "missense_variant"
+                  },
+                  {
+                    "name": "vep_impact",
+                    "value": "MODERATE"
+                  },
+                  {
+                    "name": "vep_sift",
+                    "value": "deleterious(0)"
+                  },
+                  {
+                    "name": "vep_polyphen",
+                    "value": "probably_damaging(0.997)"
+                  },
+                  {
+                    "name": "vep_af_gnomad",
+                    "value": "7.879e-06"
+                  },
+                  {
+                    "name": "af_saudi",
+                    "value": "0.001656"
+                  },
+                  {
+                    "name": "ac_saudi",
+                    "value": "1"
+                  },
+                  {
+                    "name": "clinvar_allele_id",
+                    "value": "1474821"
+                  },
+                  {
+                    "name": "clinvar_sig",
+                    "value": "Uncertain significance"
+                  },
+                  {
+                    "name": "gnomad_pli",
+                    "value": "3.3698e-03"
+                  },
+                  {
+                    "name": "gnomad_loeuf",
+                    "value": "1.6420e+00"
+                  },
+                  {
+                    "name": "expressed_in",
+                    "value": "pancreas:100|liver:98|stomach:98|testis:98|ileum:92|transverse_colon:92|adrenal_gland:89|cerebral_cortex:89|cervical_vertebra:89|coronary_artery:89|cortex_of_kidney:89|ectocervix:89|endocervix:89|esophagogastric_junction:89|esophagus_mucosa:89|fallopian_tube:89|frontal_cortex:89|amygdala:89|heart_left_ventricle:89|hippocampus:89|hypothalamus:89|lower_leg_skin:89|lung:89|mammary_gland:89|minor_salivary_gland:89|muscle_layer_of_esophagus:89|anterior_cingulate_cortex:89|nucleus_accumbens:89|omental_fat_pad:89|ovary:89|pituitary_gland:89|prostate_gland:89|putamen:89|renal_medulla:89|sigmoid_colon:89|skeletal_muscle_tissue:89|aorta:89|skin:89|spleen:89|subcutaneous_adipose_tissue:89|substantia_nigra:89|suprapubic_skin:89|thyroid_gland:89|tibial_artery:89|tibial_nerve:89|atrium_auricular_region:89|urinary_bladder:89|uterus:89|vagina:89|blood:89|caudate_nucleus:89|cerebellar_hemisphere:89|cerebellum:89"
+                  },
+                  {
+                    "name": "go_biological_process",
+                    "value": "transcription by RNA polymerase II|response to lipid|stem cell differentiation|animal organ regeneration|type B pancreatic cell differentiation|response to glucocorticoid|regulation of DNA-templated transcription|smoothened signaling pathway|response to L-leucine|DNA-templated transcription|response to fatty acid|positive regulation of insulin secretion|response to nicotine|animal organ morphogenesis|positive regulation of DNA-templated transcription|positive regulation of transcription by RNA p"
+                  },
+                  {
+                    "name": "mouse_mp_labels",
+                    "value": "sparse hair|abnormal stomach morphology|abnormal foregut morphology|abnormal intestine morphology|abnormal small intestine morphology|abnormal small intestine placement|abnormal liver development|thin skin|decreased body weight|decreased body size|dehydration|hyperglycemia|postnatal growth retardation|pancreas inflammation|no abnormal phenotype detected|increased glucagon secretion|decreased circulating insulin level|abnormal bile duct development|decreased insulin secretion|abnormal duodenum mo"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
