@@ -1,4 +1,4 @@
-# PAVS — Phenotypic and Variant Standardization
+# PAVS — Phenotype-Associated Variants in Saudi Arabia
 
 A curated database of genomic variants and clinical phenotypes from Saudi Arabian patients with rare genetic diseases. PAVS integrates multiple clinical cohorts and links each case to international ontologies (HPO, OMIM, MONDO) and variant databases (ClinVar, dbSNP, TogoVar).
 
@@ -220,8 +220,7 @@ pytest tests/test_sparql_queries.py
 If you use PAVS in your research, please cite:
 
 ```
-Abdelhakim M, Althagafi A, Schofield PN, Hoehndorf R. PAVS: Phenotypic and 
-Variant Standardization of Saudi Arabian rare disease patients. [In preparation]
+
 ```
 
 ## Contributors
