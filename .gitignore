@@ -1,12 +1,29 @@
+# Logs and temporary files
 *.log
-__pycache__/
 *.py~
-hpo_mappings_partial.json
-hpo_mappings_test.json
-ambiguity_queue.json
-unique_unmatched_terms.json
-master_data_v1.tsv
-scripts/a.csv
-# Exclude from git tracking but keep locally
-data/phenotypes/ahmed-variants.tsv
-phenopackets/0.1.26/
+*.pyc
+__pycache__/
+
+# Development artifacts
+.aider.chat.history.md
+.aider.input.history
+.aider.tags.cache.v4/
+*.db
+*.swp
+.DS_Store
+
+# Output directories
+rdf_output/
+*.egg-info/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.code-workspace
+
+# Local data and papers (symlinks, not tracked)
+pavs-paper/
+
+# Environment files
+.env
+*.local

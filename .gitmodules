@@ -1,15 +1,15 @@
-[submodule "translation"]
-	path = translation
+[submodule "submodules/hpo-arabic"]
+	path = submodules/hpo-arabic
 	url = git@github.com:bio-ontology-research-group/hpo-arabic.git
-[submodule "tools/phenotype_matcher_v2"]
-	path = tools/phenotype_matcher_v2
+[submodule "submodules/phenotype-matcher"]
+	path = submodules/phenotype-matcher
 	url = git@github.com:bio-ontology-research-group/phenotype-matcher.git
-[submodule "website"]
-	path = website
+[submodule "submodules/website"]
+	path = submodules/website
 	url = git@github.com:bio-ontology-research-group/pavs-website.git
-[submodule "knowledge-graph"]
-	path = knowledge-graph
+[submodule "submodules/knowledge-graph"]
+	path = submodules/knowledge-graph
 	url = git@github.com:bio-ontology-research-group/pavs-knowledge-graph.git
-[submodule "phenopackets-data"]
-	path = phenopackets-data
+[submodule "submodules/phenopackets-data"]
+	path = submodules/phenopackets-data
 	url = git@github.com:bio-ontology-research-group/pavs-phenopackets.git

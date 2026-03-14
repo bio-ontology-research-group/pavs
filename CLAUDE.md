@@ -4,30 +4,38 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-PAVS (Phenotypic and Variant Standardization) is a curated database of genomic variants and clinical phenotypes from Saudi Arabian patients with rare genetic diseases. The SPARQL-based web stack is the production system; all data lives in a Virtuoso triple store.
+PAVS (Phenotype-Associated Variants in Saudi Arabia) is a curated database of genomic variants and clinical phenotypes from Saudi Arabian patients with rare genetic diseases. The SPARQL-based web stack is the production system; all data lives in a Virtuoso triple store.
 
 Always use `uv` to run Python scripts.
 
 ## Repository Structure
 
+This repo is the **single point of entry** for PAVS. All major components are git submodules.
+
 ```
-normalization/     # Data normalization pipeline (normalize_*.py, normalization_utils.py)
-intake/            # Format conversion (phenopackets, RDF, Virtuoso loading)
-website/
-  backend/         # FastAPI SPARQL proxy (was backend_sparql/)
-  frontend/        # React + TypeScript frontend (was frontend_sparql/)
-  virtuoso/        # Virtuoso isql bulk-load script
-analysis/          # Phenotype similarity analysis, validation, plots
-tools/
-  phenotype_matcher_v2/  # Standalone phenotype matching library
-docs/              # All project documentation
-scripts/           # Legacy utility scripts
-data/              # Source data and reference files
-  phenotypes/      # 7 source TSV files (intake only from here)
-ontology/          # External reference ontologies
-rdf_output/        # Generated RDF/Turtle files
-phenopackets/      # Generated phenopacket JSON files
-obsolete/          # Deprecated code (SQLite stack, phenotype_matcher v1)
+pavs/                              # This repository (umbrella project)
+├── submodules/                    # All git submodules (independent repos)
+│   ├── knowledge-graph/           # Data pipeline & source data
+│   │   ├── normalization/         - Phenotype/variant normalization
+│   │   ├── intake/                - Phenopackets & RDF generation
+│   │   ├── data/phenotypes/       - 7 source TSV files
+│   │   └── ontology/              - External reference ontologies
+│   ├── phenopackets-data/         # Generated phenopackets (outputs)
+│   ├── website/                   # Web interface (React + FastAPI)
+│   │   ├── backend/               - FastAPI SPARQL proxy
+│   │   ├── frontend/              - React + TypeScript
+│   │   └── virtuoso/              - Virtuoso bulk-load scripts
+│   ├── phenotype-matcher/         # Normalization library
+│   └── hpo-arabic/                # HPO Arabic translations
+├── evaluation/                    # Validation & benchmarking (THIS REPO)
+│   ├── similarity/                - Semantic similarity experiments
+│   ├── validation/                - Phenopacket validation scripts
+│   └── tests/                     - SPARQL & integration tests
+├── docs/                          # Documentation (THIS REPO)
+├── config/                        # Config & deployment (THIS REPO)
+│   ├── docker-compose-sparql.yml  - Orchestrates all services
+│   └── setup.sh                   - Environment initialization
+└── rdf_output/                    # Generated RDF files (git-ignored)
 ```
 
 ## Key Conventions
@@ -37,18 +45,18 @@ obsolete/          # Deprecated code (SQLite stack, phenotype_matcher v1)
 - **Population tags**: Saudi cases use `HANCESTRO:0852` (Middle Eastern) and `GAZ:00005279` (Saudi Arabia)
 - **Provenance**: Maintain `source_file` and `source_id` in all derived datasets
 - **Multi-value fields**: pipe-delimited in TSV outputs
-- **Data intake**: Only from files in `data/phenotypes/` (7 source TSVs)
-- **Reference data**: External databases in `data/reference/` (phenotype.hpoa, clinvar, gnomad, etc.) — download with `bash scripts/download_reference_data.sh`
+- **Data intake**: Only from files in `submodules/knowledge-graph/data/phenotypes/` (7 source TSVs)
+- **Reference data**: External databases in `submodules/knowledge-graph/data/reference/` (phenotype.hpoa, clinvar, gnomad, etc.) — download with `bash submodules/knowledge-graph/scripts/download_reference_data.sh`
 
 ## Running the SPARQL Stack
 
 ```bash
 # Full stack (Virtuoso + loader + backend + frontend):
-docker compose -f docker-compose-sparql.yml up -d
+docker compose -f config/docker-compose-sparql.yml up -d
 
-# After code changes to website/backend/ or website/frontend/ only:
-docker compose -f docker-compose-sparql.yml build backend frontend
-docker compose -f docker-compose-sparql.yml up -d backend frontend
+# After code changes to submodules/website/backend/ or submodules/website/frontend/ only:
+docker compose -f config/docker-compose-sparql.yml build backend frontend
+docker compose -f config/docker-compose-sparql.yml up -d backend frontend
 
 # Health check:
 curl http://localhost:8000/api/health
@@ -60,6 +68,8 @@ curl http://localhost:8000/api/health
 
 Backend startup takes ~15 seconds (loads IC values, ancestor cache, case HPO sets, disease labels from HPOA).
 
+**Note**: All paths in docker-compose are relative to the config/ directory.
+
 ## SPARQL Stack Architecture
 
 ### Named graphs
@@ -68,7 +78,7 @@ Backend startup takes ~15 seconds (loads IC values, ancestor cache, case HPO set
 |---|---|
 | `graph/cases` | Saudi PAVS cases: phenotypes, variants, demographics |
 | `graph/genes` | Gene→disease, pLI/LOEUF, GO, GTEx |
-| `graph/hpoa` | Disease→HPO from `data/phenotype.hpoa` |
+| `graph/hpoa` | Disease→HPO from `submodules/knowledge-graph/data/reference/phenotype.hpoa` |
 | `graph/hpo-ic` | IC values + HPO hierarchy + `rdfs:label` (needed for autocomplete) |
 | `graph/literature` | 9,588 non-Saudi literature phenopackets |
 
@@ -77,21 +87,21 @@ Backend startup takes ~15 seconds (loads IC values, ancestor cache, case HPO set
 - `ic_cache` — `{HP:NNNNNNN → float}` from graph/hpo-ic
 - `ancestor_cache` — `{HP:NNNNNNN → set of ancestor HP IDs}` (transitive closure)
 - `case_hpo_cache` — list of `{id, hpo_ids, is_saudi, gene, disease, source}` for similarity scoring
-- `disease_label_cache` — `{"OMIM:272200" → "Multiple sulfatase deficiency"}` loaded from `data/phenotype.hpoa`
+- `disease_label_cache` — `{"OMIM:272200" → "Multiple sulfatase deficiency"}` loaded from `submodules/knowledge-graph/data/reference/phenotype.hpoa`
 
 ### Key files
 
 | File | Role |
 |---|---|
-| `website/backend/main.py` | FastAPI app, startup caches, all endpoints |
-| `website/backend/sparql_queries.py` | All SPARQL query templates |
-| `website/backend/similarity.py` | Lin/Resnik + BMA (pure Python, no pyhpo) |
-| `intake/generate_rdf.py` | Converts source data → Turtle (.ttl) |
-| `intake/compute_hpo_ic.py` | Computes HPO IC values → `rdf_output/hpo_ic.ttl` |
-| `website/virtuoso/load_ttl.sql` | isql bulk-load script (`ld_dir + rdf_loader_run`) |
-| `docker-compose-sparql.yml` | Orchestrates virtuoso + init + loader + backend + frontend |
-| `website/frontend/src/components/` | React components for each tab |
-| `website/frontend/nginx.conf` | Proxies `/api/` → backend:8000 |
+| `submodules/website/backend/main.py` | FastAPI app, startup caches, all endpoints |
+| `submodules/website/backend/sparql_queries.py` | All SPARQL query templates |
+| `submodules/website/backend/similarity.py` | Lin/Resnik + BMA (pure Python, no pyhpo) |
+| `submodules/knowledge-graph/intake/generate_rdf.py` | Converts source data → Turtle (.ttl) |
+| `submodules/knowledge-graph/intake/compute_hpo_ic.py` | Computes HPO IC values → `rdf_output/hpo_ic.ttl` |
+| `submodules/website/virtuoso/load_ttl.sql` | isql bulk-load script (`ld_dir + rdf_loader_run`) |
+| `config/docker-compose-sparql.yml` | Orchestrates virtuoso + init + loader + backend + frontend |
+| `submodules/website/frontend/src/components/` | React components for each tab |
+| `submodules/website/frontend/nginx.conf` | Proxies `/api/` → backend:8000 |
 
 ### Docker service order
 
@@ -133,27 +143,58 @@ Backend startup takes ~15 seconds (loads IC values, ancestor cache, case HPO set
 ## RDF Generation Pipeline
 
 ```bash
+cd submodules/knowledge-graph
+
 # Step 1: HPO IC values + hierarchy + labels
 uv run python intake/compute_hpo_ic.py \
-    --hpo ontology/hp.obo --hpoa data/phenotype.hpoa \
+    --hpo ontology/hp.obo --hpoa data/reference/phenotype.hpoa \
     --output rdf_output/hpo_ic.ttl
 
-# Step 2: All case/gene/hpoa/literature RDF
+# Step 2: All case/gene/hpoa/literature RDF + metadata + versioning
 uv run python intake/generate_rdf.py \
     --phenopackets data/PAVS_phenopackets.json \
     --annotated data/combined_annotated.tsv \
-    --literature-dir phenopackets/0.1.26 \
-    --output-dir rdf_output/
+    --literature-dir ../phenopackets-data/individual \
+    --output-dir ../../rdf_output/ \
+    --version-increment patch  # or minor/major
+
+# Use --skip-version-increment to use existing version without incrementing
+
+cd ../..
 
 # Step 3: Load (handled by Docker loader service, or manually):
 # isql virtuoso:1111 dba pavs_dba /load/load_ttl.sql
 ```
 
-Output TTL file sizes: cases ~192K lines, genes ~103K, hpoa ~2.2M, hpo_ic ~56K, literature ~455K.
+Output TTL file sizes: cases ~192K lines, genes ~103K, hpoa ~2.2M, hpo_ic ~56K, literature ~455K, metadata ~500 lines.
+
+### Version Management
+
+Every RDF rebuild automatically increments the semantic version (stored in `submodules/knowledge-graph/intake/VERSION`):
+- **MAJOR**: Breaking schema changes
+- **MINOR**: New data sources or features
+- **PATCH**: Bug fixes or minor updates (default)
+
+Version history and build metadata are tracked in `submodules/knowledge-graph/intake/version_metadata.json`.
+
+### Metadata Standards (FAIR Compliance)
+
+The generated `metadata.ttl` includes:
+- **VoID**: Vocabulary of Interlinked Datasets description
+- **DCAT**: Data Catalog Vocabulary for discoverability
+- **Dublin Core**: Title, description, license, provenance
+- **PROV-O**: Activity provenance and generation timestamps
+- **PAV**: Versioning, authoring, curation metadata
+- **Schema.org**: Creator, publisher, keywords for SEO
+
+All identifiers use **identifiers.org** persistent URIs where applicable (HP, OMIM, MONDO, HGNC, ClinVar, dbSNP, ORCID, etc.) for FAIR compliance.
+
+License: **CC-BY 4.0** (Creative Commons Attribution 4.0 International)
 
 ## Data Processing Pipeline (upstream)
 
 ```bash
+cd submodules/knowledge-graph
 uv sync
 export OPENROUTER_API_KEY="your_key_here"
 
@@ -168,7 +209,7 @@ uv run python normalization/combine_normalize_phenotypes.py \
     --acmg-obo /tmp/test_acmg.obo
 ```
 
-Source files in `data/phenotypes/`:
+Source files in `submodules/knowledge-graph/data/phenotypes/`:
 
 | File | Letter | Description |
 |---|---|---|
@@ -182,7 +223,7 @@ Source files in `data/phenotypes/`:
 ## Frontend Development
 
 ```bash
-cd website/frontend
+cd submodules/website/frontend
 npm install
 npm run dev     # Dev server on port 3000, proxies /api/ → localhost:8000
 npm run build   # Production build to build/
