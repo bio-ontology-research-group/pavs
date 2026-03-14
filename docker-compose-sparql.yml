@@ -81,8 +81,8 @@ services:
       HPO_TRANSLATION_PATH: /app/translation/hpo_arabic_translations.json
       HPO_OBO_PATH: /app/ontology/hp.obo
     volumes:
-      - ./knowledge-graph/data/reference/phenotype.hpoa:/app/data/reference/phenotype.hpoa:ro
-      - ./knowledge-graph/ontology/hp.obo:/app/ontology/hp.obo:ro
+      - ./data/reference/phenotype.hpoa:/app/data/reference/phenotype.hpoa:ro
+      - ./ontology/hp.obo:/app/ontology/hp.obo:ro
       - ./translation:/app/translation:ro
     depends_on:
       virtuoso:

@@ -1,0 +1,208 @@
+# PAVS Deployment History
+
+## 2026-03-14: Complete KG Rebuild and IRI Migration
+
+### Overview
+Complete rebuild of the PAVS knowledge graph with migration of all IRIs from `http://pavs.kaust.edu.sa/` to `https://pavs.phenomebrowser.net/`.
+
+### Changes Made
+
+#### 1. IRI Migration
+Migrated all resource identifiers from HTTP to HTTPS with actual domain:
+- **Old**: `http://pavs.kaust.edu.sa/`
+- **New**: `https://pavs.phenomebrowser.net/`
+
+**Affected Components:**
+- Named graph URIs (cases, genes, hpoa, hpo-ic, literature, metadata)
+- Resource IRIs (cases, variants, genes)
+- Ontology namespace (pavs:, pav:)
+- Backend SPARQL query prefixes
+- Metadata dataset identifier
+
+#### 2. RDF Data Regeneration
+Generated fresh RDF files with new IRIs:
+- `cases.ttl` - 175,969 triples (7,510 phenopackets: 5,654 Saudi)
+- `genes.ttl` - 147,331 triples (2,523 genes)
+- `hpoa.ttl` - 1,613,546 triples (disease-phenotype associations)
+- `hpo_ic.ttl` - 56,424 triples (IC values + hierarchy + 19,934 labels)
+- `literature.ttl` - 407,246 triples (9,588 literature phenopackets)
+- `metadata.ttl` - 163 triples (FAIR-compliant metadata)
+
+#### 3. Metadata Enhancement
+Added comprehensive FAIR-compliant metadata including:
+- VoID (Vocabulary of Interlinked Datasets)
+- DCAT (Data Catalog Vocabulary)
+- Dublin Core terms
+- PROV-O provenance
+- PAV versioning
+- Schema.org markup
+- CC-BY 4.0 license
+- Version: 1.0.0
+
+#### 4. Code Updates
+**knowledge-graph/intake/**
+- `compute_hpo_ic.py` - Updated namespace prefixes
+- `generate_rdf.py` - Updated namespace prefixes
+- `generate_metadata.py` - Updated base URI and website URLs
+- `load_virtuoso.py` - Updated graph URIs
+
+**website/backend/**
+- `sparql_queries.py` - Updated graph constants and SPARQL prefixes
+
+**website/virtuoso/**
+- `load_ttl.sql` - Updated graph URIs and added metadata.ttl
+
+#### 5. Deployment
+**Server**: onto.phenomecentral.org at `/data/pavs/`
+
+**Process:**
+1. Stopped all containers
+2. Removed Virtuoso volume for clean state
+3. Rebuilt backend container with updated code
+4. Started fresh stack with new RDF data
+
+**Services:**
+- Frontend: `http://onto:20000` → `https://pavs.phenomebrowser.net/`
+- Backend API: `http://onto:20001`
+- Virtuoso SPARQL: `http://onto:20002` → `https://pavs.phenomebrowser.net/sparql`
+- Virtuoso SQL: `http://onto:20003`
+
+### Verification Results
+
+#### Backend Initialization
+- ✅ 12,725 HPO IC values loaded
+- ✅ 19,408 HPO ancestor sets built
+- ✅ 17,201 cases cached for similarity search
+- ✅ 12,958 disease labels loaded
+- ✅ 19,408 Arabic translations loaded
+
+#### API Endpoints Tested
+- ✅ `/api/health` - All services operational
+- ✅ `/api/case/{id}` - Returns correct IRIs
+- ✅ `/api/search/hpo` - HPO autocomplete working
+- ✅ `/api/search/phenotype` - Similarity search functioning
+- ✅ `/sparql` - Public SPARQL endpoint accessible
+
+#### IRI Validation
+**Example case (PAVS:A0000001):**
+- Case IRI: `https://pavs.phenomebrowser.net/data/PAVS_A0000001`
+- Type: `https://pavs.phenomebrowser.net/ontology/Case`
+- Variant: `https://pavs.phenomebrowser.net/data/var_PAVS_A0000001_SUMF1`
+
+**Named Graphs:**
+```sparql
+https://pavs.phenomebrowser.net/graph/cases       (175,969 triples)
+https://pavs.phenomebrowser.net/graph/genes       (147,331 triples)
+https://pavs.phenomebrowser.net/graph/hpo-ic      (56,424 triples)
+https://pavs.phenomebrowser.net/graph/hpoa        (1,613,546 triples)
+https://pavs.phenomebrowser.net/graph/literature  (407,246 triples)
+https://pavs.phenomebrowser.net/graph/metadata    (163 triples)
+```
+
+### Statistics
+
+**Data Loaded:**
+- Total triples: ~2.4 million
+- Cases: 17,201 total
+  - Saudi cases: 5,654
+  - Literature cases: 9,588
+  - Other cases: 1,959
+- Genes: 2,523
+- HPO terms with IC: 12,725
+- Disease-phenotype associations: 280,003
+
+**Coverage:**
+- HPO ancestor terms: 19,408
+- Saudi-specific term counts: 2,855
+- Diseases in HPOA: 12,958
+
+### Access Points
+
+**Public URLs:**
+- Website: https://pavs.phenomebrowser.net/
+- API: https://pavs.phenomebrowser.net/api/
+- SPARQL: https://pavs.phenomebrowser.net/sparql
+- API Docs: https://pavs.phenomebrowser.net/docs
+
+**SPARQL Example Queries:**
+
+List all graphs:
+```sparql
+SELECT ?g (COUNT(*) AS ?triples) 
+WHERE { GRAPH ?g { ?s ?p ?o } } 
+GROUP BY ?g ORDER BY ?g
+```
+
+Get dataset metadata:
+```sparql
+PREFIX dct: <http://purl.org/dc/terms/>
+SELECT ?title ?version ?license
+WHERE {
+  GRAPH <https://pavs.phenomebrowser.net/graph/metadata> {
+    <https://pavs.phenomebrowser.net/dataset>
+      dct:title ?title ;
+      dct:hasVersion ?version ;
+      dct:license ?license
+  }
+}
+```
+
+Query case by identifier:
+```sparql
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX pavs: <https://pavs.phenomebrowser.net/ontology/>
+SELECT ?case ?type ?variant
+WHERE {
+  GRAPH <https://pavs.phenomebrowser.net/graph/cases> {
+    ?case dc:identifier "PAVS:A0000001" ;
+          a ?type ;
+          pavs:hasVariant ?variant
+  }
+}
+```
+
+### Notes
+
+- Previous deployment backed up at `/data/pavs_backup_20260314_095915/` on onto server
+- Old IRI graphs (`http://pavs.kaust.edu.sa/graph/*`) were removed from Virtuoso
+- No changes made to nginx configuration (routing remains intact)
+- All port mappings unchanged from previous deployment
+- Local development environment also updated with new IRIs
+
+### Related Issues
+
+- Fixed metadata.ttl Turtle syntax error (missing angle brackets around dataset URI)
+- Updated docker-compose volume mounts to use main directory paths
+- Rebuilt backend container to pick up new graph URIs
+
+### Future Maintenance
+
+To regenerate RDF with updates:
+```bash
+cd knowledge-graph
+uv run python intake/prepare_all.py --force --skip-load \
+  --input ../data/combined_annotated-gpt4oss.tsv \
+  --hpo ../ontology/hp.obo \
+  --hpoa ../data/reference/phenotype.hpoa \
+  --literature-dir ../phenopackets/0.1.26
+
+# Generate metadata
+uv run python intake/generate_metadata.py \
+  --version 1.0.0 \
+  --output rdf_output/metadata.ttl
+
+# Fix metadata URI (temporary until script is fixed)
+sed -i 's|^https://pavs.phenomebrowser.net/dataset$|<https://pavs.phenomebrowser.net/dataset>|' \
+  rdf_output/metadata.ttl
+
+# Copy to main directory
+cp rdf_output/*.ttl ../rdf_output/
+```
+
+To reload Virtuoso on server:
+```bash
+ssh onto
+cd /data/pavs
+docker compose -f docker-compose-sparql.yml down -v  # Clean slate
+docker compose -f docker-compose-sparql.yml up -d    # Reload all
+```
