@@ -14,6 +14,87 @@ import requests
 logger = logging.getLogger(__name__)
 
 
+def relaxed_ner(text: str) -> List[Dict[str, Any]]:
+    """
+    Relaxed NER that identifies all terms and potentially multiplies them.
+    
+    Example: "short femur and humerus" -> 
+    ["short femur", "short humerus", "femur", "humerus", "short femur and humerus"]
+    
+    Args:
+        text: Clinical description
+        
+    Returns:
+        List of term dicts with term and context
+    """
+    # Basic cleaning
+    text = text.strip().replace("\n", " ")
+    
+    # Split by common delimiters first to get base phrases
+    delimiters = r"[,;]|\band\b|\bwith\b|\bor\b|\bas well as\b"
+    base_phrases = [p.strip() for p in re.split(delimiters, text, flags=re.IGNORECASE) if p.strip()]
+    
+    results = []
+    # Include original text only if it's not too long and not already a simple list
+    if len(text.split()) < 10 or ("," not in text and ";" not in text):
+        results.append({"term": text, "context": text})
+        
+    last_adj = None
+    # Common anatomical/severity adjectives to carry forward
+    adjectives = {"short", "absent", "long", "small", "large", "enlarged", "hypoplastic", "hyperplastic", "severe", "mild", "profound", "moderate"}
+    
+    for phrase in base_phrases:
+        results.append({"term": phrase, "context": text})
+        
+        words = phrase.split()
+        if words:
+            first_word_lower = words[0].lower()
+            if first_word_lower in adjectives:
+                # Don't carry forward 'absent' to findings that don't make sense (like polyhydramnios)
+                # but keep it for anatomical terms
+                last_adj = words[0]
+            elif len(words) == 1 and last_adj:
+                # Current phrase is just a single word (like "humerus"), and we have a previous adjective (like "short")
+                
+                # Heuristic: only carry forward 'absent' to known anatomical terms or short words
+                if last_adj.lower() == "absent":
+                    findings_to_ignore = {"polyhydramnios", "seizures", "hypotonia"}
+                    if words[0].lower() not in findings_to_ignore:
+                        results.append({"term": f"{last_adj} {phrase}", "context": text})
+                else:
+                    results.append({"term": f"{last_adj} {phrase}", "context": text})
+                # Reset adjective if we hit something that doesn't look like a noun to be modified
+                # but for simplicity in "relaxed" mode we can just keep it or reset it
+                pass
+            
+        # Pattern 1: ADJ1 and ADJ2 NOUN (e.g., "short and malformed tibia")
+        adj_pattern = r"\b(\w+)\s+(?:and|or)\s+(\w+)\s+(\w+)\b"
+        match = re.search(adj_pattern, phrase, re.IGNORECASE)
+        if match:
+            adj1, adj2, noun = match.groups()
+            results.append({"term": f"{adj1} {noun}", "context": text})
+            results.append({"term": f"{adj2} {noun}", "context": text})
+            
+        # Pattern 2: ADJ NOUN1 and NOUN2 (e.g., "short femur and humerus")
+        adj_noun_noun = r"\b(\w+)\s+(\w+)\s+(?:and|or|,)\s+(\w+)\b"
+        match = re.search(adj_noun_noun, phrase, re.IGNORECASE)
+        if match:
+            adj, noun1, noun2 = match.groups()
+            if len(noun2) > 2:
+                results.append({"term": f"{adj} {noun2}", "context": text})
+        
+    # Deduplicate terms
+    seen_terms = set()
+    unique_results = []
+    for r in results:
+        t = r["term"].lower().strip()
+        if t and t not in seen_terms:
+            seen_terms.add(t)
+            unique_results.append(r)
+            
+    return unique_results
+
+
 def extract_phenotype_terms_llm(
     text: str,
     api_key: str,

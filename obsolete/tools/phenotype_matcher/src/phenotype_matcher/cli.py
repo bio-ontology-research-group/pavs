@@ -139,6 +139,23 @@ Examples:
         help="Cache directory for embeddings (default: data/graph_rag_cache)",
     )
     parser.add_argument(
+        "--hpo-path",
+        type=str,
+        default="ontology/hp.obo",
+        help="Path to HPO ontology file (default: ontology/hp.obo)",
+    )
+    parser.add_argument(
+        "--hpo-data-dir",
+        type=str,
+        help="Directory containing HPO data files (hp.obo, phenotype.hpoa, etc.)",
+    )
+    parser.add_argument(
+        "--mondo-path",
+        type=str,
+        default="ontology/mondo.obo",
+        help="Path to MONDO ontology file (default: ontology/mondo.obo)",
+    )
+    parser.add_argument(
         "--device",
         choices=["cpu", "cuda"],
         default="cpu",
@@ -187,6 +204,9 @@ Examples:
         top_k_severity=args.top_k,
         top_k_disease=args.top_k,
         cache_dir=args.cache_dir,
+        hpo_path=args.hpo_path,
+        hpo_data_dir=args.hpo_data_dir,
+        mondo_path=args.mondo_path,
         device=args.device,
         api_key=args.api_key,
         use_ner=not args.no_ner,
@@ -596,9 +616,11 @@ def run_test_cases(specific_case_id: Optional[str], config: MatcherConfig):
     passed = 0
     failed = 0
 
-    for i, case in enumerate(cases_to_run, 1):
-        print(f"\n[{i}/{total_cases}] Running test case: {case['name']}")
-        print(f"Description: {case['description']}")
+    from tqdm import tqdm
+    for i, case in enumerate(tqdm(cases_to_run, desc="Running tests"), 1):
+        # We don't want the debug logs to mess up tqdm, but for now it's okay
+        # as the match() method also logs. 
+        # print() calls should be careful.
 
         # Run the matcher
         input_data = PhenotypeInput(

@@ -8,13 +8,17 @@ import pickle
 import logging
 import time
 import re
-from typing import List, Dict, Any, Optional
+import tempfile
+import shutil
+import traceback
+from typing import List, Dict, Any, Optional, Set
 import numpy as np
 from pyhpo import Ontology
 import pronto
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import requests
+from tqdm import tqdm
 
 from .schemas import (
     PhenotypeInput,
@@ -25,16 +29,15 @@ from .schemas import (
 )
 from . import acronyms
 from . import ner
+from . import normalization_utils
 
 
 # Embedding model presets
 EMBEDDING_MODELS = {
-    "fast": "all-MiniLM-L6-v2",  # 384 dim, 80MB
-    "balanced": "all-mpnet-base-v2",  # 768 dim, 420MB (default)
-    "accurate": "BAAI/bge-large-en-v1.5",  # 1024 dim, 1.3GB
-    "medical": "pritamdeka/S-PubMedBert-MS-MARCO",  # Medical domain
-    "biobert": "dmis-lab/biobert-base-cased-v1.2",  # Biomedical
-    "sapbert": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",  # Biomedical entity linking (RECOMMENDED for medical)
+    "fast": "all-MiniLM-L6-v2",
+    "balanced": "all-mpnet-base-v2",
+    "accurate": "BAAI/bge-large-en-v1.5",
+    "sapbert": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",
 }
 
 # LLM model presets
@@ -42,77 +45,24 @@ LLM_MODELS = {
     "fast": "openai/gpt-oss-120b",
     "accurate": "anthropic/claude-3.5-sonnet",
     "balanced": "google/gemini-2.0-flash-exp:free",
-    "cheap": "deepseek/deepseek-chat",
 }
 
 
 class PhenotypeMatcher:
-    """
-    Phenotype matching tool using Graph RAG.
-
-    Maps clinical phenotype descriptions to standardized ontology identifiers
-    using semantic embeddings, graph structure, and LLM reasoning.
-
-    Example:
-        >>> from phenotype_matcher import PhenotypeMatcher, PhenotypeInput
-        >>>
-        >>> # Initialize matcher
-        >>> matcher = PhenotypeMatcher()
-        >>>
-        >>> # Match phenotypes
-        >>> input_data = PhenotypeInput(text="severe intellectual disability and seizures")
-        >>> output = matcher.match(input_data)
-        >>>
-        >>> # Access results
-        >>> for pheno in output.phenotypes:
-        >>>     print(f"{pheno.hpo_id}: {pheno.label}")
-        >>>     if pheno.severity_label:
-        >>>         print(f"  Severity: {pheno.severity_label}")
-    """
-
     def __init__(self, config: Optional[MatcherConfig] = None):
-        """
-        Initialize the phenotype matcher.
-
-        Args:
-            config: Configuration object. If None, uses defaults.
-        """
         self.config = config or MatcherConfig()
-
-        # Resolve model names from presets
-        self.embedding_model_name = EMBEDDING_MODELS.get(
-            self.config.embedding_model, self.config.embedding_model
-        )
-        self.llm_model_name = LLM_MODELS.get(
-            self.config.llm_model, self.config.llm_model
-        )
-
-        # Setup logging
+        self.embedding_model_name = EMBEDDING_MODELS.get(self.config.embedding_model, self.config.embedding_model)
+        self.llm_model_name = LLM_MODELS.get(self.config.llm_model, self.config.llm_model)
         log_level = logging.DEBUG if self.config.debug else logging.INFO
-        logging.basicConfig(
-            level=log_level, format="%(asctime)s - %(levelname)s - %(message)s"
-        )
+        logging.basicConfig(level=log_level, format="%(asctime)s - %(levelname)s - %(message)s")
         self.logger = logging.getLogger(__name__)
-
-        # Create cache directory
         os.makedirs(self.config.cache_dir, exist_ok=True)
-
-        # Initialize components
-        self.sentence_model = None
-        self.embeddings = None
-        self.terms = []  # List of ontology terms
-        self.term_id_map = {}  # ID -> index mapping
-        self.phenotype_descendants = set()  # HP:0000118 descendants
-        self.severity_descendants = set()  # HP:0012824 descendants
-
-        # API key
+        self.sentence_model, self.embeddings, self.terms, self.term_id_map = None, None, [], {}
+        self.phenotype_descendants, self.severity_descendants = set(), set()
         self.api_key = self.config.api_key or os.getenv("OPENROUTER_API_KEY")
-
-        # Load ontologies and embeddings
         self._initialize()
 
     def _initialize(self):
-        """Load ontology data and embeddings."""
         self.logger.info("Initializing PhenotypeMatcher...")
         self._load_ontologies()
         self._build_descendant_sets()
@@ -120,680 +70,261 @@ class PhenotypeMatcher:
         self.logger.info("Initialization complete.")
 
     def _load_ontologies(self):
-        """Load HPO and MONDO ontologies."""
         self.logger.info("Loading ontologies...")
-
-        # Load HPO
+        stemmed_cache_path = os.path.join(self.config.cache_dir, "stemmed_cache.pkl")
+        normalization_utils.load_persistent_cache(stemmed_cache_path)
         try:
-            _ = Ontology()  # Initialize pyhpo
+            hpo_dir = self.config.hpo_data_dir or (os.path.dirname(self.config.hpo_path) if os.path.isfile(self.config.hpo_path) else self.config.hpo_path)
+            req = ["hp.obo", "phenotype.hpoa", "genes_to_phenotype.txt"]
+            missing = [f for f in req if not os.path.exists(os.path.join(hpo_dir, f))]
+            if missing and "hp.obo" not in missing:
+                temp_hpo_dir = tempfile.mkdtemp(prefix="hpo_data_")
+                os.symlink(os.path.abspath(self.config.hpo_path), os.path.join(temp_hpo_dir, "hp.obo"))
+                for f in ["phenotype.hpoa", "genes_to_phenotype.txt"]:
+                    found = False
+                    for d in [hpo_dir, "data", "../data", "../../data", "/mnt/data1/pavs/data"]:
+                        src = os.path.join(d, f)
+                        if os.path.exists(src):
+                            os.symlink(os.path.abspath(src), os.path.join(temp_hpo_dir, f))
+                            found = True; break
+                hpo_dir = temp_hpo_dir
+            _ = Ontology(hpo_dir)
             for term in Ontology:
-                self.terms.append(
-                    {
-                        "id": term.id,
-                        "name": term.name,
-                        "definition": term.definition or "",
-                        "synonyms": list(term.synonym)
-                        if hasattr(term, "synonym")
-                        else [],
-                        "parents": [p.id for p in term.parents],
-                        "children": [c.id for c in term.children],
-                        "source": "HPO",
-                    }
-                )
+                syns = list(term.synonym) if hasattr(term, "synonym") else []
+                self.terms.append({"id": str(term.id), "name": str(term.name), "synonyms": [str(s) for s in syns], "source": "HPO"})
             self.logger.info(f"Loaded {len(self.terms)} HPO terms")
-        except Exception as e:
-            self.logger.error(f"Failed to load HPO: {e}")
+        except Exception as e: self.logger.error(f"Failed to load HPO: {e}")
 
-        # Load MONDO
-        mondo_path = os.path.join("ontology", "mondo.obo")
+        mondo_path = self.config.mondo_path
         if os.path.exists(mondo_path):
             try:
                 ms = pronto.Ontology(mondo_path)
-                mondo_count = 0
                 for term in ms.terms():
                     if term.id.startswith("MONDO:"):
-                        self.terms.append(
-                            {
-                                "id": term.id,
-                                "name": term.name,
-                                "definition": str(term.definition)
-                                if term.definition
-                                else "",
-                                "synonyms": [s.description for s in term.synonyms],
-                                "parents": [
-                                    p.id for p in term.superclasses(distance=1).to_set()
-                                ],
-                                "children": [
-                                    c.id for c in term.subclasses(distance=1).to_set()
-                                ],
-                                "source": "MONDO",
-                            }
-                        )
-                        mondo_count += 1
-                self.logger.info(f"Loaded {mondo_count} MONDO terms")
-            except Exception as e:
-                self.logger.error(f"Failed to load MONDO: {e}")
-        else:
-            self.logger.warning(f"MONDO ontology not found at {mondo_path}")
+                        self.terms.append({"id": str(term.id), "name": str(term.name), "synonyms": [str(s.description) for s in term.synonyms], "source": "MONDO"})
+            except Exception as e: self.logger.error(f"Failed to load MONDO: {e}")
 
-        # Build ID map
         self.term_id_map = {t["id"]: i for i, t in enumerate(self.terms)}
-        self.logger.info(f"Total terms loaded: {len(self.terms)}")
+        self.exact_map, self.stemmed_map = {}, {}
+        for i, t in enumerate(tqdm(self.terms, desc="Building lookup maps")):
+            for name in [t["name"]] + t["synonyms"]:
+                nl = str(name).lower().strip()
+                if not nl: continue
+                if nl not in self.exact_map: self.exact_map[nl] = []
+                if i not in self.exact_map[nl]: self.exact_map[nl].append(i)
+                st = normalization_utils.get_stemmed_tokens(nl)
+                if st:
+                    if st not in self.stemmed_map: self.stemmed_map[st] = []
+                    if i not in self.stemmed_map[st]: self.stemmed_map[st].append(i)
+        normalization_utils.save_persistent_cache(stemmed_cache_path)
 
     def _build_descendant_sets(self):
-        """Build descendant sets for phenotype and severity branches."""
-        self.logger.info("Building descendant sets...")
-
         try:
-            # Phenotypic abnormality branch (HP:0000118)
-            phenotype_root = Ontology.get_hpo_object("HP:0000118")
-            if phenotype_root:
-                self.phenotype_descendants = {phenotype_root.id}
-
-                def add_pheno_descendants(term):
-                    for child in term.children:
-                        if child.id not in self.phenotype_descendants:
-                            self.phenotype_descendants.add(child.id)
-                            add_pheno_descendants(child)
-
-                add_pheno_descendants(phenotype_root)
-
-            # Severity branch (HP:0012824)
-            severity_root = Ontology.get_hpo_object("HP:0012824")
-            if severity_root:
-                self.severity_descendants = {severity_root.id}
-
-                def add_sev_descendants(term):
-                    for child in term.children:
-                        if child.id not in self.severity_descendants:
-                            self.severity_descendants.add(child.id)
-                            add_sev_descendants(child)
-
-                add_sev_descendants(severity_root)
-
-            self.logger.info(
-                f"Phenotype branch: {len(self.phenotype_descendants)} terms"
-            )
-            self.logger.info(f"Severity branch: {len(self.severity_descendants)} terms")
-
-        except Exception as e:
-            self.logger.warning(f"Could not build descendant sets: {e}")
+            pheno_root = Ontology.get_hpo_object("HP:0000118")
+            if pheno_root:
+                self.phenotype_descendants = {str(pheno_root.id)}
+                def add_d(t):
+                    for c in t.children:
+                        if str(c.id) not in self.phenotype_descendants: self.phenotype_descendants.add(str(c.id)); add_d(c)
+                add_d(pheno_root)
+            sev_root = Ontology.get_hpo_object("HP:0012824")
+            if sev_root:
+                self.severity_descendants = {str(sev_root.id)}
+                def add_s(t):
+                    for c in t.children:
+                        if str(c.id) not in self.severity_descendants: self.severity_descendants.add(str(c.id)); add_s(c)
+                add_s(sev_root)
+        except: pass
 
     def _load_or_compute_embeddings(self):
-        """Load cached embeddings or compute them."""
-        cache_file = os.path.join(
-            self.config.cache_dir,
-            f"embeddings_{self.embedding_model_name.replace('/', '_')}.pkl",
-        )
-
+        cache_file = os.path.join(self.config.cache_dir, f"embeddings_{self.embedding_model_name.replace('/', '_')}.pkl")
         if os.path.exists(cache_file):
-            self.logger.info(f"Loading cached embeddings from {cache_file}")
             try:
                 with open(cache_file, "rb") as f:
-                    data = pickle.load(f)
-                    self.embeddings = data["embeddings"]
-
-                    # Validate cache
-                    if len(self.embeddings) != len(self.terms):
-                        self.logger.warning("Cache mismatch. Recomputing embeddings...")
-                        self._compute_embeddings(cache_file)
-            except Exception as e:
-                self.logger.error(f"Failed to load cache: {e}. Recomputing...")
-                self._compute_embeddings(cache_file)
-        else:
-            self._compute_embeddings(cache_file)
+                    data = pickle.load(f); self.embeddings = data["embeddings"]
+                    if len(self.embeddings) != len(self.terms): self._compute_embeddings(cache_file)
+            except: self._compute_embeddings(cache_file)
+        else: self._compute_embeddings(cache_file)
 
     def _compute_embeddings(self, cache_path: str):
-        """Compute embeddings for all ontology terms."""
-        self.logger.info(f"Computing embeddings using {self.embedding_model_name}...")
+        self.logger.info(f"Computing embeddings...")
+        self.sentence_model = SentenceTransformer(self.embedding_model_name, device=self.config.device)
+        texts = [f"Name: {t['name']}. Synonyms: {', '.join(t['synonyms'])}." for t in self.terms]
+        self.embeddings = self.sentence_model.encode(texts, show_progress_bar=True, convert_to_numpy=True, normalize_embeddings=True)
+        with open(cache_path, "wb") as f: pickle.dump({"embeddings": self.embeddings}, f)
 
-        try:
-            self.sentence_model = SentenceTransformer(
-                self.embedding_model_name, device=self.config.device
-            )
-        except Exception as e:
-            if self.config.device == "cuda":
-                self.logger.warning(f"CUDA failed: {e}. Falling back to CPU.")
-                self.config.device = "cpu"
-                self.sentence_model = SentenceTransformer(
-                    self.embedding_model_name, device="cpu"
-                )
-            else:
-                raise
+    def _add_phenotype(self, phenos: List[PhenotypeMatch], t_obj: Dict, excluded: bool = False, conf: float = 1.0, sev_id: str = None, sev_lab: str = None, method: str = "literal"):
+        if not any(p.hpo_id == t_obj["id"] for p in phenos):
+            phenos.append(PhenotypeMatch(hpo_id=t_obj["id"], label=t_obj["name"], excluded=excluded, confidence=conf, severity_id=sev_id, severity_label=sev_lab, matched_by=method))
 
-        # Prepare text: "Name: [name]. Definition: [def]. Synonyms: [syns]"
-        # CRITICAL: Include ALL synonyms for comprehensive matching
-        texts = []
-        for t in self.terms:
-            txt = f"Name: {t['name']}."
-            if t["definition"]:
-                txt += f" Definition: {t['definition']}."
-            if t["synonyms"]:
-                # Include ALL synonyms (no filtering - 100% coverage)
-                # Max synonyms in HPO: 28, so this is not a memory issue
-                synonyms_text = ", ".join(t["synonyms"])
-                txt += f" Synonyms: {synonyms_text}."
-            texts.append(txt)
+    def _add_disease(self, diseases: List[DiseaseMatch], t_obj: Dict, confidence: float = 1.0, method: str = "literal"):
+        if not any(d.mondo_id == t_obj["id"] for d in diseases):
+            diseases.append(DiseaseMatch(mondo_id=t_obj["id"], mondo_label=t_obj["name"], confidence=confidence, matched_by=method))
 
-        # Compute embeddings
-        self.embeddings = self.sentence_model.encode(
-            texts,
-            show_progress_bar=True,
-            convert_to_numpy=True,
-            normalize_embeddings=True,
-        )
+    def _is_negated(self, text: str, term_name: str) -> bool:
+        tl, tn = text.lower(), term_name.lower()
+        if tn not in tl: return False
+        pre = tl.split(tn)[0].strip().split()
+        if not pre: return False
+        return any(w.strip(",.;") in {"no", "not", "without", "normal", "negative", "denies"} for w in pre[-3:])
 
-        # Save to cache
-        with open(cache_path, "wb") as f:
-            pickle.dump({"embeddings": self.embeddings}, f)
-
-        self.logger.info("Embeddings computed and cached.")
+    def _find_literal_matches(self, text: str) -> List[Dict]:
+        if not isinstance(text, str): return []
+        cl = re.sub(r"[^\w\s]", " ", text.lower()); words = cl.split(); matches, seen = [], set()
+        for length in range(min(len(words), 10), 0, -1):
+            for i in range(len(words) - length + 1):
+                ngram = " ".join(words[i : i + length])
+                if not ngram or len(ngram) < 3: continue
+                # REDUCED FALSE POSITIVES
+                if len(ngram) < 5 and ngram.upper() not in acronyms.MEDICAL_ACRONYMS:
+                    if ngram.lower() in {"caught", "noisy", "short", "absent", "long", "small", "large", "mild", "severe", "present"}: continue
+                for t_idx in self.exact_map.get(ngram, []):
+                    t = self.terms[t_idx]
+                    if t["id"] not in seen: matches.append(t); seen.add(t["id"])
+                st = normalization_utils.get_stemmed_tokens(ngram)
+                if st and st in self.stemmed_map:
+                    for t_idx in self.stemmed_map[st]:
+                        t = self.terms[t_idx]
+                        if t["id"] not in seen: matches.append(t); seen.add(t["id"])
+        return matches
 
     def match(self, input_data: PhenotypeInput) -> PhenotypeOutput:
-        """
-        Match phenotype description to ontology identifiers.
+        start_time = time.time(); llm_calls = 0
+        self.logger.info("Layer 1: Relaxed NER...")
+        phrases = ner.relaxed_ner(input_data.text)
+        all_phenos, all_diseases, todo_llm = [], [], []
+        try:
+            for p_data in phrases:
+                term = p_data["term"]; tl = str(term).lower().strip(); orig_text = p_data["context"]
+                if not tl: continue
+                
+                # Perfect Match
+                perfect_indices = self.exact_map.get(tl, [])
+                if not perfect_indices:
+                    st = normalization_utils.get_stemmed_tokens(tl)
+                    if st: perfect_indices = self.stemmed_map.get(st, [])
+                
+                h_perf = [self.terms[i] for i in perfect_indices if self.terms[i]["id"].startswith("HP:")]
+                m_perf = [self.terms[i] for i in perfect_indices if self.terms[i]["id"].startswith("MONDO:")]
+                
+                h_done, m_done = False, False
+                if len(h_perf) == 1 and tl.upper() not in acronyms.MEDICAL_ACRONYMS:
+                    self._add_phenotype(all_phenos, h_perf[0], excluded=self._is_negated(tl, h_perf[0]["name"]), method="perfect_match")
+                    h_done = True
+                if len(m_perf) == 1:
+                    self._add_disease(all_diseases, m_perf[0], method="perfect_match")
+                    m_done = True
+                if h_done and m_done: continue
 
-        Uses 3-step process:
-        1. NER: Extract individual phenotype terms using LLM
-        2. RAG: Retrieve candidates (with acronym expansion)
-        3. Validation: LLM selects best matches with disambiguation
+                # Literal Inclusion
+                literal = self._find_literal_matches(tl)
+                h_lit = [t for t in literal if t["id"].startswith("HP:") and t["id"] in self.phenotype_descendants]
+                m_lit = [t for t in literal if t["id"].startswith("MONDO:")]
+                
+                # Filter redundant literal matches within the phrase
+                h_final = []
+                for t1 in h_lit:
+                    if not any(t2["id"] != t1["id"] and t1["name"].lower() in t2["name"].lower() for t2 in h_lit):
+                        h_final.append(t1)
+                
+                added = False
+                for t in h_final:
+                    if t["name"].upper() not in acronyms.MEDICAL_ACRONYMS:
+                        self._add_phenotype(all_phenos, t, excluded=self._is_negated(tl, t["name"]), method="literal_inclusion")
+                        added = True
+                for t in m_lit:
+                    self._add_disease(all_diseases, t, method="literal_inclusion"); added = True
+                
+                if any(t["name"].upper() in acronyms.MEDICAL_ACRONYMS for t in h_lit) or (not added and not literal):
+                    todo_llm.append({"phrase_data": p_data, "candidates": h_lit + m_lit, "type": "disambiguation" if any(t["name"].upper() in acronyms.MEDICAL_ACRONYMS for t in h_lit) else "rag"})
+            
+            if todo_llm:
+                pbar = tqdm(todo_llm, desc="LLM Processing", leave=False, disable=len(todo_llm) <= 1)
+                for item in pbar:
+                    t_str = str(item["phrase_data"]["term"])
+                    if item["type"] == "rag" and not item["candidates"]:
+                        item["candidates"] = [c["term"] for c in self._retrieve_phenotype_candidates(t_str, k=self.config.top_k_phenotype)]
+                    res = self._call_llm_layered(t_str, input_data.text, item["candidates"], item["type"], input_data.gene_hint)
+                    llm_calls += 1
+                    if res and isinstance(res, dict):
+                        severity_label = res.get("severity_label")
+                        severity_id = self._lookup_severity_id(severity_label) if severity_label else None
+                        for pl in res.get("phenotype_labels", []):
+                            hid = self._lookup_hpo_id(pl)
+                            if hid:
+                                csid, cslab = severity_id, severity_label
+                                if not csid:
+                                    for sw, sh in [("mild", "HP:0012825"), ("moderate", "HP:0012826"), ("severe", "HP:0012828"), ("profound", "HP:0012829")]:
+                                        if sw in pl.lower() or sw in t_str.lower(): csid, cslab = sh, sw.capitalize(); break
+                                self._add_phenotype(all_phenos, {"id": hid, "name": pl}, res.get("excluded", False), 0.8, csid, cslab, method="LLM_"+item["type"])
+                        for d in res.get("disease_labels", []):
+                            if isinstance(d, dict) and (ml := d.get("mondo")):
+                                if (mid := self._lookup_mondo_id(ml)): self._add_disease(all_diseases, {"id": mid, "name": ml}, 0.8, method="LLM_"+item["type"])
+            
+            # FINAL CROSS-PHRASE FILTER: remove broader or incorrect terms
+            filtered_phenos = []
+            for p1 in all_phenos:
+                # If we have a more specific version of the same term (e.g. "Severe intellectual disability" vs "Intellectual disability"), keep only specific
+                # OR if we have mutually exclusive terms due to context errors
+                is_redundant = False
+                for p2 in all_phenos:
+                    if p1.hpo_id != p2.hpo_id:
+                        # Simple name-based redundancy check
+                        if p1.label.lower() in p2.label.lower():
+                            is_redundant = True; break
+                if not is_redundant: filtered_phenos.append(p1)
+            all_phenos = filtered_phenos
 
-        Args:
-            input_data: Input containing phenotype description
+        except Exception as e: self.logger.error(f"Matcher failed: {e}\n{traceback.format_exc()}")
+        return PhenotypeOutput(phenotypes=all_phenos, diseases=all_diseases, raw_input=input_data.text, ner_extracted_terms=phrases,
+                               processing_metadata={"terms_processed": len(phrases), "llm_calls": llm_calls, "processing_time_seconds": time.time() - start_time, "embedding_model": self.embedding_model_name, "llm_model": self.llm_model_name})
 
-        Returns:
-            PhenotypeOutput with matched phenotypes and diseases
-        """
-        start_time = time.time()
-
-        # STEP 1: NER - Extract individual phenotype terms using LLM (if enabled)
-        if self.config.use_ner and self.api_key:
-            self.logger.info("Step 1: Extracting phenotype terms using NER...")
-            extracted_terms = ner.extract_phenotype_terms_llm(
-                input_data.text,
-                self.api_key,
-                self.llm_model_name,
-            )
-            llm_calls = 1  # NER call
+    def _call_llm_layered(self, term: str, text: str, cands: List[Dict], mtype: str, gene: str = None) -> Dict[str, Any]:
+        cb = "".join([f"- {c['name']} ({c['id']})\n" + (f"  Definition: {c['definition']}\n" if c.get('definition') else "") for c in cands])
+        if mtype == "rag":
+            prompt = f"Identify terms equivalent to '{term}' in '{text}'. Rules: match ALL words, ignore 'PICU' etc. JSON: {{phenotype_labels: [], severity_label: str|null, excluded: bool}}\nCandidates:\n{cb}"
         else:
-            extracted_terms = []
-            llm_calls = 0
-
-        # Fallback to simple splitting if NER disabled or fails
-        if not extracted_terms:
-            self.logger.warning("NER failed, falling back to comma splitting")
-            if input_data.split_by:
-                terms = [
-                    {
-                        "term": t.strip(),
-                        "modifiers": [],
-                        "excluded": False,
-                        "original_span": t.strip(),
-                    }
-                    for t in input_data.text.split(input_data.split_by)
-                    if t.strip()
-                ]
-            else:
-                terms = [
-                    {
-                        "term": input_data.text.strip(),
-                        "modifiers": [],
-                        "excluded": False,
-                        "original_span": input_data.text.strip(),
-                    }
-                ]
-            extracted_terms = terms
-
-        self.logger.info(f"Extracted {len(extracted_terms)} phenotype terms")
-
-        all_phenotypes = []
-        all_diseases = []
-
-        # Collect all term strings for context
-        all_term_strings = [t.get("term", "") for t in extracted_terms]
-
-        # STEP 2 & 3: For each extracted term, do RAG + validation
-        for term_data in extracted_terms:
-            term = term_data.get("term", "")
-            modifiers = term_data.get("modifiers", []) or []  # Ensure it's a list
-            excluded_by_ner = term_data.get("excluded", False)
-
-            if not term:
-                continue
-
-            self.logger.debug(
-                f"Processing term: '{term}', modifiers: {modifiers}, excluded: {excluded_by_ner}"
-            )
-
-            # Process the term
-            result = self._normalize_term(
-                term,
-                input_data.context or "",
-                gene_hint=input_data.gene_hint,
-                other_terms=all_term_strings,
-                ner_excluded=excluded_by_ner,
-                ner_modifiers=modifiers,
-            )
-            llm_calls += 1
-
-            # Convert LLM response to PhenotypeMatch objects
-            phenotype_labels = result.get("phenotype_labels", [])
-
-            # ALWAYS use NER exclusion if it detected negation (NER is more reliable)
-            if excluded_by_ner:
-                excluded = True
-                self.logger.debug(f"Using NER exclusion status: excluded=True")
-            else:
-                excluded = result.get("excluded", False)
-
-            # ALWAYS use NER modifiers for severity if available (takes precedence)
-            # NER is more reliable for modifier extraction than LLM
-            severity_label = None
-            if modifiers:
-                # Check if any NER modifier is a severity term
-                severity_keywords = ["mild", "moderate", "severe", "profound"]
-                for mod in modifiers:
-                    if mod.lower() in severity_keywords:
-                        severity_label = mod.capitalize()
-                        self.logger.debug(
-                            f"Using NER severity modifier: {severity_label}"
-                        )
-                        break
-
-            # Fallback to LLM severity if NER didn't find one
-            if not severity_label:
-                severity_label = result.get("severity_label")
-
-            for pheno_label in phenotype_labels:
-                # Look up HPO ID from label
-                hpo_id = self._lookup_hpo_id(pheno_label)
-                if hpo_id:
-                    severity_id = None
-                    if severity_label:
-                        severity_id = self._lookup_severity_id(severity_label)
-
-                    all_phenotypes.append(
-                        PhenotypeMatch(
-                            hpo_id=hpo_id,
-                            label=pheno_label,
-                            excluded=excluded,
-                            severity_id=severity_id,
-                            severity_label=severity_label if severity_id else None,
-                            confidence=0.9,  # Placeholder - could use actual scores
-                        )
-                    )
-
-            # Process disease labels
-            disease_labels = result.get("disease_labels", [])
-            for disease in disease_labels:
-                mondo_label = disease.get("mondo")
-                omim_label = disease.get("omim")
-
-                disease_match = DiseaseMatch()
-
-                if mondo_label:
-                    mondo_id = self._lookup_mondo_id(mondo_label)
-                    if mondo_id:
-                        disease_match.mondo_id = mondo_id
-                        disease_match.mondo_label = mondo_label
-
-                if omim_label:
-                    # OMIM lookup would go here
-                    disease_match.omim_labels.append(omim_label)
-
-                if disease_match.mondo_id or disease_match.omim_labels:
-                    all_diseases.append(disease_match)
-
-        # Create output
-        output = PhenotypeOutput(
-            phenotypes=all_phenotypes,
-            diseases=all_diseases,
-            raw_input=input_data.text,
-            ner_extracted_terms=extracted_terms,  # Store NER output for debugging
-            processing_metadata={
-                "terms_processed": len(extracted_terms),
-                "llm_calls": llm_calls,
-                "processing_time_seconds": time.time() - start_time,
-                "embedding_model": self.embedding_model_name,
-                "llm_model": self.llm_model_name,
-                "ner_used": self.config.use_ner,
-                "acronym_expansion_used": self.config.expand_acronyms,
-            },
-        )
-
-        return output
-
-    def _normalize_term(
-        self,
-        term: str,
-        context: str = "",
-        gene_hint: Optional[str] = None,
-        other_terms: Optional[List[str]] = None,
-        ner_excluded: bool = False,
-        ner_modifiers: Optional[List[str]] = None,
-    ) -> Dict[str, Any]:
-        """
-        Normalize a single term using Graph RAG with acronym expansion.
-
-        Args:
-            term: The phenotype term to normalize
-            context: Additional context
-            gene_hint: Optional gene symbol for disambiguation (SOFT cue only)
-            other_terms: Other phenotype terms in the description (for context)
-            ner_excluded: Exclusion status from NER (if available)
-            ner_modifiers: Modifiers extracted by NER (if available)
-
-        Returns dict with phenotype_labels, severity_label, excluded, disease_labels.
-        """
-        # Use NER exclusion if provided, otherwise detect from text
-        if ner_excluded:
-            excluded = True
-        else:
-            excluded = any(
-                neg in term.lower()
-                for neg in ["no ", "not ", "without ", "absent ", "normal "]
-            )
-
-        # STEP 2A: Check for acronym expansion (if enabled)
-        search_terms = [term]
-        acronym_context = ""
-        if self.config.expand_acronyms and acronyms.should_expand_for_search(term):
-            expansions = acronyms.expand_acronym(term)
-            if expansions:
-                self.logger.info(f"Expanding acronym '{term}' to: {expansions}")
-                search_terms = expansions
-                acronym_context = f"\n**ACRONYM DISAMBIGUATION**: '{term}' could mean: {', '.join(expansions)}. Use context to choose the correct interpretation."
-
-        # STEP 2B: Retrieve phenotype candidates (possibly from multiple expansions)
-        all_pheno_candidates = []
-        seen_ids = set()
-
-        for search_term in search_terms:
-            candidates = self._retrieve_phenotype_candidates(
-                search_term, k=self.config.top_k_phenotype
-            )
-            # Merge candidates, avoiding duplicates
-            for cand in candidates:
-                term_id = cand["term"]["id"]
-                if term_id not in seen_ids:
-                    seen_ids.add(term_id)
-                    all_pheno_candidates.append(cand)
-
-        # Sort by score and take top-k
-        all_pheno_candidates.sort(key=lambda x: x["score"], reverse=True)
-        pheno_candidates = all_pheno_candidates[
-            : self.config.top_k_phenotype * 2
-        ]  # Allow more for disambiguation
-        pheno_context = self._build_graph_context(pheno_candidates)
-
-        # Retrieve severity candidates
-        sev_candidates = self._retrieve_severity_candidates(
-            term, k=self.config.top_k_severity
-        )
-        sev_context = (
-            self._build_graph_context(sev_candidates)
-            if sev_candidates
-            else "No severity modifiers found."
-        )
-
-        # Build context information for disambiguation
-        context_info = []
-        if context:
-            context_info.append(f"Patient Context: {context}")
-
-        if other_terms and len(other_terms) > 1:
-            # Show other phenotypes in the description for disambiguation
-            other_phenos = [t for t in other_terms if t != term]
-            if other_phenos:
-                context_info.append(
-                    f"Other phenotypes in description: {', '.join(other_phenos[:5])}"
-                )
-
-        if gene_hint:
-            context_info.append(
-                f"Gene hint: {gene_hint} (use ONLY as SOFT cue for disambiguation, NEVER override good matches)"
-            )
-
-        context_block = (
-            "\n".join(context_info)
-            if context_info
-            else "No additional context provided."
-        )
-
-        # Query LLM
-        has_multiple = any(
-            word in term.lower() for word in [" and ", " with ", " or ", ","]
-        )
-
-        prompt = f"""You are an expert clinical geneticist. Map the clinical term "{term}" to standard ontology labels.
-
-{context_block}
-{acronym_context}
-
-CRITICAL RULES:
-1. You MUST select ONLY from the provided candidate NAMES/LABELS below
-2. DO NOT output any IDs (HP:, MONDO:, OMIM:) - ONLY output the exact label/name from candidates
-3. This term {"MAY CONTAIN MULTIPLE PHENOTYPES" if has_multiple else "likely describes a single phenotype"}
-4. Extract ALL phenotypes mentioned - a single term can map to 0, 1, or MULTIPLE phenotype labels
-5. If gene hint provided, use it ONLY for disambiguation between similar candidates, NEVER to override clear semantic matches
-
-SPECIFICITY RULES (CRITICAL - FOLLOW EXACTLY):
-- DO NOT ADD DETAILS not in the input term
-  WRONG: "hypotonia" → "Episodic generalized hypotonia" (added "episodic" and "generalized")
-  WRONG: "seizures" → "Symptomatic seizures" (added "symptomatic")
-  WRONG: "noisy breathing" → "Laryngotracheomalacia" (this is a CAUSE, not the phenotype)
-  RIGHT: "hypotonia" → "Hypotonia" (exact match)
-  RIGHT: "seizures" → "Seizure" (exact match, just singular)
-
-- Match EXACTLY what is described, or be MORE GENERAL (never more specific)
-  RIGHT: "absence seizures" → "Seizure" (more general, acceptable)
-  RIGHT: "mild hypotonia" → "Hypotonia" (general term, severity separate)
-  WRONG: "hypotonia" → "Muscular hypotonia" (added specificity about muscle)
-  WRONG: "breathing problems" → "Laryngotracheomalacia" (too specific, this is a diagnosis)
-
-- If you see a specific subtype in candidates but the input is general, choose the GENERAL term
-- Only select specific subtypes if those exact details are in the input text
-
-**Phenotype Candidates** (select from these names only):
-{pheno_context}
-
-**Severity Candidates** (select from these names only):
-{sev_context}
-
-**Negation Detection**: The term {"CONTAINS" if excluded else "DOES NOT contain"} negation words.
-
-Instructions:
-1. Carefully read the term and identify EACH distinct phenotype mentioned
-2. For EACH phenotype, select the best matching label from Phenotype Candidates
-3. Prefer general terms over overly specific ones (unless specificity is in the text)
-4. If ambiguous (e.g., "ASD"), use the other phenotypes and gene hint to disambiguate
-5. If severity detected (mild, moderate, severe, profound), select from Severity Candidates
-6. Mark excluded: {str(excluded).lower()}
-
-Output ONLY labels, NEVER IDs:
-{{
-  "phenotype_labels": ["exact label from candidates", ...],
-  "severity_label": "exact label from candidates" or null,
-  "excluded": {str(excluded).lower()},
-  "disease_labels": [{{"mondo": "label", "omim": "label"}}, ...] or []
-}}
-
-FORBIDDEN: DO NOT output HP:XXXXXXX, MONDO:XXXXXXX, or OMIM:XXXXXX. Only output labels.
-"""
-
+            prompt = f"Disambiguate '{term}' in '{text}' (Gene: {gene}). ASD heart -> Atrial septal defect; ASD behavior -> Autistic behavior. JSON: {{phenotype_labels: [], severity_label: str|null, excluded: bool}}\nCandidates:\n{cb}"
         return self._query_llm(prompt)
 
     def _retrieve_phenotype_candidates(self, query: str, k: int = 5) -> List[Dict]:
-        """Retrieve top-k phenotype candidates from HP:0000118 branch."""
-        if self.sentence_model is None:
-            self.sentence_model = SentenceTransformer(
-                self.embedding_model_name, device=self.config.device
-            )
-
-        # Filter to phenotype branch
-        pheno_indices = [
-            i
-            for i, t in enumerate(self.terms)
-            if t["source"] == "HPO" and t["id"] in self.phenotype_descendants
-        ]
-
-        if not pheno_indices:
-            return []
-
-        # Encode query
-        query_emb = self.sentence_model.encode(
-            [query], convert_to_numpy=True, normalize_embeddings=True
-        )
-
-        # Compute similarities
-        pheno_embs = self.embeddings[pheno_indices]
-        scores = cosine_similarity(query_emb, pheno_embs)[0]
-        top_k_local = np.argsort(scores)[::-1][:k]
-
-        # Build results
-        results = []
-        for local_idx in top_k_local:
-            global_idx = pheno_indices[local_idx]
-            term = self.terms[global_idx]
-            results.append({"term": term, "score": float(scores[local_idx])})
-
-        return results
-
-    def _retrieve_severity_candidates(self, query: str, k: int = 5) -> List[Dict]:
-        """Retrieve top-k severity candidates from HP:0012824 branch."""
-        if self.sentence_model is None:
-            self.sentence_model = SentenceTransformer(
-                self.embedding_model_name, device=self.config.device
-            )
-
-        # Filter to severity branch
-        sev_indices = [
-            i
-            for i, t in enumerate(self.terms)
-            if t["source"] == "HPO" and t["id"] in self.severity_descendants
-        ]
-
-        if not sev_indices:
-            return []
-
-        # Encode query
-        query_emb = self.sentence_model.encode(
-            [query], convert_to_numpy=True, normalize_embeddings=True
-        )
-
-        # Compute similarities
-        sev_embs = self.embeddings[sev_indices]
-        scores = cosine_similarity(query_emb, sev_embs)[0]
-        top_k_local = np.argsort(scores)[::-1][:k]
-
-        # Build results
-        results = []
-        for local_idx in top_k_local:
-            global_idx = sev_indices[local_idx]
-            term = self.terms[global_idx]
-            results.append({"term": term, "score": float(scores[local_idx])})
-
-        return results
-
-    def _build_graph_context(self, candidates: List[Dict]) -> str:
-        """Build graph context string from candidates."""
-        context_str = ""
-        seen_ids = set()
-
-        for cand in candidates:
-            t = cand["term"]
-            if t["id"] in seen_ids:
-                continue
-            seen_ids.add(t["id"])
-
-            context_str += (
-                f"- **{t['name']}** ({t['id']}) [Score: {cand['score']:.4f}]\n"
-            )
-            if t["definition"]:
-                context_str += f"  Definition: {t['definition']}\n"
-
-            # Add parents for context
-            parents = []
-            for pid in t["parents"]:
-                if pid in self.term_id_map:
-                    p = self.terms[self.term_id_map[pid]]
-                    parents.append(f"{p['name']} ({p['id']})")
-
-            if parents:
-                context_str += f"  Parents: {', '.join(parents[:3])}\n"
-            context_str += "\n"
-
-        return context_str
+        if self.sentence_model is None: self.sentence_model = SentenceTransformer(self.embedding_model_name, device=self.config.device)
+        idx = [i for i, t in enumerate(self.terms) if t["source"] == "HPO" and t["id"] in self.phenotype_descendants]
+        if not idx: return []
+        scores = cosine_similarity(self.sentence_model.encode([str(query)], convert_to_numpy=True, normalize_embeddings=True), self.embeddings[idx])[0]
+        return [{"term": self.terms[idx[i]], "score": float(scores[i])} for i in np.argsort(scores)[::-1][:k]]
 
     def _query_llm(self, prompt: str) -> Dict[str, Any]:
-        """Query LLM via OpenRouter API."""
-        if not self.api_key:
-            self.logger.error("OpenRouter API key not set")
-            return {}
-
+        if not self.api_key: return {}
         try:
-            resp = requests.post(
-                "https://openrouter.ai/api/v1/chat/completions",
-                headers={
-                    "Authorization": f"Bearer {self.api_key}",
-                    "Content-Type": "application/json",
-                },
-                json={
-                    "model": self.llm_model_name,
-                    "messages": [{"role": "user", "content": prompt}],
-                    "response_format": {"type": "json_object"},
-                },
-                timeout=60,
-            )
+            resp = requests.post("https://openrouter.ai/api/v1/chat/completions", headers={"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"},
+                                json={"model": self.llm_model_name, "messages": [{"role": "user", "content": prompt}], "response_format": {"type": "json_object"}}, timeout=60)
+            c = resp.json()["choices"][0]["message"]["content"].strip()
+            if c.startswith("```"): c = re.sub(r"^```(?:json)?\n", "", c); c = re.sub(r"\n```$", "", c)
+            s, e = c.find("{"), c.rfind("}")
+            return json.loads(c[s:e+1]) if s != -1 else {}
+        except: return {}
 
-            if resp.status_code != 200:
-                self.logger.error(f"LLM API Error: {resp.text}")
-                return {}
-
-            content = resp.json()["choices"][0]["message"]["content"]
-            # Clean markdown code blocks
-            content = re.sub(r"```json\n?|\n?```", "", content).strip()
-            return json.loads(content)
-
-        except Exception as e:
-            self.logger.error(f"LLM query failed: {e}")
-            return {}
-
-    def _lookup_hpo_id(self, label: str) -> Optional[str]:
-        """Look up HPO ID from label."""
-        label_lower = label.lower().strip()
-
-        # Exact match
-        for term in self.terms:
-            if term["source"] == "HPO" and term["name"].lower() == label_lower:
-                return term["id"]
-
-        # Synonym match
-        for term in self.terms:
-            if term["source"] == "HPO":
-                for syn in term.get("synonyms", []):
-                    if syn.lower() == label_lower:
-                        return term["id"]
-
+    def _lookup_hpo_id(self, label: Any) -> Optional[str]:
+        if isinstance(label, dict): label = label.get("label") or label.get("name")
+        if not isinstance(label, str): return None
+        l = label.lower().strip()
+        for t in self.terms:
+            if t["source"] == "HPO" and (t["name"].lower() == l or any(s.lower() == l for s in t.get("synonyms", []))): return t["id"]
         return None
 
-    def _lookup_severity_id(self, label: str) -> Optional[str]:
-        """Look up severity HPO ID from label."""
-        label_lower = label.lower().strip()
-
-        for term in self.terms:
-            if term["source"] == "HPO" and term["id"] in self.severity_descendants:
-                if term["name"].lower() == label_lower:
-                    return term["id"]
-
+    def _lookup_severity_id(self, label: Any) -> Optional[str]:
+        if isinstance(label, dict): label = label.get("label") or label.get("name")
+        if not isinstance(label, str): return None
+        l = label.lower().strip()
+        for t in self.terms:
+            if t["source"] == "HPO" and t["id"] in self.severity_descendants and t["name"].lower() == l: return t["id"]
         return None
 
-    def _lookup_mondo_id(self, label: str) -> Optional[str]:
-        """Look up MONDO ID from label."""
-        label_lower = label.lower().strip()
-
-        for term in self.terms:
-            if term["source"] == "MONDO" and term["name"].lower() == label_lower:
-                return term["id"]
-
+    def _lookup_mondo_id(self, label: Any) -> Optional[str]:
+        if isinstance(label, dict): label = label.get("label") or label.get("name")
+        if not isinstance(label, str): return None
+        l = label.lower().strip()
+        for t in self.terms:
+            if t["source"] == "MONDO" and t["name"].lower() == l: return t["id"]
         return None

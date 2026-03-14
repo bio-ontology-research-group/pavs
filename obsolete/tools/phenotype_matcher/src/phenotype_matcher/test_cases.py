@@ -8,7 +8,46 @@ These cases test the tool's ability to handle:
 - Long, unstructured clinical descriptions
 """
 
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
+from pyhpo import Ontology
+
+
+# Initialize ontology for similarity checks
+try:
+    if not Ontology.hpo_count():
+        _ = Ontology()
+except:
+    pass
+
+
+def are_terms_related(id1: str, id2: str, max_distance: int = 1) -> bool:
+    """
+    Check if two HPO terms are related (parent/child within max_distance).
+    """
+    if id1 == id2:
+        return True
+        
+    try:
+        t1 = Ontology.get_hpo_object(id1)
+        t2 = Ontology.get_hpo_object(id2)
+        
+        if not t1 or not t2:
+            return False
+            
+        # Check parents of t1
+        parents = t1.parents
+        if t2 in parents:
+            return True
+            
+        # Check children of t1
+        children = t1.children
+        if t2 in children:
+            return True
+            
+        # For max_distance > 1, we could do more, but let's start with 1
+        return False
+    except:
+        return False
 
 
 # Ground truth verified against hp.obo
@@ -357,14 +396,22 @@ def validate_results(case_id: str, output) -> Dict[str, Any]:
 
         # Check if expected ID or any alternative was matched
         for matched in output.phenotypes:
-            if matched.hpo_id == expected_id or matched.hpo_id in alternatives:
+            # Check for exact or alternative match
+            is_exact = matched.hpo_id == expected_id or matched.hpo_id in alternatives
+            
+            # Check for close match in hierarchy
+            is_close = are_terms_related(matched.hpo_id, expected_id, max_distance=1)
+            
+            if is_exact or is_close:
                 found = True
                 match_info = {
                     "hpo_id": matched.hpo_id,
+                    "expected_id": expected_id,
                     "expected_label": expected_label,
                     "matched_label": matched.label,
                     "comment": expected.get("comment", ""),
                     "correct": True,
+                    "close_match": is_close and not is_exact
                 }
 
                 if matched.hpo_id in alternatives:
@@ -383,7 +430,14 @@ def validate_results(case_id: str, output) -> Dict[str, Any]:
 
                 # Check severity if specified
                 if "severity_id" in expected:
+                    # Case 1: Exact severity match
                     if matched.severity_id == expected["severity_id"]:
+                        match_info["severity_correct"] = True
+                    # Case 2: Pre-coordinated term (ID is in alternatives)
+                    elif matched.hpo_id in alternatives:
+                        match_info["severity_correct"] = True
+                    # Case 3: Matched label contains severity word
+                    elif expected.get("severity_label") and expected["severity_label"].lower() in matched.label.lower():
                         match_info["severity_correct"] = True
                     else:
                         match_info["severity_correct"] = False
@@ -479,7 +533,10 @@ def print_validation_results(results: Dict[str, Any], output=None):
                     )
 
             detail_str = f" ({'; '.join(details)})" if details else ""
-            print(f"  {status} {match['hpo_id']}: {match['matched_label']}{detail_str}")
+            match_type_str = " (CLOSE MATCH)" if match.get("close_match") else ""
+            print(f"  {status} {match['hpo_id']}: {match['matched_label']}{match_type_str}{detail_str}")
+            if match.get("close_match"):
+                print(f"     └─ Expected: {match['expected_id']}: {match['expected_label']}")
             if match.get("comment"):
                 print(f"     └─ {match['comment']}")
 

@@ -41,11 +41,14 @@ class MatcherConfig:
     """
 
     embedding_model: str = "balanced"
-    llm_model: str = "fast"
+    llm_model: str = "balanced"
     top_k_phenotype: int = 5
     top_k_severity: int = 5
     top_k_disease: int = 5
     cache_dir: str = "data/graph_rag_cache"
+    hpo_path: str = "ontology/hp.obo"
+    hpo_data_dir: Optional[str] = None
+    mondo_path: str = "ontology/mondo.obo"
     device: str = "cpu"
     api_key: Optional[str] = None
     use_ner: bool = True
@@ -73,6 +76,7 @@ class PhenotypeMatch:
     severity_id: Optional[str] = None
     severity_label: Optional[str] = None
     confidence: float = 0.0
+    matched_by: str = "unknown"
 
 
 @dataclass
@@ -97,6 +101,7 @@ class DiseaseMatch:
     omim_labels: List[str] = field(default_factory=list)
     orphanet_ids: List[str] = field(default_factory=list)
     confidence: float = 0.0
+    matched_by: str = "unknown"
 
 
 @dataclass
@@ -165,6 +170,7 @@ class PhenotypeOutput:
                     "severity_id": p.severity_id,
                     "severity_label": p.severity_label,
                     "confidence": p.confidence,
+                    "matched_by": p.matched_by,
                 }
                 for p in self.phenotypes
             ],
@@ -177,6 +183,7 @@ class PhenotypeOutput:
                     "omim_labels": d.omim_labels,
                     "orphanet_ids": d.orphanet_ids,
                     "confidence": d.confidence,
+                    "matched_by": d.matched_by,
                 }
                 for d in self.diseases
             ],

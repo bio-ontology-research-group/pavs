@@ -4,7 +4,8 @@
 This project is a clinical data processing pipeline designed to ingest heterogeneous genomic and phenotypic datasets (originally in Excel/CSV), standardize them to international ontologies, and export them as **Phenopackets v2.0**. It specifically focuses on cases from the Middle East/Saudi Arabia.
 
 ### Key Technologies
-- **Python**: Core logic for data parsing and transformation.
+- **Python**: Core logic for data parsing and transformation. Always
+  use `uv` to run Python!
 - **Pandas**: Data manipulation and integrated master sheet generation.
 - **Ontologies**: HPO (Phenotypes), OMIM (Diseases), HANCESTRO (Ancestry), GAZ (Geography), GENO (Zygosity).
 - **LLM Integration**: Uses Gemini 1.5/2.0 Flash via OpenRouter for resolving ambiguous clinical text to HPO terms.
@@ -58,3 +59,6 @@ uv run --with pandas python scripts/generate_phenopackets.py
 - `ontology/`: HPO OBO/OWL files.
 - `phenopackets/`: Publicly available store (`0.1.26`) and generated packets (`generated/`).
 - `scripts/`: Python pipeline scripts.
+
+### 5. Website
+Start the website with docker compose up and down.
