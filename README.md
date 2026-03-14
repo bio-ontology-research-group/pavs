@@ -247,5 +247,3 @@ For questions or issues:
 ## Related Projects
 
 - [HPO Arabic Translation](https://github.com/bio-ontology-research-group/hpo-arabic) - Human Phenotype Ontology Arabic translations (submodule in `translation/`)
-- [Monarch Initiative](https://monarchinitiative.org/) - Integrated phenotype data across species
-- [GA4GH Phenopackets](https://github.com/phenopackets/phenopacket-schema) - Standard for sharing phenotypic data
