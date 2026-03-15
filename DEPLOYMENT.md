@@ -191,6 +191,39 @@ Patched high-severity vulnerabilities in `pillow` and `protobuf` identified in M
 - Updated docker-compose volume mounts to use main directory paths
 - Rebuilt backend container to pick up new graph URIs
 
+## 2026-03-15: Website Improvements and Bug Fixes
+
+### Overview
+Improved phenotype search functionality, cohort filtering, and diagnosis suggestions.
+
+### Changes Made
+
+#### 1. Phenotype Search Enhancements
+- **"Show Only Diagnosed Cases" Filter**: Added a new filter to exclude cases without a confirmed causative gene.
+- **Removed Redundant Options**:
+    - Removed "ClinVar" cohort from search (no cases currently loaded in production VCF).
+    - Removed "Expand with OMIM/ClinVar disease HPO annotations" checkbox as requested.
+
+#### 2. Diagnosis Logic Improvements
+- **Suggested Diagnoses**: Refined logic to only show gene-based suggested diseases when no explicit clinical diagnosis exists.
+- **Global Availability**: Suggestions are now shown for all cohorts (not just Saudi) when the diagnosis is missing.
+
+#### 3. Cohort Filtering Fixes
+- **Robust Saudi Identification**: Updated backend to check both `is_saudi` flags and source name strings (e.g., "Saudi cohort").
+- **Case Fixes**: Fixed `PAVS:P0000919` being misclassified as Literature/DDD; it now correctly appears in Saudi results.
+
+#### 4. Internationalization
+- Added English and Arabic translations for "Show only diagnosed cases".
+- Removed translations for decommissioned search options.
+
+### Deployment
+- **Files Updated on onto**: 
+    - `website/backend/main.py`
+    - `website/frontend/src/components/PhenotypeSearch.tsx`
+    - `website/frontend/src/i18n/en.json`
+    - `website/frontend/src/i18n/ar.json`
+- **Containers Rebuilt**: `pavs-backend-1`, `pavs-frontend-1`
+
 ### Future Maintenance
 
 To regenerate RDF with updates:
