@@ -31,6 +31,9 @@ dev-dependencies = [
     "pytest>=8.0",
     "requests>=2.31",
 ]
+override-dependencies = [
+    "protobuf>=6.33.5",
+]
 
 [build-system]
 requires = ["hatchling"]

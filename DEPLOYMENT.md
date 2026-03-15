@@ -169,6 +169,22 @@ WHERE {
 - All port mappings unchanged from previous deployment
 - Local development environment also updated with new IRIs
 
+## 2026-03-14: Security Dependency Updates
+
+### Overview
+Patched high-severity vulnerabilities in `pillow` and `protobuf` identified in March 2026.
+
+### Vulnerabilities Fixed
+- **Pillow (CVE-2026-25990)**: Out-of-bounds write when loading PSD images.
+- **Protobuf (CVE-2026-0994)**: JSON recursion depth bypass and potential Denial of Service.
+
+### Changes Made
+- **pyproject.toml**: Added `tool.uv.override-dependencies` for `protobuf>=6.33.5` to bypass restrictive version pins in transitive dependencies (`pyphetools`).
+- **uv.lock**: 
+    - Updated `pillow` from `12.1.0` to `12.1.1`.
+    - Updated `protobuf` from `3.20.3` to `6.33.5`.
+- **Environment**: Synchronized local venv using `uv sync`.
+
 ### Related Issues
 
 - Fixed metadata.ttl Turtle syntax error (missing angle brackets around dataset URI)
