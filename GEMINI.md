@@ -1,0 +1,2 @@
+- PAVS stands for "Phenotype-Associated Variants in Saudi Arabia"
+- live instance is at https://pavs.phenmebrowser.net
