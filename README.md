@@ -119,6 +119,8 @@ docker compose -f config/docker-compose-sparql.yml up -d
 - Backend API: http://localhost:8000/docs
 - Virtuoso SPARQL: http://localhost:8890/sparql
 
+After this, configure redirects or proxy-redirects as required.
+
 ---
 
 ## Repository Structure
@@ -163,7 +165,7 @@ pavs/                           # Single point of entry
 
 - **Total cases**: 7,566
   - Saudi rare disease patients: 5,710 (75.5%)
-  - Non-Saudi literature cases: 1,856 (24.5%)
+  - Non-Saudi literature cases (DDD): 1,856 (24.5%)
 - **Unique HPO phenotypes**: 2,847
 - **Unique genes**: 1,234
 - **Confirmed diagnoses**: 4,523 (59.8%)
@@ -173,20 +175,21 @@ pavs/                           # Single point of entry
 
 `PAVS:XNNNNNNN` where X is the source letter:
 
-| Letter | Source | Cases | Saudi |
-|--------|--------|-------|-------|
-| A, B | ahmed-pmid28454995 | 525 | ✓ |
-| F | fawzan-variants | 1,024 | ✓ |
-| M | marwa-variants | 1,421 | ✓ |
-| P | PMC6562004 | 2,218 | ✓ |
-| Q | PMC7082194 | 522 | ✓ |
-| D | ddd-diagnoses | 1,856 | ✗ |
+| Letter | Source | Cases | Saudi | Link/Reference |
+|:---:|:---|:---:|:---:|:---|
+| **M** | marwa-variants | 1,421 | ✓ | Manually curated data |
+| **A, B** | ahmed-pmid28454995 | 525 | ✓ | [PMID: 28454995](https://pubmed.ncbi.nlm.nih.gov/28454995/) |
+| **F** | fawzan-variants | 1,024 | ✓ | [PMC5502059](https://pmc.ncbi.nlm.nih.gov/articles/PMC5502059/) |
+| **P** | PMC6562004 | 2,218 | ✓ | [PMC6562004](https://pmc.ncbi.nlm.nih.gov/articles/PMC6562004/) |
+| **Q** | PMC7082194 | 522 | ✓ | [PMC7082194](https://pmc.ncbi.nlm.nih.gov/articles/PMC7082194/) |
+| **D** | ddd-diagnoses | 1,856 | ✗ | [PMC11568748](https://pmc.ncbi.nlm.nih.gov/articles/PMC11568748/) |
 
 ---
 
 ## Evaluation & Benchmarking
 
-This repository includes tools for validating and benchmarking the PAVS system:
+This repository includes tools for validating and benchmarking the
+PAVS system:
 
 ### Semantic Similarity Analysis
 
@@ -230,7 +233,7 @@ pytest test_sparql_queries.py
 
 PAVS follows FAIR (Findable, Accessible, Interoperable, Reusable) principles:
 
-- **Findable**: Persistent identifiers (identifiers.org), VoID descriptor
+- **Findable**: Persistent identifiers, VoID descriptor
 - **Accessible**: Open SPARQL endpoint, REST API, bulk downloads
 - **Interoperable**: RDF/Turtle, GA4GH Phenopackets, standard ontologies
 - **Reusable**: CC-BY-4.0 license, full provenance metadata, versioning
@@ -311,10 +314,10 @@ If you use PAVS in your research, please cite:
 
 ```bibtex
 @article{pavs2024,
-  title={PAVS: Phenotypic and Variant Standardization of Saudi Arabian rare disease patients},
+  title={PAVS: Phenotype-Associated Variants in Saudi Arabian rare disease patients},
   author={Abdelhakim, Marwa and Althagafi, Azza and Schofield, Paul N and Hoehndorf, Robert},
   journal={In preparation},
-  year={2024}
+  year={2026}
 }
 ```
 
@@ -333,8 +336,8 @@ If you use PAVS in your research, please cite:
 
 ## License
 
-- **Code** (this repo): GNU General Public License v3.0
-- **Data** (phenopackets): Creative Commons Attribution 4.0 International (CC-BY-4.0)
+- **Code**: GNU General Public License v3.0
+- **Data** (curated cases, phenopackets): Creative Commons Attribution 4.0 International (CC-BY-4.0)
 - See individual submodule repositories for their specific licenses
 
 ---
@@ -343,12 +346,10 @@ If you use PAVS in your research, please cite:
 
 For questions or issues:
 - Open an issue in the relevant repository
-- Email: robert.hoehndorf@kaust.edu.sa
 
 ---
 
 ## Related Projects
 
-- [Monarch Initiative](https://monarchinitiative.org/) - Integrated phenotype data across species
 - [GA4GH Phenopackets](https://github.com/phenopackets/phenopacket-schema) - Standard for sharing phenotypic data
 - [HPO](https://hpo.jax.org/) - Human Phenotype Ontology
