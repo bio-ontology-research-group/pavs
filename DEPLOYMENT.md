@@ -207,6 +207,9 @@ Improved phenotype search functionality, cohort filtering, and diagnosis suggest
     - Fixed an issue where Arabic labels in the ACMG class dropdown were invisible due to CSS rendering quirks.
     - Ensured consistent translation of ACMG classes in search results using the `localizeAcmg` helper.
 - **Back Button Support**: Refactored Variant Lookup tabs, HPO Browser selection, and Disease Browser search to be URL-driven. This ensures the browser "Back" button works correctly across all search and browsing interfaces.
+- **Disease & Zygosity Display Fixes**:
+    - Improved disease label retrieval in case details, ensuring MONDO and other IDs show their descriptive names.
+    - Added "Compound heterozygous" mapping for `GENO_0000137` to ensure it displays as a label instead of an ID.
 
 #### 2. Diagnosis Logic Improvements
 - **Suggested Diagnoses**: Refined logic to only show gene-based suggested diseases when no explicit clinical diagnosis exists.
