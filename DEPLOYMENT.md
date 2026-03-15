@@ -210,6 +210,9 @@ Improved phenotype search functionality, cohort filtering, and diagnosis suggest
 - **Disease & Zygosity Display Fixes**:
     - Improved disease label retrieval in case details, ensuring MONDO and other IDs show their descriptive names.
     - Added "Compound heterozygous" mapping for `GENO_0000137` to ensure it displays as a label instead of an ID.
+- **Disease Browser Search Enhancement**:
+    - Expanded search to include OMIM diseases explicitly linked to cases.
+    - Added support for searching diseases inferred via the case's variant gene (from the KG's Gene-Disease mappings).
 
 #### 2. Diagnosis Logic Improvements
 - **Suggested Diagnoses**: Refined logic to only show gene-based suggested diseases when no explicit clinical diagnosis exists.
