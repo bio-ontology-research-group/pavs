@@ -206,7 +206,7 @@ Improved phenotype search functionality, cohort filtering, and diagnosis suggest
 - **ACMG Visibility & Translation Fix**:
     - Fixed an issue where Arabic labels in the ACMG class dropdown were invisible due to CSS rendering quirks.
     - Ensured consistent translation of ACMG classes in search results using the `localizeAcmg` helper.
-- **Back Button Support**: Refactored Variant Lookup tabs and HPO Browser selection to be URL-driven. Enhanced HPO Browser to also track tree expansions in the URL, ensuring the browser "Back" button correctly restores the tree state (expanded/collapsed nodes).
+- **Back Button Support**: Refactored Variant Lookup tabs, HPO Browser selection, and Disease Browser search to be URL-driven. This ensures the browser "Back" button works correctly across all search and browsing interfaces.
 
 #### 2. Diagnosis Logic Improvements
 - **Suggested Diagnoses**: Refined logic to only show gene-based suggested diseases when no explicit clinical diagnosis exists.
