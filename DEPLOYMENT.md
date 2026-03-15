@@ -213,6 +213,7 @@ Improved phenotype search functionality, cohort filtering, and diagnosis suggest
 - **Disease Browser Search Enhancement**:
     - Expanded search to include OMIM diseases explicitly linked to cases.
     - Added support for searching diseases inferred via the case's variant gene (from the KG's Gene-Disease mappings).
+    - Added an Arabic-only note explaining that disease search is English-only.
 
 #### 2. Diagnosis Logic Improvements
 - **Suggested Diagnoses**: Refined logic to only show gene-based suggested diseases when no explicit clinical diagnosis exists.
