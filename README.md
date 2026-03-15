@@ -2,7 +2,7 @@
 
 A curated database of genomic variants and clinical phenotypes from Saudi Arabian patients with rare genetic diseases. PAVS integrates multiple clinical cohorts and links each case to international ontologies (HPO, OMIM, MONDO) and variant databases (ClinVar, dbSNP, TogoVar).
 
-**Live instance**: https://pavs.cbrc.kaust.edu.sa
+**Live instance**: https://pavs.phenomebrowser.net
 
 ---
 
