@@ -203,7 +203,9 @@ Improved phenotype search functionality, cohort filtering, and diagnosis suggest
 - **Removed Redundant Options**:
     - Removed "ClinVar" cohort from search (no cases currently loaded in production VCF).
     - Removed "Expand with OMIM/ClinVar disease HPO annotations" checkbox as requested.
-- **ACMG Translation Fix**: Fixed missing Arabic translations in the ACMG class dropdown in Variant Lookup.
+- **ACMG Visibility & Translation Fix**:
+    - Fixed an issue where Arabic labels in the ACMG class dropdown were invisible due to CSS rendering quirks.
+    - Ensured consistent translation of ACMG classes in search results using the `localizeAcmg` helper.
 - **Back Button Support**: Refactored Variant Lookup tabs and HPO Browser selection to be URL-driven, ensuring the browser "Back" button works correctly when switching between search modes or terms.
 
 #### 2. Diagnosis Logic Improvements
