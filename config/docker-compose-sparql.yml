@@ -82,6 +82,7 @@ services:
       HPO_OBO_PATH: /app/ontology/hp.obo
     volumes:
       - ../submodules/knowledge-graph/data/reference/phenotype.hpoa:/app/data/reference/phenotype.hpoa:ro
+      - ../submodules/knowledge-graph/data/reference/clinvar.vcf.gz:/app/data/reference/clinvar.vcf.gz:ro
       - ../submodules/knowledge-graph/ontology/hp.obo:/app/ontology/hp.obo:ro
       - ../submodules/hpo-arabic:/app/translation:ro
     depends_on:
